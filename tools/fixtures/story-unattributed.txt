@@ -1,0 +1,20 @@
+**Topic:** THE UNPROVEN CLAIM
+**Format:** CrimeLong
+
+Nothing in this fixture has been charged, tried or decided. It exists so the
+factuality check can be proven to fail: parsing it must exit non-zero.
+
+---
+
+# 0:00–0:15 — THE ACCUSATION
+
+**MODULE:** STATEMENT
+**CAMERA:** observe
+
+### NARRATION
+
+He killed her on the night of the fourteenth and drove the car to the river.
+
+### VISUAL
+
+**THE RIVER**

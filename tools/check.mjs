@@ -1,5 +1,8 @@
-// Guards the script.md -> script.json contract. Run after editing either the
-// script or the parser:  node tools/check.mjs
+// Guards the story.txt -> script.json contract. Run after editing either a
+// story or the parser:  node tools/check.mjs
+//
+// The fixtures are invented cases. They exist so these assertions mean
+// something without a real case having to be correct first.
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import assert from "node:assert/strict";
@@ -8,47 +11,118 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
-const out = join(tmpdir(), `script-check-${process.pid}.json`);
-execFileSync(process.execPath, [
-  join(root, "tools/parse-script.mjs"),
-  join(root, "script.md"),
-  out,
+const parse = (name) => {
+  const out = join(tmpdir(), `story-check-${process.pid}.json`);
+  execFileSync(process.execPath, [
+    join(root, "tools/parse-story.mjs"),
+    join(root, name),
+    out,
+  ]);
+  return JSON.parse(readFileSync(out, "utf8"));
+};
+
+const s = parse("tools/fixtures/story-demo.txt");
+const long = s.beats.filter((b) => b.track === "long");
+const short = s.beats.filter((b) => b.track === "short");
+
+assert.equal(s.engine, "crime");
+assert.equal(s.width, 1920, "a CrimeLong story renders 16:9");
+assert.equal(s.height, 1080);
+assert.equal(s.fps, 30);
+assert.ok(long.length >= 8, `expected the sections to split into beats, got ${long.length}`);
+assert.ok(short.length >= 2, "the SHORT section becomes its own track");
+
+// Every beat is renderable: a module the engine has, narration to read, and a
+// duration. A beat that fails any of these is a black frame in the middle of a
+// ten-minute video.
+const MODULES = new Set([
+  "caseOpen", "chapter", "clock", "timeline", "map", "person", "evidence",
+  "document", "redacted", "cctv", "phone", "quote", "headline", "board",
+  "compare", "reveal", "status", "archival", "statement",
 ]);
-const s = JSON.parse(readFileSync(out, "utf8"));
-
-assert.equal(s.durationInSeconds, 30);
-assert.equal(s.fps * s.durationInSeconds, 900);
-assert.deepEqual(
-  s.beats.map((b) => b.module),
-  ["coinDrop", "coinStack", "investChart", "jarFill", "mountain", "payoff", "outro"],
-  "every beat must map to a scene module, and the outro must not be read as a mountain",
-);
-
-// Beats tile the timeline with no gap and no overlap.
-s.beats.reduce((prev, b) => {
-  assert.equal(b.start, prev, `beat ${b.n} starts at ${b.start}, expected ${prev}`);
-  assert.ok(b.end > b.start && b.vo, `beat ${b.n} needs a duration and narration`);
-  return b.end;
-}, 0);
-
-// Both timed tables parse row-per-row (a greedy regex silently pairs them up).
-assert.equal(s.texts.length, 8, "8 overlay cues");
-assert.equal(s.sfx.length, 8, "8 sfx cues");
-assert.ok(
-  s.texts.every((t) => t.at < s.durationInSeconds && t.text),
-  "overlay cues land inside the video",
-);
-const known = new Set([
-  "coin.wav", "coin-soft.wav", "whoosh.wav", "whoosh-up.wav", "boom.wav",
-  "chime.wav", "chime-warm.wav", "shimmer.wav", "pop.wav", "tick.wav",
-  "riser.wav", "stamp.wav",
-]);
-for (const cue of s.sfx) {
-  for (const f of cue.files) assert.ok(known.has(f), `unknown sfx asset ${f}`);
+for (const b of s.beats) {
+  assert.ok(MODULES.has(b.module), `beat ${b.n}: unknown module ${b.module}`);
+  assert.ok(b.vo.trim(), `beat ${b.n} has no narration`);
+  assert.ok(b.end > b.start, `beat ${b.n} has no duration`);
+  assert.ok(b.end - b.start < 20, `beat ${b.n} carries ${Math.round(b.end - b.start)}s on one visual`);
+  assert.ok(b.intensity >= 0 && b.intensity <= 1, `beat ${b.n} intensity out of range`);
 }
 
-// Amounts are grouped the Indian way wherever they are rendered.
-assert.equal(new Intl.NumberFormat("en-IN").format(700000), "7,00,000");
-assert.equal(new Intl.NumberFormat("en-IN").format(10000000), "1,00,00,000");
+// Each track tiles its own timeline from zero, with no gap and no overlap. The
+// vertical cut is a second telling, not the tail of the first.
+for (const track of [long, short]) {
+  track.reduce((prev, b) => {
+    assert.equal(b.start, prev, `beat ${b.n} starts at ${b.start}, expected ${prev}`);
+    return b.end;
+  }, 0);
+}
 
-console.log("ok — script.md parses into a renderable episode");
+// The camera is semantic. A story never names a scale, and the engine only
+// knows these words.
+const INTENTS = new Set([
+  "observe", "investigate", "follow", "search", "connect", "isolate", "reveal",
+  "shock", "reflect",
+]);
+for (const b of s.beats) assert.ok(INTENTS.has(b.intent), `beat ${b.n}: ${b.intent}`);
+
+// So is the sound. An episode names events, never filenames — swapping the SFX
+// pack must not touch a story.
+const EVENTS = new Set([
+  "document", "map_pin", "timestamp", "cctv", "message", "phone", "evidence",
+  "transition_soft", "transition_hard", "reveal_minor", "reveal_major",
+  "tension_rise", "chapter",
+]);
+for (const b of s.beats) {
+  for (const cue of b.sfx) assert.ok(EVENTS.has(cue), `beat ${b.n}: unknown sfx ${cue}`);
+  assert.ok(b.sfx.length <= 2, `beat ${b.n} has ${b.sfx.length} accents — sfx punctuate, they don't score`);
+}
+
+// Nothing the pipeline can fetch is case material, so nothing may claim to be.
+for (const b of s.beats) {
+  assert.ok(
+    ["illustrative", "reconstruction", "archival", "official", "public_record", "licensed", "unknown"].includes(b.provenance),
+    `beat ${b.n}: ${b.provenance}`,
+  );
+}
+assert.ok(
+  s.beats.every((b) => b.provenance !== "official" || /source/i.test(b.source ?? "")),
+  "a beat may not claim official provenance without a source",
+);
+
+// The section's on-screen lines land on the module that can read them: dated
+// lines on the timeline, places on the map. The timeline is story memory, so a
+// wrong row there stays wrong for the rest of the documentary.
+const timelines = long.filter((b) => b.module === "timeline");
+assert.ok(timelines.length, "the demo stages a timeline");
+for (const b of timelines) {
+  for (const row of b.data) {
+    assert.match(row.label, /\d/, `timeline row "${row.label}" has no time in it`);
+  }
+}
+assert.ok(
+  timelines[timelines.length - 1].data.length >= timelines[0].data.length,
+  "a later timeline must carry what the earlier one established",
+);
+
+const maps = long.filter((b) => b.module === "map");
+assert.ok(maps.length && maps[0].data.length >= 2, "a map needs at least two places");
+
+// A card builds across the beats that stage it rather than restarting on each.
+const runs = long.filter((b) => b.module === "status");
+assert.ok(runs.every((b) => b.accent <= b.data.length));
+
+// The vertical cut starts on the story, not on a title card.
+assert.notEqual(short[0].module, "caseOpen");
+
+// Factuality: an unproven accusation with nobody's name on it does not render.
+let refused = false;
+try {
+  parse("tools/fixtures/story-unattributed.txt");
+} catch (err) {
+  refused = /unattributed accusation/.test(String(err.stderr ?? err));
+}
+assert.ok(refused, "an unattributed accusation must fail the parse, not render");
+
+console.log(
+  `ok — ${long.length} beats + ${short.length} vertical, modules ${[...new Set(long.map((b) => b.module))].join("/")}`,
+);

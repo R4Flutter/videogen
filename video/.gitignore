@@ -5,3 +5,6 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Stock clips are re-downloadable from the script's own keywords.
+public/footage

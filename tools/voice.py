@@ -26,25 +26,66 @@ PLAN = OUT / "voice-plan.json"
 # plus the silence after the line. `exaggeration` is energy; `cfg` is pace, and
 # lower is faster — they move together or an excited read comes out sluggish.
 #
-#   beat role         energy  pace   silence after
+# A documentary narrator is not a shorts narrator. Everything here is lower
+# energy and slower than a pitch: calm, controlled, curious. The performance is
+# in where the reader slows down, not in how hard they push.
+#
+#   module            energy  pace   silence after
 DELIVERY = {
-    "coinDrop":    (0.72, 0.32, 0.45),  # hook: straight in, no run-up
-    "coinStack":   (0.50, 0.42, 0.22),  # setup: conversational
-    "investChart": (0.58, 0.40, 0.26),  # the turn
-    "jarFill":     (0.54, 0.46, 0.34),  # first big number: articulate it
-    "mountain":    (0.62, 0.39, 0.30),  # build
-    "payoff":      (0.76, 0.34, 0.50),  # reveal, then let it land
-    "outro":       (0.50, 0.45, 0.55),  # CTA: friendly, and room for the badge
+    "caseOpen":  (0.42, 0.52, 0.45),  # the case, stated. No trailer voice.
+    "chapter":   (0.38, 0.52, 0.40),
+    "clock":     (0.40, 0.55, 0.45),  # a timestamp needs air around it
+    "timeline":  (0.40, 0.52, 0.32),
+    "map":       (0.40, 0.52, 0.30),
+    "person":    (0.38, 0.50, 0.32),  # a person is described, not performed
+    "evidence":  (0.46, 0.50, 0.38),
+    "document":  (0.42, 0.52, 0.36),  # reading a record aloud: deliberate
+    "redacted":  (0.44, 0.53, 0.40),
+    "cctv":      (0.44, 0.50, 0.34),
+    "phone":     (0.42, 0.50, 0.32),
+    "quote":     (0.40, 0.54, 0.42),  # somebody else's words: slower, flatter
+    "headline":  (0.42, 0.50, 0.34),
+    "board":     (0.44, 0.50, 0.34),
+    "compare":   (0.44, 0.50, 0.34),
+    "reveal":    (0.52, 0.56, 0.60),  # slowest line in the film, then a hold
+    "status":    (0.38, 0.54, 0.50),  # the outcome: restrained
+    "archival":  (0.36, 0.54, 0.36),
+    "statement": (0.40, 0.52, 0.32),
 }
-DEFAULT = (0.58, 0.40, 0.28)
 
-# The narration is written to be read, not spoken: ₹ and % have no
-# pronunciation and a TTS model will either skip them or spell them out.
+# The scam engine reads at the calm end of the room. This narrator is a friend
+# explaining how a trick works over coffee — not a documentary on a chase — so
+# everything sits slightly lower energy and slower than the crime read, with a
+# beat more air after each line. The money and the chat are stated flat; only
+# the hook/reveal words (kinetic) carry any push.
+#
+# Measured, not assumed: on the built-in voice, `cfg` barely moves the clock.
+# Going 0.52 -> 0.70 changed a beat's length by under 3%, and the read still
+# runs 5.5-6 syllables a second — brisk-conversational rather than the calm
+# documentary register these numbers describe. The values below are the calm
+# end of what the dial can reach; the actual pace lever is a reference voice
+# (`voice.py --voice ref.wav`), which the read inherits its tempo from.
+SCAM = {
+    "chat":       (0.34, 0.66, 0.46),  # a conversation read aloud: soft, unhurried
+    "transfer":   (0.32, 0.66, 0.46),  # money leaving: said flat, never thrilled
+    "annotation": (0.36, 0.68, 0.42),
+    "kinetic":    (0.46, 0.70, 0.55),  # the hook and the reveal carry the beat
+    "chart":      (0.34, 0.66, 0.40),
+    "icon":       (0.36, 0.68, 0.42),
+    "footage":    (0.34, 0.68, 0.40),
+}
+DEFAULT = (0.42, 0.52, 0.34)
+
+# The narration is written to be read, not spoken: symbols have no pronunciation
+# and a TTS model will either skip them or spell them out.
 SPEAK = [
-    (re.compile(r"₹\s*([\d,]+)\s*(lakh|crore)s?\b", re.I), r"\1 \2 rupees"),
-    (re.compile(r"₹\s*([\d,]+)"), r"\1 rupees"),
+    (re.compile(r"\$\s*([\d,]+(?:\.\d+)?)\s*(k|thousand|million|billion)\b", re.I), r"\1 \2 dollars"),
+    (re.compile(r"\$\s*([\d,]+(?:\.\d+)?)"), r"\1 dollars"),
     (re.compile(r"(\d)%"), r"\1 percent"),
     (re.compile(r"(?<=\d),(?=\d)"), ""),  # 3,000 -> 3000, read as "three thousand"
+    # A dash in a documentary line is a breath, not a hyphen. Chatterbox reads
+    # the character; a comma is the pause the writing meant.
+    (re.compile(r"\s+[—–]\s+"), ", "),
 ]
 
 
@@ -74,6 +115,7 @@ def main() -> None:
     # Left unset, each beat uses its own direction from DELIVERY above.
     ap.add_argument("--exaggeration", type=float, help="override energy for every beat")
     ap.add_argument("--cfg", type=float, help="override pace for every beat")
+    ap.add_argument("--track", help="only read one cut: long or short")
     ap.add_argument("--temperature", type=float, default=0.75)
     ap.add_argument("--seed", type=int, default=7)
     args = ap.parse_args()
@@ -87,9 +129,9 @@ def main() -> None:
 
     plan = []
     for beat in script["beats"]:
-        if not beat["vo"]:
+        if not beat["vo"] or (args.track and beat.get("track", "long") != args.track):
             continue
-        energy, pace, hold = DELIVERY.get(beat["module"], DEFAULT)
+        energy, pace, hold = SCAM.get(beat["module"], DELIVERY.get(beat["module"], DEFAULT))
         if args.exaggeration is not None:
             energy = args.exaggeration
         if args.cfg is not None:

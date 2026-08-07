@@ -1,0 +1,332 @@
+[
+ {
+  "start": 0.0,
+  "end": 3.605,
+  "file": "img/bed-1-1.jpg"
+ },
+ {
+  "start": 3.605,
+  "end": 7.21,
+  "file": "img/bed-1-2.jpg"
+ },
+ {
+  "start": 7.21,
+  "end": 11.38,
+  "file": "img/bed-2-1.jpg"
+ },
+ {
+  "start": 15.55,
+  "end": 18.95,
+  "file": "img/bed-3-1.jpg"
+ },
+ {
+  "start": 18.95,
+  "end": 22.35,
+  "file": "img/bed-3-2.jpg"
+ },
+ {
+  "start": 22.35,
+  "end": 25.625,
+  "file": "img/bed-4-1.jpg"
+ },
+ {
+  "start": 28.9,
+  "end": 32.527,
+  "file": "img/bed-5-1.jpg"
+ },
+ {
+  "start": 32.527,
+  "end": 36.153,
+  "file": "img/bed-5-2.jpg"
+ },
+ {
+  "start": 36.153,
+  "end": 39.78,
+  "file": "img/bed-5-3.jpg"
+ },
+ {
+  "start": 44.607,
+  "end": 49.433,
+  "file": "img/bed-6-2.jpg"
+ },
+ {
+  "start": 49.433,
+  "end": 54.26,
+  "file": "img/bed-6-3.jpg"
+ },
+ {
+  "start": 54.26,
+  "end": 59.29,
+  "file": "img/bed-7-1.jpg"
+ },
+ {
+  "start": 64.32,
+  "end": 68.553,
+  "file": "img/bed-8-1.jpg"
+ },
+ {
+  "start": 68.553,
+  "end": 72.787,
+  "file": "img/bed-8-2.jpg"
+ },
+ {
+  "start": 77.02,
+  "end": 81.155,
+  "file": "img/bed-9-1.jpg"
+ },
+ {
+  "start": 81.155,
+  "end": 85.29,
+  "file": "img/bed-9-2.jpg"
+ },
+ {
+  "start": 89.437,
+  "end": 93.583,
+  "file": "img/bed-10-2.jpg"
+ },
+ {
+  "start": 93.583,
+  "end": 97.73,
+  "file": "img/bed-10-3.jpg"
+ },
+ {
+  "start": 97.73,
+  "end": 101.37,
+  "file": "img/bed-11-1.jpg"
+ },
+ {
+  "start": 101.37,
+  "end": 105.01,
+  "file": "img/bed-11-2.jpg"
+ },
+ {
+  "start": 110.49,
+  "end": 114.557,
+  "file": "img/bed-13-1.jpg"
+ },
+ {
+  "start": 114.557,
+  "end": 118.623,
+  "file": "img/bed-13-2.jpg"
+ },
+ {
+  "start": 118.623,
+  "end": 122.69,
+  "file": "img/bed-13-3.jpg"
+ },
+ {
+  "start": 122.69,
+  "end": 126.543,
+  "file": "img/bed-14-1.jpg"
+ },
+ {
+  "start": 126.543,
+  "end": 130.397,
+  "file": "img/bed-14-2.jpg"
+ },
+ {
+  "start": 130.397,
+  "end": 134.25,
+  "file": "img/bed-14-3.jpg"
+ },
+ {
+  "start": 139.17,
+  "end": 144.09,
+  "file": "img/bed-15-2.jpg"
+ },
+ {
+  "start": 144.09,
+  "end": 148.58,
+  "file": "img/bed-16-1.jpg"
+ },
+ {
+  "start": 148.58,
+  "end": 153.07,
+  "file": "img/bed-16-2.jpg"
+ },
+ {
+  "start": 153.07,
+  "end": 157.56,
+  "file": "img/bed-16-3.jpg"
+ },
+ {
+  "start": 162.05,
+  "end": 166.59,
+  "file": "img/bed-17-1.jpg"
+ },
+ {
+  "start": 166.59,
+  "end": 170.197,
+  "file": "img/bed-18-1.jpg"
+ },
+ {
+  "start": 170.197,
+  "end": 173.803,
+  "file": "img/bed-18-2.jpg"
+ },
+ {
+  "start": 173.803,
+  "end": 177.41,
+  "file": "img/bed-18-3.jpg"
+ },
+ {
+  "start": 182.203,
+  "end": 186.997,
+  "file": "img/bed-19-2.jpg"
+ },
+ {
+  "start": 186.997,
+  "end": 191.79,
+  "file": "img/bed-19-3.jpg"
+ },
+ {
+  "start": 191.79,
+  "end": 196.185,
+  "file": "img/bed-20-1.jpg"
+ },
+ {
+  "start": 196.185,
+  "end": 200.58,
+  "file": "img/bed-20-2.jpg"
+ },
+ {
+  "start": 204.11,
+  "end": 208.07,
+  "file": "img/bed-22-1.jpg"
+ },
+ {
+  "start": 208.07,
+  "end": 212.03,
+  "file": "img/bed-22-2.jpg"
+ },
+ {
+  "start": 215.943,
+  "end": 219.857,
+  "file": "img/bed-23-2.jpg"
+ },
+ {
+  "start": 219.857,
+  "end": 223.77,
+  "file": "img/bed-23-3.jpg"
+ },
+ {
+  "start": 223.77,
+  "end": 228.263,
+  "file": "img/bed-24-1.jpg"
+ },
+ {
+  "start": 228.263,
+  "end": 232.757,
+  "file": "img/bed-24-2.jpg"
+ },
+ {
+  "start": 237.25,
+  "end": 241.67,
+  "file": "img/bed-25-1.jpg"
+ },
+ {
+  "start": 241.67,
+  "end": 246.09,
+  "file": "img/bed-25-2.jpg"
+ },
+ {
+  "start": 250.99,
+  "end": 254.94,
+  "file": "img/bed-27-1.jpg"
+ },
+ {
+  "start": 254.94,
+  "end": 258.89,
+  "file": "img/bed-27-2.jpg"
+ },
+ {
+  "start": 258.89,
+  "end": 264.06,
+  "file": "img/bed-28-1.jpg"
+ },
+ {
+  "start": 264.06,
+  "end": 269.23,
+  "file": "img/bed-28-2.jpg"
+ },
+ {
+  "start": 273.47,
+  "end": 277.71,
+  "file": "img/bed-29-2.jpg"
+ },
+ {
+  "start": 277.71,
+  "end": 281.95,
+  "file": "img/bed-29-3.jpg"
+ },
+ {
+  "start": 286.595,
+  "end": 291.24,
+  "file": "img/bed-30-2.jpg"
+ },
+ {
+  "start": 291.24,
+  "end": 295.48,
+  "file": "img/bed-31-1.jpg"
+ },
+ {
+  "start": 299.72,
+  "end": 303.02,
+  "file": "img/bed-32-1.jpg"
+ },
+ {
+  "start": 303.02,
+  "end": 306.32,
+  "file": "img/bed-32-2.jpg"
+ },
+ {
+  "start": 306.32,
+  "end": 310.12,
+  "file": "img/bed-33-1.jpg"
+ },
+ {
+  "start": 310.12,
+  "end": 313.92,
+  "file": "img/bed-33-2.jpg"
+ },
+ {
+  "start": 317.72,
+  "end": 322.4,
+  "file": "img/bed-34-1.jpg"
+ },
+ {
+  "start": 322.4,
+  "end": 327.08,
+  "file": "img/bed-34-2.jpg"
+ },
+ {
+  "start": 331.373,
+  "end": 335.667,
+  "file": "img/bed-35-2.jpg"
+ },
+ {
+  "start": 335.667,
+  "end": 339.96,
+  "file": "img/bed-35-3.jpg"
+ },
+ {
+  "start": 339.96,
+  "end": 343.79,
+  "file": "img/bed-36-1.jpg"
+ },
+ {
+  "start": 347.62,
+  "end": 351.45,
+  "file": "img/bed-36-3.jpg"
+ },
+ {
+  "start": 351.45,
+  "end": 355.89,
+  "file": "img/bed-37-1.jpg"
+ },
+ {
+  "start": 360.33,
+  "end": 364.33,
+  "file": "img/bed-38-1.jpg"
+ }
+]

@@ -1,28 +1,146 @@
-**[0–3s — HOOK]**
-“If you’re 20 and you save just ₹100 a day… you could become a millionaire.”
+**Topic:** How Phone Scams Actually Work — Two True US Stories
+**Format:** ScamLong
+**Target:** United States
+**Resolution:** 1920×1080
+**FPS:** 30
+**Target runtime:** 6:00
+**Title:** "The $400,000 Machine: How US Phone Scams Are Actually Built"
+**Description:** "Two true stories. One machine. How the grandparent bail call and the fake trading app are built — the call centers, the spoofed numbers, the innocent couriers, and the one question that stops all of it."
 
-**[3–7s]**
-₹100 a day is only ₹3,000 a month.
+---
 
-**[7–12s]**
-But instead of just leaving it in your account, imagine investing that ₹3,000 every month.
+### BEAT 1 — THE CALL (0:00)
 
-**[12–18s]**
-At an average 12% annual return, after 10 years you'd have roughly **₹7 LAKH.**
+| layer | content |
+|---|---|
+| **vo** | "Seventy-two thousand. That's how many times Americans pick up this exact kind of call, every single day. And every one of those calls was built." |
+| **text** | 72,000 TIMES A DAY |
+| **kinetic_size** | huge |
+| **sfx** | hit |
 
-**[18–23s]**
-Keep going for 20 years?
+### BEAT 2 — THE DOOR (0:00)
+| **image_prompt** | editorial collage of a suburban front door ajar with a doorbell camera, a torn envelope of folded cash on the doorstep, a paper house silhouette |
 
-Around **₹30 LAKH.**
+### BEAT 3 — NOT A ROBBERY (0:00)
+| **image_prompt** | cut-paper collage of an open front doorway with a hand passing folded cash, torn paper edges, a clock |
 
-**[23–27s — PAYOFF]**
-And after 30 years?
+### BEAT 4 — TWO MACHINES (0:00)
+| **image_prompt** | editorial collage of two interlocking paper gears, a telephone receiver and a banknote joined by arrows |
 
-Around **₹1 CRORE.**
+### BEAT 5 — THE CALL CENTER (0:00)
+| **image_prompt** | cut-paper collage of a long row of office desks with telephone headsets, a whiteboard, a torn world map fragment |
 
-**[27–30s — CTA]**
-₹100 won't change your life today.
+### BEAT 6 — THE ASSEMBLY LINE (0:00)
+| **image_prompt** | editorial collage of a paper assembly line: a script page, a telephone and a banknote linked by arrows along a dotted conveyor |
 
-But what you do with ₹100 every day might.
+### BEAT 7 — THE MATH (0:00)
+| **image_prompt** | cut-paper collage of a dense grid of dots with a single orange-red dot standing out, a magnifying glass, a torn paper corner |
 
-**Follow for more money lessons in 30 seconds.**
+### BEAT 8 — THE SPOOF (0:00)
+| **image_prompt** | editorial collage of a telephone wearing a paper mask, a blank name tag, a red arrow |
+
+### BEAT 9 — THE MONEY (0:00)
+| **image_prompt** | cut-paper collage of a maze of arrows converging on a single banknote, a padlock, a torn receipt |
+
+### BEAT 10 — THE TARGETS (0:00)
+| **image_prompt** | editorial collage of a dartboard with a telephone receiver as the dart, printed data lists, a map with pins |
+
+### BEAT 11 — THE AKRON CALL (0:00)
+| **image_prompt** | cut-paper collage of a rotary landline telephone on a kitchen counter, a torn calendar page with a circled date, a clock |
+
+### BEAT 12 — THE SCRIPT (0:00)
+| **image_prompt** | editorial collage of a telephone receiver and paper speech bubbles, a torn envelope |
+
+### BEAT 13 — SHE SUPPLIES THE NAME (0:00)
+| **image_prompt** | cut-paper collage of a paper speech bubble being filled in by a hand, a name tag, a telephone |
+
+### BEAT 14 — THE JUDGE (0:00)
+| **image_prompt** | editorial collage of a judge's gavel, a telephone, a robe silhouette, a torn legal form |
+
+### BEAT 15 — CASH ONLY (0:00)
+| **image_prompt** | cut-paper collage of a torn envelope with cash spilling out, a downward arrow, a bank receipt fragment |
+
+### BEAT 16 — THE COURIER (0:00)
+| **image_prompt** | editorial collage of a delivery van silhouette, a cardboard package, a dotted route map |
+
+### BEAT 17 — THE SUPPLY CHAIN (0:00)
+| **image_prompt** | cut-paper collage of a paper chain of linked envelopes and banknotes, gears, arrows |
+
+### BEAT 18 — THE MULES (0:00)
+| **image_prompt** | editorial collage of a duffel bag with cash, a golden coin, an arrow into a laptop |
+
+### BEAT 19 — THE BANK (0:00)
+| **image_prompt** | cut-paper collage of a bank building silhouette with a warning triangle, a torn receipt, a magnifying glass |
+
+### BEAT 20 — DEAD BY MORNING (0:00)
+| **image_prompt** | editorial collage of a dark highway at night with light trails, a telephone with a dead battery, a server rack |
+
+### BEAT 21 — THE SECOND MACHINE (0:00)
+| **image_prompt** | cut-paper collage of two paper machines, one shaped like a heart and one like a telephone, interlocking gears |
+
+### BEAT 22 — THE WRONG NUMBER (0:00)
+| **image_prompt** | editorial collage of a smartphone with a question mark speech bubble, a torn envelope, a heart |
+
+### BEAT 23 — THE FRIENDSHIP (0:00)
+| **image_prompt** | cut-paper collage of two paper speech bubbles, a telephone receiver, a heart |
+
+### BEAT 24 — THE APP (0:00)
+| **image_prompt** | editorial collage of a smartphone cutout and a rising paper bar chart, a coin |
+
+### BEAT 25 — FAKE TRUST (0:00)
+| **image_prompt** | cut-paper collage of a padlock, a torn checkmark seal, a smartphone, a shield |
+
+### BEAT 26 — THE FIRST DEPOSIT (0:00)
+| **image_prompt** | editorial collage of a bank deposit slip fragment with a rising arrow, coins |
+
+### BEAT 27 — TRUST ON SCHEDULE (0:00)
+| **image_prompt** | cut-paper collage of a calendar page, an envelope arriving along a dotted route, a clock |
+
+### BEAT 28 — THE FEES (0:00)
+| **image_prompt** | editorial collage of a stack of torn receipts growing taller, arrows, a banknote |
+
+### BEAT 29 — 77 DAYS (0:00)
+| **image_prompt** | cut-paper collage of a climbing paper line chart, dollar bills, a calendar fragment |
+
+### BEAT 30 — $300,000 (0:00)
+
+| layer | content |
+|---|---|
+| **vo** | "Then the withdrawal button stops working. Customer service goes silent. By then, Emily has wired her retirement account. Three hundred thousand dollars. A real number, from an FBI report." |
+| **text** | $300,000 |
+| **kinetic_size** | huge |
+| **sfx** | hit |
+
+### BEAT 31 — THE SCALE (0:00)
+| **image_prompt** | editorial collage of a towering paper bar chart built of stacked dollar bills, a globe, a folder |
+
+### BEAT 32 — GONE IN 40 MINUTES (0:00)
+| **image_prompt** | cut-paper collage of three arrows crossing a world map, a clock, a chain of envelopes |
+
+### BEAT 33 — THE DESIGN PHILOSOPHY (0:00)
+| **image_prompt** | editorial collage of a telephone blueprint with measurement marks, a target reticle, a shield |
+
+### BEAT 34 — THE ONE QUESTION (0:00)
+| **image_prompt** | cut-paper collage of a giant paper question mark standing like a wall, a ringing telephone, paper blocks |
+
+### BEAT 35 — THE DEFENSE (0:00)
+| **image_prompt** | editorial collage of a hand pressing a telephone receiver down, a return arrow, a paper note |
+
+### BEAT 36 — THE KINDNESS PROBLEM (0:00)
+
+| layer | content |
+|---|---|
+| **vo** | "The scam isn't a technology problem. It's a kindness problem. The IRS never calls. No judge takes cash. And your grandson's voice, in a panic, is the one sound the human brain was never designed to question." |
+| **text** | IT'S A KINDNESS PROBLEM |
+| **kinetic_size** | huge |
+
+### BEAT 37 — THE REPORT (0:00)
+| **image_prompt** | cut-paper collage of a paper folder, a megaphone, a heart, an envelope with a stamp |
+
+### BEAT 38 — THE PAYOFF (0:00)
+
+| layer | content |
+|---|---|
+| **text** | ONE QUESTION. ONE HANG-UP. ONE CALL BACK. |
+| **kinetic_size** | huge |
+| **hold** | 4 |

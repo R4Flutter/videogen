@@ -9,9 +9,11 @@
     "@remotion/cli": "4.0.506",
     "@remotion/google-fonts": "^4.0.506",
     "@remotion/tailwind-v4": "4.0.506",
+    "lucide-react": "^1.28.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.506",
+    "roughjs": "^4.6.6",
     "tailwindcss": "4.0.0"
   },
   "devDependencies": {
@@ -27,11 +29,22 @@
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc",
-    "script": "node ../tools/check.mjs && node ../tools/parse-script.mjs ../script.md src/script.json",
+    "check": "node ../tools/check.mjs && python ../tools/align.py --selftest",
+    "story": "node ../tools/check.mjs && node ../tools/parse-story.mjs ../story.txt src/script.json",
     "voice": "..\\.venv-tts\\Scripts\\python.exe ../tools/voice.py",
     "align": "python ../tools/align.py",
-    "render": "remotion render FinanceShort out/final.mp4",
-    "episode": "npm run script && npm run voice && npm run align && npm run lint && npm run render"
+    "footage": "python ../tools/fetch-footage.py",
+    "imagebed": "python ../tools/fetch-imagebed.py",
+    "render": "remotion render CrimeLong out/crime.mp4",
+    "render:short": "remotion render CrimeShort out/crime-short.mp4",
+    "render:scam": "remotion render ScamShort out/scam.mp4",
+    "render:scam:long": "remotion render ScamLong out/scam-long.mp4",
+    "chat-mockups": "..\\.venv\\Scripts\\python.exe ../tools/chat-mockup.py",
+    "transfer-mockups": "..\\.venv\\Scripts\\python.exe ../tools/transfer-mockup.py",
+    "preview": "remotion render CrimeLong out/preview.mp4 --frames=0-899",
+    "episode": "npm run story && npm run voice && npm run align && npm run footage && npm run lint && npm run render",
+    "reel": "npm run story && npm run voice -- --track short && npm run align -- --track short && remotion render CrimeShort ../final.mp4",
+    "episode:scam": "npm run story && npm run voice && npm run align && npm run chat-mockups && npm run transfer-mockups && npm run footage && npm run imagebed && npm run lint && npm run render:scam"
   },
   "sideEffects": [
     "*.css"

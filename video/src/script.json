@@ -1,176 +1,1449 @@
 {
-  "source": "script.md",
-  "title": "script.md — \"₹100 a Day → ₹1 CRORE\" (30s Short)",
+  "source": "../story.txt",
+  "title": "How Phone Scams Actually Work \u2014 Two True US Stories",
+  "engine": "scam",
   "fps": 30,
-  "width": 1080,
-  "height": 1920,
-  "durationInSeconds": 30.95,
-  "caption": "₹100 a day is the cheapest habit that ever made me money.",
+  "width": 1920,
+  "height": 1080,
+  "episode": {
+    "title": "\"The $400,000 Machine: How US Phone Scams Are Actually Built\"",
+    "description": "\"Two true stories. One machine. How the grandparent bail call and the fake trading app are built \u2014 the call centers, the spoofed numbers, the innocent couriers, and the one question that stops all of it.\"",
+    "target": "United States"
+  },
+  "durationInSeconds": 364.33,
   "beats": [
     {
       "n": 1,
-      "name": "THE SLAP",
+      "name": "THE CALL (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Seventy-two thousand. That's how many times Americans pick up this exact kind of call, every single day. And every one of those calls was built.\"",
+        "text": "72,000 TIMES A DAY",
+        "kinetic_size": "huge",
+        "sfx": "hit"
+      },
       "start": 0.0,
-      "end": 2.43,
-      "vo": "One coin. 30 years. One crore.",
-      "visual": "Coin drops into empty jar. Rupee symbol blazes on the wall.",
-      "motion": "Coin drop + clink. Text slams in with scale pop + shake.",
-      "module": "coinDrop"
+      "end": 7.21,
+      "module": "kinetic",
+      "vo": "Seventy-two thousand. That's how many times Americans pick up this exact kind of call, every single day. And every one of those calls was built.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "72,000 TIMES A DAY",
+      "kinetic_size": "huge",
+      "sfx": [
+        "boom.wav"
+      ]
     },
     {
       "n": 2,
-      "name": "THE CONTEXT",
-      "start": 2.43,
-      "end": 5.99,
-      "vo": "See, ₹100 a day is only ₹3,000 a month.",
-      "visual": "30 coins stack beside the jar. Calendar ticks off day by day.",
-      "motion": "Coins drop one by one, stacking. Calendar squares pop as they tick.",
-      "module": "coinStack"
+      "name": "THE DOOR (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Somewhere in Ohio, a seventy-eight-year-old woman just handed a stranger nine thousand dollars in cash, at her own front door. The doorbell camera caught every second of it.\"",
+        "text": "$9,600 AT THE DOOR",
+        "icon": "phone-ringing: THE CALL, alert-triangle: THE LIE, banknote: THE MONEY"
+      },
+      "start": 7.21,
+      "end": 15.55,
+      "module": "footage",
+      "vo": "Somewhere in Ohio, a seventy-eight-year-old woman just handed a stranger nine thousand dollars in cash, at her own front door. The doorbell camera caught every second of it.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "$9,600 AT THE DOOR",
+      "icons": [
+        {
+          "icon": "phone-ringing",
+          "label": "THE CALL"
+        },
+        {
+          "icon": "alert-triangle",
+          "label": "THE LIE"
+        },
+        {
+          "icon": "banknote",
+          "label": "THE MONEY"
+        }
+      ],
+      "sfx": [],
+      "footage": "editorial collage of a suburban front door ajar with a doorbell camera, a torn envelope of folded cash on the doorstep, a paper house silhouette"
     },
     {
       "n": 3,
-      "name": "THE INSIGHT",
-      "start": 5.99,
-      "end": 11.29,
-      "vo": "And parked in a bank account, that's nothing. But invested? That ₹3,000 starts working.",
-      "visual": "Coins fly from the jar into a green rising chart. Line draws upward.",
-      "motion": "Coin arcs with sparkle trails. Chart line draws left→right with a glow head.",
-      "module": "investChart"
+      "name": "NOT A ROBBERY (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"This is not a robbery. The man at the door works for them. And the whole thing slipped through the system without a single law broken \u2014 until the money was already gone.\"",
+        "text": "THIS IS NOT A ROBBERY",
+        "doodle": "circle around \"THIS IS NOT A ROBBERY\""
+      },
+      "start": 15.55,
+      "end": 22.35,
+      "module": "footage",
+      "vo": "This is not a robbery. The man at the door works for them. And the whole thing slipped through the system without a single law broken \u2014 until the money was already gone.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THIS IS NOT A ROBBERY",
+      "doodle": {
+        "shape": "circle",
+        "target": "this is not a robbery"
+      },
+      "sfx": [],
+      "footage": "cut-paper collage of an open front doorway with a hand passing folded cash, torn paper edges, a clock"
     },
     {
       "n": 4,
-      "name": "10 YEARS",
-      "start": 11.29,
-      "end": 14.66,
-      "vo": "At 12% a year, 10 years becomes ₹7 lakh.",
-      "visual": "Jar fills and overflows. Gold badge appears with a stamp.",
-      "motion": "Jar fills in 2s. Badge stamps with ring ripple. Count-up digits roll.",
-      "module": "jarFill"
+      "name": "TWO MACHINES (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"This is how that machine is built. Two stories. Two machines. One design. Once you see the parts, you can't unsee them.\"",
+        "text": "THE BAIL CALL",
+        "sfx": "riser"
+      },
+      "start": 22.35,
+      "end": 28.9,
+      "module": "footage",
+      "vo": "This is how that machine is built. Two stories. Two machines. One design. Once you see the parts, you can't unsee them.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE BAIL CALL",
+      "sfx": [
+        "riser.wav"
+      ],
+      "footage": "editorial collage of two interlocking paper gears, a telephone receiver and a banknote joined by arrows"
     },
     {
       "n": 5,
-      "name": "20 YEARS",
-      "start": 14.66,
-      "end": 19.4,
-      "vo": "20 years? ₹30 lakh. Still no salary raise. Just the same coin, every day.",
-      "visual": "Coins become a mountain taller than the character. Chart hits ceiling.",
-      "motion": "Mountain grows from the pile with a coin-rain effect. Character jumps on beat.",
-      "module": "mountain"
+      "name": "THE CALL CENTER (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"The story starts in a call center. Not in Ohio. Not in New York. In a rented office in Mumbai, or a village outside Accra, with script cheat-sheets taped to the wall and a whiteboard of numbers above the door.\"",
+        "text": "THE CALL CENTER",
+        "icon": "users: THE TEAM, pen-line: THE SCRIPT, globe: THE NUMBERS"
+      },
+      "start": 28.9,
+      "end": 39.78,
+      "module": "footage",
+      "vo": "The story starts in a call center. Not in Ohio. Not in New York. In a rented office in Mumbai, or a village outside Accra, with script cheat-sheets taped to the wall and a whiteboard of numbers above the door.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE CALL CENTER",
+      "icons": [
+        {
+          "icon": "users",
+          "label": "THE TEAM"
+        },
+        {
+          "icon": "pen-line",
+          "label": "THE SCRIPT"
+        },
+        {
+          "icon": "globe",
+          "label": "THE NUMBERS"
+        }
+      ],
+      "sfx": [],
+      "footage": "cut-paper collage of a long row of office desks with telephone headsets, a whiteboard, a torn world map fragment"
     },
     {
       "n": 6,
-      "name": "THE PAYOFF",
-      "start": 19.4,
-      "end": 23.72,
-      "vo": "30 years? One crore. The coin did the work. You just didn't spend it.",
-      "visual": "Mountain towers to the ceiling. Character climbs it, stands on top, raises the same coin.",
-      "motion": "Deep boom + gold flash. Badge pulses huge. Firework sparkles. Hold S6-I4 longest.",
-      "module": "payoff"
+      "name": "THE ASSEMBLY LINE (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"See, the modern scam call is an assembly line. One team writes the script. Another buys the phone numbers. A third runs the payment network. Nobody sees the whole picture. Meaning nobody can describe it to police, even if they wanted to. Deniability is a feature, not a bug.\"",
+        "text": "THE ASSEMBLY LINE",
+        "icon": "pen-line: SCRIPT, phone: NUMBERS, banknote: MONEY"
+      },
+      "start": 39.78,
+      "end": 54.26,
+      "module": "footage",
+      "vo": "See, the modern scam call is an assembly line. One team writes the script. Another buys the phone numbers. A third runs the payment network. Nobody sees the whole picture. Meaning nobody can describe it to police, even if they wanted to. Deniability is a feature, not a bug.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE ASSEMBLY LINE",
+      "icons": [
+        {
+          "icon": "pen-line",
+          "label": "SCRIPT"
+        },
+        {
+          "icon": "phone",
+          "label": "NUMBERS"
+        },
+        {
+          "icon": "banknote",
+          "label": "MONEY"
+        }
+      ],
+      "sfx": [],
+      "footage": "editorial collage of a paper assembly line: a script page, a telephone and a banknote linked by arrows along a dotted conveyor"
     },
     {
       "n": 7,
-      "name": "THE CALLBACK + CTA",
-      "start": 23.72,
-      "end": 30.95,
-      "vo": "So no, ₹100 won't change your life today. But 30 years of it? One crore. Follow for more money lessons in 30 seconds.",
-      "visual": "Mountain calms back to a full jar. Character looks at the viewer, thumbs up.",
-      "motion": "Slow zoom out. Lines fade in one at a time. Follow button pops with a bounce.",
-      "module": "outro"
-    }
-  ],
-  "texts": [
-    {
-      "at": 0.0,
-      "text": "ONE COIN. 30 YEARS. ₹1 CRORE.",
-      "anim": "slam"
+      "name": "THE MATH (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"The math is brutal. A thousand calls, nine hundred and ninety fail. The machine doesn't care. One successful call pays for ten thousand failed ones. In this business, a one percent success rate is a great quarter.\"",
+        "text": "1 IN 1,000 IS ENOUGH"
+      },
+      "start": 54.26,
+      "end": 64.32,
+      "module": "footage",
+      "vo": "The math is brutal. A thousand calls, nine hundred and ninety fail. The machine doesn't care. One successful call pays for ten thousand failed ones. In this business, a one percent success rate is a great quarter.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "1 IN 1,000 IS ENOUGH",
+      "sfx": [],
+      "footage": "cut-paper collage of a dense grid of dots with a single orange-red dot standing out, a magnifying glass, a torn paper corner"
     },
     {
-      "at": 2.43,
-      "text": "₹3,000 / MONTH",
-      "anim": "wipe"
+      "n": 8,
+      "name": "THE SPOOF (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"The calls are spoofed. Your phone doesn't show their number. It shows a precinct. Or the IRS line. That's not hacking. There are services that sell that for forty dollars a month \u2014 about the price of your Netflix bill. The number on your screen is a costume.\"",
+        "text": "SPOOFED",
+        "doodle": "circle around \"SPOOFED\""
+      },
+      "start": 64.32,
+      "end": 77.02,
+      "module": "footage",
+      "vo": "The calls are spoofed. Your phone doesn't show their number. It shows a precinct. Or the IRS line. That's not hacking. There are services that sell that for forty dollars a month \u2014 about the price of your Netflix bill. The number on your screen is a costume.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "SPOOFED",
+      "doodle": {
+        "shape": "circle",
+        "target": "spoofed"
+      },
+      "sfx": [],
+      "footage": "editorial collage of a telephone wearing a paper mask, a blank name tag, a red arrow"
     },
     {
-      "at": 5.99,
-      "text": "DON'T SAVE IT. INVEST IT.",
-      "anim": "type"
+      "n": 9,
+      "name": "THE MONEY (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"The hard part isn't the phone. It's the money. Because once the victim is convinced, the cash has to move with no paper trail. And that's where the first story starts.\"",
+        "text": "THE HARD PART IS THE MONEY"
+      },
+      "start": 77.02,
+      "end": 85.29,
+      "module": "footage",
+      "vo": "The hard part isn't the phone. It's the money. Because once the victim is convinced, the cash has to move with no paper trail. And that's where the first story starts.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE HARD PART IS THE MONEY",
+      "sfx": [],
+      "footage": "cut-paper collage of a maze of arrows converging on a single banknote, a padlock, a torn receipt"
     },
     {
-      "at": 11.29,
-      "text": "10 YEARS → ₹7,00,000",
-      "anim": "count"
+      "n": 10,
+      "name": "THE TARGETS (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"The calls aren't random. The numbers are bought \u2014 data brokers sell lists of landline subscribers, their ages, their voting records. A ninety-year-old with a landline is worth more than a teenager with a smartphone. The machine buys targets, not numbers.\"",
+        "text": "THE TARGETS",
+        "icon": "database: THE LISTS, map-pin: THE AREA CODES, users: THE VICTIMS"
+      },
+      "start": 85.29,
+      "end": 97.73,
+      "module": "footage",
+      "vo": "The calls aren't random. The numbers are bought \u2014 data brokers sell lists of landline subscribers, their ages, their voting records. A ninety-year-old with a landline is worth more than a teenager with a smartphone. The machine buys targets, not numbers.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE TARGETS",
+      "icons": [
+        {
+          "icon": "database",
+          "label": "THE LISTS"
+        },
+        {
+          "icon": "map-pin",
+          "label": "THE AREA CODES"
+        },
+        {
+          "icon": "users",
+          "label": "THE VICTIMS"
+        }
+      ],
+      "sfx": [],
+      "footage": "editorial collage of a dartboard with a telephone receiver as the dart, printed data lists, a map with pins"
     },
     {
-      "at": 14.66,
-      "text": "20 YEARS → ₹30,00,000",
-      "anim": "count"
+      "n": 11,
+      "name": "THE AKRON CALL (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"May 2024. A retired teacher in Akron, Ohio. A landline she's had for thirty years. The call she'd been dreading for years.\"",
+        "text": "MAY 2024 \u00b7 AKRON, OHIO",
+        "icon": "calendar: MAY 2024, phone: THE CALL, map-pin: AKRON, OHIO"
+      },
+      "start": 97.73,
+      "end": 105.01,
+      "module": "footage",
+      "vo": "May 2024. A retired teacher in Akron, Ohio. A landline she's had for thirty years. The call she'd been dreading for years.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "MAY 2024 \u00b7 AKRON, OHIO",
+      "icons": [
+        {
+          "icon": "calendar",
+          "label": "MAY 2024"
+        },
+        {
+          "icon": "phone",
+          "label": "THE CALL"
+        },
+        {
+          "icon": "map-pin",
+          "label": "AKRON"
+        }
+      ],
+      "sfx": [],
+      "footage": "cut-paper collage of a rotary landline telephone on a kitchen counter, a torn calendar page with a circled date, a clock"
     },
     {
-      "at": 19.4,
-      "text": "30 YEARS → ₹1,00,00,000",
-      "anim": "slam"
+      "n": 12,
+      "name": "THE SCRIPT (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"'Grandma?' \u2014 a young man's voice, panicked. 'I'm in jail. I hit a car. Please don't tell Mom.'\"",
+        "text": "\"GRANDMA?\"",
+        "chat": "sms: Grandma: Is that you, Mikey? \u00b7 Caller: Yeah, Grandma. It's me. \u00b7 Caller: I'm in jail. I hit a car. \u00b7 Caller: Please don't tell Mom.",
+        "doodle": "box around \"bubble\"",
+        "sfx": "notification ping"
+      },
+      "start": 105.01,
+      "end": 110.49,
+      "module": "chat",
+      "vo": "'Grandma?' \u2014 a young man's voice, panicked. 'I'm in jail. I hit a car. Please don't tell Mom.'",
+      "track": "short",
+      "visual": "NONE",
+      "text": "GRANDMA?",
+      "chat": "sms: Grandma: Is that you, Mikey? \u00b7 Caller: Yeah, Grandma. It's me. \u00b7 Caller: I'm in jail. I hit a car. \u00b7 Caller: Please don't tell Mom.",
+      "doodle": {
+        "shape": "box",
+        "target": "bubble"
+      },
+      "sfx": [
+        "pop.wav"
+      ],
+      "chat_boxes": {
+        "header": {
+          "x": 0,
+          "y": 64,
+          "w": 1080,
+          "h": 190
+        },
+        "bubbles": [
+          {
+            "speaker": "Grandma",
+            "mine": false,
+            "x": 80,
+            "y": 1146,
+            "w": 485,
+            "h": 96
+          },
+          {
+            "speaker": "Caller",
+            "mine": true,
+            "x": 405,
+            "y": 1288,
+            "w": 595,
+            "h": 96
+          },
+          {
+            "speaker": "Caller",
+            "mine": true,
+            "x": 488,
+            "y": 1430,
+            "w": 512,
+            "h": 96
+          },
+          {
+            "speaker": "Caller",
+            "mine": true,
+            "x": 430,
+            "y": 1572,
+            "w": 570,
+            "h": 96
+          }
+        ],
+        "name": {
+          "x": 285,
+          "y": 104,
+          "w": 560,
+          "h": 110
+        },
+        "nameText": "Grandma",
+        "last": {
+          "speaker": "Caller",
+          "mine": true,
+          "x": 430,
+          "y": 1572,
+          "w": 570,
+          "h": 96
+        }
+      },
+      "footage": "editorial collage of a telephone receiver and paper speech bubbles, a torn envelope"
     },
     {
-      "at": 23.72,
-      "text": "₹100 WON'T CHANGE TODAY. IT WILL CHANGE 30 YEARS.",
-      "anim": "fade"
+      "n": 13,
+      "name": "SHE SUPPLIES THE NAME (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Here's the mechanism: the caller doesn't know her name. She supplies it. When she says 'Is that you, Mikey?' the voice says yes. Every question she asks hands them the next line. Meaning she's not tricked by them. She co-writes the con with them. Out of love.\"",
+        "text": "SHE SUPPLIES THE NAME",
+        "doodle": "underline under \"SHE SUPPLIES THE NAME\""
+      },
+      "start": 110.49,
+      "end": 122.69,
+      "module": "footage",
+      "vo": "Here's the mechanism: the caller doesn't know her name. She supplies it. When she says 'Is that you, Mikey?' the voice says yes. Every question she asks hands them the next line. Meaning she's not tricked by them. She co-writes the con with them. Out of love.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "SHE SUPPLIES THE NAME",
+      "doodle": {
+        "shape": "underline",
+        "target": "she supplies the name"
+      },
+      "sfx": [],
+      "footage": "cut-paper collage of a paper speech bubble being filled in by a hand, a name tag, a telephone"
     },
     {
-      "at": 28.68,
-      "text": "FOLLOW FOR MORE 30-SEC MONEY LESSONS",
-      "anim": "pop"
+      "n": 14,
+      "name": "THE JUDGE (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"The voice is an actor, running a voice-aging filter to sound nineteen. A second voice comes on the line \u2014 'the judge' \u2014 and quotes the exact fine: nine thousand six hundred dollars. Cash only. Bail bonds don't take cards.\"",
+        "text": "THE JUDGE",
+        "icon": "mic: THE ACTOR, gauge: THE FILTER, phone: THE JUDGE"
+      },
+      "start": 122.69,
+      "end": 134.25,
+      "module": "footage",
+      "vo": "The voice is an actor, running a voice-aging filter to sound nineteen. A second voice comes on the line \u2014 'the judge' \u2014 and quotes the exact fine: nine thousand six hundred dollars. Cash only. Bail bonds don't take cards.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE JUDGE",
+      "icons": [
+        {
+          "icon": "mic",
+          "label": "THE ACTOR"
+        },
+        {
+          "icon": "gauge",
+          "label": "THE FILTER"
+        },
+        {
+          "icon": "phone",
+          "label": "THE JUDGE"
+        }
+      ],
+      "sfx": [],
+      "footage": "editorial collage of a judge's gavel, a telephone, a robe silhouette, a torn legal form"
+    },
+    {
+      "n": 15,
+      "name": "CASH ONLY (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Cash only. That's the instruction. Nine thousand six hundred, in cash, waiting at her door. No wire. No receipt. Nothing a bank could reverse. The moment she agreed, the machine had what it needed.\"",
+        "text": "$9,600 \u2014 CASH ONLY",
+        "transfer": "from: The Teacher \u00b7 to: Cash Pickup \u00b7 amount: $9,600 \u00b7 status: SENT \u00b7 type: Cash withdrawal \u00b7 bank: Local Branch",
+        "doodle": "arrow from \"from\" to \"to\"",
+        "alert": "true",
+        "sfx": "warning"
+      },
+      "start": 134.25,
+      "end": 144.09,
+      "module": "transfer",
+      "vo": "Cash only. That's the instruction. Nine thousand six hundred, in cash, waiting at her door. No wire. No receipt. Nothing a bank could reverse. The moment she agreed, the machine had what it needed.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "$9,600 \u2014 CASH ONLY",
+      "transfer": "from: The Teacher \u00b7 to: Cash Pickup \u00b7 amount: $9,600 \u00b7 status: SENT \u00b7 type: Cash withdrawal \u00b7 bank: Local Branch",
+      "doodle": {
+        "shape": "arrow",
+        "from": "from",
+        "to": "to"
+      },
+      "alert": true,
+      "sfx": [
+        "stamp.wav"
+      ],
+      "transfer_boxes": {
+        "from": {
+          "x": 80,
+          "y": 444,
+          "w": 920,
+          "h": 220
+        },
+        "to": {
+          "x": 80,
+          "y": 798,
+          "w": 920,
+          "h": 220
+        },
+        "amount": {
+          "x": 302,
+          "y": 1144,
+          "w": 476,
+          "h": 126
+        },
+        "status": {
+          "x": 430,
+          "y": 1380,
+          "w": 219,
+          "h": 88
+        }
+      },
+      "footage": "cut-paper collage of a torn envelope with cash spilling out, a downward arrow, a bank receipt fragment"
+    },
+    {
+      "n": 16,
+      "name": "THE COURIER (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Then comes the part that should break it open. A courier arrives to pick up the cash. In person. He could be caught. But he's not a criminal \u2014 technically. In the real cases, the men who showed up thought they were collecting legal documents. The app that hired them was run by the scammers: fake business name, fake address, and a real payment processor that approved it.\"",
+        "text": "THE COURIER",
+        "chat": "sms: Dispatch: Pickup confirmed. 40 minutes. \u00b7 Dispatch: Package: legal documents. \u00b7 Courier: Confirmed.",
+        "doodle": "box around \"Courier\""
+      },
+      "start": 144.09,
+      "end": 162.05,
+      "module": "chat",
+      "vo": "Then comes the part that should break it open. A courier arrives to pick up the cash. In person. He could be caught. But he's not a criminal \u2014 technically. In the real cases, the men who showed up thought they were collecting legal documents. The app that hired them was run by the scammers: fake business name, fake address, and a real payment processor that approved it.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE COURIER",
+      "chat": "sms: Dispatch: Pickup confirmed. 40 minutes. \u00b7 Dispatch: Package: legal documents. \u00b7 Courier: Confirmed.",
+      "doodle": {
+        "shape": "box",
+        "target": "courier"
+      },
+      "sfx": [
+        "pop.wav"
+      ],
+      "chat_boxes": {
+        "header": {
+          "x": 0,
+          "y": 64,
+          "w": 1080,
+          "h": 190
+        },
+        "bubbles": [
+          {
+            "speaker": "Dispatch",
+            "mine": false,
+            "x": 80,
+            "y": 1288,
+            "w": 748,
+            "h": 96
+          },
+          {
+            "speaker": "Dispatch",
+            "mine": false,
+            "x": 80,
+            "y": 1430,
+            "w": 650,
+            "h": 96
+          },
+          {
+            "speaker": "Courier",
+            "mine": true,
+            "x": 688,
+            "y": 1572,
+            "w": 312,
+            "h": 96
+          }
+        ],
+        "name": {
+          "x": 285,
+          "y": 104,
+          "w": 560,
+          "h": 110
+        },
+        "nameText": "Dispatch",
+        "last": {
+          "speaker": "Courier",
+          "mine": true,
+          "x": 688,
+          "y": 1572,
+          "w": 312,
+          "h": 96
+        }
+      },
+      "footage": "editorial collage of a delivery van silhouette, a cardboard package, a dotted route map"
+    },
+    {
+      "n": 17,
+      "name": "THE SUPPLY CHAIN (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Every human who touches the money is innocent. That's not a scam. That's a supply chain.\"",
+        "text": "THAT'S A SUPPLY CHAIN",
+        "doodle": "circle around \"THAT'S A SUPPLY CHAIN\""
+      },
+      "start": 162.05,
+      "end": 166.59,
+      "module": "footage",
+      "vo": "Every human who touches the money is innocent. That's not a scam. That's a supply chain.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THAT'S A SUPPLY CHAIN",
+      "doodle": {
+        "shape": "circle",
+        "target": "that's a supply chain"
+      },
+      "sfx": [],
+      "footage": "cut-paper collage of a paper chain of linked envelopes and banknotes, gears, arrows"
+    },
+    {
+      "n": 18,
+      "name": "THE MULES (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"The cash doesn't stay in Ohio. It's picked up by mules \u2014 recruited online, promised a cut \u2014 and moved into crypto within hours. By the time anyone looks, it's not dollars anymore. It's a blockchain of somebody else's money.\"",
+        "text": "THE MULES",
+        "icon": "users: THE MULES, arrow-down-right: THE CASH, bitcoin: CRYPTO"
+      },
+      "start": 166.59,
+      "end": 177.41,
+      "module": "footage",
+      "vo": "The cash doesn't stay in Ohio. It's picked up by mules \u2014 recruited online, promised a cut \u2014 and moved into crypto within hours. By the time anyone looks, it's not dollars anymore. It's a blockchain of somebody else's money.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE MULES",
+      "icons": [
+        {
+          "icon": "users",
+          "label": "THE MULES"
+        },
+        {
+          "icon": "arrow-down-right",
+          "label": "THE CASH"
+        },
+        {
+          "icon": "bitcoin",
+          "label": "CRYPTO"
+        }
+      ],
+      "sfx": [],
+      "footage": "editorial collage of a duffel bag with cash, a golden coin, an arrow into a laptop"
+    },
+    {
+      "n": 19,
+      "name": "THE BANK (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Her bank warned her. The teller saw nine thousand in cash leaving the counter. 'It's for a legal settlement,' she said \u2014 the exact line they'd given her. The teller let her go. Banks don't refuse withdrawals. They can't prove anything. The system is built for trust, and the scam runs on it.\"",
+        "text": "THE WARNING",
+        "icon": "landmark: THE BANK, shield-alert: THE WARNING, message-circle: THE LINE"
+      },
+      "start": 177.41,
+      "end": 191.79,
+      "module": "footage",
+      "vo": "Her bank warned her. The teller saw nine thousand in cash leaving the counter. 'It's for a legal settlement,' she said \u2014 the exact line they'd given her. The teller let her go. Banks don't refuse withdrawals. They can't prove anything. The system is built for trust, and the scam runs on it.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE WARNING",
+      "icons": [
+        {
+          "icon": "landmark",
+          "label": "THE BANK"
+        },
+        {
+          "icon": "shield-alert",
+          "label": "THE WARNING"
+        },
+        {
+          "icon": "message-circle",
+          "label": "THE LINE"
+        }
+      ],
+      "sfx": [],
+      "footage": "cut-paper collage of a bank building silhouette with a warning triangle, a torn receipt, a magnifying glass"
+    },
+    {
+      "n": 20,
+      "name": "DEAD BY MORNING (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"An hour later, the cash is in a stranger's car, on a highway out of town. Police trace the phone to a VOIP server in a building that doesn't exist. By morning, the numbers are dead.\"",
+        "text": "DEAD BY MORNING",
+        "sfx": "whoosh"
+      },
+      "start": 191.79,
+      "end": 200.58,
+      "module": "footage",
+      "vo": "An hour later, the cash is in a stranger's car, on a highway out of town. Police trace the phone to a VOIP server in a building that doesn't exist. By morning, the numbers are dead.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "DEAD BY MORNING",
+      "sfx": [
+        "whoosh.wav"
+      ],
+      "footage": "editorial collage of a dark highway at night with light trails, a telephone with a dead battery, a server rack"
+    },
+    {
+      "n": 21,
+      "name": "THE SECOND MACHINE (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"One machine runs on fear. The second one runs on something worse.\"",
+        "text": "THE SECOND MACHINE",
+        "sfx": "riser"
+      },
+      "start": 200.58,
+      "end": 204.11,
+      "module": "footage",
+      "vo": "One machine runs on fear. The second one runs on something worse.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE SECOND MACHINE",
+      "sfx": [
+        "riser.wav"
+      ],
+      "footage": "cut-paper collage of two paper machines, one shaped like a heart and one like a telephone, interlocking gears"
+    },
+    {
+      "n": 22,
+      "name": "THE WRONG NUMBER (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"A woman in her fifties in Florida gets a wrong-number text. 'Hey Emily, it's David \u2014 did you get my email?' She corrects him. He apologizes. That should be the end of it. It's the beginning.\"",
+        "text": "THE WRONG NUMBER",
+        "icon": "message-circle: THE TEXT, user-x: THE STRANGER, heart: THE HOOK"
+      },
+      "start": 204.11,
+      "end": 212.03,
+      "module": "footage",
+      "vo": "A woman in her fifties in Florida gets a wrong-number text. 'Hey Emily, it's David \u2014 did you get my email?' She corrects him. He apologizes. That should be the end of it. It's the beginning.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE WRONG NUMBER",
+      "icons": [
+        {
+          "icon": "message-circle",
+          "label": "THE TEXT"
+        },
+        {
+          "icon": "user-x",
+          "label": "THE STRANGER"
+        },
+        {
+          "icon": "heart",
+          "label": "THE HOOK"
+        }
+      ],
+      "sfx": [],
+      "footage": "editorial collage of a smartphone with a question mark speech bubble, a torn envelope, a heart"
+    },
+    {
+      "n": 23,
+      "name": "THE FRIENDSHIP (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"A week of small talk. Photos of a real, handsome man \u2014 stolen from a dentist in Arizona who has no idea his face is working a second job. He remembers her birthday. He asks about her week. It feels like the best conversation she's had in years.\"",
+        "text": "THE FRIENDSHIP",
+        "chat": "whatsapp: David: Hey Emily, it's David \u2014 did you get my email? \u00b7 Emily: I think you have the wrong number. \u00b7 David: No worries! It's nice to meet you anyway. How's your week?",
+        "doodle": "circle around \"David\"",
+        "sfx": "notification ping"
+      },
+      "start": 212.03,
+      "end": 223.77,
+      "module": "chat",
+      "vo": "A week of small talk. Photos of a real, handsome man \u2014 stolen from a dentist in Arizona who has no idea his face is working a second job. He remembers her birthday. He asks about her week. It feels like the best conversation she's had in years.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE FRIENDSHIP",
+      "chat": "whatsapp: David: Hey Emily, it's David \u2014 did you get my email? \u00b7 Emily: I think you have the wrong number. \u00b7 David: No worries! It's nice to meet you anyway. How's your week?",
+      "doodle": {
+        "shape": "circle",
+        "target": "david"
+      },
+      "sfx": [
+        "pop.wav"
+      ],
+      "chat_boxes": {
+        "header": {
+          "x": 0,
+          "y": 64,
+          "w": 1080,
+          "h": 190
+        },
+        "bubbles": [
+          {
+            "speaker": "David",
+            "mine": false,
+            "x": 80,
+            "y": 1090,
+            "w": 773,
+            "h": 162
+          },
+          {
+            "speaker": "Emily",
+            "mine": true,
+            "x": 330,
+            "y": 1298,
+            "w": 670,
+            "h": 162
+          },
+          {
+            "speaker": "David",
+            "mine": false,
+            "x": 80,
+            "y": 1506,
+            "w": 762,
+            "h": 162
+          }
+        ],
+        "name": {
+          "x": 285,
+          "y": 104,
+          "w": 560,
+          "h": 110
+        },
+        "nameText": "David",
+        "last": {
+          "speaker": "David",
+          "mine": false,
+          "x": 80,
+          "y": 1506,
+          "w": 762,
+          "h": 162
+        }
+      },
+      "footage": "cut-paper collage of two paper speech bubbles, a telephone receiver, a heart"
+    },
+    {
+      "n": 24,
+      "name": "THE APP (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Then David mentions the app. Crypto trading. He sends screenshots of his gains \u2014 fabricated on a dashboard the scammers built. The app is free, with four point seven stars, from three thousand reviews. All paid. All created that week. The store approved it.\"",
+        "text": "THE APP",
+        "chat": "whatsapp: David: I made a little extra money this month. \u00b7 David: It's this trading app. Crypto. \u00b7 David: I can show you if you want.",
+        "doodle": "box around \"bubble\"",
+        "sfx": "notification ping"
+      },
+      "start": 223.77,
+      "end": 237.25,
+      "module": "chat",
+      "vo": "Then David mentions the app. Crypto trading. He sends screenshots of his gains \u2014 fabricated on a dashboard the scammers built. The app is free, with four point seven stars, from three thousand reviews. All paid. All created that week. The store approved it.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE APP",
+      "chat": "whatsapp: David: I made a little extra money this month. \u00b7 David: It's this trading app. Crypto. \u00b7 David: I can show you if you want.",
+      "doodle": {
+        "shape": "box",
+        "target": "bubble"
+      },
+      "sfx": [
+        "pop.wav"
+      ],
+      "chat_boxes": {
+        "header": {
+          "x": 0,
+          "y": 64,
+          "w": 1080,
+          "h": 190
+        },
+        "bubbles": [
+          {
+            "speaker": "David",
+            "mine": false,
+            "x": 80,
+            "y": 1222,
+            "w": 766,
+            "h": 162
+          },
+          {
+            "speaker": "David",
+            "mine": false,
+            "x": 80,
+            "y": 1430,
+            "w": 694,
+            "h": 96
+          },
+          {
+            "speaker": "David",
+            "mine": false,
+            "x": 80,
+            "y": 1572,
+            "w": 675,
+            "h": 96
+          }
+        ],
+        "name": {
+          "x": 285,
+          "y": 104,
+          "w": 560,
+          "h": 110
+        },
+        "nameText": "David",
+        "last": {
+          "speaker": "David",
+          "mine": false,
+          "x": 80,
+          "y": 1572,
+          "w": 675,
+          "h": 96
+        }
+      },
+      "footage": "editorial collage of a smartphone cutout and a rising paper bar chart, a coin"
+    },
+    {
+      "n": 25,
+      "name": "FAKE TRUST (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Look at the screen. A verified badge. A security lock. A customer service chat. Every trust signal a bank has, the scammers built a fake of. The blue checkmark isn't proof. It's part of the costume.\"",
+        "text": "FAKE TRUST",
+        "icon": "badge-check: VERIFIED, lock: SECURITY, message-circle: SUPPORT"
+      },
+      "start": 237.25,
+      "end": 246.09,
+      "module": "footage",
+      "vo": "Look at the screen. A verified badge. A security lock. A customer service chat. Every trust signal a bank has, the scammers built a fake of. The blue checkmark isn't proof. It's part of the costume.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "FAKE TRUST",
+      "icons": [
+        {
+          "icon": "badge-check",
+          "label": "VERIFIED"
+        },
+        {
+          "icon": "lock",
+          "label": "SECURITY"
+        },
+        {
+          "icon": "message-circle",
+          "label": "SUPPORT"
+        }
+      ],
+      "sfx": [],
+      "footage": "cut-paper collage of a padlock, a torn checkmark seal, a smartphone, a shield"
+    },
+    {
+      "n": 26,
+      "name": "THE FIRST DEPOSIT (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Here's the trick: her first deposit wins. Five hundred dollars in, and the app shows six hundred and ten.\"",
+        "text": "$500 \u2192 $610",
+        "transfer": "from: Emily \u00b7 to: Trade Platform \u00b7 amount: $500 \u00b7 status: SENT \u00b7 type: Deposit \u00b7 bank: US Holding",
+        "doodle": "circle around \"amount\"",
+        "sfx": "shimmer"
+      },
+      "start": 246.09,
+      "end": 250.99,
+      "module": "transfer",
+      "vo": "Here's the trick: her first deposit wins. Five hundred dollars in, and the app shows six hundred and ten.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "$500 \u2192 $610",
+      "transfer": "from: Emily \u00b7 to: Trade Platform \u00b7 amount: $500 \u00b7 status: SENT \u00b7 type: Deposit \u00b7 bank: US Holding",
+      "doodle": {
+        "shape": "circle",
+        "target": "amount"
+      },
+      "sfx": [
+        "shimmer.wav"
+      ],
+      "transfer_boxes": {
+        "from": {
+          "x": 80,
+          "y": 444,
+          "w": 920,
+          "h": 220
+        },
+        "to": {
+          "x": 80,
+          "y": 798,
+          "w": 920,
+          "h": 220
+        },
+        "amount": {
+          "x": 346,
+          "y": 1144,
+          "w": 388,
+          "h": 124
+        },
+        "status": {
+          "x": 430,
+          "y": 1380,
+          "w": 219,
+          "h": 88
+        }
+      },
+      "footage": "editorial collage of a bank deposit slip fragment with a rising arrow, coins"
+    },
+    {
+      "n": 27,
+      "name": "TRUST ON SCHEDULE (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Then she tests the withdrawal. Two hundred dollars. Once. Small. It lands in her account in a day. That's the engineered moment. Trust, delivered on schedule.\"",
+        "text": "TRUST, DELIVERED ON SCHEDULE",
+        "doodle": "circle around \"TRUST, DELIVERED ON SCHEDULE\""
+      },
+      "start": 250.99,
+      "end": 258.89,
+      "module": "footage",
+      "vo": "Then she tests the withdrawal. Two hundred dollars. Once. Small. It lands in her account in a day. That's the engineered moment. Trust, delivered on schedule.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "TRUST, DELIVERED ON SCHEDULE",
+      "doodle": {
+        "shape": "circle",
+        "target": "trust, delivered on schedule"
+      },
+      "sfx": [],
+      "footage": "cut-paper collage of a calendar page, an envelope arriving along a dotted route, a clock"
+    },
+    {
+      "n": 28,
+      "name": "THE FEES (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Then the fees arrive. Taxes on winnings. Platform fees. A security deposit to unlock the withdrawal. Each ask is a little more urgent than the last. Each one is the last one \u2014 until the next one.\"",
+        "text": "THE FEES",
+        "transfer": "from: Emily \u00b7 to: Platform Fees \u00b7 amount: $40,000 \u00b7 status: SENT \u00b7 type: Tax on winnings \u00b7 bank: Overseas",
+        "doodle": "circle around \"amount\"",
+        "sfx": "shimmer"
+      },
+      "start": 258.89,
+      "end": 269.23,
+      "module": "transfer",
+      "vo": "Then the fees arrive. Taxes on winnings. Platform fees. A security deposit to unlock the withdrawal. Each ask is a little more urgent than the last. Each one is the last one \u2014 until the next one.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE FEES",
+      "transfer": "from: Emily \u00b7 to: Platform Fees \u00b7 amount: $40,000 \u00b7 status: SENT \u00b7 type: Tax on winnings \u00b7 bank: Overseas",
+      "doodle": {
+        "shape": "circle",
+        "target": "amount"
+      },
+      "sfx": [
+        "shimmer.wav"
+      ],
+      "transfer_boxes": {
+        "from": {
+          "x": 80,
+          "y": 444,
+          "w": 920,
+          "h": 220
+        },
+        "to": {
+          "x": 80,
+          "y": 798,
+          "w": 920,
+          "h": 220
+        },
+        "amount": {
+          "x": 272,
+          "y": 1144,
+          "w": 536,
+          "h": 126
+        },
+        "status": {
+          "x": 430,
+          "y": 1380,
+          "w": 219,
+          "h": 88
+        }
+      },
+      "footage": "editorial collage of a stack of torn receipts growing taller, arrows, a banknote"
+    },
+    {
+      "n": 29,
+      "name": "77 DAYS (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"The average victim sends money for seventy-seven days before it stops. Eleven weeks of daily screenshots, daily gains, daily good-morning texts. And every day, the balance she's told she owns keeps climbing. It was never real. But it was never checked either.\"",
+        "text": "77 DAYS",
+        "chart_data": "$500, $2,000, $9,000, $38,000, $120,000, $300,000",
+        "doodle": "underline under \"peak\"",
+        "sfx": "tick"
+      },
+      "start": 269.23,
+      "end": 281.95,
+      "module": "chart",
+      "vo": "The average victim sends money for seventy-seven days before it stops. Eleven weeks of daily screenshots, daily gains, daily good-morning texts. And every day, the balance she's told she owns keeps climbing. It was never real. But it was never checked either.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "77 DAYS",
+      "data": [
+        {
+          "raw": "$500",
+          "label": "500",
+          "value": 500
+        },
+        {
+          "raw": "$2,000",
+          "label": "2K",
+          "value": 2000
+        },
+        {
+          "raw": "$9,000",
+          "label": "9K",
+          "value": 9000
+        },
+        {
+          "raw": "$38,000",
+          "label": "38K",
+          "value": 38000
+        },
+        {
+          "raw": "$120,000",
+          "label": "120K",
+          "value": 120000
+        },
+        {
+          "raw": "$300,000",
+          "label": "300K",
+          "value": 300000
+        }
+      ],
+      "doodle": {
+        "shape": "underline",
+        "target": "peak"
+      },
+      "sfx": [
+        "tick.wav"
+      ],
+      "footage": "cut-paper collage of a climbing paper line chart, dollar bills, a calendar fragment"
+    },
+    {
+      "n": 30,
+      "name": "$300,000 (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Then the withdrawal button stops working. Customer service goes silent. By then, Emily has wired her retirement account. Three hundred thousand dollars. A real number, from an FBI report.\"",
+        "text": "$300,000",
+        "kinetic_size": "huge",
+        "sfx": "hit"
+      },
+      "start": 281.95,
+      "end": 291.24,
+      "module": "kinetic",
+      "vo": "Then the withdrawal button stops working. Customer service goes silent. By then, Emily has wired her retirement account. Three hundred thousand dollars. A real number, from an FBI report.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "$300,000",
+      "kinetic_size": "huge",
+      "sfx": [
+        "boom.wav"
+      ]
+    },
+    {
+      "n": 31,
+      "name": "THE SCALE (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"And this isn't rare. The FBI counted five point six billion dollars in crypto-related losses in 2023 alone. Five point six billion. One wrong number at a time.\"",
+        "text": "$5.6B \u2014 FBI 2023",
+        "icon": "file-text: THE FBI REPORT, bitcoin: THE LOSSES, globe: WORLDWIDE"
+      },
+      "start": 291.24,
+      "end": 299.72,
+      "module": "footage",
+      "vo": "And this isn't rare. The FBI counted five point six billion dollars in crypto-related losses in 2023 alone. Five point six billion. One wrong number at a time.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "$5.6B \u2014 FBI 2023",
+      "icons": [
+        {
+          "icon": "file-text",
+          "label": "THE FBI REPORT"
+        },
+        {
+          "icon": "bitcoin",
+          "label": "THE LOSSES"
+        },
+        {
+          "icon": "globe",
+          "label": "WORLDWIDE"
+        }
+      ],
+      "sfx": [],
+      "footage": "editorial collage of a towering paper bar chart built of stacked dollar bills, a globe, a folder"
+    },
+    {
+      "n": 32,
+      "name": "GONE IN 40 MINUTES (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"The money crosses three international transfers in forty minutes. The accounts are closed by six o'clock. Nothing to trace.\"",
+        "text": "GONE IN 40 MINUTES",
+        "icon": "arrow-right: TRANSFER 1, arrow-right: TRANSFER 2, lock: CLOSED BY 6PM"
+      },
+      "start": 299.72,
+      "end": 306.32,
+      "module": "footage",
+      "vo": "The money crosses three international transfers in forty minutes. The accounts are closed by six o'clock. Nothing to trace.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "GONE IN 40 MINUTES",
+      "icons": [
+        {
+          "icon": "arrow-right",
+          "label": "TRANSFER 1"
+        },
+        {
+          "icon": "arrow-right",
+          "label": "TRANSFER 2"
+        },
+        {
+          "icon": "lock",
+          "label": "CLOSED BY 6PM"
+        }
+      ],
+      "sfx": [],
+      "footage": "cut-paper collage of three arrows crossing a world map, a clock, a chain of envelopes"
+    },
+    {
+      "n": 33,
+      "name": "THE DESIGN PHILOSOPHY (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Here's the part nobody talks about \u2014 the design philosophy. They call landlines, because only older people still own them. They open with a question, so the first move is always yours. The moment you say 'that's none of your business,' the whole machine stalls.\"",
+        "text": "THE DESIGN PHILOSOPHY",
+        "icon": "phone: LANDLINES, target: SELECTION, shield: THE DEFENSE"
+      },
+      "start": 306.32,
+      "end": 317.72,
+      "module": "footage",
+      "vo": "Here's the part nobody talks about \u2014 the design philosophy. They call landlines, because only older people still own them. They open with a question, so the first move is always yours. The moment you say 'that's none of your business,' the whole machine stalls.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE DESIGN PHILOSOPHY",
+      "icons": [
+        {
+          "icon": "phone",
+          "label": "LANDLINES"
+        },
+        {
+          "icon": "target",
+          "label": "SELECTION"
+        },
+        {
+          "icon": "shield",
+          "label": "THE DEFENSE"
+        }
+      ],
+      "sfx": [],
+      "footage": "editorial collage of a telephone blueprint with measurement marks, a target reticle, a shield"
+    },
+    {
+      "n": 34,
+      "name": "THE ONE QUESTION (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"Here's the test. Ask a question only your family could answer. 'Which Mikey? I have two grandsons.' The line goes dead. Because the machine sells panic \u2014 and a question is a firewall.\"",
+        "text": "THE ONE QUESTION",
+        "doodle": "circle around \"THE ONE QUESTION\""
+      },
+      "start": 317.72,
+      "end": 327.08,
+      "module": "footage",
+      "vo": "Here's the test. Ask a question only your family could answer. 'Which Mikey? I have two grandsons.' The line goes dead. Because the machine sells panic \u2014 and a question is a firewall.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "THE ONE QUESTION",
+      "doodle": {
+        "shape": "circle",
+        "target": "the one question"
+      },
+      "sfx": [],
+      "footage": "cut-paper collage of a giant paper question mark standing like a wall, a ringing telephone, paper blocks"
+    },
+    {
+      "n": 35,
+      "name": "THE DEFENSE (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"That's why the defense is one sentence: hang up, and call the number on the back of the card. Not the number they gave you. The one on the card. Every call has a flaw, and the spoofed number is it. You never have to outsmart them. You just have to be willing to be rude to someone who sounds desperate.\"",
+        "text": "HANG UP. CALL BACK.",
+        "doodle": "circle around \"HANG UP. CALL BACK.\"",
+        "sfx": "chime"
+      },
+      "start": 327.08,
+      "end": 339.96,
+      "module": "footage",
+      "vo": "That's why the defense is one sentence: hang up, and call the number on the back of the card. Not the number they gave you. The one on the card. Every call has a flaw, and the spoofed number is it. You never have to outsmart them. You just have to be willing to be rude to someone who sounds desperate.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "HANG UP. CALL BACK.",
+      "doodle": {
+        "shape": "circle",
+        "target": "hang up. call back."
+      },
+      "sfx": [
+        "chime.wav"
+      ],
+      "footage": "editorial collage of a hand pressing a telephone receiver down, a return arrow, a paper note"
+    },
+    {
+      "n": 36,
+      "name": "THE KINDNESS PROBLEM (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"The scam isn't a technology problem. It's a kindness problem. The IRS never calls. No judge takes cash. And your grandson's voice, in a panic, is the one sound the human brain was never designed to question.\"",
+        "text": "IT'S A KINDNESS PROBLEM",
+        "kinetic_size": "huge"
+      },
+      "start": 339.96,
+      "end": 351.45,
+      "module": "kinetic",
+      "vo": "The scam isn't a technology problem. It's a kindness problem. The IRS never calls. No judge takes cash. And your grandson's voice, in a panic, is the one sound the human brain was never designed to question.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "IT'S A KINDNESS PROBLEM",
+      "kinetic_size": "huge",
+      "sfx": []
+    },
+    {
+      "n": 37,
+      "name": "THE REPORT (0:00)",
+      "plan": null,
+      "rows": {
+        "vo": "\"And if this ever happens to someone you love \u2014 report it. The FTC takes reports at reportfraud dot f t c dot gov. Most victims never do. That's the last thing the machine takes.\"",
+        "text": "REPORT IT",
+        "icon": "file-text: REPORT IT, message-circle: SHARE IT, heart: PROTECT SOMEONE"
+      },
+      "start": 351.45,
+      "end": 360.33,
+      "module": "footage",
+      "vo": "And if this ever happens to someone you love \u2014 report it. The FTC takes reports at reportfraud dot f t c dot gov. Most victims never do. That's the last thing the machine takes.",
+      "track": "short",
+      "visual": "NONE",
+      "text": "REPORT IT",
+      "icons": [
+        {
+          "icon": "file-text",
+          "label": "REPORT IT"
+        },
+        {
+          "icon": "message-circle",
+          "label": "SHARE IT"
+        },
+        {
+          "icon": "heart",
+          "label": "PROTECT SOMEONE"
+        }
+      ],
+      "sfx": [],
+      "footage": "cut-paper collage of a paper folder, a megaphone, a heart, an envelope with a stamp"
+    },
+    {
+      "n": 38,
+      "name": "THE PAYOFF (0:00)",
+      "plan": null,
+      "rows": {
+        "text": "ONE QUESTION. ONE HANG-UP. ONE CALL BACK.",
+        "kinetic_size": "huge",
+        "hold": "4"
+      },
+      "start": 360.33,
+      "end": 364.33,
+      "module": "kinetic",
+      "vo": "",
+      "track": "short",
+      "visual": "NONE",
+      "text": "ONE QUESTION. ONE HANG-UP. ONE CALL BACK.",
+      "kinetic_size": "huge",
+      "sfx": []
     }
   ],
   "sfx": [
     {
-      "at": 0.0,
+      "at": 0,
       "files": [
-        "coin.wav",
+        "boom.wav"
+      ]
+    },
+    {
+      "at": 44.35,
+      "files": [
+        "riser.wav"
+      ]
+    },
+    {
+      "at": 192.95,
+      "files": [
+        "pop.wav"
+      ]
+    },
+    {
+      "at": 246.8,
+      "files": [
+        "stamp.wav"
+      ]
+    },
+    {
+      "at": 264.25,
+      "files": [
+        "pop.wav"
+      ]
+    },
+    {
+      "at": 354.55,
+      "files": [
         "whoosh.wav"
       ]
     },
     {
-      "at": 2.43,
+      "at": 373,
       "files": [
-        "coin-soft.wav"
+        "riser.wav"
       ]
     },
     {
-      "at": 5.99,
+      "at": 397.9,
       "files": [
-        "whoosh-up.wav"
+        "pop.wav"
       ]
     },
     {
-      "at": 11.29,
+      "at": 422.35,
       "files": [
-        "chime.wav"
+        "pop.wav"
       ]
     },
     {
-      "at": 14.66,
+      "at": 463.25,
       "files": [
-        "whoosh-up.wav"
-      ]
-    },
-    {
-      "at": 19.4,
-      "files": [
-        "boom.wav",
         "shimmer.wav"
       ]
     },
     {
-      "at": 23.72,
+      "at": 486.65,
       "files": [
-        "chime.wav",
-        "chime-warm.wav"
+        "shimmer.wav"
       ]
     },
     {
-      "at": 28.68,
+      "at": 505.6,
       "files": [
-        "pop.wav"
+        "tick.wav"
+      ]
+    },
+    {
+      "at": 527.05,
+      "files": [
+        "boom.wav"
+      ]
+    },
+    {
+      "at": 606.3,
+      "files": [
+        "chime.wav"
       ]
     }
-  ]
+  ],
+  "shortSeconds": 364.33
 }

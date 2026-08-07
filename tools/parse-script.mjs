@@ -20,19 +20,68 @@ const secs = (mmss) => {
 };
 const clean = (s) => s.replace(/\*\*/g, "").replace(/^["“]|["”]$/g, "").trim();
 
+// ---------------------------------------------------------------- engine
+// A script picks its own vocabulary. "**Style:** Vox deep dive" stages through
+// VoxShort; anything else stages through FinanceShort. Everything downstream
+// (voice, align, sfx, camera) is engine-agnostic and reads the same file.
+const engine = /^\s*>?\s*(?:\*\*)?style(?:\*\*)?\s*:.*\bvox\b/im.test(md)
+  ? "vox"
+  : "finance";
+const landscape = /^\s*>?\s*(?:\*\*)?format(?:\*\*)?\s*:.*\b(landscape|16:9)\b/im.test(md);
+
 // ---------------------------------------------------------------- beats
 const BEAT_RE =
   /^###\s+BEAT\s+(\d+)\s+—\s+(.+?)\s+\((\d+:\d+)[–-](\d+:\d+)\)\s*$/gm;
 
 // First match wins, so the most specific visual goes first.
-const MODULES = [
-  [/thumbs up|calms|looks at the viewer/i, "outro"],
-  [/climb|on top of|towers|payoff/i, "payoff"],
-  [/mountain|mound|mountain grows/i, "mountain"],
-  [/overflow|badge|jar fills/i, "jarFill"],
-  [/chart|rising line|line draws/i, "investChart"],
-  [/stack|calendar/i, "coinStack"],
-  [/coin drops|empty jar/i, "coinDrop"],
+const MODULES = {
+  finance: [
+    [/thumbs up|calms|looks at the viewer/i, "outro"],
+    [/climb|on top of|towers|payoff/i, "payoff"],
+    [/mountain|mound|mountain grows/i, "mountain"],
+    [/overflow|badge|jar fills/i, "jarFill"],
+    [/chart|rising line|line draws/i, "investChart"],
+    [/stack|calendar/i, "coinStack"],
+    [/coin drops|empty jar/i, "coinDrop"],
+  ],
+  vox: [
+    // Deliberately narrow. These run before the older rules, so anything loose
+    // here silently steals beats that used to stage as doodle or chart.
+    [/\bquote\b|clipping|\bcited?\b|according to|source card|report says/i, "quote"],
+    [/\btimeline\b|year by year|decade by decade|chronolog/i, "timeline"],
+    [/\bcallout\b|leader line|calls? out\b|\bpointer\b/i, "callout"],
+    [/compare|against each other|side by side|bars?\b|race/i, "compare"],
+    [/stat\b|big number|one number|single number|counts? (up|down)/i, "stat"],
+    [/chart|graph|curve|plotted|line draws/i, "chart"],
+    [/icons?\b|step cards?|cards?\b/i, "icon"],
+    [/circl|underline|annotat|arrow|scribble|doodle|highlight|marked/i, "doodle"],
+    [/footage|archival|b-?roll|clip|photo|image/i, "footage"],
+    [/words?\b|headline|kinetic|phrase/i, "kinetic"],
+  ],
+};
+const FALLBACK = { finance: "coinDrop", vox: "kinetic" };
+
+// "wallet: Spend less, trending-up: Invest it" -> [[key, value], ...]. Commas
+// inside a number are digit grouping, not a separator.
+const pairs = (s) =>
+  (s ?? "")
+    .replace(/(?<=\d),(?=\d{3}\b)/g, "")
+    .split(",")
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .map((part) => {
+      const i = part.indexOf(":");
+      return i < 0 ? [part, ""] : [part.slice(0, i).trim(), part.slice(i + 1).trim()];
+    });
+
+const SHAPES = [
+  // highlight goes first: "highlights the phrase" also matches nothing else,
+  // but "marker box" should still be a box.
+  [/highlight|marker|swipes? over/i, "highlight"],
+  [/circles?\b|ring/i, "circle"],
+  [/box|rectangle|frame/i, "box"],
+  [/arrow|points? at/i, "arrow"],
+  [/strike|crosses? out/i, "strike"],
 ];
 
 const beats = [];
@@ -43,18 +92,43 @@ for (const m of md.matchAll(BEAT_RE)) {
     rows[r[1].toLowerCase()] = clean(r[2]);
   }
   const visual = rows["visual"] ?? "";
-  beats.push({
+  const motion = rows["motion fx"] ?? "";
+  const beat = {
     n: Number(m[1]),
     name: m[2],
     start: secs(m[3]),
     end: secs(m[4]),
     vo: rows["audio"] ?? "",
     visual,
-    motion: rows["motion fx"] ?? "",
+    motion,
     module:
       rows["module"] ??
-      (MODULES.find(([re]) => re.test(visual))?.[1] ?? "coinDrop"),
-  });
+      (MODULES[engine].find(([re]) => re.test(visual))?.[1] ?? FALLBACK[engine]),
+  };
+
+  if (engine === "vox") {
+    // What a vox module stages beyond the narration. Every one is optional —
+    // a beat that declares none of them still renders.
+    beat.text = rows["on-screen text"] ?? "";
+    // Empty means "the script never asked for a mark". The renderer defaults to
+    // an underline where a mark is required, and a module that only marks on
+    // request can tell the two cases apart.
+    beat.shape = SHAPES.find(([re]) => re.test(`${motion} ${visual}`))?.[1] ?? "";
+    beat.icons = pairs(rows["icons"]).map(([icon, label]) => ({ icon, label }));
+    // `raw` keeps whatever the script wrote around the number ("$2260", "0.4%")
+    // so a module can re-render it grouped without being told the unit twice.
+    beat.data = pairs(rows["data"]).map(([label, value]) => ({
+      label,
+      raw: value,
+      value: Number(value.replace(/[^\d.-]/g, "")) || 0,
+    }));
+    // Who said it. The quote module prints this under the clipping; every other
+    // module ignores it, so a script can carry a citation without using one.
+    beat.source = rows["source"] ?? "";
+    // Search terms for tools/fetch-footage.py, not read by the renderer.
+    beat.footage = rows["footage"] ?? "";
+  }
+  beats.push(beat);
 }
 if (!beats.length) throw new Error(`no "### BEAT n — NAME (m:ss–m:ss)" blocks in ${src}`);
 
@@ -116,9 +190,10 @@ const meta = md.match(/\*\*Caption Hook:\*\*\s*"?(.+?)"?\s*$/m);
 const out = {
   source: src,
   title: (md.match(/^#\s+(.+)$/m)?.[1] ?? "video").trim(),
+  engine,
   fps: 30,
-  width: 1080,
-  height: 1920,
+  width: landscape ? 1920 : 1080,
+  height: landscape ? 1080 : 1920,
   durationInSeconds: Math.max(...beats.map((b) => b.end)),
   caption: meta?.[1] ?? "",
   beats,
@@ -162,7 +237,7 @@ writeFileSync(
 );
 
 console.log(
-  `${dst}\n  ${out.durationInSeconds}s · ${beats.length} beats · ` +
-    `${texts.length} overlays · ${sfx.length} sfx cues\n  modules: ` +
+  `${dst}\n  ${engine} · ${out.width}x${out.height} · ${out.durationInSeconds}s · ` +
+    `${beats.length} beats · ${texts.length} overlays · ${sfx.length} sfx cues\n  modules: ` +
     beats.map((b) => b.module).join(" → "),
 );

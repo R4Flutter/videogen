@@ -1,34 +1,58 @@
 // One place for brand + layout. Components read from here, never hardcode.
 export const theme = {
-  color: {
-    bg: "#06181C",
-    bgGlow: "#0D3B42",
-    gold: "#F7C948",
-    goldDeep: "#B8860B",
-    goldLight: "#FFE9A3",
-    green: "#3DDC97",
-    greenDeep: "#0E6B4B",
-    text: "#EAF4F3",
-    dim: "#7FA6A6",
-    ink: "#041215",
+  // Vox: a printed page, not a stage. Ink on paper, one accent, nothing else —
+  // the restraint is the look, so resist adding a sixth colour here.
+  vox: {
+    paper: "#F4F1EA",
+    paperDeep: "#E4DED1",
+    ink: "#1A1A1A",
+    accent: "#D9491E",
+    muted: "#8A857C",
+    rule: "#C9C2B4",
+    // Archivo is loaded by vox/elements.tsx; the rest of the stack is what
+    // renders if the font server is unreachable.
+    font: `"Archivo", "Bahnschrift", "Segoe UI", system-ui, sans-serif`,
   },
-  // Segoe UI ships the rupee glyph and needs no network at render time.
-  font: `"Segoe UI", system-ui, -apple-system, sans-serif`,
-  // 1080x1920 minus the phone UI: nothing that matters lives outside this.
-  safe: { top: 250, bottom: 400, side: 80 },
-  stage: { top: 620, bottom: 1520, groundY: 1440 },
-  overlayY: 300,
-  captionY: 1560,
+  // Crime: an investigation room at night. Charcoal, one warm paper, one muted
+  // evidence red, one cool surveillance tone. Every colour here means something
+  // — red marks evidence, teal marks surveillance, amber marks archival — so a
+  // colour used for decoration breaks the grammar.
+  crime: {
+    ink: "#0A0C0E", // the room
+    slate: "#151A1E", // a panel in the room
+    rule: "#2B333A",
+    paper: "#E9E4D7", // a document under a lamp
+    paperEdge: "#C8C0AC",
+    text: "#E8EBED",
+    dim: "#8A949C",
+    evidence: "#C0392B", // an evidence mark, never a mood
+    surveil: "#74A9A2", // camera / phone / anything a machine recorded
+    amber: "#D2A044", // archival, older than the case
+    font: `"Archivo", "Bahnschrift", "Segoe UI", system-ui, sans-serif`,
+    // Timestamps, case numbers, evidence tags. A machine wrote these, so they
+    // are set in a machine's typeface.
+    mono: `"Consolas", "DejaVu Sans Mono", ui-monospace, monospace`,
+  },
+  // Scam: sitting with a friend over coffee explaining how you almost got got —
+  // not a midnight documentary. Warm paper, vox orange for "look here", and
+  // three colours that mean one thing each: red is the moment it turns, green
+  // is money, blue is the fake trust signal. A colour used for decoration
+  // breaks the grammar.
+  scam: {
+    paper: "#F5F1E8", // warm off-white, slightly warmer than vox
+    paperDeep: "#E8E1D2", // edge fade
+    ink: "#1A1A1A", // body text
+    inkSoft: "#3A3A38", // secondary text
+    muted: "#8A857C", // Vox-kit alias for secondary text on the page
+    rule: "#C7BFAD", // printer's guides
+    accent: "#D9491E", // vox orange — callouts, underlines, the RED FLAG
+    alert: "#C81E1E", // the moment the scam turns. One beat per video max.
+    money: "#0E7C3A", // every dollar amount. Money is the thing in this niche.
+    // The same green lifted for the black hook and payoff frames. #0E7C3A is
+    // tuned to sit on paper and only reaches ~3:1 on black — too weak for the
+    // one frame that has to stop a thumb at low screen brightness.
+    moneyLift: "#2EA85C",
+    verified: "#1B6FDB", // the *fake* verification checkmarks scammers fake
+    font: `"Archivo", "Bahnschrift", "Segoe UI", system-ui, sans-serif`,
+  },
 } as const;
-
-export const W = 1080;
-export const H = 1920;
-
-// Overshoot used by every "arrives with weight" element.
-export const POP = { damping: 12, mass: 0.6, stiffness: 180 };
-export const SOFT = { damping: 200, mass: 1, stiffness: 100 };
-
-export const inr = (n: number) =>
-  new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(
-    Math.round(n),
-  );

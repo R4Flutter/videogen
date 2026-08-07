@@ -1,0 +1,139 @@
+**Topic:** THE MILE 46 DISAPPEARANCE
+**Format:** CrimeLong
+**Resolution:** 1920×1080
+**FPS:** 30
+**Central question:** Where did the truck go between 11:12 and 2:17?
+
+INVENTED. This case does not exist. It is the engine's test fixture, and it is
+written the way a real case has to be written so that the checks mean something.
+
+---
+
+# 0:00–0:20 — THE LAST PING
+
+**MODULE:** CLOCK → REVEAL
+**CAMERA:** isolate
+**AUDIO:** minimal
+**SFX:** timestamp
+**VISUAL DENSITY:** 1
+
+### NARRATION
+
+At two seventeen in the morning, a phone that had been silent for three hours connected to a tower forty miles from where it started.
+
+It stayed on the network for eleven seconds.
+
+Then it never appeared again.
+
+### VISUAL
+
+**2:17 AM**
+
+**ELEVEN SECONDS**
+
+---
+
+# 0:20–0:50 — THE DRIVE
+
+**MODULE:** LOCATION_MAP → TIMELINE
+**CAMERA:** search
+**AUDIO:** low investigative pulse
+**SFX:** map_pin / timestamp
+**VISUAL DENSITY:** 3
+
+### NARRATION
+
+Dana Reyes finished a night shift at a freight yard outside Bakersfield and started the drive home.
+
+She had made that drive four hundred times.
+
+On the ninth of March she did not arrive.
+
+Deputies built a timeline out of receipts and tower records.
+
+It was short, and it was solid, right up until it stopped.
+
+### VISUAL
+
+**BAKERSFIELD — shift ends**
+
+**MILE 46 — the fuel stop**
+
+**TEHACHAPI — truck recovered**
+
+**9:40 PM — clocks out**
+
+**10:55 PM — buys fuel**
+
+**11:12 PM — texts her sister**
+
+---
+
+# 0:50–1:15 — THE RECEIPT
+
+**MODULE:** DOCUMENT → EVIDENCE_CARD
+**CAMERA:** investigate
+**AUDIO:** tension
+**SFX:** document / evidence
+**VISUAL DENSITY:** 4
+
+### NARRATION
+
+The receipt changed the investigation, and it changed it by one word.
+
+Twenty-two gallons, and two coffees, paid at ten fifty-seven.
+
+She was driving alone, and she had told her sister she was driving alone.
+
+Investigators said the second cup was never recovered.
+
+### VISUAL
+
+**22 GAL UNLEADED · TWO COFFEES · 10:57 PM**
+
+**THE SECOND CUP — never recovered**
+
+**THE PASSENGER SEAT — forward of her setting**
+
+---
+
+# 1:15–1:35 — WHERE IT STANDS
+
+**MODULE:** CASE_STATUS
+**CAMERA:** reflect
+**AUDIO:** resolution
+
+### NARRATION
+
+No one has been charged.
+
+The sheriff's office has reviewed the file twice, and the eleven seconds have never been explained.
+
+### VISUAL
+
+**CASE — open, no charges filed**
+
+**REWARD — $25,000, unclaimed**
+
+---
+
+# SHORT — VERTICAL CUT
+
+**MODULE:** REVEAL → EVIDENCE_CARD
+**CAMERA:** isolate
+**AUDIO:** tension
+**SFX:** reveal_major
+
+### NARRATION
+
+A missing woman's phone switched on for eleven seconds, forty miles from where she vanished.
+
+No call. No text. Nothing sent.
+
+The receipt from the fuel stop says two coffees, and investigators said she was driving alone.
+
+### VISUAL
+
+**ELEVEN SECONDS**
+
+**TWO COFFEES — one driver**

@@ -1,513 +1,6922 @@
 {
-  "total": 30.95,
+  "total": 364.33,
+  "shortTotal": 364.33,
   "beats": [
     {
       "n": 1,
       "file": "vo/beat-1.wav",
-      "start": 0.0,
-      "dur": 2.43,
-      "speech": 1.98,
+      "dur": 7.21,
+      "speech": 6.66,
       "words": [
         {
-          "w": "One",
-          "start": 0.0,
-          "end": 0.18
+          "w": "Seventy-two",
+          "start": 0.19,
+          "end": 0.38
         },
         {
-          "w": "coin.",
-          "start": 0.18,
-          "end": 0.36
+          "w": "thousand.",
+          "start": 0.38,
+          "end": 0.6
         },
         {
-          "w": "30",
-          "start": 1.04,
-          "end": 1.09
+          "w": "That's",
+          "start": 1.12,
+          "end": 1.46
         },
         {
-          "w": "years.",
-          "start": 1.04,
-          "end": 1.3
+          "w": "how",
+          "start": 1.46,
+          "end": 1.54
         },
         {
-          "w": "One",
-          "start": 1.74,
-          "end": 1.79
+          "w": "many",
+          "start": 1.54,
+          "end": 1.64
         },
         {
-          "w": "crore.",
-          "start": 1.76,
-          "end": 1.98
+          "w": "times",
+          "start": 1.64,
+          "end": 1.96
+        },
+        {
+          "w": "Americans",
+          "start": 1.96,
+          "end": 2.18
+        },
+        {
+          "w": "pick",
+          "start": 2.18,
+          "end": 2.6
+        },
+        {
+          "w": "up",
+          "start": 2.6,
+          "end": 2.7
+        },
+        {
+          "w": "this",
+          "start": 2.7,
+          "end": 2.88
+        },
+        {
+          "w": "exact",
+          "start": 2.88,
+          "end": 3.02
+        },
+        {
+          "w": "kind",
+          "start": 3.02,
+          "end": 3.42
+        },
+        {
+          "w": "of",
+          "start": 3.42,
+          "end": 3.52
+        },
+        {
+          "w": "call,",
+          "start": 3.52,
+          "end": 3.68
+        },
+        {
+          "w": "every",
+          "start": 3.9,
+          "end": 4.02
+        },
+        {
+          "w": "single",
+          "start": 4.02,
+          "end": 4.2
+        },
+        {
+          "w": "day.",
+          "start": 4.2,
+          "end": 4.46
+        },
+        {
+          "w": "And",
+          "start": 5.02,
+          "end": 5.22
+        },
+        {
+          "w": "every",
+          "start": 5.22,
+          "end": 5.6
+        },
+        {
+          "w": "one",
+          "start": 5.6,
+          "end": 5.74
+        },
+        {
+          "w": "of",
+          "start": 5.74,
+          "end": 5.82
+        },
+        {
+          "w": "those",
+          "start": 5.82,
+          "end": 5.92
+        },
+        {
+          "w": "calls",
+          "start": 5.92,
+          "end": 6.22
+        },
+        {
+          "w": "was",
+          "start": 6.22,
+          "end": 6.44
+        },
+        {
+          "w": "built.",
+          "start": 6.44,
+          "end": 6.66
         }
-      ]
+      ],
+      "start": 0.0
     },
     {
       "n": 2,
       "file": "vo/beat-2.wav",
-      "start": 2.43,
-      "dur": 3.56,
-      "speech": 3.34,
+      "dur": 8.34,
+      "speech": 7.92,
       "words": [
         {
-          "w": "See,",
+          "w": "Somewhere",
           "start": 0.0,
           "end": 0.18
         },
         {
-          "w": "₹100",
-          "start": 0.48,
-          "end": 1.3
+          "w": "in",
+          "start": 0.18,
+          "end": 0.44
+        },
+        {
+          "w": "Ohio,",
+          "start": 0.44,
+          "end": 0.66
         },
         {
           "w": "a",
-          "start": 1.3,
-          "end": 1.42
+          "start": 1.1,
+          "end": 1.1500000000000001
         },
         {
-          "w": "day",
-          "start": 1.42,
-          "end": 1.56
-        },
-        {
-          "w": "is",
-          "start": 1.56,
+          "w": "seventy-eight-year-old",
+          "start": 1.49,
           "end": 1.86
         },
         {
-          "w": "only",
+          "w": "woman",
           "start": 1.86,
-          "end": 2.06
+          "end": 2.12
         },
         {
-          "w": "₹3,000",
-          "start": 2.06,
-          "end": 3.12
+          "w": "just",
+          "start": 2.12,
+          "end": 2.34
+        },
+        {
+          "w": "handed",
+          "start": 2.34,
+          "end": 2.56
         },
         {
           "w": "a",
-          "start": 3.12,
-          "end": 3.2
+          "start": 2.56,
+          "end": 2.74
         },
         {
-          "w": "month.",
-          "start": 3.2,
-          "end": 3.34
+          "w": "stranger",
+          "start": 2.74,
+          "end": 2.92
+        },
+        {
+          "w": "nine",
+          "start": 2.92,
+          "end": 3.38
+        },
+        {
+          "w": "thousand",
+          "start": 3.38,
+          "end": 3.66
+        },
+        {
+          "w": "dollars",
+          "start": 3.66,
+          "end": 4.06
+        },
+        {
+          "w": "in",
+          "start": 4.06,
+          "end": 4.24
+        },
+        {
+          "w": "cash,",
+          "start": 4.24,
+          "end": 4.46
+        },
+        {
+          "w": "at",
+          "start": 4.88,
+          "end": 4.93
+        },
+        {
+          "w": "her",
+          "start": 4.88,
+          "end": 5.04
+        },
+        {
+          "w": "own",
+          "start": 5.04,
+          "end": 5.18
+        },
+        {
+          "w": "front",
+          "start": 5.18,
+          "end": 5.36
+        },
+        {
+          "w": "door.",
+          "start": 5.36,
+          "end": 5.64
+        },
+        {
+          "w": "The",
+          "start": 6.24,
+          "end": 6.29
+        },
+        {
+          "w": "doorbell",
+          "start": 6.26,
+          "end": 6.56
+        },
+        {
+          "w": "camera",
+          "start": 6.56,
+          "end": 6.86
+        },
+        {
+          "w": "caught",
+          "start": 6.86,
+          "end": 7.1
+        },
+        {
+          "w": "every",
+          "start": 7.1,
+          "end": 7.28
+        },
+        {
+          "w": "second",
+          "start": 7.28,
+          "end": 7.6
+        },
+        {
+          "w": "of",
+          "start": 7.6,
+          "end": 7.84
+        },
+        {
+          "w": "it.",
+          "start": 7.84,
+          "end": 7.92
         }
-      ]
+      ],
+      "start": 7.21
     },
     {
       "n": 3,
       "file": "vo/beat-3.wav",
-      "start": 5.99,
-      "dur": 5.3,
-      "speech": 5.04,
+      "dur": 6.8,
+      "speech": 6.38,
       "words": [
         {
-          "w": "And",
+          "w": "This",
           "start": 0.0,
-          "end": 0.2
+          "end": 0.14
         },
         {
-          "w": "parked",
-          "start": 0.2,
-          "end": 0.36
+          "w": "is",
+          "start": 0.14,
+          "end": 0.22
         },
         {
-          "w": "in",
-          "start": 0.36,
-          "end": 0.5
+          "w": "not",
+          "start": 0.22,
+          "end": 0.4
         },
         {
           "w": "a",
-          "start": 0.5,
-          "end": 0.56
+          "start": 0.4,
+          "end": 0.48
         },
         {
-          "w": "bank",
-          "start": 0.56,
-          "end": 0.68
+          "w": "robbery.",
+          "start": 0.48,
+          "end": 0.74
         },
         {
-          "w": "account,",
-          "start": 0.68,
-          "end": 0.98
+          "w": "The",
+          "start": 1.24,
+          "end": 1.3
         },
         {
-          "w": "that's",
-          "start": 1.38,
-          "end": 1.6
-        },
-        {
-          "w": "nothing.",
-          "start": 1.6,
-          "end": 1.8
-        },
-        {
-          "w": "But",
-          "start": 2.54,
-          "end": 2.59
-        },
-        {
-          "w": "invested?",
-          "start": 2.56,
-          "end": 3.0
-        },
-        {
-          "w": "That",
-          "start": 3.7,
-          "end": 3.75
-        },
-        {
-          "w": "₹3,000",
-          "start": 3.72,
-          "end": 4.52
-        },
-        {
-          "w": "starts",
-          "start": 4.52,
-          "end": 4.74
-        },
-        {
-          "w": "working.",
-          "start": 4.74,
-          "end": 5.04
-        }
-      ]
-    },
-    {
-      "n": 4,
-      "file": "vo/beat-4.wav",
-      "start": 11.29,
-      "dur": 3.37,
-      "speech": 3.03,
-      "words": [
-        {
-          "w": "At",
-          "start": 0.0,
-          "end": 0.1
-        },
-        {
-          "w": "12%",
-          "start": 0.1,
-          "end": 0.3
-        },
-        {
-          "w": "a",
-          "start": 0.62,
-          "end": 0.76
-        },
-        {
-          "w": "year,",
-          "start": 0.76,
-          "end": 1.0
-        },
-        {
-          "w": "10",
+          "w": "man",
           "start": 1.3,
-          "end": 1.46
+          "end": 1.42
         },
         {
-          "w": "years",
-          "start": 1.46,
-          "end": 1.68
+          "w": "at",
+          "start": 1.42,
+          "end": 1.54
         },
         {
-          "w": "becomes",
-          "start": 1.85,
-          "end": 2.02
-        },
-        {
-          "w": "₹7",
-          "start": 2.02,
-          "end": 2.96
-        },
-        {
-          "w": "lakh.",
-          "start": 2.98,
-          "end": 3.03
-        }
-      ]
-    },
-    {
-      "n": 5,
-      "file": "vo/beat-5.wav",
-      "start": 14.66,
-      "dur": 4.74,
-      "speech": 4.44,
-      "words": [
-        {
-          "w": "20",
-          "start": 0.0,
-          "end": 0.16
-        },
-        {
-          "w": "years?",
-          "start": 0.16,
-          "end": 0.46
-        },
-        {
-          "w": "₹30",
-          "start": 0.82,
+          "w": "the",
+          "start": 1.54,
           "end": 1.6
         },
         {
-          "w": "lakh.",
-          "start": 1.77,
-          "end": 1.94
+          "w": "door",
+          "start": 1.6,
+          "end": 1.76
         },
         {
-          "w": "Still",
-          "start": 1.94,
+          "w": "works",
+          "start": 1.76,
+          "end": 2.0
+        },
+        {
+          "w": "for",
+          "start": 2.0,
           "end": 2.12
         },
         {
-          "w": "no",
+          "w": "them.",
           "start": 2.12,
           "end": 2.28
         },
         {
-          "w": "salary",
-          "start": 2.28,
-          "end": 2.52
-        },
-        {
-          "w": "raise.",
-          "start": 2.52,
-          "end": 2.9
-        },
-        {
-          "w": "Just",
-          "start": 3.18,
-          "end": 3.24
+          "w": "And",
+          "start": 2.66,
+          "end": 2.72
         },
         {
           "w": "the",
-          "start": 3.24,
-          "end": 3.4
+          "start": 2.72,
+          "end": 2.82
         },
         {
-          "w": "same",
-          "start": 3.4,
-          "end": 3.56
+          "w": "whole",
+          "start": 2.82,
+          "end": 2.94
         },
         {
-          "w": "coin,",
-          "start": 3.56,
-          "end": 3.78
+          "w": "thing",
+          "start": 2.94,
+          "end": 3.16
         },
         {
-          "w": "every",
+          "w": "slipped",
+          "start": 3.16,
+          "end": 3.32
+        },
+        {
+          "w": "through",
+          "start": 3.32,
+          "end": 3.62
+        },
+        {
+          "w": "the",
+          "start": 3.62,
+          "end": 3.68
+        },
+        {
+          "w": "system",
+          "start": 3.68,
+          "end": 3.94
+        },
+        {
+          "w": "without",
+          "start": 3.94,
+          "end": 4.12
+        },
+        {
+          "w": "a",
           "start": 4.12,
-          "end": 4.22
+          "end": 4.3
         },
         {
-          "w": "day.",
-          "start": 4.22,
-          "end": 4.44
+          "w": "single",
+          "start": 4.3,
+          "end": 4.46
+        },
+        {
+          "w": "law",
+          "start": 4.46,
+          "end": 4.72
+        },
+        {
+          "w": "broken",
+          "start": 4.72,
+          "end": 5.0
+        },
+        {
+          "w": "—",
+          "start": 5.0,
+          "end": 5.05
+        },
+        {
+          "w": "until",
+          "start": 5.0,
+          "end": 5.46
+        },
+        {
+          "w": "the",
+          "start": 5.46,
+          "end": 5.6
+        },
+        {
+          "w": "money",
+          "start": 5.6,
+          "end": 5.74
+        },
+        {
+          "w": "was",
+          "start": 5.74,
+          "end": 5.9
+        },
+        {
+          "w": "already",
+          "start": 5.9,
+          "end": 6.12
+        },
+        {
+          "w": "gone.",
+          "start": 6.12,
+          "end": 6.38
         }
-      ]
+      ],
+      "start": 15.55
+    },
+    {
+      "n": 4,
+      "file": "vo/beat-4.wav",
+      "dur": 6.55,
+      "speech": 6.0,
+      "words": [
+        {
+          "w": "This",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "w": "is",
+          "start": 0.24,
+          "end": 0.4
+        },
+        {
+          "w": "how",
+          "start": 0.4,
+          "end": 0.54
+        },
+        {
+          "w": "that",
+          "start": 0.54,
+          "end": 0.66
+        },
+        {
+          "w": "machine",
+          "start": 0.66,
+          "end": 0.92
+        },
+        {
+          "w": "is",
+          "start": 0.92,
+          "end": 1.1
+        },
+        {
+          "w": "built.",
+          "start": 1.1,
+          "end": 1.36
+        },
+        {
+          "w": "Two",
+          "start": 1.82,
+          "end": 1.9
+        },
+        {
+          "w": "stories.",
+          "start": 1.9,
+          "end": 2.28
+        },
+        {
+          "w": "Two",
+          "start": 2.74,
+          "end": 2.82
+        },
+        {
+          "w": "machines.",
+          "start": 2.82,
+          "end": 3.08
+        },
+        {
+          "w": "One",
+          "start": 3.58,
+          "end": 3.68
+        },
+        {
+          "w": "design.",
+          "start": 3.68,
+          "end": 3.94
+        },
+        {
+          "w": "Once",
+          "start": 4.34,
+          "end": 4.48
+        },
+        {
+          "w": "you",
+          "start": 4.48,
+          "end": 4.58
+        },
+        {
+          "w": "see",
+          "start": 4.58,
+          "end": 4.7
+        },
+        {
+          "w": "the",
+          "start": 4.7,
+          "end": 4.82
+        },
+        {
+          "w": "parts,",
+          "start": 4.82,
+          "end": 5.0
+        },
+        {
+          "w": "you",
+          "start": 5.0,
+          "end": 5.26
+        },
+        {
+          "w": "can't",
+          "start": 5.26,
+          "end": 5.54
+        },
+        {
+          "w": "unsee",
+          "start": 5.54,
+          "end": 5.8
+        },
+        {
+          "w": "them.",
+          "start": 5.8,
+          "end": 6.0
+        }
+      ],
+      "start": 22.35
+    },
+    {
+      "n": 5,
+      "file": "vo/beat-5.wav",
+      "dur": 10.88,
+      "speech": 10.46,
+      "words": [
+        {
+          "w": "The",
+          "start": 0.0,
+          "end": 0.12
+        },
+        {
+          "w": "story",
+          "start": 0.12,
+          "end": 0.38
+        },
+        {
+          "w": "starts",
+          "start": 0.38,
+          "end": 0.72
+        },
+        {
+          "w": "in",
+          "start": 0.72,
+          "end": 0.98
+        },
+        {
+          "w": "a",
+          "start": 0.98,
+          "end": 1.06
+        },
+        {
+          "w": "call",
+          "start": 1.06,
+          "end": 1.22
+        },
+        {
+          "w": "center.",
+          "start": 1.22,
+          "end": 1.54
+        },
+        {
+          "w": "Not",
+          "start": 2.04,
+          "end": 2.18
+        },
+        {
+          "w": "in",
+          "start": 2.18,
+          "end": 2.32
+        },
+        {
+          "w": "Ohio.",
+          "start": 2.32,
+          "end": 2.54
+        },
+        {
+          "w": "Not",
+          "start": 3.0,
+          "end": 3.06
+        },
+        {
+          "w": "in",
+          "start": 3.06,
+          "end": 3.22
+        },
+        {
+          "w": "New",
+          "start": 3.22,
+          "end": 3.36
+        },
+        {
+          "w": "York.",
+          "start": 3.36,
+          "end": 3.6
+        },
+        {
+          "w": "In",
+          "start": 3.98,
+          "end": 4.03
+        },
+        {
+          "w": "a",
+          "start": 4.02,
+          "end": 4.1
+        },
+        {
+          "w": "rented",
+          "start": 4.1,
+          "end": 4.32
+        },
+        {
+          "w": "office",
+          "start": 4.32,
+          "end": 4.72
+        },
+        {
+          "w": "in",
+          "start": 4.72,
+          "end": 4.98
+        },
+        {
+          "w": "Mumbai,",
+          "start": 4.98,
+          "end": 5.2
+        },
+        {
+          "w": "or",
+          "start": 5.68,
+          "end": 5.74
+        },
+        {
+          "w": "a",
+          "start": 5.74,
+          "end": 5.82
+        },
+        {
+          "w": "village",
+          "start": 5.82,
+          "end": 6.06
+        },
+        {
+          "w": "outside",
+          "start": 6.06,
+          "end": 6.4
+        },
+        {
+          "w": "Accra,",
+          "start": 6.4,
+          "end": 7.0
+        },
+        {
+          "w": "with",
+          "start": 7.26,
+          "end": 7.31
+        },
+        {
+          "w": "script",
+          "start": 7.3,
+          "end": 7.5
+        },
+        {
+          "w": "cheat-sheets",
+          "start": 7.77,
+          "end": 8.04
+        },
+        {
+          "w": "taped",
+          "start": 8.04,
+          "end": 8.3
+        },
+        {
+          "w": "to",
+          "start": 8.3,
+          "end": 8.5
+        },
+        {
+          "w": "the",
+          "start": 8.5,
+          "end": 8.58
+        },
+        {
+          "w": "wall",
+          "start": 8.58,
+          "end": 8.78
+        },
+        {
+          "w": "and",
+          "start": 8.78,
+          "end": 9.04
+        },
+        {
+          "w": "a",
+          "start": 9.04,
+          "end": 9.12
+        },
+        {
+          "w": "whiteboard",
+          "start": 9.12,
+          "end": 9.5
+        },
+        {
+          "w": "of",
+          "start": 9.5,
+          "end": 9.62
+        },
+        {
+          "w": "numbers",
+          "start": 9.62,
+          "end": 9.84
+        },
+        {
+          "w": "above",
+          "start": 9.84,
+          "end": 10.14
+        },
+        {
+          "w": "the",
+          "start": 10.14,
+          "end": 10.34
+        },
+        {
+          "w": "door.",
+          "start": 10.34,
+          "end": 10.46
+        }
+      ],
+      "start": 28.9
     },
     {
       "n": 6,
       "file": "vo/beat-6.wav",
-      "start": 19.4,
-      "dur": 4.32,
-      "speech": 3.82,
+      "dur": 14.48,
+      "speech": 14.06,
       "words": [
         {
-          "w": "30",
+          "w": "See,",
           "start": 0.0,
-          "end": 0.2
-        },
-        {
-          "w": "years?",
-          "start": 0.2,
-          "end": 0.5
-        },
-        {
-          "w": "One",
-          "start": 1.12,
-          "end": 1.1700000000000002
-        },
-        {
-          "w": "crore.",
-          "start": 1.14,
-          "end": 1.4
-        },
-        {
-          "w": "The",
-          "start": 1.96,
-          "end": 2.01
-        },
-        {
-          "w": "coin",
-          "start": 1.96,
-          "end": 2.12
-        },
-        {
-          "w": "did",
-          "start": 2.12,
-          "end": 2.32
+          "end": 0.38
         },
         {
           "w": "the",
-          "start": 2.32,
-          "end": 2.42
+          "start": 0.62,
+          "end": 0.7
         },
         {
-          "w": "work.",
-          "start": 2.42,
-          "end": 2.64
+          "w": "modern",
+          "start": 0.7,
+          "end": 0.9
         },
         {
-          "w": "You",
-          "start": 3.0,
-          "end": 3.08
+          "w": "scam",
+          "start": 0.9,
+          "end": 1.18
         },
         {
-          "w": "just",
+          "w": "call",
+          "start": 1.18,
+          "end": 1.48
+        },
+        {
+          "w": "is",
+          "start": 1.48,
+          "end": 1.7
+        },
+        {
+          "w": "an",
+          "start": 1.7,
+          "end": 1.78
+        },
+        {
+          "w": "assembly",
+          "start": 1.78,
+          "end": 1.96
+        },
+        {
+          "w": "line.",
+          "start": 1.96,
+          "end": 2.38
+        },
+        {
+          "w": "One",
+          "start": 3.06,
+          "end": 3.11
+        },
+        {
+          "w": "team",
           "start": 3.08,
-          "end": 3.22
+          "end": 3.36
         },
         {
-          "w": "didn't",
-          "start": 3.22,
-          "end": 3.44
+          "w": "writes",
+          "start": 3.36,
+          "end": 3.56
         },
         {
-          "w": "spend",
-          "start": 3.44,
-          "end": 3.6
+          "w": "the",
+          "start": 3.56,
+          "end": 3.78
         },
         {
-          "w": "it.",
-          "start": 3.6,
-          "end": 3.82
+          "w": "script.",
+          "start": 3.78,
+          "end": 3.94
+        },
+        {
+          "w": "Another",
+          "start": 4.44,
+          "end": 4.54
+        },
+        {
+          "w": "buys",
+          "start": 4.54,
+          "end": 4.8
+        },
+        {
+          "w": "the",
+          "start": 4.8,
+          "end": 4.98
+        },
+        {
+          "w": "phone",
+          "start": 4.98,
+          "end": 5.12
+        },
+        {
+          "w": "numbers.",
+          "start": 5.12,
+          "end": 5.32
+        },
+        {
+          "w": "A",
+          "start": 5.94,
+          "end": 5.99
+        },
+        {
+          "w": "third",
+          "start": 5.94,
+          "end": 6.12
+        },
+        {
+          "w": "runs",
+          "start": 6.12,
+          "end": 6.4
+        },
+        {
+          "w": "the",
+          "start": 6.4,
+          "end": 6.56
+        },
+        {
+          "w": "payment",
+          "start": 6.56,
+          "end": 6.7
+        },
+        {
+          "w": "network.",
+          "start": 6.7,
+          "end": 7.08
+        },
+        {
+          "w": "Nobody",
+          "start": 7.96,
+          "end": 8.01
+        },
+        {
+          "w": "sees",
+          "start": 7.96,
+          "end": 8.2
+        },
+        {
+          "w": "the",
+          "start": 8.2,
+          "end": 8.42
+        },
+        {
+          "w": "whole",
+          "start": 8.42,
+          "end": 8.52
+        },
+        {
+          "w": "picture.",
+          "start": 8.52,
+          "end": 8.86
+        },
+        {
+          "w": "Meaning",
+          "start": 9.4,
+          "end": 9.56
+        },
+        {
+          "w": "nobody",
+          "start": 9.56,
+          "end": 9.94
+        },
+        {
+          "w": "can",
+          "start": 9.94,
+          "end": 10.16
+        },
+        {
+          "w": "describe",
+          "start": 10.16,
+          "end": 10.38
+        },
+        {
+          "w": "it",
+          "start": 10.38,
+          "end": 10.6
+        },
+        {
+          "w": "to",
+          "start": 10.6,
+          "end": 10.65
+        },
+        {
+          "w": "police,",
+          "start": 10.64,
+          "end": 10.88
+        },
+        {
+          "w": "even",
+          "start": 11.12,
+          "end": 11.2
+        },
+        {
+          "w": "if",
+          "start": 11.2,
+          "end": 11.32
+        },
+        {
+          "w": "they",
+          "start": 11.32,
+          "end": 11.42
+        },
+        {
+          "w": "wanted",
+          "start": 11.42,
+          "end": 11.58
+        },
+        {
+          "w": "to.",
+          "start": 11.58,
+          "end": 11.82
+        },
+        {
+          "w": "Deniability",
+          "start": 12.58,
+          "end": 12.74
+        },
+        {
+          "w": "is",
+          "start": 12.74,
+          "end": 13.24
+        },
+        {
+          "w": "a",
+          "start": 13.24,
+          "end": 13.290000000000001
+        },
+        {
+          "w": "feature,",
+          "start": 13.28,
+          "end": 13.52
+        },
+        {
+          "w": "not",
+          "start": 13.78,
+          "end": 13.86
+        },
+        {
+          "w": "a",
+          "start": 13.86,
+          "end": 13.96
+        },
+        {
+          "w": "bug.",
+          "start": 13.96,
+          "end": 14.06
         }
-      ]
+      ],
+      "start": 39.78
     },
     {
       "n": 7,
       "file": "vo/beat-7.wav",
-      "start": 23.72,
-      "dur": 7.23,
-      "speech": 6.68,
+      "dur": 10.06,
+      "speech": 9.64,
       "words": [
         {
-          "w": "So",
+          "w": "The",
+          "start": 0.0,
+          "end": 0.12
+        },
+        {
+          "w": "math",
+          "start": 0.12,
+          "end": 0.22
+        },
+        {
+          "w": "is",
+          "start": 0.22,
+          "end": 0.42
+        },
+        {
+          "w": "brutal.",
+          "start": 0.42,
+          "end": 0.6
+        },
+        {
+          "w": "A",
+          "start": 1.1,
+          "end": 1.1500000000000001
+        },
+        {
+          "w": "thousand",
+          "start": 1.1,
+          "end": 1.32
+        },
+        {
+          "w": "calls,",
+          "start": 1.32,
+          "end": 1.6
+        },
+        {
+          "w": "nine",
+          "start": 1.94,
+          "end": 2.04
+        },
+        {
+          "w": "hundred",
+          "start": 2.04,
+          "end": 2.3
+        },
+        {
+          "w": "and",
+          "start": 2.3,
+          "end": 2.4
+        },
+        {
+          "w": "ninety",
+          "start": 2.4,
+          "end": 2.56
+        },
+        {
+          "w": "fail.",
+          "start": 2.56,
+          "end": 2.78
+        },
+        {
+          "w": "The",
+          "start": 3.18,
+          "end": 3.23
+        },
+        {
+          "w": "machine",
+          "start": 3.2,
+          "end": 3.38
+        },
+        {
+          "w": "doesn't",
+          "start": 3.38,
+          "end": 3.7
+        },
+        {
+          "w": "care.",
+          "start": 3.7,
+          "end": 3.88
+        },
+        {
+          "w": "One",
+          "start": 4.48,
+          "end": 4.53
+        },
+        {
+          "w": "successful",
+          "start": 4.48,
+          "end": 4.74
+        },
+        {
+          "w": "call",
+          "start": 4.74,
+          "end": 5.16
+        },
+        {
+          "w": "pays",
+          "start": 5.16,
+          "end": 5.38
+        },
+        {
+          "w": "for",
+          "start": 5.38,
+          "end": 5.58
+        },
+        {
+          "w": "ten",
+          "start": 5.58,
+          "end": 5.76
+        },
+        {
+          "w": "thousand",
+          "start": 5.76,
+          "end": 5.98
+        },
+        {
+          "w": "failed",
+          "start": 5.98,
+          "end": 6.28
+        },
+        {
+          "w": "ones.",
+          "start": 6.28,
+          "end": 6.5
+        },
+        {
+          "w": "In",
+          "start": 7.12,
+          "end": 7.18
+        },
+        {
+          "w": "this",
+          "start": 7.18,
+          "end": 7.3
+        },
+        {
+          "w": "business,",
+          "start": 7.3,
+          "end": 7.64
+        },
+        {
+          "w": "a",
+          "start": 7.96,
+          "end": 8.01
+        },
+        {
+          "w": "one",
+          "start": 7.98,
+          "end": 8.1
+        },
+        {
+          "w": "percent",
+          "start": 8.1,
+          "end": 8.34
+        },
+        {
+          "w": "success",
+          "start": 8.34,
+          "end": 8.64
+        },
+        {
+          "w": "rate",
+          "start": 8.64,
+          "end": 8.96
+        },
+        {
+          "w": "is",
+          "start": 8.96,
+          "end": 9.18
+        },
+        {
+          "w": "a",
+          "start": 9.18,
+          "end": 9.26
+        },
+        {
+          "w": "great",
+          "start": 9.26,
+          "end": 9.38
+        },
+        {
+          "w": "quarter.",
+          "start": 9.38,
+          "end": 9.64
+        }
+      ],
+      "start": 54.26
+    },
+    {
+      "n": 8,
+      "file": "vo/beat-8.wav",
+      "dur": 12.7,
+      "speech": 12.28,
+      "words": [
+        {
+          "w": "The",
+          "start": 0.0,
+          "end": 0.14
+        },
+        {
+          "w": "calls",
+          "start": 0.14,
+          "end": 0.3
+        },
+        {
+          "w": "are",
+          "start": 0.3,
+          "end": 0.46
+        },
+        {
+          "w": "spoofed.",
+          "start": 0.46,
+          "end": 0.92
+        },
+        {
+          "w": "Your",
+          "start": 1.46,
+          "end": 1.51
+        },
+        {
+          "w": "phone",
+          "start": 1.5,
+          "end": 1.68
+        },
+        {
+          "w": "doesn't",
+          "start": 1.68,
+          "end": 1.96
+        },
+        {
+          "w": "show",
+          "start": 1.96,
+          "end": 2.1
+        },
+        {
+          "w": "their",
+          "start": 2.1,
+          "end": 2.22
+        },
+        {
+          "w": "number.",
+          "start": 2.22,
+          "end": 2.48
+        },
+        {
+          "w": "It",
+          "start": 2.78,
+          "end": 2.83
+        },
+        {
+          "w": "shows",
+          "start": 2.82,
+          "end": 3.0
+        },
+        {
+          "w": "a",
+          "start": 3.0,
+          "end": 3.1
+        },
+        {
+          "w": "precinct.",
+          "start": 3.1,
+          "end": 3.32
+        },
+        {
+          "w": "Or",
+          "start": 4.18,
+          "end": 4.24
+        },
+        {
+          "w": "the",
+          "start": 4.24,
+          "end": 4.42
+        },
+        {
+          "w": "IRS",
+          "start": 4.42,
+          "end": 4.6
+        },
+        {
+          "w": "line.",
+          "start": 4.6,
+          "end": 5.08
+        },
+        {
+          "w": "That's",
+          "start": 5.6,
+          "end": 5.7
+        },
+        {
+          "w": "not",
+          "start": 5.7,
+          "end": 5.8
+        },
+        {
+          "w": "hacking.",
+          "start": 5.8,
+          "end": 6.1
+        },
+        {
+          "w": "There",
+          "start": 6.82,
+          "end": 7.02
+        },
+        {
+          "w": "are",
+          "start": 7.02,
+          "end": 7.14
+        },
+        {
+          "w": "services",
+          "start": 7.14,
+          "end": 7.44
+        },
+        {
+          "w": "that",
+          "start": 7.44,
+          "end": 7.76
+        },
+        {
+          "w": "sell",
+          "start": 7.76,
+          "end": 7.9
+        },
+        {
+          "w": "that",
+          "start": 7.9,
+          "end": 8.1
+        },
+        {
+          "w": "for",
+          "start": 8.1,
+          "end": 8.26
+        },
+        {
+          "w": "forty",
+          "start": 8.26,
+          "end": 8.46
+        },
+        {
+          "w": "dollars",
+          "start": 8.46,
+          "end": 8.76
+        },
+        {
+          "w": "a",
+          "start": 8.76,
+          "end": 8.9
+        },
+        {
+          "w": "month",
+          "start": 8.9,
+          "end": 9.08
+        },
+        {
+          "w": "—",
+          "start": 9.14,
+          "end": 9.2
+        },
+        {
+          "w": "about",
+          "start": 9.2,
+          "end": 9.4
+        },
+        {
+          "w": "the",
+          "start": 9.4,
+          "end": 9.54
+        },
+        {
+          "w": "price",
+          "start": 9.54,
+          "end": 9.72
+        },
+        {
+          "w": "of",
+          "start": 9.72,
+          "end": 9.9
+        },
+        {
+          "w": "your",
+          "start": 9.9,
+          "end": 9.98
+        },
+        {
+          "w": "Netflix",
+          "start": 9.98,
+          "end": 10.14
+        },
+        {
+          "w": "bill.",
+          "start": 10.14,
+          "end": 10.52
+        },
+        {
+          "w": "The",
+          "start": 11.04,
+          "end": 11.1
+        },
+        {
+          "w": "number",
+          "start": 11.1,
+          "end": 11.32
+        },
+        {
+          "w": "on",
+          "start": 11.32,
+          "end": 11.5
+        },
+        {
+          "w": "your",
+          "start": 11.5,
+          "end": 11.62
+        },
+        {
+          "w": "screen",
+          "start": 11.62,
+          "end": 11.84
+        },
+        {
+          "w": "is",
+          "start": 11.84,
+          "end": 12.02
+        },
+        {
+          "w": "a",
+          "start": 12.02,
+          "end": 12.1
+        },
+        {
+          "w": "costume.",
+          "start": 12.1,
+          "end": 12.28
+        }
+      ],
+      "start": 64.32
+    },
+    {
+      "n": 9,
+      "file": "vo/beat-9.wav",
+      "dur": 8.27,
+      "speech": 7.72,
+      "words": [
+        {
+          "w": "The",
+          "start": 0.0,
+          "end": 0.1
+        },
+        {
+          "w": "hard",
+          "start": 0.1,
+          "end": 0.26
+        },
+        {
+          "w": "part",
+          "start": 0.26,
+          "end": 0.46
+        },
+        {
+          "w": "isn't",
+          "start": 0.46,
+          "end": 0.84
+        },
+        {
+          "w": "the",
+          "start": 0.84,
+          "end": 0.92
+        },
+        {
+          "w": "phone.",
+          "start": 0.92,
+          "end": 1.08
+        },
+        {
+          "w": "It's",
+          "start": 1.62,
+          "end": 1.72
+        },
+        {
+          "w": "the",
+          "start": 1.72,
+          "end": 1.8
+        },
+        {
+          "w": "money.",
+          "start": 1.8,
+          "end": 2.0
+        },
+        {
+          "w": "Because",
+          "start": 2.76,
+          "end": 2.81
+        },
+        {
+          "w": "once",
+          "start": 2.78,
+          "end": 3.12
+        },
+        {
+          "w": "the",
+          "start": 3.12,
+          "end": 3.3
+        },
+        {
+          "w": "victim",
+          "start": 3.3,
+          "end": 3.5
+        },
+        {
+          "w": "is",
+          "start": 3.5,
+          "end": 3.7
+        },
+        {
+          "w": "convinced,",
+          "start": 3.7,
+          "end": 3.98
+        },
+        {
+          "w": "the",
+          "start": 4.38,
+          "end": 4.43
+        },
+        {
+          "w": "cash",
+          "start": 4.42,
+          "end": 4.6
+        },
+        {
+          "w": "has",
+          "start": 4.6,
+          "end": 4.82
+        },
+        {
+          "w": "to",
+          "start": 4.82,
+          "end": 4.98
+        },
+        {
+          "w": "move",
+          "start": 4.98,
+          "end": 5.14
+        },
+        {
+          "w": "with",
+          "start": 5.14,
+          "end": 5.3
+        },
+        {
+          "w": "no",
+          "start": 5.3,
+          "end": 5.44
+        },
+        {
+          "w": "paper",
+          "start": 5.44,
+          "end": 5.62
+        },
+        {
+          "w": "trail.",
+          "start": 5.62,
+          "end": 5.92
+        },
+        {
+          "w": "And",
+          "start": 6.48,
+          "end": 6.58
+        },
+        {
+          "w": "that's",
+          "start": 6.58,
+          "end": 6.8
+        },
+        {
+          "w": "where",
+          "start": 6.8,
+          "end": 6.92
+        },
+        {
+          "w": "the",
+          "start": 6.92,
+          "end": 7.0
+        },
+        {
+          "w": "first",
+          "start": 7.0,
+          "end": 7.14
+        },
+        {
+          "w": "story",
+          "start": 7.14,
+          "end": 7.4
+        },
+        {
+          "w": "starts.",
+          "start": 7.4,
+          "end": 7.72
+        }
+      ],
+      "start": 77.02
+    },
+    {
+      "n": 10,
+      "file": "vo/beat-10.wav",
+      "dur": 12.44,
+      "speech": 12.02,
+      "words": [
+        {
+          "w": "The",
+          "start": 0.0,
+          "end": 0.12
+        },
+        {
+          "w": "calls",
+          "start": 0.12,
+          "end": 0.26
+        },
+        {
+          "w": "aren't",
+          "start": 0.26,
+          "end": 0.58
+        },
+        {
+          "w": "random.",
+          "start": 0.58,
+          "end": 0.94
+        },
+        {
+          "w": "The",
+          "start": 1.6,
+          "end": 1.6500000000000001
+        },
+        {
+          "w": "numbers",
+          "start": 1.6,
+          "end": 1.8
+        },
+        {
+          "w": "are",
+          "start": 1.8,
+          "end": 1.96
+        },
+        {
+          "w": "bought",
+          "start": 1.96,
+          "end": 2.22
+        },
+        {
+          "w": "—",
+          "start": 2.42,
+          "end": 2.62
+        },
+        {
+          "w": "data",
+          "start": 2.62,
+          "end": 2.7
+        },
+        {
+          "w": "brokers",
+          "start": 2.7,
+          "end": 2.94
+        },
+        {
+          "w": "sell",
+          "start": 2.94,
+          "end": 3.28
+        },
+        {
+          "w": "lists",
+          "start": 3.28,
+          "end": 3.56
+        },
+        {
+          "w": "of",
+          "start": 3.56,
+          "end": 3.76
+        },
+        {
+          "w": "landline",
+          "start": 3.76,
+          "end": 4.1
+        },
+        {
+          "w": "subscribers,",
+          "start": 4.1,
+          "end": 4.36
+        },
+        {
+          "w": "their",
+          "start": 4.98,
+          "end": 5.03
+        },
+        {
+          "w": "ages,",
+          "start": 4.98,
+          "end": 5.28
+        },
+        {
+          "w": "their",
+          "start": 5.62,
+          "end": 5.67
+        },
+        {
+          "w": "voting",
+          "start": 5.64,
+          "end": 5.84
+        },
+        {
+          "w": "records.",
+          "start": 5.84,
+          "end": 6.16
+        },
+        {
+          "w": "A",
+          "start": 7.02,
+          "end": 7.07
+        },
+        {
+          "w": "ninety-year-old",
+          "start": 7.27,
+          "end": 7.52
+        },
+        {
+          "w": "with",
+          "start": 7.52,
+          "end": 7.64
+        },
+        {
+          "w": "a",
+          "start": 7.64,
+          "end": 7.7
+        },
+        {
+          "w": "landline",
+          "start": 7.7,
+          "end": 8.12
+        },
+        {
+          "w": "is",
+          "start": 8.12,
+          "end": 8.32
+        },
+        {
+          "w": "worth",
+          "start": 8.32,
+          "end": 8.46
+        },
+        {
+          "w": "more",
+          "start": 8.46,
+          "end": 8.66
+        },
+        {
+          "w": "than",
+          "start": 8.66,
+          "end": 8.8
+        },
+        {
+          "w": "a",
+          "start": 8.8,
+          "end": 8.9
+        },
+        {
+          "w": "teenager",
+          "start": 8.9,
+          "end": 9.12
+        },
+        {
+          "w": "with",
+          "start": 9.12,
+          "end": 9.42
+        },
+        {
+          "w": "a",
+          "start": 9.42,
+          "end": 9.48
+        },
+        {
+          "w": "smartphone.",
+          "start": 9.48,
+          "end": 9.66
+        },
+        {
+          "w": "The",
+          "start": 10.54,
+          "end": 10.62
+        },
+        {
+          "w": "machine",
+          "start": 10.62,
+          "end": 10.78
+        },
+        {
+          "w": "buys",
+          "start": 10.78,
+          "end": 11.04
+        },
+        {
+          "w": "targets,",
+          "start": 11.04,
+          "end": 11.32
+        },
+        {
+          "w": "not",
+          "start": 11.72,
+          "end": 11.8
+        },
+        {
+          "w": "numbers.",
+          "start": 11.8,
+          "end": 12.02
+        }
+      ],
+      "start": 85.29
+    },
+    {
+      "n": 11,
+      "file": "vo/beat-11.wav",
+      "dur": 7.28,
+      "speech": 6.86,
+      "words": [
+        {
+          "w": "May",
+          "start": 0.0,
+          "end": 0.16
+        },
+        {
+          "w": "2024.",
+          "start": 0.16,
+          "end": 0.68
+        },
+        {
+          "w": "A",
+          "start": 1.38,
+          "end": 1.43
+        },
+        {
+          "w": "retired",
+          "start": 1.4,
+          "end": 1.52
+        },
+        {
+          "w": "teacher",
+          "start": 1.52,
+          "end": 1.92
+        },
+        {
+          "w": "in",
+          "start": 1.92,
+          "end": 2.2
+        },
+        {
+          "w": "Akron,",
+          "start": 2.2,
+          "end": 2.34
+        },
+        {
+          "w": "Ohio.",
+          "start": 2.34,
+          "end": 2.76
+        },
+        {
+          "w": "A",
+          "start": 3.42,
+          "end": 3.47
+        },
+        {
+          "w": "landline",
+          "start": 3.46,
+          "end": 3.9
+        },
+        {
+          "w": "she's",
+          "start": 3.9,
+          "end": 4.16
+        },
+        {
+          "w": "had",
+          "start": 4.16,
+          "end": 4.3
+        },
+        {
+          "w": "for",
+          "start": 4.3,
+          "end": 4.44
+        },
+        {
+          "w": "thirty",
+          "start": 4.44,
+          "end": 4.62
+        },
+        {
+          "w": "years.",
+          "start": 4.62,
+          "end": 4.96
+        },
+        {
+          "w": "The",
+          "start": 5.52,
+          "end": 5.6
+        },
+        {
+          "w": "call",
+          "start": 5.6,
+          "end": 5.72
+        },
+        {
+          "w": "she'd",
+          "start": 5.72,
+          "end": 6.02
+        },
+        {
+          "w": "been",
+          "start": 6.02,
+          "end": 6.12
+        },
+        {
+          "w": "dreading",
+          "start": 6.12,
+          "end": 6.48
+        },
+        {
+          "w": "for",
+          "start": 6.48,
+          "end": 6.64
+        },
+        {
+          "w": "years.",
+          "start": 6.64,
+          "end": 6.86
+        }
+      ],
+      "start": 97.73
+    },
+    {
+      "n": 12,
+      "file": "vo/beat-12.wav",
+      "dur": 5.48,
+      "speech": 5.02,
+      "words": [
+        {
+          "w": "'Grandma?'",
+          "start": 0.0,
+          "end": 0.3
+        },
+        {
+          "w": "—",
+          "start": 0.47,
+          "end": 0.64
+        },
+        {
+          "w": "a",
+          "start": 0.64,
+          "end": 0.72
+        },
+        {
+          "w": "young",
+          "start": 0.72,
+          "end": 0.82
+        },
+        {
+          "w": "man's",
+          "start": 0.82,
+          "end": 1.14
+        },
+        {
+          "w": "voice,",
+          "start": 1.14,
+          "end": 1.28
+        },
+        {
+          "w": "panicked.",
+          "start": 1.52,
+          "end": 1.64
+        },
+        {
+          "w": "'I'm",
+          "start": 2.34,
+          "end": 2.46
+        },
+        {
+          "w": "in",
+          "start": 2.46,
+          "end": 2.52
+        },
+        {
+          "w": "jail.",
+          "start": 2.52,
+          "end": 2.68
+        },
+        {
+          "w": "I",
+          "start": 3.1,
+          "end": 3.15
+        },
+        {
+          "w": "hit",
+          "start": 3.12,
+          "end": 3.24
+        },
+        {
+          "w": "a",
+          "start": 3.24,
+          "end": 3.34
+        },
+        {
+          "w": "car.",
+          "start": 3.34,
+          "end": 3.54
+        },
+        {
+          "w": "Please",
+          "start": 4.04,
+          "end": 4.14
+        },
+        {
+          "w": "don't",
+          "start": 4.14,
+          "end": 4.44
+        },
+        {
+          "w": "tell",
+          "start": 4.44,
+          "end": 4.56
+        },
+        {
+          "w": "Mom.'",
+          "start": 4.56,
+          "end": 5.02
+        }
+      ],
+      "start": 105.01
+    },
+    {
+      "n": 13,
+      "file": "vo/beat-13.wav",
+      "dur": 12.2,
+      "speech": 11.78,
+      "words": [
+        {
+          "w": "Here's",
+          "start": 0.0,
+          "end": 0.22
+        },
+        {
+          "w": "the",
+          "start": 0.22,
+          "end": 0.32
+        },
+        {
+          "w": "mechanism:",
+          "start": 0.32,
+          "end": 0.6
+        },
+        {
+          "w": "the",
+          "start": 1.18,
+          "end": 1.23
+        },
+        {
+          "w": "caller",
+          "start": 1.18,
+          "end": 1.32
+        },
+        {
+          "w": "doesn't",
+          "start": 1.32,
+          "end": 1.64
+        },
+        {
+          "w": "know",
+          "start": 1.64,
+          "end": 1.76
+        },
+        {
+          "w": "her",
+          "start": 1.76,
+          "end": 1.88
+        },
+        {
+          "w": "name.",
+          "start": 1.88,
+          "end": 2.14
+        },
+        {
+          "w": "She",
+          "start": 2.42,
+          "end": 2.5
+        },
+        {
+          "w": "supplies",
+          "start": 2.5,
+          "end": 2.7
+        },
+        {
+          "w": "it.",
+          "start": 2.7,
+          "end": 3.06
+        },
+        {
+          "w": "When",
+          "start": 3.32,
+          "end": 3.37
+        },
+        {
+          "w": "she",
+          "start": 3.34,
+          "end": 3.44
+        },
+        {
+          "w": "says",
+          "start": 3.44,
+          "end": 3.66
+        },
+        {
+          "w": "'Is",
+          "start": 3.86,
+          "end": 3.92
+        },
+        {
+          "w": "that",
+          "start": 3.92,
+          "end": 4.06
+        },
+        {
+          "w": "you,",
+          "start": 4.06,
+          "end": 4.26
+        },
+        {
+          "w": "Mikey?'",
+          "start": 4.34,
+          "end": 4.66
+        },
+        {
+          "w": "the",
+          "start": 4.92,
+          "end": 4.97
+        },
+        {
+          "w": "voice",
+          "start": 4.94,
+          "end": 5.06
+        },
+        {
+          "w": "says",
+          "start": 5.06,
+          "end": 5.3
+        },
+        {
+          "w": "yes.",
+          "start": 5.3,
+          "end": 5.54
+        },
+        {
+          "w": "Every",
+          "start": 6.18,
+          "end": 6.32
+        },
+        {
+          "w": "question",
+          "start": 6.32,
+          "end": 6.72
+        },
+        {
+          "w": "she",
+          "start": 6.72,
+          "end": 6.9
+        },
+        {
+          "w": "asks",
+          "start": 6.9,
+          "end": 7.12
+        },
+        {
+          "w": "hands",
+          "start": 7.12,
+          "end": 7.48
+        },
+        {
+          "w": "them",
+          "start": 7.48,
+          "end": 7.68
+        },
+        {
+          "w": "the",
+          "start": 7.68,
+          "end": 7.82
+        },
+        {
+          "w": "next",
+          "start": 7.82,
+          "end": 7.92
+        },
+        {
+          "w": "line.",
+          "start": 7.92,
+          "end": 8.3
+        },
+        {
+          "w": "Meaning",
+          "start": 8.66,
+          "end": 8.8
+        },
+        {
+          "w": "she's",
+          "start": 8.8,
+          "end": 9.0
+        },
+        {
+          "w": "not",
+          "start": 9.0,
+          "end": 9.18
+        },
+        {
+          "w": "tricked",
+          "start": 9.18,
+          "end": 9.36
+        },
+        {
+          "w": "by",
+          "start": 9.36,
+          "end": 9.58
+        },
+        {
+          "w": "them.",
+          "start": 9.58,
+          "end": 9.8
+        },
+        {
+          "w": "She",
+          "start": 10.04,
+          "end": 10.14
+        },
+        {
+          "w": "co-writes",
+          "start": 10.35,
+          "end": 10.56
+        },
+        {
+          "w": "the",
+          "start": 10.56,
+          "end": 10.64
+        },
+        {
+          "w": "con",
+          "start": 10.64,
+          "end": 10.76
+        },
+        {
+          "w": "with",
+          "start": 10.76,
+          "end": 10.98
+        },
+        {
+          "w": "them.",
+          "start": 10.98,
+          "end": 11.18
+        },
+        {
+          "w": "Out",
+          "start": 11.46,
+          "end": 11.510000000000002
+        },
+        {
+          "w": "of",
+          "start": 11.48,
+          "end": 11.6
+        },
+        {
+          "w": "love.",
+          "start": 11.6,
+          "end": 11.78
+        }
+      ],
+      "start": 110.49
+    },
+    {
+      "n": 14,
+      "file": "vo/beat-14.wav",
+      "dur": 11.56,
+      "speech": 11.14,
+      "words": [
+        {
+          "w": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "w": "voice",
+          "start": 0.08,
+          "end": 0.2
+        },
+        {
+          "w": "is",
+          "start": 0.2,
+          "end": 0.42
+        },
+        {
+          "w": "an",
+          "start": 0.42,
+          "end": 0.52
+        },
+        {
+          "w": "actor,",
+          "start": 0.52,
+          "end": 0.8
+        },
+        {
+          "w": "running",
+          "start": 1.08,
+          "end": 1.28
+        },
+        {
+          "w": "a",
+          "start": 1.28,
+          "end": 1.38
+        },
+        {
+          "w": "voice-aging",
+          "start": 1.6,
+          "end": 1.82
+        },
+        {
+          "w": "filter",
+          "start": 1.82,
+          "end": 2.06
+        },
+        {
+          "w": "to",
+          "start": 2.06,
+          "end": 2.32
+        },
+        {
+          "w": "sound",
+          "start": 2.32,
+          "end": 2.48
+        },
+        {
+          "w": "nineteen.",
+          "start": 2.48,
+          "end": 2.82
+        },
+        {
+          "w": "A",
+          "start": 3.56,
+          "end": 3.61
+        },
+        {
+          "w": "second",
+          "start": 3.58,
+          "end": 3.76
+        },
+        {
+          "w": "voice",
+          "start": 3.76,
+          "end": 4.02
+        },
+        {
+          "w": "comes",
+          "start": 4.02,
+          "end": 4.28
+        },
+        {
+          "w": "on",
+          "start": 4.28,
+          "end": 4.42
+        },
+        {
+          "w": "the",
+          "start": 4.42,
+          "end": 4.5
+        },
+        {
+          "w": "line",
+          "start": 4.5,
+          "end": 4.74
+        },
+        {
+          "w": "—",
+          "start": 4.88,
+          "end": 5.02
+        },
+        {
+          "w": "'the",
+          "start": 5.02,
+          "end": 5.07
+        },
+        {
+          "w": "judge'",
+          "start": 5.06,
+          "end": 5.26
+        },
+        {
+          "w": "—",
+          "start": 5.46,
+          "end": 5.66
+        },
+        {
+          "w": "and",
+          "start": 5.66,
+          "end": 5.82
+        },
+        {
+          "w": "quotes",
+          "start": 5.82,
+          "end": 6.02
+        },
+        {
+          "w": "the",
+          "start": 6.02,
+          "end": 6.24
+        },
+        {
+          "w": "exact",
+          "start": 6.24,
+          "end": 6.38
+        },
+        {
+          "w": "fine:",
+          "start": 6.38,
+          "end": 6.86
+        },
+        {
+          "w": "nine",
+          "start": 6.86,
+          "end": 7.26
+        },
+        {
+          "w": "thousand",
+          "start": 7.26,
+          "end": 7.54
+        },
+        {
+          "w": "six",
+          "start": 7.54,
+          "end": 7.84
+        },
+        {
+          "w": "hundred",
+          "start": 7.84,
+          "end": 8.1
+        },
+        {
+          "w": "dollars.",
+          "start": 8.1,
+          "end": 8.44
+        },
+        {
+          "w": "Cash",
+          "start": 8.88,
+          "end": 9.02
+        },
+        {
+          "w": "only.",
+          "start": 9.02,
+          "end": 9.28
+        },
+        {
+          "w": "Bail",
+          "start": 10.14,
+          "end": 10.22
+        },
+        {
+          "w": "bonds",
+          "start": 10.22,
+          "end": 10.38
+        },
+        {
+          "w": "don't",
+          "start": 10.38,
+          "end": 10.76
+        },
+        {
+          "w": "take",
+          "start": 10.76,
+          "end": 10.88
+        },
+        {
+          "w": "cards.",
+          "start": 10.88,
+          "end": 11.14
+        }
+      ],
+      "start": 122.69
+    },
+    {
+      "n": 15,
+      "file": "vo/beat-15.wav",
+      "dur": 9.84,
+      "speech": 9.38,
+      "words": [
+        {
+          "w": "Cash",
+          "start": 0.0,
+          "end": 0.14
+        },
+        {
+          "w": "only.",
+          "start": 0.14,
+          "end": 0.42
+        },
+        {
+          "w": "That's",
+          "start": 1.12,
+          "end": 1.3
+        },
+        {
+          "w": "the",
+          "start": 1.3,
+          "end": 1.4
+        },
+        {
+          "w": "instruction.",
+          "start": 1.4,
+          "end": 1.62
+        },
+        {
+          "w": "Nine",
+          "start": 2.48,
+          "end": 2.54
+        },
+        {
+          "w": "thousand",
+          "start": 2.54,
+          "end": 2.78
+        },
+        {
+          "w": "six",
+          "start": 2.78,
+          "end": 3.04
+        },
+        {
+          "w": "hundred,",
+          "start": 3.04,
+          "end": 3.34
+        },
+        {
+          "w": "in",
+          "start": 3.56,
+          "end": 3.61
+        },
+        {
+          "w": "cash,",
+          "start": 3.6,
+          "end": 3.8
+        },
+        {
+          "w": "waiting",
+          "start": 4.12,
+          "end": 4.22
+        },
+        {
+          "w": "at",
+          "start": 4.22,
+          "end": 4.4
+        },
+        {
+          "w": "her",
+          "start": 4.4,
+          "end": 4.52
+        },
+        {
+          "w": "door.",
+          "start": 4.52,
+          "end": 4.7
+        },
+        {
+          "w": "No",
+          "start": 5.1,
+          "end": 5.18
+        },
+        {
+          "w": "wire.",
+          "start": 5.18,
+          "end": 5.44
+        },
+        {
+          "w": "No",
+          "start": 5.78,
+          "end": 5.86
+        },
+        {
+          "w": "receipt.",
+          "start": 5.86,
+          "end": 6.08
+        },
+        {
+          "w": "Nothing",
+          "start": 6.42,
+          "end": 6.62
+        },
+        {
+          "w": "a",
+          "start": 6.62,
+          "end": 6.72
+        },
+        {
+          "w": "bank",
+          "start": 6.72,
+          "end": 6.88
+        },
+        {
+          "w": "could",
+          "start": 6.88,
+          "end": 7.06
+        },
+        {
+          "w": "reverse.",
+          "start": 7.06,
+          "end": 7.28
+        },
+        {
+          "w": "The",
+          "start": 7.66,
+          "end": 7.71
+        },
+        {
+          "w": "moment",
+          "start": 7.68,
+          "end": 7.88
+        },
+        {
+          "w": "she",
+          "start": 7.88,
+          "end": 8.06
+        },
+        {
+          "w": "agreed,",
+          "start": 8.06,
+          "end": 8.26
+        },
+        {
+          "w": "the",
+          "start": 8.26,
+          "end": 8.54
+        },
+        {
+          "w": "machine",
+          "start": 8.54,
+          "end": 8.76
+        },
+        {
+          "w": "had",
+          "start": 8.76,
+          "end": 8.98
+        },
+        {
+          "w": "what",
+          "start": 8.98,
+          "end": 9.12
+        },
+        {
+          "w": "it",
+          "start": 9.12,
+          "end": 9.24
+        },
+        {
+          "w": "needed.",
+          "start": 9.24,
+          "end": 9.38
+        }
+      ],
+      "start": 134.25
+    },
+    {
+      "n": 16,
+      "file": "vo/beat-16.wav",
+      "dur": 17.96,
+      "speech": 17.5,
+      "words": [
+        {
+          "w": "Then",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "comes",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "the",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "part",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "that",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "should",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "break",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "it",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "open.",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "A",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "w": "courier",
+          "start": 0.36,
+          "end": 2.7
+        },
+        {
+          "w": "arrives",
+          "start": 2.7,
+          "end": 3.16
+        },
+        {
+          "w": "to",
+          "start": 3.16,
+          "end": 3.44
+        },
+        {
+          "w": "pick",
+          "start": 3.44,
+          "end": 3.56
+        },
+        {
+          "w": "up",
+          "start": 3.56,
+          "end": 3.68
+        },
+        {
+          "w": "the",
+          "start": 3.68,
+          "end": 3.8
+        },
+        {
+          "w": "cash.",
+          "start": 3.8,
+          "end": 4.02
+        },
+        {
+          "w": "In",
+          "start": 4.48,
+          "end": 4.54
+        },
+        {
+          "w": "person.",
+          "start": 4.54,
+          "end": 4.78
+        },
+        {
+          "w": "He",
+          "start": 5.3,
+          "end": 5.35
+        },
+        {
+          "w": "could",
+          "start": 5.32,
+          "end": 5.48
+        },
+        {
+          "w": "be",
+          "start": 5.48,
+          "end": 5.6
+        },
+        {
+          "w": "caught.",
+          "start": 5.6,
+          "end": 5.84
+        },
+        {
+          "w": "But",
+          "start": 6.48,
+          "end": 6.62
+        },
+        {
+          "w": "he's",
+          "start": 6.62,
+          "end": 6.7
+        },
+        {
+          "w": "not",
+          "start": 6.7,
+          "end": 6.86
+        },
+        {
+          "w": "a",
+          "start": 6.86,
+          "end": 6.92
+        },
+        {
+          "w": "criminal",
+          "start": 6.92,
+          "end": 7.16
+        },
+        {
+          "w": "—",
+          "start": 7.28,
+          "end": 7.4
+        },
+        {
+          "w": "technically.",
+          "start": 7.4,
+          "end": 7.64
+        },
+        {
+          "w": "In",
+          "start": 8.2,
+          "end": 8.26
+        },
+        {
+          "w": "the",
+          "start": 8.26,
+          "end": 8.34
+        },
+        {
+          "w": "real",
+          "start": 8.34,
+          "end": 8.46
+        },
+        {
+          "w": "cases,",
+          "start": 8.46,
+          "end": 8.78
+        },
+        {
+          "w": "the",
+          "start": 9.18,
+          "end": 9.23
+        },
+        {
+          "w": "men",
+          "start": 9.2,
+          "end": 9.34
+        },
+        {
+          "w": "who",
+          "start": 9.34,
+          "end": 9.48
+        },
+        {
+          "w": "showed",
+          "start": 9.48,
+          "end": 9.66
+        },
+        {
+          "w": "up",
+          "start": 9.66,
+          "end": 9.82
+        },
+        {
+          "w": "thought",
+          "start": 9.82,
+          "end": 10.04
+        },
+        {
+          "w": "they",
+          "start": 10.04,
+          "end": 10.16
+        },
+        {
+          "w": "were",
+          "start": 10.16,
+          "end": 10.26
+        },
+        {
+          "w": "collecting",
+          "start": 10.26,
+          "end": 10.52
+        },
+        {
+          "w": "legal",
+          "start": 10.52,
+          "end": 10.76
+        },
+        {
+          "w": "documents.",
+          "start": 10.76,
+          "end": 11.18
+        },
+        {
+          "w": "The",
+          "start": 11.92,
+          "end": 12.02
+        },
+        {
+          "w": "app",
+          "start": 12.02,
+          "end": 12.18
+        },
+        {
+          "w": "that",
+          "start": 12.18,
+          "end": 12.36
+        },
+        {
+          "w": "hired",
+          "start": 12.36,
+          "end": 12.58
+        },
+        {
+          "w": "them",
+          "start": 12.58,
+          "end": 12.82
+        },
+        {
+          "w": "was",
+          "start": 12.82,
+          "end": 13.02
+        },
+        {
+          "w": "run",
+          "start": 13.02,
+          "end": 13.2
+        },
+        {
+          "w": "by",
+          "start": 13.2,
+          "end": 13.48
+        },
+        {
+          "w": "the",
+          "start": 13.48,
+          "end": 13.78
+        },
+        {
+          "w": "scammers:",
+          "start": 13.78,
+          "end": 14.16
+        },
+        {
+          "w": "fake",
+          "start": 14.4,
+          "end": 14.48
+        },
+        {
+          "w": "business",
+          "start": 14.48,
+          "end": 14.78
+        },
+        {
+          "w": "name,",
+          "start": 14.78,
+          "end": 15.04
+        },
+        {
+          "w": "fake",
+          "start": 15.26,
+          "end": 15.34
+        },
+        {
+          "w": "address,",
+          "start": 15.34,
+          "end": 15.6
+        },
+        {
+          "w": "and",
+          "start": 15.86,
+          "end": 15.92
+        },
+        {
+          "w": "a",
+          "start": 15.92,
+          "end": 16.0
+        },
+        {
+          "w": "real",
+          "start": 16.0,
+          "end": 16.1
+        },
+        {
+          "w": "payment",
+          "start": 16.1,
+          "end": 16.34
+        },
+        {
+          "w": "processor",
+          "start": 16.34,
+          "end": 16.74
+        },
+        {
+          "w": "that",
+          "start": 16.74,
+          "end": 17.02
+        },
+        {
+          "w": "approved",
+          "start": 17.02,
+          "end": 17.26
+        },
+        {
+          "w": "it.",
+          "start": 17.26,
+          "end": 17.5
+        }
+      ],
+      "start": 144.09
+    },
+    {
+      "n": 17,
+      "file": "vo/beat-17.wav",
+      "dur": 4.54,
+      "speech": 4.12,
+      "words": [
+        {
+          "w": "Every",
           "start": 0.0,
           "end": 0.18
         },
         {
-          "w": "no,",
+          "w": "human",
+          "start": 0.18,
+          "end": 0.46
+        },
+        {
+          "w": "who",
+          "start": 0.46,
+          "end": 0.66
+        },
+        {
+          "w": "touches",
+          "start": 0.66,
+          "end": 0.92
+        },
+        {
+          "w": "the",
+          "start": 0.92,
+          "end": 1.12
+        },
+        {
+          "w": "money",
+          "start": 1.12,
+          "end": 1.26
+        },
+        {
+          "w": "is",
+          "start": 1.26,
+          "end": 1.52
+        },
+        {
+          "w": "innocent.",
+          "start": 1.52,
+          "end": 1.9
+        },
+        {
+          "w": "That's",
+          "start": 2.38,
+          "end": 2.54
+        },
+        {
+          "w": "not",
+          "start": 2.54,
+          "end": 2.64
+        },
+        {
+          "w": "a",
+          "start": 2.64,
+          "end": 2.72
+        },
+        {
+          "w": "scam.",
+          "start": 2.72,
+          "end": 3.02
+        },
+        {
+          "w": "That's",
+          "start": 3.38,
+          "end": 3.52
+        },
+        {
+          "w": "a",
+          "start": 3.52,
+          "end": 3.58
+        },
+        {
+          "w": "supply",
+          "start": 3.58,
+          "end": 3.8
+        },
+        {
+          "w": "chain.",
+          "start": 3.8,
+          "end": 4.12
+        }
+      ],
+      "start": 162.05
+    },
+    {
+      "n": 18,
+      "file": "vo/beat-18.wav",
+      "dur": 10.82,
+      "speech": 10.4,
+      "words": [
+        {
+          "w": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "w": "cash",
+          "start": 0.08,
+          "end": 0.2
+        },
+        {
+          "w": "doesn't",
+          "start": 0.2,
+          "end": 0.56
+        },
+        {
+          "w": "stay",
+          "start": 0.56,
+          "end": 0.7
+        },
+        {
+          "w": "in",
+          "start": 0.7,
+          "end": 0.84
+        },
+        {
+          "w": "Ohio.",
+          "start": 0.84,
+          "end": 0.96
+        },
+        {
+          "w": "It's",
+          "start": 1.64,
+          "end": 1.7
+        },
+        {
+          "w": "picked",
+          "start": 1.7,
+          "end": 1.86
+        },
+        {
+          "w": "up",
+          "start": 1.86,
+          "end": 2.02
+        },
+        {
+          "w": "by",
+          "start": 2.02,
+          "end": 2.18
+        },
+        {
+          "w": "mules",
+          "start": 2.18,
+          "end": 2.44
+        },
+        {
+          "w": "—",
+          "start": 2.61,
+          "end": 2.78
+        },
+        {
+          "w": "recruited",
+          "start": 2.78,
+          "end": 2.94
+        },
+        {
+          "w": "online,",
+          "start": 2.94,
+          "end": 3.22
+        },
+        {
+          "w": "promised",
+          "start": 3.78,
+          "end": 3.98
+        },
+        {
+          "w": "a",
+          "start": 3.98,
+          "end": 4.12
+        },
+        {
+          "w": "cut",
+          "start": 4.12,
+          "end": 4.3
+        },
+        {
+          "w": "—",
+          "start": 4.47,
+          "end": 4.64
+        },
+        {
+          "w": "and",
+          "start": 4.64,
+          "end": 4.88
+        },
+        {
+          "w": "moved",
+          "start": 4.88,
+          "end": 5.02
+        },
+        {
+          "w": "into",
+          "start": 5.02,
+          "end": 5.16
+        },
+        {
+          "w": "crypto",
+          "start": 5.16,
+          "end": 5.38
+        },
+        {
+          "w": "within",
+          "start": 5.38,
+          "end": 5.68
+        },
+        {
+          "w": "hours.",
+          "start": 5.68,
+          "end": 5.98
+        },
+        {
+          "w": "By",
+          "start": 6.72,
+          "end": 6.77
+        },
+        {
+          "w": "the",
+          "start": 6.74,
+          "end": 6.84
+        },
+        {
+          "w": "time",
+          "start": 6.84,
+          "end": 6.98
+        },
+        {
+          "w": "anyone",
+          "start": 6.98,
+          "end": 7.16
+        },
+        {
+          "w": "looks,",
+          "start": 7.16,
+          "end": 7.44
+        },
+        {
+          "w": "it's",
+          "start": 7.66,
+          "end": 7.76
+        },
+        {
+          "w": "not",
+          "start": 7.76,
+          "end": 7.88
+        },
+        {
+          "w": "dollars",
+          "start": 7.88,
+          "end": 8.08
+        },
+        {
+          "w": "anymore.",
+          "start": 8.08,
+          "end": 8.4
+        },
+        {
+          "w": "It's",
+          "start": 8.94,
+          "end": 9.02
+        },
+        {
+          "w": "a",
+          "start": 9.02,
+          "end": 9.08
+        },
+        {
+          "w": "blockchain",
+          "start": 9.08,
+          "end": 9.26
+        },
+        {
+          "w": "of",
+          "start": 9.26,
+          "end": 9.62
+        },
+        {
+          "w": "somebody",
+          "start": 9.62,
+          "end": 9.78
+        },
+        {
+          "w": "else's",
+          "start": 9.78,
+          "end": 10.16
+        },
+        {
+          "w": "money.",
+          "start": 10.16,
+          "end": 10.4
+        }
+      ],
+      "start": 166.59
+    },
+    {
+      "n": 19,
+      "file": "vo/beat-19.wav",
+      "dur": 14.38,
+      "speech": 13.96,
+      "words": [
+        {
+          "w": "Her",
+          "start": 0.023,
+          "end": 0.073
+        },
+        {
+          "w": "bank",
+          "start": 0.047,
+          "end": 0.097
+        },
+        {
+          "w": "warned",
+          "start": 0.07,
+          "end": 0.12000000000000001
+        },
+        {
+          "w": "her.",
+          "start": 0.094,
+          "end": 0.14400000000000002
+        },
+        {
+          "w": "The",
+          "start": 0.117,
+          "end": 0.167
+        },
+        {
+          "w": "teller",
+          "start": 0.141,
+          "end": 0.191
+        },
+        {
+          "w": "saw",
+          "start": 0.164,
+          "end": 0.21400000000000002
+        },
+        {
+          "w": "nine",
+          "start": 0.188,
+          "end": 0.238
+        },
+        {
+          "w": "thousand",
+          "start": 0.211,
+          "end": 0.261
+        },
+        {
+          "w": "in",
+          "start": 0.234,
+          "end": 0.28400000000000003
+        },
+        {
+          "w": "cash",
+          "start": 0.258,
+          "end": 0.308
+        },
+        {
+          "w": "leaving",
+          "start": 0.281,
+          "end": 0.331
+        },
+        {
+          "w": "the",
+          "start": 0.305,
+          "end": 0.355
+        },
+        {
+          "w": "counter.",
+          "start": 0.328,
+          "end": 0.378
+        },
+        {
+          "w": "'It's",
+          "start": 0.352,
+          "end": 0.402
+        },
+        {
+          "w": "for",
+          "start": 0.375,
+          "end": 0.425
+        },
+        {
+          "w": "a",
+          "start": 0.399,
+          "end": 0.449
+        },
+        {
+          "w": "legal",
+          "start": 0.422,
+          "end": 0.472
+        },
+        {
+          "w": "settlement,'",
+          "start": 0.446,
+          "end": 0.496
+        },
+        {
+          "w": "she",
+          "start": 0.469,
+          "end": 0.519
+        },
+        {
+          "w": "said",
+          "start": 0.492,
+          "end": 0.542
+        },
+        {
+          "w": "—",
+          "start": 0.516,
+          "end": 0.5660000000000001
+        },
+        {
+          "w": "the",
+          "start": 0.539,
+          "end": 0.5890000000000001
+        },
+        {
+          "w": "exact",
+          "start": 0.563,
+          "end": 0.613
+        },
+        {
+          "w": "line",
+          "start": 0.586,
+          "end": 0.636
+        },
+        {
+          "w": "they'd",
+          "start": 0.61,
+          "end": 0.66
+        },
+        {
+          "w": "given",
+          "start": 0.633,
+          "end": 0.683
+        },
+        {
+          "w": "her.",
+          "start": 0.657,
+          "end": 0.7070000000000001
+        },
+        {
+          "w": "The",
+          "start": 0.68,
+          "end": 1.12
+        },
+        {
+          "w": "teller",
+          "start": 1.12,
+          "end": 1.56
+        },
+        {
+          "w": "let",
+          "start": 1.56,
+          "end": 1.84
+        },
+        {
+          "w": "her",
+          "start": 1.84,
+          "end": 2.12
+        },
+        {
+          "w": "go.",
+          "start": 2.12,
+          "end": 8.34
+        },
+        {
+          "w": "Banks",
+          "start": 8.9,
+          "end": 8.950000000000001
+        },
+        {
+          "w": "don't",
+          "start": 8.9,
+          "end": 9.12
+        },
+        {
+          "w": "refuse",
+          "start": 9.12,
+          "end": 9.3
+        },
+        {
+          "w": "withdrawals.",
+          "start": 9.3,
+          "end": 9.56
+        },
+        {
+          "w": "They",
+          "start": 10.26,
+          "end": 10.38
+        },
+        {
+          "w": "can't",
+          "start": 10.38,
+          "end": 10.58
+        },
+        {
+          "w": "prove",
+          "start": 10.58,
+          "end": 10.7
+        },
+        {
+          "w": "anything.",
+          "start": 10.7,
+          "end": 10.94
+        },
+        {
+          "w": "The",
+          "start": 11.64,
+          "end": 11.72
+        },
+        {
+          "w": "system",
+          "start": 11.72,
+          "end": 11.86
+        },
+        {
+          "w": "is",
+          "start": 11.86,
+          "end": 12.1
+        },
+        {
+          "w": "built",
+          "start": 12.1,
+          "end": 12.26
+        },
+        {
+          "w": "for",
+          "start": 12.26,
+          "end": 12.44
+        },
+        {
+          "w": "trust,",
+          "start": 12.44,
+          "end": 12.64
+        },
+        {
+          "w": "and",
+          "start": 13.02,
+          "end": 13.07
+        },
+        {
+          "w": "the",
+          "start": 13.06,
+          "end": 13.16
+        },
+        {
+          "w": "scam",
+          "start": 13.16,
+          "end": 13.26
+        },
+        {
+          "w": "runs",
+          "start": 13.26,
+          "end": 13.56
+        },
+        {
+          "w": "on",
+          "start": 13.56,
+          "end": 13.78
+        },
+        {
+          "w": "it.",
+          "start": 13.78,
+          "end": 13.96
+        }
+      ],
+      "start": 177.41
+    },
+    {
+      "n": 20,
+      "file": "vo/beat-20.wav",
+      "dur": 8.79,
+      "speech": 8.24,
+      "words": [
+        {
+          "w": "An",
+          "start": 0.0,
+          "end": 0.1
+        },
+        {
+          "w": "hour",
+          "start": 0.1,
+          "end": 0.24
+        },
+        {
+          "w": "later,",
+          "start": 0.24,
+          "end": 0.54
+        },
+        {
+          "w": "the",
+          "start": 0.86,
+          "end": 0.91
+        },
+        {
+          "w": "cash",
+          "start": 0.88,
+          "end": 1.06
+        },
+        {
+          "w": "is",
+          "start": 1.06,
+          "end": 1.24
+        },
+        {
+          "w": "in",
+          "start": 1.24,
+          "end": 1.32
+        },
+        {
+          "w": "a",
+          "start": 1.32,
+          "end": 1.4
+        },
+        {
+          "w": "stranger's",
+          "start": 1.4,
+          "end": 1.76
+        },
+        {
+          "w": "car,",
+          "start": 1.76,
+          "end": 2.0
+        },
+        {
+          "w": "on",
+          "start": 2.22,
+          "end": 2.34
+        },
+        {
+          "w": "a",
+          "start": 2.34,
+          "end": 2.39
+        },
+        {
+          "w": "highway",
+          "start": 2.38,
+          "end": 2.6
+        },
+        {
+          "w": "out",
+          "start": 2.6,
+          "end": 2.86
+        },
+        {
+          "w": "of",
+          "start": 2.86,
+          "end": 2.94
+        },
+        {
+          "w": "town.",
+          "start": 2.94,
+          "end": 3.12
+        },
+        {
+          "w": "Police",
+          "start": 3.9,
+          "end": 3.95
+        },
+        {
+          "w": "trace",
+          "start": 3.9,
+          "end": 4.12
+        },
+        {
+          "w": "the",
+          "start": 4.12,
+          "end": 4.3
+        },
+        {
+          "w": "phone",
+          "start": 4.3,
+          "end": 4.48
+        },
+        {
+          "w": "to",
+          "start": 4.48,
+          "end": 4.66
+        },
+        {
+          "w": "a",
+          "start": 4.66,
+          "end": 4.74
+        },
+        {
+          "w": "VOIP",
+          "start": 4.74,
+          "end": 5.06
+        },
+        {
+          "w": "server",
+          "start": 5.06,
+          "end": 5.28
+        },
+        {
+          "w": "in",
+          "start": 5.28,
+          "end": 5.54
+        },
+        {
+          "w": "a",
+          "start": 5.54,
+          "end": 5.6
+        },
+        {
+          "w": "building",
+          "start": 5.6,
+          "end": 5.76
+        },
+        {
+          "w": "that",
+          "start": 5.76,
+          "end": 6.02
+        },
+        {
+          "w": "doesn't",
+          "start": 6.02,
+          "end": 6.28
+        },
+        {
+          "w": "exist.",
+          "start": 6.28,
+          "end": 6.5
+        },
+        {
+          "w": "By",
+          "start": 7.16,
+          "end": 7.21
+        },
+        {
+          "w": "morning,",
+          "start": 7.2,
+          "end": 7.44
+        },
+        {
+          "w": "the",
+          "start": 7.68,
+          "end": 7.74
+        },
+        {
+          "w": "numbers",
+          "start": 7.74,
+          "end": 7.9
+        },
+        {
+          "w": "are",
+          "start": 7.9,
+          "end": 8.1
+        },
+        {
+          "w": "dead.",
+          "start": 8.1,
+          "end": 8.24
+        }
+      ],
+      "start": 191.79
+    },
+    {
+      "n": 21,
+      "file": "vo/beat-21.wav",
+      "dur": 3.53,
+      "speech": 2.98,
+      "words": [
+        {
+          "w": "One",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "machine",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "runs",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "on",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "fear.",
+          "start": 0.0,
+          "end": 0.05
+        },
+        {
+          "w": "The",
+          "start": 0.0,
+          "end": 0.86
+        },
+        {
+          "w": "second",
+          "start": 0.86,
+          "end": 1.86
+        },
+        {
+          "w": "one",
+          "start": 1.86,
+          "end": 2.1
+        },
+        {
+          "w": "runs",
+          "start": 2.1,
+          "end": 2.28
+        },
+        {
+          "w": "on",
+          "start": 2.28,
+          "end": 2.44
+        },
+        {
+          "w": "something",
+          "start": 2.44,
+          "end": 2.7
+        },
+        {
+          "w": "worse.",
+          "start": 2.7,
+          "end": 2.98
+        }
+      ],
+      "start": 200.58
+    },
+    {
+      "n": 22,
+      "file": "vo/beat-22.wav",
+      "dur": 7.92,
+      "speech": 7.5,
+      "words": [
+        {
+          "w": "A",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "w": "woman",
+          "start": 0.08,
+          "end": 0.28
+        },
+        {
+          "w": "in",
+          "start": 0.28,
+          "end": 0.44
+        },
+        {
+          "w": "her",
+          "start": 0.44,
+          "end": 0.56
+        },
+        {
+          "w": "fifties",
+          "start": 0.56,
+          "end": 0.92
+        },
+        {
+          "w": "in",
+          "start": 0.92,
+          "end": 1.02
+        },
+        {
+          "w": "Florida",
+          "start": 1.02,
+          "end": 1.26
+        },
+        {
+          "w": "gets",
+          "start": 1.26,
+          "end": 1.5
+        },
+        {
+          "w": "a",
+          "start": 1.5,
+          "end": 1.6
+        },
+        {
+          "w": "wrong-number",
+          "start": 1.81,
+          "end": 2.02
+        },
+        {
+          "w": "text.",
+          "start": 2.02,
+          "end": 2.32
+        },
+        {
+          "w": "'Hey",
+          "start": 2.86,
+          "end": 2.91
+        },
+        {
+          "w": "Emily,",
+          "start": 2.88,
+          "end": 3.08
+        },
+        {
+          "w": "it's",
+          "start": 3.34,
+          "end": 3.39
+        },
+        {
+          "w": "David",
+          "start": 3.38,
+          "end": 3.52
+        },
+        {
+          "w": "—",
+          "start": 3.62,
+          "end": 3.72
+        },
+        {
+          "w": "did",
+          "start": 3.72,
+          "end": 3.78
+        },
+        {
+          "w": "you",
+          "start": 3.78,
+          "end": 3.86
+        },
+        {
+          "w": "get",
+          "start": 3.86,
+          "end": 3.96
+        },
+        {
+          "w": "my",
+          "start": 3.96,
+          "end": 4.08
+        },
+        {
+          "w": "email?'",
+          "start": 4.08,
+          "end": 4.28
+        },
+        {
+          "w": "She",
+          "start": 4.68,
+          "end": 4.73
+        },
+        {
+          "w": "corrects",
+          "start": 4.72,
+          "end": 5.06
+        },
+        {
+          "w": "him.",
+          "start": 5.06,
+          "end": 5.16
+        },
+        {
+          "w": "He",
+          "start": 5.46,
+          "end": 5.51
+        },
+        {
+          "w": "apologizes.",
+          "start": 5.48,
+          "end": 6.0
+        },
+        {
+          "w": "That",
+          "start": 6.24,
+          "end": 6.29
+        },
+        {
+          "w": "should",
+          "start": 6.26,
+          "end": 6.4
+        },
+        {
+          "w": "be",
+          "start": 6.4,
+          "end": 6.52
+        },
+        {
+          "w": "the",
+          "start": 6.52,
+          "end": 6.62
+        },
+        {
+          "w": "end",
+          "start": 6.62,
+          "end": 6.74
+        },
+        {
+          "w": "of",
+          "start": 6.74,
+          "end": 6.88
+        },
+        {
+          "w": "it.",
+          "start": 6.88,
+          "end": 6.96
+        },
+        {
+          "w": "It's",
+          "start": 7.14,
+          "end": 7.22
+        },
+        {
+          "w": "the",
+          "start": 7.22,
+          "end": 7.3
+        },
+        {
+          "w": "beginning.",
+          "start": 7.3,
+          "end": 7.5
+        }
+      ],
+      "start": 204.11
+    },
+    {
+      "n": 23,
+      "file": "vo/beat-23.wav",
+      "dur": 11.74,
+      "speech": 11.28,
+      "words": [
+        {
+          "w": "A",
+          "start": 0.0,
+          "end": 0.14
+        },
+        {
+          "w": "week",
+          "start": 0.14,
+          "end": 0.26
+        },
+        {
+          "w": "of",
+          "start": 0.26,
+          "end": 0.38
+        },
+        {
+          "w": "small",
+          "start": 0.38,
+          "end": 0.54
+        },
+        {
+          "w": "talk.",
+          "start": 0.54,
+          "end": 0.78
+        },
+        {
+          "w": "Photos",
+          "start": 1.42,
+          "end": 1.47
+        },
+        {
+          "w": "of",
+          "start": 1.42,
+          "end": 1.64
+        },
+        {
+          "w": "a",
+          "start": 1.64,
+          "end": 1.72
+        },
+        {
+          "w": "real,",
+          "start": 1.72,
+          "end": 1.96
+        },
+        {
+          "w": "handsome",
+          "start": 2.0,
+          "end": 2.26
+        },
+        {
+          "w": "man",
+          "start": 2.26,
+          "end": 2.58
+        },
+        {
+          "w": "—",
+          "start": 2.78,
+          "end": 2.98
+        },
+        {
+          "w": "stolen",
+          "start": 2.98,
+          "end": 3.03
+        },
+        {
+          "w": "from",
+          "start": 2.98,
+          "end": 3.28
+        },
+        {
+          "w": "a",
+          "start": 3.28,
+          "end": 3.34
+        },
+        {
+          "w": "dentist",
+          "start": 3.34,
+          "end": 3.48
+        },
+        {
+          "w": "in",
+          "start": 3.48,
+          "end": 3.74
+        },
+        {
+          "w": "Arizona",
+          "start": 3.74,
+          "end": 3.98
+        },
+        {
+          "w": "who",
+          "start": 3.98,
+          "end": 4.4
+        },
+        {
+          "w": "has",
+          "start": 4.4,
+          "end": 4.5
+        },
+        {
+          "w": "no",
+          "start": 4.5,
+          "end": 4.66
+        },
+        {
+          "w": "idea",
+          "start": 4.66,
+          "end": 4.9
+        },
+        {
+          "w": "his",
+          "start": 4.9,
+          "end": 5.1
+        },
+        {
+          "w": "face",
+          "start": 5.1,
+          "end": 5.28
+        },
+        {
+          "w": "is",
+          "start": 5.28,
+          "end": 5.42
+        },
+        {
+          "w": "working",
+          "start": 5.42,
+          "end": 5.62
+        },
+        {
+          "w": "a",
+          "start": 5.62,
+          "end": 5.78
+        },
+        {
+          "w": "second",
+          "start": 5.78,
+          "end": 5.94
+        },
+        {
+          "w": "job.",
+          "start": 5.94,
+          "end": 6.3
+        },
+        {
+          "w": "He",
+          "start": 6.78,
+          "end": 6.88
+        },
+        {
+          "w": "remembers",
+          "start": 6.88,
+          "end": 7.12
+        },
+        {
+          "w": "her",
+          "start": 7.12,
+          "end": 7.3
+        },
+        {
+          "w": "birthday.",
+          "start": 7.3,
+          "end": 7.62
+        },
+        {
+          "w": "He",
+          "start": 7.92,
+          "end": 7.97
+        },
+        {
+          "w": "asks",
+          "start": 7.92,
+          "end": 8.08
+        },
+        {
+          "w": "about",
+          "start": 8.08,
+          "end": 8.38
+        },
+        {
+          "w": "her",
+          "start": 8.38,
+          "end": 8.54
+        },
+        {
+          "w": "week.",
+          "start": 8.54,
+          "end": 8.72
+        },
+        {
+          "w": "It",
+          "start": 9.34,
+          "end": 9.52
+        },
+        {
+          "w": "feels",
+          "start": 9.52,
+          "end": 9.66
+        },
+        {
+          "w": "like",
+          "start": 9.66,
+          "end": 9.86
+        },
+        {
+          "w": "the",
+          "start": 9.86,
+          "end": 9.98
+        },
+        {
+          "w": "best",
+          "start": 9.98,
+          "end": 10.1
+        },
+        {
+          "w": "conversation",
+          "start": 10.1,
+          "end": 10.54
+        },
+        {
+          "w": "she's",
+          "start": 10.54,
+          "end": 10.88
+        },
+        {
+          "w": "had",
+          "start": 10.88,
+          "end": 11.02
+        },
+        {
+          "w": "in",
+          "start": 11.02,
+          "end": 11.12
+        },
+        {
+          "w": "years.",
+          "start": 11.12,
+          "end": 11.28
+        }
+      ],
+      "start": 212.03
+    },
+    {
+      "n": 24,
+      "file": "vo/beat-24.wav",
+      "dur": 13.48,
+      "speech": 13.02,
+      "words": [
+        {
+          "w": "Then",
+          "start": 0.0,
+          "end": 0.2
+        },
+        {
+          "w": "David",
+          "start": 0.2,
+          "end": 0.48
+        },
+        {
+          "w": "mentions",
+          "start": 0.48,
+          "end": 0.8
+        },
+        {
+          "w": "the",
+          "start": 0.8,
+          "end": 1.06
+        },
+        {
+          "w": "app.",
+          "start": 1.06,
+          "end": 1.26
+        },
+        {
+          "w": "Crypto",
+          "start": 1.72,
+          "end": 1.77
+        },
+        {
+          "w": "trading.",
+          "start": 1.72,
+          "end": 2.1
+        },
+        {
+          "w": "He",
+          "start": 2.6,
+          "end": 2.65
+        },
+        {
+          "w": "sends",
+          "start": 2.6,
+          "end": 2.78
+        },
+        {
+          "w": "screenshots",
+          "start": 2.78,
+          "end": 3.08
+        },
+        {
+          "w": "of",
+          "start": 3.08,
+          "end": 3.52
+        },
+        {
+          "w": "his",
+          "start": 3.52,
+          "end": 3.62
+        },
+        {
+          "w": "gains",
+          "start": 3.62,
+          "end": 3.86
+        },
+        {
+          "w": "—",
+          "start": 4.02,
+          "end": 4.18
+        },
+        {
+          "w": "fabricated",
+          "start": 4.18,
+          "end": 4.42
+        },
+        {
+          "w": "on",
+          "start": 4.42,
+          "end": 4.84
+        },
+        {
+          "w": "a",
+          "start": 4.84,
+          "end": 4.94
+        },
+        {
+          "w": "dashboard",
+          "start": 4.94,
+          "end": 5.22
+        },
+        {
+          "w": "the",
+          "start": 5.22,
+          "end": 5.54
+        },
+        {
+          "w": "scammers",
+          "start": 5.54,
+          "end": 5.82
+        },
+        {
+          "w": "built.",
+          "start": 5.82,
+          "end": 6.12
+        },
+        {
+          "w": "The",
+          "start": 6.68,
+          "end": 6.78
+        },
+        {
+          "w": "app",
+          "start": 6.78,
+          "end": 6.92
+        },
+        {
+          "w": "is",
+          "start": 6.92,
+          "end": 7.08
+        },
+        {
+          "w": "free,",
+          "start": 7.08,
+          "end": 7.36
+        },
+        {
+          "w": "with",
+          "start": 7.36,
+          "end": 7.56
+        },
+        {
+          "w": "four",
+          "start": 7.56,
+          "end": 7.74
+        },
+        {
+          "w": "point",
+          "start": 7.74,
+          "end": 7.96
+        },
+        {
+          "w": "seven",
+          "start": 7.96,
+          "end": 8.22
+        },
+        {
+          "w": "stars,",
+          "start": 8.22,
+          "end": 8.5
+        },
+        {
+          "w": "from",
+          "start": 8.5,
+          "end": 8.84
+        },
+        {
+          "w": "three",
+          "start": 8.84,
+          "end": 9.04
+        },
+        {
+          "w": "thousand",
+          "start": 9.04,
+          "end": 9.32
+        },
+        {
+          "w": "reviews.",
+          "start": 9.32,
+          "end": 9.6
+        },
+        {
+          "w": "All",
+          "start": 10.24,
+          "end": 10.36
+        },
+        {
+          "w": "paid.",
+          "start": 10.36,
+          "end": 10.58
+        },
+        {
+          "w": "All",
+          "start": 10.96,
+          "end": 11.010000000000002
+        },
+        {
+          "w": "created",
+          "start": 11.0,
+          "end": 11.28
+        },
+        {
+          "w": "that",
+          "start": 11.28,
+          "end": 11.56
+        },
+        {
+          "w": "week.",
+          "start": 11.56,
+          "end": 11.76
+        },
+        {
+          "w": "The",
+          "start": 12.24,
+          "end": 12.290000000000001
+        },
+        {
+          "w": "store",
+          "start": 12.26,
+          "end": 12.46
+        },
+        {
+          "w": "approved",
+          "start": 12.46,
+          "end": 12.76
+        },
+        {
+          "w": "it.",
+          "start": 12.76,
+          "end": 13.02
+        }
+      ],
+      "start": 223.77
+    },
+    {
+      "n": 25,
+      "file": "vo/beat-25.wav",
+      "dur": 8.84,
+      "speech": 8.42,
+      "words": [
+        {
+          "w": "Look",
+          "start": 0.0,
+          "end": 0.12
+        },
+        {
+          "w": "at",
+          "start": 0.12,
+          "end": 0.2
+        },
+        {
+          "w": "the",
+          "start": 0.2,
+          "end": 0.26
+        },
+        {
+          "w": "screen.",
+          "start": 0.26,
+          "end": 0.44
+        },
+        {
+          "w": "A",
+          "start": 0.9,
+          "end": 0.9500000000000001
+        },
+        {
+          "w": "verified",
+          "start": 0.94,
+          "end": 1.08
+        },
+        {
+          "w": "badge.",
+          "start": 1.08,
+          "end": 1.4
+        },
+        {
+          "w": "A",
+          "start": 1.82,
+          "end": 1.88
+        },
+        {
+          "w": "security",
+          "start": 1.88,
+          "end": 2.08
+        },
+        {
+          "w": "lock.",
+          "start": 2.08,
+          "end": 2.36
+        },
+        {
+          "w": "A",
+          "start": 2.7,
+          "end": 2.78
+        },
+        {
+          "w": "customer",
+          "start": 2.78,
+          "end": 3.0
+        },
+        {
+          "w": "service",
+          "start": 3.0,
+          "end": 3.32
+        },
+        {
+          "w": "chat.",
+          "start": 3.32,
+          "end": 3.52
+        },
+        {
+          "w": "Every",
+          "start": 3.94,
+          "end": 4.06
+        },
+        {
+          "w": "trust",
+          "start": 4.06,
+          "end": 4.24
+        },
+        {
+          "w": "signal",
+          "start": 4.24,
+          "end": 4.52
+        },
+        {
+          "w": "a",
+          "start": 4.52,
+          "end": 4.62
+        },
+        {
+          "w": "bank",
+          "start": 4.62,
+          "end": 4.74
+        },
+        {
+          "w": "has,",
+          "start": 4.74,
+          "end": 4.98
+        },
+        {
+          "w": "the",
+          "start": 5.22,
+          "end": 5.27
+        },
+        {
+          "w": "scammers",
+          "start": 5.24,
+          "end": 5.48
+        },
+        {
+          "w": "built",
+          "start": 5.48,
+          "end": 5.68
+        },
+        {
+          "w": "a",
+          "start": 5.68,
+          "end": 5.8
+        },
+        {
+          "w": "fake",
+          "start": 5.8,
+          "end": 5.92
+        },
+        {
+          "w": "of.",
+          "start": 5.92,
+          "end": 6.12
+        },
+        {
+          "w": "The",
+          "start": 6.44,
+          "end": 6.5
+        },
+        {
+          "w": "blue",
+          "start": 6.5,
+          "end": 6.6
+        },
+        {
+          "w": "checkmark",
+          "start": 6.6,
+          "end": 6.92
+        },
+        {
+          "w": "isn't",
+          "start": 6.92,
+          "end": 7.18
+        },
+        {
+          "w": "proof.",
+          "start": 7.18,
+          "end": 7.36
+        },
+        {
+          "w": "It's",
+          "start": 7.78,
+          "end": 7.96
+        },
+        {
+          "w": "part",
+          "start": 7.96,
+          "end": 8.12
+        },
+        {
+          "w": "of",
+          "start": 8.12,
+          "end": 8.24
+        },
+        {
+          "w": "the",
+          "start": 8.24,
+          "end": 8.290000000000001
+        },
+        {
+          "w": "costume.",
+          "start": 8.28,
+          "end": 8.42
+        }
+      ],
+      "start": 237.25
+    },
+    {
+      "n": 26,
+      "file": "vo/beat-26.wav",
+      "dur": 4.9,
+      "speech": 4.44,
+      "words": [
+        {
+          "w": "Here's",
+          "start": 0.0,
+          "end": 0.22
+        },
+        {
+          "w": "the",
+          "start": 0.22,
+          "end": 0.3
+        },
+        {
+          "w": "trick:",
+          "start": 0.3,
+          "end": 0.48
+        },
+        {
+          "w": "her",
+          "start": 0.78,
+          "end": 0.84
+        },
+        {
+          "w": "first",
+          "start": 0.84,
+          "end": 1.06
+        },
+        {
+          "w": "deposit",
+          "start": 1.06,
+          "end": 1.32
+        },
+        {
+          "w": "wins.",
+          "start": 1.32,
+          "end": 1.64
+        },
+        {
+          "w": "Five",
+          "start": 2.1,
+          "end": 2.22
+        },
+        {
+          "w": "hundred",
+          "start": 2.22,
+          "end": 2.42
+        },
+        {
+          "w": "dollars",
+          "start": 2.42,
+          "end": 2.64
+        },
+        {
+          "w": "in,",
+          "start": 2.64,
+          "end": 2.88
+        },
+        {
+          "w": "and",
+          "start": 3.12,
+          "end": 3.17
+        },
+        {
+          "w": "the",
+          "start": 3.16,
+          "end": 3.26
+        },
+        {
+          "w": "app",
+          "start": 3.26,
+          "end": 3.42
+        },
+        {
+          "w": "shows",
+          "start": 3.42,
+          "end": 3.66
+        },
+        {
+          "w": "six",
+          "start": 3.66,
+          "end": 3.9
+        },
+        {
+          "w": "hundred",
+          "start": 3.9,
+          "end": 4.12
+        },
+        {
+          "w": "and",
+          "start": 4.12,
+          "end": 4.26
+        },
+        {
+          "w": "ten.",
+          "start": 4.26,
+          "end": 4.44
+        }
+      ],
+      "start": 246.09
+    },
+    {
+      "n": 27,
+      "file": "vo/beat-27.wav",
+      "dur": 7.9,
+      "speech": 7.48,
+      "words": [
+        {
+          "w": "Then",
+          "start": 0.0,
+          "end": 0.2
+        },
+        {
+          "w": "she",
+          "start": 0.2,
+          "end": 0.34
+        },
+        {
+          "w": "tests",
+          "start": 0.34,
+          "end": 0.54
+        },
+        {
+          "w": "the",
+          "start": 0.54,
+          "end": 0.76
+        },
+        {
+          "w": "withdrawal.",
+          "start": 0.76,
+          "end": 1.0
+        },
+        {
+          "w": "Two",
+          "start": 1.58,
+          "end": 1.6300000000000001
+        },
+        {
+          "w": "hundred",
+          "start": 1.62,
+          "end": 1.84
+        },
+        {
+          "w": "dollars.",
+          "start": 1.84,
+          "end": 2.12
+        },
+        {
+          "w": "Once.",
+          "start": 2.5,
+          "end": 2.56
+        },
+        {
+          "w": "Small.",
+          "start": 3.22,
+          "end": 3.27
+        },
+        {
+          "w": "It",
+          "start": 3.58,
+          "end": 3.63
+        },
+        {
+          "w": "lands",
+          "start": 3.6,
+          "end": 3.74
+        },
+        {
+          "w": "in",
+          "start": 3.74,
+          "end": 3.92
+        },
+        {
+          "w": "her",
+          "start": 3.92,
+          "end": 4.02
+        },
+        {
+          "w": "account",
+          "start": 4.02,
+          "end": 4.26
+        },
+        {
+          "w": "in",
+          "start": 4.26,
+          "end": 4.44
+        },
+        {
+          "w": "a",
+          "start": 4.44,
+          "end": 4.5
+        },
+        {
+          "w": "day.",
+          "start": 4.5,
+          "end": 4.68
+        },
+        {
+          "w": "That's",
+          "start": 5.08,
+          "end": 5.2
+        },
+        {
+          "w": "the",
+          "start": 5.2,
+          "end": 5.28
+        },
+        {
+          "w": "engineered",
+          "start": 5.28,
+          "end": 5.44
+        },
+        {
+          "w": "moment.",
+          "start": 5.44,
+          "end": 5.94
+        },
+        {
+          "w": "Trust,",
+          "start": 6.34,
+          "end": 6.52
+        },
+        {
+          "w": "delivered",
+          "start": 6.88,
+          "end": 7.04
+        },
+        {
+          "w": "on",
+          "start": 7.04,
+          "end": 7.24
+        },
+        {
+          "w": "schedule.",
+          "start": 7.24,
+          "end": 7.48
+        }
+      ],
+      "start": 250.99
+    },
+    {
+      "n": 28,
+      "file": "vo/beat-28.wav",
+      "dur": 10.34,
+      "speech": 9.88,
+      "words": [
+        {
+          "w": "Then",
+          "start": 0.0,
+          "end": 0.18
+        },
+        {
+          "w": "the",
+          "start": 0.18,
+          "end": 0.28
+        },
+        {
+          "w": "fees",
+          "start": 0.28,
+          "end": 0.42
+        },
+        {
+          "w": "arrive.",
+          "start": 0.42,
+          "end": 0.74
+        },
+        {
+          "w": "Taxes",
+          "start": 1.34,
+          "end": 1.54
+        },
+        {
+          "w": "on",
+          "start": 1.54,
+          "end": 1.74
+        },
+        {
+          "w": "winnings.",
+          "start": 1.74,
+          "end": 2.18
+        },
+        {
+          "w": "Platform",
+          "start": 2.54,
+          "end": 2.68
+        },
+        {
+          "w": "fees.",
+          "start": 2.68,
+          "end": 3.06
+        },
+        {
+          "w": "A",
+          "start": 3.76,
+          "end": 3.81
+        },
+        {
+          "w": "security",
+          "start": 3.78,
+          "end": 3.98
+        },
+        {
+          "w": "deposit",
+          "start": 3.98,
+          "end": 4.4
+        },
+        {
+          "w": "to",
+          "start": 4.4,
+          "end": 4.64
+        },
+        {
+          "w": "unlock",
+          "start": 4.64,
+          "end": 4.86
+        },
+        {
+          "w": "the",
+          "start": 4.86,
+          "end": 5.06
+        },
+        {
+          "w": "withdrawal.",
+          "start": 5.06,
+          "end": 5.34
+        },
+        {
+          "w": "Each",
+          "start": 5.94,
+          "end": 6.04
+        },
+        {
+          "w": "ask",
+          "start": 6.04,
+          "end": 6.26
+        },
+        {
+          "w": "is",
+          "start": 6.26,
+          "end": 6.52
+        },
+        {
+          "w": "a",
+          "start": 6.52,
+          "end": 6.58
+        },
+        {
+          "w": "little",
+          "start": 6.58,
+          "end": 6.74
+        },
+        {
+          "w": "more",
+          "start": 6.74,
+          "end": 6.88
+        },
+        {
+          "w": "urgent",
+          "start": 6.88,
+          "end": 7.1
+        },
+        {
+          "w": "than",
+          "start": 7.1,
+          "end": 7.36
+        },
+        {
+          "w": "the",
+          "start": 7.36,
+          "end": 7.44
+        },
+        {
+          "w": "last.",
+          "start": 7.44,
+          "end": 7.62
+        },
+        {
+          "w": "Each",
+          "start": 8.08,
+          "end": 8.14
+        },
+        {
+          "w": "one",
+          "start": 8.14,
+          "end": 8.36
+        },
+        {
+          "w": "is",
+          "start": 8.36,
+          "end": 8.46
+        },
+        {
+          "w": "the",
+          "start": 8.46,
+          "end": 8.58
+        },
+        {
+          "w": "last",
+          "start": 8.58,
+          "end": 8.74
+        },
+        {
+          "w": "one",
+          "start": 8.74,
+          "end": 9.02
+        },
+        {
+          "w": "—",
+          "start": 9.11,
+          "end": 9.2
+        },
+        {
+          "w": "until",
+          "start": 9.2,
+          "end": 9.36
+        },
+        {
+          "w": "the",
+          "start": 9.36,
+          "end": 9.5
+        },
+        {
+          "w": "next",
+          "start": 9.5,
+          "end": 9.66
+        },
+        {
+          "w": "one.",
+          "start": 9.66,
+          "end": 9.88
+        }
+      ],
+      "start": 258.89
+    },
+    {
+      "n": 29,
+      "file": "vo/beat-29.wav",
+      "dur": 12.72,
+      "speech": 12.32,
+      "words": [
+        {
+          "w": "The",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "w": "average",
+          "start": 0.24,
+          "end": 0.46
+        },
+        {
+          "w": "victim",
+          "start": 0.46,
+          "end": 0.7
+        },
+        {
+          "w": "sends",
+          "start": 0.7,
+          "end": 1.16
+        },
+        {
+          "w": "money",
+          "start": 1.16,
+          "end": 1.38
+        },
+        {
+          "w": "for",
+          "start": 1.38,
+          "end": 1.6
+        },
+        {
+          "w": "seventy-seven",
+          "start": 1.91,
+          "end": 2.22
+        },
+        {
+          "w": "days",
+          "start": 2.22,
+          "end": 2.38
+        },
+        {
+          "w": "before",
+          "start": 2.38,
+          "end": 2.7
+        },
+        {
+          "w": "it",
+          "start": 2.7,
+          "end": 2.86
+        },
+        {
+          "w": "stops.",
+          "start": 2.86,
+          "end": 3.12
+        },
+        {
+          "w": "Eleven",
+          "start": 3.78,
+          "end": 3.83
+        },
+        {
+          "w": "weeks",
+          "start": 3.82,
+          "end": 4.18
+        },
+        {
+          "w": "of",
+          "start": 4.18,
+          "end": 4.38
+        },
+        {
+          "w": "daily",
+          "start": 4.38,
+          "end": 4.52
+        },
+        {
+          "w": "screenshots,",
+          "start": 4.52,
+          "end": 5.04
+        },
+        {
+          "w": "daily",
+          "start": 5.34,
+          "end": 5.42
+        },
+        {
+          "w": "gains,",
+          "start": 5.42,
+          "end": 5.72
+        },
+        {
+          "w": "daily",
+          "start": 6.06,
+          "end": 6.12
+        },
+        {
+          "w": "good-morning",
+          "start": 6.33,
+          "end": 6.54
+        },
+        {
+          "w": "texts.",
+          "start": 6.54,
+          "end": 6.88
+        },
+        {
+          "w": "And",
+          "start": 7.32,
+          "end": 7.37
+        },
+        {
+          "w": "every",
+          "start": 7.34,
+          "end": 7.54
+        },
+        {
+          "w": "day,",
+          "start": 7.54,
+          "end": 7.78
+        },
+        {
+          "w": "the",
+          "start": 7.96,
+          "end": 8.06
+        },
+        {
+          "w": "balance",
+          "start": 8.06,
+          "end": 8.26
+        },
+        {
+          "w": "she's",
+          "start": 8.26,
+          "end": 8.52
+        },
+        {
+          "w": "told",
+          "start": 8.52,
+          "end": 8.7
+        },
+        {
+          "w": "she",
+          "start": 8.7,
+          "end": 8.86
+        },
+        {
+          "w": "owns",
+          "start": 8.86,
+          "end": 9.08
+        },
+        {
+          "w": "keeps",
+          "start": 9.08,
+          "end": 9.34
+        },
+        {
+          "w": "climbing.",
+          "start": 9.34,
+          "end": 9.68
+        },
+        {
+          "w": "It",
+          "start": 10.24,
+          "end": 10.3
+        },
+        {
+          "w": "was",
+          "start": 10.3,
+          "end": 10.38
+        },
+        {
+          "w": "never",
+          "start": 10.38,
+          "end": 10.56
+        },
+        {
+          "w": "real.",
+          "start": 10.56,
+          "end": 10.88
+        },
+        {
+          "w": "But",
+          "start": 11.38,
+          "end": 11.48
+        },
+        {
+          "w": "it",
+          "start": 11.48,
+          "end": 11.58
+        },
+        {
+          "w": "was",
+          "start": 11.58,
+          "end": 11.64
+        },
+        {
+          "w": "never",
+          "start": 11.64,
+          "end": 11.8
+        },
+        {
+          "w": "checked",
+          "start": 11.8,
+          "end": 12.0
+        },
+        {
+          "w": "either.",
+          "start": 12.0,
+          "end": 12.32
+        }
+      ],
+      "start": 269.23
+    },
+    {
+      "n": 30,
+      "file": "vo/beat-30.wav",
+      "dur": 9.29,
+      "speech": 8.74,
+      "words": [
+        {
+          "w": "Then",
+          "start": 0.0,
+          "end": 0.18
+        },
+        {
+          "w": "the",
           "start": 0.18,
           "end": 0.34
         },
         {
-          "w": "₹100",
-          "start": 0.96,
-          "end": 1.26
+          "w": "withdrawal",
+          "start": 0.34,
+          "end": 0.52
         },
         {
-          "w": "won't",
-          "start": 1.26,
-          "end": 1.48
+          "w": "button",
+          "start": 0.52,
+          "end": 0.88
         },
         {
-          "w": "change",
-          "start": 1.48,
-          "end": 1.62
+          "w": "stops",
+          "start": 0.88,
+          "end": 1.2
         },
         {
-          "w": "your",
-          "start": 1.62,
-          "end": 1.78
+          "w": "working.",
+          "start": 1.2,
+          "end": 1.6
         },
         {
-          "w": "life",
-          "start": 1.78,
-          "end": 1.92
+          "w": "Customer",
+          "start": 1.96,
+          "end": 2.08
         },
         {
-          "w": "today.",
-          "start": 1.92,
+          "w": "service",
+          "start": 2.08,
+          "end": 2.48
+        },
+        {
+          "w": "goes",
+          "start": 2.48,
+          "end": 2.66
+        },
+        {
+          "w": "silent.",
+          "start": 2.66,
+          "end": 2.96
+        },
+        {
+          "w": "By",
+          "start": 3.68,
+          "end": 3.73
+        },
+        {
+          "w": "then,",
+          "start": 3.7,
+          "end": 3.98
+        },
+        {
+          "w": "Emily",
+          "start": 4.22,
+          "end": 4.32
+        },
+        {
+          "w": "has",
+          "start": 4.32,
+          "end": 4.56
+        },
+        {
+          "w": "wired",
+          "start": 4.56,
+          "end": 4.72
+        },
+        {
+          "w": "her",
+          "start": 4.72,
+          "end": 4.92
+        },
+        {
+          "w": "retirement",
+          "start": 4.92,
+          "end": 5.12
+        },
+        {
+          "w": "account.",
+          "start": 5.12,
+          "end": 5.54
+        },
+        {
+          "w": "Three",
+          "start": 5.98,
+          "end": 6.04
+        },
+        {
+          "w": "hundred",
+          "start": 6.04,
+          "end": 6.28
+        },
+        {
+          "w": "thousand",
+          "start": 6.28,
+          "end": 6.5
+        },
+        {
+          "w": "dollars.",
+          "start": 6.5,
+          "end": 6.88
+        },
+        {
+          "w": "A",
+          "start": 7.32,
+          "end": 7.4
+        },
+        {
+          "w": "real",
+          "start": 7.4,
+          "end": 7.52
+        },
+        {
+          "w": "number,",
+          "start": 7.52,
+          "end": 7.82
+        },
+        {
+          "w": "from",
+          "start": 7.96,
+          "end": 8.1
+        },
+        {
+          "w": "an",
+          "start": 8.1,
+          "end": 8.2
+        },
+        {
+          "w": "FBI",
+          "start": 8.2,
+          "end": 8.38
+        },
+        {
+          "w": "report.",
+          "start": 8.38,
+          "end": 8.74
+        }
+      ],
+      "start": 281.95
+    },
+    {
+      "n": 31,
+      "file": "vo/beat-31.wav",
+      "dur": 8.48,
+      "speech": 8.06,
+      "words": [
+        {
+          "w": "And",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "w": "this",
+          "start": 0.08,
+          "end": 0.2
+        },
+        {
+          "w": "isn't",
+          "start": 0.2,
+          "end": 0.44
+        },
+        {
+          "w": "rare.",
+          "start": 0.44,
+          "end": 0.62
+        },
+        {
+          "w": "The",
+          "start": 1.02,
+          "end": 1.07
+        },
+        {
+          "w": "FBI",
+          "start": 1.04,
+          "end": 1.16
+        },
+        {
+          "w": "counted",
+          "start": 1.16,
+          "end": 1.64
+        },
+        {
+          "w": "five",
+          "start": 1.64,
+          "end": 1.9
+        },
+        {
+          "w": "point",
+          "start": 1.9,
           "end": 2.1
         },
         {
-          "w": "But",
-          "start": 2.68,
-          "end": 2.73
+          "w": "six",
+          "start": 2.1,
+          "end": 2.3
         },
         {
-          "w": "30",
-          "start": 2.68,
-          "end": 2.9
+          "w": "billion",
+          "start": 2.3,
+          "end": 2.54
         },
         {
-          "w": "years",
-          "start": 2.9,
-          "end": 3.14
-        },
-        {
-          "w": "of",
-          "start": 3.14,
-          "end": 3.34
-        },
-        {
-          "w": "it?",
-          "start": 3.34,
-          "end": 3.46
-        },
-        {
-          "w": "One",
-          "start": 3.96,
-          "end": 4.04
-        },
-        {
-          "w": "crore.",
-          "start": 4.04,
-          "end": 4.36
-        },
-        {
-          "w": "Follow",
-          "start": 4.96,
-          "end": 5.01
-        },
-        {
-          "w": "for",
-          "start": 5.0,
-          "end": 5.24
-        },
-        {
-          "w": "more",
-          "start": 5.24,
-          "end": 5.4
-        },
-        {
-          "w": "money",
-          "start": 5.4,
-          "end": 5.56
-        },
-        {
-          "w": "lessons",
-          "start": 5.56,
-          "end": 5.86
+          "w": "dollars",
+          "start": 2.54,
+          "end": 2.86
         },
         {
           "w": "in",
-          "start": 5.86,
-          "end": 6.14
+          "start": 2.86,
+          "end": 2.98
         },
         {
-          "w": "30",
-          "start": 6.14,
-          "end": 6.34
+          "w": "crypto-related",
+          "start": 3.24,
+          "end": 3.5
         },
         {
-          "w": "seconds.",
-          "start": 6.34,
-          "end": 6.68
+          "w": "losses",
+          "start": 3.5,
+          "end": 3.84
+        },
+        {
+          "w": "in",
+          "start": 3.84,
+          "end": 4.04
+        },
+        {
+          "w": "2023",
+          "start": 4.04,
+          "end": 4.62
+        },
+        {
+          "w": "alone.",
+          "start": 4.62,
+          "end": 4.88
+        },
+        {
+          "w": "Five",
+          "start": 5.54,
+          "end": 5.62
+        },
+        {
+          "w": "point",
+          "start": 5.62,
+          "end": 5.84
+        },
+        {
+          "w": "six",
+          "start": 5.84,
+          "end": 6.06
+        },
+        {
+          "w": "billion.",
+          "start": 6.06,
+          "end": 6.36
+        },
+        {
+          "w": "One",
+          "start": 6.96,
+          "end": 7.12
+        },
+        {
+          "w": "wrong",
+          "start": 7.12,
+          "end": 7.26
+        },
+        {
+          "w": "number",
+          "start": 7.26,
+          "end": 7.6
+        },
+        {
+          "w": "at",
+          "start": 7.6,
+          "end": 7.74
+        },
+        {
+          "w": "a",
+          "start": 7.74,
+          "end": 7.79
+        },
+        {
+          "w": "time.",
+          "start": 7.78,
+          "end": 8.06
         }
-      ]
+      ],
+      "start": 291.24
+    },
+    {
+      "n": 32,
+      "file": "vo/beat-32.wav",
+      "dur": 6.6,
+      "speech": 6.18,
+      "words": [
+        {
+          "w": "The",
+          "start": 0.0,
+          "end": 0.14
+        },
+        {
+          "w": "money",
+          "start": 0.14,
+          "end": 0.24
+        },
+        {
+          "w": "crosses",
+          "start": 0.24,
+          "end": 0.62
+        },
+        {
+          "w": "three",
+          "start": 0.62,
+          "end": 1.04
+        },
+        {
+          "w": "international",
+          "start": 1.04,
+          "end": 1.42
+        },
+        {
+          "w": "transfers",
+          "start": 1.42,
+          "end": 2.02
+        },
+        {
+          "w": "in",
+          "start": 2.02,
+          "end": 2.44
+        },
+        {
+          "w": "forty",
+          "start": 2.44,
+          "end": 2.6
+        },
+        {
+          "w": "minutes.",
+          "start": 2.6,
+          "end": 2.94
+        },
+        {
+          "w": "The",
+          "start": 3.62,
+          "end": 3.68
+        },
+        {
+          "w": "accounts",
+          "start": 3.68,
+          "end": 3.9
+        },
+        {
+          "w": "are",
+          "start": 3.9,
+          "end": 4.16
+        },
+        {
+          "w": "closed",
+          "start": 4.16,
+          "end": 4.36
+        },
+        {
+          "w": "by",
+          "start": 4.36,
+          "end": 4.68
+        },
+        {
+          "w": "six",
+          "start": 4.68,
+          "end": 4.84
+        },
+        {
+          "w": "o'clock.",
+          "start": 5.33,
+          "end": 5.82
+        },
+        {
+          "w": "Nothing",
+          "start": 5.82,
+          "end": 5.87
+        },
+        {
+          "w": "to",
+          "start": 5.82,
+          "end": 6.0
+        },
+        {
+          "w": "trace.",
+          "start": 6.0,
+          "end": 6.18
+        }
+      ],
+      "start": 299.72
+    },
+    {
+      "n": 33,
+      "file": "vo/beat-33.wav",
+      "dur": 11.4,
+      "speech": 10.98,
+      "words": [
+        {
+          "w": "Here's",
+          "start": 0.0,
+          "end": 0.18
+        },
+        {
+          "w": "the",
+          "start": 0.18,
+          "end": 0.3
+        },
+        {
+          "w": "part",
+          "start": 0.3,
+          "end": 0.46
+        },
+        {
+          "w": "nobody",
+          "start": 0.46,
+          "end": 0.66
+        },
+        {
+          "w": "talks",
+          "start": 0.66,
+          "end": 0.96
+        },
+        {
+          "w": "about",
+          "start": 0.96,
+          "end": 1.28
+        },
+        {
+          "w": "—",
+          "start": 1.45,
+          "end": 1.62
+        },
+        {
+          "w": "the",
+          "start": 1.62,
+          "end": 1.68
+        },
+        {
+          "w": "design",
+          "start": 1.68,
+          "end": 1.9
+        },
+        {
+          "w": "philosophy.",
+          "start": 1.9,
+          "end": 2.2
+        },
+        {
+          "w": "They",
+          "start": 2.96,
+          "end": 3.01
+        },
+        {
+          "w": "call",
+          "start": 2.98,
+          "end": 3.14
+        },
+        {
+          "w": "landlines,",
+          "start": 3.14,
+          "end": 3.56
+        },
+        {
+          "w": "because",
+          "start": 3.56,
+          "end": 3.94
+        },
+        {
+          "w": "only",
+          "start": 3.94,
+          "end": 4.18
+        },
+        {
+          "w": "older",
+          "start": 4.18,
+          "end": 4.36
+        },
+        {
+          "w": "people",
+          "start": 4.36,
+          "end": 4.64
+        },
+        {
+          "w": "still",
+          "start": 4.64,
+          "end": 4.86
+        },
+        {
+          "w": "own",
+          "start": 4.86,
+          "end": 5.06
+        },
+        {
+          "w": "them.",
+          "start": 5.06,
+          "end": 5.24
+        },
+        {
+          "w": "They",
+          "start": 5.74,
+          "end": 5.8
+        },
+        {
+          "w": "open",
+          "start": 5.8,
+          "end": 5.96
+        },
+        {
+          "w": "with",
+          "start": 5.96,
+          "end": 6.16
+        },
+        {
+          "w": "a",
+          "start": 6.16,
+          "end": 6.22
+        },
+        {
+          "w": "question,",
+          "start": 6.22,
+          "end": 6.52
+        },
+        {
+          "w": "so",
+          "start": 6.78,
+          "end": 6.9
+        },
+        {
+          "w": "the",
+          "start": 6.9,
+          "end": 6.98
+        },
+        {
+          "w": "first",
+          "start": 6.98,
+          "end": 7.14
+        },
+        {
+          "w": "move",
+          "start": 7.14,
+          "end": 7.34
+        },
+        {
+          "w": "is",
+          "start": 7.34,
+          "end": 7.48
+        },
+        {
+          "w": "always",
+          "start": 7.48,
+          "end": 7.7
+        },
+        {
+          "w": "yours.",
+          "start": 7.7,
+          "end": 7.92
+        },
+        {
+          "w": "The",
+          "start": 8.6,
+          "end": 8.68
+        },
+        {
+          "w": "moment",
+          "start": 8.68,
+          "end": 8.82
+        },
+        {
+          "w": "you",
+          "start": 8.82,
+          "end": 8.98
+        },
+        {
+          "w": "say",
+          "start": 8.98,
+          "end": 9.14
+        },
+        {
+          "w": "'that's",
+          "start": 9.14,
+          "end": 9.44
+        },
+        {
+          "w": "none",
+          "start": 9.44,
+          "end": 9.54
+        },
+        {
+          "w": "of",
+          "start": 9.54,
+          "end": 9.68
+        },
+        {
+          "w": "your",
+          "start": 9.68,
+          "end": 9.74
+        },
+        {
+          "w": "business,'",
+          "start": 9.74,
+          "end": 10.02
+        },
+        {
+          "w": "the",
+          "start": 10.34,
+          "end": 10.39
+        },
+        {
+          "w": "whole",
+          "start": 10.38,
+          "end": 10.48
+        },
+        {
+          "w": "machine",
+          "start": 10.48,
+          "end": 10.62
+        },
+        {
+          "w": "stalls.",
+          "start": 10.62,
+          "end": 10.98
+        }
+      ],
+      "start": 306.32
+    },
+    {
+      "n": 34,
+      "file": "vo/beat-34.wav",
+      "dur": 9.36,
+      "speech": 8.94,
+      "words": [
+        {
+          "w": "Here's",
+          "start": 0.0,
+          "end": 0.22
+        },
+        {
+          "w": "the",
+          "start": 0.22,
+          "end": 0.32
+        },
+        {
+          "w": "test.",
+          "start": 0.32,
+          "end": 0.62
+        },
+        {
+          "w": "Ask",
+          "start": 1.24,
+          "end": 1.29
+        },
+        {
+          "w": "a",
+          "start": 1.24,
+          "end": 1.32
+        },
+        {
+          "w": "question",
+          "start": 1.32,
+          "end": 1.54
+        },
+        {
+          "w": "only",
+          "start": 1.54,
+          "end": 1.92
+        },
+        {
+          "w": "your",
+          "start": 1.92,
+          "end": 2.08
+        },
+        {
+          "w": "family",
+          "start": 2.08,
+          "end": 2.32
+        },
+        {
+          "w": "could",
+          "start": 2.32,
+          "end": 2.52
+        },
+        {
+          "w": "answer.",
+          "start": 2.52,
+          "end": 2.76
+        },
+        {
+          "w": "'Which",
+          "start": 3.28,
+          "end": 3.33
+        },
+        {
+          "w": "Mikey?",
+          "start": 3.3,
+          "end": 3.74
+        },
+        {
+          "w": "I",
+          "start": 4.04,
+          "end": 4.09
+        },
+        {
+          "w": "have",
+          "start": 4.06,
+          "end": 4.2
+        },
+        {
+          "w": "two",
+          "start": 4.2,
+          "end": 4.36
+        },
+        {
+          "w": "grandsons.'",
+          "start": 4.36,
+          "end": 4.82
+        },
+        {
+          "w": "The",
+          "start": 5.26,
+          "end": 5.31
+        },
+        {
+          "w": "line",
+          "start": 5.28,
+          "end": 5.44
+        },
+        {
+          "w": "goes",
+          "start": 5.44,
+          "end": 5.62
+        },
+        {
+          "w": "dead.",
+          "start": 5.62,
+          "end": 5.94
+        },
+        {
+          "w": "Because",
+          "start": 6.5,
+          "end": 6.6
+        },
+        {
+          "w": "the",
+          "start": 6.6,
+          "end": 6.84
+        },
+        {
+          "w": "machine",
+          "start": 6.84,
+          "end": 7.06
+        },
+        {
+          "w": "sells",
+          "start": 7.06,
+          "end": 7.34
+        },
+        {
+          "w": "panic",
+          "start": 7.34,
+          "end": 7.64
+        },
+        {
+          "w": "—",
+          "start": 7.85,
+          "end": 8.06
+        },
+        {
+          "w": "and",
+          "start": 8.06,
+          "end": 8.110000000000001
+        },
+        {
+          "w": "a",
+          "start": 8.1,
+          "end": 8.16
+        },
+        {
+          "w": "question",
+          "start": 8.16,
+          "end": 8.4
+        },
+        {
+          "w": "is",
+          "start": 8.4,
+          "end": 8.64
+        },
+        {
+          "w": "a",
+          "start": 8.64,
+          "end": 8.72
+        },
+        {
+          "w": "firewall.",
+          "start": 8.72,
+          "end": 8.94
+        }
+      ],
+      "start": 317.72
+    },
+    {
+      "n": 35,
+      "file": "vo/beat-35.wav",
+      "dur": 12.88,
+      "speech": 12.46,
+      "words": [
+        {
+          "w": "That's",
+          "start": 0.0,
+          "end": 0.16
+        },
+        {
+          "w": "why",
+          "start": 0.16,
+          "end": 0.26
+        },
+        {
+          "w": "the",
+          "start": 0.26,
+          "end": 0.4
+        },
+        {
+          "w": "defense",
+          "start": 0.4,
+          "end": 0.6
+        },
+        {
+          "w": "is",
+          "start": 0.6,
+          "end": 0.9
+        },
+        {
+          "w": "one",
+          "start": 0.9,
+          "end": 1.06
+        },
+        {
+          "w": "sentence:",
+          "start": 1.06,
+          "end": 1.4
+        },
+        {
+          "w": "hang",
+          "start": 1.78,
+          "end": 1.9
+        },
+        {
+          "w": "up,",
+          "start": 1.9,
+          "end": 2.1
+        },
+        {
+          "w": "and",
+          "start": 2.3,
+          "end": 2.36
+        },
+        {
+          "w": "call",
+          "start": 2.36,
+          "end": 2.52
+        },
+        {
+          "w": "the",
+          "start": 2.52,
+          "end": 2.64
+        },
+        {
+          "w": "number",
+          "start": 2.64,
+          "end": 2.84
+        },
+        {
+          "w": "on",
+          "start": 2.84,
+          "end": 2.96
+        },
+        {
+          "w": "the",
+          "start": 2.96,
+          "end": 3.04
+        },
+        {
+          "w": "back",
+          "start": 3.04,
+          "end": 3.18
+        },
+        {
+          "w": "of",
+          "start": 3.18,
+          "end": 3.32
+        },
+        {
+          "w": "the",
+          "start": 3.32,
+          "end": 3.38
+        },
+        {
+          "w": "card.",
+          "start": 3.38,
+          "end": 3.58
+        },
+        {
+          "w": "Not",
+          "start": 4.14,
+          "end": 4.2
+        },
+        {
+          "w": "the",
+          "start": 4.2,
+          "end": 4.32
+        },
+        {
+          "w": "number",
+          "start": 4.32,
+          "end": 4.48
+        },
+        {
+          "w": "they",
+          "start": 4.48,
+          "end": 4.6
+        },
+        {
+          "w": "gave",
+          "start": 4.6,
+          "end": 4.76
+        },
+        {
+          "w": "you.",
+          "start": 4.76,
+          "end": 5.0
+        },
+        {
+          "w": "The",
+          "start": 5.28,
+          "end": 5.33
+        },
+        {
+          "w": "one",
+          "start": 5.3,
+          "end": 5.42
+        },
+        {
+          "w": "on",
+          "start": 5.42,
+          "end": 5.54
+        },
+        {
+          "w": "the",
+          "start": 5.54,
+          "end": 5.62
+        },
+        {
+          "w": "card.",
+          "start": 5.62,
+          "end": 5.8
+        },
+        {
+          "w": "Every",
+          "start": 6.32,
+          "end": 6.37
+        },
+        {
+          "w": "call",
+          "start": 6.36,
+          "end": 6.6
+        },
+        {
+          "w": "has",
+          "start": 6.6,
+          "end": 6.78
+        },
+        {
+          "w": "a",
+          "start": 6.78,
+          "end": 6.86
+        },
+        {
+          "w": "flaw,",
+          "start": 6.86,
+          "end": 7.06
+        },
+        {
+          "w": "and",
+          "start": 7.3,
+          "end": 7.42
+        },
+        {
+          "w": "the",
+          "start": 7.42,
+          "end": 7.52
+        },
+        {
+          "w": "spoofed",
+          "start": 7.52,
+          "end": 7.8
+        },
+        {
+          "w": "number",
+          "start": 7.8,
+          "end": 8.0
+        },
+        {
+          "w": "is",
+          "start": 8.0,
+          "end": 8.18
+        },
+        {
+          "w": "it.",
+          "start": 8.18,
+          "end": 8.34
+        },
+        {
+          "w": "You",
+          "start": 8.74,
+          "end": 8.82
+        },
+        {
+          "w": "never",
+          "start": 8.82,
+          "end": 8.94
+        },
+        {
+          "w": "have",
+          "start": 8.94,
+          "end": 9.18
+        },
+        {
+          "w": "to",
+          "start": 9.18,
+          "end": 9.3
+        },
+        {
+          "w": "outsmart",
+          "start": 9.3,
+          "end": 9.54
+        },
+        {
+          "w": "them.",
+          "start": 9.54,
+          "end": 9.86
+        },
+        {
+          "w": "You",
+          "start": 10.2,
+          "end": 10.38
+        },
+        {
+          "w": "just",
+          "start": 10.38,
+          "end": 10.54
+        },
+        {
+          "w": "have",
+          "start": 10.54,
+          "end": 10.68
+        },
+        {
+          "w": "to",
+          "start": 10.68,
+          "end": 10.8
+        },
+        {
+          "w": "be",
+          "start": 10.8,
+          "end": 10.88
+        },
+        {
+          "w": "willing",
+          "start": 10.88,
+          "end": 11.08
+        },
+        {
+          "w": "to",
+          "start": 11.08,
+          "end": 11.24
+        },
+        {
+          "w": "be",
+          "start": 11.24,
+          "end": 11.34
+        },
+        {
+          "w": "rude",
+          "start": 11.34,
+          "end": 11.5
+        },
+        {
+          "w": "to",
+          "start": 11.5,
+          "end": 11.66
+        },
+        {
+          "w": "someone",
+          "start": 11.66,
+          "end": 11.84
+        },
+        {
+          "w": "who",
+          "start": 11.84,
+          "end": 12.0
+        },
+        {
+          "w": "sounds",
+          "start": 12.0,
+          "end": 12.16
+        },
+        {
+          "w": "desperate.",
+          "start": 12.16,
+          "end": 12.46
+        }
+      ],
+      "start": 327.08
+    },
+    {
+      "n": 36,
+      "file": "vo/beat-36.wav",
+      "dur": 11.49,
+      "speech": 10.94,
+      "words": [
+        {
+          "w": "The",
+          "start": 0.0,
+          "end": 0.1
+        },
+        {
+          "w": "scam",
+          "start": 0.1,
+          "end": 0.26
+        },
+        {
+          "w": "isn't",
+          "start": 0.26,
+          "end": 0.74
+        },
+        {
+          "w": "a",
+          "start": 0.74,
+          "end": 0.82
+        },
+        {
+          "w": "technology",
+          "start": 0.82,
+          "end": 0.96
+        },
+        {
+          "w": "problem.",
+          "start": 0.96,
+          "end": 1.5
+        },
+        {
+          "w": "It's",
+          "start": 2.22,
+          "end": 2.27
+        },
+        {
+          "w": "a",
+          "start": 2.26,
+          "end": 2.34
+        },
+        {
+          "w": "kindness",
+          "start": 2.34,
+          "end": 2.52
+        },
+        {
+          "w": "problem.",
+          "start": 2.52,
+          "end": 2.96
+        },
+        {
+          "w": "The",
+          "start": 3.5,
+          "end": 3.55
+        },
+        {
+          "w": "IRS",
+          "start": 3.52,
+          "end": 3.68
+        },
+        {
+          "w": "never",
+          "start": 3.68,
+          "end": 4.12
+        },
+        {
+          "w": "calls.",
+          "start": 4.12,
+          "end": 4.44
+        },
+        {
+          "w": "No",
+          "start": 5.08,
+          "end": 5.13
+        },
+        {
+          "w": "judge",
+          "start": 5.1,
+          "end": 5.28
+        },
+        {
+          "w": "takes",
+          "start": 5.28,
+          "end": 5.56
+        },
+        {
+          "w": "cash.",
+          "start": 5.56,
+          "end": 5.8
+        },
+        {
+          "w": "And",
+          "start": 6.54,
+          "end": 6.59
+        },
+        {
+          "w": "your",
+          "start": 6.56,
+          "end": 6.68
+        },
+        {
+          "w": "grandson's",
+          "start": 6.68,
+          "end": 7.0
+        },
+        {
+          "w": "voice,",
+          "start": 7.0,
+          "end": 7.36
+        },
+        {
+          "w": "in",
+          "start": 7.36,
+          "end": 7.78
+        },
+        {
+          "w": "a",
+          "start": 7.78,
+          "end": 7.84
+        },
+        {
+          "w": "panic,",
+          "start": 7.84,
+          "end": 8.12
+        },
+        {
+          "w": "is",
+          "start": 8.42,
+          "end": 8.47
+        },
+        {
+          "w": "the",
+          "start": 8.44,
+          "end": 8.56
+        },
+        {
+          "w": "one",
+          "start": 8.56,
+          "end": 8.72
+        },
+        {
+          "w": "sound",
+          "start": 8.72,
+          "end": 9.04
+        },
+        {
+          "w": "the",
+          "start": 9.04,
+          "end": 9.3
+        },
+        {
+          "w": "human",
+          "start": 9.3,
+          "end": 9.44
+        },
+        {
+          "w": "brain",
+          "start": 9.44,
+          "end": 9.76
+        },
+        {
+          "w": "was",
+          "start": 9.76,
+          "end": 9.96
+        },
+        {
+          "w": "never",
+          "start": 9.96,
+          "end": 10.18
+        },
+        {
+          "w": "designed",
+          "start": 10.18,
+          "end": 10.48
+        },
+        {
+          "w": "to",
+          "start": 10.48,
+          "end": 10.68
+        },
+        {
+          "w": "question.",
+          "start": 10.68,
+          "end": 10.94
+        }
+      ],
+      "start": 339.96
+    },
+    {
+      "n": 37,
+      "file": "vo/beat-37.wav",
+      "dur": 8.88,
+      "speech": 8.46,
+      "words": [
+        {
+          "w": "And",
+          "start": 0.0,
+          "end": 0.1
+        },
+        {
+          "w": "if",
+          "start": 0.1,
+          "end": 0.2
+        },
+        {
+          "w": "this",
+          "start": 0.2,
+          "end": 0.32
+        },
+        {
+          "w": "ever",
+          "start": 0.32,
+          "end": 0.5
+        },
+        {
+          "w": "happens",
+          "start": 0.5,
+          "end": 0.78
+        },
+        {
+          "w": "to",
+          "start": 0.78,
+          "end": 1.0
+        },
+        {
+          "w": "someone",
+          "start": 1.0,
+          "end": 1.18
+        },
+        {
+          "w": "you",
+          "start": 1.18,
+          "end": 1.36
+        },
+        {
+          "w": "love",
+          "start": 1.36,
+          "end": 1.54
+        },
+        {
+          "w": "—",
+          "start": 1.67,
+          "end": 1.8
+        },
+        {
+          "w": "report",
+          "start": 1.8,
+          "end": 2.04
+        },
+        {
+          "w": "it.",
+          "start": 2.04,
+          "end": 2.24
+        },
+        {
+          "w": "The",
+          "start": 2.72,
+          "end": 2.77
+        },
+        {
+          "w": "FTC",
+          "start": 2.74,
+          "end": 2.88
+        },
+        {
+          "w": "takes",
+          "start": 2.88,
+          "end": 3.4
+        },
+        {
+          "w": "reports",
+          "start": 3.4,
+          "end": 3.6
+        },
+        {
+          "w": "at",
+          "start": 3.6,
+          "end": 3.86
+        },
+        {
+          "w": "reportfraud",
+          "start": 3.86,
+          "end": 4.06
+        },
+        {
+          "w": "dot",
+          "start": 4.06,
+          "end": 4.54
+        },
+        {
+          "w": "f",
+          "start": 4.54,
+          "end": 4.68
+        },
+        {
+          "w": "t",
+          "start": 4.68,
+          "end": 4.8
+        },
+        {
+          "w": "c",
+          "start": 4.8,
+          "end": 4.98
+        },
+        {
+          "w": "dot",
+          "start": 4.98,
+          "end": 5.16
+        },
+        {
+          "w": "gov.",
+          "start": 5.16,
+          "end": 5.52
+        },
+        {
+          "w": "Most",
+          "start": 5.84,
+          "end": 6.12
+        },
+        {
+          "w": "victims",
+          "start": 6.12,
+          "end": 6.36
+        },
+        {
+          "w": "never",
+          "start": 6.36,
+          "end": 6.68
+        },
+        {
+          "w": "do.",
+          "start": 6.68,
+          "end": 6.86
+        },
+        {
+          "w": "That's",
+          "start": 7.1,
+          "end": 7.36
+        },
+        {
+          "w": "the",
+          "start": 7.36,
+          "end": 7.46
+        },
+        {
+          "w": "last",
+          "start": 7.46,
+          "end": 7.6
+        },
+        {
+          "w": "thing",
+          "start": 7.6,
+          "end": 7.86
+        },
+        {
+          "w": "the",
+          "start": 7.86,
+          "end": 7.98
+        },
+        {
+          "w": "machine",
+          "start": 7.98,
+          "end": 8.14
+        },
+        {
+          "w": "takes.",
+          "start": 8.14,
+          "end": 8.46
+        }
+      ],
+      "start": 351.45
+    },
+    {
+      "n": 38,
+      "file": "",
+      "dur": 4.0,
+      "speech": 0.0,
+      "words": [],
+      "start": 360.33
     }
   ]
 }
