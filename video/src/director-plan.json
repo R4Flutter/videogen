@@ -1,0 +1,776 @@
+{
+  "version": "2.0",
+  "project": {
+    "title": "THE TWO-DOLLAR TRAP",
+    "durationInSeconds": 57,
+    "format": "1080:1920",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "engine": "vox",
+    "mode": "ESSAY"
+  },
+  "chapters": [
+    {
+      "id": "ch_1",
+      "title": "THE HOOK",
+      "ordinal": 1,
+      "startBeat": 1,
+      "start": 0,
+      "end": 49,
+      "card": {
+        "text": "THE HOOK"
+      }
+    },
+    {
+      "id": "ch_2",
+      "title": "THE PAYOFF",
+      "ordinal": 2,
+      "startBeat": 6,
+      "start": 49,
+      "end": 57,
+      "card": {
+        "text": "THE PAYOFF",
+        "subtext": "CHAPTER 2"
+      }
+    }
+  ],
+  "sequences": [
+    {
+      "id": "seq_01",
+      "purpose": "hook",
+      "chapterId": "ch_1",
+      "beatRange": [
+        1,
+        1
+      ],
+      "start": 0,
+      "end": 6,
+      "emotion": "curiosity",
+      "infoDensity": "medium",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.55,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_02",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        2,
+        5
+      ],
+      "start": 6,
+      "end": 49,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_03",
+      "purpose": "payoff",
+      "chapterId": "ch_1",
+      "beatRange": [
+        6,
+        6
+      ],
+      "start": 49,
+      "end": 57,
+      "emotion": "curiosity",
+      "infoDensity": "medium",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.55,
+        "emotionalIntensity": 0.8
+      }
+    }
+  ],
+  "beats": [
+    {
+      "n": 1,
+      "name": "THE HOOK",
+      "start": 0,
+      "end": 6,
+      "audioStart": 0,
+      "narrative": {
+        "purpose": "hook"
+      },
+      "attention": {
+        "strategy": "impact",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.4,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 0.3,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "PAID TO WATCH VIDEOS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.58,
+        "musicMood": "swell",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [
+          "ph_paid-to-watch-videos"
+        ],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_01"
+    },
+    {
+      "n": 2,
+      "name": "THE PIVOT",
+      "start": 6,
+      "end": 15,
+      "audioStart": 6,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "PROGRESSION"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 6.9,
+          "triggers": [
+            {
+              "at": 11.21,
+              "kind": "accent"
+            }
+          ]
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "THE JOB IS REAL. THE PAY IS REAL.",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 13.81,
+            "files": [
+              "whoosh.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_01"
+    },
+    {
+      "n": 3,
+      "name": "THE TRUST",
+      "start": 15,
+      "end": 27,
+      "audioStart": 15,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.8,
+        "emotionalIntensity": 0.35,
+        "tier": "PROGRESSION"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "trust",
+        "layers": [],
+        "reveal": "SEQUENTIAL",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "SEQUENTIAL",
+          "holdUntil": 16.2,
+          "triggers": [
+            {
+              "at": 21.8,
+              "kind": "accent"
+            }
+          ]
+        },
+        "transitionIn": {
+          "type": "crossfade",
+          "reason": "EMOTIONAL_RESET",
+          "frames": 9
+        }
+      },
+      "typography": {
+        "text": "TRUST, BUILT ON PURPOSE",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 17.5,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_02"
+    },
+    {
+      "n": 4,
+      "name": "THE TRACE",
+      "start": 27,
+      "end": 39,
+      "audioStart": 27,
+      "narrative": {
+        "purpose": "explain",
+        "consequence": "gone"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.9,
+        "emotionalIntensity": 0.35,
+        "tier": "PROGRESSION"
+      },
+      "visual": {
+        "purpose": "REVEAL",
+        "module": "trace",
+        "layers": [],
+        "reveal": "PROGRESSIVE",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "PROGRESSIVE",
+          "holdUntil": 28.2,
+          "triggers": [
+            {
+              "at": 33.18,
+              "kind": "accent"
+            }
+          ]
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "$250 MOVES",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 29.5,
+            "files": [
+              "chime.wav"
+            ]
+          },
+          {
+            "at": 35.39,
+            "files": [
+              "whoosh.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_02"
+    },
+    {
+      "n": 5,
+      "name": "THE FUNNEL",
+      "start": 39,
+      "end": 49,
+      "audioStart": 39,
+      "narrative": {
+        "purpose": "explain",
+        "consequence": "locked"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.9,
+        "emotionalIntensity": 0.35,
+        "tier": "PROGRESSION"
+      },
+      "visual": {
+        "purpose": "INTENSIFY",
+        "module": "funnel",
+        "layers": [],
+        "reveal": "PROGRESSIVE",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "PROGRESSIVE",
+          "holdUntil": 40,
+          "triggers": [
+            {
+              "at": 45.46,
+              "kind": "accent"
+            }
+          ]
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "A HUNDRED THOUSAND TARGETS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 46.8,
+            "files": [
+              "boom.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_02"
+    },
+    {
+      "n": 6,
+      "name": "THE PAYOFF",
+      "start": 49,
+      "end": 57,
+      "audioStart": 49,
+      "lCut": 0.6,
+      "narrative": {
+        "purpose": "payoff"
+      },
+      "attention": {
+        "strategy": "impact",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.35,
+        "informationDensity": 0.4,
+        "emotionalIntensity": 0.6,
+        "tier": "PROGRESSION"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 49.4,
+          "triggers": [
+            {
+              "at": 54.1,
+              "kind": "accent"
+            }
+          ]
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "PAID TO WATCH VIDEOS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.58,
+        "musicMood": "swell",
+        "sfx": [
+          {
+            "at": 51.5,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": [
+          {
+            "at": 55.8,
+            "dur": 1.2,
+            "kind": "POST_REVEAL_SILENCE"
+          }
+        ]
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [
+          "ph_paid-to-watch-videos"
+        ],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_02"
+    }
+  ],
+  "storyMemory": [
+    {
+      "id": "ph_paid-to-watch-videos",
+      "label": "PAID TO WATCH VIDEOS",
+      "introducedAt": 0,
+      "introducedBeat": 1,
+      "states": [],
+      "references": 1,
+      "central": true
+    }
+  ],
+  "attentionEvents": [
+    {
+      "at": 1.6,
+      "type": "NUMBER_REVEAL",
+      "beat": 1,
+      "strength": 0.52,
+      "label": "PAID TO WATCH VIDEOS"
+    },
+    {
+      "at": 8.5,
+      "type": "NUMBER_REVEAL",
+      "beat": 2,
+      "strength": 0.54,
+      "label": "THE JOB IS REAL. THE PAY"
+    },
+    {
+      "at": 13.81,
+      "type": "CONTRADICTION",
+      "beat": 2,
+      "strength": 0.79,
+      "label": "THE JOB IS REAL. THE PAY"
+    },
+    {
+      "at": 17.5,
+      "type": "NUMBER_REVEAL",
+      "beat": 3,
+      "strength": 0.74,
+      "label": "TRUST, BUILT ON PURPOSE"
+    },
+    {
+      "at": 23.25,
+      "type": "NUMBER_REVEAL",
+      "beat": 3,
+      "strength": 0.52,
+      "label": "TRUST, BUILT ON PURPOSE"
+    },
+    {
+      "at": 29.5,
+      "type": "NUMBER_REVEAL",
+      "beat": 4,
+      "strength": 0.79,
+      "label": "$250 MOVES"
+    },
+    {
+      "at": 35.39,
+      "type": "CONTRADICTION",
+      "beat": 4,
+      "strength": 0.78,
+      "label": "$250 MOVES"
+    },
+    {
+      "at": 41.5,
+      "type": "DIAGRAM_BUILD",
+      "beat": 5,
+      "strength": 0.53,
+      "label": "A HUNDRED THOUSAND TARGE"
+    },
+    {
+      "at": 46.8,
+      "type": "REVEAL",
+      "beat": 5,
+      "strength": 0.85,
+      "label": "A HUNDRED THOUSAND TARGE"
+    },
+    {
+      "at": 51.5,
+      "type": "NUMBER_REVEAL",
+      "beat": 6,
+      "strength": 0.78,
+      "label": "PAID TO WATCH VIDEOS"
+    }
+  ],
+  "audioEvents": [
+    {
+      "at": 0,
+      "kind": "music_level",
+      "value": 0.58
+    },
+    {
+      "at": 6,
+      "kind": "music_level",
+      "value": 0.58
+    },
+    {
+      "at": 6,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 13.81,
+      "kind": "sfx",
+      "label": "whoosh.wav"
+    },
+    {
+      "at": 15,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 15,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 17.5,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 27,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 27,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 29.5,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 35.39,
+      "kind": "sfx",
+      "label": "whoosh.wav"
+    },
+    {
+      "at": 39,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 39,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 46.8,
+      "kind": "sfx",
+      "label": "boom.wav"
+    },
+    {
+      "at": 49,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 49,
+      "kind": "music_level",
+      "value": 0.58
+    },
+    {
+      "at": 51.5,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 55.8,
+      "kind": "silence_start",
+      "label": "POST_REVEAL_SILENCE"
+    },
+    {
+      "at": 57,
+      "kind": "music_level",
+      "value": 0.58
+    },
+    {
+      "at": 57,
+      "kind": "silence_end",
+      "label": "POST_REVEAL_SILENCE"
+    }
+  ],
+  "memoryEvents": [
+    {
+      "at": 0,
+      "kind": "introduce",
+      "motifId": "ph_paid-to-watch-videos",
+      "beat": 1
+    },
+    {
+      "at": 49,
+      "kind": "reference",
+      "motifId": "ph_paid-to-watch-videos",
+      "beat": 6
+    }
+  ],
+  "transitions": [
+    {
+      "fromBeat": 1,
+      "toBeat": 2,
+      "at": 6,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 2,
+      "toBeat": 3,
+      "at": 15,
+      "type": "crossfade",
+      "reason": "EMOTIONAL_RESET",
+      "frames": 9
+    },
+    {
+      "fromBeat": 3,
+      "toBeat": 4,
+      "at": 27,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 4,
+      "toBeat": 5,
+      "at": 39,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 5,
+      "toBeat": 6,
+      "at": 49,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    }
+  ]
+}

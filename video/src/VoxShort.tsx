@@ -54,7 +54,7 @@ const TURN = 9;
  * slideshow transition; a page that shifts a few percent reads as paper being
  * moved, which is the only thing this engine is pretending to be.
  */
-const Turn: React.FC<{
+export const Turn: React.FC<{
   dur: number;
   last: boolean;
   opaque: boolean;

@@ -3,7 +3,10 @@ import { Composition } from "remotion";
 import { CRIME_TRACKS, CrimeDoc } from "./CrimeDoc";
 import { ScamDoc } from "./scam/ScamShort";
 import { VoxShort } from "./VoxShort";
+import { EssayDoc } from "./essay/EssayDoc";
 import script from "./script.json";
+import plan from "./director-plan.json";
+import type { DirectorPlan } from "./director/types.ts";
 
 // One story file, three engines. The parser writes `engine` from the story
 // format it detected — a crime documentary stages CrimeDoc, a scam episode
@@ -75,9 +78,12 @@ export const RemotionRoot: React.FC = () => {
             fps={fps}
             durationInFrames={frames(script.durationInSeconds)}
           />
+          {/* The essay cut runs the director's plan when there is one for
+              this script — otherwise EssayDoc falls back to the short form. */}
           <Composition
             id="VoxEssay"
-            component={VoxShort}
+            component={EssayDoc}
+            defaultProps={{ plan: plan as unknown as DirectorPlan }}
             width={1920}
             height={1080}
             fps={fps}

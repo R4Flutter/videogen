@@ -174,6 +174,30 @@ for (const m of md.matchAll(BEAT_RE)) {
     // The word the beat turns on, for modules that collapse mid-beat (`trust`).
     // Named by the script so the turn isn't a hardcoded English word.
     beat.turn = rows["turn"] ?? "";
+    // The editorial director's hand-written rows. Every one is optional; the
+    // director (video/src/director) fills what the script leaves blank and an
+    // author's note always beats a guess. They travel on the beat so the
+    // renderer never needs a second file to know what a beat is for.
+    beat.purpose = rows["purpose"] ?? "";
+    beat.chapter = rows["chapter"] ?? "";
+    beat.sequence = rows["sequence"] ?? "";
+    beat.question = rows["question"] ?? "";
+    beat.reveal = rows["reveal"] ?? "";
+    beat.emotion = rows["emotion"] ?? "";
+    if (rows["rest"] !== undefined) {
+      beat.rest = /^(true|yes|1)$/i.test(rows["rest"]) ? true : false;
+    }
+    beat.captionMode = rows["caption mode"] ?? "";
+    beat.revealMode = rows["reveal mode"] ?? "";
+    beat.camera = rows["camera"] ?? "";
+    beat.music = rows["music"] ?? "";
+    beat.silence = rows["silence"] ?? "";
+    const jcut = Number(rows["j-cut"] ?? rows["jcut"] ?? "");
+    if (Number.isFinite(jcut) && jcut !== 0) beat.jcut = jcut;
+    const lcut = Number(rows["l-cut"] ?? rows["lcut"] ?? "");
+    if (Number.isFinite(lcut) && lcut !== 0) beat.lcut = lcut;
+    beat.sfx = rows["sfx"] ?? "";
+    beat.callback = rows["callback"] ?? "";
   }
   beats.push(beat);
 }

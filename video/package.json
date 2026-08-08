@@ -5,6 +5,7 @@
   "repository": {},
   "license": "UNLICENSED",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@remotion/cli": "4.0.506",
     "@remotion/google-fonts": "^4.0.506",
