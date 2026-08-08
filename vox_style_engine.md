@@ -96,13 +96,20 @@ hook into `script.json` automatically.
 ```
 script.md ──parse-script.mjs──▶ script.json (+ voice.json stub)
                                    │
+            scene-prompts.mjs ────▶ video/prompts/ (10 prompts per file) — one detailed prompt per
+                                   │   image slot. You generate them, save each
+                                   │   under its printed filename, drop them in
+                                   │   public/footage/. The pipeline generates
+                                   │   no images of its own.
+                                   │
                  voice.py ──TTS──▶ beat .wav files (the Vox narrator: steady,
                                    deliberate, lower energy than the scam read)
                                    │
                  align.py ────────▶ voice.json word-level timings
                                    │
-                 fetch-footage.py ▶ public/footage/* (Pexels, per-beat, idempotent)
-                                   │
+                 fetch-footage.py ▶ scans public/footage/, writes footage.json
+                                   │   (--commons optionally fills empty slots
+                                   │   from Wikimedia Commons)
                                    ▼
                           VoxShort.tsx ──▶ out/vox.mp4
 ```
@@ -278,10 +285,11 @@ reads them defensively.
 
 ```
 npm run script:vox     # script_vox.md -> src/script.json (+ voice.json stub)
+npm run prompts        # -> video/prompts/ (10 prompts per file), one prompt per image slot
 npm run voice          # TTS (Vox narrator: steady, deliberate)
 npm run align          # word-level timing -> src/voice.json
-npm run footage        # images via pollinations.ai — free, no key
-npm run check          # parser contract, both engines, against fixtures
+npm run footage        # scan public/footage, rebuild the manifest
+npm run check          # parser + prompt-sheet contract, both engines
 npm run lint           # eslint + tsc
 npm run render:vox     # -> out/vox.mp4
 npm run render:vox:essay   # -> out/vox-essay.mp4 (16:9)
