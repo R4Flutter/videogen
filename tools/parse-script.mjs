@@ -47,12 +47,25 @@ const MODULES = {
   vox: [
     // Deliberately narrow. These run before the older rules, so anything loose
     // here silently steals beats that used to stage as doodle or chart.
+    // Narrow on purpose. The reliable signal that a beat is a map is that it
+    // named places, and that is checked before this table runs — these only
+    // catch a beat that describes a map without listing anything on it.
+    [/\bmaps?\b|\bglobe\b|\batlas\b/i, "map"],
+    // "clipping" belongs to quote, below: a torn clipping with a source line is
+    // a citation, not a photo wall.
+    [/collage|montage|scrapbook|photo wall|several photos|pinned/i, "collage"],
     [/\bquote\b|clipping|\bcited?\b|according to|source card|report says/i, "quote"],
     [/\btimeline\b|year by year|decade by decade|chronolog/i, "timeline"],
     [/\bcallout\b|leader line|calls? out\b|\bpointer\b/i, "callout"],
-    [/compare|against each other|side by side|bars?\b|race/i, "compare"],
+    [/compare|against each other|side by side|bars?\b|\brace\b|\bracing\b/i, "compare"],
     [/stat\b|big number|one number|single number|counts? (up|down)/i, "stat"],
     [/chart|graph|curve|plotted|line draws/i, "chart"],
+    // The editorial scam modules. These read the frame as evidence, so their
+    // keywords have to beat the generic ones below ("trace" before "footage",
+    // or a money flow becomes a pretty clip).
+    [/\bflow\b|trace|travels|node to node|follows? the money|moves to/i, "trace"],
+    [/\btrust\b|signals? (check|build)|looks? (real|legitimate)|verified/i, "trust"],
+    [/\bfunnel\b|narrows?|targets.*victims/i, "funnel"],
     [/icons?\b|step cards?|cards?\b/i, "icon"],
     [/circl|underline|annotat|arrow|scribble|doodle|highlight|marked/i, "doodle"],
     [/footage|archival|b-?roll|clip|photo|image/i, "footage"],
@@ -75,10 +88,15 @@ const pairs = (s) =>
     });
 
 const SHAPES = [
+  // The trust module's collapse: "everything freezes and flips to fake" is a
+  // shape, not a mark — it decides whether the beat turns, not what it draws.
+  [/flip|freeze|collapses?|turns? (fake|red)/i, "flip"],
   // highlight goes first: "highlights the phrase" also matches nothing else,
   // but "marker box" should still be a box.
   [/highlight|marker|swipes? over/i, "highlight"],
-  [/circles?\b|ring/i, "circle"],
+  // circl\w* not circles?\b: "circled" is how a storyboard actually writes it,
+  // and \b after the optional s refuses to match past the d.
+  [/circl\w*|ring\b/i, "circle"],
   [/box|rectangle|frame/i, "box"],
   [/arrow|points? at/i, "arrow"],
   [/strike|crosses? out/i, "strike"],
@@ -103,7 +121,13 @@ for (const m of md.matchAll(BEAT_RE)) {
     motion,
     module:
       rows["module"] ??
-      (MODULES[engine].find(([re]) => re.test(visual))?.[1] ?? FALLBACK[engine]),
+      // A beat that listed places is a map. This beats the keyword table
+      // because it is a fact about the beat rather than a guess about its
+      // prose: "the money moves to Dubai" reads as a trace to the keywords and
+      // as a map to anyone who has seen the frame.
+      (engine === "vox" && rows["places"]
+        ? "map"
+        : (MODULES[engine].find(([re]) => re.test(visual))?.[1] ?? FALLBACK[engine])),
   };
 
   if (engine === "vox") {
@@ -127,6 +151,29 @@ for (const m of md.matchAll(BEAT_RE)) {
     beat.source = rows["source"] ?? "";
     // Search terms for tools/fetch-footage.py, not read by the renderer.
     beat.footage = rows["footage"] ?? "";
+    // Art direction, written by the author, owned by the story. This is the only
+    // place a hand-written image prompt belongs: a prompt table keyed by beat
+    // number lives outside the script and silently paints the previous story's
+    // beat 2 onto this one's. Optional — a beat without it gets a prompt built
+    // from its own Visual/Footage rows.
+    beat.image_prompt = rows["image prompt"] ?? "";
+    // Places for the `map` module: "India; Cambodia @ 12.5,104.9; Dubai @ 25.2,55.3".
+    // Semicolons, because a lat,lon pair already owns the comma. A bare name is
+    // a country to ink in; a name with coordinates is a pin to drop.
+    beat.places = (rows["places"] ?? "")
+      .split(";")
+      .map((s) => s.trim())
+      .filter(Boolean)
+      .map((entry) => {
+        const [name, at] = entry.split("@").map((s) => s.trim());
+        const [lat, lon] = (at ?? "").split(",").map((v) => Number(v.trim()));
+        return at && Number.isFinite(lat) && Number.isFinite(lon)
+          ? { name, lat, lon }
+          : { name };
+      });
+    // The word the beat turns on, for modules that collapse mid-beat (`trust`).
+    // Named by the script so the turn isn't a hardcoded English word.
+    beat.turn = rows["turn"] ?? "";
   }
   beats.push(beat);
 }

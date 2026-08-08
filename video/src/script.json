@@ -1,1449 +1,178 @@
 {
-  "source": "../story.txt",
-  "title": "How Phone Scams Actually Work \u2014 Two True US Stories",
-  "engine": "scam",
+  "source": "script_vox.md",
+  "title": "THE TWO-DOLLAR TRAP",
+  "engine": "vox",
   "fps": 30,
-  "width": 1920,
-  "height": 1080,
-  "episode": {
-    "title": "\"The $400,000 Machine: How US Phone Scams Are Actually Built\"",
-    "description": "\"Two true stories. One machine. How the grandparent bail call and the fake trading app are built \u2014 the call centers, the spoofed numbers, the innocent couriers, and the one question that stops all of it.\"",
-    "target": "United States"
-  },
-  "durationInSeconds": 364.33,
+  "width": 1080,
+  "height": 1920,
+  "durationInSeconds": 57,
+  "caption": "They pay $2 for videos. Then ask $250. The trap is the trust.",
   "beats": [
     {
       "n": 1,
-      "name": "THE CALL (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Seventy-two thousand. That's how many times Americans pick up this exact kind of call, every single day. And every one of those calls was built.\"",
-        "text": "72,000 TIMES A DAY",
-        "kinetic_size": "huge",
-        "sfx": "hit"
-      },
-      "start": 0.0,
-      "end": 7.21,
+      "name": "THE HOOK",
+      "start": 0,
+      "end": 6,
+      "vo": "They pay you two dollars to watch videos. Then they ask for two hundred fifty.",
+      "visual": "Words fill the page as they're spoken.",
+      "motion": "",
       "module": "kinetic",
-      "vo": "Seventy-two thousand. That's how many times Americans pick up this exact kind of call, every single day. And every one of those calls was built.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "72,000 TIMES A DAY",
-      "kinetic_size": "huge",
-      "sfx": [
-        "boom.wav"
-      ]
+      "text": "PAID TO WATCH VIDEOS",
+      "shape": "",
+      "icons": [],
+      "data": [],
+      "source": "",
+      "footage": "",
+      "image_prompt": "",
+      "places": [],
+      "turn": ""
     },
     {
       "n": 2,
-      "name": "THE DOOR (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Somewhere in Ohio, a seventy-eight-year-old woman just handed a stranger nine thousand dollars in cash, at her own front door. The doorbell camera caught every second of it.\"",
-        "text": "$9,600 AT THE DOOR",
-        "icon": "phone-ringing: THE CALL, alert-triangle: THE LIE, banknote: THE MONEY"
-      },
-      "start": 7.21,
-      "end": 15.55,
-      "module": "footage",
-      "vo": "Somewhere in Ohio, a seventy-eight-year-old woman just handed a stranger nine thousand dollars in cash, at her own front door. The doorbell camera caught every second of it.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "$9,600 AT THE DOOR",
-      "icons": [
-        {
-          "icon": "phone-ringing",
-          "label": "THE CALL"
-        },
-        {
-          "icon": "alert-triangle",
-          "label": "THE LIE"
-        },
-        {
-          "icon": "banknote",
-          "label": "THE MONEY"
-        }
-      ],
-      "sfx": [],
-      "footage": "A quiet middle-class suburban front entrance viewed almost perfectly straight-on. The slightly open front door is the dominant hero structure, occupying about 65 percent of the frame, warm wood tones and neat white trim. A small doorbell camera sits beside the doorframe at eye level. One unmarked manila envelope rests on the doorstep, partially unfolded, a neat stack of folded banknotes visible inside. A simplified paper-cut silhouette of a suburban house stands behind the entrance. A single rectangular field of deep mustard-yellow sits behind the envelope. The right 35 percent of the frame is intentionally sparse and empty. No arrows, no labels, no captions, no generated text. Every element isolated with clean negative space so a motion designer can move them independently."
+      "name": "THE PIVOT",
+      "start": 6,
+      "end": 15,
+      "vo": "See, the job is real. The pay is real. The trap is the next step.",
+      "visual": "A phone screen with a video grid, a phrase circled by hand.",
+      "motion": "",
+      "module": "doodle",
+      "text": "THE JOB IS REAL. THE PAY IS REAL.",
+      "shape": "circle",
+      "icons": [],
+      "data": [],
+      "source": "",
+      "footage": "phone screen grid of short videos, finger tapping",
+      "image_prompt": "",
+      "places": [],
+      "turn": ""
     },
     {
       "n": 3,
-      "name": "NOT A ROBBERY (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"This is not a robbery. The man at the door works for them. And the whole thing slipped through the system without a single law broken \u2014 until the money was already gone.\"",
-        "text": "THIS IS NOT A ROBBERY",
-        "doodle": "circle around \"THIS IS NOT A ROBBERY\""
-      },
-      "start": 15.55,
-      "end": 22.35,
-      "module": "footage",
-      "vo": "This is not a robbery. The man at the door works for them. And the whole thing slipped through the system without a single law broken \u2014 until the money was already gone.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THIS IS NOT A ROBBERY",
-      "doodle": {
-        "shape": "circle",
-        "target": "this is not a robbery"
-      },
-      "sfx": [],
-      "footage": "A cut-paper composition of a hand in a dark suit sleeve passing a neat stack of folded banknotes through a doorway, the exchange frozen mid-motion, seen from inside looking out. The doorway frame dominates the left two thirds in warm charcoal tones. The stack of folded cash is the hero object, crisp and centered, slightly oversized. A torn fragment of a printed legal form with blank ruled lines floats in the upper right corner as a supporting element. One deep-red rectangular accent strip sits behind the cash. The bottom and right portions of the frame stay empty with generous negative space for typography. No arrows, no labels, no text, no faces. Flat frontal editorial perspective, isolated elements for independent motion."
-    },
-    {
-      "n": 4,
-      "name": "TWO MACHINES (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"This is how that machine is built. Two stories. Two machines. One design. Once you see the parts, you can't unsee them.\"",
-        "text": "THE BAIL CALL",
-        "sfx": "riser"
-      },
-      "start": 22.35,
-      "end": 28.9,
-      "module": "footage",
-      "vo": "This is how that machine is built. Two stories. Two machines. One design. Once you see the parts, you can't unsee them.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE BAIL CALL",
-      "sfx": [
-        "riser.wav"
-      ],
-      "footage": "A single over-engineered paper-cut gear mechanism is the centerpiece, occupying roughly 65 percent of the frame, its interlocking wheels and axles rendered as layered paper in charcoal, warm gray and off-white. A vintage rotary telephone receiver cut out in monochrome sits far left, small in scale. A folded bundle of banknotes sits far right, equally small. The left-to-right relationship between them is communicated purely by position and scale, with no arrows and no connector lines. Wide corridors of clean negative space separate the three objects so animated connector lines can be drawn in later. A flat mustard-yellow geometric field sits behind the gear mechanism. One subtle deep-red accent dot near the center serves as an animation anchor. The upper third of the frame is empty, reserved for typography. No text, no labels, no faces."
-    },
-    {
-      "n": 5,
-      "name": "THE CALL CENTER (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"The story starts in a call center. Not in Ohio. Not in New York. In a rented office in Mumbai, or a village outside Accra, with script cheat-sheets taped to the wall and a whiteboard of numbers above the door.\"",
-        "text": "THE CALL CENTER",
-        "icon": "users: THE TEAM, pen-line: THE SCRIPT, globe: THE NUMBERS"
-      },
-      "start": 28.9,
-      "end": 39.78,
-      "module": "footage",
-      "vo": "The story starts in a call center. Not in Ohio. Not in New York. In a rented office in Mumbai, or a village outside Accra, with script cheat-sheets taped to the wall and a whiteboard of numbers above the door.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE CALL CENTER",
-      "icons": [
-        {
-          "icon": "users",
-          "label": "THE TEAM"
-        },
-        {
-          "icon": "pen-line",
-          "label": "THE SCRIPT"
-        },
-        {
-          "icon": "globe",
-          "label": "THE NUMBERS"
-        }
-      ],
-      "sfx": [],
-      "footage": "A long quiet back-office call center at night, rendered as an editorial composition of photographic cutouts on a flat off-white field. The room is the hero: rows of empty desks with telephone headsets receding in strong one-point perspective, occupying about 70 percent of the frame in muted charcoal tones. On the far wall, small paper sheets hang in a neat grid like script cheat-sheets. A tall whiteboard stands beside the door with abstract blank number blocks. A torn fragment of a world map with a small red pin floats in the upper left. Warm mustard-yellow geometric panels sit behind the desks. The foreground lower third stays empty for typography. No people, no faces, no text, no labels, no arrows."
-    },
-    {
-      "n": 6,
-      "name": "THE ASSEMBLY LINE (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"See, the modern scam call is an assembly line. One team writes the script. Another buys the phone numbers. A third runs the payment network. Nobody sees the whole picture. Meaning nobody can describe it to police, even if they wanted to. Deniability is a feature, not a bug.\"",
-        "text": "THE ASSEMBLY LINE",
-        "icon": "pen-line: SCRIPT, phone: NUMBERS, banknote: MONEY"
-      },
-      "start": 39.78,
-      "end": 54.26,
-      "module": "footage",
-      "vo": "See, the modern scam call is an assembly line. One team writes the script. Another buys the phone numbers. A third runs the payment network. Nobody sees the whole picture. Meaning nobody can describe it to police, even if they wanted to. Deniability is a feature, not a bug.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE ASSEMBLY LINE",
-      "icons": [
-        {
-          "icon": "pen-line",
-          "label": "SCRIPT"
-        },
-        {
-          "icon": "phone",
-          "label": "NUMBERS"
-        },
-        {
-          "icon": "banknote",
-          "label": "MONEY"
-        }
-      ],
-      "sfx": [],
-      "footage": "A paper-cut assembly line diagram in editorial information-graphic style. The hero is a horizontal conveyor made of three connected paper sections: a script page with blank ruled lines, a grid of telephone handset cutouts, and a row of banknote silhouettes, each section a different flat color, off-white, charcoal and mustard-yellow, together occupying 70 percent of the frame. A single deep-red gear sits at the central joint where the sections connect. Each paper section is cleanly separated by negative space so a motion designer can slide them apart. The upper quarter of the frame is empty for typography. No text, no lettering, no arrows, no labels, no faces, no people."
-    },
-    {
-      "n": 7,
-      "name": "THE MATH (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"The math is brutal. A thousand calls, nine hundred and ninety fail. The machine doesn't care. One successful call pays for ten thousand failed ones. In this business, a one percent success rate is a great quarter.\"",
-        "text": "1 IN 1,000 IS ENOUGH"
-      },
-      "start": 54.26,
-      "end": 64.32,
-      "module": "footage",
-      "vo": "The math is brutal. A thousand calls, nine hundred and ninety fail. The machine doesn't care. One successful call pays for ten thousand failed ones. In this business, a one percent success rate is a great quarter.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "1 IN 1,000 IS ENOUGH",
-      "sfx": [],
-      "footage": "A vast flat grid of small charcoal dots fills the frame, each dot slightly raised like a printed braille pattern, occupying about 75 percent of the composition on a warm off-white background. One single dot near the center is bright warm red, clearly larger, the only colored element in the grid, the hero of the image. A torn paper corner overlaps the top left edge. A faint magnifying-glass circle frames the red dot, drawn as a thin charcoal ring, not a photorealistic lens. All other elements stay muted. The grid fades out gradually toward the bottom third of the frame, leaving negative space for typography. No text, no labels, no arrows, no faces."
-    },
-    {
-      "n": 8,
-      "name": "THE SPOOF (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"The calls are spoofed. Your phone doesn't show their number. It shows a precinct. Or the IRS line. That's not hacking. There are services that sell that for forty dollars a month \u2014 about the price of your Netflix bill. The number on your screen is a costume.\"",
-        "text": "SPOOFED",
-        "doodle": "circle around \"SPOOFED\""
-      },
-      "start": 64.32,
-      "end": 77.02,
-      "module": "footage",
-      "vo": "The calls are spoofed. Your phone doesn't show their number. It shows a precinct. Or the IRS line. That's not hacking. There are services that sell that for forty dollars a month \u2014 about the price of your Netflix bill. The number on your screen is a costume.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "SPOOFED",
-      "doodle": {
-        "shape": "circle",
-        "target": "spoofed"
-      },
-      "sfx": [],
-      "footage": "A single rotary telephone handset rendered as a paper cutout, standing upright like a character, is the hero, occupying 65 percent of the frame in charcoal and off-white. The handset wears a theatrical paper masquerade mask, deep red, tied with thin ribbons, the mask clearly decorative and not a face. Behind it, a tall column of small blank paper rectangles suggests a list of phone numbers, unmarked. A mustard-yellow flat field sits behind the telephone. The mask is the only saturated color. The left third of the frame is empty negative space for typography. No face, no person, no text, no lettering, no arrows, no labels."
-    },
-    {
-      "n": 9,
-      "name": "THE MONEY (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"The hard part isn't the phone. It's the money. Because once the victim is convinced, the cash has to move with no paper trail. And that's where the first story starts.\"",
-        "text": "THE HARD PART IS THE MONEY"
-      },
-      "start": 77.02,
-      "end": 85.29,
-      "module": "footage",
-      "vo": "The hard part isn't the phone. It's the money. Because once the victim is convinced, the cash has to move with no paper trail. And that's where the first story starts.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE HARD PART IS THE MONEY",
-      "sfx": [],
-      "footage": "A paper-cut funnel diagram is the hero, a wide top opening into a single narrow channel, built from layered off-white and charcoal paper, occupying 70 percent of the frame. A single folded banknote enters the wide top, and below the funnel's narrow end a short column of identical paper coins stacks up. The flow is implied by size and position only, with no arrows. A flat mustard-yellow geometric field sits behind the funnel. A torn receipt fragment with blank ruled lines floats at the lower right as a minor supporting element. The upper left third of the frame stays empty for typography. No text, no labels, no faces, no arrows."
-    },
-    {
-      "n": 10,
-      "name": "THE TARGETS (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"The calls aren't random. The numbers are bought \u2014 data brokers sell lists of landline subscribers, their ages, their voting records. A ninety-year-old with a landline is worth more than a teenager with a smartphone. The machine buys targets, not numbers.\"",
-        "text": "THE TARGETS",
-        "icon": "database: THE LISTS, map-pin: THE AREA CODES, users: THE VICTIMS"
-      },
-      "start": 85.29,
-      "end": 97.73,
-      "module": "footage",
-      "vo": "The calls aren't random. The numbers are bought \u2014 data brokers sell lists of landline subscribers, their ages, their voting records. A ninety-year-old with a landline is worth more than a teenager with a smartphone. The machine buys targets, not numbers.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE TARGETS",
-      "icons": [
-        {
-          "icon": "database",
-          "label": "THE LISTS"
-        },
-        {
-          "icon": "map-pin",
-          "label": "THE AREA CODES"
-        },
-        {
-          "icon": "users",
-          "label": "THE VICTIMS"
-        }
-      ],
-      "sfx": [],
-      "footage": "An oversized flat paper dartboard is the hero, occupying 65 percent of the frame, rendered in concentric off-white, charcoal and warm-gray rings on a warm off-white background. The central bullseye is deep red. A rotary telephone handset cutout lies across the dartboard, dramatically large compared to the board, like a darted object. A small paper stack of blank personal-profile cards sits in the lower left corner, muted. The board floats with generous negative space on all sides, the top third empty for typography. No text, no lettering, no numbers, no arrows, no labels, no faces."
-    },
-    {
-      "n": 11,
-      "name": "THE AKRON CALL (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"May 2024. A retired teacher in Akron, Ohio. A landline she's had for thirty years. The call she'd been dreading for years.\"",
-        "text": "MAY 2024 \u00b7 AKRON, OHIO",
-        "icon": "calendar: MAY 2024, phone: THE CALL, map-pin: AKRON, OHIO"
-      },
-      "start": 97.73,
-      "end": 105.01,
-      "module": "footage",
-      "vo": "May 2024. A retired teacher in Akron, Ohio. A landline she's had for thirty years. The call she'd been dreading for years.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "MAY 2024 \u00b7 AKRON, OHIO",
-      "icons": [
-        {
-          "icon": "calendar",
-          "label": "MAY 2024"
-        },
-        {
-          "icon": "phone",
-          "label": "THE CALL"
-        },
-        {
-          "icon": "map-pin",
-          "label": "AKRON"
-        }
-      ],
-      "sfx": [],
-      "footage": "A quiet domestic kitchen corner rendered in warm archival photography with muted film-grain tones, the scene of a house that has stood still for decades. The hero is a vintage rotary landline telephone sitting on a wooden kitchen counter, occupying 70 percent of the frame, its cord curling loosely. A torn paper calendar page with a single blank circled square floats in the upper right as a cutout element. A small round wall clock hangs blurred in the far background. Warm amber afternoon light falls from a window on the left. The lower third of the frame stays clear for typography. No people, no faces, no text, no lettering, no labels, no arrows."
-    },
-    {
-      "n": 12,
-      "name": "THE SCRIPT (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"'Grandma?' \u2014 a young man's voice, panicked. 'I'm in jail. I hit a car. Please don't tell Mom.'\"",
-        "text": "\"GRANDMA?\"",
-        "chat": "sms: Grandma: Is that you, Mikey? \u00b7 Caller: Yeah, Grandma. It's me. \u00b7 Caller: I'm in jail. I hit a car. \u00b7 Caller: Please don't tell Mom.",
-        "doodle": "box around \"bubble\"",
-        "sfx": "notification ping"
-      },
-      "start": 105.01,
-      "end": 110.49,
-      "module": "chat",
-      "vo": "'Grandma?' \u2014 a young man's voice, panicked. 'I'm in jail. I hit a car. Please don't tell Mom.'",
-      "track": "short",
-      "visual": "NONE",
-      "text": "GRANDMA?",
-      "chat": "sms: Grandma: Is that you, Mikey? \u00b7 Caller: Yeah, Grandma. It's me. \u00b7 Caller: I'm in jail. I hit a car. \u00b7 Caller: Please don't tell Mom.",
-      "doodle": {
-        "shape": "box",
-        "target": "bubble"
-      },
-      "sfx": [
-        "pop.wav"
-      ],
-      "chat_boxes": {
-        "header": {
-          "x": 0,
-          "y": 64,
-          "w": 1080,
-          "h": 190
-        },
-        "bubbles": [
-          {
-            "speaker": "Grandma",
-            "mine": false,
-            "x": 80,
-            "y": 1146,
-            "w": 485,
-            "h": 96
-          },
-          {
-            "speaker": "Caller",
-            "mine": true,
-            "x": 405,
-            "y": 1288,
-            "w": 595,
-            "h": 96
-          },
-          {
-            "speaker": "Caller",
-            "mine": true,
-            "x": 488,
-            "y": 1430,
-            "w": 512,
-            "h": 96
-          },
-          {
-            "speaker": "Caller",
-            "mine": true,
-            "x": 430,
-            "y": 1572,
-            "w": 570,
-            "h": 96
-          }
-        ],
-        "name": {
-          "x": 285,
-          "y": 104,
-          "w": 560,
-          "h": 110
-        },
-        "nameText": "Grandma",
-        "last": {
-          "speaker": "Caller",
-          "mine": true,
-          "x": 430,
-          "y": 1572,
-          "w": 570,
-          "h": 96
-        }
-      },
-      "footage": "A full-frame editorial background for a messaging scene: a large paper speech bubble cutout floats left of center, its tail pointing downward, rendered in warm off-white with a soft charcoal outline, occupying 60 percent of the frame. A second smaller speech bubble overlaps it at the bottom right. A rotary telephone handset cutout in charcoal sits in the lower left corner. A torn manila envelope with a folded edge rests at the very bottom center. The background is a warm off-white paper field with a single mustard-yellow geometric band across the lower third. The upper right quarter of the frame is empty and uncluttered, leaving room for interface elements. No text, no faces, no arrows, no labels."
-    },
-    {
-      "n": 13,
-      "name": "SHE SUPPLIES THE NAME (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Here's the mechanism: the caller doesn't know her name. She supplies it. When she says 'Is that you, Mikey?' the voice says yes. Every question she asks hands them the next line. Meaning she's not tricked by them. She co-writes the con with them. Out of love.\"",
-        "text": "SHE SUPPLIES THE NAME",
-        "doodle": "underline under \"SHE SUPPLIES THE NAME\""
-      },
-      "start": 110.49,
-      "end": 122.69,
-      "module": "footage",
-      "vo": "Here's the mechanism: the caller doesn't know her name. She supplies it. When she says 'Is that you, Mikey?' the voice says yes. Every question she asks hands them the next line. Meaning she's not tricked by them. She co-writes the con with them. Out of love.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "SHE SUPPLIES THE NAME",
-      "doodle": {
-        "shape": "underline",
-        "target": "she supplies the name"
-      },
-      "sfx": [],
-      "footage": "A cut-paper composition of a hand holding a fountain pen over a large blank paper speech bubble, the pen about to write, the bubble occupying 65 percent of the frame in off-white with a charcoal outline. A small blank rectangular name-tag cutout lies beside the bubble, empty. A rotary telephone handset rests in the bottom right corner, small and muted. The composition is clean and quiet, warm off-white and charcoal with one deep-red pen accent. A flat mustard-yellow panel sits behind the speech bubble. The bottom third of the frame is clear negative space for typography. No text, no lettering, no words, no faces, no arrows, no labels."
-    },
-    {
-      "n": 14,
-      "name": "THE JUDGE (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"The voice is an actor, running a voice-aging filter to sound nineteen. A second voice comes on the line \u2014 'the judge' \u2014 and quotes the exact fine: nine thousand six hundred dollars. Cash only. Bail bonds don't take cards.\"",
-        "text": "THE JUDGE",
-        "icon": "mic: THE ACTOR, gauge: THE FILTER, phone: THE JUDGE"
-      },
-      "start": 122.69,
-      "end": 134.25,
-      "module": "footage",
-      "vo": "The voice is an actor, running a voice-aging filter to sound nineteen. A second voice comes on the line \u2014 'the judge' \u2014 and quotes the exact fine: nine thousand six hundred dollars. Cash only. Bail bonds don't take cards.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE JUDGE",
-      "icons": [
-        {
-          "icon": "mic",
-          "label": "THE ACTOR"
-        },
-        {
-          "icon": "gauge",
-          "label": "THE FILTER"
-        },
-        {
-          "icon": "phone",
-          "label": "THE JUDGE"
-        }
-      ],
-      "sfx": [],
-      "footage": "A formal editorial composition of a judge's wooden gavel resting on a sound block, the hero, occupying 65 percent of the frame as a photographic cutout in warm wood tones on a flat off-white field. A rotary telephone handset lies beside the gavel, smaller, in charcoal monochrome. A dark robe silhouette hangs in the background, simplified and empty. A torn strip of a legal form with blank ruled lines floats at the top right. A deep-blue geometric panel sits behind the gavel. The lower third of the frame is clear for typography. No person, no face, no text, no lettering, no labels, no arrows."
-    },
-    {
-      "n": 15,
-      "name": "CASH ONLY (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Cash only. That's the instruction. Nine thousand six hundred, in cash, waiting at her door. No wire. No receipt. Nothing a bank could reverse. The moment she agreed, the machine had what it needed.\"",
-        "text": "$9,600 \u2014 CASH ONLY",
-        "transfer": "from: The Teacher \u00b7 to: Cash Pickup \u00b7 amount: $9,600 \u00b7 status: SENT \u00b7 type: Cash withdrawal \u00b7 bank: Local Branch",
-        "doodle": "arrow from \"from\" to \"to\"",
-        "alert": "true",
-        "sfx": "warning"
-      },
-      "start": 134.25,
-      "end": 144.09,
-      "module": "transfer",
-      "vo": "Cash only. That's the instruction. Nine thousand six hundred, in cash, waiting at her door. No wire. No receipt. Nothing a bank could reverse. The moment she agreed, the machine had what it needed.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "$9,600 \u2014 CASH ONLY",
-      "transfer": "from: The Teacher \u00b7 to: Cash Pickup \u00b7 amount: $9,600 \u00b7 status: SENT \u00b7 type: Cash withdrawal \u00b7 bank: Local Branch",
-      "doodle": {
-        "shape": "arrow",
-        "from": "from",
-        "to": "to"
-      },
-      "alert": true,
-      "sfx": [
-        "stamp.wav"
-      ],
-      "transfer_boxes": {
-        "from": {
-          "x": 80,
-          "y": 444,
-          "w": 920,
-          "h": 220
-        },
-        "to": {
-          "x": 80,
-          "y": 798,
-          "w": 920,
-          "h": 220
-        },
-        "amount": {
-          "x": 302,
-          "y": 1144,
-          "w": 476,
-          "h": 126
-        },
-        "status": {
-          "x": 430,
-          "y": 1380,
-          "w": 219,
-          "h": 88
-        }
-      },
-      "footage": "A full-frame editorial background for a payment scene: a torn manila envelope spills a neat stack of folded banknotes across the lower center of the composition, the cash the hero, crisp and well lit on warm off-white paper. A blank torn receipt fragment floats above the cash with empty ruled lines, muted. A single deep-red rectangular seal strip sits at the top center as a warning accent, blank. The upper two thirds of the frame stay minimal and open for a user interface overlay. No text, no numbers, no lettering, no faces, no arrows, no labels."
-    },
-    {
-      "n": 16,
-      "name": "THE COURIER (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Then comes the part that should break it open. A courier arrives to pick up the cash. In person. He could be caught. But he's not a criminal \u2014 technically. In the real cases, the men who showed up thought they were collecting legal documents. The app that hired them was run by the scammers: fake business name, fake address, and a real payment processor that approved it.\"",
-        "text": "THE COURIER",
-        "chat": "sms: Dispatch: Pickup confirmed. 40 minutes. \u00b7 Dispatch: Package: legal documents. \u00b7 Courier: Confirmed.",
-        "doodle": "box around \"Courier\""
-      },
-      "start": 144.09,
-      "end": 162.05,
-      "module": "chat",
-      "vo": "Then comes the part that should break it open. A courier arrives to pick up the cash. In person. He could be caught. But he's not a criminal \u2014 technically. In the real cases, the men who showed up thought they were collecting legal documents. The app that hired them was run by the scammers: fake business name, fake address, and a real payment processor that approved it.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE COURIER",
-      "chat": "sms: Dispatch: Pickup confirmed. 40 minutes. \u00b7 Dispatch: Package: legal documents. \u00b7 Courier: Confirmed.",
-      "doodle": {
-        "shape": "box",
-        "target": "courier"
-      },
-      "sfx": [
-        "pop.wav"
-      ],
-      "chat_boxes": {
-        "header": {
-          "x": 0,
-          "y": 64,
-          "w": 1080,
-          "h": 190
-        },
-        "bubbles": [
-          {
-            "speaker": "Dispatch",
-            "mine": false,
-            "x": 80,
-            "y": 1288,
-            "w": 748,
-            "h": 96
-          },
-          {
-            "speaker": "Dispatch",
-            "mine": false,
-            "x": 80,
-            "y": 1430,
-            "w": 650,
-            "h": 96
-          },
-          {
-            "speaker": "Courier",
-            "mine": true,
-            "x": 688,
-            "y": 1572,
-            "w": 312,
-            "h": 96
-          }
-        ],
-        "name": {
-          "x": 285,
-          "y": 104,
-          "w": 560,
-          "h": 110
-        },
-        "nameText": "Dispatch",
-        "last": {
-          "speaker": "Courier",
-          "mine": true,
-          "x": 688,
-          "y": 1572,
-          "w": 312,
-          "h": 96
-        }
-      },
-      "footage": "A full-frame editorial background for a messaging scene: a delivery van silhouette rendered as a flat paper cutout in charcoal occupies the lower right, medium size, with a single cardboard package cutout beside it in warm kraft tones. A thin dotted route line with one small pin marker crosses the off-white field from the left edge to the van, drawn as a minimal charcoal dotted path, purposeful. A flat mustard-yellow geometric band sits behind the van. The upper left half of the frame is open and empty for an interface overlay. No text, no lettering, no faces, no arrows, no labels, no people."
-    },
-    {
-      "n": 17,
-      "name": "THE SUPPLY CHAIN (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Every human who touches the money is innocent. That's not a scam. That's a supply chain.\"",
-        "text": "THAT'S A SUPPLY CHAIN",
-        "doodle": "circle around \"THAT'S A SUPPLY CHAIN\""
-      },
-      "start": 162.05,
-      "end": 166.59,
-      "module": "footage",
-      "vo": "Every human who touches the money is innocent. That's not a scam. That's a supply chain.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THAT'S A SUPPLY CHAIN",
-      "doodle": {
-        "shape": "circle",
-        "target": "that's a supply chain"
-      },
-      "sfx": [],
-      "footage": "A paper chain of linked envelopes and banknotes stretches diagonally across the frame, the hero, each link a clean paper cutout alternating manila envelope and charcoal banknote silhouette, occupying 70 percent of the composition on a warm off-white field. Every link is identical, suggesting interchangeable parts, connected by neat rectangular paper joints. A large flat gear cutout overlaps the chain at its center, deep red, the only saturated element. Generous negative space surrounds the chain at top and bottom for typography. No text, no faces, no arrows, no labels."
-    },
-    {
-      "n": 18,
-      "name": "THE MULES (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"The cash doesn't stay in Ohio. It's picked up by mules \u2014 recruited online, promised a cut \u2014 and moved into crypto within hours. By the time anyone looks, it's not dollars anymore. It's a blockchain of somebody else's money.\"",
-        "text": "THE MULES",
-        "icon": "users: THE MULES, arrow-down-right: THE CASH, bitcoin: CRYPTO"
-      },
-      "start": 166.59,
-      "end": 177.41,
-      "module": "footage",
-      "vo": "The cash doesn't stay in Ohio. It's picked up by mules \u2014 recruited online, promised a cut \u2014 and moved into crypto within hours. By the time anyone looks, it's not dollars anymore. It's a blockchain of somebody else's money.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE MULES",
-      "icons": [
-        {
-          "icon": "users",
-          "label": "THE MULES"
-        },
-        {
-          "icon": "arrow-down-right",
-          "label": "THE CASH"
-        },
-        {
-          "icon": "bitcoin",
-          "label": "CRYPTO"
-        }
-      ],
-      "sfx": [],
-      "footage": "A single worn canvas duffel bag cutout is the hero, centered, occupying 65 percent of the frame in muted olive-charcoal tones, its top unzipped showing a neat row of folded banknote edges. A small flat screen cutout floats to the right of the bag, blank and unmarked, suggesting a device screen. A single golden coin cutout hovers above the bag, the only warm accent. The composition sits on a flat off-white field with a deep-blue geometric panel behind the bag. The top third of the frame is empty for typography. No text, no numbers, no lettering, no faces, no arrows, no labels."
-    },
-    {
-      "n": 19,
-      "name": "THE BANK (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Her bank warned her. The teller saw nine thousand in cash leaving the counter. 'It's for a legal settlement,' she said \u2014 the exact line they'd given her. The teller let her go. Banks don't refuse withdrawals. They can't prove anything. The system is built for trust, and the scam runs on it.\"",
-        "text": "THE WARNING",
-        "icon": "landmark: THE BANK, shield-alert: THE WARNING, message-circle: THE LINE"
-      },
-      "start": 177.41,
-      "end": 191.79,
-      "module": "footage",
-      "vo": "Her bank warned her. The teller saw nine thousand in cash leaving the counter. 'It's for a legal settlement,' she said \u2014 the exact line they'd given her. The teller let her go. Banks don't refuse withdrawals. They can't prove anything. The system is built for trust, and the scam runs on it.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE WARNING",
-      "icons": [
-        {
-          "icon": "landmark",
-          "label": "THE BANK"
-        },
-        {
-          "icon": "shield-alert",
-          "label": "THE WARNING"
-        },
-        {
-          "icon": "message-circle",
-          "label": "THE LINE"
-        }
-      ],
-      "sfx": [],
-      "footage": "A bank building silhouette rendered as a flat architectural paper cutout in charcoal, the hero, occupying 65 percent of the frame, with tall columns and a pediment in a simplified frontal elevation. A torn receipt fragment with blank ruled lines floats in front of the bank at the lower left. A thin charcoal warning-triangle outline, empty, sits at the upper right corner as a supporting element. A flat off-white paper field with a restrained mustard-yellow band across the bottom. The right third of the frame stays open for typography. No text, no lettering, no faces, no people, no arrows, no labels."
-    },
-    {
-      "n": 20,
-      "name": "DEAD BY MORNING (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"An hour later, the cash is in a stranger's car, on a highway out of town. Police trace the phone to a VOIP server in a building that doesn't exist. By morning, the numbers are dead.\"",
-        "text": "DEAD BY MORNING",
-        "sfx": "whoosh"
-      },
-      "start": 191.79,
-      "end": 200.58,
-      "module": "footage",
-      "vo": "An hour later, the cash is in a stranger's car, on a highway out of town. Police trace the phone to a VOIP server in a building that doesn't exist. By morning, the numbers are dead.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "DEAD BY MORNING",
-      "sfx": [
-        "whoosh.wav"
-      ],
-      "footage": "An empty highway at night seen from a low frontal angle, long exposure light trails streaking toward the viewer, rendered as an archival photograph with film grain, the full frame the hero. A flat paper-cut car silhouette in charcoal sits small at the bottom left edge, isolated, suggesting motion. A small server-tower cutout floats in the upper right corner, muted, almost abstract. The sky is deep charcoal with a wide negative band at the top for typography. Muted amber and white light trails are the only color. No people, no faces, no text, no lettering, no labels, no arrows."
-    },
-    {
-      "n": 21,
-      "name": "THE SECOND MACHINE (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"One machine runs on fear. The second one runs on something worse.\"",
-        "text": "THE SECOND MACHINE",
-        "sfx": "riser"
-      },
-      "start": 200.58,
-      "end": 204.11,
-      "module": "footage",
-      "vo": "One machine runs on fear. The second one runs on something worse.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE SECOND MACHINE",
-      "sfx": [
-        "riser.wav"
-      ],
-      "footage": "Two paper machines face each other across the frame, the hero composition. The left machine is built from telephone handsets and jagged dark paper shapes, charcoal and deep red, suggesting panic. The right machine is built from smooth blank rectangles and a folded paper heart, off-white and mustard-yellow, calm and pleasant. Each machine occupies 35 percent of the frame, separated by a wide empty corridor of negative space in the center, 30 percent, reserved for typography and motion. A single flat off-white field behind both. No text, no labels, no faces, no arrows."
-    },
-    {
-      "n": 22,
-      "name": "THE WRONG NUMBER (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"A woman in her fifties in Florida gets a wrong-number text. 'Hey Emily, it's David \u2014 did you get my email?' She corrects him. He apologizes. That should be the end of it. It's the beginning.\"",
-        "text": "THE WRONG NUMBER",
-        "icon": "message-circle: THE TEXT, user-x: THE STRANGER, heart: THE HOOK"
-      },
-      "start": 204.11,
-      "end": 212.03,
-      "module": "footage",
-      "vo": "A woman in her fifties in Florida gets a wrong-number text. 'Hey Emily, it's David \u2014 did you get my email?' She corrects him. He apologizes. That should be the end of it. It's the beginning.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE WRONG NUMBER",
-      "icons": [
-        {
-          "icon": "message-circle",
-          "label": "THE TEXT"
-        },
-        {
-          "icon": "user-x",
-          "label": "THE STRANGER"
-        },
-        {
-          "icon": "heart",
-          "label": "THE HOOK"
-        }
-      ],
-      "sfx": [],
-      "footage": "A single smartphone cutout is the hero, centered, occupying 60 percent of the frame, rendered in flat charcoal with a large blank screen. A small paper speech bubble floats above the phone, a question mark outline drawn as one clean stroke the only mark on it. A torn manila envelope edge overlaps the bottom left corner. A folded paper heart cutout, deep red, floats to the right of the phone at a distance, suggesting a growing connection. A flat warm off-white field behind, one mustard-yellow panel behind the phone. The top and bottom thirds of the frame are empty for typography. No text, no faces, no arrows, no labels."
-    },
-    {
-      "n": 23,
-      "name": "THE FRIENDSHIP (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"A week of small talk. Photos of a real, handsome man \u2014 stolen from a dentist in Arizona who has no idea his face is working a second job. He remembers her birthday. He asks about her week. It feels like the best conversation she's had in years.\"",
-        "text": "THE FRIENDSHIP",
-        "chat": "whatsapp: David: Hey Emily, it's David \u2014 did you get my email? \u00b7 Emily: I think you have the wrong number. \u00b7 David: No worries! It's nice to meet you anyway. How's your week?",
-        "doodle": "circle around \"David\"",
-        "sfx": "notification ping"
-      },
-      "start": 212.03,
-      "end": 223.77,
-      "module": "chat",
-      "vo": "A week of small talk. Photos of a real, handsome man \u2014 stolen from a dentist in Arizona who has no idea his face is working a second job. He remembers her birthday. He asks about her week. It feels like the best conversation she's had in years.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE FRIENDSHIP",
-      "chat": "whatsapp: David: Hey Emily, it's David \u2014 did you get my email? \u00b7 Emily: I think you have the wrong number. \u00b7 David: No worries! It's nice to meet you anyway. How's your week?",
-      "doodle": {
-        "shape": "circle",
-        "target": "david"
-      },
-      "sfx": [
-        "pop.wav"
-      ],
-      "chat_boxes": {
-        "header": {
-          "x": 0,
-          "y": 64,
-          "w": 1080,
-          "h": 190
-        },
-        "bubbles": [
-          {
-            "speaker": "David",
-            "mine": false,
-            "x": 80,
-            "y": 1090,
-            "w": 773,
-            "h": 162
-          },
-          {
-            "speaker": "Emily",
-            "mine": true,
-            "x": 330,
-            "y": 1298,
-            "w": 670,
-            "h": 162
-          },
-          {
-            "speaker": "David",
-            "mine": false,
-            "x": 80,
-            "y": 1506,
-            "w": 762,
-            "h": 162
-          }
-        ],
-        "name": {
-          "x": 285,
-          "y": 104,
-          "w": 560,
-          "h": 110
-        },
-        "nameText": "David",
-        "last": {
-          "speaker": "David",
-          "mine": false,
-          "x": 80,
-          "y": 1506,
-          "w": 762,
-          "h": 162
-        }
-      },
-      "footage": "A full-frame editorial background for a messaging scene: two large paper speech bubbles float in the upper center, one off-white with a charcoal outline and one smaller and lighter, tails pointing at each other, forming a gentle back-and-forth rhythm, occupying 55 percent of the frame. A single folded paper heart cutout in muted red sits at the lower right, small. A rotary telephone handset cutout rests at the very bottom left in charcoal. The background is a warm off-white paper field with a soft mustard-yellow band at the bottom. The lower two thirds stay open for an interface overlay. No text, no faces, no arrows, no labels."
-    },
-    {
-      "n": 24,
-      "name": "THE APP (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Then David mentions the app. Crypto trading. He sends screenshots of his gains \u2014 fabricated on a dashboard the scammers built. The app is free, with four point seven stars, from three thousand reviews. All paid. All created that week. The store approved it.\"",
-        "text": "THE APP",
-        "chat": "whatsapp: David: I made a little extra money this month. \u00b7 David: It's this trading app. Crypto. \u00b7 David: I can show you if you want.",
-        "doodle": "box around \"bubble\"",
-        "sfx": "notification ping"
-      },
-      "start": 223.77,
-      "end": 237.25,
-      "module": "chat",
-      "vo": "Then David mentions the app. Crypto trading. He sends screenshots of his gains \u2014 fabricated on a dashboard the scammers built. The app is free, with four point seven stars, from three thousand reviews. All paid. All created that week. The store approved it.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE APP",
-      "chat": "whatsapp: David: I made a little extra money this month. \u00b7 David: It's this trading app. Crypto. \u00b7 David: I can show you if you want.",
-      "doodle": {
-        "shape": "box",
-        "target": "bubble"
-      },
-      "sfx": [
-        "pop.wav"
-      ],
-      "chat_boxes": {
-        "header": {
-          "x": 0,
-          "y": 64,
-          "w": 1080,
-          "h": 190
-        },
-        "bubbles": [
-          {
-            "speaker": "David",
-            "mine": false,
-            "x": 80,
-            "y": 1222,
-            "w": 766,
-            "h": 162
-          },
-          {
-            "speaker": "David",
-            "mine": false,
-            "x": 80,
-            "y": 1430,
-            "w": 694,
-            "h": 96
-          },
-          {
-            "speaker": "David",
-            "mine": false,
-            "x": 80,
-            "y": 1572,
-            "w": 675,
-            "h": 96
-          }
-        ],
-        "name": {
-          "x": 285,
-          "y": 104,
-          "w": 560,
-          "h": 110
-        },
-        "nameText": "David",
-        "last": {
-          "speaker": "David",
-          "mine": false,
-          "x": 80,
-          "y": 1572,
-          "w": 675,
-          "h": 96
-        }
-      },
-      "footage": "A full-frame editorial background for a finance scene: a rising paper bar chart built of neat charcoal and off-white bars ascends the right side, the hero, each bar a clean cutout. A smartphone cutout with a blank screen stands at the left, smaller, angled toward the chart. A single golden coin cutout sits at the base of the chart. A flat mustard-yellow geometric field covers the upper left. The bottom third of the frame is clear for an interface overlay. No text, no numbers, no lettering, no faces, no arrows, no labels."
-    },
-    {
-      "n": 25,
-      "name": "FAKE TRUST (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Look at the screen. A verified badge. A security lock. A customer service chat. Every trust signal a bank has, the scammers built a fake of. The blue checkmark isn't proof. It's part of the costume.\"",
-        "text": "FAKE TRUST",
-        "icon": "badge-check: VERIFIED, lock: SECURITY, message-circle: SUPPORT"
-      },
-      "start": 237.25,
-      "end": 246.09,
-      "module": "footage",
-      "vo": "Look at the screen. A verified badge. A security lock. A customer service chat. Every trust signal a bank has, the scammers built a fake of. The blue checkmark isn't proof. It's part of the costume.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "FAKE TRUST",
+      "name": "THE TRUST",
+      "start": 15,
+      "end": 27,
+      "vo": "Meaning the platform builds trust on purpose. Instant payouts. A balance that grows. Support that answers in minutes. None of it was real.",
+      "visual": "A checklist of trust signals, one by one.",
+      "motion": "Signals check in one at a time, then everything freezes and flips to fake.",
+      "module": "trust",
+      "text": "TRUST, BUILT ON PURPOSE",
+      "shape": "flip",
       "icons": [
         {
           "icon": "badge-check",
-          "label": "VERIFIED"
+          "label": "Instant payouts"
         },
         {
-          "icon": "lock",
-          "label": "SECURITY"
+          "icon": "trending-up",
+          "label": "Balance grows"
         },
         {
-          "icon": "message-circle",
-          "label": "SUPPORT"
+          "icon": "headset",
+          "label": "Support answers"
         }
       ],
-      "sfx": [],
-      "footage": "A single large smartphone cutout is the hero, centered, occupying 65 percent of the frame in charcoal, its screen blank and smooth. Floating in front of the screen: a small blue checkmark badge cutout, a small shield outline, and a padlock outline, each a clean flat paper shape arranged in a neat diagonal row. The badge is the only saturated color, bright institutional blue. A flat off-white field behind with a deep-blue panel. The top third of the frame is empty for typography. No text, no lettering, no numbers, no faces, no arrows, no labels."
+      "data": [],
+      "source": "",
+      "footage": "",
+      "image_prompt": "",
+      "places": [],
+      "turn": ""
     },
     {
-      "n": 26,
-      "name": "THE FIRST DEPOSIT (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Here's the trick: her first deposit wins. Five hundred dollars in, and the app shows six hundred and ten.\"",
-        "text": "$500 \u2192 $610",
-        "transfer": "from: Emily \u00b7 to: Trade Platform \u00b7 amount: $500 \u00b7 status: SENT \u00b7 type: Deposit \u00b7 bank: US Holding",
-        "doodle": "circle around \"amount\"",
-        "sfx": "shimmer"
-      },
-      "start": 246.09,
-      "end": 250.99,
-      "module": "transfer",
-      "vo": "Here's the trick: her first deposit wins. Five hundred dollars in, and the app shows six hundred and ten.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "$500 \u2192 $610",
-      "transfer": "from: Emily \u00b7 to: Trade Platform \u00b7 amount: $500 \u00b7 status: SENT \u00b7 type: Deposit \u00b7 bank: US Holding",
-      "doodle": {
-        "shape": "circle",
-        "target": "amount"
-      },
-      "sfx": [
-        "shimmer.wav"
-      ],
-      "transfer_boxes": {
-        "from": {
-          "x": 80,
-          "y": 444,
-          "w": 920,
-          "h": 220
-        },
-        "to": {
-          "x": 80,
-          "y": 798,
-          "w": 920,
-          "h": 220
-        },
-        "amount": {
-          "x": 346,
-          "y": 1144,
-          "w": 388,
-          "h": 124
-        },
-        "status": {
-          "x": 430,
-          "y": 1380,
-          "w": 219,
-          "h": 88
-        }
-      },
-      "footage": "A full-frame editorial background for a finance scene: a blank paper bank deposit slip cutout sits at the center with clean ruled lines and no markings, occupying 50 percent of the frame. A rising diagonal stack of three coins, small, gold and charcoal, climbs from the bottom left toward the slip. A single warm-red upward tick mark outline floats above the slip as the hero accent, a clean minimal stroke. A flat warm off-white field with a mustard-yellow band at the bottom. The lower and upper thirds stay open for an interface overlay. No text, no numbers, no lettering, no faces, no arrows, no labels."
-    },
-    {
-      "n": 27,
-      "name": "TRUST ON SCHEDULE (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Then she tests the withdrawal. Two hundred dollars. Once. Small. It lands in her account in a day. That's the engineered moment. Trust, delivered on schedule.\"",
-        "text": "TRUST, DELIVERED ON SCHEDULE",
-        "doodle": "circle around \"TRUST, DELIVERED ON SCHEDULE\""
-      },
-      "start": 250.99,
-      "end": 258.89,
-      "module": "footage",
-      "vo": "Then she tests the withdrawal. Two hundred dollars. Once. Small. It lands in her account in a day. That's the engineered moment. Trust, delivered on schedule.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "TRUST, DELIVERED ON SCHEDULE",
-      "doodle": {
-        "shape": "circle",
-        "target": "trust, delivered on schedule"
-      },
-      "sfx": [],
-      "footage": "A torn paper calendar page is the hero, centered, occupying 60 percent of the frame, showing a clean ruled grid of blank squares, one square circled with a thin outline. A small paper envelope cutout travels toward the circled square along a thin dotted path from the page edge, a single minimal charcoal line. A small round clock face cutout without hands floats at the upper right, charcoal. A flat mustard-yellow geometric field behind the calendar page. The bottom third of the frame is empty for typography. No text, no numbers, no lettering, no faces, no arrows, no labels."
-    },
-    {
-      "n": 28,
-      "name": "THE FEES (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Then the fees arrive. Taxes on winnings. Platform fees. A security deposit to unlock the withdrawal. Each ask is a little more urgent than the last. Each one is the last one \u2014 until the next one.\"",
-        "text": "THE FEES",
-        "transfer": "from: Emily \u00b7 to: Platform Fees \u00b7 amount: $40,000 \u00b7 status: SENT \u00b7 type: Tax on winnings \u00b7 bank: Overseas",
-        "doodle": "circle around \"amount\"",
-        "sfx": "shimmer"
-      },
-      "start": 258.89,
-      "end": 269.23,
-      "module": "transfer",
-      "vo": "Then the fees arrive. Taxes on winnings. Platform fees. A security deposit to unlock the withdrawal. Each ask is a little more urgent than the last. Each one is the last one \u2014 until the next one.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE FEES",
-      "transfer": "from: Emily \u00b7 to: Platform Fees \u00b7 amount: $40,000 \u00b7 status: SENT \u00b7 type: Tax on winnings \u00b7 bank: Overseas",
-      "doodle": {
-        "shape": "circle",
-        "target": "amount"
-      },
-      "sfx": [
-        "shimmer.wav"
-      ],
-      "transfer_boxes": {
-        "from": {
-          "x": 80,
-          "y": 444,
-          "w": 920,
-          "h": 220
-        },
-        "to": {
-          "x": 80,
-          "y": 798,
-          "w": 920,
-          "h": 220
-        },
-        "amount": {
-          "x": 272,
-          "y": 1144,
-          "w": 536,
-          "h": 126
-        },
-        "status": {
-          "x": 430,
-          "y": 1380,
-          "w": 219,
-          "h": 88
-        }
-      },
-      "footage": "A full-frame editorial background for a finance scene: a stack of torn paper receipt fragments grows diagonally across the frame from the lower left, each fragment a clean off-white cutout with blank ruled lines, the stack the hero, occupying 55 percent of the frame. A single charcoal banknote silhouette rests on top of the stack. A small deep-red rectangular stamp outline floats above the stack, blank, as an accent of urgency. A flat warm off-white field with a muted mustard band at the top. The lower two thirds stay open for an interface overlay. No text, no numbers, no lettering, no faces, no arrows, no labels."
-    },
-    {
-      "n": 29,
-      "name": "77 DAYS (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"The average victim sends money for seventy-seven days before it stops. Eleven weeks of daily screenshots, daily gains, daily good-morning texts. And every day, the balance she's told she owns keeps climbing. It was never real. But it was never checked either.\"",
-        "text": "77 DAYS",
-        "chart_data": "$500, $2,000, $9,000, $38,000, $120,000, $300,000",
-        "doodle": "underline under \"peak\"",
-        "sfx": "tick"
-      },
-      "start": 269.23,
-      "end": 281.95,
-      "module": "chart",
-      "vo": "The average victim sends money for seventy-seven days before it stops. Eleven weeks of daily screenshots, daily gains, daily good-morning texts. And every day, the balance she's told she owns keeps climbing. It was never real. But it was never checked either.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "77 DAYS",
+      "n": 4,
+      "name": "THE TRACE",
+      "start": 27,
+      "end": 39,
+      "vo": "But the balance on screen is not real. When you deposit two hundred fifty, the money moves. To their platform. Then to their wallet. Then gone.",
+      "visual": "A money flow trace, node to node.",
+      "motion": "The money travels the line, then the destination gets boxed.",
+      "module": "trace",
+      "text": "$250 MOVES",
+      "shape": "box",
+      "icons": [],
       "data": [
         {
-          "raw": "$500",
-          "label": "500",
-          "value": 500
+          "label": "You",
+          "raw": "0",
+          "value": 0
         },
         {
-          "raw": "$2,000",
-          "label": "2K",
-          "value": 2000
+          "label": "Fake platform",
+          "raw": "1",
+          "value": 1
         },
         {
-          "raw": "$9,000",
-          "label": "9K",
-          "value": 9000
-        },
-        {
-          "raw": "$38,000",
-          "label": "38K",
-          "value": 38000
-        },
-        {
-          "raw": "$120,000",
-          "label": "120K",
-          "value": 120000
-        },
-        {
-          "raw": "$300,000",
-          "label": "300K",
-          "value": 300000
+          "label": "Scammer",
+          "raw": "2",
+          "value": 2
         }
       ],
-      "doodle": {
-        "shape": "underline",
-        "target": "peak"
-      },
-      "sfx": [
-        "tick.wav"
-      ],
-      "footage": "A full-frame editorial background for a finance scene: a long climbing paper line chart is the hero, a single continuous charcoal paper ribbon ascending from lower left to upper right across 70 percent of the frame, gentle and steady. Small blank calendar-page squares float along the line at even intervals like data points. A folded banknote silhouette rests at the line's peak, upper right. A flat warm off-white field with a mustard-yellow band across the bottom. The bottom third stays open for an interface overlay. No text, no numbers, no lettering, no faces, no arrows, no labels."
+      "source": "",
+      "footage": "",
+      "image_prompt": "",
+      "places": [],
+      "turn": ""
     },
     {
-      "n": 30,
-      "name": "$300,000 (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Then the withdrawal button stops working. Customer service goes silent. By then, Emily has wired her retirement account. Three hundred thousand dollars. A real number, from an FBI report.\"",
-        "text": "$300,000",
-        "kinetic_size": "huge",
-        "sfx": "hit"
-      },
-      "start": 281.95,
-      "end": 291.24,
+      "n": 5,
+      "name": "THE FUNNEL",
+      "start": 39,
+      "end": 49,
+      "vo": "And the scam runs on volume. A hundred thousand targets. A thousand responses. A hundred deposits. Five locked accounts.",
+      "visual": "A funnel narrowing from a hundred thousand targets to five locked accounts.",
+      "motion": "",
+      "module": "funnel",
+      "text": "A HUNDRED THOUSAND TARGETS",
+      "shape": "arrow",
+      "icons": [],
+      "data": [
+        {
+          "label": "Targets",
+          "raw": "100000",
+          "value": 100000
+        },
+        {
+          "label": "Responses",
+          "raw": "1000",
+          "value": 1000
+        },
+        {
+          "label": "Deposits",
+          "raw": "100",
+          "value": 100
+        },
+        {
+          "label": "Locked",
+          "raw": "5",
+          "value": 5
+        }
+      ],
+      "source": "",
+      "footage": "",
+      "image_prompt": "",
+      "places": [],
+      "turn": ""
+    },
+    {
+      "n": 6,
+      "name": "THE PAYOFF",
+      "start": 49,
+      "end": 57,
+      "vo": "Therefore, paid to watch videos. Until the pay becomes the price.",
+      "visual": "Words fill the page as they're spoken.",
+      "motion": "",
       "module": "kinetic",
-      "vo": "Then the withdrawal button stops working. Customer service goes silent. By then, Emily has wired her retirement account. Three hundred thousand dollars. A real number, from an FBI report.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "$300,000",
-      "kinetic_size": "huge",
-      "sfx": [
-        "boom.wav"
-      ]
-    },
-    {
-      "n": 31,
-      "name": "THE SCALE (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"And this isn't rare. The FBI counted five point six billion dollars in crypto-related losses in 2023 alone. Five point six billion. One wrong number at a time.\"",
-        "text": "$5.6B \u2014 FBI 2023",
-        "icon": "file-text: THE FBI REPORT, bitcoin: THE LOSSES, globe: WORLDWIDE"
-      },
-      "start": 291.24,
-      "end": 299.72,
-      "module": "footage",
-      "vo": "And this isn't rare. The FBI counted five point six billion dollars in crypto-related losses in 2023 alone. Five point six billion. One wrong number at a time.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "$5.6B \u2014 FBI 2023",
-      "icons": [
-        {
-          "icon": "file-text",
-          "label": "THE FBI REPORT"
-        },
-        {
-          "icon": "bitcoin",
-          "label": "THE LOSSES"
-        },
-        {
-          "icon": "globe",
-          "label": "WORLDWIDE"
-        }
-      ],
-      "sfx": [],
-      "footage": "A towering bar chart built from stacked paper banknote silhouettes is the hero, occupying 70 percent of the frame, each bar a neat column of identical charcoal and off-white banknote cutouts rising to different heights like a city skyline. A single deep-red bar stands tallest at the center, the only saturated element. A flat globe cutout, simplified with latitude lines, floats at the base on the left. A blank folder cutout sits at the base on the right. A warm off-white field behind. The top quarter of the frame is empty for typography. No text, no numbers, no lettering, no faces, no arrows, no labels."
-    },
-    {
-      "n": 32,
-      "name": "GONE IN 40 MINUTES (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"The money crosses three international transfers in forty minutes. The accounts are closed by six o'clock. Nothing to trace.\"",
-        "text": "GONE IN 40 MINUTES",
-        "icon": "arrow-right: TRANSFER 1, arrow-right: TRANSFER 2, lock: CLOSED BY 6PM"
-      },
-      "start": 299.72,
-      "end": 306.32,
-      "module": "footage",
-      "vo": "The money crosses three international transfers in forty minutes. The accounts are closed by six o'clock. Nothing to trace.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "GONE IN 40 MINUTES",
-      "icons": [
-        {
-          "icon": "arrow-right",
-          "label": "TRANSFER 1"
-        },
-        {
-          "icon": "arrow-right",
-          "label": "TRANSFER 2"
-        },
-        {
-          "icon": "lock",
-          "label": "CLOSED BY 6PM"
-        }
-      ],
-      "sfx": [],
-      "footage": "A flat world map cutout in muted paper tones is the hero, occupying 70 percent of the frame as a simplified continent silhouette on a warm off-white field. Three thin charcoal route lines with small pin markers cross the map between continents, each line a clean minimal stroke with no arrowheads. A small clock face cutout without hands floats in the upper right corner. A short paper chain of three linked envelope cutouts runs along the bottom edge, small. The top left quarter of the frame is empty for typography. No text, no labels, no faces, no arrows."
-    },
-    {
-      "n": 33,
-      "name": "THE DESIGN PHILOSOPHY (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Here's the part nobody talks about \u2014 the design philosophy. They call landlines, because only older people still own them. They open with a question, so the first move is always yours. The moment you say 'that's none of your business,' the whole machine stalls.\"",
-        "text": "THE DESIGN PHILOSOPHY",
-        "icon": "phone: LANDLINES, target: SELECTION, shield: THE DEFENSE"
-      },
-      "start": 306.32,
-      "end": 317.72,
-      "module": "footage",
-      "vo": "Here's the part nobody talks about \u2014 the design philosophy. They call landlines, because only older people still own them. They open with a question, so the first move is always yours. The moment you say 'that's none of your business,' the whole machine stalls.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE DESIGN PHILOSOPHY",
-      "icons": [
-        {
-          "icon": "phone",
-          "label": "LANDLINES"
-        },
-        {
-          "icon": "target",
-          "label": "SELECTION"
-        },
-        {
-          "icon": "shield",
-          "label": "THE DEFENSE"
-        }
-      ],
-      "sfx": [],
-      "footage": "A large blueprint-style composition is the hero: a telephone handset drawn as a technical line drawing in charcoal on an off-white paper sheet, occupying 70 percent of the frame, with thin measurement marks and a small ruled detail grid beside it. A flat target-reticle ring outline floats at the upper left. A simple shield outline sits at the lower right. The line work is precise and clean, editorial information-graphic style. A flat mustard-yellow geometric panel sits behind the blueprint sheet. The bottom third of the frame is empty for typography. No text, no numbers, no lettering, no faces, no arrows, no labels."
-    },
-    {
-      "n": 34,
-      "name": "THE ONE QUESTION (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"Here's the test. Ask a question only your family could answer. 'Which Mikey? I have two grandsons.' The line goes dead. Because the machine sells panic \u2014 and a question is a firewall.\"",
-        "text": "THE ONE QUESTION",
-        "doodle": "circle around \"THE ONE QUESTION\""
-      },
-      "start": 317.72,
-      "end": 327.08,
-      "module": "footage",
-      "vo": "Here's the test. Ask a question only your family could answer. 'Which Mikey? I have two grandsons.' The line goes dead. Because the machine sells panic \u2014 and a question is a firewall.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "THE ONE QUESTION",
-      "doodle": {
-        "shape": "circle",
-        "target": "the one question"
-      },
-      "sfx": [],
-      "footage": "A giant paper question mark cutout stands like a monolith, the hero, occupying 70 percent of the frame, rendered in charcoal on a warm off-white field, its curve thick and solid. A small rotary telephone handset cutout sits at its base, small in scale, in muted red, the only saturated accent. A neat row of small blank paper blocks lines the bottom edge like building blocks. The question mark is slightly tilted as if it could topple. Wide negative space surrounds the monolith, the left third empty for typography. No text, no lettering, no faces, no arrows, no labels."
-    },
-    {
-      "n": 35,
-      "name": "THE DEFENSE (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"That's why the defense is one sentence: hang up, and call the number on the back of the card. Not the number they gave you. The one on the card. Every call has a flaw, and the spoofed number is it. You never have to outsmart them. You just have to be willing to be rude to someone who sounds desperate.\"",
-        "text": "HANG UP. CALL BACK.",
-        "doodle": "circle around \"HANG UP. CALL BACK.\"",
-        "sfx": "chime"
-      },
-      "start": 327.08,
-      "end": 339.96,
-      "module": "footage",
-      "vo": "That's why the defense is one sentence: hang up, and call the number on the back of the card. Not the number they gave you. The one on the card. Every call has a flaw, and the spoofed number is it. You never have to outsmart them. You just have to be willing to be rude to someone who sounds desperate.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "HANG UP. CALL BACK.",
-      "doodle": {
-        "shape": "circle",
-        "target": "hang up. call back."
-      },
-      "sfx": [
-        "chime.wav"
-      ],
-      "footage": "A single hand pressing a rotary telephone handset down onto its cradle, the gesture the hero, a photographic cutout in muted charcoal tones occupying 65 percent of the frame, the motion frozen mid-press. A small rectangular bank card cutout with blank surfaces floats beside the handset, tilted, one clean card. A thin closed-loop outline above the phone suggests a completed action, drawn as a minimal stroke. A flat warm off-white field with a mustard-yellow panel behind the phone. The top third of the frame is empty for typography. No faces, no text, no lettering, no numbers, no arrows, no labels."
-    },
-    {
-      "n": 36,
-      "name": "THE KINDNESS PROBLEM (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"The scam isn't a technology problem. It's a kindness problem. The IRS never calls. No judge takes cash. And your grandson's voice, in a panic, is the one sound the human brain was never designed to question.\"",
-        "text": "IT'S A KINDNESS PROBLEM",
-        "kinetic_size": "huge"
-      },
-      "start": 339.96,
-      "end": 351.45,
-      "module": "kinetic",
-      "vo": "The scam isn't a technology problem. It's a kindness problem. The IRS never calls. No judge takes cash. And your grandson's voice, in a panic, is the one sound the human brain was never designed to question.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "IT'S A KINDNESS PROBLEM",
-      "kinetic_size": "huge",
-      "sfx": []
-    },
-    {
-      "n": 37,
-      "name": "THE REPORT (0:00)",
-      "plan": null,
-      "rows": {
-        "vo": "\"And if this ever happens to someone you love \u2014 report it. The FTC takes reports at reportfraud dot f t c dot gov. Most victims never do. That's the last thing the machine takes.\"",
-        "text": "REPORT IT",
-        "icon": "file-text: REPORT IT, message-circle: SHARE IT, heart: PROTECT SOMEONE"
-      },
-      "start": 351.45,
-      "end": 360.33,
-      "module": "footage",
-      "vo": "And if this ever happens to someone you love \u2014 report it. The FTC takes reports at reportfraud dot f t c dot gov. Most victims never do. That's the last thing the machine takes.",
-      "track": "short",
-      "visual": "NONE",
-      "text": "REPORT IT",
-      "icons": [
-        {
-          "icon": "file-text",
-          "label": "REPORT IT"
-        },
-        {
-          "icon": "message-circle",
-          "label": "SHARE IT"
-        },
-        {
-          "icon": "heart",
-          "label": "PROTECT SOMEONE"
-        }
-      ],
-      "sfx": [],
-      "footage": "A closed paper folder cutout is the hero, centered, occupying 60 percent of the frame, warm manila tones, a small blank white label on its face. A paper megaphone cutout in charcoal points toward the folder from the upper right, small and abstract. A folded paper heart cutout, deep red, sits at the lower left, small. An envelope cutout with a blank rectangular stamp outline floats at the upper left. A flat warm off-white field with a deep-blue band at the bottom. The bottom third of the frame is empty for typography. No text, no lettering, no faces, no arrows, no labels."
-    },
-    {
-      "n": 38,
-      "name": "THE PAYOFF (0:00)",
-      "plan": null,
-      "rows": {
-        "text": "ONE QUESTION. ONE HANG-UP. ONE CALL BACK.",
-        "kinetic_size": "huge",
-        "hold": "4"
-      },
-      "start": 360.33,
-      "end": 364.33,
-      "module": "kinetic",
-      "vo": "",
-      "track": "short",
-      "visual": "NONE",
-      "text": "ONE QUESTION. ONE HANG-UP. ONE CALL BACK.",
-      "kinetic_size": "huge",
-      "sfx": []
+      "text": "PAID TO WATCH VIDEOS",
+      "shape": "",
+      "icons": [],
+      "data": [],
+      "source": "",
+      "footage": "",
+      "image_prompt": "",
+      "places": [],
+      "turn": ""
     }
   ],
-  "sfx": [
-    {
-      "at": 0,
-      "files": [
-        "boom.wav"
-      ]
-    },
-    {
-      "at": 44.35,
-      "files": [
-        "riser.wav"
-      ]
-    },
-    {
-      "at": 192.95,
-      "files": [
-        "pop.wav"
-      ]
-    },
-    {
-      "at": 246.8,
-      "files": [
-        "stamp.wav"
-      ]
-    },
-    {
-      "at": 264.25,
-      "files": [
-        "pop.wav"
-      ]
-    },
-    {
-      "at": 354.55,
-      "files": [
-        "whoosh.wav"
-      ]
-    },
-    {
-      "at": 373,
-      "files": [
-        "riser.wav"
-      ]
-    },
-    {
-      "at": 397.9,
-      "files": [
-        "pop.wav"
-      ]
-    },
-    {
-      "at": 422.35,
-      "files": [
-        "pop.wav"
-      ]
-    },
-    {
-      "at": 463.25,
-      "files": [
-        "shimmer.wav"
-      ]
-    },
-    {
-      "at": 486.65,
-      "files": [
-        "shimmer.wav"
-      ]
-    },
-    {
-      "at": 505.6,
-      "files": [
-        "tick.wav"
-      ]
-    },
-    {
-      "at": 527.05,
-      "files": [
-        "boom.wav"
-      ]
-    },
-    {
-      "at": 606.3,
-      "files": [
-        "chime.wav"
-      ]
-    }
-  ],
-  "shortSeconds": 364.33
+  "texts": [],
+  "sfx": []
 }

@@ -27,6 +27,13 @@ const CAMERA: Record<string, [number, number]> = {
   compare: [1.0, 1.025],
   stat: [1.05, 1.0],
   footage: [1.06, 1.0],
+  collage: [1.0, 1.03],
+  // The editorial modules drive their own camera from inside the beat, so the
+  // page itself stays still — two cameras on one frame fight.
+  trace: [1.0, 1.0],
+  trust: [1.0, 1.0],
+  funnel: [1.0, 1.0],
+  map: [1.0, 1.0],
 };
 
 const BEATS: VoxBeat[] = script.beats;

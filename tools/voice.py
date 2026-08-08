@@ -73,6 +73,13 @@ SCAM = {
     "chart":      (0.34, 0.66, 0.40),
     "icon":       (0.36, 0.68, 0.42),
     "footage":    (0.34, 0.68, 0.40),
+    # The vox editorial modules. The trust list is read like a receipt: each
+    # signal stated, then a held breath before the turn. The trace is the
+    # quietest read in the video — the money's movement is the drama, not the
+    # narrator's. The funnel counts down deliberately, like arithmetic.
+    "trust":      (0.40, 0.66, 0.46),
+    "trace":      (0.34, 0.64, 0.42),
+    "funnel":     (0.38, 0.66, 0.40),
 }
 DEFAULT = (0.42, 0.52, 0.34)
 

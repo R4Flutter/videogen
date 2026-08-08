@@ -1,335 +1,56 @@
 [
   {
     "n": 1,
-    "name": "THE CALL (0:00)",
-    "spoken": "Seventy-two thousand. That's how many times Americans pick up this exact kind of call, every single day. And every one of those calls was built.",
+    "name": "THE HOOK",
+    "spoken": "They pay you two dollars to watch videos. Then they ask for two hundred fifty.",
     "energy": 0.46,
     "pace": 0.7,
     "holdAfter": 0.55,
-    "seconds": 6.954
+    "seconds": 3.552
   },
   {
     "n": 2,
-    "name": "THE DOOR (0:00)",
-    "spoken": "Somewhere in Ohio, a seventy-eight-year-old woman just handed a stranger nine thousand dollars in cash, at her own front door. The doorbell camera caught every second of it.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 8.024
+    "name": "THE PIVOT",
+    "spoken": "See, the job is real. The pay is real. The trap is the next step.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 3.579
   },
   {
     "n": 3,
-    "name": "NOT A ROBBERY (0:00)",
-    "spoken": "This is not a robbery. The man at the door works for them. And the whole thing slipped through the system without a single law broken, until the money was already gone.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 6.61
+    "name": "THE TRUST",
+    "spoken": "Meaning the platform builds trust on purpose. Instant payouts. A balance that grows. Support that answers in minutes. None of it was real.",
+    "energy": 0.4,
+    "pace": 0.66,
+    "holdAfter": 0.46,
+    "seconds": 7.3
   },
   {
     "n": 4,
-    "name": "TWO MACHINES (0:00)",
-    "spoken": "This is how that machine is built. Two stories. Two machines. One design. Once you see the parts, you can't unsee them.",
-    "energy": 0.46,
-    "pace": 0.7,
-    "holdAfter": 0.55,
-    "seconds": 6.205
+    "name": "THE TRACE",
+    "spoken": "But the balance on screen is not real. When you deposit two hundred fifty, the money moves. To their platform. Then to their wallet. Then gone.",
+    "energy": 0.34,
+    "pace": 0.64,
+    "holdAfter": 0.42,
+    "seconds": 7.351
   },
   {
     "n": 5,
-    "name": "THE CALL CENTER (0:00)",
-    "spoken": "The story starts in a call center. Not in Ohio. Not in New York. In a rented office in Mumbai, or a village outside Accra, with script cheat-sheets taped to the wall and a whiteboard of numbers above the door.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 10.754
+    "name": "THE FUNNEL",
+    "spoken": "And the scam runs on volume. A hundred thousand targets. A thousand responses. A hundred deposits. Five locked accounts.",
+    "energy": 0.38,
+    "pace": 0.66,
+    "holdAfter": 0.4,
+    "seconds": 7.285
   },
   {
     "n": 6,
-    "name": "THE ASSEMBLY LINE (0:00)",
-    "spoken": "See, the modern scam call is an assembly line. One team writes the script. Another buys the phone numbers. A third runs the payment network. Nobody sees the whole picture. Meaning nobody can describe it to police, even if they wanted to. Deniability is a feature, not a bug.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 14.278
-  },
-  {
-    "n": 7,
-    "name": "THE MATH (0:00)",
-    "spoken": "The math is brutal. A thousand calls, nine hundred and ninety fail. The machine doesn't care. One successful call pays for ten thousand failed ones. In this business, a one percent success rate is a great quarter.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 9.799
-  },
-  {
-    "n": 8,
-    "name": "THE SPOOF (0:00)",
-    "spoken": "The calls are spoofed. Your phone doesn't show their number. It shows a precinct. Or the IRS line. That's not hacking. There are services that sell that for forty dollars a month, about the price of your Netflix bill. The number on your screen is a costume.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 12.756
-  },
-  {
-    "n": 9,
-    "name": "THE MONEY (0:00)",
-    "spoken": "The hard part isn't the phone. It's the money. Because once the victim is convinced, the cash has to move with no paper trail. And that's where the first story starts.",
+    "name": "THE PAYOFF",
+    "spoken": "Therefore, paid to watch videos. Until the pay becomes the price.",
     "energy": 0.46,
     "pace": 0.7,
     "holdAfter": 0.55,
-    "seconds": 8.084
-  },
-  {
-    "n": 10,
-    "name": "THE TARGETS (0:00)",
-    "spoken": "The calls aren't random. The numbers are bought, data brokers sell lists of landline subscribers, their ages, their voting records. A ninety-year-old with a landline is worth more than a teenager with a smartphone. The machine buys targets, not numbers.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 12.377
-  },
-  {
-    "n": 11,
-    "name": "THE AKRON CALL (0:00)",
-    "spoken": "May 2024. A retired teacher in Akron, Ohio. A landline she's had for thirty years. The call she'd been dreading for years.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 7.213
-  },
-  {
-    "n": 12,
-    "name": "THE SCRIPT (0:00)",
-    "spoken": "'Grandma?', a young man's voice, panicked. 'I'm in jail. I hit a car. Please don't tell Mom.'",
-    "energy": 0.34,
-    "pace": 0.66,
-    "holdAfter": 0.46,
-    "seconds": 5.054
-  },
-  {
-    "n": 13,
-    "name": "SHE SUPPLIES THE NAME (0:00)",
-    "spoken": "Here's the mechanism: the caller doesn't know her name. She supplies it. When she says 'Is that you, Mikey?' the voice says yes. Every question she asks hands them the next line. Meaning she's not tricked by them. She co-writes the con with them. Out of love.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 12.074
-  },
-  {
-    "n": 14,
-    "name": "THE JUDGE (0:00)",
-    "spoken": "The voice is an actor, running a voice-aging filter to sound nineteen. A second voice comes on the line, 'the judge', and quotes the exact fine: nine thousand six hundred dollars. Cash only. Bail bonds don't take cards.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 11.511
-  },
-  {
-    "n": 15,
-    "name": "CASH ONLY (0:00)",
-    "spoken": "Cash only. That's the instruction. Nine thousand six hundred, in cash, waiting at her door. No wire. No receipt. Nothing a bank could reverse. The moment she agreed, the machine had what it needed.",
-    "energy": 0.32,
-    "pace": 0.66,
-    "holdAfter": 0.46,
-    "seconds": 9.677
-  },
-  {
-    "n": 16,
-    "name": "THE COURIER (0:00)",
-    "spoken": "Then comes the part that should break it open. A courier arrives to pick up the cash. In person. He could be caught. But he's not a criminal, technically. In the real cases, the men who showed up thought they were collecting legal documents. The app that hired them was run by the scammers: fake business name, fake address, and a real payment processor that approved it.",
-    "energy": 0.34,
-    "pace": 0.66,
-    "holdAfter": 0.46,
-    "seconds": 17.726
-  },
-  {
-    "n": 17,
-    "name": "THE SUPPLY CHAIN (0:00)",
-    "spoken": "Every human who touches the money is innocent. That's not a scam. That's a supply chain.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 4.387
-  },
-  {
-    "n": 18,
-    "name": "THE MULES (0:00)",
-    "spoken": "The cash doesn't stay in Ohio. It's picked up by mules, recruited online, promised a cut, and moved into crypto within hours. By the time anyone looks, it's not dollars anymore. It's a blockchain of somebody else's money.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 10.64
-  },
-  {
-    "n": 19,
-    "name": "THE BANK (0:00)",
-    "spoken": "Her bank warned her. The teller saw nine thousand in cash leaving the counter. 'It's for a legal settlement,' she said, the exact line they'd given her. The teller let her go. Banks don't refuse withdrawals. They can't prove anything. The system is built for trust, and the scam runs on it.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 14.15
-  },
-  {
-    "n": 20,
-    "name": "DEAD BY MORNING (0:00)",
-    "spoken": "An hour later, the cash is in a stranger's car, on a highway out of town. Police trace the phone to a VOIP server in a building that doesn't exist. By morning, the numbers are dead.",
-    "energy": 0.46,
-    "pace": 0.7,
-    "holdAfter": 0.55,
-    "seconds": 8.478
-  },
-  {
-    "n": 21,
-    "name": "THE SECOND MACHINE (0:00)",
-    "spoken": "One machine runs on fear. The second one runs on something worse.",
-    "energy": 0.46,
-    "pace": 0.7,
-    "holdAfter": 0.55,
-    "seconds": 3.312
-  },
-  {
-    "n": 22,
-    "name": "THE WRONG NUMBER (0:00)",
-    "spoken": "A woman in her fifties in Florida gets a wrong-number text. 'Hey Emily, it's David, did you get my email?' She corrects him. He apologizes. That should be the end of it. It's the beginning.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 7.803
-  },
-  {
-    "n": 23,
-    "name": "THE FRIENDSHIP (0:00)",
-    "spoken": "A week of small talk. Photos of a real, handsome man, stolen from a dentist in Arizona who has no idea his face is working a second job. He remembers her birthday. He asks about her week. It feels like the best conversation she's had in years.",
-    "energy": 0.34,
-    "pace": 0.66,
-    "holdAfter": 0.46,
-    "seconds": 11.674
-  },
-  {
-    "n": 24,
-    "name": "THE APP (0:00)",
-    "spoken": "Then David mentions the app. Crypto trading. He sends screenshots of his gains, fabricated on a dashboard the scammers built. The app is free, with four point seven stars, from three thousand reviews. All paid. All created that week. The store approved it.",
-    "energy": 0.34,
-    "pace": 0.66,
-    "holdAfter": 0.46,
-    "seconds": 13.194
-  },
-  {
-    "n": 25,
-    "name": "FAKE TRUST (0:00)",
-    "spoken": "Look at the screen. A verified badge. A security lock. A customer service chat. Every trust signal a bank has, the scammers built a fake of. The blue checkmark isn't proof. It's part of the costume.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 8.843
-  },
-  {
-    "n": 26,
-    "name": "THE FIRST DEPOSIT (0:00)",
-    "spoken": "Here's the trick: her first deposit wins. Five hundred dollars in, and the app shows six hundred and ten.",
-    "energy": 0.32,
-    "pace": 0.66,
-    "holdAfter": 0.46,
-    "seconds": 4.674
-  },
-  {
-    "n": 27,
-    "name": "TRUST ON SCHEDULE (0:00)",
-    "spoken": "Then she tests the withdrawal. Two hundred dollars. Once. Small. It lands in her account in a day. That's the engineered moment. Trust, delivered on schedule.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 7.822
-  },
-  {
-    "n": 28,
-    "name": "THE FEES (0:00)",
-    "spoken": "Then the fees arrive. Taxes on winnings. Platform fees. A security deposit to unlock the withdrawal. Each ask is a little more urgent than the last. Each one is the last one, until the next one.",
-    "energy": 0.32,
-    "pace": 0.66,
-    "holdAfter": 0.46,
-    "seconds": 10.132
-  },
-  {
-    "n": 29,
-    "name": "77 DAYS (0:00)",
-    "spoken": "The average victim sends money for seventy-seven days before it stops. Eleven weeks of daily screenshots, daily gains, daily good-morning texts. And every day, the balance she's told she owns keeps climbing. It was never real. But it was never checked either.",
-    "energy": 0.34,
-    "pace": 0.66,
-    "holdAfter": 0.4,
-    "seconds": 12.586
-  },
-  {
-    "n": 30,
-    "name": "$300,000 (0:00)",
-    "spoken": "Then the withdrawal button stops working. Customer service goes silent. By then, Emily has wired her retirement account. Three hundred thousand dollars. A real number, from an FBI report.",
-    "energy": 0.46,
-    "pace": 0.7,
-    "holdAfter": 0.55,
-    "seconds": 9.093
-  },
-  {
-    "n": 31,
-    "name": "THE SCALE (0:00)",
-    "spoken": "And this isn't rare. The FBI counted five point six billion dollars in crypto-related losses in 2023 alone. Five point six billion. One wrong number at a time.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 8.311
-  },
-  {
-    "n": 32,
-    "name": "GONE IN 40 MINUTES (0:00)",
-    "spoken": "The money crosses three international transfers in forty minutes. The accounts are closed by six o'clock. Nothing to trace.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 6.549
-  },
-  {
-    "n": 33,
-    "name": "THE DESIGN PHILOSOPHY (0:00)",
-    "spoken": "Here's the part nobody talks about, the design philosophy. They call landlines, because only older people still own them. They open with a question, so the first move is always yours. The moment you say 'that's none of your business,' the whole machine stalls.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 11.405
-  },
-  {
-    "n": 34,
-    "name": "THE ONE QUESTION (0:00)",
-    "spoken": "Here's the test. Ask a question only your family could answer. 'Which Mikey? I have two grandsons.' The line goes dead. Because the machine sells panic, and a question is a firewall.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 9.355
-  },
-  {
-    "n": 35,
-    "name": "THE DEFENSE (0:00)",
-    "spoken": "That's why the defense is one sentence: hang up, and call the number on the back of the card. Not the number they gave you. The one on the card. Every call has a flaw, and the spoofed number is it. You never have to outsmart them. You just have to be willing to be rude to someone who sounds desperate.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 12.835
-  },
-  {
-    "n": 36,
-    "name": "THE KINDNESS PROBLEM (0:00)",
-    "spoken": "The scam isn't a technology problem. It's a kindness problem. The IRS never calls. No judge takes cash. And your grandson's voice, in a panic, is the one sound the human brain was never designed to question.",
-    "energy": 0.46,
-    "pace": 0.7,
-    "holdAfter": 0.55,
-    "seconds": 11.301
-  },
-  {
-    "n": 37,
-    "name": "THE REPORT (0:00)",
-    "spoken": "And if this ever happens to someone you love, report it. The FTC takes reports at reportfraud dot f t c dot gov. Most victims never do. That's the last thing the machine takes.",
-    "energy": 0.36,
-    "pace": 0.68,
-    "holdAfter": 0.42,
-    "seconds": 8.84
+    "seconds": 3.981
   }
 ]

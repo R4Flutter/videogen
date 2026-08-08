@@ -663,6 +663,43 @@ export const InkChart: React.FC<{
 export const hasFootage = (beat: number) => Boolean(FOOTAGE[String(beat)]);
 
 /**
+ * Every frame the fetcher produced for a beat, in order: `beat-3.jpg`,
+ * `beat-3-2.jpg`, `beat-3-3.jpg`. The collage lays them out as separate
+ * clippings, so it needs the whole set rather than the first one.
+ *
+ * Reads the manifest instead of guessing filenames — a beat that only got two
+ * of its three variants must stage two cards, not one card and one broken image.
+ */
+export const beatFrames = (beat: number) =>
+  Object.keys(FOOTAGE)
+    .filter((k) => k === String(beat) || k.startsWith(`${beat}-`))
+    .sort((a, b) => a.length - b.length || a.localeCompare(b))
+    .map((k) => FOOTAGE[k]);
+
+/**
+ * A printer's dot screen. This is what makes a photograph sit *on* the page
+ * rather than in a window cut through it — a Vox frame's archival never looks
+ * like video playing behind paper, it looks like something that went through
+ * the same press as the type.
+ *
+ * A CSS dot grid rather than an SVG filter on purpose: `feImage`-based halftones
+ * re-rasterise the whole element every frame, and this composites on the GPU.
+ */
+export const Halftone: React.FC<{ size?: number; opacity?: number }> = ({
+  size = 4,
+  opacity = 0.34,
+}) => (
+  <AbsoluteFill
+    style={{
+      backgroundImage: `radial-gradient(${vox.ink} 22%, transparent 23%)`,
+      backgroundSize: `${size}px ${size}px`,
+      mixBlendMode: "multiply",
+      opacity,
+    }}
+  />
+);
+
+/**
  * Archival clip, graded back towards the page so it sits with the ink instead
  * of fighting it. With no clip downloaded yet the beat still stages — it stays
  * a paper page, which is the honest fallback and still looks deliberate.

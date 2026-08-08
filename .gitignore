@@ -1,3 +1,7 @@
 .venv/
 .venv-tts/
 __pycache__/
+
+# API tokens. Never commit one: a key in git history is a leaked key even after
+# it is deleted, because the history keeps it.
+.env

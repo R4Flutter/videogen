@@ -150,6 +150,7 @@ the render still runs.
 | `Marker` | highlighter band | multiplies rather than covers — real marker ink darkens what's under it |
 | `Leader` | elbow leader line | two strokes: elbow first, then the point — the way a hand points |
 | `Clipping` | a torn clipping with a source line | tilted a degree or two; nothing placed by hand is square |
+| `Halftone` | a printer's dot screen over a photograph | a CSS dot grid, not an SVG filter — `feImage` re-rasterises every frame |
 | `LineIcon` | lucide thin-stroke icon, 1.5 stroke | an unknown name draws a circle — a script typo must not cost a render |
 | `InkChart` | line drawn in ink | straight segments only — a smoothed curve invents values |
 | `ArchivalBG` | Pexels clip, graded `saturate(0.5) contrast(1.08) brightness(0.96)`, paper wash, vignette, grain | no clip downloaded yet → the beat still stages as a paper page, the honest fallback |
@@ -174,6 +175,11 @@ JSX — it writes a beat.
 | `callout` | callout, leader line, pointer | ring on the frame + leader line to a label |
 | `timeline` | timeline, year by year | events on a true-to-scale axis, down in portrait, across in landscape |
 | `quote` | quote, clipping, cited, according to | a torn clipping with a source line |
+| `trace` | flow, trace, follows the money | money moving node to node along a line |
+| `trust` | trust, signals check, verified | trust signals check in, then flip to fake |
+| `funnel` | funnel, narrows, targets | volume as geometry, contacts down to victims |
+| `map` | **a `Places` row**, or map/globe/atlas | countries inked, pins dropped, a route drawn |
+| `collage` | collage, montage, scrapbook | photographs as halftone clippings on the page |
 
 `ARCHIVAL = {doodle, footage, callout}` — these fill and darken the frame, so
 the caption track draws a paper card behind the words to keep them legible.
@@ -240,10 +246,27 @@ the line the whole video was built to land.
 
 Rows are all optional except `Audio` (a beat with no narration stages, but a
 video with no narration isn't a video). `Data` feeds `chart`/`compare`/`stat`/
-`timeline` as `Label: value` pairs. `Source` prints under a `quote` — use it
-every time you state a figure you didn't compute yourself; a cite costs four
-seconds and is the difference between an explainer and a guy asserting
-numbers. `Footage` gives `fetch-footage.py` its Pexels search terms.
+`timeline`/`trace`/`funnel` as `Label: value` pairs. `Source` prints under a
+`quote` — use it every time you state a figure you didn't compute yourself; a
+cite costs four seconds and is the difference between an explainer and a guy
+asserting numbers. `Footage` gives `fetch-footage.py` its subject terms.
+
+Four rows exist so that **nothing about an episode lives in the engine**:
+
+| Row | Carries | Instead of |
+|---|---|---|
+| `Places` | `Bangkok @ 13.75,100.5; Myanmar` | a geography table in the renderer |
+| `Image Prompt` | this beat's art direction, in full | `vox_prompts.py`, keyed by beat number |
+| `Turn` | the phrase a `trust` collapse lands on | the engine hunting the word "real" |
+| `Module` | an explicit module name | arguing with the keyword table |
+
+`**Image Prompt:**` is the important one. Hand art direction used to live in
+`tools/vox_prompts.py` as `{beat_number: prompt}`, which meant the previous
+documentary's beat 2 was painted onto every new story's beat 2, silently and
+with no error. That table now declares `CURATED_FOR = "story.txt"` and only
+unlocks for the script it was written against; every other story art-directs in
+its own beats. `tools/fixtures/vox-demo.md` is an unrelated script kept as the
+proof — `npm run check` parses it and asserts the routing.
 
 The `## 4. TEXT TIMING TABLE` and `## 5. SOUND DESIGN` sections are optional —
 the overlay and sfx tracks from the finance era still parse, and the renderer
@@ -257,7 +280,8 @@ reads them defensively.
 npm run script:vox     # script_vox.md -> src/script.json (+ voice.json stub)
 npm run voice          # TTS (Vox narrator: steady, deliberate)
 npm run align          # word-level timing -> src/voice.json
-npm run footage        # Pexels clips (needs PEXELS_API_KEY)
+npm run footage        # images via pollinations.ai — free, no key
+npm run check          # parser contract, both engines, against fixtures
 npm run lint           # eslint + tsc
 npm run render:vox     # -> out/vox.mp4
 npm run render:vox:essay   # -> out/vox-essay.mp4 (16:9)

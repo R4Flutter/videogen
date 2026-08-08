@@ -123,6 +123,69 @@ try {
 }
 assert.ok(refused, "an unattributed accusation must fail the parse, not render");
 
+// ---------------------------------------------------------------- vox engine
+// The same guard for the second vocabulary, on a fixture the engine has never
+// seen. The point of these is not that vox-demo.md renders — it is that nothing
+// in the engine is wired to the story currently in video/script_vox.md.
+const vox = (() => {
+  const out = join(tmpdir(), `vox-check-${process.pid}.json`);
+  execFileSync(process.execPath, [
+    join(root, "tools/parse-script.mjs"),
+    join(root, "tools/fixtures/vox-demo.md"),
+    out,
+  ]);
+  return JSON.parse(readFileSync(out, "utf8"));
+})();
+
+assert.equal(vox.engine, "vox");
+assert.equal(vox.width, 1080, "**Format: portrait** renders 9:16");
+
+const VOX_MODULES = new Set([
+  "kinetic", "doodle", "icon", "chart", "compare", "stat", "footage", "callout",
+  "timeline", "quote", "trace", "trust", "funnel", "map", "collage",
+]);
+for (const b of vox.beats) {
+  assert.ok(VOX_MODULES.has(b.module), `vox beat ${b.n}: unknown module ${b.module}`);
+  assert.ok(b.vo.trim(), `vox beat ${b.n} has no narration`);
+  assert.ok(b.end > b.start, `vox beat ${b.n} has no duration`);
+}
+
+// A beat that lists places is a map, whatever its prose says — this is the rule
+// that keeps "the money moves to Dubai" from staging as an abstract flow.
+for (const b of vox.beats) {
+  if (b.places?.length) assert.equal(b.module, "map", `beat ${b.n} named places but staged ${b.module}`);
+}
+
+// Places parse in both forms: a bare country to ink, and a labelled lat/lon pin.
+// The comma inside "13.75,100.5" is the reason the row is semicolon-separated.
+const countries = vox.beats.find((b) => b.places?.some((p) => p.lat === undefined));
+assert.ok(countries, "the fixture inks at least one country");
+const route = vox.beats.find((b) => (b.places ?? []).filter((p) => p.lat !== undefined).length >= 2);
+assert.ok(route, "the fixture draws at least one route");
+for (const p of route.places) {
+  assert.ok(Number.isFinite(p.lat) && Number.isFinite(p.lon), `pin ${p.name} lost its coordinates`);
+  assert.ok(Math.abs(p.lat) <= 90 && Math.abs(p.lon) <= 180, `pin ${p.name} is off the planet`);
+}
+
+// Art direction and the turn cue belong to the script, not to a table keyed by
+// beat number in a tool. These two rows are what make the engine story-agnostic.
+assert.ok(
+  vox.beats.some((b) => b.image_prompt?.length > 40),
+  "an **Image Prompt:** row must reach script.json for fetch-footage.py",
+);
+assert.ok(
+  vox.beats.some((b) => b.turn),
+  "a **Turn:** row must reach script.json for the trust collapse",
+);
+
+// "circled" is how a storyboard writes it. It used to match nothing.
+assert.equal(
+  vox.beats.find((b) => /circled/i.test(b.motion ?? ""))?.shape,
+  "circle",
+  "Motion FX saying 'circled' must select the circle mark",
+);
+
 console.log(
-  `ok — ${long.length} beats + ${short.length} vertical, modules ${[...new Set(long.map((b) => b.module))].join("/")}`,
+  `ok — ${long.length} beats + ${short.length} vertical, modules ${[...new Set(long.map((b) => b.module))].join("/")}\n` +
+    `ok — vox ${vox.beats.length} beats, modules ${vox.beats.map((b) => b.module).join("/")}`,
 );

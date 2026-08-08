@@ -20,6 +20,16 @@ prompt written against the world-class editorial documentary visual system
 The fetch tool appends the master STYLE_LOCK suffix to each prompt.
 """
 
+# The script these prompts were written against. They are keyed by *that*
+# story's beat numbers, so pointing them at any other script silently paints
+# beat 2's doorstep onto whatever beat 2 happens to be now. fetch-footage.py
+# checks this before it consults the table.
+#
+# A new story does not extend this file. It art-directs in its own script, in
+# `| **Image Prompt:** | ... |` rows on the beats that want one — art direction
+# belongs to the story that owns it.
+CURATED_FOR = "story.txt"
+
 # beat n -> detailed art-directed prompt. Beats without a prompt (1, 30, 36,
 # 38) are kinetic frames - no image.
 PROMPTS = {

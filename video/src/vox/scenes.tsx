@@ -11,6 +11,11 @@ import {
   useVideoConfig,
 } from "remotion";
 import { theme } from "../theme";
+import { Collage } from "./collage";
+import { Funnel } from "./funnel";
+import { MapScene } from "./map";
+import { Trace } from "./trace";
+import { Trust } from "./trust";
 import {
   affix,
   ArchivalBG,
@@ -40,11 +45,20 @@ export type VoxBeat = {
   module: string;
   vo: string;
   visual: string;
+  /** The Motion FX line, verbatim. Modules read it for staging hints the shape
+   *  vocabulary doesn't cover — `map` looks for "globe" in it. */
+  motion?: string;
   text?: string;
   shape?: string;
   source?: string;
   icons?: { icon: string; label: string }[];
   data?: { label: string; value: number; raw?: string }[];
+  /** `map` only. A bare name is a country to ink in; one with coordinates is a
+   *  pin to drop. Two or more pins draw a route between them. */
+  places?: { name: string; lat?: number; lon?: number }[];
+  /** The phrase a mid-beat reversal lands on, for modules that collapse
+   *  (`trust`). Named by the script, because every story turns on its own line. */
+  turn?: string;
 };
 
 export type VoxSceneProps = { dur: number; beat: VoxBeat; words: Word[] };
@@ -57,7 +71,7 @@ const ease = (frame: number, a: number, b: number, out: readonly [number, number
   });
 
 /** Page margins as a fraction of the canvas, so 9:16 and 16:9 both breathe. */
-const useMargin = () => {
+export const useMargin = () => {
   const { width, height } = useVideoConfig();
   return { width, height, pad: width * 0.075, wide: width > height };
 };
@@ -747,6 +761,11 @@ export const VOX_MODULES: Record<string, React.FC<VoxSceneProps>> = {
   callout: Callout,
   timeline: Timeline,
   quote: Quote,
+  trace: Trace,
+  trust: Trust,
+  funnel: Funnel,
+  map: MapScene,
+  collage: Collage,
 };
 
 /**
