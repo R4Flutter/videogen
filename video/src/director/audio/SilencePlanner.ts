@@ -53,9 +53,11 @@ export const silenceFor = (
       kind: "POST_REVEAL_SILENCE",
     });
   }
-  // A rest beat is VOICE_ONLY by definition.
-  if (restBeat && dur >= 6) {
-    out.push({ at: Number((b.start + 0.4).toFixed(2)), dur: Math.max(2, dur - 1.5), kind: "VOICE_ONLY" });
+  // A rest beat is VOICE_ONLY by definition. The gate was 6s, but essay beats
+  // run 3–5s almost throughout, so no rest beat ever cleared it and the film
+  // kept its bed up from end to end.
+  if (restBeat && dur >= 4) {
+    out.push({ at: Number((b.start + 0.4).toFixed(2)), dur: Math.max(1.6, dur - 1.5), kind: "VOICE_ONLY" });
   }
   return out;
 };

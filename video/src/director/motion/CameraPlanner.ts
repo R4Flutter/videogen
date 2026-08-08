@@ -64,5 +64,10 @@ export const cameraFor = (
   if (emotion === "relief" || emotion === "satisfaction")
     return "pull";
   if (visual.rest) return "settle";
-  return byPurpose[0];
+  // Module before purpose. `explain` is the purpose of most of a 68-beat
+  // essay and its first intent is `settle`, so purpose-first framed three
+  // quarters of the film identically. What is on the page is the more
+  // specific question: a stat pushes in, a doodle finds its mark, a quote
+  // holds. Purpose stays the fallback for modules with no opinion.
+  return CAMERA_BY_MODULE[visual.module] ?? byPurpose[0];
 };

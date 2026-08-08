@@ -38,6 +38,8 @@ export type ScriptBeat = {
   sequence?: string;
   question?: string;
   reveal?: string;
+  nextQuestion?: string;
+  consequence?: string;
   emotion?: string;
   rest?: boolean | string;
   captionMode?: string;
@@ -49,6 +51,12 @@ export type ScriptBeat = {
   lcut?: number;
   sfx?: string;
   callback?: string;
+  // Editorial-brain rows (new): Claude's decisions land here (or the author
+  // writes them by hand). They go through the same overlay pipeline as every
+  // other hand-written note — a human note still wins over a Claude guess.
+  visualPurpose?: string;
+  visualReason?: string;
+  attentionStrategy?: string;
 };
 
 export type Script = {
@@ -223,6 +231,16 @@ export type Sequence = {
     informationDensity: number;
     emotionalIntensity: number;
   };
+  // Viewer-state snapshot at the end of this sequence, as maintained by the
+  // editorial brain. Optional: the renderer never depends on it.
+  viewerState?: {
+    knows: string[];
+    believes: string[];
+    suspects: string[];
+    doesNotKnow: string[];
+    openQuestions: string[];
+    resolvedQuestions: string[];
+  };
 };
 
 export type DirectedBeat = {
@@ -346,6 +364,13 @@ export type DirectorPlan = {
     reason: TransitionReason;
     frames: number;
   }[];
+  // Provenance of the plan: which passes ran, which beats the brain locked.
+  editorial?: {
+    passes: number;
+    source: "ai" | "deterministic";
+    lockedBeats: number[];
+    notes?: string[];
+  };
 };
 
 /** The overlay a human (or Claude) can write to steer the heuristic director.
@@ -358,12 +383,18 @@ export type DirectorOverlay = {
 };
 
 // ---------------------------------------------------------------- qc
+export type QcSeverity = "HIGH" | "MED" | "LOW";
+
 export type QcFinding = {
   at: number; // seconds (beat start) or -1 for whole-video findings
   level: "warn" | "info" | "good";
   rule: string;
   message: string;
   beat?: number;
+  // Critic enrichment (ai/qc): severity, why it matters, what to do about it.
+  severity?: QcSeverity;
+  reason?: string;
+  fix?: string;
 };
 
 export type QcReport = {

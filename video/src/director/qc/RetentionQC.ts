@@ -6,6 +6,7 @@ import type { DirectorPlan, QcFinding, QcReport } from "../types.ts";
 import { runAttentionQC } from "./AttentionQC.ts";
 import { runVisualQC } from "./VisualQC.ts";
 import { runContinuityQC } from "./ContinuityQC.ts";
+import { criticize } from "./CriticQC.ts";
 import { clamp } from "../util.ts";
 
 export const runRetentionQC = (plan: DirectorPlan): QcReport => {
@@ -25,29 +26,7 @@ export const runRetentionQC = (plan: DirectorPlan): QcReport => {
     ...continuity.findings,
   ].sort((a, z) => (a.at === -1 ? 1 : z.at === -1 ? -1 : a.at - z.at));
 
-  const scores = {
-    story: story.score,
-    attention: attention.score,
-    visualVariety: visual.score,
-    continuity: continuity.score,
-    audio: audio.score,
-    emotion: emotion.score,
-  };
-  const retention = Number(
-    clamp(
-      (story.score * 0.2 +
-        attention.score * 0.2 +
-        visual.score * 0.15 +
-        continuity.score * 0.15 +
-        audio.score * 0.15 +
-        emotion.score * 0.15) /
-        1,
-      0,
-      10,
-    ).toFixed(1),
-  );
-
-  return {
+  const raw: QcReport = {
     video: {
       title: plan.project.title,
       duration: plan.project.durationInSeconds,
@@ -55,9 +34,31 @@ export const runRetentionQC = (plan: DirectorPlan): QcReport => {
       mode: plan.project.mode,
     },
     findings,
-    scores,
-    retention,
+    scores: {
+      story: story.score,
+      attention: attention.score,
+      visualVariety: visual.score,
+      continuity: continuity.score,
+      audio: audio.score,
+      emotion: emotion.score,
+    },
+    retention: Number(
+      clamp(
+        (story.score * 0.2 +
+          attention.score * 0.2 +
+          visual.score * 0.15 +
+          continuity.score * 0.15 +
+          audio.score * 0.15 +
+          emotion.score * 0.15) /
+          1,
+        0,
+        10,
+      ).toFixed(1),
+    ),
   };
+
+  // The critic pass: every finding gains severity / reason / fix.
+  return criticize(raw);
 };
 
 const runAudioQC = (plan: DirectorPlan): { findings: QcFinding[]; score: number } => {

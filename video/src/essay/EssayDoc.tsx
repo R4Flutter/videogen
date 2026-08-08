@@ -39,18 +39,22 @@ const Entrance: React.FC<{ type: string; children: React.ReactNode }> = ({
   const t = frame / fps;
 
   if (type === "cut") return <>{children}</>;
+
+  // These wrappers must be AbsoluteFill, not a bare div: a transformed div is
+  // a containing block, so an AbsoluteFill child would resolve inset:0 against
+  // a zero-sized box and the whole beat would render blank.
   if (type === "page") {
     // The page rises into place over the first beat of the turn.
     const p = Math.min(1, t / 0.45);
     return (
-      <div
+      <AbsoluteFill
         style={{
           opacity: p,
           transform: `translateY(${(1 - p) * -16}px) scale(${1 - (1 - p) * 0.015})`,
         }}
       >
         {children}
-      </div>
+      </AbsoluteFill>
     );
   }
 
@@ -59,7 +63,7 @@ const Entrance: React.FC<{ type: string; children: React.ReactNode }> = ({
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  return <div style={{ opacity: p }}>{children}</div>;
+  return <AbsoluteFill style={{ opacity: p }}>{children}</AbsoluteFill>;
 };
 
 export const EssayDoc: React.FC<{ plan?: DirectorPlan }> = ({ plan }) => {

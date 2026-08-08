@@ -76,8 +76,8 @@ const Stamps: React.FC<{ triggers: RevealTrigger[]; start: number }> = ({
   start,
 }) => {
   const frame = useCurrentFrame();
-  const { width } = useVideoConfig();
-  const t = frame / 30; // fps-agnostic enough for a chip that lives 2s
+  const { width, fps } = useVideoConfig();
+  const t = frame / fps;
   if (!triggers.length) return null;
 
   const chip = (tr: RevealTrigger, label: string) => {

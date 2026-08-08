@@ -37,8 +37,10 @@ lines.push(`──────────────────────�
 lines.push(`${report.video.title} · ${fmt(report.video.duration)} · ${report.video.beats} beats · ${report.video.mode}`);
 lines.push(``);
 for (const f of report.findings) {
-  lines.push(`${fmt(f.at)} ${ICONS[f.level]} ${f.rule}`);
-  lines.push(`   ${f.message}`);
+  lines.push(`${fmt(f.at)} ${ICONS[f.level]} ${f.rule}${f.severity ? ` [${f.severity}]` : ""}${f.beat ? ` (beat ${f.beat})` : ""}`);
+  lines.push(`   problem: ${f.message}`);
+  if (f.reason) lines.push(`   why:     ${f.reason}`);
+  if (f.fix) lines.push(`   fix:     ${f.fix}`);
 }
 lines.push(``);
 lines.push(`SCORE`);

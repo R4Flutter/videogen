@@ -73,15 +73,21 @@ export const budgetFor = (
   let outCaption = captionMode;
   let trimmed = false;
 
-  if (load > 1.15) {
-    // Highest-motion caption first, then the camera: the type is the loudest
-    // thing on a page, and a moving camera under flying type is how frames
-    // get noisy.
-    if (outCaption !== "NONE") {
-      outCaption = outCaption === "FULL" ? "SUBTITLE" : "NONE";
-      load = m + c + CAPTION_MOTION[outCaption];
-      trimmed = true;
-    }
+  // Quieting captions is a ladder, not a switch. Dropping SUBTITLE straight to
+  // NONE strips every word off the frame in one step; stepping down through
+  // EMPHASIS keeps the stressed words — the ones the viewer is scanning for —
+  // and only goes fully silent when nothing cheaper is left.
+  const QUIETER: Record<CaptionMode, CaptionMode> = {
+    FULL: "SUBTITLE",
+    SUBTITLE: "EMPHASIS",
+    EMPHASIS: "LOWER_THIRD",
+    LOWER_THIRD: "NONE",
+    NONE: "NONE",
+  };
+  while (load > 1.15 && outCaption !== "NONE") {
+    outCaption = QUIETER[outCaption];
+    load = m + c + CAPTION_MOTION[outCaption];
+    trimmed = true;
   }
   if (load > 1.15) {
     if (CAMERA_MOTION[outCamera] > 0.2) {

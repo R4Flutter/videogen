@@ -5,3 +5,7 @@ __pycache__/
 # API tokens. Never commit one: a key in git history is a leaked key even after
 # it is deleted, because the history keeps it.
 .env
+
+# Director run artefacts — regenerated on every `npm run director`.
+director-run.log
+video/src/director-plan.prev.json

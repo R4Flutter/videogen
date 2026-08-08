@@ -82,8 +82,8 @@ const CaptionCard: React.FC<{ text: string; opacity: number; accent: boolean }> 
 /** "CHAPTER 2" kicker chip, shown once at a chapter boundary. */
 const ChapterKicker: React.FC<{ text: string; at: number }> = ({ text, at }) => {
   const frame = useCurrentFrame();
-  const { width } = useVideoConfig();
-  const t = frame / 30;
+  const { width, fps } = useVideoConfig();
+  const t = frame / fps;
   const local = t - at;
   if (local < -0.3 || local > 1.8) return null;
   const op = Math.min(

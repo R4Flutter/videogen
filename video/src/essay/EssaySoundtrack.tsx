@@ -10,16 +10,33 @@ import { wordsForBeat } from "./Captions.tsx";
 import script from "../script.json";
 import voice from "../voice.json";
 
+const DUCK = 0.42;
+
+/** Frames on which someone is speaking, resolved once per fps instead of once
+ *  per rendered frame. The old form re-walked every beat's every word on every
+ *  audio callback — 68 beats × ~4k words × 9,150 frames of pure waste. */
+const speechMask = (() => {
+  const cache = new Map<number, Uint8Array>();
+  return (fps: number) => {
+    let mask = cache.get(fps);
+    if (mask) return mask;
+    mask = new Uint8Array(Math.ceil(script.durationInSeconds * fps) + 2);
+    for (const b of script.beats) {
+      for (const w of wordsForBeat(b)) {
+        const from = Math.max(0, Math.floor((b.start + w.start - 0.06) * fps));
+        const to = Math.min(mask.length - 1, Math.ceil((b.start + w.end + 0.06) * fps));
+        for (let f = from; f <= to; f++) mask[f] = 1;
+      }
+    }
+    cache.set(fps, mask);
+    return mask;
+  };
+})();
+
 const duck = (frame: number, fps: number) => {
-  const DUCK = 0.42;
   if (frame < 0) return 1;
-  const t = frame / fps;
-  const inWord = script.beats.some((b) => {
-    const words = wordsForBeat(b);
-    const ms = (t - b.start) * 1000;
-    return words.some((w) => ms >= w.start * 1000 - 60 && ms < w.end * 1000 + 60);
-  });
-  return inWord ? DUCK : 1;
+  const mask = speechMask(fps);
+  return mask[Math.min(frame, mask.length - 1)] ? DUCK : 1;
 };
 
 /** A level curve from the plan's knots: music_level events raise/lower the
@@ -58,9 +75,12 @@ export const EssaySoundtrack: React.FC<{ plan: DirectorPlan }> = ({ plan }) => {
   const { fps } = useVideoConfig();
   const level = buildCurve(plan);
 
+  // The planner writes labels that already carry the extension ("chime.wav").
+  // Appending another one asked for `audio/chime.wav.wav` and silently killed
+  // every cue in the film, so normalise here rather than trusting the label.
   const cues = plan.audioEvents
-    .filter((e) => e.kind === "sfx")
-    .map((e) => ({ at: e.at, files: [e.label] }));
+    .filter((e) => e.kind === "sfx" && e.label)
+    .map((e) => ({ at: e.at, file: `${e.label!.replace(/\.wav$/i, "")}.wav` }));
 
   return (
     <>
@@ -79,8 +99,8 @@ export const EssaySoundtrack: React.FC<{ plan: DirectorPlan }> = ({ plan }) => {
         </Sequence>
       ))}
       {cues.map((cue) => (
-        <Sequence key={`${cue.at}-${cue.files[0]}`} from={Math.round(cue.at * fps)}>
-          <Audio src={staticFile(`audio/${cue.files[0]}.wav`)} volume={0.5} />
+        <Sequence key={`${cue.at}-${cue.file}`} from={Math.round(cue.at * fps)}>
+          <Audio src={staticFile(`audio/${cue.file}`)} volume={0.5} />
         </Sequence>
       ))}
       <Sequence>
