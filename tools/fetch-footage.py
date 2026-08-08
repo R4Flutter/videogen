@@ -32,6 +32,8 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+from vox_prompts import PROMPTS as CURATED
+
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPT = ROOT / "video/src/script.json"
 OUT = ROOT / "video/public/footage"
@@ -44,28 +46,25 @@ WORKERS = 3
 TIMEOUT = 180  # generation, not download: a cold queue can sit for a minute
 BACKOFF = 8  # seconds to wait after a 429/500 before the retry round
 
-# Appended to every prompt. Cohesion across a hundred images is the difference
-# between a documentary and a folder of AI pictures, and the first two clauses
-# are the legal line: no real person's face, nothing that reads as evidence.
-# The tail is the Vox editorial-collage system: hand-cut paper on aged
-# newsprint, halftone cutouts, red string, the archival palette. The engine
-# draws its own type, so the "no text" clause stays even though the Vox style
-# allows labels.
+# The Vox master image style suffix, appended to every prompt. The first two
+# clauses are the legal line: no real person's face, nothing that reads as
+# evidence. Then the world-class editorial documentary system: archival
+# photography and crisp cutouts on flat geometric information graphics, the
+# 70/20/10 palette (off-white paper / charcoal / one accent), magazine-grid
+# composition with one hero and reserved negative space. The engine draws its
+# own type, so the "no text" clause stays; the negative constraints forbid the
+# generic-AI tells.
 STYLE_LOCK = (
     "no faces, no people identifiable as real persons, illustrative not evidence, "
-    "no text, no lettering, no logos, no watermark, "
-    "hand-cut documentary paper collage on aged newsprint and archival map surfaces, "
-    "black and white halftone photograph cutouts with rough scissor-cut edges and offset accent strokes, "
-    "torn paper edges, masking tape fragments, typewriter caption strips, rubber stamp marks, "
-    "red string and brass pins where the story calls for connections, "
-    "desaturated archival palette of tan, ink black, and halftone gray "
-    "with one hot red signal accent and a restrained mustard yellow secondary, "
-    "visible print grain and paper fiber, matte, flat even documentary lighting with soft cutout drop shadows, "
-    "every element physically hand-cut and layered from real paper, "
-    "visible cutout edges, halftone print texture, soft shadow separation between layers, "
-    "clean minimal editorial composition with generous negative space, "
-    "premium documentary collage aesthetic, 16:9, ultra-detailed, 8K, "
-    "not digital illustration, not cartoon, not 3D render, not glossy, no gradients, no clutter"
+    "elite contemporary editorial documentary visual journalism, investigative explainer art direction, "
+    "archival photography and crisp photographic cutouts combined with bold flat geometric information graphics, "
+    "warm off-white paper and charcoal foundation, restrained mustard yellow, warm red and deep blue accents, "
+    "clean magazine-grid composition, strong hierarchy, generous negative space, subtle archival print texture, "
+    "intentional composition for motion graphics animation, flat frontal editorial perspective, "
+    "ultra detailed, 16:9, "
+    "no text, no lettering, no captions, no labels, no logos, no watermark, "
+    "no generic AI art, no cinematic movie still, no Hollywood lighting, no glossy 3D, no cartoon, no anime, "
+    "no scrapbook aesthetic, no random arrows, no fake charts, no decorative clutter, no gradients"
 )
 
 # Modules that stage a photograph behind (or as) the frame. The scam engine's
@@ -125,7 +124,22 @@ def prompt(beat: dict) -> str | None:
 
     None when the storyboard was all direction and nothing survives — better a
     beat with no picture than a picture the engine had to invent the subject of.
+
+    A beat with a curated prompt in vox-prompts.py uses it as-is. Those prompts
+    are art-directed (left/right/scale/negative-space are intentional there),
+    so only the CHARGED safety net applies. Beats without a curated prompt fall
+    back to the storyboard, which still gets the direction strip.
     """
+    if beat["n"] in CURATED:
+        base = CURATED[beat["n"]]
+        # Defensive net only: the curated prompts are hand-checked, but the
+        # charge words never go through even by accident.
+        words = [
+            w for w in re.split(r"[\s,:;]+", base) if not CHARGED.search(w)
+        ]
+        base = " ".join(words).strip(" .:,")
+        return f"{base}, {STYLE_LOCK}" if len(base) >= 12 else None
+
     # Bold lines are the on-screen type. They must not end up drawn into the
     # picture — the engine renders that type itself, in the right font.
     visual = re.sub(r"\*\*.+?\*\*", " ", beat.get("visual", ""))

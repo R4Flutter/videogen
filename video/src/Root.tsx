@@ -2,20 +2,23 @@ import "./index.css";
 import { Composition } from "remotion";
 import { CRIME_TRACKS, CrimeDoc } from "./CrimeDoc";
 import { ScamDoc } from "./scam/ScamShort";
+import { VoxShort } from "./VoxShort";
 import script from "./script.json";
 
-// One story file, two engines. The parser writes `engine` from the story
+// One story file, three engines. The parser writes `engine` from the story
 // format it detected — a crime documentary stages CrimeDoc, a scam episode
-// stages ScamDoc — and each engine registers its cuts only when the story
-// actually is one. An empty composition is a render that fails at 3am.
+// stages ScamDoc, a vox script stages VoxShort — and each engine registers
+// its cuts only when the story actually is one. An empty composition is a
+// render that fails at 3am.
 const fps = script.fps;
 const frames = (seconds: number) => Math.max(1, Math.round(seconds * fps));
 
 export const RemotionRoot: React.FC = () => {
+  const vox = script.engine === "vox";
   const scam = script.engine === "scam";
   return (
     <>
-      {!scam ? (
+      {!vox && !scam ? (
         <Composition
           id="CrimeLong"
           component={CrimeDoc}
@@ -52,6 +55,29 @@ export const RemotionRoot: React.FC = () => {
             id="ScamLong"
             component={ScamDoc}
             defaultProps={{ cut: "long" as const }}
+            width={1920}
+            height={1080}
+            fps={fps}
+            durationInFrames={frames(script.durationInSeconds)}
+          />
+        </>
+      ) : null}
+      {vox ? (
+        <>
+          {/* The canvas comes from the script: `**Format:** portrait` writes
+              1080×1920, `landscape`/`16:9` writes 1920×1080. VoxShort sizes
+              everything off the canvas, so one component stages both forks. */}
+          <Composition
+            id="VoxExplain"
+            component={VoxShort}
+            width={script.width}
+            height={script.height}
+            fps={fps}
+            durationInFrames={frames(script.durationInSeconds)}
+          />
+          <Composition
+            id="VoxEssay"
+            component={VoxShort}
             width={1920}
             height={1080}
             fps={fps}

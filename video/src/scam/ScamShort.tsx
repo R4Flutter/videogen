@@ -34,42 +34,141 @@ const BEATS: ScamBeat[] = script.beats;
 
 const SFX = (script as { sfx?: { at: number; files: string[] }[] }).sfx ?? [];
 
-/** Frames the outgoing page overlaps the incoming one. */
-const TURN = 9;
+/** Frames each transition kind takes to land. Hard cuts overlap one frame so
+ *  a frame boundary never flashes black. */
+const HARD_FRAMES = 1;
+const WHIP_FRAMES = 7;
+const WIPE_FRAMES = 10;
+const MATCH_FRAMES = 8;
+const COLOR_FRAMES = 12;
+const EXIT_FRAMES: Record<TransitionKind, number> = {
+  hard: HARD_FRAMES,
+  whip: WHIP_FRAMES,
+  doc: HARD_FRAMES,
+  dir: HARD_FRAMES,
+  match: HARD_FRAMES,
+  color: HARD_FRAMES,
+};
+
+type TransitionKind = "hard" | "whip" | "doc" | "dir" | "match" | "color";
 
 /**
- * A page turn, same as the vox engine's: the outgoing beat lifts while the
- * incoming one rises into its place. A huge kinetic beat turns onto black —
- * the hook and the payoff open on nothing, not on paper.
+ * Vox transition decision engine. Every cut is chosen from the relationship
+ * between the outgoing beat and the incoming one, never at random:
+ *  - a huge kinetic beat opens a section      -> COLOR CARD
+ *  - an alert beat snaps the escalation       -> WHIP SLIDE
+ *  - chat/transfer screens are the same kind
+ *    of evidence                              -> DOCUMENT WIPE
+ *  - the chart hands off to collages          -> DIRECTIONAL WIPE (time forward)
+ *  - one collage after another                -> GRAPHIC MATCH
+ *  - everything else                          -> HARD CUT
  */
-const Turn: React.FC<{
+const transitionFor = (prev: ScamBeat | undefined, next: ScamBeat): TransitionKind => {
+  if (!prev) return "hard";
+  if (next.module === "kinetic" && next.kinetic_size === "huge") return "color";
+  if (prev.module === "kinetic") return "hard";
+  if (prev.alert || next.alert) return "whip";
+  if (
+    (prev.module === "chat" || prev.module === "transfer") &&
+    (next.module === "chat" || next.module === "transfer")
+  ) {
+    return "doc";
+  }
+  if (prev.module === "chart" && next.module === "footage") return "dir";
+  if (prev.module === "footage" && next.module === "footage") return "match";
+  return "hard";
+};
+
+const TRANS: TransitionKind[] = BEATS.map((b, i) => transitionFor(BEATS[i - 1], b));
+
+/**
+ * A beat card. How it arrives and leaves is chosen by the transition engine —
+ * the same decision both sides read, so an exit and its entrance agree. The
+ * paper ground follows the same rules as the vox engine's turn: an opaque
+ * beat fills the frame itself, a dark hook washes black, an image bed running
+ * underneath draws no page at all.
+ */
+const BeatCard: React.FC<{
   dur: number;
   first: boolean;
   last: boolean;
   opaque: boolean;
   dark: boolean;
+  enter: TransitionKind;
+  exit: TransitionKind;
   children: React.ReactNode;
-}> = ({ dur, first, last, opaque, dark, children }) => {
+}> = ({ dur, first, last, opaque, dark, enter, exit, children }) => {
   const frame = useCurrentFrame();
-  const { height } = useVideoConfig();
+  const { width } = useVideoConfig();
   const io = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
   const soft = Easing.bezier(0.22, 1, 0.36, 1);
 
-  // The opening beat turns onto nothing, so a turn-in leaves frame 0 blank —
-  // and frame 0 is the still the feed shows before anyone presses play. The
-  // hook is already on screen; only the beats after it turn.
-  const enter = first ? 1 : interpolate(frame, [0, TURN], [0, 1], { ...io, easing: soft });
-  const exit = last
-    ? 0
-    : interpolate(frame, [dur, dur + TURN], [0, 1], { ...io, easing: Easing.linear });
+  // ---- entrance -----------------------------------------------------------
+  // The opening beat is already on screen: frame 0 is the still the feed
+  // shows before anyone presses play.
+  let opacity = 1;
+  let translateX = 0;
+  let scale = 1;
+  let clip = 1; // 1 = fully revealed, 0 = fully clipped
+  let card = 0; // color-card scaleX: 1 covers the screen, 0 has revealed
+  if (!first) {
+    switch (enter) {
+      case "hard":
+        break;
+      case "whip": {
+        const p = interpolate(frame, [0, WHIP_FRAMES], [0, 1], { ...io, easing: soft });
+        opacity = p;
+        translateX = (1 - p) * width * 0.18;
+        break;
+      }
+      case "doc":
+      case "dir": {
+        // A document or direction wipe: the new scene is revealed left to
+        // right, the way a panel slides across the desk.
+        clip = interpolate(frame, [0, WIPE_FRAMES], [0, 1], { ...io, easing: soft });
+        break;
+      }
+      case "match": {
+        // Graphic match: the incoming collage settles over the outgoing one,
+        // sharing the same screen position so the cut reads as continuity.
+        const p = interpolate(frame, [0, MATCH_FRAMES], [0, 1], { ...io, easing: soft });
+        opacity = Math.min(1, p * 1.35);
+        scale = 1 + (1 - p) * 0.02;
+        break;
+      }
+      case "color": {
+        card = interpolate(frame, [0, COLOR_FRAMES], [1, 0], { ...io, easing: soft });
+        break;
+      }
+    }
+  }
+
+  // ---- exit ---------------------------------------------------------------
+  let exitOpacity = 1;
+  let exitX = 0;
+  if (!last) {
+    switch (exit) {
+      case "whip": {
+        const p = interpolate(frame, [dur, dur + WHIP_FRAMES], [0, 1], {
+          ...io,
+          easing: Easing.linear,
+        });
+        exitOpacity = 1 - p;
+        exitX = p * width * 0.18;
+        break;
+      }
+      default:
+        break; // the incoming beat carries the wipe; this one ends clean
+    }
+  }
 
   return (
     <AbsoluteFill
       style={{
-        opacity: enter * (1 - exit),
-        transform: `translateY(${
-          (1 - enter) * height * 0.035 - exit * height * 0.025
-        }px)`,
+        opacity: opacity * exitOpacity,
+        transform: `translateX(${translateX + exitX}px) scale(${scale})`,
+        transformOrigin: "left center",
+        clipPath: clip < 1 ? `inset(0 ${(1 - clip) * 100}% 0 0)` : undefined,
       }}
     >
       {/* With an image bed running underneath, a page draws no ground of its
@@ -82,6 +181,17 @@ const Turn: React.FC<{
       ) : HAS_BED ? null : (
         <PaperBG />
       )}
+      {/* The color card: a full-screen accent sheet sits over the previous
+          scene, then sweeps off to reveal this one. */}
+      {!first && enter === "color" ? (
+        <AbsoluteFill
+          style={{
+            backgroundColor: scam.accent,
+            transform: `scaleX(${card})`,
+            transformOrigin: "left center",
+          }}
+        />
+      ) : null}
       {children}
     </AbsoluteFill>
   );
@@ -174,17 +284,19 @@ export const ScamDoc: React.FC<{ cut?: "short" | "long" }> = () => {
               key={beat.n}
               name={`${beat.n}. ${beat.name}`}
               from={Math.round(beat.start * fps)}
-              durationInFrames={last ? dur : dur + TURN}
+              durationInFrames={last ? dur : dur + EXIT_FRAMES[TRANS[i + 1]]}
             >
-              <Turn
+              <BeatCard
                 dur={dur}
                 first={i === 0}
                 last={last}
                 opaque={SCAM_ARCHIVAL.has(beat.module)}
                 dark={dark}
+                enter={TRANS[i]}
+                exit={TRANS[i + 1]}
               >
                 <Scene dur={dur} beat={beat} words={take ? take.words : []} />
-              </Turn>
+              </BeatCard>
             </Sequence>
           );
         })}

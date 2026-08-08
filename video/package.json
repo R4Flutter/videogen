@@ -39,12 +39,16 @@
     "render:short": "remotion render CrimeShort out/crime-short.mp4",
     "render:scam": "remotion render ScamShort out/scam.mp4",
     "render:scam:long": "remotion render ScamLong out/scam-long.mp4",
+    "render:vox": "remotion render VoxExplain out/vox.mp4",
+    "render:vox:essay": "remotion render VoxEssay out/vox-essay.mp4",
     "chat-mockups": "..\\.venv\\Scripts\\python.exe ../tools/chat-mockup.py",
     "transfer-mockups": "..\\.venv\\Scripts\\python.exe ../tools/transfer-mockup.py",
     "preview": "remotion render CrimeLong out/preview.mp4 --frames=0-899",
     "episode": "npm run story && npm run voice && npm run align && npm run footage && npm run lint && npm run render",
     "reel": "npm run story && npm run voice -- --track short && npm run align -- --track short && remotion render CrimeShort ../final.mp4",
-    "episode:scam": "npm run story && npm run voice && npm run align && npm run chat-mockups && npm run transfer-mockups && npm run footage && npm run imagebed && npm run lint && npm run render:scam"
+    "episode:scam": "npm run story && npm run voice && npm run align && npm run chat-mockups && npm run transfer-mockups && npm run footage && npm run imagebed && npm run lint && npm run render:scam",
+    "script:vox": "node ../tools/parse-script.mjs script_vox.md src/script.json",
+    "episode:vox": "npm run script:vox && npm run voice && npm run align && npm run footage && npm run lint && npm run render:vox"
   },
   "sideEffects": [
     "*.css"
