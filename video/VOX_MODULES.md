@@ -129,25 +129,126 @@ fewer cards, not a broken frame.
 
 ## Where pictures come from
 
-The script already says which source it wants — you choose by picking a row:
+**You make them.** The pipeline does not generate images.
 
-| Row | Source | Best at | Useless at |
-|---|---|---|---|
-| `Footage` | **Wikimedia Commons** — no key, 3000–5000px, CC/PD | objects, places, machines, money, documents, transport | app screenshots, modern UI, abstractions |
-| `Image Prompt` | **pollinations.ai** — no key, generated | staged editorial compositions, anything abstract | photographic realism (576px cap, one small model) |
-| *neither* | mockup tools (`chat-mockup.py`, `transfer-mockup.py`) | chat threads, transfer screens | anything not a UI |
+```
+npm run prompts    # -> video/prompts/ (10 prompts per file)   prompts only, nothing else
+                   # -> prompts/files.txt   which prompt becomes which file
+npm run footage -- --import <folder>   # numbered batch output -> slot names
+npm run footage                        # scan the folder, rebuild the manifest
+```
 
-Commons is an encyclopedia, not a stock library — it is excellent on things that
-exist and blind to "a TikTok-style video grid". For screen beats, draw the
-interface with the mockup tools rather than hunting for a photograph of one.
+`video/prompts/` holds `01.md`, `02.md`, … — **ten prompts to a file**, and
+**prompts and nothing else**: a prompt, its negative on the next line, a blank
+line, the next block. No headings, no filenames, no prose — a block is pasted
+straight into a generator, and anything sitting above a prompt gets pasted in
+with it.
 
-A `Footage` row that finds nothing usable falls through to the generator rather
-than staging an unrelated photograph — Commons will always return *something*,
-and a confident wrong picture is worse than a generated one.
+```
+<prompt 1>
+Negative prompt: <negative>
 
-**Attribution is not optional.** Photographs are written to
+<prompt 2>
+Negative prompt: <negative>
+```
+
+Three framings are written per beat — establishing, detail, context — and the
+engine cross-fades through all three across the beat, so a beat that holds for
+eight seconds is three moves rather than one still.
+
+Which prompt fills which slot is in `prompts/files.txt`, in the same order, so
+save the generated images into `video/public/footage/` under these names:
+
+```
+1  beat-2.jpg        beat 2 THE PIVOT (establishing)
+2  beat-2-2.jpg      beat 2 THE PIVOT (detail)
+3  beat-2-3.jpg      beat 2 THE PIVOT (context)
+```
+
+`npm run footage -- --import <folder>` does that mapping for you: it reads the
+index, takes the numbered files in order, and copies them into
+`public/footage/` under the right slot names.
+
+Both files regenerate from the script every run, so they are never out of step
+with the beats. Beats that need no photograph are printed to the console, not
+written into either file.
+
+Three framings per beat — establishing, detail, context — because a collage of
+three near-identical photographs is one photograph printed three times.
+
+| Row on the beat | What the sheet does |
+|---|---|
+| `Image Prompt` | uses your art direction **as written** — its palette and framing win, and only a reframe line is added for slots 2 and 3 |
+| `Footage` | builds a full prompt around that subject in the house style |
+| *neither, but a photo module* | builds one from the `Visual` line, direction stripped |
+
+Beats that need no photograph are listed at the end of the sheet with what they
+stage instead, so "this beat draws itself" is never confused with "this beat was
+skipped".
+
+### Optional: real photographs instead
+
+`npm run footage -- --commons` fills any **still-empty** slot that has a
+`Footage` row from Wikimedia Commons — no key, no signup, 3000–5000px, CC/PD. It
+never overwrites a file you put there. Commons is an encyclopedia rather than a
+stock library: excellent on objects, places, machines and documents, blind to
+app screenshots. For screen beats use the mockup tools (`chat-mockup.py`,
+`transfer-mockup.py`), which draw the interface instead of hunting for a photo of
+one.
+
+**Attribution is not optional.** Anything taken from Commons is written to
 `video/src/credits.json` with artist, licence and source URL. Most of Commons is
 CC-BY; paste that file into the video description before publishing.
+
+Generation used to run here through pollinations.ai and was removed: their free
+tier now serves one small model and caps output at 576×1024 whatever you ask
+for, which is an upscale on a 1080-wide card.
+
+### How a still is staged (and why it used to just zoom)
+
+A **clip** and a **still** are not the same frame and no longer take the same
+path. `isClip()` decides, on the file extension, and `ArchivalBG` dispatches:
+
+| | Clip (`.mp4`) | Still (`.jpg` / `.png`) |
+|---|---|---|
+| Stages as | full-bleed `cover`, graded, vignetted | `EditorialStill` — a plate on the page |
+| The page | covered | visible, and still the brand |
+| Type | white, shadowed, centred | ink, in the zone the prompt sheet reserved |
+| Motion | pan + 1.16 → 1.02 | three planes translating, **no scale at all** |
+
+Everything used to go down the left column, and that is the whole reason a
+generated image rendered as a slow zoom:
+
+1. `VoxShort.tsx` gave the beat a page-wide camera ramp **and** `ArchivalBG`
+   ran its own 1.16 → 1.02 inside it. Two zooms multiply. The picture modules
+   are on `[1.0, 1.0]` now, alongside `trace`/`trust`/`funnel`/`map`.
+2. A flat rectangle has nothing behind it to move against, so drift on it is a
+   camera move by definition. `EditorialStill` puts the paper on a far plane,
+   a printer's rule on a middle one and the picture on the near one, moving at
+   1 : 0.38 : 0.12 — and the headline counter-moves at −0.34. The depth is the
+   rate difference, exactly as `PaperBG` has always worked.
+3. `cover` cropped away the negative space the prompt sheet had just finished
+   reserving for type, and the wash and vignette buried the paper.
+4. With `footage.json` empty — the state a slot is in until its file is named
+   correctly — the old path staged the beat as a *zooming vignette*. So a
+   missing picture and a badly-staged one looked identical. An empty slot now
+   stays a bare page.
+
+**The free cut-out.** The generated ground *is* the page colour, because the
+style line says so. A `.jpg` is composited with `mix-blend-mode: darken`, which
+keeps whichever of picture and page is darker — so the ground disappears into
+the paper with no preprocessing at all. It holds on a flat ground and leaves a
+faint haze where the generator shaded one.
+
+```
+npm run plate      # beat-N.jpg -> beat-N.png, ground alpha-keyed
+npm run footage    # rebuild the manifest so the .png is picked up
+```
+
+`tools/plate.py` is the real version: it floods the ground from the borders,
+writes a transparent PNG, and refuses the job rather than guessing when the cut
+takes under 4% or over 93% of the frame. A `.png` is composited with no blend,
+so it can overlap anything. Optional — `darken` is the default for a reason.
 
 ---
 
@@ -265,16 +366,22 @@ different `emphasis` regex to `KineticText` to override it per beat.
 
 ```
 npm run script:vox     # script_vox.md -> src/script.json
+npm run prompts        # -> video/prompts/ (10 prompts per file), one prompt per image slot
 npm run voice          # TTS (local Chatterbox)
 npm run align          # word-level timing -> src/voice.json
-npm run footage        # images via pollinations.ai — free, no key
-npm run check          # parser contract, both engines, against fixtures
+npm run footage        # scan public/footage, rebuild the manifest
+npm run check          # parser + prompt-sheet contract, both engines
 npm run lint           # eslint + tsc
 npm run render:vox     # -> out/vox.mp4
 
 npm run episode:vox    # all of the above
 ```
 
+`episode:vox` runs straight through, so the first pass renders with whatever
+imagery is already on disk. Generate from `video/prompts/`, drop the files in,
+and run it again — `npm run footage` picks them up and nothing else changes.
+
 Every dependency in that chain is free and unmetered: Remotion renders locally,
-Chatterbox speaks locally, Whisper aligns locally, the map geometry is public
-domain and bundled, and pollinations.ai needs no key.
+Chatterbox speaks locally, Whisper aligns locally, and the map geometry is
+public domain and bundled. The only step that leaves the machine is the optional
+`--commons` fetch.

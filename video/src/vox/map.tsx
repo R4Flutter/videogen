@@ -23,8 +23,9 @@ import {
 import type { GeoProjection } from "d3-geo";
 import type { Feature, FeatureCollection, Geometry } from "geojson";
 import { theme } from "../theme";
-import { DrawIn, Kicker } from "./elements";
-import { useMargin, VoxSceneProps } from "./scenes";
+import { DrawIn } from "./elements";
+import { useLayout } from "./layout";
+import { PageHead, VoxSceneProps } from "./scenes";
 import worldData from "./world.json";
 
 const vox = theme.vox;
@@ -98,7 +99,7 @@ const along = (
 export const MapScene: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const { width, height, pad } = useMargin();
+  const { width, height, pad, y: band, primaryH } = useLayout();
 
   const globe = /globe|world|planet|orbit/i.test(
     beat.visual + " " + (beat.motion ?? ""),
@@ -153,8 +154,8 @@ export const MapScene: React.FC<VoxSceneProps> = ({ dur, beat }) => {
         .rotate([-lon, -lat])
         .fitExtent(
           [
-            [pad * 1.4, height * 0.2],
-            [width - pad * 1.4, height * 0.2 + (width - pad * 2.8)],
+            [pad * 1.4, band.primary],
+            [width - pad * 1.4, band.primary + Math.min(primaryH, width - pad * 2.8)],
           ],
           { type: "Sphere" },
         );
@@ -163,8 +164,8 @@ export const MapScene: React.FC<VoxSceneProps> = ({ dur, beat }) => {
       // hand back an infinite scale. Fit the country it sits in instead — and
       // failing that, the region around it.
       const extent: [[number, number], [number, number]] = [
-        [pad * 1.6, height * 0.24],
-        [width - pad * 1.6, height * 0.66],
+        [pad * 1.6, band.primary],
+        [width - pad * 1.6, band.annotation],
       ];
       const degenerate = inked.length === 0 && pins.length < 2;
       projection = geoMercator().fitExtent(
@@ -174,8 +175,8 @@ export const MapScene: React.FC<VoxSceneProps> = ({ dur, beat }) => {
     } else {
       projection = geoNaturalEarth1().fitExtent(
         [
-          [pad, height * 0.26],
-          [width - pad, height * 0.64],
+          [pad, band.primary],
+          [width - pad, band.annotation],
         ],
         { type: "Sphere" },
       );
@@ -197,7 +198,7 @@ export const MapScene: React.FC<VoxSceneProps> = ({ dur, beat }) => {
       sphere: path({ type: "Sphere" }) ?? "",
       centre: (framed
         ? path.centroid(subject)
-        : [width / 2, height * 0.45]) as [number, number],
+        : [width / 2, band.primary + primaryH / 2]) as [number, number],
       dots: pins.map((p) => ({
         name: p.name,
         at: (projection([p.lon as number, p.lat as number]) ?? [0, 0]) as [
@@ -206,7 +207,7 @@ export const MapScene: React.FC<VoxSceneProps> = ({ dur, beat }) => {
         ],
       })),
     };
-  }, [beat.places, globe, width, height, pad]);
+  }, [beat.places, globe, width, pad, band, primaryH]);
 
   // The zoom. It opens wide and closes on the subject over most of the beat,
   // leaving the last stretch still so the frame can be read rather than chased.
@@ -459,34 +460,7 @@ export const MapScene: React.FC<VoxSceneProps> = ({ dur, beat }) => {
         );
       })}
 
-      <div
-        style={{
-          position: "absolute",
-          left: pad,
-          top: pad * 1.6,
-          width: width - pad * 2,
-        }}
-      >
-        <Kicker text={beat.name} enter={frame - 4} />
-        {beat.text ? (
-          <div
-            style={{
-              marginTop: pad * 0.4,
-              fontWeight: 800,
-              fontSize: width * (beat.text.length > 22 ? 0.058 : 0.072),
-              lineHeight: 1.05,
-              letterSpacing: -width * 0.002,
-              color: vox.ink,
-              opacity: interpolate(frame, [2, 16], [0, 1], {
-                extrapolateLeft: "clamp",
-                extrapolateRight: "clamp",
-              }),
-            }}
-          >
-            {beat.text}
-          </div>
-        ) : null}
-      </div>
+      <PageHead kicker={beat.name} headline={beat.text} frame={frame} />
 
       {/* The destination gets marked by hand, the same way every other module in
           this kit says "this one". Only once the route has actually arrived. */}

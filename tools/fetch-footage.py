@@ -1,46 +1,40 @@
-"""script.json -> stills in video/public/footage/, free and unkeyed.
+"""video/public/footage/ -> video/src/footage.json. Images come from you.
 
-    python tools/fetch-footage.py [--force] [--dry] [--only N] [--seed K]
+    python tools/fetch-footage.py [--commons] [--dry] [--only N] [--force]
 
-VARIANTS images per beat whose module puts a picture on screen, named
-beat-N.jpg, plus a manifest at video/src/footage.json that the engines read.
-Idempotent: a beat whose image is on disk is skipped, so re-running after a
-script edit only fetches what changed. `--dry` prints the routing and fetches
-nothing.
+This tool does not generate images and does not call an image model. It scans
+the footage folder, works out which slot each file fills, and writes the
+manifest the engines read. Drop a picture in, run it, the picture is in the
+video; delete a picture, run it, the beat stages without it.
 
-Two sources, and the script already says which one it wants:
+The images themselves are made from `video/prompts/`:
 
-  **Footage:**       a thing that exists   -> Wikimedia Commons, photographed
-  **Image Prompt:**  something staged      -> pollinations.ai, generated
+    npm run prompts     # script.json -> one detailed prompt per image slot
+    ...generate them wherever you like, save under the printed filename...
+    npm run footage     # scan the folder, rebuild the manifest
 
-Commons needs no key and no signup, has no quota worth the name, and serves
-3000-5000px originals. The generator is the fallback: pollinations' anonymous
-tier now offers one small model and caps output at 576px, so for anything that
-exists in the world a real photograph beats a generated one on every axis,
-including honesty. The generator keeps the beats Commons cannot do — the
-abstract ones, and the staged editorial compositions an author art-directs.
+Generation used to happen here, through pollinations.ai. It was removed: their
+free tier now serves one small model and caps output at 576x1024 whatever you
+ask for, which is an upscale on a 1080-wide card. A prompt sheet and a good
+generator beats an automated pipeline into a weak one.
 
-Commons is an encyclopedia, not a stock library. It is excellent on objects,
-places, machines and documents, and useless on app screenshots and modern UI —
-for those use the mockup tools (chat-mockup.py, transfer-mockup.py), which draw
-the interface rather than hunting for a photograph of one.
+`--commons` is optional and off by default. It fills any *still empty* slot on a
+beat with a `**Footage:**` row from Wikimedia Commons: no key, no signup, no
+quota worth the name, 3000-5000px originals. It never overwrites a file you put
+there. Commons is an encyclopedia rather than a stock library — excellent on
+objects, places, machines and documents, useless on app screenshots and modern
+UI, and for those the mockup tools (chat-mockup.py, transfer-mockup.py) draw the
+interface instead of hunting for a photograph of one.
 
-Photographs carry attribution into video/src/credits.json. Most of Commons is
-CC-BY: that file is a licence obligation, not a nicety.
+Photographs taken from Commons carry attribution into video/src/credits.json.
+Most of Commons is CC-BY: that file is a licence obligation, not a nicety.
 
-The prompt is the storyboard the author already wrote. VISUAL lines are written
-for a human ("Camera pushes closer. Music cuts."), so direction is stripped and
-what is left is what is actually in the frame.
-
-Nothing generated here is case material. STYLE/NEGATIVE forbid faces and forbid
-anything that reads as evidence, and the engine tags every one of these frames
-illustrative — but generation is not deterministic, so the batch still gets
-looked at. Re-roll a bad one with:  --only 7 --force --seed 91
+Nothing here is case material. Whatever you generate, the engine tags these
+frames illustrative — so the batch still gets looked at before a render.
 """
 
 import argparse
 import json
-import os
 import re
 import sys
 import time
@@ -50,8 +44,6 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-from vox_prompts import CURATED_FOR, PROMPTS as CURATED
-
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPT = ROOT / "video/src/script.json"
 OUT = ROOT / "video/public/footage"
@@ -60,69 +52,26 @@ MANIFEST = ROOT / "video/src/footage.json"
 # courtesy. Every stock frame records who made it so the credit can be pasted
 # into the video description.
 CREDITS = ROOT / "video/src/credits.json"
+# Written by tools/scene-prompts.mjs: which prompt, in order, becomes which
+# slot. --import reads it rather than re-deriving the order.
+INDEX = ROOT / "video/prompts/files.txt"
 
-API = "https://image.pollinations.ai/prompt/{}"
-MODELS_API = "https://image.pollinations.ai/models"
-# Resolved at run time. It used to be hardcoded to "flux", which pollinations
-# retired — the service silently served whatever its default was, so the whole
-# pipeline had quietly been running on a model nobody chose.
-MODEL = "sana"
-UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
 # Wikimedia asks for a descriptive agent that identifies the tool. Sending a
 # browser string to their API is how a project gets blocked.
 WIKI_API = "https://commons.wikimedia.org/w/api.php"
 WIKI_UA = "crime-doc-pipeline/1.0 (educational documentary; local render tool)"
-# Generation runs one request at a time. Measured, not guessed: four concurrent
-# requests returned one image anonymously and two with a token, and even two
-# lanes with a token still lost a slot to 429 — which is a beat staging two
-# clippings instead of three. Serial takes longer and finishes 3/3.
-WORKERS = 1
 # Commons downloads are plain file GETs and tolerate a couple.
 STOCK_WORKERS = 2
-TIMEOUT = 180  # generation, not download: a cold queue can sit for a minute
-BACKOFF = 8  # seconds to wait after a 429/500 before the retry round
+BACKOFF = 8  # seconds to wait after a 429 before the retry round
 # Anything smaller is a thumbnail, and a thumbnail upscaled to a 1080-wide card
 # is worse than no picture.
 MIN_STOCK_PX = 1100
 
-# The Vox master image style suffix, appended to every prompt. The first two
-# clauses are the legal line: no real person's face, nothing that reads as
-# evidence. Then the world-class editorial documentary system: archival
-# photography and crisp cutouts on flat geometric information graphics, the
-# 70/20/10 palette (off-white paper / charcoal / one accent), magazine-grid
-# composition with one hero and reserved negative space. The engine draws its
-# own type, so the "no text" clause stays; the negative constraints forbid the
-# generic-AI tells.
-#
-# Positive only. Everything this style must NOT contain lives in NEGATIVE and is
-# sent as `negative_prompt` — a diffusion model does not parse negation, so
-# "no text, no lettering, no watermark" in the positive prompt is three more
-# votes for text, lettering and a watermark. Roughly 40% of the old suffix was
-# negations, which is most of why the results looked the way they did.
-#
-# Short, too. The old suffix was 877 characters of style on top of the author's
-# art direction; past a couple of hundred characters the model averages the
-# whole thing into mush instead of following the front of it.
-STYLE = (
-    "editorial documentary illustration, flat frontal perspective, "
-    "warm off-white paper ground, charcoal grayscale photographic subject, "
-    "one mustard yellow accent shape, magazine grid composition, "
-    "generous negative space, screenprint texture, high contrast, crisp edges"
-)
-
-NEGATIVE = (
-    "text, lettering, words, captions, labels, signage, logo, watermark, signature, "
-    "face, portrait, crowd, cartoon, anime, 3d render, glossy, cinematic lighting, "
-    "lens flare, bokeh, gradient, clutter, arrows, charts, low quality, blurry, "
-    "jpeg artifacts, deformed, extra limbs"
-)
-
 # Modules that stage a photograph behind (or as) the frame. The scam engine's
 # chat/transfer beats own their imagery — chat-mockup.py and transfer-mockup.py
 # draw it — but they stay in the list so a beat with no mockup yet still counts
-# as an image beat and `prompt()` can fall back to a generic photo instead of
-# leaving a bare page. A scam `footage` beat (the image_prompt row) is a
-# photograph by construction.
+# as an image slot instead of quietly going missing from the report. Must match
+# WANTS in tools/scene-prompts.mjs, which writes a prompt for every slot here.
 WANTS = {
     "caseOpen",
     "cctv",
@@ -143,27 +92,15 @@ WANTS = {
     "collage",
 }
 
-# A second frame of the same beat, seeded differently, so the scene can crossfade
-# between two collages mid-beat — the image changes every few seconds, which is
-# the pace a professional explainer holds. Seed offset must not collide with the
-# retry offset (attempt * 1000) or with the --seed re-roll space.
+# Frames per beat. The collage lays each one out as its own clipping, and a beat
+# that holds for eight seconds on one picture dies on screen. Must match
+# VARIANTS in tools/scene-prompts.mjs, which writes the prompt for each slot.
 VARIANTS = 3
-VARIANT_SEED = 5000
 
 # The mockup tools render these themselves; a generated photo is only the
 # fallback when the mockup is missing, so it never counts toward the imagery
 # budget the manifest reports.
 MOCKUP_OWNED = {"chat", "transfer"}
-
-# A storyboard sentence about the edit, the sound, the layout or the on-screen
-# type is not a thing in the frame. These are the words that mark one.
-DIRECTION = re.compile(
-    r"\b(camera|cuts?|music|sfx|audio|beat|hold|frame|shot|zoom|push(es)?|pull(s)?|"
-    r"pan(s)?|silence|hum|drone|types?|title|caption|text|screen|split|left|right|"
-    r"cent(er|re)|graphic|card|enters?|slams?|appears?|surfaces?|large|small|"
-    r"visuali[sz]ation|diagram|overlay|vs\.?)\b",
-    re.I,
-)
 
 # Words that would make an image model draw the crime rather than the room it
 # happened in. PART 8 of the plan is a hard rule, and a style suffix asking nicely
@@ -173,146 +110,6 @@ CHARGED = re.compile(
     r"bod(y|ies)|corpse|blood\w*|child\w*|kids?|girls?|boys?|famil(y|ies))\b",
     re.I,
 )
-
-
-def prompt(beat: dict) -> str | None:
-    """What is in this frame, as something a diffusion model can safely draw.
-
-    None when the storyboard was all direction and nothing survives — better a
-    beat with no picture than a picture the engine had to invent the subject of.
-
-    Art direction is taken in the order it can be trusted:
-
-      1. the beat's own `**Image Prompt:**` row, written in the script — the
-         only place hand art-direction belongs, because it travels with the
-         story that owns it;
-      2. the curated table, but only for the one script it was written against
-         (see CURATED_FOR) — keyed by beat number alone it would paint the
-         previous documentary's beat 2 onto every new story's beat 2;
-      3. the storyboard's own Visual/Footage rows, stripped of direction.
-
-    1 and 2 are art-directed (left/right/scale/negative-space are intentional
-    there) so only the CHARGED safety net applies to them.
-    """
-    curated = beat.get("image_prompt") or (
-        CURATED.get(beat["n"], "") if beat.get("_curated_ok") else ""
-    )
-    if curated:
-        base = curated
-        # Defensive net only: the curated prompts are hand-checked, but the
-        # charge words never go through even by accident.
-        words = [
-            w for w in re.split(r"[\s,:;]+", base) if not CHARGED.search(w)
-        ]
-        base = " ".join(words).strip(" .:,")
-        return f"{base}, {STYLE}" if len(base) >= 12 else None
-
-    # Bold lines are the on-screen type. They must not end up drawn into the
-    # picture — the engine renders that type itself, in the right font.
-    visual = re.sub(r"\*\*.+?\*\*", " ", beat.get("visual", ""))
-    # Storyboards are written with typographic dashes and arrows. They mean
-    # nothing to the model, and a Windows console cannot print them.
-    visual = visual.replace("—", ", ").replace("–", ", ")
-    visual = visual.encode("ascii", "ignore").decode()
-    kept = [
-        s.strip()
-        for s in re.split(r"(?<=[.?!])\s+", visual)
-        if s.strip() and not DIRECTION.search(s)
-    ]
-    base = " ".join(kept)
-    # The parser's own keywords come out of the narration, so they are the least
-    # trustworthy source and only get used when the storyboard left nothing.
-    if len(base.strip(" .:,")) < 12:
-        base = beat.get("footage", "")
-
-    # Every real name in this story is a real person: a victim, a relative, an
-    # investigator, the man convicted of it. None of them is a subject to hand
-    # to an image generator. Anything the narration capitalised mid-sentence is
-    # treated as one and dropped — over-removal is the safe direction.
-    named = {w.lower() for w in re.findall(r"\b[A-Z][a-z]{2,}", beat.get("vo", ""))}
-    words = [
-        w
-        for w in re.split(r"[\s,:;]+", base)
-        if w.strip(".") and w.lower().strip(".") not in named and not CHARGED.search(w)
-    ]
-    base = " ".join(words).strip(" .:,")
-    return f"{base}, {STYLE}" if len(base) >= 12 else None
-
-
-def token() -> str:
-    """The pollinations API token, from the environment or a gitignored .env.
-
-    Measured, so nobody has to wonder what it bought: it does **not** raise
-    image quality. With and without it the service returns the same `sana`
-    model, the same 576x1024 cap, and byte-identical output for a given seed.
-    What it buys is throughput — four concurrent requests got one image
-    anonymously and two with the token — which means fewer slots lost to 429
-    and a beat that stages the number of clippings it asked for.
-
-    Never inline the value here. A token in the source is a token in the git
-    history, and deleting it later does not remove it from the history.
-    """
-    if os.environ.get("POLLINATIONS_TOKEN"):
-        return os.environ["POLLINATIONS_TOKEN"]
-    env = ROOT / ".env"
-    if env.exists():
-        for line in env.read_text(encoding="utf8").splitlines():
-            key, _, value = line.partition("=")
-            if key.strip() == "POLLINATIONS_TOKEN":
-                return value.strip().strip("\"'")
-    return ""
-
-
-def _headers() -> dict:
-    """Pollinations 403s urllib's default User-Agent, so one is always sent. The
-    token goes in the header rather than the query string: a `?token=` lands in
-    every proxy and server log it passes through."""
-    head = {"User-Agent": UA}
-    if token():
-        head["Authorization"] = f"Bearer {token()}"
-    return head
-
-
-def pick_model() -> str:
-    """Whatever the service actually serves today, preferring the strongest.
-
-    Hardcoding a model name is how this pipeline spent months asking for `flux`
-    after it was retired and silently getting the house default instead.
-    """
-    try:
-        req = urllib.request.Request(MODELS_API, headers=_headers())
-        with urllib.request.urlopen(req, timeout=30) as res:
-            available = json.loads(res.read())
-        names = [m["name"] if isinstance(m, dict) else m for m in available]
-    except Exception:
-        return MODEL
-    for want in ("flux", "flux-dev", "turbo", "seedream", "sana"):
-        if want in names:
-            return want
-    return names[0] if names else MODEL
-
-
-def fetch(text: str, portrait: bool, seed: int, model: str) -> bytes:
-    w, h = (1080, 1920) if portrait else (1920, 1080)
-    query = {
-        "width": w,
-        "height": h,
-        "seed": seed,
-        "model": model,
-        "nologo": "true",
-        # The place negation belongs. In the positive prompt "no text" is a vote
-        # for text; here it is subtracted.
-        "negative_prompt": NEGATIVE,
-    }
-    url = API.format(urllib.parse.quote(text, safe="")) + "?" + urllib.parse.urlencode(query)
-    req = urllib.request.Request(url, headers=_headers())
-    with urllib.request.urlopen(req, timeout=TIMEOUT) as res:
-        data = res.read()
-    # Pollinations answers a failed generation with a page, not an image. Writing
-    # that to beat-7.jpg gives you a broken frame at render time and no clue why.
-    if not data.startswith(b"\xff\xd8") or len(data) < 4096:
-        raise ValueError(f"not a jpeg ({len(data)} bytes)")
-    return data
 
 
 # ---------------------------------------------------------------- stock
@@ -490,30 +287,62 @@ def download(url: str) -> bytes:
     raise RuntimeError("unreachable")
 
 
+def adopt(folder: Path, dry: bool) -> None:
+    """A batch generator's `1.png, 2.png, ...` -> `beat-2.jpg, beat-2-2.jpg, ...`.
+
+    The order comes from prompts/files.txt rather than being recomputed
+    here. That file is written by the same pass that wrote the prompts, so it is
+    the only thing that actually knows which prompt produced which image — a
+    second guess at the ordering is how image three ends up on beat five.
+    """
+    if not INDEX.exists():
+        sys.exit(f"{INDEX} not found - run `npm run prompts` first")
+    slots = [
+        line.split()[1]
+        for line in INDEX.read_text(encoding="utf8").splitlines()
+        if len(line.split()) > 1
+    ]
+    # Sorted by the leading number, numerically: a plain sort puts 10 before 2
+    # and silently shifts every image after the ninth onto the wrong beat.
+    made = sorted(
+        (f for f in folder.iterdir() if f.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}),
+        key=lambda f: (int(m.group()) if (m := re.search(r"\d+", f.stem)) else 0, f.name),
+    )
+    if not made:
+        sys.exit(f"no images in {folder}")
+    if len(made) != len(slots):
+        print(f"  {len(made)} image(s) for {len(slots)} slot(s) - pairing in order, "
+              f"the shorter list wins", file=sys.stderr)
+
+    OUT.mkdir(parents=True, exist_ok=True)
+    for src, name in zip(made, slots):
+        print(f"  {src.name}  ->  {name}")
+        if not dry:
+            # Copied, not moved: a re-import after a bad pairing needs the batch
+            # folder to still be there.
+            (OUT / name).write_bytes(src.read_bytes())
+    print(f"{'would import' if dry else 'imported'} {min(len(made), len(slots))} image(s)\n")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--force", action="store_true", help="re-generate images that exist")
-    ap.add_argument("--dry", action="store_true", help="print the prompts, fetch nothing")
+    ap.add_argument("--commons", action="store_true",
+                    help="fill still-empty slots from Wikimedia Commons")
+    ap.add_argument("--force", action="store_true",
+                    help="with --commons, replace slots that already have a file")
+    ap.add_argument("--dry", action="store_true", help="report only, write nothing")
     ap.add_argument("--only", type=int, action="append", help="just this beat (repeatable)")
-    ap.add_argument("--seed", type=int, default=0, help="offset every seed, to re-roll")
+    ap.add_argument("--import", dest="batch", metavar="DIR",
+                    help="copy a batch generator's numbered output into slot names")
     args = ap.parse_args()
 
+    if args.batch:
+        adopt(Path(args.batch), args.dry)
+
     script = json.loads(SCRIPT.read_text(encoding="utf8"))
-    # The curated table is one story's art direction, keyed by that story's beat
-    # numbers. Applying it to a different script is not a fallback, it is the
-    # wrong picture with no error — so it only unlocks for the script it was
-    # written against. Every other story art-directs in its own `**Image
-    # Prompt:**` rows, or gets a prompt built from its storyboard.
-    curated_ok = Path(script.get("source", "")).name == CURATED_FOR
-    if not curated_ok and CURATED:
-        print(f"curated prompts are for {CURATED_FOR}; this is "
-              f"{Path(script.get('source', '?')).name} - using each beat's own art direction")
-    # Any beat whose author wrote an image_prompt row gets a collage — even the
-    # chat/transfer beats, which layer their mockup over the image. A module in
-    # WANTS with no footage field (crime-engine legacy) still fetches its
-    # generic b-roll. Mockup-owned modules fetch nothing of their own, but the
-    # chat/transfer beats here all carry a footage field, so the mockup-owned
-    # gate only keeps beats that never asked for an image.
+    # Every beat that puts a picture on the page. A mockup-owned beat is listed
+    # too: chat-mockup.py draws its own frame, but a beat with no mockup yet
+    # still counts as an image slot rather than silently going missing.
     beats = [
         b
         for b in script["beats"]
@@ -521,8 +350,6 @@ def main() -> None:
         or b.get("footage")
         or (b.get("module") in WANTS and b.get("module") not in MOCKUP_OWNED)
     ]
-    for b in beats:
-        b["_curated_ok"] = curated_ok
     if args.only:
         beats = [b for b in beats if b["n"] in set(args.only)]
     OUT.mkdir(parents=True, exist_ok=True)
@@ -530,110 +357,63 @@ def main() -> None:
     def slot(n: int, v: int) -> str:
         return f"beat-{n}.jpg" if v == 0 else f"beat-{n}-{v + 1}.jpg"
 
-    # Which source a beat gets. The split is the one the script already makes:
-    # `**Footage:**` names a thing that exists, so photograph it; `**Image
-    # Prompt:**` is art direction for something staged, so draw it. An author
-    # picks by choosing which row to write, and never has to know a model name.
-    stock_jobs, draw_jobs, credits = [], [], []
+    # What the script asked for against what is actually on disk. This is the
+    # whole job now: the pipeline no longer has an opinion about where a picture
+    # came from, only whether one is there.
+    empty = []
     for beat in beats:
-        text = prompt(beat)
-        use_stock = bool(beat.get("footage")) and not (
-            beat.get("image_prompt") or (beat.get("_curated_ok") and beat["n"] in CURATED)
-        )
-        if args.dry:
-            how = f"stock: {beat['footage']}" if use_stock else (text[:90] if text else "(no subject)")
-            print(f"  beat {beat['n']:>3}  [{'commons' if use_stock else 'generate'}] {how}")
-            continue
+        here = [v for v in range(VARIANTS) if (OUT / slot(beat["n"], v)).exists()]
+        gaps = [v for v in range(VARIANTS) if v not in here]
+        mark = "ok " if not gaps else "   "
+        print(f"  {mark}beat {beat['n']:>3}  {len(here)}/{VARIANTS}  {beat['module']}")
+        for v in (range(VARIANTS) if args.force else gaps):
+            empty.append((beat, v))
 
-        missing = [v for v in range(VARIANTS) if args.force or not (OUT / slot(beat["n"], v)).exists()]
-        for v in set(range(VARIANTS)) - set(missing):
-            print(f"  beat {beat['n']:>3}  have {slot(beat['n'], v)}")
-        if not missing:
-            continue
-
-        if use_stock:
+    credits = []
+    # Commons is opt-in. The default run must never write an image file: an
+    # author who generated a frame from video/prompts/ and dropped it in would
+    # not expect a scan to replace it with a stock photograph.
+    wanted = [(b, v) for b, v in empty if b.get("footage")]
+    if args.commons and wanted and not args.dry:
+        jobs = []
+        for beat in {b["n"]: b for b, _ in wanted}.values():
+            slots = [v for b, v in wanted if b["n"] == beat["n"]]
             try:
-                hits = stock(beat["footage"], len(missing))
-            except Exception as err:  # noqa: BLE001 - any network shape means fall back
-                print(f"  beat {beat['n']:>3}  commons search failed ({err}); generating", file=sys.stderr)
-                hits = []
-            for v, hit in zip(missing, hits):
-                stock_jobs.append((beat, v, hit))
-            # Commons ran out of usable matches — the rest of the slots are drawn
-            # rather than left empty.
-            missing = missing[len(hits):]
-            if hits:
+                hits = stock(beat["footage"], len(slots))
+            except Exception as err:  # noqa: BLE001 - any network shape is a miss
+                print(f"  beat {beat['n']:>3}  commons search failed: {err}", file=sys.stderr)
                 continue
-        if text is None:
-            continue
-        for v in missing:
-            # The seed is the beat number (plus a per-variant offset), so a
-            # re-run reproduces the same pictures and only --seed changes them.
-            # An idempotent fetch you can't reproduce is just a cache.
-            draw_jobs.append((beat, v, text, beat["n"] + v * VARIANT_SEED + args.seed))
+            jobs += list(zip([beat] * len(hits), slots, hits))
 
-    if not args.dry and stock_jobs:
-        print(f"\nfetching {len(stock_jobs)} photograph(s) from Wikimedia Commons...")
+        if jobs:
+            print(f"\nfetching {len(jobs)} photograph(s) from Wikimedia Commons...")
 
-        def grab(job):
-            beat, v, hit = job
-            try:
-                return beat, v, hit, download(hit["url"]), None
-            except Exception as err:  # noqa: BLE001
-                return beat, v, hit, None, err
-
-        with ThreadPoolExecutor(max_workers=STOCK_WORKERS) as pool:
-            for future in as_completed(pool.submit(grab, j) for j in stock_jobs):
-                beat, v, hit, data, err = future.result()
-                if err:
-                    print(f"  beat {beat['n']:>3}  FAILED: {err}", file=sys.stderr)
-                    continue
-                name = slot(beat["n"], v)
-                (OUT / name).write_bytes(data)
-                credits.append({"file": name, **{k: hit[k] for k in ("title", "artist", "license", "source")}})
-                print(
-                    f"  beat {beat['n']:>3}  {name}  {hit['px']}  "
-                    f"{_say(hit['license'])}  {_say(hit['title'][:44])}"
-                )
-
-    if not args.dry and draw_jobs:
-        model = pick_model()
-        print(
-            f"\ngenerating {len(draw_jobs)} image(s) via pollinations "
-            f"({model}, one at a time, {'token' if token() else 'anonymous'})..."
-        )
-
-        def one(job):
-            beat, v, text, seed = job
-            # Orientation comes from the composition, not from a beat flag — a
-            # `track: short` beat is a beat of the short cut, not a portrait
-            # frame. On a 16:9 canvas every image is 16:9.
-            portrait = script["height"] > script["width"]
-            # The free tier drops a request now and then, and rate-limits the
-            # moment the queue breathes too fast — wait between the two attempts
-            # so the retry round starts from a calm queue.
-            for attempt in (0, 1, 2):
+            def grab(job):
+                beat, v, hit = job
                 try:
-                    return beat, v, fetch(text, portrait, seed + attempt * 1000, model), None
-                except urllib.error.HTTPError as err:
-                    if err.code in (429, 500, 503):
-                        time.sleep(BACKOFF * (attempt + 1))
-                    last = err
-                except (urllib.error.URLError, ValueError, OSError) as err:
-                    last = err
-            return beat, v, None, last
+                    return beat, v, hit, download(hit["url"]), None
+                except Exception as err:  # noqa: BLE001
+                    return beat, v, hit, None, err
 
-        done = 0
-        with ThreadPoolExecutor(max_workers=WORKERS) as pool:
-            for future in as_completed(pool.submit(one, j) for j in draw_jobs):
-                beat, v, data, err = future.result()
-                done += 1
-                if err:
-                    print(f"  beat {beat['n']:>3}  FAILED: {err}", file=sys.stderr)
-                    continue
-                name = slot(beat["n"], v)
-                (OUT / name).write_bytes(data)
-                print(f"  beat {beat['n']:>3}  {name}  ({done}/{len(draw_jobs)})")
+            with ThreadPoolExecutor(max_workers=STOCK_WORKERS) as pool:
+                for future in as_completed(pool.submit(grab, j) for j in jobs):
+                    beat, v, hit, data, err = future.result()
+                    if err:
+                        print(f"  beat {beat['n']:>3}  FAILED: {err}", file=sys.stderr)
+                        continue
+                    name = slot(beat["n"], v)
+                    (OUT / name).write_bytes(data)
+                    credits.append(
+                        {"file": name, **{k: hit[k] for k in ("title", "artist", "license", "source")}}
+                    )
+                    print(
+                        f"  beat {beat['n']:>3}  {name}  {hit['px']}  "
+                        f"{_say(hit['license'])}  {_say(hit['title'][:44])}"
+                    )
+    elif empty and not args.commons:
+        print(f"\n{len(empty)} empty slot(s). Prompts for them are in video/prompts/")
+        print("  (npm run prompts to regenerate it). --commons fills the ones with")
+        print("  a Footage row from Wikimedia Commons instead.")
 
     # Rebuilt from disk every run over every image beat, so deleting a file is
     # how you drop a frame you did not like, and --only never truncates it.

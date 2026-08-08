@@ -2,6 +2,12 @@
 
     .venv-tts/Scripts/python tools/voice.py [--voice ref.wav]
 
+With no reference, Chatterbox re-invents its speaker on every call — six beats
+sound fine, seventy sound like five people. --voice defaults to
+brand/narrator.wav (built by tools/make-ref-voice.py), so every take in every
+episode inherits one timbre and one tempo unless you explicitly ask for
+another.
+
 Chatterbox pins torch==2.6.0, so it lives in its own venv and never touches the
 interpreter that runs tools/align.py. Writes video/public/audio/vo/beat-N.wav
 plus voice-plan.json (the direction each beat was read with); align.py turns
@@ -20,6 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SCRIPT = ROOT / "video/src/script.json"
 OUT = ROOT / "video/public/audio/vo"
 PLAN = OUT / "voice-plan.json"
+REF = ROOT / "brand/narrator.wav"
 
 # --------------------------------------------------------------- direction
 # Chatterbox exposes exactly two performance dials, so delivery is those two
@@ -118,7 +125,7 @@ def main() -> None:
     from chatterbox.tts import ChatterboxTTS
 
     ap = argparse.ArgumentParser()
-    ap.add_argument("--voice", help="reference wav to clone (7-20s of clean speech)")
+    ap.add_argument("--voice", help="reference wav to clone (default: brand/narrator.wav)")
     # Left unset, each beat uses its own direction from DELIVERY above.
     ap.add_argument("--exaggeration", type=float, help="override energy for every beat")
     ap.add_argument("--cfg", type=float, help="override pace for every beat")
@@ -126,6 +133,15 @@ def main() -> None:
     ap.add_argument("--temperature", type=float, default=0.75)
     ap.add_argument("--seed", type=int, default=7)
     args = ap.parse_args()
+
+    ref = args.voice or (str(REF) if REF.exists() else None)
+    if ref:
+        print(f"reference voice: {ref} — every take clones it")
+    else:
+        print(
+            "no reference voice — every take re-invents the speaker. "
+            "Run tools/make-ref-voice.py once to pin one."
+        )
 
     script = json.loads(SCRIPT.read_text(encoding="utf8"))
     OUT.mkdir(parents=True, exist_ok=True)
@@ -150,7 +166,7 @@ def main() -> None:
         wav = trim(
             model.generate(
                 text,
-                audio_prompt_path=args.voice,
+                audio_prompt_path=ref,
                 exaggeration=energy,
                 cfg_weight=pace,
                 temperature=args.temperature,

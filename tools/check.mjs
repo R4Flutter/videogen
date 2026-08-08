@@ -4,7 +4,7 @@
 // The fixtures are invented cases. They exist so these assertions mean
 // something without a real case having to be correct first.
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import assert from "node:assert/strict";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -150,6 +150,48 @@ for (const b of vox.beats) {
   assert.ok(b.end > b.start, `vox beat ${b.n} has no duration`);
 }
 
+// Every module states a caption policy. Without one, a module that prints its
+// own headline also gets the whole narration printed under it — which is what
+// made a ten-minute cut read as an animated transcript. A new module added
+// without a row here inherits "subtitle" silently, so the table is asserted
+// rather than trusted.
+const scenes = readFileSync(join(root, "video/src/vox/scenes.tsx"), "utf8");
+const policy = scenes.slice(scenes.indexOf("export const CAPTION"));
+for (const m of VOX_MODULES) {
+  assert.match(
+    policy.slice(0, policy.indexOf("};")),
+    new RegExp(`\\b${m}:\\s*"(none|subtitle)"`),
+    `module ${m} has no caption policy in vox/scenes.tsx`,
+  );
+}
+
+// No module invents its own vertical placement any more: the kicker, the
+// headline and the caption band come from vox/layout.ts. `pad * 1.6` was the
+// magic number every module used for "top of the page", and two modules using
+// it with different assumptions about what came next is exactly how the funnel
+// headline ended up printed through the FUNNEL kicker.
+for (const file of readdirSync(join(root, "video/src/vox")).filter((f) => f.endsWith(".tsx"))) {
+  const src = readFileSync(join(root, "video/src/vox", file), "utf8");
+  assert.ok(
+    !/top:\s*pad\s*\*\s*1\.6/.test(src),
+    `${file} still positions off pad * 1.6 — use the band from vox/layout.ts`,
+  );
+}
+
+// The layout maths itself: the grid is ordered, big numbers compact instead of
+// overflowing, and a fitted string measures inside the width it was fitted to.
+execFileSync(
+  process.execPath,
+  ["--experimental-strip-types", "--no-warnings", join(root, "tools/fixtures/layout-check.mts")],
+  { stdio: "inherit" },
+);
+
+// Audio is checked by `npm run audio`, not here. It is deliberately a separate
+// gate: this file guards the story -> script.json contract and runs *before* a
+// take has been read, while the audio spec can only be true after voice.py has
+// finished writing. Wiring it in here would fail the first step of every
+// episode for being out of spec on narration that has not been recorded yet.
+
 // A beat that lists places is a map, whatever its prose says — this is the rule
 // that keeps "the money moves to Dubai" from staging as an abstract flow.
 for (const b of vox.beats) {
@@ -184,6 +226,93 @@ assert.equal(
   "circle",
   "Motion FX saying 'circled' must select the circle mark",
 );
+
+// ---------------------------------------------------------------- prompt sheet
+// The images are made by hand now, so the prompt sheet is the pipeline's actual
+// output for imagery. It must cover every slot the renderer will look for, and
+// it must not hand a person a prompt that fights itself.
+const { sheet, index } = (() => {
+  const script = join(tmpdir(), `vox-check-${process.pid}.json`);
+  // scene-prompts.mjs takes a *directory* and fills it with 01.md, 02.md, … plus
+  // files.txt — ten prompts to a file. This used to hand it a path ending .md
+  // and then read that path back, so the tool created a directory of that name
+  // and the read died on EISDIR before a single assertion ran.
+  const dir = join(tmpdir(), `vox-prompts-${process.pid}`);
+  execFileSync(process.execPath, [join(root, "tools/scene-prompts.mjs"), script, dir]);
+  const sheets = readdirSync(dir)
+    .filter((f) => /^\d+\.md$/.test(f))
+    .sort();
+  return {
+    // The assertions below treat the sheet as one stream of blocks, and a beat's
+    // three framings can straddle a file boundary, so the batch is rejoined.
+    sheet: sheets.map((f) => readFileSync(join(dir, f), "utf8").trim()).join("\n\n"),
+    index: readFileSync(join(dir, "files.txt"), "utf8"),
+  };
+})();
+
+// The sheet is pasted whole into a batch generator, so it must be prompts and
+// nothing else: one line per image with the negative on the same line, blank
+// line between. A heading or a filename in here becomes a prompt, and a line
+// break inside a block makes a generator treat the negative as a second input.
+const blocks = sheet.trim().split(/\n{2,}/);
+for (const block of blocks) {
+  assert.equal(
+    block.split("\n").length,
+    1,
+    `a prompt block must be one line:\n${block.slice(0, 120)}`,
+  );
+  assert.ok(
+    !/^#|^\*|^\||^-{3}/.test(block),
+    `markup leaked into a prompt:\n${block.slice(0, 120)}`,
+  );
+  assert.match(
+    block,
+    / Negative prompt: \S/,
+    "every prompt carries its negative prompt on the same line",
+  );
+}
+
+const VARIANTS = 3;
+const imageBeats = vox.beats.filter(
+  (b) => b.image_prompt || b.footage || ["doodle", "footage", "callout", "collage"].includes(b.module),
+);
+assert.ok(imageBeats.length, "the fixture stages at least one photograph");
+assert.equal(blocks.length, imageBeats.length * VARIANTS, "one prompt per image slot");
+
+// A batch generator returns 1.png, 2.png, 3.png. The index is the only thing
+// that says which of those is beat-2-2.jpg, and a mis-slotted image is a beat
+// staging the wrong picture rather than an obvious error.
+const listed = index.trim().split("\n");
+assert.equal(listed.length, blocks.length, "the index covers every prompt, in order");
+for (const b of imageBeats) {
+  for (let v = 0; v < VARIANTS; v++) {
+    const file = v === 0 ? `beat-${b.n}.jpg` : `beat-${b.n}-${v + 1}.jpg`;
+    assert.ok(index.includes(` ${file} `), `the index is missing ${file}`);
+  }
+}
+
+// Negations belong on the negative line, never in the positive prompt — a
+// diffusion model reads "no text" as a vote for text. Authors write them by
+// habit in an Image Prompt row, so the sheet has to strip them.
+const positives = blocks.map((b) => b.split("\n")[0]);
+for (const line of positives) {
+  assert.ok(
+    !/\bno (text|faces|people|lettering|signage)\b/i.test(line),
+    `a positive prompt still carries a negation:\n${line.slice(0, 160)}`,
+  );
+}
+
+// An authored prompt sets its own palette and its own empty zone. Appending the
+// house style block on top gave one prompt two accent colours and two different
+// negative-space instructions, which is one instruction the model averages away.
+const authored = positives.filter((p) => /deep mustard/i.test(p));
+assert.ok(authored.length, "the fixture has an authored Image Prompt beat");
+for (const line of authored) {
+  assert.ok(
+    !/burnt-orange/i.test(line),
+    "an authored prompt must keep its own accent, not gain a second one",
+  );
+}
 
 console.log(
   `ok — ${long.length} beats + ${short.length} vertical, modules ${[...new Set(long.map((b) => b.module))].join("/")}\n` +

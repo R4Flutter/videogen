@@ -29,6 +29,36 @@ const engine = /^\s*>?\s*(?:\*\*)?style(?:\*\*)?\s*:.*\bvox\b/im.test(md)
   : "finance";
 const landscape = /^\s*>?\s*(?:\*\*)?format(?:\*\*)?\s*:.*\b(landscape|16:9)\b/im.test(md);
 
+// ---------------------------------------------------------------- chapters
+// `## ACT 1 — THE OFFER (0:42–2:10)` opens a chapter; a bare `**Act Hook:**`
+// line inside it is the chapter's promise. This is LEVEL 1 of the three-level
+// long-form structure (chapter -> sequence/beat). The renderer's essay director
+// reads it to pick chapter-boundary transitions and to annotate the chapter
+// cards — a ten-minute film of identical cuts between sections is a slideshow
+// with chapters, which is a longer slideshow.
+const CHAPTER_RE = /^##\s+(.+?)\s*\((\d+:\d+)[–-](\d+:\d+)\)\s*$/gm;
+
+const chapters = [];
+for (const m of md.matchAll(CHAPTER_RE)) {
+  const block = md.slice(m.index + m[0].length).split(/\n## /)[0];
+  chapters.push({
+    name: m[1],
+    start: secs(m[2]),
+    end: secs(m[3]),
+    hook: (block.match(/\*\*Act Hook:\*\*\s*(.+)$/m)?.[1] ?? "").trim(),
+  });
+}
+
+// A beat belongs to the chapter that contains its start. Beats outside every
+// chapter (a fixture with no `##` headings, a beat a script parked after its
+// last chapter) get -1, and the essay director treats them as chapter-less.
+const chapterOf = (start) => {
+  for (let i = chapters.length - 1; i >= 0; i--) {
+    if (start >= chapters[i].start && start < chapters[i].end) return i;
+  }
+  return -1;
+};
+
 // ---------------------------------------------------------------- beats
 const BEAT_RE =
   /^###\s+BEAT\s+(\d+)\s+—\s+(.+?)\s+\((\d+:\d+)[–-](\d+:\d+)\)\s*$/gm;
@@ -174,6 +204,30 @@ for (const m of md.matchAll(BEAT_RE)) {
     // The word the beat turns on, for modules that collapse mid-beat (`trust`).
     // Named by the script so the turn isn't a hardcoded English word.
     beat.turn = rows["turn"] ?? "";
+    // The editorial director's hand-written rows. Every one is optional; the
+    // director (video/src/director) fills what the script leaves blank and an
+    // author's note always beats a guess. They travel on the beat so the
+    // renderer never needs a second file to know what a beat is for.
+    beat.purpose = rows["purpose"] ?? "";
+    beat.chapter = rows["chapter"] ?? "";
+    beat.sequence = rows["sequence"] ?? "";
+    beat.question = rows["question"] ?? "";
+    beat.reveal = rows["reveal"] ?? "";
+    beat.emotion = rows["emotion"] ?? "";
+    if (rows["rest"] !== undefined) {
+      beat.rest = /^(true|yes|1)$/i.test(rows["rest"]) ? true : false;
+    }
+    beat.captionMode = rows["caption mode"] ?? "";
+    beat.revealMode = rows["reveal mode"] ?? "";
+    beat.camera = rows["camera"] ?? "";
+    beat.music = rows["music"] ?? "";
+    beat.silence = rows["silence"] ?? "";
+    const jcut = Number(rows["j-cut"] ?? rows["jcut"] ?? "");
+    if (Number.isFinite(jcut) && jcut !== 0) beat.jcut = jcut;
+    const lcut = Number(rows["l-cut"] ?? rows["lcut"] ?? "");
+    if (Number.isFinite(lcut) && lcut !== 0) beat.lcut = lcut;
+    beat.sfx = rows["sfx"] ?? "";
+    beat.callback = rows["callback"] ?? "";
   }
   beats.push(beat);
 }

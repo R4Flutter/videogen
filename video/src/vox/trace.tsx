@@ -6,19 +6,20 @@ import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { useSemanticCamera } from "../editorial/camera";
 import { theme } from "../theme";
-import { DrawIn, Kicker } from "./elements";
-import { useMargin, VoxSceneProps } from "./scenes";
+import { DrawIn } from "./elements";
+import { fit, useLayout } from "./layout";
+import { PageHead, VoxSceneProps } from "./scenes";
 
 export const Trace: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const { width, height, pad, wide } = useMargin();
+  const { width, height, pad, safeW, wide, y: band, primaryH } = useLayout();
   const vox = theme.vox;
   const { transform } = useSemanticCamera("focus", dur, {
-    x: wide ? pad : pad,
-    y: wide ? height * 0.12 : height * 0.2,
-    w: wide ? width - pad * 2 : width - pad * 2,
-    h: wide ? height * 0.55 : height * 0.52,
+    x: pad,
+    y: band.primary,
+    w: safeW,
+    h: primaryH,
   });
   const rows = beat.data && beat.data.length ? beat.data : [];
   if (rows.length < 2) return null;
@@ -34,19 +35,33 @@ export const Trace: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const n = rows.length;
   const at = (i: number) => (n > 1 ? i / (n - 1) : 0);
   const x0 = wide ? pad * 1.6 : width * 0.42;
-  const y0 = wide ? height * 0.42 : height * 0.3;
-  const len = wide ? width - pad * 3.2 : height * 0.42;
+  // The money rides the middle of the primary band in landscape and runs down
+  // it in portrait — either way it starts below the headline, which is what
+  // the old fixed 42%/30% could not promise once a headline wrapped to two
+  // lines.
+  const y0 = wide ? band.primary + primaryH * 0.45 : band.primary + primaryH * 0.08;
+  const len = wide ? width - pad * 3.2 : primaryH * 0.8;
   const dot = width * 0.02;
   const axis = width * 0.005;
 
   const token: [number, number] = wide ? [x0 + easeP * len, y0] : [x0, y0 + easeP * len];
-  const amountSize = width * 0.05;
+  // What rides the token is an *amount*, and an amount has digits in it. A
+  // script that writes a sentence on the Text row ("The payment clears") was
+  // getting it printed at the token's position in accent 800 — a headline
+  // dragged across the diagram, through the node labels it crossed. A sentence
+  // is a headline, so it goes where headlines go.
+  const money = /\d/.test(beat.text ?? "");
+  const amount = money ? (beat.text as string) : "";
+  // The amount travels with the token, so it may never be wider than the room
+  // left beside the road at the far end of the run.
+  const amountSize = fit(amount, safeW * 0.3, width * 0.05, {
+    weight: 800,
+    family: vox.font,
+  });
 
   return (
     <AbsoluteFill style={{ transform, fontFamily: vox.font }}>
-      <div style={{ position: "absolute", left: pad, top: pad * 1.6 }}>
-        <Kicker text={beat.name} enter={frame - 4} />
-      </div>
+      <PageHead kicker={beat.name} headline={money ? undefined : beat.text} frame={frame} />
 
       {/* The road: a ruled line that draws as the token advances. */}
       <div
@@ -120,10 +135,10 @@ export const Trace: React.FC<VoxSceneProps> = ({ dur, beat }) => {
           fontVariantNumeric: "tabular-nums",
           letterSpacing: -amountSize * 0.02,
           color: vox.accent,
-          opacity: easeP > 0 ? 1 : 0,
+          opacity: easeP > 0 && amount ? 1 : 0,
         }}
       >
-        {beat.text}
+        {amount}
       </div>
       <div
         style={{

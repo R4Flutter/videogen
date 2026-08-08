@@ -5,6 +5,7 @@
 import React from "react";
 import {
   AbsoluteFill,
+  Easing,
   Img,
   interpolate,
   OffthreadVideo,
@@ -18,6 +19,7 @@ import { icons } from "lucide-react";
 import rough from "roughjs";
 import { theme } from "../theme";
 import footage from "../footage.json";
+import { BAND, fitBlock, numberFormat } from "./layout";
 
 // Injects the @font-face rules. If the font server is unreachable the stack in
 // theme.vox.font falls through to a local grotesk and the render still runs.
@@ -151,7 +153,7 @@ export const KineticText: React.FC<{
   emphasis?: RegExp;
   palette?: Palette;
 }> = ({ words, t, mode = "caption", emphasis = STRESS, palette = vox }) => {
-  const { fps, width } = useVideoConfig();
+  const { fps, width, height } = useVideoConfig();
   const hero = mode === "hero";
   const groups = React.useMemo(() => phrases(words, hero ? 6 : 4), [words, hero]);
   if (!groups.length) return null;
@@ -160,11 +162,27 @@ export const KineticText: React.FC<{
     groups.find((g) => t < g[g.length - 1].end) ?? (hero ? groups[groups.length - 1] : null);
   if (!active) return null;
 
-  // Long phrases step down rather than wrap into a wall.
+  // Long phrases step down rather than wrap into a wall — and then get measured,
+  // because the step-down is a guess from character count and a phrase of six
+  // wide words at 0.088 still overruns the page it is set on.
   const chars = active.reduce((n, word) => n + word.w.length + 1, 0);
-  const size = hero
+  const line = active.map((w) => w.w).join(" ");
+  const stepped = hero
     ? width * (chars > 46 ? 0.088 : chars > 30 ? 0.108 : 0.132)
     : width * 0.048;
+  const size = fitBlock(
+    hero ? line.toUpperCase() : line,
+    width * 0.85,
+    // The hero owns the middle of the page; a caption owns one band of it.
+    hero ? height * 0.46 : height * (BAND.bottom - BAND.caption),
+    stepped,
+    {
+      weight: hero ? 800 : 700,
+      family: palette.font,
+      tracking: hero ? -stepped * 0.03 : -stepped * 0.012,
+    },
+    hero ? 0.95 : 1.2,
+  );
 
   return (
     <div
@@ -554,6 +572,10 @@ export const InkChart: React.FC<{
   const { width } = useVideoConfig();
   const id = React.useId().replace(/[^a-zA-Z0-9]/g, "");
   const top = Math.max(...data, 1);
+  // The pen's readout is printed inside the plot, so a seven-figure series has
+  // to compact or it runs into the next label. Chosen from the top of the
+  // series, so every readout on this chart is the same shape.
+  const fmt = numberFormat(top);
   const pts = data.map((v, i) => {
     const px = data.length > 1 ? (i / (data.length - 1)) * w : w / 2;
     return [px, h - (v / top) * h * 0.92] as const;
@@ -630,7 +652,7 @@ export const InkChart: React.FC<{
             fontSize={width * 0.045}
             fill={colors.accent}
           >
-            {num(headValue, unit)}
+            {fmt(headValue, unit)}
           </text>
         </>
       ) : null}
@@ -641,7 +663,11 @@ export const InkChart: React.FC<{
                 key={i}
                 x={pts[i][0]}
                 y={h + width * 0.052}
-                textAnchor="middle"
+                // The end labels range in rather than centring. A centred label
+                // on the first point puts half of itself left of the plot, which
+                // on a chart drawn at the page margin is half of itself off the
+                // canvas — which is exactly where "Earned so far" was going.
+                textAnchor={i === 0 ? "start" : i === pts.length - 1 ? "end" : "middle"}
                 fontFamily={colors.font}
                 fontWeight={700}
                 fontSize={width * 0.026}
@@ -658,8 +684,28 @@ export const InkChart: React.FC<{
 };
 
 // ------------------------------------------------------------------ footage
-/** Whether tools/fetch-footage.py has a clip for this beat. Modules ask so they
- *  can pick a text colour that survives either background. */
+/**
+ * Layered drift. Depth is the whole point: a photograph, the light on it, and
+ * the type over it moving at the same rate is one flat slab sliding, which
+ * looks worse than not moving at all. Give each layer its own depth and the
+ * frame gains the parallax a real camera would have found.
+ *
+ * `depth` 1 = the photograph, ~0.3 = the treatment on it, negative = the ink,
+ * which counter-moves. Seeded by the beat so a page drifts the same way on
+ * every render, and neighbouring beats don't all drift in lockstep.
+ */
+export const useParallax = (seed: number, depth: number) => {
+  const frame = useCurrentFrame();
+  const { width } = useVideoConfig();
+  const amp = width * 0.013 * depth * (seed % 2 ? -1 : 1);
+  return {
+    x: Math.sin((frame + seed * 17) / 190) * amp,
+    y: Math.cos((frame + seed * 11) / 240) * amp * 0.6,
+  };
+};
+
+/** Whether tools/fetch-footage.py has anything at all for this beat. Modules ask
+ *  so they can stage the frame differently when there is a picture in it. */
 export const hasFootage = (beat: number) => Boolean(FOOTAGE[String(beat)]);
 
 /**
@@ -675,6 +721,18 @@ export const beatFrames = (beat: number) =>
     .filter((k) => k === String(beat) || k.startsWith(`${beat}-`))
     .sort((a, b) => a.length - b.length || a.localeCompare(b))
     .map((k) => FOOTAGE[k]);
+
+/**
+ * Whether this beat's pictures are *moving* ones.
+ *
+ * The distinction the engine was missing. A video clip fills and darkens the
+ * frame, so the type goes white and the page is covered. A still does not: it
+ * gets pasted onto the page, the page stays visible, and the type stays ink.
+ * Sending both down the same path is what made every generated image render as
+ * a full-bleed photograph with a slow zoom on it.
+ */
+export const isClip = (beat: number) =>
+  beatFrames(beat).some((src) => /\.(mp4|webm|mov)$/i.test(src));
 
 /**
  * A printer's dot screen. This is what makes a photograph sit *on* the page
@@ -699,25 +757,224 @@ export const Halftone: React.FC<{ size?: number; opacity?: number }> = ({
   />
 );
 
+/** Where the plate sits, as fractions of the canvas. Both leave the zone
+ *  scene-prompts.mjs already reserves for type — the left third and the bottom
+ *  fifth in landscape, the top fifth and the bottom quarter in portrait — so
+ *  the picture lands in the space its own prompt was written to leave empty. */
+const PLATE = {
+  wide: { x: 0.37, y: 0.1, w: 0.57, h: 0.72 },
+  tall: { x: 0.06, y: 0.215, w: 0.88, h: 0.5 },
+};
+
+/** The curve a page arrives on in transitions.tsx. Reused so a plate landing
+ *  and a page turning are recognisably the same hand. */
+const SETTLE = Easing.bezier(0.22, 1, 0.36, 1);
+const CLAMP = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+
 /**
- * Archival clip, graded back towards the page so it sits with the ink instead
- * of fighting it. With no clip downloaded yet the beat still stages — it stays
- * a paper page, which is the honest fallback and still looks deliberate.
+ * A still, staged as a printed plate on the page.
+ *
+ * This is the frame the engine was missing, and its absence is why generated
+ * images came out as a slow zoom. Every still used to go through the clip path
+ * below: full-bleed `cover`, graded dark, scaled 1.16 -> 1.02 across the beat.
+ * Three things went wrong at once. `cover` crops away the negative space the
+ * prompt sheet reserved for type. The paper wash and vignette bury the page,
+ * which is the entire brand. And a scale ramp on a flat rectangle **is** a
+ * zoom — there is nothing behind it to move against, so no amount of drift
+ * reads as parallax.
+ *
+ * Here the page stays the page and the picture is pasted onto it: paper on the
+ * far plane, a printed panel on the middle one, the picture on the near one.
+ * They translate at 1 : 0.38 : 0.12 and **nothing scales**. The depth is the
+ * rate difference — the same rule PaperBG has always run on.
  */
-export const ArchivalBG: React.FC<{ beat: number; progress: number }> = ({
+export const EditorialStill: React.FC<{ beat: number; progress: number }> = ({
   beat,
   progress,
 }) => {
-  const src = FOOTAGE[String(beat)];
-  const scale = interpolate(progress, [0, 1], [1.12, 1.0]);
-  if (!src) {
+  const frame = useCurrentFrame();
+  const { width, height } = useVideoConfig();
+  const srcs = beatFrames(beat);
+
+  // Three planes. Translation only — see the note above.
+  //
+  // The depths are wider than they look like they should be. useParallax's unit
+  // amplitude is width * 0.013, so depth 1 : 0.38 : 0.12 separates the picture
+  // from the page by about 0.6% of frame width across a beat — measurable, and
+  // invisible. Parallax has to clear roughly 1.5% before the eye reads it as
+  // depth rather than as drift, which is why the first version of this looked
+  // static even with three layers actually moving.
+  const near = useParallax(beat, 1.6);
+  const mid = useParallax(beat + 3, 0.5);
+  const far = useParallax(beat + 7, 0.12);
+
+  const box = width > height ? PLATE.wide : PLATE.tall;
+  const L = width * box.x;
+  const T = height * box.y;
+  const W = width * box.w;
+  const H = height * box.h;
+  // Deterministic, not random: a tilt resampled per frame is a clipping
+  // vibrating on the table. Same rule the collage already follows.
+  const tilt = (((beat * 7) % 5) - 2) * 0.45;
+  const panel = interpolate(frame, [0, 11], [0, 1], { ...CLAMP, easing: SETTLE });
+  const seg = 1 / Math.max(1, srcs.length);
+
+  return (
+    <AbsoluteFill>
+      {/* far — the page, barely moving */}
+      <AbsoluteFill style={{ transform: `translate(${far.x}px, ${far.y}px)` }}>
+        <PaperBG />
+      </AbsoluteFill>
+
+      {/* mid — the baseline the picture stands on, drawn left to right as the
+          beat opens. A printer's guide, not an accent: the accent is already in
+          the picture, and two of them breaks the one-colour-one-job rule.
+
+          There was a filled panel here and it was a mistake worth recording.
+          `darken` keys the picture against whatever is painted *under* it, so a
+          panel darker than the paper became the thing the picture's ground
+          matched — the cut-out stopped working and every plate rendered as a
+          grey block. The picture has to sit on the page itself or not sit at
+          all, which is also the more honest Vox frame: a cut-out floats, it is
+          not mounted.
+
+          No picture on disk yet: the beat stays a bare page rather than a rule
+          waiting for one. That is the honest fallback, and it is exactly what
+          the old full-bleed path got wrong — it staged an *empty* slot as a
+          zooming vignette, which is the "it only zooms in and out" you get
+          whenever footage.json is missing the beat. */}
+      {srcs.length === 0 ? null : (
+        <div
+          style={{
+            position: "absolute",
+            left: L,
+            top: T + H,
+            width: W,
+            height: Math.max(1, height * 0.0022),
+            background: vox.rule,
+            transform: `translate(${mid.x}px, ${mid.y}px)`,
+            clipPath: `inset(0 ${(1 - panel) * 100}% 0 0)`,
+          }}
+        />
+      )}
+
+      {srcs.map((src, i) => {
+        // Each still owns a slice of the beat and arrives into it. The one
+        // before it leaves the other way, so the swap is two things moving past
+        // each other on the page — not one photograph dissolving into another.
+        const t = (progress - i * seg) / seg;
+        if (t < -0.2 || t > 1.3) return null;
+        const dir = (beat + i) % 2 ? -1 : 1;
+        const arrive = interpolate(t, [0, 0.18], [0, 1], { ...CLAMP, easing: SETTLE });
+        // The leave window is the *next* still's arrive window, in the same
+        // progress space — a slot ends at t=1 and the one after it begins its
+        // own t=0 there, so [1, 1.18] here is exactly [0, 0.18] there. Timed any
+        // earlier and the two do not overlap: the outgoing picture is already at
+        // zero while the incoming one is still half-faded, and the beat blinks
+        // to bare paper in the middle of itself.
+        const leave =
+          i === srcs.length - 1
+            ? 0
+            : interpolate(t, [1, 1.18], [0, 1], { ...CLAMP, easing: SETTLE });
+        const dx = ((1 - arrive) - leave) * width * 0.055 * dir;
+        const dy = (1 - arrive) * height * 0.02;
+        const opacity = arrive * (1 - leave);
+        if (opacity <= 0) return null;
+
+        // The picture and its dot screen are siblings sharing one transform,
+        // deliberately: wrapping them in a transformed parent would give the
+        // group its own stacking context, and `mix-blend-mode` only ever blends
+        // within the group it is painted into. Isolated, `darken` blends the
+        // picture against nothing and the paper ground stays a visible rectangle.
+        const place = {
+          position: "absolute",
+          left: L,
+          top: T,
+          width: W,
+          height: H,
+          opacity,
+          transform: `translate(${near.x + dx}px, ${near.y + dy}px) rotate(${tilt}deg)`,
+        } as const;
+
+        return (
+          <React.Fragment key={src}>
+            <Img
+              src={staticFile(src)}
+              style={{
+                ...place,
+                objectFit: "contain",
+                // Sat on the rule rather than floating above it. `contain`
+                // centres by default, which leaves a cut-out hovering in a box
+                // it has no visible relationship to.
+                objectPosition: "center bottom",
+                // The generated ground *is* the page colour — #F4F1EA, straight
+                // off the prompt sheet's style line — so `darken` keeps whichever
+                // of picture and page is darker and the ground disappears into
+                // the paper. A free cut-out, no preprocessing, for any .jpg the
+                // sheet produced. A .png is assumed to carry real alpha already
+                // (tools/cutout.py) and is composited normally.
+                mixBlendMode: /\.png$/i.test(src) ? "normal" : "darken",
+                // brightness lifts the ground clear of the page's warm centre so
+                // `darken` cannot dirty the paper it lands on. 1.06 clips a flat
+                // generated ground to white outright; measured against the sheet's
+                // own output, 1.03 left about a 2% warm cast at the page edges.
+                //
+                // It is an approximation and it has a limit: where the generator
+                // *shaded* the ground instead of keeping it flat, no blend can
+                // key it and a faint haze survives. `tools/plate.py` is the real
+                // answer — it alpha-keys the ground and writes a .png, which the
+                // test above then composites normally with no blend at all.
+                filter: "saturate(0.94) contrast(1.05) brightness(1.06)",
+              }}
+            />
+            <div
+              style={{
+                ...place,
+                opacity: opacity * 0.3,
+                backgroundImage: `radial-gradient(${vox.ink} 22%, transparent 23%)`,
+                backgroundSize: "4px 4px",
+                mixBlendMode: "multiply",
+              }}
+            />
+          </React.Fragment>
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+/**
+ * Archival *clip*, graded back towards the page so it sits with the ink instead
+ * of fighting it. Full-bleed, because a moving picture that is only part of the
+ * frame is a video window, and a video window is not something this page does.
+ *
+ * A beat has three framings, not one. Holding a single frame for eight seconds
+ * kills the beat however well it pans, so they divide the beat between them and
+ * each cross-fades in over the last — establishing, then detail, then context,
+ * which is the order the prompt sheet writes them in.
+ */
+const ClipBG: React.FC<{ beat: number; progress: number }> = ({
+  beat,
+  progress,
+}) => {
+  const { width } = useVideoConfig();
+  const srcs = beatFrames(beat);
+  // The photograph is the near layer: it pans across the beat and drifts, and
+  // the overscan is sized to cover both so no edge ever swings into frame.
+  const near = useParallax(beat, 1);
+  // The light on it is the far layer, moving at a third of the rate and out of
+  // phase. That difference is the whole illusion.
+  const far = useParallax(beat + 3, 0.34);
+  const scale = interpolate(progress, [0, 1], [1.16, 1.02]);
+  const pan = interpolate(progress, [0, 1], [0, width * 0.03 * (beat % 2 ? -1 : 1)]);
+  if (!srcs.length) {
     return (
       <AbsoluteFill>
         <PaperBG />
         <AbsoluteFill
           style={{
             background: `radial-gradient(ellipse 65% 45% at 50% 46%, transparent 40%, ${vox.paperDeep} 100%)`,
-            transform: `scale(${scale})`,
+            transform: `translate(${far.x}px, ${far.y}px) scale(${scale})`,
           }}
         />
       </AbsoluteFill>
@@ -725,17 +982,49 @@ export const ArchivalBG: React.FC<{ beat: number; progress: number }> = ({
   }
   const grade = "saturate(0.5) contrast(1.08) brightness(0.96)";
   const fit = { width: "100%", height: "100%", objectFit: "cover" } as const;
+  const seg = 1 / srcs.length;
   return (
     <AbsoluteFill>
-      <AbsoluteFill style={{ transform: `scale(${scale})` }}>
-        {/^.+\.mp4$/i.test(src) ? (
-          // No loop: OffthreadVideo can't, so fetch-footage.py picks clips at
-          // least as long as the beat instead.
-          <OffthreadVideo src={staticFile(src)} muted style={{ ...fit, filter: grade }} />
-        ) : (
-          <Img src={staticFile(src)} style={{ ...fit, filter: grade }} />
-        )}
-      </AbsoluteFill>
+      {srcs.map((src, i) => {
+        // Each still covers the frame, so a later one arriving at full opacity
+        // hides the one under it — no fade-out is needed, and not writing one
+        // means two layers can never both be half-transparent over bare paper.
+        const opacity =
+          i === 0
+            ? 1
+            : interpolate(progress, [i * seg - 0.07, i * seg], [0, 1], {
+                extrapolateLeft: "clamp",
+                extrapolateRight: "clamp",
+              });
+        if (opacity <= 0) return null;
+        // Its own move, run against its own slice of the beat rather than the
+        // whole thing, and panning the other way from its neighbour: three
+        // stills all drifting left at the same rate reads as one long photo.
+        const t = interpolate(progress, [i * seg, (i + 1) * seg], [0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        });
+        const dir = (beat + i) % 2 ? -1 : 1;
+        return (
+          <AbsoluteFill
+            key={src}
+            style={{
+              opacity,
+              transform:
+                `translate(${pan * dir + near.x + t * width * 0.035 * dir}px, ${near.y}px) ` +
+                `scale(${interpolate(t, [0, 1], [1.16, 1.02])})`,
+            }}
+          >
+            {/^.+\.mp4$/i.test(src) ? (
+              // No loop: OffthreadVideo can't, so fetch-footage.py picks clips
+              // at least as long as the beat instead.
+              <OffthreadVideo src={staticFile(src)} muted style={{ ...fit, filter: grade }} />
+            ) : (
+              <Img src={staticFile(src)} style={{ ...fit, filter: grade }} />
+            )}
+          </AbsoluteFill>
+        );
+      })}
       <AbsoluteFill
         style={{ backgroundColor: vox.paper, mixBlendMode: "soft-light", opacity: 0.55 }}
       />
@@ -743,6 +1032,7 @@ export const ArchivalBG: React.FC<{ beat: number; progress: number }> = ({
         style={{
           background: `radial-gradient(ellipse 75% 60% at 50% 48%, transparent 30%, ${vox.ink} 130%)`,
           opacity: 0.5,
+          transform: `translate(${far.x}px, ${far.y}px) scale(1.06)`,
         }}
       />
       <AbsoluteFill
@@ -751,8 +1041,27 @@ export const ArchivalBG: React.FC<{ beat: number; progress: number }> = ({
           backgroundSize: "180px 180px",
           opacity: 0.35,
           mixBlendMode: "multiply",
+          transform: `translate(${-far.x * 0.6}px, ${-far.y * 0.6}px)`,
         }}
       />
     </AbsoluteFill>
   );
 };
+
+/**
+ * What a beat's pictures actually are decides how they are staged, and the
+ * modules don't have to care which they got.
+ *
+ * A dispatcher rather than a branch inside one component on purpose: both
+ * halves call hooks, and a conditional return above them is the rules-of-hooks
+ * violation eslint would (correctly) refuse.
+ */
+export const ArchivalBG: React.FC<{ beat: number; progress: number }> = ({
+  beat,
+  progress,
+}) =>
+  isClip(beat) ? (
+    <ClipBG beat={beat} progress={progress} />
+  ) : (
+    <EditorialStill beat={beat} progress={progress} />
+  );

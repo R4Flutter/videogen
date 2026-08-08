@@ -7,47 +7,37 @@ import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { useSemanticCamera } from "../editorial/camera";
 import { theme } from "../theme";
-import { Kicker, num } from "./elements";
-import { useMargin, VoxSceneProps } from "./scenes";
+import { measure, numberFormat, useLayout } from "./layout";
+import { PageHead, VoxSceneProps } from "./scenes";
 
 export const Funnel: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
-  const { width, height, pad } = useMargin();
+  const { width, pad, safeW, y: band, primaryH } = useLayout();
   const vox = theme.vox;
   const { transform } = useSemanticCamera("reveal", dur);
   const rows = beat.data && beat.data.length ? beat.data : [];
   if (rows.length < 2) return null;
 
   const top = Math.max(...rows.map((r) => r.value), 1);
-  const track = width - pad * 2;
-  const barH = height * 0.055;
+  const barH = Math.min(width * 0.058, primaryH / (rows.length * 2.5));
   const step = barH * 2.3;
-  const first = height * 0.44;
+  const first = band.primary + barH;
+  const fmt = numberFormat(top);
+  // The bug this module was the poster child for. `track` used to be the whole
+  // safe width, and the count was then printed at `pad + track + 2.2%` — which
+  // is past the right margin by construction, so the largest bar in every
+  // funnel pushed its own number off the canvas. The bars now share the width
+  // with the widest number the beat will print.
+  const valueW = Math.max(
+    ...rows.map((r) =>
+      measure(fmt(r.value), { size: barH * 0.72, weight: 800, family: vox.font }),
+    ),
+  );
+  const track = Math.max(safeW * 0.45, safeW - valueW - width * 0.03);
 
   return (
     <AbsoluteFill style={{ transform, fontFamily: vox.font }}>
-      <div style={{ position: "absolute", left: pad, top: pad * 1.6 }}>
-        <Kicker text={beat.name} enter={frame - 4} />
-      </div>
-      {beat.text ? (
-        <div
-          style={{
-            marginTop: pad * 0.4,
-            width: width - pad * 2,
-            fontWeight: 800,
-            fontSize: width * 0.058,
-            lineHeight: 1.05,
-            letterSpacing: -width * 0.002,
-            color: vox.ink,
-            opacity: interpolate(frame, [2, 16], [0, 1], {
-              extrapolateLeft: "clamp",
-              extrapolateRight: "clamp",
-            }),
-          }}
-        >
-          {beat.text}
-        </div>
-      ) : null}
+      <PageHead kicker={beat.name} headline={beat.text} frame={frame} />
 
       {rows.map((row, i) => {
         // Even the smallest bar stays readable; a funnel that shrinks to
@@ -67,7 +57,11 @@ export const Funnel: React.FC<VoxSceneProps> = ({ dur, beat }) => {
               style={{
                 position: "absolute",
                 left: pad,
-                top: y - barH * 1.02,
+                // Clear of the bar by the label's own line, not by the bar's
+                // height. Those were the same number until the bars started
+                // sizing themselves to the band, and then every label sat a
+                // third of the way into the bar it names.
+                top: y - width * 0.03 * 1.35,
                 fontWeight: 700,
                 fontSize: width * 0.03,
                 letterSpacing: width * 0.001,
@@ -105,7 +99,7 @@ export const Funnel: React.FC<VoxSceneProps> = ({ dur, beat }) => {
                 fontVariantNumeric: "tabular-nums",
               }}
             >
-              {num(row.value * grow)}
+              {fmt(row.value * grow)}
             </div>
           </React.Fragment>
         );

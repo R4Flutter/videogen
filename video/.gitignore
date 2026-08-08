@@ -8,3 +8,6 @@ out
 
 # Stock clips are re-downloadable from the script's own keywords.
 public/footage
+
+# `remotion bundle` output — a build artefact, same as out/.
+build

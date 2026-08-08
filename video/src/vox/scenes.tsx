@@ -13,6 +13,7 @@ import {
 import { theme } from "../theme";
 import { Collage } from "./collage";
 import { Funnel } from "./funnel";
+import { fit, fitBlock, measure, numberFormat, useLayout } from "./layout";
 import { MapScene } from "./map";
 import { Trace } from "./trace";
 import { Trust } from "./trust";
@@ -23,13 +24,14 @@ import {
   DrawIn,
   hasFootage,
   InkChart,
+  isClip,
   Kicker,
   KineticText,
   Leader,
   LineIcon,
   Marker,
-  num,
   Shape,
+  useParallax,
   Word,
 } from "./elements";
 
@@ -70,24 +72,63 @@ const ease = (frame: number, a: number, b: number, out: readonly [number, number
     easing: Easing.bezier(0.22, 1, 0.36, 1),
   });
 
-/** Page margins as a fraction of the canvas, so 9:16 and 16:9 both breathe. */
+/** Page margins as a fraction of the canvas, so 9:16 and 16:9 both breathe.
+ *  Kept as the modules' handle on the canvas; the vertical grid now comes from
+ *  `useLayout` in ./layout, which is the thing that stops two elements landing
+ *  in the same band. */
 export const useMargin = () => {
   const { width, height } = useVideoConfig();
   return { width, height, pad: width * 0.075, wide: width > height };
+};
+
+/**
+ * How much narration a module wants printed over it.
+ *
+ * This table is the caption policy, and its absence was one of the loudest
+ * defects in the ten-minute cut: a Stat printed `48`, and the caption track
+ * printed "forty-eight, a supervisor appears" underneath it, and both were
+ * saying the same thing at the same time. A module that already sets the
+ * sentence in type does not want it a second time.
+ *
+ *   none      — the module prints the words itself
+ *   subtitle  — a picture is carrying the beat; the words go in the caption band
+ *
+ * Two modes, not five, because two is what the defect needed. A `lower_third`
+ * or an `emphasis` variant can join when a module actually asks for one.
+ */
+export const CAPTION: Record<string, "none" | "subtitle"> = {
+  kinetic: "none", // the words already fill the frame
+  chart: "none",
+  compare: "none",
+  stat: "none",
+  timeline: "none",
+  funnel: "none",
+  trust: "none",
+  trace: "none",
+  icon: "none",
+  quote: "none", // a pull-quote read aloud under itself is the same words twice
+  collage: "subtitle",
+  doodle: "subtitle",
+  footage: "subtitle",
+  callout: "subtitle",
+  map: "subtitle",
 };
 
 const Stage: React.FC<{ children: React.ReactNode; align?: "center" | "flex-start" }> = ({
   children,
   align = "center",
 }) => {
-  const { pad } = useMargin();
+  const { pad, height, y } = useLayout();
   return (
     <AbsoluteFill
       style={{
         padding: pad,
-        // room the caption card lives in, reserved in every module so nothing
-        // has to know whether this beat is captioned
-        paddingBottom: pad * 2.6,
+        paddingTop: y.headline,
+        // The caption band, reserved in every module so nothing has to know
+        // whether this beat happens to be captioned. Height-relative: the old
+        // `pad * 2.6` is 11% of a portrait frame and 35% of a landscape one,
+        // which is why landscape beats staged into a squashed middle.
+        paddingBottom: height - y.annotation,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -100,15 +141,75 @@ const Stage: React.FC<{ children: React.ReactNode; align?: "center" | "flex-star
   );
 };
 
+/**
+ * Kicker and headline, stacked, occupying exactly the two bands named after
+ * them.
+ *
+ * Every module used to build this pair by hand, which is how the funnel ended
+ * up positioning its kicker absolutely at the top of the page and its headline
+ * in the normal flow — two elements, two coordinate systems, one collision. One
+ * component owning both is the fix, and it fits the headline by measurement so
+ * a long one steps down instead of running into the band below.
+ */
+export const PageHead: React.FC<{
+  kicker: string;
+  headline?: string;
+  frame: number;
+  /** Fraction of the safe width the headline may use. A module staging a plate
+   *  in the right two thirds passes a smaller number. */
+  span?: number;
+  upper?: boolean;
+}> = ({ kicker, headline, frame, span = 1, upper = false }) => {
+  const { width, pad, safeW, y } = useLayout();
+  const maxW = safeW * span;
+  const size = headline
+    ? fitBlock(upper ? headline.toUpperCase() : headline, maxW, y.primary - y.headline, width * 0.068, {
+        weight: 800,
+        family: vox.font,
+        tracking: -width * 0.002,
+      })
+    : 0;
+
+  return (
+    <>
+      <div style={{ position: "absolute", left: pad, top: y.kicker }}>
+        <Kicker text={kicker} enter={frame - 4} />
+      </div>
+      {headline ? (
+        <div
+          style={{
+            position: "absolute",
+            left: pad,
+            top: y.headline,
+            width: maxW,
+            fontFamily: vox.font,
+            fontWeight: 800,
+            fontSize: size,
+            lineHeight: 1.05,
+            letterSpacing: -size * 0.03,
+            textTransform: upper ? "uppercase" : "none",
+            color: vox.ink,
+            opacity: ease(frame, 2, 16),
+          }}
+        >
+          {headline}
+        </div>
+      ) : null}
+    </>
+  );
+};
+
 /** The hook and the payoff: the words fill the page and land as they're said. */
 export const Kinetic: React.FC<VoxSceneProps> = ({ beat, words }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   return (
-    <Stage>
-      <Kicker text={beat.name} enter={frame - 4} />
-      <KineticText words={words} t={frame / fps} mode="hero" />
-    </Stage>
+    <>
+      <PageHead kicker={beat.name} frame={frame} />
+      <Stage>
+        <KineticText words={words} t={frame / fps} mode="hero" />
+      </Stage>
+    </>
   );
 };
 
@@ -122,19 +223,38 @@ export const Kinetic: React.FC<VoxSceneProps> = ({ beat, words }) => {
  */
 const Plate: React.FC<VoxSceneProps & { mark: boolean }> = ({ dur, beat, mark }) => {
   const frame = useCurrentFrame();
-  const { width, height, pad } = useMargin();
-  const clip = hasFootage(beat.n);
+  const { width, height, pad, wide, y: band } = useLayout();
+  // Only a moving clip covers the page and forces white type. A still is a
+  // plate pasted onto paper, so the headline stays ink and moves out of the
+  // plate's way instead of being printed across the middle of it.
+  const clip = isClip(beat.n);
+  const plate = hasFootage(beat.n) && !clip;
   const headline = (beat.text || beat.name).toUpperCase();
-  const size = width * (headline.length > 30 ? 0.086 : 0.11);
-  const maxW = width - pad * 2;
-  // Uppercase Archivo 800 runs about 0.55em per glyph. Close enough for a
-  // hand-drawn mark, which is forgiving by design.
-  const runW = headline.length * size * 0.55;
+  // Landscape puts the headline in the left third the prompt sheet keeps clear;
+  // portrait puts it in the reserved top fifth, above the plate.
+  const maxW = plate && wide ? width * 0.29 - pad * 0.4 : width - pad * 2;
+  const spec = { weight: 800, family: vox.font, tracking: 0 } as const;
+  // Measured, not counted. The old rule picked one of four sizes from a
+  // character count and then estimated the block back at 0.55em/glyph — two
+  // guesses whose errors compounded, which is how a hand-drawn circle ended up
+  // half a word away from the words it was drawn around.
+  const size = fitBlock(
+    headline,
+    maxW,
+    plate && !wide ? height * 0.16 : height * 0.3,
+    width * (plate ? (wide ? 0.062 : 0.088) : 0.11),
+    spec,
+  );
+  const runW = measure(headline, { ...spec, size });
   const lines = Math.max(1, Math.ceil(runW / maxW));
   const blockW = Math.min(maxW, runW);
   const blockH = lines * size;
-  const top = height * 0.46 - blockH / 2;
-  const left = (width - blockW) / 2;
+  const top = plate
+    ? wide
+      ? height * 0.44 - blockH / 2
+      : height * 0.085
+    : height * 0.46 - blockH / 2;
+  const left = plate ? pad : (width - blockW) / 2;
 
   const shape = (beat.shape || "underline") as Shape;
   const box =
@@ -147,10 +267,16 @@ const Plate: React.FC<VoxSceneProps & { mark: boolean }> = ({ dur, beat, mark })
         }
       : { x: left, y: top, w: blockW, h: blockH + size * 0.06 };
 
+  // The type sits in front of the photograph, so it moves against it. Same
+  // drift, opposite direction, a third of the distance — enough that the
+  // headline reads as printed on glass over the frame rather than baked into it.
+  const ink = useParallax(beat.n, -0.34);
+
   return (
     <>
       <ArchivalBG beat={beat.n} progress={ease(frame, 0, dur)} />
-      <div style={{ position: "absolute", left: pad, top: pad * 1.6 }}>
+      <AbsoluteFill style={{ transform: `translate(${ink.x}px, ${ink.y}px)` }}>
+      <div style={{ position: "absolute", left: pad, top: band.kicker }}>
         <Kicker text={beat.name} enter={frame - 4} />
       </div>
       <div
@@ -164,7 +290,10 @@ const Plate: React.FC<VoxSceneProps & { mark: boolean }> = ({ dur, beat, mark })
           fontSize: size,
           lineHeight: 1,
           letterSpacing: -size * 0.03,
-          textAlign: "center",
+          // Ranged left against the plate, centred on a bare page. The mark is
+          // drawn at `left`/`blockW`, so the two have to agree or a circle
+          // lands next to the words it was meant to go round.
+          textAlign: plate ? "left" : "center",
           color: clip ? vox.paper : vox.ink,
           textShadow: clip ? `0 ${size * 0.06}px ${size * 0.3}px rgba(0,0,0,.55)` : "none",
           opacity: ease(frame, 2, 16),
@@ -194,6 +323,7 @@ const Plate: React.FC<VoxSceneProps & { mark: boolean }> = ({ dur, beat, mark })
           />
         )
       ) : null}
+      </AbsoluteFill>
     </>
   );
 };
@@ -219,10 +349,22 @@ export const IconSteps: React.FC<VoxSceneProps> = ({ beat }) => {
   const steps = beat.icons && beat.icons.length ? beat.icons : [];
   if (!steps.length) return <Kinetic dur={0} beat={beat} words={[]} />;
   const glyph = width * (wide ? 0.07 : 0.115);
+  // Every card carries the same size, set by the longest label, or a three-card
+  // row reads as three different typographic weights.
+  const labelSize = steps.reduce(
+    (small, step) =>
+      Math.min(
+        small,
+        fitBlock(step.label, (wide ? width / steps.length : width) * 0.7, width * 0.14,
+          width * (wide ? 0.03 : 0.042), { weight: 700, family: vox.font }, 1.15),
+      ),
+    width * (wide ? 0.03 : 0.042),
+  );
 
   return (
+    <>
+    <PageHead kicker={beat.name} frame={frame} />
     <Stage align="flex-start">
-      <Kicker text={beat.name} enter={frame - 4} />
       <div
         style={{
           display: "flex",
@@ -264,7 +406,7 @@ export const IconSteps: React.FC<VoxSceneProps> = ({ beat }) => {
                 style={{
                   fontFamily: vox.font,
                   fontWeight: 700,
-                  fontSize: width * (wide ? 0.03 : 0.042),
+                  fontSize: labelSize,
                   lineHeight: 1.15,
                   letterSpacing: -width * 0.0006,
                   color: vox.ink,
@@ -277,53 +419,38 @@ export const IconSteps: React.FC<VoxSceneProps> = ({ beat }) => {
         })}
       </div>
     </Stage>
+    </>
   );
 };
 
 /** The number that carries the argument, drawn on the page. */
 export const Chart: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
-  const { width, height, pad } = useMargin();
+  const { width, pad, safeW, y, primaryH } = useLayout();
   const rows = beat.data && beat.data.length ? beat.data : [];
   if (!rows.length) return <Kinetic dur={dur} beat={beat} words={[]} />;
-  const w = width - pad * 2;
-  const h = height * 0.3;
+  // The axis labels and the pen readout hang below the plot, so the plot itself
+  // only gets the part of the band that is left after them.
+  const h = primaryH - width * 0.09;
   const progress = ease(frame, 12, dur - 10);
   // The headline already names the unit ("$10,000, SITTING STILL"), so the
   // readout reuses it rather than asking the script for it twice.
   const unit = /^[^\w\s]/.exec(beat.text ?? "")?.[0] ?? "";
 
   return (
-    <Stage align="flex-start">
-      <Kicker text={beat.name} enter={frame - 4} />
-      {beat.text ? (
-        <div
-          style={{
-            fontFamily: vox.font,
-            fontWeight: 800,
-            fontSize: width * 0.062,
-            lineHeight: 1.05,
-            letterSpacing: -width * 0.0018,
-            color: vox.ink,
-            opacity: ease(frame, 2, 16),
-          }}
-        >
-          {beat.text}
-        </div>
-      ) : null}
-      <div style={{ position: "relative", width: w, height: h + width * 0.08 }}>
-        <InkChart
-          data={rows.map((r) => r.value)}
-          labels={rows.map((r) => r.label)}
-          unit={unit}
-          x={0}
-          y={0}
-          w={w}
-          h={h}
-          progress={progress}
-        />
-      </div>
-    </Stage>
+    <>
+      <PageHead kicker={beat.name} headline={beat.text} frame={frame} />
+      <InkChart
+        data={rows.map((r) => r.value)}
+        labels={rows.map((r) => r.label)}
+        unit={unit}
+        x={pad}
+        y={y.primary}
+        w={safeW}
+        h={h}
+        progress={progress}
+      />
+    </>
   );
 };
 
@@ -335,53 +462,47 @@ export const Chart: React.FC<VoxSceneProps> = ({ dur, beat }) => {
  */
 export const Compare: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
-  const { width, height, pad } = useMargin();
+  const { width, pad, safeW, y: band, primaryH } = useLayout();
   const rows = beat.data && beat.data.length ? beat.data : [];
-  const w = width - pad * 2;
-  const barH = height * 0.055;
+  const barH = Math.min(width * 0.062, primaryH / Math.max(2, rows.length * 2.6));
   const step = barH * 2.4;
-  const first = height * 0.4;
-  // The longest bar stops short of the margin so its value always has somewhere
-  // to sit — no bar ever has to hide its own number.
-  const track = w * 0.76;
-  const top = Math.max(...rows.map((r) => r.value), 1);
+  const first = band.primary + barH;
   // Both bars have landed by here; the gap can only be drawn once they have.
   const settled = 48 + (rows.length - 1) * 14;
   if (!rows.length) return <Kinetic dur={dur} beat={beat} words={[]} />;
 
+  const top = Math.max(...rows.map((r) => r.value), 1);
+  const fmt = numberFormat(top);
+  const spec = { weight: 800, family: vox.font } as const;
+  // The longest bar stops short of the margin so its value always has somewhere
+  // to sit — and how far short is measured off the widest number this beat will
+  // actually print, not guessed at a flat 24%. A four-character value should not
+  // cost the chart a quarter of its width, and a nine-character one used to
+  // overrun the margin even though it had been "allowed for".
+  const valueW = Math.max(
+    ...rows.map((r) => {
+      const { prefix, suffix } = affix(r.raw ?? "");
+      return measure(fmt(r.value, prefix, suffix), { ...spec, size: barH * 0.72 });
+    }),
+  );
+  const track = Math.max(safeW * 0.45, safeW - valueW - width * 0.03);
   const ends = rows.map((r) => (r.value / top) * track);
   const longest = ends.indexOf(Math.max(...ends));
+  // Two bars the same length have no gap between them, and a zero-width box
+  // with "The gap" centred in it is a two-line word stacked on the bar end.
+  // The mark only exists when there is a distance to mark.
   const gap =
-    rows.length === 2
+    rows.length === 2 && Math.abs(ends[0] - ends[1]) > width * 0.06
       ? {
           from: Math.min(ends[0], ends[1]),
           to: Math.max(ends[0], ends[1]),
           y: first + longest * step,
         }
       : null;
-  const headline = beat.text ?? "";
 
   return (
     <>
-      <div style={{ position: "absolute", left: pad, top: pad * 1.6, width: w }}>
-        <Kicker text={beat.name} enter={frame - 4} />
-        {headline ? (
-          <div
-            style={{
-              marginTop: pad * 0.4,
-              fontFamily: vox.font,
-              fontWeight: 800,
-              fontSize: width * (headline.length > 20 ? 0.058 : 0.072),
-              lineHeight: 1.05,
-              letterSpacing: -width * 0.002,
-              color: vox.ink,
-              opacity: ease(frame, 2, 16),
-            }}
-          >
-            {headline}
-          </div>
-        ) : null}
-      </div>
+      <PageHead kicker={beat.name} headline={beat.text} frame={frame} />
 
       {rows.map((row, i) => {
         const grow = ease(frame, 18 + i * 14, 48 + i * 14);
@@ -395,8 +516,10 @@ export const Compare: React.FC<VoxSceneProps> = ({ dur, beat }) => {
               style={{
                 position: "absolute",
                 left: pad,
-                // clear of the gap box, which reaches above the bar it marks
-                top: y - barH * 1.02,
+                // Clear of the gap box, which reaches above the bar it marks —
+                // and clear of the bar itself by the label's own line height,
+                // which a short bar no longer guarantees on its own.
+                top: y - Math.max(barH * 1.02, width * 0.032 * 1.35),
                 fontFamily: vox.font,
                 fontWeight: 700,
                 fontSize: width * 0.032,
@@ -436,7 +559,7 @@ export const Compare: React.FC<VoxSceneProps> = ({ dur, beat }) => {
                 fontVariantNumeric: "tabular-nums",
               }}
             >
-              {num(row.value * grow, prefix, suffix)}
+              {fmt(row.value * grow, prefix, suffix)}
             </div>
           </React.Fragment>
         );
@@ -482,28 +605,43 @@ export const Compare: React.FC<VoxSceneProps> = ({ dur, beat }) => {
 /** One number, alone on the page, arriving digit by digit. The cost stated. */
 export const Stat: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
-  const { width, height, pad } = useMargin();
+  const { width, pad, safeW, y: band, primaryH } = useLayout();
   const row = beat.data && beat.data.length ? beat.data[0] : null;
   if (!row) return <Kinetic dur={dur} beat={beat} words={[]} />;
 
   const { prefix, suffix } = affix(row.raw ?? "");
   const roll = ease(frame, 10, dur * 0.5);
-  const shown = num(row.value * roll, prefix, suffix);
-  const size = width * (shown.length > 8 ? 0.18 : 0.24);
-  const runW = shown.length * size * 0.56;
-  const top = height * 0.44 - size * 0.5;
+  // Representation first, size second. This module used to do neither: it
+  // picked a font size from the character count and never checked the result,
+  // which is how `25,557,729` and `9,171.4` ended up running off the right edge
+  // of a finished video. `numberFormat` decides from the value the roll lands
+  // on — so `30,000,000` is `30M` from the first frame, not on the frame it
+  // crosses a threshold — and `fit` then measures what that actually costs.
+  const fmt = numberFormat(row.value);
+  const shown = fmt(row.value * roll, prefix, suffix);
+  const spec = {
+    weight: 800,
+    family: vox.font,
+    tracking: -width * 0.24 * 0.035,
+  } as const;
+  // Sized off the final string, not the rolling one, or the number grows a size
+  // step every time the counter gains a digit.
+  const size = Math.min(
+    primaryH * 0.6,
+    fit(fmt(row.value, prefix, suffix), safeW, width * 0.24, spec),
+  );
+  const runW = Math.min(safeW, measure(shown, { ...spec, size }));
+  const top = band.primary + (primaryH - size * 1.9) / 2;
 
   return (
     <>
-      <div style={{ position: "absolute", left: pad, top: pad * 1.6 }}>
-        <Kicker text={beat.name} enter={frame - 4} />
-      </div>
+      <PageHead kicker={beat.name} frame={frame} />
       <div
         style={{
           position: "absolute",
           left: pad,
           top,
-          width: width - pad * 2,
+          width: safeW,
           textAlign: "center",
           fontFamily: vox.font,
           fontWeight: 800,
@@ -513,6 +651,7 @@ export const Stat: React.FC<VoxSceneProps> = ({ dur, beat }) => {
           color: vox.accent,
           // Tabular figures, or every rolling digit shifts the whole number.
           fontVariantNumeric: "tabular-nums",
+          whiteSpace: "nowrap",
         }}
       >
         {shown}
@@ -522,11 +661,16 @@ export const Stat: React.FC<VoxSceneProps> = ({ dur, beat }) => {
           position: "absolute",
           left: pad,
           top: top + size * 1.35,
-          width: width - pad * 2,
+          width: safeW,
           textAlign: "center",
           fontFamily: vox.font,
           fontWeight: 700,
-          fontSize: width * 0.044,
+          fontSize: fit(row.label, safeW, width * 0.044, {
+            weight: 700,
+            family: vox.font,
+            tracking: width * 0.0012,
+            upper: true,
+          }),
           letterSpacing: width * 0.0012,
           textTransform: "uppercase",
           color: vox.ink,
@@ -537,9 +681,9 @@ export const Stat: React.FC<VoxSceneProps> = ({ dur, beat }) => {
       </div>
       <DrawIn
         shape="underline"
-        x={(width - Math.min(width - pad * 2, runW)) / 2}
+        x={(width - runW) / 2}
         y={top}
-        w={Math.min(width - pad * 2, runW)}
+        w={runW}
         h={size * 1.08}
         seed={beat.n * 23}
         progress={ease(frame, dur * 0.52, dur * 0.75)}
@@ -555,24 +699,34 @@ export const Stat: React.FC<VoxSceneProps> = ({ dur, beat }) => {
  */
 export const Callout: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
-  const { width, height, pad, wide } = useMargin();
-  const clip = hasFootage(beat.n);
+  const { width, height, pad, wide, y: band } = useLayout();
+  // Only a moving clip darkens the frame enough to need the paper card behind
+  // the label. Over a still on paper, that card is a white box on white paper.
+  const clip = isClip(beat.n);
   const label = (beat.text || beat.name).toUpperCase();
 
-  const cx = width * (wide ? 0.62 : 0.56);
-  const cy = height * (wide ? 0.44 : 0.34);
+  // The ring lands on the plate, so it follows where EditorialStill puts it:
+  // right-of-centre in landscape, the middle band in portrait.
+  const cx = width * (wide ? 0.655 : 0.5);
+  const cy = height * (wide ? 0.44 : 0.42);
   const rx = width * (wide ? 0.17 : 0.25);
   const ry = rx * 0.74;
 
   const labelW = width * (wide ? 0.3 : 0.46);
   const labelX = pad;
-  const labelY = height * (wide ? 0.62 : 0.58);
-  const size = width * (wide ? 0.032 : label.length > 22 ? 0.046 : 0.058);
+  // Above the annotation band, not floating at an arbitrary 58%: a label at
+  // 62% of a landscape frame with a leader line running down from it is a label
+  // that meets the caption card.
+  const labelY = band.annotation - height * (wide ? 0.16 : 0.2);
+  const size = fitBlock(label, labelW, height * 0.14, width * (wide ? 0.032 : 0.058), {
+    weight: 800,
+    family: vox.font,
+  });
 
   return (
     <>
       <ArchivalBG beat={beat.n} progress={ease(frame, 0, dur)} />
-      <div style={{ position: "absolute", left: pad, top: pad * 1.6 }}>
+      <div style={{ position: "absolute", left: pad, top: band.kicker }}>
         <Kicker text={beat.name} enter={frame - 4} />
       </div>
 
@@ -627,7 +781,7 @@ export const Callout: React.FC<VoxSceneProps> = ({ dur, beat }) => {
  */
 export const Timeline: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
-  const { width, height, pad, wide } = useMargin();
+  const { width, pad, y: band, primaryH, wide } = useLayout();
   const rows = beat.data && beat.data.length ? beat.data : [];
   if (rows.length < 2) return <Kinetic dur={dur} beat={beat} words={[]} />;
 
@@ -635,37 +789,21 @@ export const Timeline: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const hi = Math.max(...rows.map((r) => r.value));
   // All-equal values would divide by zero; fall back to even spacing.
   const at = (v: number) => (hi === lo ? 0.5 : (v - lo) / (hi - lo));
+  const fmt = numberFormat(hi);
 
   const run = ease(frame, 10, Math.max(28, dur * 0.45));
   const axis = width * 0.006;
   const dot = width * 0.022;
 
   const x0 = wide ? pad * 1.6 : pad + width * 0.09;
-  const y0 = wide ? height * 0.52 : height * 0.26;
-  const len = wide ? width - pad * 3.2 : height * 0.46;
+  // Landscape hangs the labels above the axis, so the axis sits low in its own
+  // band rather than in the middle of the page; portrait runs down the band.
+  const y0 = wide ? band.primary + primaryH * 0.6 : band.primary;
+  const len = wide ? width - pad * 3.2 : primaryH * 0.94;
 
   return (
     <>
-      <div style={{ position: "absolute", left: pad, top: pad * 1.6 }}>
-        <Kicker text={beat.name} enter={frame - 4} />
-        {beat.text ? (
-          <div
-            style={{
-              marginTop: pad * 0.4,
-              width: width - pad * 2,
-              fontFamily: vox.font,
-              fontWeight: 800,
-              fontSize: width * 0.058,
-              lineHeight: 1.05,
-              letterSpacing: -width * 0.002,
-              color: vox.ink,
-              opacity: ease(frame, 2, 16),
-            }}
-          >
-            {beat.text}
-          </div>
-        ) : null}
-      </div>
+      <PageHead kicker={beat.name} headline={beat.text} frame={frame} />
 
       {/* the axis, drawn in the direction time runs */}
       <div
@@ -703,7 +841,7 @@ export const Timeline: React.FC<VoxSceneProps> = ({ dur, beat }) => {
               style={{
                 position: "absolute",
                 left: wide ? x0 + pos - width * 0.09 : x0 + dot * 1.6,
-                top: wide ? y0 - height * 0.075 : y0 + pos - width * 0.026,
+                top: wide ? y0 - primaryH * 0.42 : y0 + pos - width * 0.026,
                 width: wide ? width * 0.18 : width - pad * 2 - width * 0.14,
                 textAlign: wide ? "center" : "left",
                 fontFamily: vox.font,
@@ -715,7 +853,7 @@ export const Timeline: React.FC<VoxSceneProps> = ({ dur, beat }) => {
               }}
             >
               <span style={{ color: vox.muted }}>
-                {num(row.value, prefix, suffix)}
+                {fmt(row.value, prefix, suffix)}
               </span>
               <br />
               {row.label}
@@ -738,15 +876,17 @@ export const Quote: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   if (!quote) return <Kinetic dur={dur} beat={beat} words={[]} />;
 
   return (
-    <Stage align="flex-start">
-      <Kicker text={beat.name} enter={frame - 4} />
-      <Clipping
-        quote={quote}
-        source={beat.source}
-        seed={beat.n * 5}
-        progress={ease(frame, 6, 24)}
-      />
-    </Stage>
+    <>
+      <PageHead kicker={beat.name} frame={frame} />
+      <Stage align="flex-start">
+        <Clipping
+          quote={quote}
+          source={beat.source}
+          seed={beat.n * 5}
+          progress={ease(frame, 6, 24)}
+        />
+      </Stage>
+    </>
   );
 };
 

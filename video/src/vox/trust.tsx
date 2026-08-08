@@ -7,8 +7,9 @@ import React from "react";
 import { AbsoluteFill, Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { useSemanticCamera } from "../editorial/camera";
 import { theme } from "../theme";
-import { DrawIn, Kicker, LineIcon } from "./elements";
-import { useMargin, VoxSceneProps } from "./scenes";
+import { DrawIn, LineIcon } from "./elements";
+import { fitBlock, useLayout } from "./layout";
+import { PageHead, VoxSceneProps } from "./scenes";
 
 /**
  * When the trust collapses, in seconds into the beat. Timed off voice.json like
@@ -47,7 +48,7 @@ const flipAt = (
 export const Trust: React.FC<VoxSceneProps> = ({ dur, beat, words }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const { width, height, pad, wide } = useMargin();
+  const { width, pad, safeW, y: band, primaryH } = useLayout();
   const vox = theme.vox;
   const { transform } = useSemanticCamera("settle", dur);
   const rows = beat.icons && beat.icons.length ? beat.icons : [];
@@ -58,36 +59,23 @@ export const Trust: React.FC<VoxSceneProps> = ({ dur, beat, words }) => {
   const flipped = flip && frame / fps >= at;
 
   const glyph = width * 0.05;
-  const rowH = height * (wide ? 0.07 : 0.062);
-  const firstY = height * (wide ? 0.36 : 0.4);
-  const size = width * 0.036;
+  // The list divides the primary band between however many signals the script
+  // listed, rather than assuming six will fit at a fixed row height — a
+  // nine-signal beat used to run its last three rows through the caption.
+  const rowH = Math.min(width * 0.075, primaryH / rows.length);
+  const firstY = band.primary;
+  // The FAKE stamp lands at the right margin, so a label may not reach it.
+  const labelW = safeW - glyph - pad * 0.5 - width * 0.16;
+  const size = rows.reduce(
+    (small, row) =>
+      Math.min(small, fitBlock(row.label, labelW, rowH * 0.9, width * 0.036,
+        { weight: 700, family: vox.font }, 1.15)),
+    width * 0.036,
+  );
 
   return (
     <AbsoluteFill style={{ transform, fontFamily: vox.font }}>
-      <div style={{ position: "absolute", left: pad, top: pad * 1.6 }}>
-        <Kicker text={beat.name} enter={frame - 4} />
-      </div>
-      {beat.text ? (
-        <div
-          style={{
-            position: "absolute",
-            left: pad,
-            top: pad * 2.7,
-            width: width - pad * 2,
-            fontWeight: 800,
-            fontSize: width * 0.058,
-            lineHeight: 1.05,
-            letterSpacing: -width * 0.0018,
-            color: vox.ink,
-            opacity: interpolate(frame, [2, 16], [0, 1], {
-              extrapolateLeft: "clamp",
-              extrapolateRight: "clamp",
-            }),
-          }}
-        >
-          {beat.text}
-        </div>
-      ) : null}
+      <PageHead kicker={beat.name} headline={beat.text} frame={frame} />
 
       {rows.map((row, i) => {
         const enter = spring({
@@ -106,7 +94,7 @@ export const Trust: React.FC<VoxSceneProps> = ({ dur, beat, words }) => {
                 position: "absolute",
                 left: pad,
                 top: y,
-                width: width - pad * 2,
+                width: safeW,
                 display: "flex",
                 alignItems: "center",
                 gap: pad * 0.5,
@@ -121,6 +109,7 @@ export const Trust: React.FC<VoxSceneProps> = ({ dur, beat, words }) => {
               />
               <div
                 style={{
+                  maxWidth: labelW,
                   fontWeight: 700,
                   fontSize: size,
                   lineHeight: 1.15,

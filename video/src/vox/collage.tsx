@@ -10,7 +10,8 @@ import React from "react";
 import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { theme } from "../theme";
 import { beatFrames, DrawIn, Halftone, Kicker, Shape } from "./elements";
-import { useMargin, VoxSceneProps } from "./scenes";
+import { fitBlock, useLayout } from "./layout";
+import { VoxSceneProps } from "./scenes";
 
 const vox = theme.vox;
 
@@ -38,11 +39,21 @@ const SLOTS = {
 export const Collage: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const { width, height, pad, wide } = useMargin();
+  const { width, height, pad, safeW, wide, y: band } = useLayout();
 
   const frames = beatFrames(beat.n).slice(0, 4);
   const slots = wide ? SLOTS.wide : SLOTS.tall;
   const headline = beat.text || "";
+  // The band the headline is printed on has to end where the caption band
+  // begins, so the two are never on screen on top of each other.
+  const headTop = height * (wide ? 0.72 : 0.74);
+  const headSize = fitBlock(
+    headline.toUpperCase(),
+    safeW - width * 0.048,
+    band.caption - headTop - width * 0.032,
+    width * 0.064,
+    { weight: 800, family: vox.font },
+  );
 
   return (
     <AbsoluteFill style={{ fontFamily: vox.font }}>
@@ -58,9 +69,13 @@ export const Collage: React.FC<VoxSceneProps> = ({ dur, beat }) => {
         // clipping vibrating on the table. Beat and index seed it so the same
         // beat lays out identically on every render and every re-render.
         const tilt = (((beat.n * 7 + i * 13) % 5) - 2) * 0.9;
-        // After landing, each card drifts at its own rate. The difference
-        // between the rates is the parallax — matched rates read as one slab.
+        // After landing, each card drifts at its own rate, on both axes and in
+        // alternating directions. The difference between the rates is the
+        // parallax — matched rates read as one slab, and one axis reads as a
+        // wobble rather than as depth.
         const drift = Math.sin((frame + i * 40) / (150 + i * 30)) * width * 0.006;
+        const sway =
+          Math.cos((frame + i * 55) / (170 + i * 25)) * width * 0.005 * (i % 2 ? -1 : 1);
         const w = width * slot.w;
         const h = height * slot.h;
 
@@ -78,7 +93,7 @@ export const Collage: React.FC<VoxSceneProps> = ({ dur, beat }) => {
               background: "#FBF9F4",
               padding: width * 0.011,
               boxShadow: `0 ${width * 0.014}px ${width * 0.038}px rgba(26,26,26,.28)`,
-              transform: `rotate(${tilt}deg) translateY(${interpolate(
+              transform: `translateX(${sway}px) rotate(${tilt}deg) translateY(${interpolate(
                 s,
                 [0, 1],
                 [height * 0.03, 0],
@@ -105,7 +120,7 @@ export const Collage: React.FC<VoxSceneProps> = ({ dur, beat }) => {
         );
       })}
 
-      <div style={{ position: "absolute", left: pad, top: pad * 1.6, width: width - pad * 2 }}>
+      <div style={{ position: "absolute", left: pad, top: band.kicker, width: safeW }}>
         <Kicker text={beat.name} enter={frame - 4} />
       </div>
 
@@ -117,13 +132,13 @@ export const Collage: React.FC<VoxSceneProps> = ({ dur, beat }) => {
           style={{
             position: "absolute",
             left: pad,
-            top: height * (wide ? 0.74 : 0.76),
-            maxWidth: width - pad * 2,
+            top: headTop,
+            maxWidth: safeW,
             padding: `${width * 0.016}px ${width * 0.024}px`,
             background: vox.paper,
             boxShadow: `0 ${width * 0.01}px ${width * 0.03}px rgba(26,26,26,.22)`,
             fontWeight: 800,
-            fontSize: width * (headline.length > 26 ? 0.05 : 0.064),
+            fontSize: headSize,
             lineHeight: 1.05,
             letterSpacing: -width * 0.002,
             textTransform: "uppercase",

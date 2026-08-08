@@ -33,6 +33,15 @@ const ramp = (x: number, from: [number, number], to: [number, number]) =>
  *  every line is a bed that is switching on and off for ten minutes. */
 const DUCK = 0.42;
 
+// The bed below is `loop`ed for the whole episode, which means the asset must
+// have no fade on either end: a bed mastered as a standalone cue fades in over
+// its first half-second and out over its last, and looping it drops the mix to
+// silence for ~1.5s at every seam. On the 32-second bed under the last
+// ten-minute read, that was nineteen audible holes at 31.5s, 63.5s, 95.5s —
+// the "recurring 32-second timing artifact" that looked like a fault in the
+// voice pipeline and never was. `tools/master-audio.py` trims the fades off and
+// `tools/check.mjs` fails the build if a faded bed comes back.
+
 /** The end of the last word — where speech actually stops, which is earlier
  *  than where the beat stops. */
 const spoken = (take: Take) =>

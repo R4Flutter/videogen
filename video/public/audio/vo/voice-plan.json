@@ -2,55 +2,613 @@
   {
     "n": 1,
     "name": "THE HOOK",
-    "spoken": "They pay you two dollars to watch videos. Then they ask for two hundred fifty.",
+    "spoken": "They pay you two dollars to watch videos.",
     "energy": 0.46,
     "pace": 0.7,
     "holdAfter": 0.55,
-    "seconds": 3.552
+    "seconds": 2.079
   },
   {
     "n": 2,
-    "name": "THE PIVOT",
-    "spoken": "See, the job is real. The pay is real. The trap is the next step.",
+    "name": "THE NUMBER",
+    "spoken": "The machine behind that job was pulling in thirty million dollars a day.",
     "energy": 0.42,
     "pace": 0.52,
     "holdAfter": 0.34,
-    "seconds": 3.579
+    "seconds": 3.209
   },
   {
     "n": 3,
-    "name": "THE TRUST",
-    "spoken": "Meaning the platform builds trust on purpose. Instant payouts. A balance that grows. Support that answers in minutes. None of it was real.",
-    "energy": 0.4,
-    "pace": 0.66,
-    "holdAfter": 0.46,
-    "seconds": 7.3
+    "name": "THE SAME ENGINE",
+    "spoken": "Same engine. Same script. Two dollars to watch, two hundred fifty to deposit.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 4.405
   },
   {
     "n": 4,
-    "name": "THE TRACE",
-    "spoken": "But the balance on screen is not real. When you deposit two hundred fifty, the money moves. To their platform. Then to their wallet. Then gone.",
-    "energy": 0.34,
-    "pace": 0.64,
-    "holdAfter": 0.42,
-    "seconds": 7.351
+    "name": "THE BIGGEST PILE",
+    "spoken": "In October twenty twenty five, American prosecutors took the biggest single pile of it ever: fifteen billion dollars in bitcoin.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 6.827
   },
   {
     "n": 5,
-    "name": "THE FUNNEL",
-    "spoken": "And the scam runs on volume. A hundred thousand targets. A thousand responses. A hundred deposits. Five locked accounts.",
-    "energy": 0.38,
-    "pace": 0.66,
-    "holdAfter": 0.4,
-    "seconds": 7.285
+    "name": "THE PROMISE",
+    "spoken": "Here's who was paying you. And how they got caught.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 2.588
   },
   {
     "n": 6,
-    "name": "THE PAYOFF",
-    "spoken": "Therefore, paid to watch videos. Until the pay becomes the price.",
+    "name": "THE CARD",
+    "spoken": "First, the offer. It arrives in your messages like every other side hustle.",
     "energy": 0.46,
     "pace": 0.7,
     "holdAfter": 0.55,
-    "seconds": 3.981
+    "seconds": 4.169
+  },
+  {
+    "n": 7,
+    "name": "THE TASK",
+    "spoken": "Watch ten videos. Screenshot the proof. Send it in. Twenty dollars.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 4.254
+  },
+  {
+    "n": 8,
+    "name": "THE RATE",
+    "spoken": "Two dollars a video. Less than minimum wage, and that is exactly the point.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 4.133
+  },
+  {
+    "n": 9,
+    "name": "THE CLEAR",
+    "spoken": "See, the payment actually clears. Real money, into your balance, in eleven minutes.",
+    "energy": 0.34,
+    "pace": 0.64,
+    "holdAfter": 0.42,
+    "seconds": 4.563
+  },
+  {
+    "n": 10,
+    "name": "THE CHECKLIST",
+    "spoken": "Real app. Real payout. Support that answers in minutes. You tick every box.",
+    "energy": 0.36,
+    "pace": 0.68,
+    "holdAfter": 0.42,
+    "seconds": 4.513
+  },
+  {
+    "n": 11,
+    "name": "THE BALANCE",
+    "spoken": "The balance climbs. Twenty. Forty. A hundred. It never goes down.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 4.218
+  },
+  {
+    "n": 12,
+    "name": "THE TRAINING",
+    "spoken": "Meaning the hook is the work. You aren't being paid to watch videos. You're being trained.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 4.601
+  },
+  {
+    "n": 13,
+    "name": "THE SUPERVISOR",
+    "spoken": "Within two days, a supervisor appears. A group. A commission ladder.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 4.148
+  },
+  {
+    "n": 14,
+    "name": "THE PROMOTION",
+    "spoken": "Congratulations, you've been promoted to VIP.\" That's the actual script.",
+    "energy": 0.4,
+    "pace": 0.54,
+    "holdAfter": 0.42,
+    "seconds": 4.464
+  },
+  {
+    "n": 15,
+    "name": "THE LADDERS",
+    "spoken": "Both ladders climb together: your earnings, and what you're asked to put up to reach the next rung.",
+    "energy": 0.34,
+    "pace": 0.66,
+    "holdAfter": 0.4,
+    "seconds": 4.644
+  },
+  {
+    "n": 16,
+    "name": "THE CARD",
+    "spoken": "The money that arrives first is the mechanism. It deserves its own minute.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 3.795
+  },
+  {
+    "n": 17,
+    "name": "THE TRUST",
+    "spoken": "Instant payouts. A balance that grows. Support that answers. None of it was an accident.",
+    "energy": 0.4,
+    "pace": 0.66,
+    "holdAfter": 0.46,
+    "seconds": 4.945
+  },
+  {
+    "n": 18,
+    "name": "THE COUPON",
+    "spoken": "That first withdrawal isn't a payment. It's a coupon, and it costs them two dollars.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 4.329
+  },
+  {
+    "n": 19,
+    "name": "THE COST",
+    "spoken": "They spend two dollars to learn what you'll risk. You spend two dollars to believe they're real.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 4.246
+  },
+  {
+    "n": 20,
+    "name": "THE TRADE",
+    "spoken": "See, trust isn't built by the app. It's built by you, watching your own money arrive.",
+    "energy": 0.44,
+    "pace": 0.5,
+    "holdAfter": 0.34,
+    "seconds": 4.768
+  },
+  {
+    "n": 21,
+    "name": "THE RECEIPT",
+    "spoken": "The deposit clears, and you watch it. That's the moment the belief gets built, by you.",
+    "energy": 0.34,
+    "pace": 0.64,
+    "holdAfter": 0.42,
+    "seconds": 4.849
+  },
+  {
+    "n": 22,
+    "name": "THE SUPPORT",
+    "spoken": "Every question answered. Every time. A hundred staff, one conversation each.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 5.528
+  },
+  {
+    "n": 23,
+    "name": "THE WORD",
+    "spoken": "In the trade, they call it fattening. Feed the account. Build the belief. The kill comes later.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 4.838
+  },
+  {
+    "n": 24,
+    "name": "THE LADDER",
+    "spoken": "Each tier is a rung. Each rung is a deposit you haven't made yet.",
+    "energy": 0.36,
+    "pace": 0.68,
+    "holdAfter": 0.42,
+    "seconds": 3.874
+  },
+  {
+    "n": 25,
+    "name": "THE RUNG",
+    "spoken": "Then the rung that matters: two hundred fifty dollars, to unlock a faster payout tier.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 5.099
+  },
+  {
+    "n": 26,
+    "name": "THE REASON",
+    "spoken": "And it works. People pay it. Because the balance is real, and the balance is theirs.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 5.117
+  },
+  {
+    "n": 27,
+    "name": "THE SERVER",
+    "spoken": "Except the balance is a number on their server. The deposit is real money, moved.",
+    "energy": 0.34,
+    "pace": 0.64,
+    "holdAfter": 0.42,
+    "seconds": 4.746
+  },
+  {
+    "n": 28,
+    "name": "THE SEGUE",
+    "spoken": "Some of it gets paid out, to make the next person trust the same screen. The rest moves on.",
+    "energy": 0.4,
+    "pace": 0.54,
+    "holdAfter": 0.42,
+    "seconds": 4.923
+  },
+  {
+    "n": 29,
+    "name": "THE CARD",
+    "spoken": "The turn happens when the amounts stop being small.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 2.422
+  },
+  {
+    "n": 30,
+    "name": "THE FEES",
+    "spoken": "A platform fee of ten thousand. An unlock of twenty. A tax clearance of forty.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 4.912
+  },
+  {
+    "n": 31,
+    "name": "THE VAULT",
+    "spoken": "Every reason to deposit has one thing in common: it unlocks money that's already yours.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 4.737
+  },
+  {
+    "n": 32,
+    "name": "TWO MATHS",
+    "spoken": "Their math: deposit to unlock. Your math: it's already in there. Two maths, one answer.",
+    "energy": 0.44,
+    "pace": 0.5,
+    "holdAfter": 0.34,
+    "seconds": 5.873
+  },
+  {
+    "n": 33,
+    "name": "THE PSYCHOLOGY",
+    "spoken": "The psychology is textbook. Sunk cost. Escape cost. The account is almost unlocked.",
+    "energy": 0.36,
+    "pace": 0.68,
+    "holdAfter": 0.42,
+    "seconds": 6.159
+  },
+  {
+    "n": 34,
+    "name": "THE MOVE",
+    "spoken": "But the balance is never unlocked. The rules change on the server, and the ask gets bigger.",
+    "energy": 0.34,
+    "pace": 0.64,
+    "holdAfter": 0.42,
+    "seconds": 4.583
+  },
+  {
+    "n": 35,
+    "name": "THE SECOND LAYER",
+    "spoken": "And for the biggest accounts, they add a second layer: romance.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 3.75
+  },
+  {
+    "n": 36,
+    "name": "THE CAST",
+    "spoken": "A friend with a tip. A partner with a plan. An expert who always answers.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 3.804
+  },
+  {
+    "n": 37,
+    "name": "THE SLOW KILL",
+    "spoken": "The best accounts are fattened for months. The slaughter takes an hour.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 3.568
+  },
+  {
+    "n": 38,
+    "name": "THE LINE",
+    "spoken": "I love you. Trust me. Just this once.\" It's a script. It has always been a script.",
+    "energy": 0.4,
+    "pace": 0.54,
+    "holdAfter": 0.42,
+    "seconds": 4.341
+  },
+  {
+    "n": 39,
+    "name": "THE RECEIPT",
+    "spoken": "The deposit doesn't go to the platform. It goes to a wallet, and wallets leave receipts.",
+    "energy": 0.34,
+    "pace": 0.64,
+    "holdAfter": 0.42,
+    "seconds": 4.151
+  },
+  {
+    "n": 40,
+    "name": "THE LAST FRAME",
+    "spoken": "The last frame the mark sees: the balance, the chat, and silence.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 3.996
+  },
+  {
+    "n": 41,
+    "name": "THE CLOSED ACCOUNT",
+    "spoken": "On their ledger, the account closes. The person stays open.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 3.329
+  },
+  {
+    "n": 42,
+    "name": "THE BROOKLYN NETWORK",
+    "spoken": "In Brooklyn alone, one network moved millions for this machine, two hundred fifty victims across the country.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 5.473
+  },
+  {
+    "n": 43,
+    "name": "THE FUNNEL",
+    "spoken": "A hundred thousand targets. A thousand responses. A hundred deposits. Five locked accounts.",
+    "energy": 0.38,
+    "pace": 0.66,
+    "holdAfter": 0.4,
+    "seconds": 5.835
+  },
+  {
+    "n": 44,
+    "name": "THE CARD",
+    "spoken": "Time to meet the machine that runs the numbers.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 2.666
+  },
+  {
+    "n": 45,
+    "name": "THE PLACE",
+    "spoken": "The money doesn't land in a call center. It lands in Cambodia.",
+    "energy": 0.4,
+    "pace": 0.52,
+    "holdAfter": 0.3,
+    "seconds": 3.001
+  },
+  {
+    "n": 46,
+    "name": "THE COMPOUND",
+    "spoken": "Ten compounds. High walls. Barbed wire. Dormitories for hundreds of workers.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 5.311
+  },
+  {
+    "n": 47,
+    "name": "THE PHONE FARM",
+    "spoken": "Phone farms: one facility alone held twelve hundred fifty phones.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 3.601
+  },
+  {
+    "n": 48,
+    "name": "THE ACCOUNTS",
+    "spoken": "Seventy six thousand accounts on one platform, out of two buildings.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 3.535
+  },
+  {
+    "n": 49,
+    "name": "THE LEDGER",
+    "spoken": "A ledger for every compound: which rooms run which scheme, and what each one profits.",
+    "energy": 0.36,
+    "pace": 0.68,
+    "holdAfter": 0.42,
+    "seconds": 4.754
+  },
+  {
+    "n": 50,
+    "name": "THE LABOR",
+    "spoken": "The labor was the product. Workers trafficked in, kept against their will, under threat of violence.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 4.883
+  },
+  {
+    "n": 51,
+    "name": "THE DATES",
+    "spoken": "In twenty nineteen, the Golden Fortune compound went up. In twenty twenty one, millions of phone numbers and passwords were bought in bulk.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 6.966
+  },
+  {
+    "n": 52,
+    "name": "THE QUOTE",
+    "spoken": "The founder of Prince Group, prosecutors say, bragged that the profit was considerable, because there is no cost.",
+    "energy": 0.4,
+    "pace": 0.54,
+    "holdAfter": 0.42,
+    "seconds": 5.957
+  },
+  {
+    "n": 53,
+    "name": "THE SPOILS",
+    "spoken": "The proceeds bought the usual: yachts, a private jet, and a Picasso through a New York auction house.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 5.623
+  },
+  {
+    "n": 54,
+    "name": "THE DIAGRAM",
+    "spoken": "The laundering ran on a diagram. Split the coins across a hundred addresses, recombine them into three.",
+    "energy": 0.34,
+    "pace": 0.64,
+    "holdAfter": 0.42,
+    "seconds": 5.971
+  },
+  {
+    "n": 55,
+    "name": "THE RECEIPTS",
+    "spoken": "Every split is public. Every address is a receipt. The blockchain keeps the book.",
+    "energy": 0.4,
+    "pace": 0.54,
+    "holdAfter": 0.42,
+    "seconds": 4.878
+  },
+  {
+    "n": 56,
+    "name": "THE CARD",
+    "spoken": "October, twenty twenty five. The indictment lands in Brooklyn.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 3.392
+  },
+  {
+    "n": 57,
+    "name": "THE FILING",
+    "spoken": "The chairman of Prince Group is charged with running the whole machine.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 3.211
+  },
+  {
+    "n": 58,
+    "name": "THE VERDICT",
+    "spoken": "FBI Director Patel called it one of the largest financial fraud takedowns in history.",
+    "energy": 0.4,
+    "pace": 0.54,
+    "holdAfter": 0.42,
+    "seconds": 4.46
+  },
+  {
+    "n": 59,
+    "name": "THE SEIZURE",
+    "spoken": "A hundred twenty seven thousand two hundred seventy one bitcoin. Fifteen billion dollars. The largest seizure in DOJ history.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 7.235
+  },
+  {
+    "n": 60,
+    "name": "THE KEYS",
+    "spoken": "How? The coins sat in wallets whose keys one person held. Take the keys, and the pile stops moving.",
+    "energy": 0.34,
+    "pace": 0.64,
+    "holdAfter": 0.42,
+    "seconds": 6.541
+  },
+  {
+    "n": 61,
+    "name": "THE TELL",
+    "spoken": "And the tell that generalizes: an investment you can't withdraw from without depositing more is not an investment.",
+    "energy": 0.36,
+    "pace": 0.68,
+    "holdAfter": 0.42,
+    "seconds": 5.979
+  },
+  {
+    "n": 62,
+    "name": "THE RULE",
+    "spoken": "Real money withdraws. Real platforms never unlock your own balance.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 3.384
+  },
+  {
+    "n": 63,
+    "name": "THE TEST",
+    "spoken": "Ask to withdraw before you deposit. The answer is a number, and it's not yours.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 4.315
+  },
+  {
+    "n": 64,
+    "name": "THE CALLBACK",
+    "spoken": "They pay you two dollars to watch videos.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 2.079
+  },
+  {
+    "n": 65,
+    "name": "THE NUMBER",
+    "spoken": "This machine took in thirty million dollars a day.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 2.857
+  },
+  {
+    "n": 66,
+    "name": "THE PRODUCT",
+    "spoken": "The pay was never the product. You were.",
+    "energy": 0.42,
+    "pace": 0.52,
+    "holdAfter": 0.34,
+    "seconds": 2.23
+  },
+  {
+    "n": 67,
+    "name": "THE LINE",
+    "spoken": "The trap is the trust. That hasn't changed.",
+    "energy": 0.4,
+    "pace": 0.54,
+    "holdAfter": 0.42,
+    "seconds": 2.416
+  },
+  {
+    "n": 68,
+    "name": "THE PAYOFF",
+    "spoken": "Paid to watch videos, until the pay becomes the price.",
+    "energy": 0.46,
+    "pace": 0.7,
+    "holdAfter": 0.55,
+    "seconds": 2.777
   }
 ]

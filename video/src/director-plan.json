@@ -1,0 +1,6674 @@
+{
+  "version": "2.0",
+  "project": {
+    "title": "THE FIFTEEN-BILLION-DOLLAR COMPOUND",
+    "durationInSeconds": 304.92,
+    "format": "1920:1080",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "engine": "vox",
+    "mode": "ESSAY"
+  },
+  "chapters": [
+    {
+      "id": "ch_1",
+      "title": "THE HOOK",
+      "ordinal": 1,
+      "startBeat": 1,
+      "start": 0,
+      "end": 151.67,
+      "card": {
+        "text": "THE HOOK"
+      }
+    },
+    {
+      "id": "ch_2",
+      "title": "THE MOVE",
+      "ordinal": 2,
+      "startBeat": 34,
+      "start": 151.67,
+      "end": 301.89,
+      "card": {
+        "text": "THE MOVE",
+        "subtext": "CHAPTER 2"
+      }
+    },
+    {
+      "id": "ch_3",
+      "title": "THE PAYOFF",
+      "ordinal": 3,
+      "startBeat": 68,
+      "start": 301.89,
+      "end": 304.92,
+      "card": {
+        "text": "THE PAYOFF",
+        "subtext": "CHAPTER 3"
+      }
+    }
+  ],
+  "sequences": [
+    {
+      "id": "seq_01",
+      "purpose": "hook",
+      "chapterId": "ch_1",
+      "beatRange": [
+        1,
+        1
+      ],
+      "start": 0,
+      "end": 2.27,
+      "emotion": "curiosity",
+      "infoDensity": "medium",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.55,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_02",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        2,
+        6
+      ],
+      "start": 2.27,
+      "end": 24.04,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_03",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        7,
+        11
+      ],
+      "start": 24.04,
+      "end": 46.31,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_04",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        12,
+        16
+      ],
+      "start": 46.31,
+      "end": 68.79,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_05",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        17,
+        21
+      ],
+      "start": 68.79,
+      "end": 92.35,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_06",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        22,
+        26
+      ],
+      "start": 92.35,
+      "end": 117.4,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_07",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        27,
+        31
+      ],
+      "start": 117.4,
+      "end": 139.65,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_08",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        32,
+        36
+      ],
+      "start": 139.65,
+      "end": 164.04,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_09",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        37,
+        41
+      ],
+      "start": 164.04,
+      "end": 183.95,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_10",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        42,
+        46
+      ],
+      "start": 183.95,
+      "end": 206.38,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_11",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        47,
+        51
+      ],
+      "start": 206.38,
+      "end": 230.39,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_12",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        52,
+        56
+      ],
+      "start": 230.39,
+      "end": 256.21,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_13",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        57,
+        61
+      ],
+      "start": 256.21,
+      "end": 283.89,
+      "openQuestion": "How? The coins sat in wallets whose keys one person held. Take the keys, and the pile stops moving.",
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_14",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        62,
+        66
+      ],
+      "start": 283.89,
+      "end": 299.37,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_15",
+      "purpose": "explain",
+      "chapterId": "ch_1",
+      "beatRange": [
+        67,
+        67
+      ],
+      "start": 299.37,
+      "end": 301.89,
+      "emotion": "curiosity",
+      "infoDensity": "high",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.75,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "id": "seq_16",
+      "purpose": "payoff",
+      "chapterId": "ch_1",
+      "beatRange": [
+        68,
+        68
+      ],
+      "start": 301.89,
+      "end": 304.92,
+      "emotion": "curiosity",
+      "infoDensity": "medium",
+      "attentionTarget": {
+        "novelty": 0.6,
+        "curiosity": 0.6,
+        "tension": 0.4,
+        "informationDensity": 0.55,
+        "emotionalIntensity": 0.8
+      }
+    }
+  ],
+  "beats": [
+    {
+      "n": 1,
+      "name": "THE HOOK",
+      "start": 0,
+      "end": 2.27,
+      "audioStart": 0,
+      "narrative": {
+        "purpose": "hook"
+      },
+      "attention": {
+        "strategy": "impact",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.4,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 0.11,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "PAID TO WATCH VIDEOS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.58,
+        "musicMood": "swell",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [
+          "ph_paid-to-watch-videos"
+        ],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_01"
+    },
+    {
+      "n": 2,
+      "name": "THE NUMBER",
+      "start": 2.27,
+      "end": 5.61,
+      "audioStart": 2.27,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 2.6,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "$30M / DAY",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_01"
+    },
+    {
+      "n": 3,
+      "name": "THE SAME ENGINE",
+      "start": 5.61,
+      "end": 10.03,
+      "audioStart": 5.61,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 6.05,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "SAME ENGINE. SAME SCRIPT.",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 7.21,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_02"
+    },
+    {
+      "n": 4,
+      "name": "THE BIGGEST PILE",
+      "start": 10.03,
+      "end": 16.75,
+      "audioStart": 10.03,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 10.7,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "$15,000,000,000",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_02"
+    },
+    {
+      "n": 5,
+      "name": "THE PROMISE",
+      "start": 16.75,
+      "end": 19.43,
+      "audioStart": 16.75,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "LOCATE",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 17.02,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "HERE'S WHO WAS PAYING YOU",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 17.75,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_02"
+    },
+    {
+      "n": 6,
+      "name": "THE CARD",
+      "start": 19.43,
+      "end": 24.04,
+      "audioStart": 19.43,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 19.89,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "ACT ONE — THE OFFER",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_02"
+    },
+    {
+      "n": 7,
+      "name": "THE TASK",
+      "start": 24.04,
+      "end": 28.45,
+      "audioStart": 24.04,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "PROVE",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 24.48,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "WATCH TEN VIDEOS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 25.64,
+            "files": [
+              "pop.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_02"
+    },
+    {
+      "n": 8,
+      "name": "THE RATE",
+      "start": 28.45,
+      "end": 32.69,
+      "audioStart": 28.45,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 28.87,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "$2 / VIDEO",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_03"
+    },
+    {
+      "n": 9,
+      "name": "THE CLEAR",
+      "start": 32.69,
+      "end": 37.35,
+      "audioStart": 32.69,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.9,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "REVEAL",
+        "module": "trace",
+        "layers": [],
+        "reveal": "PROGRESSIVE",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "PROGRESSIVE",
+          "holdUntil": 33.16,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "THE PAYMENT CLEARS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 34.29,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_03"
+    },
+    {
+      "n": 10,
+      "name": "THE CHECKLIST",
+      "start": 37.35,
+      "end": 41.99,
+      "audioStart": 37.35,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.8,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "icon",
+        "layers": [],
+        "reveal": "SEQUENTIAL",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "SEQUENTIAL",
+          "holdUntil": 37.81,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "crossfade",
+          "reason": "EMOTIONAL_RESET",
+          "frames": 9
+        }
+      },
+      "typography": {
+        "text": "EVERY BOX TICKS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 38.95,
+            "files": [
+              "pop.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_03"
+    },
+    {
+      "n": 11,
+      "name": "THE BALANCE",
+      "start": 41.99,
+      "end": 46.31,
+      "audioStart": 41.99,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 42.42,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "IT NEVER GOES DOWN",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_03"
+    },
+    {
+      "n": 12,
+      "name": "THE TRAINING",
+      "start": 46.31,
+      "end": 51.12,
+      "audioStart": 46.31,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 46.79,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "crossfade",
+          "reason": "EMOTIONAL_RESET",
+          "frames": 9
+        }
+      },
+      "typography": {
+        "text": "THE HOOK IS THE WORK",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 47.91,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [
+          "ph_paid-to-watch-videos"
+        ],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_03"
+    },
+    {
+      "n": 13,
+      "name": "THE SUPERVISOR",
+      "start": 51.12,
+      "end": 55.36,
+      "audioStart": 51.12,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 51.54,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "48 HOURS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_04"
+    },
+    {
+      "n": 14,
+      "name": "THE PROMOTION",
+      "start": 55.36,
+      "end": 59.94,
+      "audioStart": 55.36,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "PROVE",
+        "module": "quote",
+        "layers": [],
+        "reveal": "FOCUS",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "FOCUS",
+          "holdUntil": 55.82,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "crossfade",
+          "reason": "EMOTIONAL_RESET",
+          "frames": 9
+        }
+      },
+      "typography": {
+        "text": "YOU'VE BEEN PROMOTED TO VIP",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 56.96,
+            "files": [
+              "pop.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_04"
+    },
+    {
+      "n": 15,
+      "name": "THE LADDERS",
+      "start": 59.94,
+      "end": 64.86,
+      "audioStart": 59.94,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "chart",
+        "composition": "A chart: your earnings climbing, and what you're asked to put up, climbing beside it.",
+        "layers": [],
+        "reveal": "PROGRESSIVE",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "PROGRESSIVE",
+          "holdUntil": 60.43,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "TWO LADDERS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 61.54,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_04"
+    },
+    {
+      "n": 16,
+      "name": "THE CARD",
+      "start": 64.86,
+      "end": 68.79,
+      "audioStart": 64.86,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 65.25,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "crossfade",
+          "reason": "EMOTIONAL_RESET",
+          "frames": 9
+        }
+      },
+      "typography": {
+        "text": "ACT TWO — THE FATTENING",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 65.86,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_04"
+    },
+    {
+      "n": 17,
+      "name": "THE TRUST",
+      "start": 68.79,
+      "end": 73.81,
+      "audioStart": 68.79,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.8,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "trust",
+        "layers": [],
+        "reveal": "SEQUENTIAL",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "SEQUENTIAL",
+          "holdUntil": 69.29,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "TRUST, BUILT ON PURPOSE",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 70.39,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_04"
+    },
+    {
+      "n": 18,
+      "name": "THE COUPON",
+      "start": 73.81,
+      "end": 78.19,
+      "audioStart": 73.81,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 74.25,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "crossfade",
+          "reason": "EMOTIONAL_RESET",
+          "frames": 9
+        }
+      },
+      "typography": {
+        "text": "IT'S A COUPON",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_05"
+    },
+    {
+      "n": 19,
+      "name": "THE COST",
+      "start": 78.19,
+      "end": 82.55,
+      "audioStart": 78.19,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 78.63,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "$2",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 79.79,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_05"
+    },
+    {
+      "n": 20,
+      "name": "THE TRADE",
+      "start": 82.55,
+      "end": 87.29,
+      "audioStart": 82.55,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "COMPARE",
+        "module": "compare",
+        "layers": [],
+        "reveal": "SEQUENTIAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "SEQUENTIAL",
+          "holdUntil": 83.02,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "crossfade",
+          "reason": "EMOTIONAL_RESET",
+          "frames": 9
+        }
+      },
+      "typography": {
+        "text": "KNOWLEDGE FOR CASH",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 84.15,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_05"
+    },
+    {
+      "n": 21,
+      "name": "THE RECEIPT",
+      "start": 87.29,
+      "end": 92.35,
+      "audioStart": 87.29,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "trace",
+        "layers": [],
+        "reveal": "PROGRESSIVE",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "PROGRESSIVE",
+          "holdUntil": 87.8,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "YOU WATCH YOURSELF TRUST IT",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_05"
+    },
+    {
+      "n": 22,
+      "name": "THE SUPPORT",
+      "start": 92.35,
+      "end": 97.85,
+      "audioStart": 92.35,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 92.9,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "ANSWERS IN MINUTES",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 93.95,
+            "files": [
+              "pop.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_05"
+    },
+    {
+      "n": 23,
+      "name": "THE WORD",
+      "start": 97.85,
+      "end": 103,
+      "audioStart": 97.85,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 98.36,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "FATTENING",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_06"
+    },
+    {
+      "n": 24,
+      "name": "THE LADDER",
+      "start": 103,
+      "end": 107.08,
+      "audioStart": 103,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.8,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "icon",
+        "layers": [],
+        "reveal": "SEQUENTIAL",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "SEQUENTIAL",
+          "holdUntil": 103.41,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "ONE RUNG AT A TIME",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 104.6,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_06"
+    },
+    {
+      "n": 25,
+      "name": "THE RUNG",
+      "start": 107.08,
+      "end": 112.28,
+      "audioStart": 107.08,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 107.6,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "$250",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_06"
+    },
+    {
+      "n": 26,
+      "name": "THE REASON",
+      "start": 112.28,
+      "end": 117.4,
+      "audioStart": 112.28,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 112.79,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "IT'S ALREADY THEIRS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_06"
+    },
+    {
+      "n": 27,
+      "name": "THE SERVER",
+      "start": 117.4,
+      "end": 122.26,
+      "audioStart": 117.4,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "trace",
+        "layers": [],
+        "reveal": "PROGRESSIVE",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "PROGRESSIVE",
+          "holdUntil": 117.89,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "A NUMBER ON THEIR SERVER",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 119,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_06"
+    },
+    {
+      "n": 28,
+      "name": "THE SEGUE",
+      "start": 122.26,
+      "end": 127.32,
+      "audioStart": 122.26,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "HUMANIZE",
+        "module": "quote",
+        "layers": [],
+        "reveal": "FOCUS",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "FOCUS",
+          "holdUntil": 122.77,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "THE REST MOVES ON",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 123.86,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_07"
+    },
+    {
+      "n": 29,
+      "name": "THE CARD",
+      "start": 127.32,
+      "end": 129.97,
+      "audioStart": 127.32,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 127.58,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "ACT THREE — THE TURN",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_07"
+    },
+    {
+      "n": 30,
+      "name": "THE FEES",
+      "start": 129.97,
+      "end": 134.95,
+      "audioStart": 129.97,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 130.47,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "$10,000",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_07"
+    },
+    {
+      "n": 31,
+      "name": "THE VAULT",
+      "start": 134.95,
+      "end": 139.65,
+      "audioStart": 134.95,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 135.42,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "UNLOCKS WHAT'S YOURS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 136.55,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_07"
+    },
+    {
+      "n": 32,
+      "name": "TWO MATHS",
+      "start": 139.65,
+      "end": 145.57,
+      "audioStart": 139.65,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "LOCATE",
+        "module": "compare",
+        "layers": [],
+        "reveal": "SEQUENTIAL",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "SEQUENTIAL",
+          "holdUntil": 140.24,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "DEPOSIT TO UNLOCK",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 141.25,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_07"
+    },
+    {
+      "n": 33,
+      "name": "THE PSYCHOLOGY",
+      "start": 145.57,
+      "end": 151.67,
+      "audioStart": 145.57,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.8,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "icon",
+        "layers": [],
+        "reveal": "SEQUENTIAL",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "SEQUENTIAL",
+          "holdUntil": 146.18,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "SUNK COST",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_1",
+      "sequenceId": "seq_08"
+    },
+    {
+      "n": 34,
+      "name": "THE MOVE",
+      "start": 151.67,
+      "end": 156.39,
+      "audioStart": 151.67,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "trace",
+        "layers": [],
+        "reveal": "PROGRESSIVE",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "PROGRESSIVE",
+          "holdUntil": 152.14,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "THE RULES CHANGE",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_08"
+    },
+    {
+      "n": 35,
+      "name": "THE SECOND LAYER",
+      "start": 156.39,
+      "end": 159.99,
+      "audioStart": 156.39,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 156.75,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "ROMANCE",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 157.39,
+            "files": [
+              "pop.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_08"
+    },
+    {
+      "n": 36,
+      "name": "THE CAST",
+      "start": 159.99,
+      "end": 164.04,
+      "audioStart": 159.99,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 160.4,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "A FRIEND. A PARTNER. AN EXPERT.",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 161.59,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_08"
+    },
+    {
+      "n": 37,
+      "name": "THE SLOW KILL",
+      "start": 164.04,
+      "end": 167.72,
+      "audioStart": 164.04,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 164.41,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "90 DAYS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_08"
+    },
+    {
+      "n": 38,
+      "name": "THE LINE",
+      "start": 167.72,
+      "end": 172.2,
+      "audioStart": 167.72,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "PROVE",
+        "module": "quote",
+        "layers": [],
+        "reveal": "FOCUS",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "FOCUS",
+          "holdUntil": 168.17,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "JUST THIS ONCE",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_09"
+    },
+    {
+      "n": 39,
+      "name": "THE RECEIPT",
+      "start": 172.2,
+      "end": 176.38,
+      "audioStart": 172.2,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "trace",
+        "layers": [],
+        "reveal": "PROGRESSIVE",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "PROGRESSIVE",
+          "holdUntil": 172.62,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "WALLETS LEAVE RECEIPTS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_09"
+    },
+    {
+      "n": 40,
+      "name": "THE LAST FRAME",
+      "start": 176.38,
+      "end": 180.28,
+      "audioStart": 176.38,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "HUMANIZE",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 176.77,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "BALANCE. CHAT. SILENCE.",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 177.38,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_09"
+    },
+    {
+      "n": 41,
+      "name": "THE CLOSED ACCOUNT",
+      "start": 180.28,
+      "end": 183.95,
+      "audioStart": 180.28,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "HUMANIZE",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 180.65,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "THE ACCOUNT CLOSES",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_09"
+    },
+    {
+      "n": 42,
+      "name": "THE BROOKLYN NETWORK",
+      "start": 183.95,
+      "end": 189.61,
+      "audioStart": 183.95,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "LOCATE",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 184.52,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "250 VICTIMS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_09"
+    },
+    {
+      "n": 43,
+      "name": "THE FUNNEL",
+      "start": 189.61,
+      "end": 195.39,
+      "audioStart": 189.61,
+      "narrative": {
+        "purpose": "explain",
+        "consequence": "locked"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.9,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "funnel",
+        "layers": [],
+        "reveal": "PROGRESSIVE",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "PROGRESSIVE",
+          "holdUntil": 190.19,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "A HUNDRED THOUSAND TARGETS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 191.21,
+            "files": [
+              "tick.wav"
+            ]
+          },
+          {
+            "at": 194.39,
+            "files": [
+              "boom.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_10"
+    },
+    {
+      "n": 44,
+      "name": "THE CARD",
+      "start": 195.39,
+      "end": 198.28,
+      "audioStart": 195.39,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 195.68,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "ACT FOUR — THE MACHINE",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_10"
+    },
+    {
+      "n": 45,
+      "name": "THE PLACE",
+      "start": 198.28,
+      "end": 201.18,
+      "audioStart": 198.28,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "LOCATE",
+        "module": "map",
+        "layers": [
+          "base",
+          "subject",
+          "annotation"
+        ],
+        "reveal": "LAYERED",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "LAYERED",
+          "holdUntil": 198.57,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "IT LANDS IN CAMBODIA",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 199.28,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_10"
+    },
+    {
+      "n": 46,
+      "name": "THE COMPOUND",
+      "start": 201.18,
+      "end": 206.38,
+      "audioStart": 201.18,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "collage",
+        "layers": [],
+        "reveal": "SEQUENTIAL",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "SEQUENTIAL",
+          "holdUntil": 201.7,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "TEN COMPOUNDS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_10"
+    },
+    {
+      "n": 47,
+      "name": "THE PHONE FARM",
+      "start": 206.38,
+      "end": 210,
+      "audioStart": 206.38,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 206.74,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "1,250 PHONES",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 209.13,
+            "files": [
+              "pop.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_10"
+    },
+    {
+      "n": 48,
+      "name": "THE ACCOUNTS",
+      "start": 210,
+      "end": 213.54,
+      "audioStart": 210,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.65,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 210.35,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "76,000 ACCOUNTS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_11"
+    },
+    {
+      "n": 49,
+      "name": "THE LEDGER",
+      "start": 213.54,
+      "end": 218.28,
+      "audioStart": 213.54,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.8,
+        "informationDensity": 0.8,
+        "emotionalIntensity": 0.75,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "icon",
+        "layers": [],
+        "reveal": "SEQUENTIAL",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "SEQUENTIAL",
+          "holdUntil": 214.01,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "ROOMS, SCHEMES, PROFITS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 215.14,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_11"
+    },
+    {
+      "n": 50,
+      "name": "THE LABOR",
+      "start": 218.28,
+      "end": 223.37,
+      "audioStart": 218.28,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "COMPARE",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 218.79,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "THE LABOR WAS THE PRODUCT",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_11"
+    },
+    {
+      "n": 51,
+      "name": "THE DATES",
+      "start": 223.37,
+      "end": 230.39,
+      "audioStart": 223.37,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.8,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.75,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 224.07,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "2019 — 2021",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 224.97,
+            "files": [
+              "pop.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_11"
+    },
+    {
+      "n": 52,
+      "name": "THE QUOTE",
+      "start": 230.39,
+      "end": 235.68,
+      "audioStart": 230.39,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "LOCATE",
+        "module": "quote",
+        "layers": [],
+        "reveal": "FOCUS",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "FOCUS",
+          "holdUntil": 230.92,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "NO COST",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 231.99,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_11"
+    },
+    {
+      "n": 53,
+      "name": "THE SPOILS",
+      "start": 235.68,
+      "end": 241.32,
+      "audioStart": 235.68,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.8,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.75,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "COMPARE",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 236.24,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "YACHTS. JETS. A PICASSO.",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_12"
+    },
+    {
+      "n": 54,
+      "name": "THE DIAGRAM",
+      "start": 241.32,
+      "end": 247.48,
+      "audioStart": 241.32,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.9,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "trace",
+        "layers": [],
+        "reveal": "PROGRESSIVE",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "PROGRESSIVE",
+          "holdUntil": 241.94,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "SPRAY. FUNNEL. CONSOLIDATE.",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [
+          {
+            "at": 242.92,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_12"
+    },
+    {
+      "n": 55,
+      "name": "THE RECEIPTS",
+      "start": 247.48,
+      "end": 252.56,
+      "audioStart": 247.48,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.8,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.75,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "PROVE",
+        "module": "quote",
+        "layers": [],
+        "reveal": "FOCUS",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "FOCUS",
+          "holdUntil": 247.99,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "EVERY ADDRESS IS A RECEIPT",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 249.08,
+            "files": [
+              "tick.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_12"
+    },
+    {
+      "n": 56,
+      "name": "THE CARD",
+      "start": 252.56,
+      "end": 256.21,
+      "audioStart": 252.56,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 252.93,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "ACT FIVE — THE SOLVE",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_12"
+    },
+    {
+      "n": 57,
+      "name": "THE FILING",
+      "start": 256.21,
+      "end": 259.19,
+      "audioStart": 256.21,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.8,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.75,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 256.51,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "THE INDICTMENT",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.28,
+        "musicMood": "quiet",
+        "sfx": [
+          {
+            "at": 257.21,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_12"
+    },
+    {
+      "n": 58,
+      "name": "THE VERDICT",
+      "start": 259.19,
+      "end": 263.79,
+      "audioStart": 259.19,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.6,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "PROVE",
+        "module": "quote",
+        "layers": [],
+        "reveal": "FOCUS",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "FOCUS",
+          "holdUntil": 259.65,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "LARGEST TAKEDOWN IN HISTORY",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.3,
+        "musicMood": "drop",
+        "sfx": [
+          {
+            "at": 260.79,
+            "files": [
+              "tick.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_13"
+    },
+    {
+      "n": 59,
+      "name": "THE SEIZURE",
+      "start": 263.79,
+      "end": 271.09,
+      "audioStart": 263.79,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 264.52,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "127,271 BTC",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_13"
+    },
+    {
+      "n": 60,
+      "name": "THE KEYS",
+      "start": 271.09,
+      "end": 277.83,
+      "audioStart": 271.09,
+      "narrative": {
+        "purpose": "explain",
+        "question": "How? The coins sat in wallets whose keys one person held. Take the keys, and the pile stops moving."
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.95,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.6,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "HUMANIZE",
+        "module": "trace",
+        "layers": [],
+        "reveal": "PROGRESSIVE",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "PROGRESSIVE",
+          "holdUntil": 271.76,
+          "triggers": [
+            {
+              "at": 272.29,
+              "kind": "question",
+              "label": "How? The coins sat in wallets whose keys"
+            }
+          ]
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "ONE PERSON HELD THE KEYS",
+        "emphasisWords": [
+          "ONE PERSON HELD"
+        ]
+      },
+      "audio": {
+        "musicLevel": 0.3,
+        "musicMood": "drop",
+        "sfx": [
+          {
+            "at": 272.69,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          },
+          {
+            "at": 275.44,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_13"
+    },
+    {
+      "n": 61,
+      "name": "THE TELL",
+      "start": 277.83,
+      "end": 283.89,
+      "audioStart": 277.83,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.8,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "icon",
+        "layers": [],
+        "reveal": "SEQUENTIAL",
+        "captionMode": "FULL",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "SEQUENTIAL",
+          "holdUntil": 278.44,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "THE TELL THAT GENERALISES",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_13"
+    },
+    {
+      "n": 62,
+      "name": "THE RULE",
+      "start": 283.89,
+      "end": 287.48,
+      "audioStart": 283.89,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.6,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 284.25,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "REAL MONEY WITHDRAWS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.3,
+        "musicMood": "drop",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_13"
+    },
+    {
+      "n": 63,
+      "name": "THE TEST",
+      "start": 287.48,
+      "end": 291.8,
+      "audioStart": 287.48,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "VISUAL_IDEA"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 287.91,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "$0",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_14"
+    },
+    {
+      "n": 64,
+      "name": "THE CALLBACK",
+      "start": 291.8,
+      "end": 294.07,
+      "audioStart": 291.8,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.6,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 292.03,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "PAID TO WATCH VIDEOS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.3,
+        "musicMood": "drop",
+        "sfx": [
+          {
+            "at": 292.8,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [
+          "ph_paid-to-watch-videos"
+        ],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_14"
+    },
+    {
+      "n": 65,
+      "name": "THE NUMBER",
+      "start": 294.07,
+      "end": 297.01,
+      "audioStart": 294.07,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "stat",
+        "layers": [],
+        "reveal": "COUNTER_REVEAL",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "COUNTER_REVEAL",
+          "holdUntil": 294.36,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "$30M / DAY",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_14"
+    },
+    {
+      "n": 66,
+      "name": "THE PRODUCT",
+      "start": 297.01,
+      "end": 299.37,
+      "audioStart": 297.01,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.6,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "doodle",
+        "layers": [],
+        "reveal": "DRAW_ON",
+        "captionMode": "SUBTITLE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "push"
+        },
+        "reveal": {
+          "mode": "DRAW_ON",
+          "holdUntil": 297.25,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "THE PAY WAS NEVER THE PRODUCT",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.3,
+        "musicMood": "drop",
+        "sfx": [
+          {
+            "at": 298.01,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_14"
+    },
+    {
+      "n": 67,
+      "name": "THE LINE",
+      "start": 299.37,
+      "end": 301.89,
+      "audioStart": 299.37,
+      "narrative": {
+        "purpose": "explain"
+      },
+      "attention": {
+        "strategy": "standard",
+        "novelty": 0.6,
+        "curiosity": 0.5,
+        "tension": 0.35,
+        "informationDensity": 0.7,
+        "emotionalIntensity": 0.35,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "quote",
+        "layers": [],
+        "reveal": "FOCUS",
+        "captionMode": "EMPHASIS",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "FOCUS",
+          "holdUntil": 299.62,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "THE TRAP IS THE TRUST",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.4,
+        "musicMood": "hold",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [],
+        "stateChanges": []
+      },
+      "chapterId": "ch_2",
+      "sequenceId": "seq_14"
+    },
+    {
+      "n": 68,
+      "name": "THE PAYOFF",
+      "start": 301.89,
+      "end": 304.92,
+      "audioStart": 301.89,
+      "lCut": 0.6,
+      "narrative": {
+        "purpose": "payoff"
+      },
+      "attention": {
+        "strategy": "impact",
+        "novelty": 0.6,
+        "curiosity": 0.65,
+        "tension": 0.35,
+        "informationDensity": 0.4,
+        "emotionalIntensity": 0.6,
+        "tier": "MICRO_CHANGE"
+      },
+      "visual": {
+        "purpose": "EXPLAIN",
+        "module": "kinetic",
+        "layers": [],
+        "reveal": "MASK",
+        "captionMode": "NONE",
+        "rest": false
+      },
+      "motion": {
+        "camera": {
+          "intent": "settle"
+        },
+        "reveal": {
+          "mode": "MASK",
+          "holdUntil": 302.04,
+          "triggers": []
+        },
+        "transitionIn": {
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
+        }
+      },
+      "typography": {
+        "text": "PAID TO WATCH VIDEOS",
+        "emphasisWords": []
+      },
+      "audio": {
+        "musicLevel": 0.58,
+        "musicMood": "swell",
+        "sfx": [],
+        "silence": []
+      },
+      "memory": {
+        "introduce": [],
+        "reference": [
+          "ph_paid-to-watch-videos"
+        ],
+        "stateChanges": []
+      },
+      "chapterId": "ch_3",
+      "sequenceId": "seq_15"
+    }
+  ],
+  "storyMemory": [
+    {
+      "id": "ph_paid-to-watch-videos",
+      "label": "PAID TO WATCH VIDEOS",
+      "introducedAt": 0,
+      "introducedBeat": 1,
+      "states": [],
+      "references": 3,
+      "central": true
+    }
+  ],
+  "attentionEvents": [
+    {
+      "at": 1,
+      "type": "NUMBER_REVEAL",
+      "beat": 1,
+      "strength": 0.52,
+      "label": "PAID TO WATCH VIDEOS"
+    },
+    {
+      "at": 3.27,
+      "type": "WORD_EMPHASIS",
+      "beat": 2,
+      "strength": 0.54,
+      "label": "$30M / DAY"
+    },
+    {
+      "at": 7.21,
+      "type": "NUMBER_REVEAL",
+      "beat": 3,
+      "strength": 0.74,
+      "label": "SAME ENGINE. SAME SCRIPT"
+    },
+    {
+      "at": 11.63,
+      "type": "WORD_EMPHASIS",
+      "beat": 4,
+      "strength": 0.79,
+      "label": "$15,000,000,000"
+    },
+    {
+      "at": 15.4,
+      "type": "WORD_EMPHASIS",
+      "beat": 4,
+      "strength": 0.78,
+      "label": "$15,000,000,000"
+    },
+    {
+      "at": 17.75,
+      "type": "QUESTION",
+      "beat": 5,
+      "strength": 0.85,
+      "label": "HERE'S WHO WAS PAYING YO"
+    },
+    {
+      "at": 21.03,
+      "type": "WORD_EMPHASIS",
+      "beat": 6,
+      "strength": 0.78,
+      "label": "ACT ONE — THE OFFER"
+    },
+    {
+      "at": 25.64,
+      "type": "OBJECT_ENTRY",
+      "beat": 7,
+      "strength": 0.73,
+      "label": "WATCH TEN VIDEOS"
+    },
+    {
+      "at": 30.05,
+      "type": "WORD_EMPHASIS",
+      "beat": 8,
+      "strength": 0.54,
+      "label": "$2 / VIDEO"
+    },
+    {
+      "at": 34.29,
+      "type": "NUMBER_REVEAL",
+      "beat": 9,
+      "strength": 0.72,
+      "label": "THE PAYMENT CLEARS"
+    },
+    {
+      "at": 38.95,
+      "type": "OBJECT_ENTRY",
+      "beat": 10,
+      "strength": 0.78,
+      "label": "EVERY BOX TICKS"
+    },
+    {
+      "at": 43.59,
+      "type": "NUMBER_REVEAL",
+      "beat": 11,
+      "strength": 0.51,
+      "label": "IT NEVER GOES DOWN"
+    },
+    {
+      "at": 47.91,
+      "type": "NUMBER_REVEAL",
+      "beat": 12,
+      "strength": 0.67,
+      "label": "THE HOOK IS THE WORK"
+    },
+    {
+      "at": 52.72,
+      "type": "WORD_EMPHASIS",
+      "beat": 13,
+      "strength": 0.74,
+      "label": "48 HOURS"
+    },
+    {
+      "at": 56.96,
+      "type": "OBJECT_ENTRY",
+      "beat": 14,
+      "strength": 0.79,
+      "label": "YOU'VE BEEN PROMOTED TO "
+    },
+    {
+      "at": 61.54,
+      "type": "QUESTION",
+      "beat": 15,
+      "strength": 0.85,
+      "label": "TWO LADDERS"
+    },
+    {
+      "at": 65.86,
+      "type": "NUMBER_REVEAL",
+      "beat": 16,
+      "strength": 0.75,
+      "label": "ACT TWO — THE FATTENING"
+    },
+    {
+      "at": 67.86,
+      "type": "NUMBER_REVEAL",
+      "beat": 16,
+      "strength": 0.7,
+      "label": "ACT TWO — THE FATTENING"
+    },
+    {
+      "at": 70.39,
+      "type": "NUMBER_REVEAL",
+      "beat": 17,
+      "strength": 0.69,
+      "label": "TRUST, BUILT ON PURPOSE"
+    },
+    {
+      "at": 75.41,
+      "type": "WORD_EMPHASIS",
+      "beat": 18,
+      "strength": 0.57,
+      "label": "IT'S A COUPON"
+    },
+    {
+      "at": 79.79,
+      "type": "QUESTION",
+      "beat": 19,
+      "strength": 0.85,
+      "label": "$2"
+    },
+    {
+      "at": 84.15,
+      "type": "QUESTION",
+      "beat": 20,
+      "strength": 0.85,
+      "label": "KNOWLEDGE FOR CASH"
+    },
+    {
+      "at": 88.89,
+      "type": "NUMBER_REVEAL",
+      "beat": 21,
+      "strength": 0.57,
+      "label": "YOU WATCH YOURSELF TRUST"
+    },
+    {
+      "at": 93.95,
+      "type": "OBJECT_ENTRY",
+      "beat": 22,
+      "strength": 0.6,
+      "label": "ANSWERS IN MINUTES"
+    },
+    {
+      "at": 96.62,
+      "type": "OBJECT_ENTRY",
+      "beat": 22,
+      "strength": 0.55,
+      "label": "ANSWERS IN MINUTES"
+    },
+    {
+      "at": 99.45,
+      "type": "WORD_EMPHASIS",
+      "beat": 23,
+      "strength": 0.57,
+      "label": "FATTENING"
+    },
+    {
+      "at": 104.6,
+      "type": "NUMBER_REVEAL",
+      "beat": 24,
+      "strength": 0.64,
+      "label": "ONE RUNG AT A TIME"
+    },
+    {
+      "at": 108.68,
+      "type": "WORD_EMPHASIS",
+      "beat": 25,
+      "strength": 0.52,
+      "label": "$250"
+    },
+    {
+      "at": 111.36,
+      "type": "WORD_EMPHASIS",
+      "beat": 25,
+      "strength": 0.61,
+      "label": "$250"
+    },
+    {
+      "at": 113.88,
+      "type": "NUMBER_REVEAL",
+      "beat": 26,
+      "strength": 0.56,
+      "label": "IT'S ALREADY THEIRS"
+    },
+    {
+      "at": 119,
+      "type": "NUMBER_REVEAL",
+      "beat": 27,
+      "strength": 0.64,
+      "label": "A NUMBER ON THEIR SERVER"
+    },
+    {
+      "at": 123.86,
+      "type": "NUMBER_REVEAL",
+      "beat": 28,
+      "strength": 0.73,
+      "label": "THE REST MOVES ON"
+    },
+    {
+      "at": 128.32,
+      "type": "WORD_EMPHASIS",
+      "beat": 29,
+      "strength": 0.61,
+      "label": "ACT THREE — THE TURN"
+    },
+    {
+      "at": 131.57,
+      "type": "WORD_EMPHASIS",
+      "beat": 30,
+      "strength": 0.65,
+      "label": "$10,000"
+    },
+    {
+      "at": 136.55,
+      "type": "QUESTION",
+      "beat": 31,
+      "strength": 0.85,
+      "label": "UNLOCKS WHAT'S YOURS"
+    },
+    {
+      "at": 141.25,
+      "type": "NUMBER_REVEAL",
+      "beat": 32,
+      "strength": 0.69,
+      "label": "DEPOSIT TO UNLOCK"
+    },
+    {
+      "at": 144.74,
+      "type": "MAP_REVEAL",
+      "beat": 32,
+      "strength": 0.54,
+      "label": "DEPOSIT TO UNLOCK"
+    },
+    {
+      "at": 147.17,
+      "type": "WORD_EMPHASIS",
+      "beat": 33,
+      "strength": 0.75,
+      "label": "SUNK COST"
+    },
+    {
+      "at": 149.79,
+      "type": "WORD_EMPHASIS",
+      "beat": 33,
+      "strength": 0.63,
+      "label": "SUNK COST"
+    },
+    {
+      "at": 153.27,
+      "type": "NUMBER_REVEAL",
+      "beat": 34,
+      "strength": 0.52,
+      "label": "THE RULES CHANGE"
+    },
+    {
+      "at": 157.39,
+      "type": "OBJECT_ENTRY",
+      "beat": 35,
+      "strength": 0.63,
+      "label": "ROMANCE"
+    },
+    {
+      "at": 161.59,
+      "type": "QUESTION",
+      "beat": 36,
+      "strength": 0.85,
+      "label": "A FRIEND. A PARTNER. AN "
+    },
+    {
+      "at": 165.04,
+      "type": "WORD_EMPHASIS",
+      "beat": 37,
+      "strength": 0.67,
+      "label": "90 DAYS"
+    },
+    {
+      "at": 169.32,
+      "type": "OBJECT_ENTRY",
+      "beat": 38,
+      "strength": 0.58,
+      "label": "JUST THIS ONCE"
+    },
+    {
+      "at": 173.8,
+      "type": "NUMBER_REVEAL",
+      "beat": 39,
+      "strength": 0.51,
+      "label": "WALLETS LEAVE RECEIPTS"
+    },
+    {
+      "at": 177.38,
+      "type": "NUMBER_REVEAL",
+      "beat": 40,
+      "strength": 0.6,
+      "label": "BALANCE. CHAT. SILENCE."
+    },
+    {
+      "at": 181.28,
+      "type": "WORD_EMPHASIS",
+      "beat": 41,
+      "strength": 0.78,
+      "label": "THE ACCOUNT CLOSES"
+    },
+    {
+      "at": 185.55,
+      "type": "MAP_REVEAL",
+      "beat": 42,
+      "strength": 0.69,
+      "label": "250 VICTIMS"
+    },
+    {
+      "at": 191.21,
+      "type": "DIAGRAM_BUILD",
+      "beat": 43,
+      "strength": 0.79,
+      "label": "A HUNDRED THOUSAND TARGE"
+    },
+    {
+      "at": 194.39,
+      "type": "REVEAL",
+      "beat": 43,
+      "strength": 0.85,
+      "label": "A HUNDRED THOUSAND TARGE"
+    },
+    {
+      "at": 196.39,
+      "type": "WORD_EMPHASIS",
+      "beat": 44,
+      "strength": 0.58,
+      "label": "ACT FOUR — THE MACHINE"
+    },
+    {
+      "at": 199.28,
+      "type": "NUMBER_REVEAL",
+      "beat": 45,
+      "strength": 0.69,
+      "label": "IT LANDS IN CAMBODIA"
+    },
+    {
+      "at": 202.78,
+      "type": "WORD_EMPHASIS",
+      "beat": 46,
+      "strength": 0.69,
+      "label": "TEN COMPOUNDS"
+    },
+    {
+      "at": 207.38,
+      "type": "OBJECT_ENTRY",
+      "beat": 47,
+      "strength": 0.58,
+      "label": "1,250 PHONES"
+    },
+    {
+      "at": 209.13,
+      "type": "OBJECT_ENTRY",
+      "beat": 47,
+      "strength": 0.61,
+      "label": "1,250 PHONES"
+    },
+    {
+      "at": 211,
+      "type": "WORD_EMPHASIS",
+      "beat": 48,
+      "strength": 0.78,
+      "label": "76,000 ACCOUNTS"
+    },
+    {
+      "at": 212.64,
+      "type": "WORD_EMPHASIS",
+      "beat": 48,
+      "strength": 0.8,
+      "label": "76,000 ACCOUNTS"
+    },
+    {
+      "at": 215.14,
+      "type": "QUESTION",
+      "beat": 49,
+      "strength": 0.85,
+      "label": "ROOMS, SCHEMES, PROFITS"
+    },
+    {
+      "at": 219.88,
+      "type": "WORD_EMPHASIS",
+      "beat": 50,
+      "strength": 0.56,
+      "label": "THE LABOR WAS THE PRODUC"
+    },
+    {
+      "at": 224.97,
+      "type": "OBJECT_ENTRY",
+      "beat": 51,
+      "strength": 0.68,
+      "label": "2019 — 2021"
+    },
+    {
+      "at": 227.73,
+      "type": "OBJECT_ENTRY",
+      "beat": 51,
+      "strength": 0.73,
+      "label": "2019 — 2021"
+    },
+    {
+      "at": 231.99,
+      "type": "NUMBER_REVEAL",
+      "beat": 52,
+      "strength": 0.6,
+      "label": "NO COST"
+    },
+    {
+      "at": 237.28,
+      "type": "WORD_EMPHASIS",
+      "beat": 53,
+      "strength": 0.76,
+      "label": "YACHTS. JETS. A PICASSO."
+    },
+    {
+      "at": 242.92,
+      "type": "NUMBER_REVEAL",
+      "beat": 54,
+      "strength": 0.74,
+      "label": "SPRAY. FUNNEL. CONSOLIDA"
+    },
+    {
+      "at": 246.44,
+      "type": "DIAGRAM_BUILD",
+      "beat": 54,
+      "strength": 0.55,
+      "label": "SPRAY. FUNNEL. CONSOLIDA"
+    },
+    {
+      "at": 249.08,
+      "type": "DIAGRAM_BUILD",
+      "beat": 55,
+      "strength": 0.67,
+      "label": "EVERY ADDRESS IS A RECEI"
+    },
+    {
+      "at": 253.56,
+      "type": "WORD_EMPHASIS",
+      "beat": 56,
+      "strength": 0.74,
+      "label": "ACT FIVE — THE SOLVE"
+    },
+    {
+      "at": 257.21,
+      "type": "QUESTION",
+      "beat": 57,
+      "strength": 0.85,
+      "label": "THE INDICTMENT"
+    },
+    {
+      "at": 260.79,
+      "type": "DIAGRAM_BUILD",
+      "beat": 58,
+      "strength": 0.64,
+      "label": "LARGEST TAKEDOWN IN HIST"
+    },
+    {
+      "at": 265.39,
+      "type": "WORD_EMPHASIS",
+      "beat": 59,
+      "strength": 0.8,
+      "label": "127,271 BTC"
+    },
+    {
+      "at": 268.07,
+      "type": "WORD_EMPHASIS",
+      "beat": 59,
+      "strength": 0.54,
+      "label": "127,271 BTC"
+    },
+    {
+      "at": 272.69,
+      "type": "QUESTION",
+      "beat": 60,
+      "strength": 0.85,
+      "label": "ONE PERSON HELD THE KEYS"
+    },
+    {
+      "at": 275.44,
+      "type": "NUMBER_REVEAL",
+      "beat": 60,
+      "strength": 0.67,
+      "label": "ONE PERSON HELD THE KEYS"
+    },
+    {
+      "at": 279.43,
+      "type": "NUMBER_REVEAL",
+      "beat": 61,
+      "strength": 0.56,
+      "label": "THE TELL THAT GENERALISE"
+    },
+    {
+      "at": 282.77,
+      "type": "NUMBER_REVEAL",
+      "beat": 61,
+      "strength": 0.56,
+      "label": "THE TELL THAT GENERALISE"
+    },
+    {
+      "at": 284.89,
+      "type": "NUMBER_REVEAL",
+      "beat": 62,
+      "strength": 0.59,
+      "label": "REAL MONEY WITHDRAWS"
+    },
+    {
+      "at": 289.08,
+      "type": "NUMBER_REVEAL",
+      "beat": 63,
+      "strength": 0.53,
+      "label": "$0"
+    },
+    {
+      "at": 292.8,
+      "type": "NUMBER_REVEAL",
+      "beat": 64,
+      "strength": 0.74,
+      "label": "PAID TO WATCH VIDEOS"
+    },
+    {
+      "at": 295.07,
+      "type": "WORD_EMPHASIS",
+      "beat": 65,
+      "strength": 0.51,
+      "label": "$30M / DAY"
+    },
+    {
+      "at": 298.01,
+      "type": "NUMBER_REVEAL",
+      "beat": 66,
+      "strength": 0.67,
+      "label": "THE PAY WAS NEVER THE PR"
+    },
+    {
+      "at": 300.37,
+      "type": "CONTRADICTION",
+      "beat": 67,
+      "strength": 0.56,
+      "label": "THE TRAP IS THE TRUST"
+    },
+    {
+      "at": 302.89,
+      "type": "NUMBER_REVEAL",
+      "beat": 68,
+      "strength": 0.52,
+      "label": "PAID TO WATCH VIDEOS"
+    }
+  ],
+  "audioEvents": [
+    {
+      "at": 0,
+      "kind": "music_level",
+      "value": 0.58
+    },
+    {
+      "at": 2.27,
+      "kind": "music_level",
+      "value": 0.58
+    },
+    {
+      "at": 2.27,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 5.61,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 5.61,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 7.21,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 10.03,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 10.03,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 16.75,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 16.75,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 17.75,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
+    },
+    {
+      "at": 19.43,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 19.43,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 24.04,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 24.04,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 25.64,
+      "kind": "sfx",
+      "label": "pop.wav"
+    },
+    {
+      "at": 28.45,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 28.45,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 32.69,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 32.69,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 34.29,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 37.35,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 37.35,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 38.95,
+      "kind": "sfx",
+      "label": "pop.wav"
+    },
+    {
+      "at": 41.99,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 41.99,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 46.31,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 46.31,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 47.91,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 51.12,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 51.12,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 55.36,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 55.36,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 56.96,
+      "kind": "sfx",
+      "label": "pop.wav"
+    },
+    {
+      "at": 59.94,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 59.94,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 61.54,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
+    },
+    {
+      "at": 64.86,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 64.86,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 65.86,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 68.79,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 68.79,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 70.39,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 73.81,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 73.81,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 78.19,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 78.19,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 79.79,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
+    },
+    {
+      "at": 82.55,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 82.55,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 84.15,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
+    },
+    {
+      "at": 87.29,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 87.29,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 92.35,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 92.35,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 93.95,
+      "kind": "sfx",
+      "label": "pop.wav"
+    },
+    {
+      "at": 97.85,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 97.85,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 103,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 103,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 104.6,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 107.08,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 107.08,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 112.28,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 112.28,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 117.4,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 117.4,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 119,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 122.26,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 122.26,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 123.86,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 127.32,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 127.32,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 129.97,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 129.97,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 134.95,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 134.95,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 136.55,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
+    },
+    {
+      "at": 139.65,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 139.65,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 141.25,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 145.57,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 145.57,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 151.67,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 151.67,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 156.39,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 156.39,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 157.39,
+      "kind": "sfx",
+      "label": "pop.wav"
+    },
+    {
+      "at": 159.99,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 159.99,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 161.59,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
+    },
+    {
+      "at": 164.04,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 164.04,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 167.72,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 167.72,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 172.2,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 172.2,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 176.38,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 176.38,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 177.38,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 180.28,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 180.28,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 183.95,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 183.95,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 189.61,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 189.61,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 191.21,
+      "kind": "sfx",
+      "label": "tick.wav"
+    },
+    {
+      "at": 194.39,
+      "kind": "sfx",
+      "label": "boom.wav"
+    },
+    {
+      "at": 195.39,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 195.39,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 198.28,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 198.28,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 199.28,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 201.18,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 201.18,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 206.38,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 206.38,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 209.13,
+      "kind": "sfx",
+      "label": "pop.wav"
+    },
+    {
+      "at": 210,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 210,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 213.54,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 213.54,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 215.14,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
+    },
+    {
+      "at": 218.28,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 218.28,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 223.37,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 223.37,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 224.97,
+      "kind": "sfx",
+      "label": "pop.wav"
+    },
+    {
+      "at": 230.39,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 230.39,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 231.99,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 235.68,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 235.68,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 241.32,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 241.32,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 242.92,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 247.48,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 247.48,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 249.08,
+      "kind": "sfx",
+      "label": "tick.wav"
+    },
+    {
+      "at": 252.56,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 252.56,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 256.21,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 256.21,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 257.21,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
+    },
+    {
+      "at": 259.19,
+      "kind": "music_level",
+      "value": 0.28
+    },
+    {
+      "at": 259.19,
+      "kind": "music_level",
+      "value": 0.3
+    },
+    {
+      "at": 260.79,
+      "kind": "sfx",
+      "label": "tick.wav"
+    },
+    {
+      "at": 263.79,
+      "kind": "music_level",
+      "value": 0.3
+    },
+    {
+      "at": 263.79,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 271.09,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 271.09,
+      "kind": "music_level",
+      "value": 0.3
+    },
+    {
+      "at": 272.69,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
+    },
+    {
+      "at": 275.44,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 277.83,
+      "kind": "music_level",
+      "value": 0.3
+    },
+    {
+      "at": 277.83,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 283.89,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 283.89,
+      "kind": "music_level",
+      "value": 0.3
+    },
+    {
+      "at": 287.48,
+      "kind": "music_level",
+      "value": 0.3
+    },
+    {
+      "at": 287.48,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 291.8,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 291.8,
+      "kind": "music_level",
+      "value": 0.3
+    },
+    {
+      "at": 292.8,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 294.07,
+      "kind": "music_level",
+      "value": 0.3
+    },
+    {
+      "at": 294.07,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 297.01,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 297.01,
+      "kind": "music_level",
+      "value": 0.3
+    },
+    {
+      "at": 298.01,
+      "kind": "sfx",
+      "label": "chime.wav"
+    },
+    {
+      "at": 299.37,
+      "kind": "music_level",
+      "value": 0.3
+    },
+    {
+      "at": 299.37,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 301.89,
+      "kind": "music_level",
+      "value": 0.4
+    },
+    {
+      "at": 301.89,
+      "kind": "music_level",
+      "value": 0.58
+    },
+    {
+      "at": 304.92,
+      "kind": "music_level",
+      "value": 0.58
+    }
+  ],
+  "memoryEvents": [
+    {
+      "at": 0,
+      "kind": "introduce",
+      "motifId": "ph_paid-to-watch-videos",
+      "beat": 1
+    },
+    {
+      "at": 46.31,
+      "kind": "reference",
+      "motifId": "ph_paid-to-watch-videos",
+      "beat": 12
+    },
+    {
+      "at": 291.8,
+      "kind": "reference",
+      "motifId": "ph_paid-to-watch-videos",
+      "beat": 64
+    },
+    {
+      "at": 301.89,
+      "kind": "reference",
+      "motifId": "ph_paid-to-watch-videos",
+      "beat": 68
+    }
+  ],
+  "transitions": [
+    {
+      "fromBeat": 1,
+      "toBeat": 2,
+      "at": 2.27,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 2,
+      "toBeat": 3,
+      "at": 5.61,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 3,
+      "toBeat": 4,
+      "at": 10.03,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 4,
+      "toBeat": 5,
+      "at": 16.75,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 5,
+      "toBeat": 6,
+      "at": 19.43,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 6,
+      "toBeat": 7,
+      "at": 24.04,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 7,
+      "toBeat": 8,
+      "at": 28.45,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 8,
+      "toBeat": 9,
+      "at": 32.69,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 9,
+      "toBeat": 10,
+      "at": 37.35,
+      "type": "crossfade",
+      "reason": "EMOTIONAL_RESET",
+      "frames": 9
+    },
+    {
+      "fromBeat": 10,
+      "toBeat": 11,
+      "at": 41.99,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 11,
+      "toBeat": 12,
+      "at": 46.31,
+      "type": "crossfade",
+      "reason": "EMOTIONAL_RESET",
+      "frames": 9
+    },
+    {
+      "fromBeat": 12,
+      "toBeat": 13,
+      "at": 51.12,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 13,
+      "toBeat": 14,
+      "at": 55.36,
+      "type": "crossfade",
+      "reason": "EMOTIONAL_RESET",
+      "frames": 9
+    },
+    {
+      "fromBeat": 14,
+      "toBeat": 15,
+      "at": 59.94,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 15,
+      "toBeat": 16,
+      "at": 64.86,
+      "type": "crossfade",
+      "reason": "EMOTIONAL_RESET",
+      "frames": 9
+    },
+    {
+      "fromBeat": 16,
+      "toBeat": 17,
+      "at": 68.79,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 17,
+      "toBeat": 18,
+      "at": 73.81,
+      "type": "crossfade",
+      "reason": "EMOTIONAL_RESET",
+      "frames": 9
+    },
+    {
+      "fromBeat": 18,
+      "toBeat": 19,
+      "at": 78.19,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 19,
+      "toBeat": 20,
+      "at": 82.55,
+      "type": "crossfade",
+      "reason": "EMOTIONAL_RESET",
+      "frames": 9
+    },
+    {
+      "fromBeat": 20,
+      "toBeat": 21,
+      "at": 87.29,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 21,
+      "toBeat": 22,
+      "at": 92.35,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 22,
+      "toBeat": 23,
+      "at": 97.85,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 23,
+      "toBeat": 24,
+      "at": 103,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 24,
+      "toBeat": 25,
+      "at": 107.08,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 25,
+      "toBeat": 26,
+      "at": 112.28,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 26,
+      "toBeat": 27,
+      "at": 117.4,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 27,
+      "toBeat": 28,
+      "at": 122.26,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 28,
+      "toBeat": 29,
+      "at": 127.32,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 29,
+      "toBeat": 30,
+      "at": 129.97,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 30,
+      "toBeat": 31,
+      "at": 134.95,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 31,
+      "toBeat": 32,
+      "at": 139.65,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 32,
+      "toBeat": 33,
+      "at": 145.57,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 33,
+      "toBeat": 34,
+      "at": 151.67,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 34,
+      "toBeat": 35,
+      "at": 156.39,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 35,
+      "toBeat": 36,
+      "at": 159.99,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 36,
+      "toBeat": 37,
+      "at": 164.04,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 37,
+      "toBeat": 38,
+      "at": 167.72,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 38,
+      "toBeat": 39,
+      "at": 172.2,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 39,
+      "toBeat": 40,
+      "at": 176.38,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 40,
+      "toBeat": 41,
+      "at": 180.28,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 41,
+      "toBeat": 42,
+      "at": 183.95,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 42,
+      "toBeat": 43,
+      "at": 189.61,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 43,
+      "toBeat": 44,
+      "at": 195.39,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 44,
+      "toBeat": 45,
+      "at": 198.28,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 45,
+      "toBeat": 46,
+      "at": 201.18,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 46,
+      "toBeat": 47,
+      "at": 206.38,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 47,
+      "toBeat": 48,
+      "at": 210,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 48,
+      "toBeat": 49,
+      "at": 213.54,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 49,
+      "toBeat": 50,
+      "at": 218.28,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 50,
+      "toBeat": 51,
+      "at": 223.37,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 51,
+      "toBeat": 52,
+      "at": 230.39,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 52,
+      "toBeat": 53,
+      "at": 235.68,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 53,
+      "toBeat": 54,
+      "at": 241.32,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 54,
+      "toBeat": 55,
+      "at": 247.48,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 55,
+      "toBeat": 56,
+      "at": 252.56,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 56,
+      "toBeat": 57,
+      "at": 256.21,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 57,
+      "toBeat": 58,
+      "at": 259.19,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 58,
+      "toBeat": 59,
+      "at": 263.79,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 59,
+      "toBeat": 60,
+      "at": 271.09,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 60,
+      "toBeat": 61,
+      "at": 277.83,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 61,
+      "toBeat": 62,
+      "at": 283.89,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 62,
+      "toBeat": 63,
+      "at": 287.48,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 63,
+      "toBeat": 64,
+      "at": 291.8,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 64,
+      "toBeat": 65,
+      "at": 294.07,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 65,
+      "toBeat": 66,
+      "at": 297.01,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 66,
+      "toBeat": 67,
+      "at": 299.37,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    },
+    {
+      "fromBeat": 67,
+      "toBeat": 68,
+      "at": 301.89,
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
+    }
+  ]
+}
