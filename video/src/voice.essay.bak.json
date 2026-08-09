@@ -1,0 +1,5317 @@
+{
+  "total": 600,
+  "beats": [
+    {
+      "n": 1,
+      "file": "",
+      "start": 0,
+      "dur": 6,
+      "speech": 6,
+      "words": [
+        {
+          "w": "They",
+          "start": 0,
+          "end": 0.75
+        },
+        {
+          "w": "pay",
+          "start": 0.75,
+          "end": 1.5
+        },
+        {
+          "w": "you",
+          "start": 1.5,
+          "end": 2.25
+        },
+        {
+          "w": "two",
+          "start": 2.25,
+          "end": 3
+        },
+        {
+          "w": "dollars",
+          "start": 3,
+          "end": 3.75
+        },
+        {
+          "w": "to",
+          "start": 3.75,
+          "end": 4.5
+        },
+        {
+          "w": "watch",
+          "start": 4.5,
+          "end": 5.25
+        },
+        {
+          "w": "videos.",
+          "start": 5.25,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "file": "",
+      "start": 6,
+      "dur": 6,
+      "speech": 6,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.462
+        },
+        {
+          "w": "machine",
+          "start": 0.462,
+          "end": 0.923
+        },
+        {
+          "w": "behind",
+          "start": 0.923,
+          "end": 1.385
+        },
+        {
+          "w": "that",
+          "start": 1.385,
+          "end": 1.846
+        },
+        {
+          "w": "job",
+          "start": 1.846,
+          "end": 2.308
+        },
+        {
+          "w": "was",
+          "start": 2.308,
+          "end": 2.769
+        },
+        {
+          "w": "pulling",
+          "start": 2.769,
+          "end": 3.231
+        },
+        {
+          "w": "in",
+          "start": 3.231,
+          "end": 3.692
+        },
+        {
+          "w": "thirty",
+          "start": 3.692,
+          "end": 4.154
+        },
+        {
+          "w": "million",
+          "start": 4.154,
+          "end": 4.615
+        },
+        {
+          "w": "dollars",
+          "start": 4.615,
+          "end": 5.077
+        },
+        {
+          "w": "a",
+          "start": 5.077,
+          "end": 5.538
+        },
+        {
+          "w": "day.",
+          "start": 5.538,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "file": "",
+      "start": 12,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "Same",
+          "start": 0,
+          "end": 0.692
+        },
+        {
+          "w": "engine.",
+          "start": 0.692,
+          "end": 1.385
+        },
+        {
+          "w": "Same",
+          "start": 1.385,
+          "end": 2.077
+        },
+        {
+          "w": "script.",
+          "start": 2.077,
+          "end": 2.769
+        },
+        {
+          "w": "Two",
+          "start": 2.769,
+          "end": 3.462
+        },
+        {
+          "w": "dollars",
+          "start": 3.462,
+          "end": 4.154
+        },
+        {
+          "w": "to",
+          "start": 4.154,
+          "end": 4.846
+        },
+        {
+          "w": "watch,",
+          "start": 4.846,
+          "end": 5.538
+        },
+        {
+          "w": "two",
+          "start": 5.538,
+          "end": 6.231
+        },
+        {
+          "w": "hundred",
+          "start": 6.231,
+          "end": 6.923
+        },
+        {
+          "w": "fifty",
+          "start": 6.923,
+          "end": 7.615
+        },
+        {
+          "w": "to",
+          "start": 7.615,
+          "end": 8.308
+        },
+        {
+          "w": "deposit.",
+          "start": 8.308,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "file": "",
+      "start": 21,
+      "dur": 11,
+      "speech": 11,
+      "words": [
+        {
+          "w": "In",
+          "start": 0,
+          "end": 0.55
+        },
+        {
+          "w": "October",
+          "start": 0.55,
+          "end": 1.1
+        },
+        {
+          "w": "twenty",
+          "start": 1.1,
+          "end": 1.65
+        },
+        {
+          "w": "twenty",
+          "start": 1.65,
+          "end": 2.2
+        },
+        {
+          "w": "five,",
+          "start": 2.2,
+          "end": 2.75
+        },
+        {
+          "w": "American",
+          "start": 2.75,
+          "end": 3.3
+        },
+        {
+          "w": "prosecutors",
+          "start": 3.3,
+          "end": 3.85
+        },
+        {
+          "w": "took",
+          "start": 3.85,
+          "end": 4.4
+        },
+        {
+          "w": "the",
+          "start": 4.4,
+          "end": 4.95
+        },
+        {
+          "w": "biggest",
+          "start": 4.95,
+          "end": 5.5
+        },
+        {
+          "w": "single",
+          "start": 5.5,
+          "end": 6.05
+        },
+        {
+          "w": "pile",
+          "start": 6.05,
+          "end": 6.6
+        },
+        {
+          "w": "of",
+          "start": 6.6,
+          "end": 7.15
+        },
+        {
+          "w": "it",
+          "start": 7.15,
+          "end": 7.7
+        },
+        {
+          "w": "ever:",
+          "start": 7.7,
+          "end": 8.25
+        },
+        {
+          "w": "fifteen",
+          "start": 8.25,
+          "end": 8.8
+        },
+        {
+          "w": "billion",
+          "start": 8.8,
+          "end": 9.35
+        },
+        {
+          "w": "dollars",
+          "start": 9.35,
+          "end": 9.9
+        },
+        {
+          "w": "in",
+          "start": 9.9,
+          "end": 10.45
+        },
+        {
+          "w": "bitcoin.",
+          "start": 10.45,
+          "end": 11
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "file": "",
+      "start": 32,
+      "dur": 10,
+      "speech": 10,
+      "words": [
+        {
+          "w": "Here's",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "w": "who",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "w": "was",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "w": "paying",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "w": "you.",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "w": "And",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "w": "how",
+          "start": 6,
+          "end": 7
+        },
+        {
+          "w": "they",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "w": "got",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "w": "caught.",
+          "start": 9,
+          "end": 10
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "file": "",
+      "start": 42,
+      "dur": 6,
+      "speech": 6,
+      "words": [
+        {
+          "w": "First,",
+          "start": 0,
+          "end": 0.462
+        },
+        {
+          "w": "the",
+          "start": 0.462,
+          "end": 0.923
+        },
+        {
+          "w": "offer.",
+          "start": 0.923,
+          "end": 1.385
+        },
+        {
+          "w": "It",
+          "start": 1.385,
+          "end": 1.846
+        },
+        {
+          "w": "arrives",
+          "start": 1.846,
+          "end": 2.308
+        },
+        {
+          "w": "in",
+          "start": 2.308,
+          "end": 2.769
+        },
+        {
+          "w": "your",
+          "start": 2.769,
+          "end": 3.231
+        },
+        {
+          "w": "messages",
+          "start": 3.231,
+          "end": 3.692
+        },
+        {
+          "w": "like",
+          "start": 3.692,
+          "end": 4.154
+        },
+        {
+          "w": "every",
+          "start": 4.154,
+          "end": 4.615
+        },
+        {
+          "w": "other",
+          "start": 4.615,
+          "end": 5.077
+        },
+        {
+          "w": "side",
+          "start": 5.077,
+          "end": 5.538
+        },
+        {
+          "w": "hustle.",
+          "start": 5.538,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "file": "",
+      "start": 48,
+      "dur": 10,
+      "speech": 10,
+      "words": [
+        {
+          "w": "Watch",
+          "start": 0,
+          "end": 0.909
+        },
+        {
+          "w": "ten",
+          "start": 0.909,
+          "end": 1.818
+        },
+        {
+          "w": "videos.",
+          "start": 1.818,
+          "end": 2.727
+        },
+        {
+          "w": "Screenshot",
+          "start": 2.727,
+          "end": 3.636
+        },
+        {
+          "w": "the",
+          "start": 3.636,
+          "end": 4.545
+        },
+        {
+          "w": "proof.",
+          "start": 4.545,
+          "end": 5.455
+        },
+        {
+          "w": "Send",
+          "start": 5.455,
+          "end": 6.364
+        },
+        {
+          "w": "it",
+          "start": 6.364,
+          "end": 7.273
+        },
+        {
+          "w": "in.",
+          "start": 7.273,
+          "end": 8.182
+        },
+        {
+          "w": "Twenty",
+          "start": 8.182,
+          "end": 9.091
+        },
+        {
+          "w": "dollars.",
+          "start": 9.091,
+          "end": 10
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "file": "",
+      "start": 58,
+      "dur": 5,
+      "speech": 5,
+      "words": [
+        {
+          "w": "Two",
+          "start": 0,
+          "end": 0.333
+        },
+        {
+          "w": "dollars",
+          "start": 0.333,
+          "end": 0.667
+        },
+        {
+          "w": "a",
+          "start": 0.667,
+          "end": 1
+        },
+        {
+          "w": "video.",
+          "start": 1,
+          "end": 1.333
+        },
+        {
+          "w": "Less",
+          "start": 1.333,
+          "end": 1.667
+        },
+        {
+          "w": "than",
+          "start": 1.667,
+          "end": 2
+        },
+        {
+          "w": "minimum",
+          "start": 2,
+          "end": 2.333
+        },
+        {
+          "w": "wage",
+          "start": 2.333,
+          "end": 2.667
+        },
+        {
+          "w": "—",
+          "start": 2.667,
+          "end": 3
+        },
+        {
+          "w": "and",
+          "start": 3,
+          "end": 3.333
+        },
+        {
+          "w": "that",
+          "start": 3.333,
+          "end": 3.667
+        },
+        {
+          "w": "is",
+          "start": 3.667,
+          "end": 4
+        },
+        {
+          "w": "exactly",
+          "start": 4,
+          "end": 4.333
+        },
+        {
+          "w": "the",
+          "start": 4.333,
+          "end": 4.667
+        },
+        {
+          "w": "point.",
+          "start": 4.667,
+          "end": 5
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "file": "",
+      "start": 63,
+      "dur": 12,
+      "speech": 12,
+      "words": [
+        {
+          "w": "See,",
+          "start": 0,
+          "end": 0.923
+        },
+        {
+          "w": "the",
+          "start": 0.923,
+          "end": 1.846
+        },
+        {
+          "w": "payment",
+          "start": 1.846,
+          "end": 2.769
+        },
+        {
+          "w": "actually",
+          "start": 2.769,
+          "end": 3.692
+        },
+        {
+          "w": "clears.",
+          "start": 3.692,
+          "end": 4.615
+        },
+        {
+          "w": "Real",
+          "start": 4.615,
+          "end": 5.538
+        },
+        {
+          "w": "money,",
+          "start": 5.538,
+          "end": 6.462
+        },
+        {
+          "w": "into",
+          "start": 6.462,
+          "end": 7.385
+        },
+        {
+          "w": "your",
+          "start": 7.385,
+          "end": 8.308
+        },
+        {
+          "w": "balance,",
+          "start": 8.308,
+          "end": 9.231
+        },
+        {
+          "w": "in",
+          "start": 9.231,
+          "end": 10.154
+        },
+        {
+          "w": "eleven",
+          "start": 10.154,
+          "end": 11.077
+        },
+        {
+          "w": "minutes.",
+          "start": 11.077,
+          "end": 12
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "file": "",
+      "start": 75,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "Real",
+          "start": 0,
+          "end": 0.692
+        },
+        {
+          "w": "app.",
+          "start": 0.692,
+          "end": 1.385
+        },
+        {
+          "w": "Real",
+          "start": 1.385,
+          "end": 2.077
+        },
+        {
+          "w": "payout.",
+          "start": 2.077,
+          "end": 2.769
+        },
+        {
+          "w": "Support",
+          "start": 2.769,
+          "end": 3.462
+        },
+        {
+          "w": "that",
+          "start": 3.462,
+          "end": 4.154
+        },
+        {
+          "w": "answers",
+          "start": 4.154,
+          "end": 4.846
+        },
+        {
+          "w": "in",
+          "start": 4.846,
+          "end": 5.538
+        },
+        {
+          "w": "minutes.",
+          "start": 5.538,
+          "end": 6.231
+        },
+        {
+          "w": "You",
+          "start": 6.231,
+          "end": 6.923
+        },
+        {
+          "w": "tick",
+          "start": 6.923,
+          "end": 7.615
+        },
+        {
+          "w": "every",
+          "start": 7.615,
+          "end": 8.308
+        },
+        {
+          "w": "box.",
+          "start": 8.308,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "file": "",
+      "start": 84,
+      "dur": 10,
+      "speech": 10,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.909
+        },
+        {
+          "w": "balance",
+          "start": 0.909,
+          "end": 1.818
+        },
+        {
+          "w": "climbs.",
+          "start": 1.818,
+          "end": 2.727
+        },
+        {
+          "w": "Twenty.",
+          "start": 2.727,
+          "end": 3.636
+        },
+        {
+          "w": "Forty.",
+          "start": 3.636,
+          "end": 4.545
+        },
+        {
+          "w": "A",
+          "start": 4.545,
+          "end": 5.455
+        },
+        {
+          "w": "hundred.",
+          "start": 5.455,
+          "end": 6.364
+        },
+        {
+          "w": "It",
+          "start": 6.364,
+          "end": 7.273
+        },
+        {
+          "w": "never",
+          "start": 7.273,
+          "end": 8.182
+        },
+        {
+          "w": "goes",
+          "start": 8.182,
+          "end": 9.091
+        },
+        {
+          "w": "down.",
+          "start": 9.091,
+          "end": 10
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "file": "",
+      "start": 94,
+      "dur": 8,
+      "speech": 8,
+      "words": [
+        {
+          "w": "Meaning",
+          "start": 0,
+          "end": 0.5
+        },
+        {
+          "w": "the",
+          "start": 0.5,
+          "end": 1
+        },
+        {
+          "w": "hook",
+          "start": 1,
+          "end": 1.5
+        },
+        {
+          "w": "is",
+          "start": 1.5,
+          "end": 2
+        },
+        {
+          "w": "the",
+          "start": 2,
+          "end": 2.5
+        },
+        {
+          "w": "work.",
+          "start": 2.5,
+          "end": 3
+        },
+        {
+          "w": "You",
+          "start": 3,
+          "end": 3.5
+        },
+        {
+          "w": "aren't",
+          "start": 3.5,
+          "end": 4
+        },
+        {
+          "w": "being",
+          "start": 4,
+          "end": 4.5
+        },
+        {
+          "w": "paid",
+          "start": 4.5,
+          "end": 5
+        },
+        {
+          "w": "to",
+          "start": 5,
+          "end": 5.5
+        },
+        {
+          "w": "watch",
+          "start": 5.5,
+          "end": 6
+        },
+        {
+          "w": "videos.",
+          "start": 6,
+          "end": 6.5
+        },
+        {
+          "w": "You're",
+          "start": 6.5,
+          "end": 7
+        },
+        {
+          "w": "being",
+          "start": 7,
+          "end": 7.5
+        },
+        {
+          "w": "trained.",
+          "start": 7.5,
+          "end": 8
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "file": "",
+      "start": 102,
+      "dur": 5,
+      "speech": 5,
+      "words": [
+        {
+          "w": "Within",
+          "start": 0,
+          "end": 0.455
+        },
+        {
+          "w": "two",
+          "start": 0.455,
+          "end": 0.909
+        },
+        {
+          "w": "days,",
+          "start": 0.909,
+          "end": 1.364
+        },
+        {
+          "w": "a",
+          "start": 1.364,
+          "end": 1.818
+        },
+        {
+          "w": "supervisor",
+          "start": 1.818,
+          "end": 2.273
+        },
+        {
+          "w": "appears.",
+          "start": 2.273,
+          "end": 2.727
+        },
+        {
+          "w": "A",
+          "start": 2.727,
+          "end": 3.182
+        },
+        {
+          "w": "group.",
+          "start": 3.182,
+          "end": 3.636
+        },
+        {
+          "w": "A",
+          "start": 3.636,
+          "end": 4.091
+        },
+        {
+          "w": "commission",
+          "start": 4.091,
+          "end": 4.545
+        },
+        {
+          "w": "ladder.",
+          "start": 4.545,
+          "end": 5
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "file": "",
+      "start": 107,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "Congratulations",
+          "start": 0,
+          "end": 0.818
+        },
+        {
+          "w": "—",
+          "start": 0.818,
+          "end": 1.636
+        },
+        {
+          "w": "you've",
+          "start": 1.636,
+          "end": 2.455
+        },
+        {
+          "w": "been",
+          "start": 2.455,
+          "end": 3.273
+        },
+        {
+          "w": "promoted",
+          "start": 3.273,
+          "end": 4.091
+        },
+        {
+          "w": "to",
+          "start": 4.091,
+          "end": 4.909
+        },
+        {
+          "w": "VIP.\"",
+          "start": 4.909,
+          "end": 5.727
+        },
+        {
+          "w": "That's",
+          "start": 5.727,
+          "end": 6.545
+        },
+        {
+          "w": "the",
+          "start": 6.545,
+          "end": 7.364
+        },
+        {
+          "w": "actual",
+          "start": 7.364,
+          "end": 8.182
+        },
+        {
+          "w": "script.",
+          "start": 8.182,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "file": "",
+      "start": 116,
+      "dur": 14,
+      "speech": 14,
+      "words": [
+        {
+          "w": "Both",
+          "start": 0,
+          "end": 0.778
+        },
+        {
+          "w": "ladders",
+          "start": 0.778,
+          "end": 1.556
+        },
+        {
+          "w": "climb",
+          "start": 1.556,
+          "end": 2.333
+        },
+        {
+          "w": "together:",
+          "start": 2.333,
+          "end": 3.111
+        },
+        {
+          "w": "your",
+          "start": 3.111,
+          "end": 3.889
+        },
+        {
+          "w": "earnings,",
+          "start": 3.889,
+          "end": 4.667
+        },
+        {
+          "w": "and",
+          "start": 4.667,
+          "end": 5.444
+        },
+        {
+          "w": "what",
+          "start": 5.444,
+          "end": 6.222
+        },
+        {
+          "w": "you're",
+          "start": 6.222,
+          "end": 7
+        },
+        {
+          "w": "asked",
+          "start": 7,
+          "end": 7.778
+        },
+        {
+          "w": "to",
+          "start": 7.778,
+          "end": 8.556
+        },
+        {
+          "w": "put",
+          "start": 8.556,
+          "end": 9.333
+        },
+        {
+          "w": "up",
+          "start": 9.333,
+          "end": 10.111
+        },
+        {
+          "w": "to",
+          "start": 10.111,
+          "end": 10.889
+        },
+        {
+          "w": "reach",
+          "start": 10.889,
+          "end": 11.667
+        },
+        {
+          "w": "the",
+          "start": 11.667,
+          "end": 12.444
+        },
+        {
+          "w": "next",
+          "start": 12.444,
+          "end": 13.222
+        },
+        {
+          "w": "rung.",
+          "start": 13.222,
+          "end": 14
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "file": "",
+      "start": 130,
+      "dur": 7,
+      "speech": 7,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.538
+        },
+        {
+          "w": "money",
+          "start": 0.538,
+          "end": 1.077
+        },
+        {
+          "w": "that",
+          "start": 1.077,
+          "end": 1.615
+        },
+        {
+          "w": "arrives",
+          "start": 1.615,
+          "end": 2.154
+        },
+        {
+          "w": "first",
+          "start": 2.154,
+          "end": 2.692
+        },
+        {
+          "w": "is",
+          "start": 2.692,
+          "end": 3.231
+        },
+        {
+          "w": "the",
+          "start": 3.231,
+          "end": 3.769
+        },
+        {
+          "w": "mechanism.",
+          "start": 3.769,
+          "end": 4.308
+        },
+        {
+          "w": "It",
+          "start": 4.308,
+          "end": 4.846
+        },
+        {
+          "w": "deserves",
+          "start": 4.846,
+          "end": 5.385
+        },
+        {
+          "w": "its",
+          "start": 5.385,
+          "end": 5.923
+        },
+        {
+          "w": "own",
+          "start": 5.923,
+          "end": 6.462
+        },
+        {
+          "w": "minute.",
+          "start": 6.462,
+          "end": 7
+        }
+      ]
+    },
+    {
+      "n": 17,
+      "file": "",
+      "start": 137,
+      "dur": 10,
+      "speech": 10,
+      "words": [
+        {
+          "w": "Instant",
+          "start": 0,
+          "end": 0.667
+        },
+        {
+          "w": "payouts.",
+          "start": 0.667,
+          "end": 1.333
+        },
+        {
+          "w": "A",
+          "start": 1.333,
+          "end": 2
+        },
+        {
+          "w": "balance",
+          "start": 2,
+          "end": 2.667
+        },
+        {
+          "w": "that",
+          "start": 2.667,
+          "end": 3.333
+        },
+        {
+          "w": "grows.",
+          "start": 3.333,
+          "end": 4
+        },
+        {
+          "w": "Support",
+          "start": 4,
+          "end": 4.667
+        },
+        {
+          "w": "that",
+          "start": 4.667,
+          "end": 5.333
+        },
+        {
+          "w": "answers.",
+          "start": 5.333,
+          "end": 6
+        },
+        {
+          "w": "None",
+          "start": 6,
+          "end": 6.667
+        },
+        {
+          "w": "of",
+          "start": 6.667,
+          "end": 7.333
+        },
+        {
+          "w": "it",
+          "start": 7.333,
+          "end": 8
+        },
+        {
+          "w": "was",
+          "start": 8,
+          "end": 8.667
+        },
+        {
+          "w": "an",
+          "start": 8.667,
+          "end": 9.333
+        },
+        {
+          "w": "accident.",
+          "start": 9.333,
+          "end": 10
+        }
+      ]
+    },
+    {
+      "n": 18,
+      "file": "",
+      "start": 147,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "That",
+          "start": 0,
+          "end": 0.6
+        },
+        {
+          "w": "first",
+          "start": 0.6,
+          "end": 1.2
+        },
+        {
+          "w": "withdrawal",
+          "start": 1.2,
+          "end": 1.8
+        },
+        {
+          "w": "isn't",
+          "start": 1.8,
+          "end": 2.4
+        },
+        {
+          "w": "a",
+          "start": 2.4,
+          "end": 3
+        },
+        {
+          "w": "payment.",
+          "start": 3,
+          "end": 3.6
+        },
+        {
+          "w": "It's",
+          "start": 3.6,
+          "end": 4.2
+        },
+        {
+          "w": "a",
+          "start": 4.2,
+          "end": 4.8
+        },
+        {
+          "w": "coupon,",
+          "start": 4.8,
+          "end": 5.4
+        },
+        {
+          "w": "and",
+          "start": 5.4,
+          "end": 6
+        },
+        {
+          "w": "it",
+          "start": 6,
+          "end": 6.6
+        },
+        {
+          "w": "costs",
+          "start": 6.6,
+          "end": 7.2
+        },
+        {
+          "w": "them",
+          "start": 7.2,
+          "end": 7.8
+        },
+        {
+          "w": "two",
+          "start": 7.8,
+          "end": 8.4
+        },
+        {
+          "w": "dollars.",
+          "start": 8.4,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 19,
+      "file": "",
+      "start": 156,
+      "dur": 5,
+      "speech": 5,
+      "words": [
+        {
+          "w": "They",
+          "start": 0,
+          "end": 0.294
+        },
+        {
+          "w": "spend",
+          "start": 0.294,
+          "end": 0.588
+        },
+        {
+          "w": "two",
+          "start": 0.588,
+          "end": 0.882
+        },
+        {
+          "w": "dollars",
+          "start": 0.882,
+          "end": 1.176
+        },
+        {
+          "w": "to",
+          "start": 1.176,
+          "end": 1.471
+        },
+        {
+          "w": "learn",
+          "start": 1.471,
+          "end": 1.765
+        },
+        {
+          "w": "what",
+          "start": 1.765,
+          "end": 2.059
+        },
+        {
+          "w": "you'll",
+          "start": 2.059,
+          "end": 2.353
+        },
+        {
+          "w": "risk.",
+          "start": 2.353,
+          "end": 2.647
+        },
+        {
+          "w": "You",
+          "start": 2.647,
+          "end": 2.941
+        },
+        {
+          "w": "spend",
+          "start": 2.941,
+          "end": 3.235
+        },
+        {
+          "w": "two",
+          "start": 3.235,
+          "end": 3.529
+        },
+        {
+          "w": "dollars",
+          "start": 3.529,
+          "end": 3.824
+        },
+        {
+          "w": "to",
+          "start": 3.824,
+          "end": 4.118
+        },
+        {
+          "w": "believe",
+          "start": 4.118,
+          "end": 4.412
+        },
+        {
+          "w": "they're",
+          "start": 4.412,
+          "end": 4.706
+        },
+        {
+          "w": "real.",
+          "start": 4.706,
+          "end": 5
+        }
+      ]
+    },
+    {
+      "n": 20,
+      "file": "",
+      "start": 161,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "See,",
+          "start": 0,
+          "end": 0.563
+        },
+        {
+          "w": "trust",
+          "start": 0.563,
+          "end": 1.125
+        },
+        {
+          "w": "isn't",
+          "start": 1.125,
+          "end": 1.688
+        },
+        {
+          "w": "built",
+          "start": 1.688,
+          "end": 2.25
+        },
+        {
+          "w": "by",
+          "start": 2.25,
+          "end": 2.813
+        },
+        {
+          "w": "the",
+          "start": 2.813,
+          "end": 3.375
+        },
+        {
+          "w": "app.",
+          "start": 3.375,
+          "end": 3.938
+        },
+        {
+          "w": "It's",
+          "start": 3.938,
+          "end": 4.5
+        },
+        {
+          "w": "built",
+          "start": 4.5,
+          "end": 5.063
+        },
+        {
+          "w": "by",
+          "start": 5.063,
+          "end": 5.625
+        },
+        {
+          "w": "you,",
+          "start": 5.625,
+          "end": 6.188
+        },
+        {
+          "w": "watching",
+          "start": 6.188,
+          "end": 6.75
+        },
+        {
+          "w": "your",
+          "start": 6.75,
+          "end": 7.313
+        },
+        {
+          "w": "own",
+          "start": 7.313,
+          "end": 7.875
+        },
+        {
+          "w": "money",
+          "start": 7.875,
+          "end": 8.438
+        },
+        {
+          "w": "arrive.",
+          "start": 8.438,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 21,
+      "file": "",
+      "start": 170,
+      "dur": 13,
+      "speech": 13,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.765
+        },
+        {
+          "w": "deposit",
+          "start": 0.765,
+          "end": 1.529
+        },
+        {
+          "w": "clears,",
+          "start": 1.529,
+          "end": 2.294
+        },
+        {
+          "w": "and",
+          "start": 2.294,
+          "end": 3.059
+        },
+        {
+          "w": "you",
+          "start": 3.059,
+          "end": 3.824
+        },
+        {
+          "w": "watch",
+          "start": 3.824,
+          "end": 4.588
+        },
+        {
+          "w": "it.",
+          "start": 4.588,
+          "end": 5.353
+        },
+        {
+          "w": "That's",
+          "start": 5.353,
+          "end": 6.118
+        },
+        {
+          "w": "the",
+          "start": 6.118,
+          "end": 6.882
+        },
+        {
+          "w": "moment",
+          "start": 6.882,
+          "end": 7.647
+        },
+        {
+          "w": "the",
+          "start": 7.647,
+          "end": 8.412
+        },
+        {
+          "w": "belief",
+          "start": 8.412,
+          "end": 9.176
+        },
+        {
+          "w": "gets",
+          "start": 9.176,
+          "end": 9.941
+        },
+        {
+          "w": "built",
+          "start": 9.941,
+          "end": 10.706
+        },
+        {
+          "w": "—",
+          "start": 10.706,
+          "end": 11.471
+        },
+        {
+          "w": "by",
+          "start": 11.471,
+          "end": 12.235
+        },
+        {
+          "w": "you.",
+          "start": 12.235,
+          "end": 13
+        }
+      ]
+    },
+    {
+      "n": 22,
+      "file": "",
+      "start": 183,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "Every",
+          "start": 0,
+          "end": 0.818
+        },
+        {
+          "w": "question",
+          "start": 0.818,
+          "end": 1.636
+        },
+        {
+          "w": "answered.",
+          "start": 1.636,
+          "end": 2.455
+        },
+        {
+          "w": "Every",
+          "start": 2.455,
+          "end": 3.273
+        },
+        {
+          "w": "time.",
+          "start": 3.273,
+          "end": 4.091
+        },
+        {
+          "w": "A",
+          "start": 4.091,
+          "end": 4.909
+        },
+        {
+          "w": "hundred",
+          "start": 4.909,
+          "end": 5.727
+        },
+        {
+          "w": "staff,",
+          "start": 5.727,
+          "end": 6.545
+        },
+        {
+          "w": "one",
+          "start": 6.545,
+          "end": 7.364
+        },
+        {
+          "w": "conversation",
+          "start": 7.364,
+          "end": 8.182
+        },
+        {
+          "w": "each.",
+          "start": 8.182,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 23,
+      "file": "",
+      "start": 192,
+      "dur": 10,
+      "speech": 10,
+      "words": [
+        {
+          "w": "In",
+          "start": 0,
+          "end": 0.588
+        },
+        {
+          "w": "the",
+          "start": 0.588,
+          "end": 1.176
+        },
+        {
+          "w": "trade,",
+          "start": 1.176,
+          "end": 1.765
+        },
+        {
+          "w": "they",
+          "start": 1.765,
+          "end": 2.353
+        },
+        {
+          "w": "call",
+          "start": 2.353,
+          "end": 2.941
+        },
+        {
+          "w": "it",
+          "start": 2.941,
+          "end": 3.529
+        },
+        {
+          "w": "fattening.",
+          "start": 3.529,
+          "end": 4.118
+        },
+        {
+          "w": "Feed",
+          "start": 4.118,
+          "end": 4.706
+        },
+        {
+          "w": "the",
+          "start": 4.706,
+          "end": 5.294
+        },
+        {
+          "w": "account.",
+          "start": 5.294,
+          "end": 5.882
+        },
+        {
+          "w": "Build",
+          "start": 5.882,
+          "end": 6.471
+        },
+        {
+          "w": "the",
+          "start": 6.471,
+          "end": 7.059
+        },
+        {
+          "w": "belief.",
+          "start": 7.059,
+          "end": 7.647
+        },
+        {
+          "w": "The",
+          "start": 7.647,
+          "end": 8.235
+        },
+        {
+          "w": "kill",
+          "start": 8.235,
+          "end": 8.824
+        },
+        {
+          "w": "comes",
+          "start": 8.824,
+          "end": 9.412
+        },
+        {
+          "w": "later.",
+          "start": 9.412,
+          "end": 10
+        }
+      ]
+    },
+    {
+      "n": 24,
+      "file": "",
+      "start": 202,
+      "dur": 8,
+      "speech": 8,
+      "words": [
+        {
+          "w": "Each",
+          "start": 0,
+          "end": 0.571
+        },
+        {
+          "w": "tier",
+          "start": 0.571,
+          "end": 1.143
+        },
+        {
+          "w": "is",
+          "start": 1.143,
+          "end": 1.714
+        },
+        {
+          "w": "a",
+          "start": 1.714,
+          "end": 2.286
+        },
+        {
+          "w": "rung.",
+          "start": 2.286,
+          "end": 2.857
+        },
+        {
+          "w": "Each",
+          "start": 2.857,
+          "end": 3.429
+        },
+        {
+          "w": "rung",
+          "start": 3.429,
+          "end": 4
+        },
+        {
+          "w": "is",
+          "start": 4,
+          "end": 4.571
+        },
+        {
+          "w": "a",
+          "start": 4.571,
+          "end": 5.143
+        },
+        {
+          "w": "deposit",
+          "start": 5.143,
+          "end": 5.714
+        },
+        {
+          "w": "you",
+          "start": 5.714,
+          "end": 6.286
+        },
+        {
+          "w": "haven't",
+          "start": 6.286,
+          "end": 6.857
+        },
+        {
+          "w": "made",
+          "start": 6.857,
+          "end": 7.429
+        },
+        {
+          "w": "yet.",
+          "start": 7.429,
+          "end": 8
+        }
+      ]
+    },
+    {
+      "n": 25,
+      "file": "",
+      "start": 210,
+      "dur": 5,
+      "speech": 5,
+      "words": [
+        {
+          "w": "Then",
+          "start": 0,
+          "end": 0.333
+        },
+        {
+          "w": "the",
+          "start": 0.333,
+          "end": 0.667
+        },
+        {
+          "w": "rung",
+          "start": 0.667,
+          "end": 1
+        },
+        {
+          "w": "that",
+          "start": 1,
+          "end": 1.333
+        },
+        {
+          "w": "matters:",
+          "start": 1.333,
+          "end": 1.667
+        },
+        {
+          "w": "two",
+          "start": 1.667,
+          "end": 2
+        },
+        {
+          "w": "hundred",
+          "start": 2,
+          "end": 2.333
+        },
+        {
+          "w": "fifty",
+          "start": 2.333,
+          "end": 2.667
+        },
+        {
+          "w": "dollars,",
+          "start": 2.667,
+          "end": 3
+        },
+        {
+          "w": "to",
+          "start": 3,
+          "end": 3.333
+        },
+        {
+          "w": "unlock",
+          "start": 3.333,
+          "end": 3.667
+        },
+        {
+          "w": "a",
+          "start": 3.667,
+          "end": 4
+        },
+        {
+          "w": "faster",
+          "start": 4,
+          "end": 4.333
+        },
+        {
+          "w": "payout",
+          "start": 4.333,
+          "end": 4.667
+        },
+        {
+          "w": "tier.",
+          "start": 4.667,
+          "end": 5
+        }
+      ]
+    },
+    {
+      "n": 26,
+      "file": "",
+      "start": 215,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "And",
+          "start": 0,
+          "end": 0.563
+        },
+        {
+          "w": "it",
+          "start": 0.563,
+          "end": 1.125
+        },
+        {
+          "w": "works.",
+          "start": 1.125,
+          "end": 1.688
+        },
+        {
+          "w": "People",
+          "start": 1.688,
+          "end": 2.25
+        },
+        {
+          "w": "pay",
+          "start": 2.25,
+          "end": 2.813
+        },
+        {
+          "w": "it.",
+          "start": 2.813,
+          "end": 3.375
+        },
+        {
+          "w": "Because",
+          "start": 3.375,
+          "end": 3.938
+        },
+        {
+          "w": "the",
+          "start": 3.938,
+          "end": 4.5
+        },
+        {
+          "w": "balance",
+          "start": 4.5,
+          "end": 5.063
+        },
+        {
+          "w": "is",
+          "start": 5.063,
+          "end": 5.625
+        },
+        {
+          "w": "real,",
+          "start": 5.625,
+          "end": 6.188
+        },
+        {
+          "w": "and",
+          "start": 6.188,
+          "end": 6.75
+        },
+        {
+          "w": "the",
+          "start": 6.75,
+          "end": 7.313
+        },
+        {
+          "w": "balance",
+          "start": 7.313,
+          "end": 7.875
+        },
+        {
+          "w": "is",
+          "start": 7.875,
+          "end": 8.438
+        },
+        {
+          "w": "theirs.",
+          "start": 8.438,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 27,
+      "file": "",
+      "start": 224,
+      "dur": 13,
+      "speech": 13,
+      "words": [
+        {
+          "w": "Except",
+          "start": 0,
+          "end": 0.867
+        },
+        {
+          "w": "the",
+          "start": 0.867,
+          "end": 1.733
+        },
+        {
+          "w": "balance",
+          "start": 1.733,
+          "end": 2.6
+        },
+        {
+          "w": "is",
+          "start": 2.6,
+          "end": 3.467
+        },
+        {
+          "w": "a",
+          "start": 3.467,
+          "end": 4.333
+        },
+        {
+          "w": "number",
+          "start": 4.333,
+          "end": 5.2
+        },
+        {
+          "w": "on",
+          "start": 5.2,
+          "end": 6.067
+        },
+        {
+          "w": "their",
+          "start": 6.067,
+          "end": 6.933
+        },
+        {
+          "w": "server.",
+          "start": 6.933,
+          "end": 7.8
+        },
+        {
+          "w": "The",
+          "start": 7.8,
+          "end": 8.667
+        },
+        {
+          "w": "deposit",
+          "start": 8.667,
+          "end": 9.533
+        },
+        {
+          "w": "is",
+          "start": 9.533,
+          "end": 10.4
+        },
+        {
+          "w": "real",
+          "start": 10.4,
+          "end": 11.267
+        },
+        {
+          "w": "money,",
+          "start": 11.267,
+          "end": 12.133
+        },
+        {
+          "w": "moved.",
+          "start": 12.133,
+          "end": 13
+        }
+      ]
+    },
+    {
+      "n": 28,
+      "file": "",
+      "start": 237,
+      "dur": 8,
+      "speech": 8,
+      "words": [
+        {
+          "w": "Some",
+          "start": 0,
+          "end": 0.421
+        },
+        {
+          "w": "of",
+          "start": 0.421,
+          "end": 0.842
+        },
+        {
+          "w": "it",
+          "start": 0.842,
+          "end": 1.263
+        },
+        {
+          "w": "gets",
+          "start": 1.263,
+          "end": 1.684
+        },
+        {
+          "w": "paid",
+          "start": 1.684,
+          "end": 2.105
+        },
+        {
+          "w": "out,",
+          "start": 2.105,
+          "end": 2.526
+        },
+        {
+          "w": "to",
+          "start": 2.526,
+          "end": 2.947
+        },
+        {
+          "w": "make",
+          "start": 2.947,
+          "end": 3.368
+        },
+        {
+          "w": "the",
+          "start": 3.368,
+          "end": 3.789
+        },
+        {
+          "w": "next",
+          "start": 3.789,
+          "end": 4.211
+        },
+        {
+          "w": "person",
+          "start": 4.211,
+          "end": 4.632
+        },
+        {
+          "w": "trust",
+          "start": 4.632,
+          "end": 5.053
+        },
+        {
+          "w": "the",
+          "start": 5.053,
+          "end": 5.474
+        },
+        {
+          "w": "same",
+          "start": 5.474,
+          "end": 5.895
+        },
+        {
+          "w": "screen.",
+          "start": 5.895,
+          "end": 6.316
+        },
+        {
+          "w": "The",
+          "start": 6.316,
+          "end": 6.737
+        },
+        {
+          "w": "rest",
+          "start": 6.737,
+          "end": 7.158
+        },
+        {
+          "w": "moves",
+          "start": 7.158,
+          "end": 7.579
+        },
+        {
+          "w": "on.",
+          "start": 7.579,
+          "end": 8
+        }
+      ]
+    },
+    {
+      "n": 29,
+      "file": "",
+      "start": 245,
+      "dur": 6,
+      "speech": 6,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.667
+        },
+        {
+          "w": "turn",
+          "start": 0.667,
+          "end": 1.333
+        },
+        {
+          "w": "happens",
+          "start": 1.333,
+          "end": 2
+        },
+        {
+          "w": "when",
+          "start": 2,
+          "end": 2.667
+        },
+        {
+          "w": "the",
+          "start": 2.667,
+          "end": 3.333
+        },
+        {
+          "w": "amounts",
+          "start": 3.333,
+          "end": 4
+        },
+        {
+          "w": "stop",
+          "start": 4,
+          "end": 4.667
+        },
+        {
+          "w": "being",
+          "start": 4.667,
+          "end": 5.333
+        },
+        {
+          "w": "small.",
+          "start": 5.333,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "n": 30,
+      "file": "",
+      "start": 251,
+      "dur": 5,
+      "speech": 5,
+      "words": [
+        {
+          "w": "A",
+          "start": 0,
+          "end": 0.333
+        },
+        {
+          "w": "platform",
+          "start": 0.333,
+          "end": 0.667
+        },
+        {
+          "w": "fee",
+          "start": 0.667,
+          "end": 1
+        },
+        {
+          "w": "of",
+          "start": 1,
+          "end": 1.333
+        },
+        {
+          "w": "ten",
+          "start": 1.333,
+          "end": 1.667
+        },
+        {
+          "w": "thousand.",
+          "start": 1.667,
+          "end": 2
+        },
+        {
+          "w": "An",
+          "start": 2,
+          "end": 2.333
+        },
+        {
+          "w": "unlock",
+          "start": 2.333,
+          "end": 2.667
+        },
+        {
+          "w": "of",
+          "start": 2.667,
+          "end": 3
+        },
+        {
+          "w": "twenty.",
+          "start": 3,
+          "end": 3.333
+        },
+        {
+          "w": "A",
+          "start": 3.333,
+          "end": 3.667
+        },
+        {
+          "w": "tax",
+          "start": 3.667,
+          "end": 4
+        },
+        {
+          "w": "clearance",
+          "start": 4,
+          "end": 4.333
+        },
+        {
+          "w": "of",
+          "start": 4.333,
+          "end": 4.667
+        },
+        {
+          "w": "forty.",
+          "start": 4.667,
+          "end": 5
+        }
+      ]
+    },
+    {
+      "n": 31,
+      "file": "",
+      "start": 256,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "Every",
+          "start": 0,
+          "end": 0.6
+        },
+        {
+          "w": "reason",
+          "start": 0.6,
+          "end": 1.2
+        },
+        {
+          "w": "to",
+          "start": 1.2,
+          "end": 1.8
+        },
+        {
+          "w": "deposit",
+          "start": 1.8,
+          "end": 2.4
+        },
+        {
+          "w": "has",
+          "start": 2.4,
+          "end": 3
+        },
+        {
+          "w": "one",
+          "start": 3,
+          "end": 3.6
+        },
+        {
+          "w": "thing",
+          "start": 3.6,
+          "end": 4.2
+        },
+        {
+          "w": "in",
+          "start": 4.2,
+          "end": 4.8
+        },
+        {
+          "w": "common:",
+          "start": 4.8,
+          "end": 5.4
+        },
+        {
+          "w": "it",
+          "start": 5.4,
+          "end": 6
+        },
+        {
+          "w": "unlocks",
+          "start": 6,
+          "end": 6.6
+        },
+        {
+          "w": "money",
+          "start": 6.6,
+          "end": 7.2
+        },
+        {
+          "w": "that's",
+          "start": 7.2,
+          "end": 7.8
+        },
+        {
+          "w": "already",
+          "start": 7.8,
+          "end": 8.4
+        },
+        {
+          "w": "yours.",
+          "start": 8.4,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 32,
+      "file": "",
+      "start": 265,
+      "dur": 10,
+      "speech": 10,
+      "words": [
+        {
+          "w": "Their",
+          "start": 0,
+          "end": 0.667
+        },
+        {
+          "w": "math:",
+          "start": 0.667,
+          "end": 1.333
+        },
+        {
+          "w": "deposit",
+          "start": 1.333,
+          "end": 2
+        },
+        {
+          "w": "to",
+          "start": 2,
+          "end": 2.667
+        },
+        {
+          "w": "unlock.",
+          "start": 2.667,
+          "end": 3.333
+        },
+        {
+          "w": "Your",
+          "start": 3.333,
+          "end": 4
+        },
+        {
+          "w": "math:",
+          "start": 4,
+          "end": 4.667
+        },
+        {
+          "w": "it's",
+          "start": 4.667,
+          "end": 5.333
+        },
+        {
+          "w": "already",
+          "start": 5.333,
+          "end": 6
+        },
+        {
+          "w": "in",
+          "start": 6,
+          "end": 6.667
+        },
+        {
+          "w": "there.",
+          "start": 6.667,
+          "end": 7.333
+        },
+        {
+          "w": "Two",
+          "start": 7.333,
+          "end": 8
+        },
+        {
+          "w": "maths,",
+          "start": 8,
+          "end": 8.667
+        },
+        {
+          "w": "one",
+          "start": 8.667,
+          "end": 9.333
+        },
+        {
+          "w": "answer.",
+          "start": 9.333,
+          "end": 10
+        }
+      ]
+    },
+    {
+      "n": 33,
+      "file": "",
+      "start": 275,
+      "dur": 10,
+      "speech": 10,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.769
+        },
+        {
+          "w": "psychology",
+          "start": 0.769,
+          "end": 1.538
+        },
+        {
+          "w": "is",
+          "start": 1.538,
+          "end": 2.308
+        },
+        {
+          "w": "textbook.",
+          "start": 2.308,
+          "end": 3.077
+        },
+        {
+          "w": "Sunk",
+          "start": 3.077,
+          "end": 3.846
+        },
+        {
+          "w": "cost.",
+          "start": 3.846,
+          "end": 4.615
+        },
+        {
+          "w": "Escape",
+          "start": 4.615,
+          "end": 5.385
+        },
+        {
+          "w": "cost.",
+          "start": 5.385,
+          "end": 6.154
+        },
+        {
+          "w": "The",
+          "start": 6.154,
+          "end": 6.923
+        },
+        {
+          "w": "account",
+          "start": 6.923,
+          "end": 7.692
+        },
+        {
+          "w": "is",
+          "start": 7.692,
+          "end": 8.462
+        },
+        {
+          "w": "almost",
+          "start": 8.462,
+          "end": 9.231
+        },
+        {
+          "w": "unlocked.",
+          "start": 9.231,
+          "end": 10
+        }
+      ]
+    },
+    {
+      "n": 34,
+      "file": "",
+      "start": 285,
+      "dur": 13,
+      "speech": 13,
+      "words": [
+        {
+          "w": "But",
+          "start": 0,
+          "end": 0.765
+        },
+        {
+          "w": "the",
+          "start": 0.765,
+          "end": 1.529
+        },
+        {
+          "w": "balance",
+          "start": 1.529,
+          "end": 2.294
+        },
+        {
+          "w": "is",
+          "start": 2.294,
+          "end": 3.059
+        },
+        {
+          "w": "never",
+          "start": 3.059,
+          "end": 3.824
+        },
+        {
+          "w": "unlocked.",
+          "start": 3.824,
+          "end": 4.588
+        },
+        {
+          "w": "The",
+          "start": 4.588,
+          "end": 5.353
+        },
+        {
+          "w": "rules",
+          "start": 5.353,
+          "end": 6.118
+        },
+        {
+          "w": "change",
+          "start": 6.118,
+          "end": 6.882
+        },
+        {
+          "w": "on",
+          "start": 6.882,
+          "end": 7.647
+        },
+        {
+          "w": "the",
+          "start": 7.647,
+          "end": 8.412
+        },
+        {
+          "w": "server,",
+          "start": 8.412,
+          "end": 9.176
+        },
+        {
+          "w": "and",
+          "start": 9.176,
+          "end": 9.941
+        },
+        {
+          "w": "the",
+          "start": 9.941,
+          "end": 10.706
+        },
+        {
+          "w": "ask",
+          "start": 10.706,
+          "end": 11.471
+        },
+        {
+          "w": "gets",
+          "start": 11.471,
+          "end": 12.235
+        },
+        {
+          "w": "bigger.",
+          "start": 12.235,
+          "end": 13
+        }
+      ]
+    },
+    {
+      "n": 35,
+      "file": "",
+      "start": 298,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "And",
+          "start": 0,
+          "end": 0.818
+        },
+        {
+          "w": "for",
+          "start": 0.818,
+          "end": 1.636
+        },
+        {
+          "w": "the",
+          "start": 1.636,
+          "end": 2.455
+        },
+        {
+          "w": "biggest",
+          "start": 2.455,
+          "end": 3.273
+        },
+        {
+          "w": "accounts,",
+          "start": 3.273,
+          "end": 4.091
+        },
+        {
+          "w": "they",
+          "start": 4.091,
+          "end": 4.909
+        },
+        {
+          "w": "add",
+          "start": 4.909,
+          "end": 5.727
+        },
+        {
+          "w": "a",
+          "start": 5.727,
+          "end": 6.545
+        },
+        {
+          "w": "second",
+          "start": 6.545,
+          "end": 7.364
+        },
+        {
+          "w": "layer:",
+          "start": 7.364,
+          "end": 8.182
+        },
+        {
+          "w": "romance.",
+          "start": 8.182,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 36,
+      "file": "",
+      "start": 307,
+      "dur": 5,
+      "speech": 5,
+      "words": [
+        {
+          "w": "A",
+          "start": 0,
+          "end": 0.333
+        },
+        {
+          "w": "friend",
+          "start": 0.333,
+          "end": 0.667
+        },
+        {
+          "w": "with",
+          "start": 0.667,
+          "end": 1
+        },
+        {
+          "w": "a",
+          "start": 1,
+          "end": 1.333
+        },
+        {
+          "w": "tip.",
+          "start": 1.333,
+          "end": 1.667
+        },
+        {
+          "w": "A",
+          "start": 1.667,
+          "end": 2
+        },
+        {
+          "w": "partner",
+          "start": 2,
+          "end": 2.333
+        },
+        {
+          "w": "with",
+          "start": 2.333,
+          "end": 2.667
+        },
+        {
+          "w": "a",
+          "start": 2.667,
+          "end": 3
+        },
+        {
+          "w": "plan.",
+          "start": 3,
+          "end": 3.333
+        },
+        {
+          "w": "An",
+          "start": 3.333,
+          "end": 3.667
+        },
+        {
+          "w": "expert",
+          "start": 3.667,
+          "end": 4
+        },
+        {
+          "w": "who",
+          "start": 4,
+          "end": 4.333
+        },
+        {
+          "w": "always",
+          "start": 4.333,
+          "end": 4.667
+        },
+        {
+          "w": "answers.",
+          "start": 4.667,
+          "end": 5
+        }
+      ]
+    },
+    {
+      "n": 37,
+      "file": "",
+      "start": 312,
+      "dur": 6,
+      "speech": 6,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.5
+        },
+        {
+          "w": "best",
+          "start": 0.5,
+          "end": 1
+        },
+        {
+          "w": "accounts",
+          "start": 1,
+          "end": 1.5
+        },
+        {
+          "w": "are",
+          "start": 1.5,
+          "end": 2
+        },
+        {
+          "w": "fattened",
+          "start": 2,
+          "end": 2.5
+        },
+        {
+          "w": "for",
+          "start": 2.5,
+          "end": 3
+        },
+        {
+          "w": "months.",
+          "start": 3,
+          "end": 3.5
+        },
+        {
+          "w": "The",
+          "start": 3.5,
+          "end": 4
+        },
+        {
+          "w": "slaughter",
+          "start": 4,
+          "end": 4.5
+        },
+        {
+          "w": "takes",
+          "start": 4.5,
+          "end": 5
+        },
+        {
+          "w": "an",
+          "start": 5,
+          "end": 5.5
+        },
+        {
+          "w": "hour.",
+          "start": 5.5,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "n": 38,
+      "file": "",
+      "start": 318,
+      "dur": 10,
+      "speech": 10,
+      "words": [
+        {
+          "w": "I",
+          "start": 0,
+          "end": 0.588
+        },
+        {
+          "w": "love",
+          "start": 0.588,
+          "end": 1.176
+        },
+        {
+          "w": "you.",
+          "start": 1.176,
+          "end": 1.765
+        },
+        {
+          "w": "Trust",
+          "start": 1.765,
+          "end": 2.353
+        },
+        {
+          "w": "me.",
+          "start": 2.353,
+          "end": 2.941
+        },
+        {
+          "w": "Just",
+          "start": 2.941,
+          "end": 3.529
+        },
+        {
+          "w": "this",
+          "start": 3.529,
+          "end": 4.118
+        },
+        {
+          "w": "once.\"",
+          "start": 4.118,
+          "end": 4.706
+        },
+        {
+          "w": "It's",
+          "start": 4.706,
+          "end": 5.294
+        },
+        {
+          "w": "a",
+          "start": 5.294,
+          "end": 5.882
+        },
+        {
+          "w": "script.",
+          "start": 5.882,
+          "end": 6.471
+        },
+        {
+          "w": "It",
+          "start": 6.471,
+          "end": 7.059
+        },
+        {
+          "w": "has",
+          "start": 7.059,
+          "end": 7.647
+        },
+        {
+          "w": "always",
+          "start": 7.647,
+          "end": 8.235
+        },
+        {
+          "w": "been",
+          "start": 8.235,
+          "end": 8.824
+        },
+        {
+          "w": "a",
+          "start": 8.824,
+          "end": 9.412
+        },
+        {
+          "w": "script.",
+          "start": 9.412,
+          "end": 10
+        }
+      ]
+    },
+    {
+      "n": 39,
+      "file": "",
+      "start": 328,
+      "dur": 12,
+      "speech": 12,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.706
+        },
+        {
+          "w": "deposit",
+          "start": 0.706,
+          "end": 1.412
+        },
+        {
+          "w": "doesn't",
+          "start": 1.412,
+          "end": 2.118
+        },
+        {
+          "w": "go",
+          "start": 2.118,
+          "end": 2.824
+        },
+        {
+          "w": "to",
+          "start": 2.824,
+          "end": 3.529
+        },
+        {
+          "w": "the",
+          "start": 3.529,
+          "end": 4.235
+        },
+        {
+          "w": "platform.",
+          "start": 4.235,
+          "end": 4.941
+        },
+        {
+          "w": "It",
+          "start": 4.941,
+          "end": 5.647
+        },
+        {
+          "w": "goes",
+          "start": 5.647,
+          "end": 6.353
+        },
+        {
+          "w": "to",
+          "start": 6.353,
+          "end": 7.059
+        },
+        {
+          "w": "a",
+          "start": 7.059,
+          "end": 7.765
+        },
+        {
+          "w": "wallet",
+          "start": 7.765,
+          "end": 8.471
+        },
+        {
+          "w": "—",
+          "start": 8.471,
+          "end": 9.176
+        },
+        {
+          "w": "and",
+          "start": 9.176,
+          "end": 9.882
+        },
+        {
+          "w": "wallets",
+          "start": 9.882,
+          "end": 10.588
+        },
+        {
+          "w": "leave",
+          "start": 10.588,
+          "end": 11.294
+        },
+        {
+          "w": "receipts.",
+          "start": 11.294,
+          "end": 12
+        }
+      ]
+    },
+    {
+      "n": 40,
+      "file": "",
+      "start": 340,
+      "dur": 7,
+      "speech": 7,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.583
+        },
+        {
+          "w": "last",
+          "start": 0.583,
+          "end": 1.167
+        },
+        {
+          "w": "frame",
+          "start": 1.167,
+          "end": 1.75
+        },
+        {
+          "w": "the",
+          "start": 1.75,
+          "end": 2.333
+        },
+        {
+          "w": "mark",
+          "start": 2.333,
+          "end": 2.917
+        },
+        {
+          "w": "sees:",
+          "start": 2.917,
+          "end": 3.5
+        },
+        {
+          "w": "the",
+          "start": 3.5,
+          "end": 4.083
+        },
+        {
+          "w": "balance,",
+          "start": 4.083,
+          "end": 4.667
+        },
+        {
+          "w": "the",
+          "start": 4.667,
+          "end": 5.25
+        },
+        {
+          "w": "chat,",
+          "start": 5.25,
+          "end": 5.833
+        },
+        {
+          "w": "and",
+          "start": 5.833,
+          "end": 6.417
+        },
+        {
+          "w": "silence.",
+          "start": 6.417,
+          "end": 7
+        }
+      ]
+    },
+    {
+      "n": 41,
+      "file": "",
+      "start": 347,
+      "dur": 7,
+      "speech": 7,
+      "words": [
+        {
+          "w": "On",
+          "start": 0,
+          "end": 0.7
+        },
+        {
+          "w": "their",
+          "start": 0.7,
+          "end": 1.4
+        },
+        {
+          "w": "ledger,",
+          "start": 1.4,
+          "end": 2.1
+        },
+        {
+          "w": "the",
+          "start": 2.1,
+          "end": 2.8
+        },
+        {
+          "w": "account",
+          "start": 2.8,
+          "end": 3.5
+        },
+        {
+          "w": "closes.",
+          "start": 3.5,
+          "end": 4.2
+        },
+        {
+          "w": "The",
+          "start": 4.2,
+          "end": 4.9
+        },
+        {
+          "w": "person",
+          "start": 4.9,
+          "end": 5.6
+        },
+        {
+          "w": "stays",
+          "start": 5.6,
+          "end": 6.3
+        },
+        {
+          "w": "open.",
+          "start": 6.3,
+          "end": 7
+        }
+      ]
+    },
+    {
+      "n": 42,
+      "file": "",
+      "start": 354,
+      "dur": 6,
+      "speech": 6,
+      "words": [
+        {
+          "w": "In",
+          "start": 0,
+          "end": 0.333
+        },
+        {
+          "w": "Brooklyn",
+          "start": 0.333,
+          "end": 0.667
+        },
+        {
+          "w": "alone,",
+          "start": 0.667,
+          "end": 1
+        },
+        {
+          "w": "one",
+          "start": 1,
+          "end": 1.333
+        },
+        {
+          "w": "network",
+          "start": 1.333,
+          "end": 1.667
+        },
+        {
+          "w": "moved",
+          "start": 1.667,
+          "end": 2
+        },
+        {
+          "w": "millions",
+          "start": 2,
+          "end": 2.333
+        },
+        {
+          "w": "for",
+          "start": 2.333,
+          "end": 2.667
+        },
+        {
+          "w": "this",
+          "start": 2.667,
+          "end": 3
+        },
+        {
+          "w": "machine",
+          "start": 3,
+          "end": 3.333
+        },
+        {
+          "w": "—",
+          "start": 3.333,
+          "end": 3.667
+        },
+        {
+          "w": "two",
+          "start": 3.667,
+          "end": 4
+        },
+        {
+          "w": "hundred",
+          "start": 4,
+          "end": 4.333
+        },
+        {
+          "w": "fifty",
+          "start": 4.333,
+          "end": 4.667
+        },
+        {
+          "w": "victims",
+          "start": 4.667,
+          "end": 5
+        },
+        {
+          "w": "across",
+          "start": 5,
+          "end": 5.333
+        },
+        {
+          "w": "the",
+          "start": 5.333,
+          "end": 5.667
+        },
+        {
+          "w": "country.",
+          "start": 5.667,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "n": 43,
+      "file": "",
+      "start": 360,
+      "dur": 20,
+      "speech": 20,
+      "words": [
+        {
+          "w": "A",
+          "start": 0,
+          "end": 1.538
+        },
+        {
+          "w": "hundred",
+          "start": 1.538,
+          "end": 3.077
+        },
+        {
+          "w": "thousand",
+          "start": 3.077,
+          "end": 4.615
+        },
+        {
+          "w": "targets.",
+          "start": 4.615,
+          "end": 6.154
+        },
+        {
+          "w": "A",
+          "start": 6.154,
+          "end": 7.692
+        },
+        {
+          "w": "thousand",
+          "start": 7.692,
+          "end": 9.231
+        },
+        {
+          "w": "responses.",
+          "start": 9.231,
+          "end": 10.769
+        },
+        {
+          "w": "A",
+          "start": 10.769,
+          "end": 12.308
+        },
+        {
+          "w": "hundred",
+          "start": 12.308,
+          "end": 13.846
+        },
+        {
+          "w": "deposits.",
+          "start": 13.846,
+          "end": 15.385
+        },
+        {
+          "w": "Five",
+          "start": 15.385,
+          "end": 16.923
+        },
+        {
+          "w": "locked",
+          "start": 16.923,
+          "end": 18.462
+        },
+        {
+          "w": "accounts.",
+          "start": 18.462,
+          "end": 20
+        }
+      ]
+    },
+    {
+      "n": 44,
+      "file": "",
+      "start": 380,
+      "dur": 6,
+      "speech": 6,
+      "words": [
+        {
+          "w": "Time",
+          "start": 0,
+          "end": 0.667
+        },
+        {
+          "w": "to",
+          "start": 0.667,
+          "end": 1.333
+        },
+        {
+          "w": "meet",
+          "start": 1.333,
+          "end": 2
+        },
+        {
+          "w": "the",
+          "start": 2,
+          "end": 2.667
+        },
+        {
+          "w": "machine",
+          "start": 2.667,
+          "end": 3.333
+        },
+        {
+          "w": "that",
+          "start": 3.333,
+          "end": 4
+        },
+        {
+          "w": "runs",
+          "start": 4,
+          "end": 4.667
+        },
+        {
+          "w": "the",
+          "start": 4.667,
+          "end": 5.333
+        },
+        {
+          "w": "numbers.",
+          "start": 5.333,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "n": 45,
+      "file": "",
+      "start": 386,
+      "dur": 10,
+      "speech": 10,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.833
+        },
+        {
+          "w": "money",
+          "start": 0.833,
+          "end": 1.667
+        },
+        {
+          "w": "doesn't",
+          "start": 1.667,
+          "end": 2.5
+        },
+        {
+          "w": "land",
+          "start": 2.5,
+          "end": 3.333
+        },
+        {
+          "w": "in",
+          "start": 3.333,
+          "end": 4.167
+        },
+        {
+          "w": "a",
+          "start": 4.167,
+          "end": 5
+        },
+        {
+          "w": "call",
+          "start": 5,
+          "end": 5.833
+        },
+        {
+          "w": "center.",
+          "start": 5.833,
+          "end": 6.667
+        },
+        {
+          "w": "It",
+          "start": 6.667,
+          "end": 7.5
+        },
+        {
+          "w": "lands",
+          "start": 7.5,
+          "end": 8.333
+        },
+        {
+          "w": "in",
+          "start": 8.333,
+          "end": 9.167
+        },
+        {
+          "w": "Cambodia.",
+          "start": 9.167,
+          "end": 10
+        }
+      ]
+    },
+    {
+      "n": 46,
+      "file": "",
+      "start": 396,
+      "dur": 11,
+      "speech": 11,
+      "words": [
+        {
+          "w": "Ten",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "w": "compounds.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "w": "High",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "w": "walls.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "w": "Barbed",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "w": "wire.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "w": "Dormitories",
+          "start": 6,
+          "end": 7
+        },
+        {
+          "w": "for",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "w": "hundreds",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "w": "of",
+          "start": 9,
+          "end": 10
+        },
+        {
+          "w": "workers.",
+          "start": 10,
+          "end": 11
+        }
+      ]
+    },
+    {
+      "n": 47,
+      "file": "",
+      "start": 407,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "Phone",
+          "start": 0,
+          "end": 0.9
+        },
+        {
+          "w": "farms:",
+          "start": 0.9,
+          "end": 1.8
+        },
+        {
+          "w": "one",
+          "start": 1.8,
+          "end": 2.7
+        },
+        {
+          "w": "facility",
+          "start": 2.7,
+          "end": 3.6
+        },
+        {
+          "w": "alone",
+          "start": 3.6,
+          "end": 4.5
+        },
+        {
+          "w": "held",
+          "start": 4.5,
+          "end": 5.4
+        },
+        {
+          "w": "twelve",
+          "start": 5.4,
+          "end": 6.3
+        },
+        {
+          "w": "hundred",
+          "start": 6.3,
+          "end": 7.2
+        },
+        {
+          "w": "fifty",
+          "start": 7.2,
+          "end": 8.1
+        },
+        {
+          "w": "phones.",
+          "start": 8.1,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 48,
+      "file": "",
+      "start": 416,
+      "dur": 6,
+      "speech": 6,
+      "words": [
+        {
+          "w": "Seventy",
+          "start": 0,
+          "end": 0.545
+        },
+        {
+          "w": "six",
+          "start": 0.545,
+          "end": 1.091
+        },
+        {
+          "w": "thousand",
+          "start": 1.091,
+          "end": 1.636
+        },
+        {
+          "w": "accounts",
+          "start": 1.636,
+          "end": 2.182
+        },
+        {
+          "w": "on",
+          "start": 2.182,
+          "end": 2.727
+        },
+        {
+          "w": "one",
+          "start": 2.727,
+          "end": 3.273
+        },
+        {
+          "w": "platform,",
+          "start": 3.273,
+          "end": 3.818
+        },
+        {
+          "w": "out",
+          "start": 3.818,
+          "end": 4.364
+        },
+        {
+          "w": "of",
+          "start": 4.364,
+          "end": 4.909
+        },
+        {
+          "w": "two",
+          "start": 4.909,
+          "end": 5.455
+        },
+        {
+          "w": "buildings.",
+          "start": 5.455,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "n": 49,
+      "file": "",
+      "start": 422,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "A",
+          "start": 0,
+          "end": 0.6
+        },
+        {
+          "w": "ledger",
+          "start": 0.6,
+          "end": 1.2
+        },
+        {
+          "w": "for",
+          "start": 1.2,
+          "end": 1.8
+        },
+        {
+          "w": "every",
+          "start": 1.8,
+          "end": 2.4
+        },
+        {
+          "w": "compound:",
+          "start": 2.4,
+          "end": 3
+        },
+        {
+          "w": "which",
+          "start": 3,
+          "end": 3.6
+        },
+        {
+          "w": "rooms",
+          "start": 3.6,
+          "end": 4.2
+        },
+        {
+          "w": "run",
+          "start": 4.2,
+          "end": 4.8
+        },
+        {
+          "w": "which",
+          "start": 4.8,
+          "end": 5.4
+        },
+        {
+          "w": "scheme,",
+          "start": 5.4,
+          "end": 6
+        },
+        {
+          "w": "and",
+          "start": 6,
+          "end": 6.6
+        },
+        {
+          "w": "what",
+          "start": 6.6,
+          "end": 7.2
+        },
+        {
+          "w": "each",
+          "start": 7.2,
+          "end": 7.8
+        },
+        {
+          "w": "one",
+          "start": 7.8,
+          "end": 8.4
+        },
+        {
+          "w": "profits.",
+          "start": 8.4,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 50,
+      "file": "",
+      "start": 431,
+      "dur": 8,
+      "speech": 8,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.5
+        },
+        {
+          "w": "labor",
+          "start": 0.5,
+          "end": 1
+        },
+        {
+          "w": "was",
+          "start": 1,
+          "end": 1.5
+        },
+        {
+          "w": "the",
+          "start": 1.5,
+          "end": 2
+        },
+        {
+          "w": "product.",
+          "start": 2,
+          "end": 2.5
+        },
+        {
+          "w": "Workers",
+          "start": 2.5,
+          "end": 3
+        },
+        {
+          "w": "trafficked",
+          "start": 3,
+          "end": 3.5
+        },
+        {
+          "w": "in,",
+          "start": 3.5,
+          "end": 4
+        },
+        {
+          "w": "kept",
+          "start": 4,
+          "end": 4.5
+        },
+        {
+          "w": "against",
+          "start": 4.5,
+          "end": 5
+        },
+        {
+          "w": "their",
+          "start": 5,
+          "end": 5.5
+        },
+        {
+          "w": "will,",
+          "start": 5.5,
+          "end": 6
+        },
+        {
+          "w": "under",
+          "start": 6,
+          "end": 6.5
+        },
+        {
+          "w": "threat",
+          "start": 6.5,
+          "end": 7
+        },
+        {
+          "w": "of",
+          "start": 7,
+          "end": 7.5
+        },
+        {
+          "w": "violence.",
+          "start": 7.5,
+          "end": 8
+        }
+      ]
+    },
+    {
+      "n": 51,
+      "file": "",
+      "start": 439,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "In",
+          "start": 0,
+          "end": 0.391
+        },
+        {
+          "w": "twenty",
+          "start": 0.391,
+          "end": 0.783
+        },
+        {
+          "w": "nineteen,",
+          "start": 0.783,
+          "end": 1.174
+        },
+        {
+          "w": "the",
+          "start": 1.174,
+          "end": 1.565
+        },
+        {
+          "w": "Golden",
+          "start": 1.565,
+          "end": 1.957
+        },
+        {
+          "w": "Fortune",
+          "start": 1.957,
+          "end": 2.348
+        },
+        {
+          "w": "compound",
+          "start": 2.348,
+          "end": 2.739
+        },
+        {
+          "w": "went",
+          "start": 2.739,
+          "end": 3.13
+        },
+        {
+          "w": "up.",
+          "start": 3.13,
+          "end": 3.522
+        },
+        {
+          "w": "In",
+          "start": 3.522,
+          "end": 3.913
+        },
+        {
+          "w": "twenty",
+          "start": 3.913,
+          "end": 4.304
+        },
+        {
+          "w": "twenty",
+          "start": 4.304,
+          "end": 4.696
+        },
+        {
+          "w": "one,",
+          "start": 4.696,
+          "end": 5.087
+        },
+        {
+          "w": "millions",
+          "start": 5.087,
+          "end": 5.478
+        },
+        {
+          "w": "of",
+          "start": 5.478,
+          "end": 5.87
+        },
+        {
+          "w": "phone",
+          "start": 5.87,
+          "end": 6.261
+        },
+        {
+          "w": "numbers",
+          "start": 6.261,
+          "end": 6.652
+        },
+        {
+          "w": "and",
+          "start": 6.652,
+          "end": 7.043
+        },
+        {
+          "w": "passwords",
+          "start": 7.043,
+          "end": 7.435
+        },
+        {
+          "w": "were",
+          "start": 7.435,
+          "end": 7.826
+        },
+        {
+          "w": "bought",
+          "start": 7.826,
+          "end": 8.217
+        },
+        {
+          "w": "in",
+          "start": 8.217,
+          "end": 8.609
+        },
+        {
+          "w": "bulk.",
+          "start": 8.609,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 52,
+      "file": "",
+      "start": 448,
+      "dur": 8,
+      "speech": 8,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.421
+        },
+        {
+          "w": "founder",
+          "start": 0.421,
+          "end": 0.842
+        },
+        {
+          "w": "of",
+          "start": 0.842,
+          "end": 1.263
+        },
+        {
+          "w": "Prince",
+          "start": 1.263,
+          "end": 1.684
+        },
+        {
+          "w": "Group,",
+          "start": 1.684,
+          "end": 2.105
+        },
+        {
+          "w": "prosecutors",
+          "start": 2.105,
+          "end": 2.526
+        },
+        {
+          "w": "say,",
+          "start": 2.526,
+          "end": 2.947
+        },
+        {
+          "w": "bragged",
+          "start": 2.947,
+          "end": 3.368
+        },
+        {
+          "w": "that",
+          "start": 3.368,
+          "end": 3.789
+        },
+        {
+          "w": "the",
+          "start": 3.789,
+          "end": 4.211
+        },
+        {
+          "w": "profit",
+          "start": 4.211,
+          "end": 4.632
+        },
+        {
+          "w": "was",
+          "start": 4.632,
+          "end": 5.053
+        },
+        {
+          "w": "considerable",
+          "start": 5.053,
+          "end": 5.474
+        },
+        {
+          "w": "—",
+          "start": 5.474,
+          "end": 5.895
+        },
+        {
+          "w": "because",
+          "start": 5.895,
+          "end": 6.316
+        },
+        {
+          "w": "there",
+          "start": 6.316,
+          "end": 6.737
+        },
+        {
+          "w": "is",
+          "start": 6.737,
+          "end": 7.158
+        },
+        {
+          "w": "no",
+          "start": 7.158,
+          "end": 7.579
+        },
+        {
+          "w": "cost.",
+          "start": 7.579,
+          "end": 8
+        }
+      ]
+    },
+    {
+      "n": 53,
+      "file": "",
+      "start": 456,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.5
+        },
+        {
+          "w": "proceeds",
+          "start": 0.5,
+          "end": 1
+        },
+        {
+          "w": "bought",
+          "start": 1,
+          "end": 1.5
+        },
+        {
+          "w": "the",
+          "start": 1.5,
+          "end": 2
+        },
+        {
+          "w": "usual:",
+          "start": 2,
+          "end": 2.5
+        },
+        {
+          "w": "yachts,",
+          "start": 2.5,
+          "end": 3
+        },
+        {
+          "w": "a",
+          "start": 3,
+          "end": 3.5
+        },
+        {
+          "w": "private",
+          "start": 3.5,
+          "end": 4
+        },
+        {
+          "w": "jet,",
+          "start": 4,
+          "end": 4.5
+        },
+        {
+          "w": "and",
+          "start": 4.5,
+          "end": 5
+        },
+        {
+          "w": "a",
+          "start": 5,
+          "end": 5.5
+        },
+        {
+          "w": "Picasso",
+          "start": 5.5,
+          "end": 6
+        },
+        {
+          "w": "through",
+          "start": 6,
+          "end": 6.5
+        },
+        {
+          "w": "a",
+          "start": 6.5,
+          "end": 7
+        },
+        {
+          "w": "New",
+          "start": 7,
+          "end": 7.5
+        },
+        {
+          "w": "York",
+          "start": 7.5,
+          "end": 8
+        },
+        {
+          "w": "auction",
+          "start": 8,
+          "end": 8.5
+        },
+        {
+          "w": "house.",
+          "start": 8.5,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 54,
+      "file": "",
+      "start": 465,
+      "dur": 13,
+      "speech": 13,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.765
+        },
+        {
+          "w": "laundering",
+          "start": 0.765,
+          "end": 1.529
+        },
+        {
+          "w": "ran",
+          "start": 1.529,
+          "end": 2.294
+        },
+        {
+          "w": "on",
+          "start": 2.294,
+          "end": 3.059
+        },
+        {
+          "w": "a",
+          "start": 3.059,
+          "end": 3.824
+        },
+        {
+          "w": "diagram.",
+          "start": 3.824,
+          "end": 4.588
+        },
+        {
+          "w": "Split",
+          "start": 4.588,
+          "end": 5.353
+        },
+        {
+          "w": "the",
+          "start": 5.353,
+          "end": 6.118
+        },
+        {
+          "w": "coins",
+          "start": 6.118,
+          "end": 6.882
+        },
+        {
+          "w": "across",
+          "start": 6.882,
+          "end": 7.647
+        },
+        {
+          "w": "a",
+          "start": 7.647,
+          "end": 8.412
+        },
+        {
+          "w": "hundred",
+          "start": 8.412,
+          "end": 9.176
+        },
+        {
+          "w": "addresses,",
+          "start": 9.176,
+          "end": 9.941
+        },
+        {
+          "w": "recombine",
+          "start": 9.941,
+          "end": 10.706
+        },
+        {
+          "w": "them",
+          "start": 10.706,
+          "end": 11.471
+        },
+        {
+          "w": "into",
+          "start": 11.471,
+          "end": 12.235
+        },
+        {
+          "w": "three.",
+          "start": 12.235,
+          "end": 13
+        }
+      ]
+    },
+    {
+      "n": 55,
+      "file": "",
+      "start": 478,
+      "dur": 12,
+      "speech": 12,
+      "words": [
+        {
+          "w": "Every",
+          "start": 0,
+          "end": 0.857
+        },
+        {
+          "w": "split",
+          "start": 0.857,
+          "end": 1.714
+        },
+        {
+          "w": "is",
+          "start": 1.714,
+          "end": 2.571
+        },
+        {
+          "w": "public.",
+          "start": 2.571,
+          "end": 3.429
+        },
+        {
+          "w": "Every",
+          "start": 3.429,
+          "end": 4.286
+        },
+        {
+          "w": "address",
+          "start": 4.286,
+          "end": 5.143
+        },
+        {
+          "w": "is",
+          "start": 5.143,
+          "end": 6
+        },
+        {
+          "w": "a",
+          "start": 6,
+          "end": 6.857
+        },
+        {
+          "w": "receipt.",
+          "start": 6.857,
+          "end": 7.714
+        },
+        {
+          "w": "The",
+          "start": 7.714,
+          "end": 8.571
+        },
+        {
+          "w": "blockchain",
+          "start": 8.571,
+          "end": 9.429
+        },
+        {
+          "w": "keeps",
+          "start": 9.429,
+          "end": 10.286
+        },
+        {
+          "w": "the",
+          "start": 10.286,
+          "end": 11.143
+        },
+        {
+          "w": "book.",
+          "start": 11.143,
+          "end": 12
+        }
+      ]
+    },
+    {
+      "n": 56,
+      "file": "",
+      "start": 490,
+      "dur": 6,
+      "speech": 6,
+      "words": [
+        {
+          "w": "October,",
+          "start": 0,
+          "end": 0.667
+        },
+        {
+          "w": "twenty",
+          "start": 0.667,
+          "end": 1.333
+        },
+        {
+          "w": "twenty",
+          "start": 1.333,
+          "end": 2
+        },
+        {
+          "w": "five.",
+          "start": 2,
+          "end": 2.667
+        },
+        {
+          "w": "The",
+          "start": 2.667,
+          "end": 3.333
+        },
+        {
+          "w": "indictment",
+          "start": 3.333,
+          "end": 4
+        },
+        {
+          "w": "lands",
+          "start": 4,
+          "end": 4.667
+        },
+        {
+          "w": "in",
+          "start": 4.667,
+          "end": 5.333
+        },
+        {
+          "w": "Brooklyn.",
+          "start": 5.333,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "n": 57,
+      "file": "",
+      "start": 496,
+      "dur": 8,
+      "speech": 8,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 0.667
+        },
+        {
+          "w": "chairman",
+          "start": 0.667,
+          "end": 1.333
+        },
+        {
+          "w": "of",
+          "start": 1.333,
+          "end": 2
+        },
+        {
+          "w": "Prince",
+          "start": 2,
+          "end": 2.667
+        },
+        {
+          "w": "Group",
+          "start": 2.667,
+          "end": 3.333
+        },
+        {
+          "w": "is",
+          "start": 3.333,
+          "end": 4
+        },
+        {
+          "w": "charged",
+          "start": 4,
+          "end": 4.667
+        },
+        {
+          "w": "with",
+          "start": 4.667,
+          "end": 5.333
+        },
+        {
+          "w": "running",
+          "start": 5.333,
+          "end": 6
+        },
+        {
+          "w": "the",
+          "start": 6,
+          "end": 6.667
+        },
+        {
+          "w": "whole",
+          "start": 6.667,
+          "end": 7.333
+        },
+        {
+          "w": "machine.",
+          "start": 7.333,
+          "end": 8
+        }
+      ]
+    },
+    {
+      "n": 58,
+      "file": "",
+      "start": 504,
+      "dur": 8,
+      "speech": 8,
+      "words": [
+        {
+          "w": "FBI",
+          "start": 0,
+          "end": 0.571
+        },
+        {
+          "w": "Director",
+          "start": 0.571,
+          "end": 1.143
+        },
+        {
+          "w": "Patel",
+          "start": 1.143,
+          "end": 1.714
+        },
+        {
+          "w": "called",
+          "start": 1.714,
+          "end": 2.286
+        },
+        {
+          "w": "it",
+          "start": 2.286,
+          "end": 2.857
+        },
+        {
+          "w": "one",
+          "start": 2.857,
+          "end": 3.429
+        },
+        {
+          "w": "of",
+          "start": 3.429,
+          "end": 4
+        },
+        {
+          "w": "the",
+          "start": 4,
+          "end": 4.571
+        },
+        {
+          "w": "largest",
+          "start": 4.571,
+          "end": 5.143
+        },
+        {
+          "w": "financial",
+          "start": 5.143,
+          "end": 5.714
+        },
+        {
+          "w": "fraud",
+          "start": 5.714,
+          "end": 6.286
+        },
+        {
+          "w": "takedowns",
+          "start": 6.286,
+          "end": 6.857
+        },
+        {
+          "w": "in",
+          "start": 6.857,
+          "end": 7.429
+        },
+        {
+          "w": "history.",
+          "start": 7.429,
+          "end": 8
+        }
+      ]
+    },
+    {
+      "n": 59,
+      "file": "",
+      "start": 512,
+      "dur": 10,
+      "speech": 10,
+      "words": [
+        {
+          "w": "A",
+          "start": 0,
+          "end": 0.526
+        },
+        {
+          "w": "hundred",
+          "start": 0.526,
+          "end": 1.053
+        },
+        {
+          "w": "twenty",
+          "start": 1.053,
+          "end": 1.579
+        },
+        {
+          "w": "seven",
+          "start": 1.579,
+          "end": 2.105
+        },
+        {
+          "w": "thousand",
+          "start": 2.105,
+          "end": 2.632
+        },
+        {
+          "w": "two",
+          "start": 2.632,
+          "end": 3.158
+        },
+        {
+          "w": "hundred",
+          "start": 3.158,
+          "end": 3.684
+        },
+        {
+          "w": "seventy",
+          "start": 3.684,
+          "end": 4.211
+        },
+        {
+          "w": "one",
+          "start": 4.211,
+          "end": 4.737
+        },
+        {
+          "w": "bitcoin.",
+          "start": 4.737,
+          "end": 5.263
+        },
+        {
+          "w": "Fifteen",
+          "start": 5.263,
+          "end": 5.789
+        },
+        {
+          "w": "billion",
+          "start": 5.789,
+          "end": 6.316
+        },
+        {
+          "w": "dollars.",
+          "start": 6.316,
+          "end": 6.842
+        },
+        {
+          "w": "The",
+          "start": 6.842,
+          "end": 7.368
+        },
+        {
+          "w": "largest",
+          "start": 7.368,
+          "end": 7.895
+        },
+        {
+          "w": "seizure",
+          "start": 7.895,
+          "end": 8.421
+        },
+        {
+          "w": "in",
+          "start": 8.421,
+          "end": 8.947
+        },
+        {
+          "w": "DOJ",
+          "start": 8.947,
+          "end": 9.474
+        },
+        {
+          "w": "history.",
+          "start": 9.474,
+          "end": 10
+        }
+      ]
+    },
+    {
+      "n": 60,
+      "file": "",
+      "start": 522,
+      "dur": 11,
+      "speech": 11,
+      "words": [
+        {
+          "w": "How?",
+          "start": 0,
+          "end": 0.579
+        },
+        {
+          "w": "The",
+          "start": 0.579,
+          "end": 1.158
+        },
+        {
+          "w": "coins",
+          "start": 1.158,
+          "end": 1.737
+        },
+        {
+          "w": "sat",
+          "start": 1.737,
+          "end": 2.316
+        },
+        {
+          "w": "in",
+          "start": 2.316,
+          "end": 2.895
+        },
+        {
+          "w": "wallets",
+          "start": 2.895,
+          "end": 3.474
+        },
+        {
+          "w": "whose",
+          "start": 3.474,
+          "end": 4.053
+        },
+        {
+          "w": "keys",
+          "start": 4.053,
+          "end": 4.632
+        },
+        {
+          "w": "one",
+          "start": 4.632,
+          "end": 5.211
+        },
+        {
+          "w": "person",
+          "start": 5.211,
+          "end": 5.789
+        },
+        {
+          "w": "held.",
+          "start": 5.789,
+          "end": 6.368
+        },
+        {
+          "w": "Take",
+          "start": 6.368,
+          "end": 6.947
+        },
+        {
+          "w": "the",
+          "start": 6.947,
+          "end": 7.526
+        },
+        {
+          "w": "keys,",
+          "start": 7.526,
+          "end": 8.105
+        },
+        {
+          "w": "and",
+          "start": 8.105,
+          "end": 8.684
+        },
+        {
+          "w": "the",
+          "start": 8.684,
+          "end": 9.263
+        },
+        {
+          "w": "pile",
+          "start": 9.263,
+          "end": 9.842
+        },
+        {
+          "w": "stops",
+          "start": 9.842,
+          "end": 10.421
+        },
+        {
+          "w": "moving.",
+          "start": 10.421,
+          "end": 11
+        }
+      ]
+    },
+    {
+      "n": 61,
+      "file": "",
+      "start": 533,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "And",
+          "start": 0,
+          "end": 0.5
+        },
+        {
+          "w": "the",
+          "start": 0.5,
+          "end": 1
+        },
+        {
+          "w": "tell",
+          "start": 1,
+          "end": 1.5
+        },
+        {
+          "w": "that",
+          "start": 1.5,
+          "end": 2
+        },
+        {
+          "w": "generalizes:",
+          "start": 2,
+          "end": 2.5
+        },
+        {
+          "w": "an",
+          "start": 2.5,
+          "end": 3
+        },
+        {
+          "w": "investment",
+          "start": 3,
+          "end": 3.5
+        },
+        {
+          "w": "you",
+          "start": 3.5,
+          "end": 4
+        },
+        {
+          "w": "can't",
+          "start": 4,
+          "end": 4.5
+        },
+        {
+          "w": "withdraw",
+          "start": 4.5,
+          "end": 5
+        },
+        {
+          "w": "from",
+          "start": 5,
+          "end": 5.5
+        },
+        {
+          "w": "without",
+          "start": 5.5,
+          "end": 6
+        },
+        {
+          "w": "depositing",
+          "start": 6,
+          "end": 6.5
+        },
+        {
+          "w": "more",
+          "start": 6.5,
+          "end": 7
+        },
+        {
+          "w": "is",
+          "start": 7,
+          "end": 7.5
+        },
+        {
+          "w": "not",
+          "start": 7.5,
+          "end": 8
+        },
+        {
+          "w": "an",
+          "start": 8,
+          "end": 8.5
+        },
+        {
+          "w": "investment.",
+          "start": 8.5,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 62,
+      "file": "",
+      "start": 542,
+      "dur": 8,
+      "speech": 8,
+      "words": [
+        {
+          "w": "Real",
+          "start": 0,
+          "end": 0.8
+        },
+        {
+          "w": "money",
+          "start": 0.8,
+          "end": 1.6
+        },
+        {
+          "w": "withdraws.",
+          "start": 1.6,
+          "end": 2.4
+        },
+        {
+          "w": "Real",
+          "start": 2.4,
+          "end": 3.2
+        },
+        {
+          "w": "platforms",
+          "start": 3.2,
+          "end": 4
+        },
+        {
+          "w": "never",
+          "start": 4,
+          "end": 4.8
+        },
+        {
+          "w": "unlock",
+          "start": 4.8,
+          "end": 5.6
+        },
+        {
+          "w": "your",
+          "start": 5.6,
+          "end": 6.4
+        },
+        {
+          "w": "own",
+          "start": 6.4,
+          "end": 7.2
+        },
+        {
+          "w": "balance.",
+          "start": 7.2,
+          "end": 8
+        }
+      ]
+    },
+    {
+      "n": 63,
+      "file": "",
+      "start": 550,
+      "dur": 10,
+      "speech": 10,
+      "words": [
+        {
+          "w": "Ask",
+          "start": 0,
+          "end": 0.667
+        },
+        {
+          "w": "to",
+          "start": 0.667,
+          "end": 1.333
+        },
+        {
+          "w": "withdraw",
+          "start": 1.333,
+          "end": 2
+        },
+        {
+          "w": "before",
+          "start": 2,
+          "end": 2.667
+        },
+        {
+          "w": "you",
+          "start": 2.667,
+          "end": 3.333
+        },
+        {
+          "w": "deposit.",
+          "start": 3.333,
+          "end": 4
+        },
+        {
+          "w": "The",
+          "start": 4,
+          "end": 4.667
+        },
+        {
+          "w": "answer",
+          "start": 4.667,
+          "end": 5.333
+        },
+        {
+          "w": "is",
+          "start": 5.333,
+          "end": 6
+        },
+        {
+          "w": "a",
+          "start": 6,
+          "end": 6.667
+        },
+        {
+          "w": "number,",
+          "start": 6.667,
+          "end": 7.333
+        },
+        {
+          "w": "and",
+          "start": 7.333,
+          "end": 8
+        },
+        {
+          "w": "it's",
+          "start": 8,
+          "end": 8.667
+        },
+        {
+          "w": "not",
+          "start": 8.667,
+          "end": 9.333
+        },
+        {
+          "w": "yours.",
+          "start": 9.333,
+          "end": 10
+        }
+      ]
+    },
+    {
+      "n": 64,
+      "file": "",
+      "start": 560,
+      "dur": 6,
+      "speech": 6,
+      "words": [
+        {
+          "w": "They",
+          "start": 0,
+          "end": 0.75
+        },
+        {
+          "w": "pay",
+          "start": 0.75,
+          "end": 1.5
+        },
+        {
+          "w": "you",
+          "start": 1.5,
+          "end": 2.25
+        },
+        {
+          "w": "two",
+          "start": 2.25,
+          "end": 3
+        },
+        {
+          "w": "dollars",
+          "start": 3,
+          "end": 3.75
+        },
+        {
+          "w": "to",
+          "start": 3.75,
+          "end": 4.5
+        },
+        {
+          "w": "watch",
+          "start": 4.5,
+          "end": 5.25
+        },
+        {
+          "w": "videos.",
+          "start": 5.25,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "n": 65,
+      "file": "",
+      "start": 566,
+      "dur": 6,
+      "speech": 6,
+      "words": [
+        {
+          "w": "This",
+          "start": 0,
+          "end": 0.667
+        },
+        {
+          "w": "machine",
+          "start": 0.667,
+          "end": 1.333
+        },
+        {
+          "w": "took",
+          "start": 1.333,
+          "end": 2
+        },
+        {
+          "w": "in",
+          "start": 2,
+          "end": 2.667
+        },
+        {
+          "w": "thirty",
+          "start": 2.667,
+          "end": 3.333
+        },
+        {
+          "w": "million",
+          "start": 3.333,
+          "end": 4
+        },
+        {
+          "w": "dollars",
+          "start": 4,
+          "end": 4.667
+        },
+        {
+          "w": "a",
+          "start": 4.667,
+          "end": 5.333
+        },
+        {
+          "w": "day.",
+          "start": 5.333,
+          "end": 6
+        }
+      ]
+    },
+    {
+      "n": 66,
+      "file": "",
+      "start": 572,
+      "dur": 9,
+      "speech": 9,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 1.125
+        },
+        {
+          "w": "pay",
+          "start": 1.125,
+          "end": 2.25
+        },
+        {
+          "w": "was",
+          "start": 2.25,
+          "end": 3.375
+        },
+        {
+          "w": "never",
+          "start": 3.375,
+          "end": 4.5
+        },
+        {
+          "w": "the",
+          "start": 4.5,
+          "end": 5.625
+        },
+        {
+          "w": "product.",
+          "start": 5.625,
+          "end": 6.75
+        },
+        {
+          "w": "You",
+          "start": 6.75,
+          "end": 7.875
+        },
+        {
+          "w": "were.",
+          "start": 7.875,
+          "end": 9
+        }
+      ]
+    },
+    {
+      "n": 67,
+      "file": "",
+      "start": 581,
+      "dur": 8,
+      "speech": 8,
+      "words": [
+        {
+          "w": "The",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "w": "trap",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "w": "is",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "w": "the",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "w": "trust.",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "w": "That",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "w": "hasn't",
+          "start": 6,
+          "end": 7
+        },
+        {
+          "w": "changed.",
+          "start": 7,
+          "end": 8
+        }
+      ]
+    },
+    {
+      "n": 68,
+      "file": "",
+      "start": 589,
+      "dur": 11,
+      "speech": 11,
+      "words": [
+        {
+          "w": "Paid",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "w": "to",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "w": "watch",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "w": "videos",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "w": "—",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "w": "until",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "w": "the",
+          "start": 6,
+          "end": 7
+        },
+        {
+          "w": "pay",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "w": "becomes",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "w": "the",
+          "start": 9,
+          "end": 10
+        },
+        {
+          "w": "price.",
+          "start": 10,
+          "end": 11
+        }
+      ]
+    }
+  ]
+}

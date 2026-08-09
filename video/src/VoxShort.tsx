@@ -10,7 +10,9 @@ import {
 } from "remotion";
 import script from "./script.json";
 import voice from "./voice.json";
-import { Soundtrack, useCamera } from "./staging";
+import { Soundtrack } from "./staging";
+import { CameraRig } from "./editorial/camera";
+import { CAMERA_BY_MODULE } from "./director/motion/CameraPlanner";
 import { theme } from "./theme";
 import { isClip, KineticText, PaperBG } from "./vox/elements";
 import { BAND } from "./vox/layout";
@@ -19,32 +21,9 @@ import { TURN, Turn, turnKind } from "./vox/transitions";
 
 const vox = theme.vox;
 
-/** A page drifts; it does not punch. The moves here are half a finance move. */
-const CAMERA: Record<string, [number, number]> = {
-  kinetic: [1.0, 1.03],
-  icon: [1.0, 1.02],
-  chart: [1.02, 1.0],
-  compare: [1.0, 1.025],
-  stat: [1.05, 1.0],
-  // The editorial modules drive their own camera from inside the beat, so the
-  // page itself stays still — two cameras on one frame fight.
-  //
-  // The picture modules are in this list now, and that is the fix for the
-  // thing that made every generated image look like a slideshow: they used to
-  // get a page-wide ramp here *and* a 1.16 -> 1.02 ramp inside ArchivalBG. Two
-  // zooms multiplied together is a Ken Burns pan, and it drowned the parallax
-  // completely — you cannot see three planes separate while the whole frame is
-  // scaling through them. EditorialStill translates and never scales, so this
-  // has to be 1.0 or there is nothing to see.
-  doodle: [1.0, 1.0],
-  footage: [1.0, 1.0],
-  callout: [1.0, 1.0],
-  collage: [1.0, 1.0],
-  trace: [1.0, 1.0],
-  trust: [1.0, 1.0],
-  funnel: [1.0, 1.0],
-  map: [1.0, 1.0],
-};
+/** The editorial modules drive their own camera from inside the beat, so the
+ *  page camera stays off them — two cameras on one frame fight. */
+const SELF_FRAMING = new Set(["map", "trace", "trust", "funnel", "collage"]);
 
 const BEATS: VoxBeat[] = script.beats;
 
@@ -123,18 +102,11 @@ const Captions: React.FC = () => {
 
 export const VoxShort: React.FC = () => {
   const { fps } = useVideoConfig();
-  // No shake: a shaking page reads as a mistake, not as impact.
-  const { scale } = useCamera(
-    BEATS,
-    (i) => CAMERA[BEATS[i].module] ?? [1, 1],
-    IMPACT,
-    0,
-  );
 
   return (
     <AbsoluteFill style={{ backgroundColor: vox.paper }}>
       <PaperBG />
-      <AbsoluteFill style={{ transform: `scale(${scale})` }}>
+      <AbsoluteFill>
         {BEATS.map((beat, i) => {
           const Scene = VOX_MODULES[beat.module] ?? VOX_MODULES.kinetic;
           const dur = Math.round((beat.end - beat.start) * fps);
@@ -160,7 +132,26 @@ export const VoxShort: React.FC = () => {
                 kind={turnKind(i, beat.module)}
                 exitKind={last ? "lift" : turnKind(i + 1, BEATS[i + 1].module)}
               >
-                <Scene dur={dur} beat={beat} words={take ? take.words : []} />
+                {/* One camera per beat, from the same table the essay director
+                    plans against, and the same rig the essay renders through —
+                    so a beat is framed identically whichever composition it
+                    lands in. It replaced a page-wide scale ramp that the picture
+                    modules all had to be pinned to 1.0 against: that ramp scaled
+                    every plane by the same factor, so it drowned the parallax it
+                    was sitting on top of. The rig scales each plane by its own
+                    depth, so the move and the depth are the same instrument and
+                    there is nothing left to pin. */}
+                {SELF_FRAMING.has(beat.module) ? (
+                  <Scene dur={dur} beat={beat} words={take ? take.words : []} />
+                ) : (
+                  <CameraRig
+                    intent={CAMERA_BY_MODULE[beat.module] ?? "settle"}
+                    dur={dur}
+                    seed={beat.n}
+                  >
+                    <Scene dur={dur} beat={beat} words={take ? take.words : []} />
+                  </CameraRig>
+                )}
               </Turn>
             </Sequence>
           );

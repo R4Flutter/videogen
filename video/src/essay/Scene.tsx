@@ -5,7 +5,7 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
 import { VOX_MODULES, VoxSceneProps } from "../vox/scenes.tsx";
-import { useSemanticCamera } from "../editorial/camera.ts";
+import { CameraRig, type CameraIntent } from "../editorial/camera.ts";
 import { theme } from "../theme";
 import type { DirectorPlan, DirectedBeat } from "../director/types.ts";
 import { Reveal } from "./Reveal.tsx";
@@ -51,9 +51,14 @@ export const EssayScene: React.FC<{
   return (
     <AbsoluteFill style={{ backgroundColor: vox.paper }}>
       {moved ? (
-        <CameraMove intent={intent} dur={dur}>
+        <CameraRig
+          intent={intent as CameraIntent}
+          dur={dur}
+          target={db.motion.camera.target}
+          seed={db.n}
+        >
           {stage}
-        </CameraMove>
+        </CameraRig>
       ) : (
         stage
       )}
@@ -64,21 +69,3 @@ export const EssayScene: React.FC<{
   );
 };
 
-/** The 2.5D camera move a beat earns — the plan's intent applied to the page.
- *  It has to *wrap* the stage: a transform on an empty sibling moves nothing,
- *  which is how 68 beats rendered as 68 static cards. */
-const CameraMove: React.FC<{
-  intent: string;
-  dur: number;
-  children: React.ReactNode;
-}> = ({ intent, dur, children }) => {
-  const { transform } = useSemanticCamera(
-    intent as Parameters<typeof useSemanticCamera>[0],
-    dur,
-  );
-  return (
-    <AbsoluteFill style={{ transform, transformOrigin: "50% 50%", willChange: "transform" }}>
-      {children}
-    </AbsoluteFill>
-  );
-};

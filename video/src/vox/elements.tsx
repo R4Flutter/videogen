@@ -18,6 +18,7 @@ import { loadFont } from "@remotion/google-fonts/Archivo";
 import { icons } from "lucide-react";
 import rough from "roughjs";
 import { theme } from "../theme";
+import { useDepth } from "../editorial/camera.ts";
 import footage from "../footage.json";
 import { BAND, fitBlock, numberFormat } from "./layout";
 
@@ -685,22 +686,52 @@ export const InkChart: React.FC<{
 
 // ------------------------------------------------------------------ footage
 /**
- * Layered drift. Depth is the whole point: a photograph, the light on it, and
- * the type over it moving at the same rate is one flat slab sliding, which
- * looks worse than not moving at all. Give each layer its own depth and the
- * frame gains the parallax a real camera would have found.
+ * A layer at `depth`, under whatever camera the enclosing CameraRig is running.
  *
- * `depth` 1 = the photograph, ~0.3 = the treatment on it, negative = the ink,
- * which counter-moves. Seeded by the beat so a page drifts the same way on
- * every render, and neighbouring beats don't all drift in lockstep.
+ * Depth is distance from the lens: **1 is the subject plane** — the type, the
+ * thing the beat is about — and it takes the camera exactly. Below 1 sits
+ * behind the subject and takes less of the move, which is where the depth comes
+ * from. Above 1 is in front, which only a vignette or a glare ever is.
+ *
+ * Two motions come out of this and only one of them is new. The drift is the
+ * old free-running sine, kept: it is what stops a held frame from freezing.
+ * The camera response is the part that was missing — the rig's push arrives at
+ * each plane scaled by that plane's depth, so the page falls away behind the
+ * picture and the picture falls away behind the type. That rate difference *is*
+ * the depth. Without it, three layers under one shared scale are one slab with
+ * a zoom on it, however hard each one wobbles.
+ *
+ * Outside a rig the camera reads identity and this degrades to pure drift.
  */
 export const useParallax = (seed: number, depth: number) => {
   const frame = useCurrentFrame();
   const { width } = useVideoConfig();
-  const amp = width * 0.013 * depth * (seed % 2 ? -1 : 1);
+  const d = depth;
+  // Drift scales with depth too — nearer things wander more than far ones — and
+  // the seeded sign keeps neighbouring beats from all drifting in lockstep.
+  const amp = width * 0.009 * d * (seed % 2 ? -1 : 1);
+  const x = Math.sin((frame + seed * 17) / 190) * amp;
+  const y = Math.cos((frame + seed * 11) / 240) * amp * 0.6;
+  const cam = useDepth(d);
   return {
-    x: Math.sin((frame + seed * 17) / 190) * amp,
-    y: Math.cos((frame + seed * 11) / 240) * amp * 0.6,
+    x,
+    y,
+    /** Ready to drop straight into `style`: drift and camera response together.
+     *  Layers that only need the offset can still read `x`/`y`, but they lose
+     *  the camera and go flat again — prefer this. */
+    style: {
+      transform: `translate(${x}px, ${y}px) ${cam.transform}`,
+      transformOrigin: cam.transformOrigin,
+    } as const,
+    /** Same thing for a layer that is a sub-box of the canvas rather than a
+     *  full-bleed one: percentage origins would resolve against the box and
+     *  aim the scale at the wrong point on the page. `extra` goes on first, so
+     *  a plate's own arrival slide still reads as a slide. */
+    box: (left: number, top: number, extra = "") =>
+      ({
+        transform: `${extra} translate(${x}px, ${y}px) ${cam.transform}`,
+        transformOrigin: `${cam.anchor.x - left}px ${cam.anchor.y - top}px`,
+      }) as const,
   };
 };
 
@@ -796,17 +827,21 @@ export const EditorialStill: React.FC<{ beat: number; progress: number }> = ({
   const { width, height } = useVideoConfig();
   const srcs = beatFrames(beat);
 
-  // Three planes. Translation only — see the note above.
+  // Three planes behind the type, measured back from the subject. The picture
+  // is what the beat is about so it sits nearly on the subject plane; the
+  // printer's rule is a shade behind it; the page is furthest back and barely
+  // takes the camera at all.
   //
-  // The depths are wider than they look like they should be. useParallax's unit
-  // amplitude is width * 0.013, so depth 1 : 0.38 : 0.12 separates the picture
-  // from the page by about 0.6% of frame width across a beat — measurable, and
-  // invisible. Parallax has to clear roughly 1.5% before the eye reads it as
-  // depth rather than as drift, which is why the first version of this looked
-  // static even with three layers actually moving.
-  const near = useParallax(beat, 1.6);
-  const mid = useParallax(beat + 3, 0.5);
-  const far = useParallax(beat + 7, 0.12);
+  // The old depths were 1.6 : 0.5 : 0.12 against a drift-only amplitude of
+  // width * 0.013, which separated the picture from the page by roughly 0.6% of
+  // frame width across a whole beat — measurable, and invisible. Parallax has to
+  // clear about 1.5% before the eye reads it as depth rather than as drift.
+  // These clear it, and most of the separation now comes from the camera rather
+  // than the drift: under a `push` the page falls away behind a picture that
+  // holds its size, which is what a lens does to a thing lying on a desk.
+  const near = useParallax(beat, 0.95);
+  const mid = useParallax(beat + 3, 0.6);
+  const far = useParallax(beat + 7, 0.25);
 
   const box = width > height ? PLATE.wide : PLATE.tall;
   const L = width * box.x;
@@ -822,7 +857,7 @@ export const EditorialStill: React.FC<{ beat: number; progress: number }> = ({
   return (
     <AbsoluteFill>
       {/* far — the page, barely moving */}
-      <AbsoluteFill style={{ transform: `translate(${far.x}px, ${far.y}px)` }}>
+      <AbsoluteFill style={far.style}>
         <PaperBG />
       </AbsoluteFill>
 
@@ -852,7 +887,7 @@ export const EditorialStill: React.FC<{ beat: number; progress: number }> = ({
             width: W,
             height: Math.max(1, height * 0.0022),
             background: vox.rule,
-            transform: `translate(${mid.x}px, ${mid.y}px)`,
+            ...mid.style,
             clipPath: `inset(0 ${(1 - panel) * 100}% 0 0)`,
           }}
         />
@@ -893,7 +928,7 @@ export const EditorialStill: React.FC<{ beat: number; progress: number }> = ({
           width: W,
           height: H,
           opacity,
-          transform: `translate(${near.x + dx}px, ${near.y + dy}px) rotate(${tilt}deg)`,
+          ...near.box(L, T, `translate(${dx}px, ${dy}px) rotate(${tilt}deg)`),
         } as const;
 
         return (
@@ -959,13 +994,18 @@ const ClipBG: React.FC<{ beat: number; progress: number }> = ({
 }) => {
   const { width } = useVideoConfig();
   const srcs = beatFrames(beat);
-  // The photograph is the near layer: it pans across the beat and drifts, and
-  // the overscan is sized to cover both so no edge ever swings into frame.
-  const near = useParallax(beat, 1);
-  // The light on it is the far layer, moving at a third of the rate and out of
-  // phase. That difference is the whole illusion.
-  const far = useParallax(beat + 3, 0.34);
-  const scale = interpolate(progress, [0, 1], [1.16, 1.02]);
+  // The photograph sits behind the type that will be printed over it, so it
+  // falls away under a push while the headline holds — which is exactly the
+  // relationship the old `-0.34` counter-drift was reaching for by hand.
+  const near = useParallax(beat, 0.6);
+  // The light on it is glass in *front* of the lens, the one thing in this file
+  // that legitimately sits nearer than the subject: it slides across the picture
+  // under the same camera instead of being painted onto it. That rate difference
+  // is the whole illusion, and a vignette has no edges to crop.
+  const far = useParallax(beat + 3, 1.5);
+  // The floor is 1.06 and not 1.02: this layer pans itself as well as taking the
+  // camera's pan, and 2% of overscan is 1% a side, which the two together clear.
+  const scale = interpolate(progress, [0, 1], [1.18, 1.06]);
   const pan = interpolate(progress, [0, 1], [0, width * 0.03 * (beat % 2 ? -1 : 1)]);
   if (!srcs.length) {
     return (
@@ -974,7 +1014,8 @@ const ClipBG: React.FC<{ beat: number; progress: number }> = ({
         <AbsoluteFill
           style={{
             background: `radial-gradient(ellipse 65% 45% at 50% 46%, transparent 40%, ${vox.paperDeep} 100%)`,
-            transform: `translate(${far.x}px, ${far.y}px) scale(${scale})`,
+            ...far.style,
+            transform: `scale(${scale}) ${far.style.transform}`,
           }}
         />
       </AbsoluteFill>
@@ -1010,9 +1051,11 @@ const ClipBG: React.FC<{ beat: number; progress: number }> = ({
             key={src}
             style={{
               opacity,
+              transformOrigin: near.style.transformOrigin,
               transform:
-                `translate(${pan * dir + near.x + t * width * 0.035 * dir}px, ${near.y}px) ` +
-                `scale(${interpolate(t, [0, 1], [1.16, 1.02])})`,
+                `translate(${pan * dir + t * width * 0.035 * dir}px, 0px) ` +
+                `scale(${interpolate(t, [0, 1], [1.18, 1.06])}) ` +
+                near.style.transform,
             }}
           >
             {/^.+\.mp4$/i.test(src) ? (
@@ -1032,7 +1075,8 @@ const ClipBG: React.FC<{ beat: number; progress: number }> = ({
         style={{
           background: `radial-gradient(ellipse 75% 60% at 50% 48%, transparent 30%, ${vox.ink} 130%)`,
           opacity: 0.5,
-          transform: `translate(${far.x}px, ${far.y}px) scale(1.06)`,
+          ...far.style,
+          transform: `scale(1.06) ${far.style.transform}`,
         }}
       />
       <AbsoluteFill
@@ -1041,7 +1085,9 @@ const ClipBG: React.FC<{ beat: number; progress: number }> = ({
           backgroundSize: "180px 180px",
           opacity: 0.35,
           mixBlendMode: "multiply",
-          transform: `translate(${-far.x * 0.6}px, ${-far.y * 0.6}px)`,
+          // Locked. Grain is the page's own texture, so it rides the base camera
+          // with everything else and takes no depth of its own — a print texture
+          // that slides against the print it is on is a dirty sensor, not depth.
         }}
       />
     </AbsoluteFill>

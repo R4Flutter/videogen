@@ -4,8 +4,8 @@
 // row. The same objects build the trust and collapse it, which is the
 // argument of the whole genre in one frame.
 import React from "react";
-import { AbsoluteFill, Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
-import { useSemanticCamera } from "../editorial/camera";
+import { Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { CameraRig } from "../editorial/camera";
 import { theme } from "../theme";
 import { DrawIn, LineIcon } from "./elements";
 import { fitBlock, useLayout } from "./layout";
@@ -50,7 +50,6 @@ export const Trust: React.FC<VoxSceneProps> = ({ dur, beat, words }) => {
   const { fps } = useVideoConfig();
   const { width, pad, safeW, y: band, primaryH } = useLayout();
   const vox = theme.vox;
-  const { transform } = useSemanticCamera("settle", dur);
   const rows = beat.icons && beat.icons.length ? beat.icons : [];
   if (!rows.length) return null;
 
@@ -74,7 +73,7 @@ export const Trust: React.FC<VoxSceneProps> = ({ dur, beat, words }) => {
   );
 
   return (
-    <AbsoluteFill style={{ transform, fontFamily: vox.font }}>
+    <CameraRig intent="settle" dur={dur} seed={beat.n} style={{ fontFamily: vox.font }}>
       <PageHead kicker={beat.name} headline={beat.text} frame={frame} />
 
       {rows.map((row, i) => {
@@ -154,6 +153,6 @@ export const Trust: React.FC<VoxSceneProps> = ({ dur, beat, words }) => {
           </React.Fragment>
         );
       })}
-    </AbsoluteFill>
+    </CameraRig>
   );
 };

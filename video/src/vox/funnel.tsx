@@ -4,8 +4,8 @@
 // counts are tabular, because a rolling digit that shifts the whole number
 // makes the funnel look like it is guessing.
 import React from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
-import { useSemanticCamera } from "../editorial/camera";
+import { interpolate, useCurrentFrame } from "remotion";
+import { CameraRig } from "../editorial/camera";
 import { theme } from "../theme";
 import { measure, numberFormat, useLayout } from "./layout";
 import { PageHead, VoxSceneProps } from "./scenes";
@@ -14,7 +14,6 @@ export const Funnel: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
   const { width, pad, safeW, y: band, primaryH } = useLayout();
   const vox = theme.vox;
-  const { transform } = useSemanticCamera("reveal", dur);
   const rows = beat.data && beat.data.length ? beat.data : [];
   if (rows.length < 2) return null;
 
@@ -36,7 +35,7 @@ export const Funnel: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const track = Math.max(safeW * 0.45, safeW - valueW - width * 0.03);
 
   return (
-    <AbsoluteFill style={{ transform, fontFamily: vox.font }}>
+    <CameraRig intent="reveal" dur={dur} seed={beat.n} style={{ fontFamily: vox.font }}>
       <PageHead kicker={beat.name} headline={beat.text} frame={frame} />
 
       {rows.map((row, i) => {
@@ -104,6 +103,6 @@ export const Funnel: React.FC<VoxSceneProps> = ({ dur, beat }) => {
           </React.Fragment>
         );
       })}
-    </AbsoluteFill>
+    </CameraRig>
   );
 };

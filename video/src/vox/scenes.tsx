@@ -267,15 +267,17 @@ const Plate: React.FC<VoxSceneProps & { mark: boolean }> = ({ dur, beat, mark })
         }
       : { x: left, y: top, w: blockW, h: blockH + size * 0.06 };
 
-  // The type sits in front of the photograph, so it moves against it. Same
-  // drift, opposite direction, a third of the distance — enough that the
-  // headline reads as printed on glass over the frame rather than baked into it.
-  const ink = useParallax(beat.n, -0.34);
+  // The type *is* the subject plane, so it takes the camera exactly and nothing
+  // more — which is what keeps it inside the grid. The photograph behind it is
+  // at 0.6 and falls away under a push, so the headline reads as printed on
+  // glass over the frame rather than baked into it. Separation without the type
+  // ever leaving its margins.
+  const ink = useParallax(beat.n, 1);
 
   return (
     <>
       <ArchivalBG beat={beat.n} progress={ease(frame, 0, dur)} />
-      <AbsoluteFill style={{ transform: `translate(${ink.x}px, ${ink.y}px)` }}>
+      <AbsoluteFill style={ink.style}>
       <div style={{ position: "absolute", left: pad, top: band.kicker }}>
         <Kicker text={beat.name} enter={frame - 4} />
       </div>

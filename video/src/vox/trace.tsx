@@ -3,8 +3,8 @@
 // that rides it, and nodes that light as it passes. The viewer is never asked
 // to read a diagram; they watch the money move, which is the whole argument.
 import React from "react";
-import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
-import { useSemanticCamera } from "../editorial/camera";
+import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { CameraRig } from "../editorial/camera";
 import { theme } from "../theme";
 import { DrawIn } from "./elements";
 import { fit, useLayout } from "./layout";
@@ -15,12 +15,6 @@ export const Trace: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const { fps } = useVideoConfig();
   const { width, height, pad, safeW, wide, y: band, primaryH } = useLayout();
   const vox = theme.vox;
-  const { transform } = useSemanticCamera("focus", dur, {
-    x: pad,
-    y: band.primary,
-    w: safeW,
-    h: primaryH,
-  });
   const rows = beat.data && beat.data.length ? beat.data : [];
   if (rows.length < 2) return null;
 
@@ -60,7 +54,13 @@ export const Trace: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   });
 
   return (
-    <AbsoluteFill style={{ transform, fontFamily: vox.font }}>
+    <CameraRig
+      intent="focus"
+      dur={dur}
+      target={{ x: pad, y: band.primary, w: safeW, h: primaryH }}
+      seed={beat.n}
+      style={{ fontFamily: vox.font }}
+    >
       <PageHead kicker={beat.name} headline={money ? undefined : beat.text} frame={frame} />
 
       {/* The road: a ruled line that draws as the token advances. */}
@@ -169,6 +169,6 @@ export const Trace: React.FC<VoxSceneProps> = ({ dur, beat }) => {
           })}
         />
       ) : null}
-    </AbsoluteFill>
+    </CameraRig>
   );
 };
