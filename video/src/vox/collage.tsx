@@ -8,6 +8,7 @@
 // episode is about.
 import React from "react";
 import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { CameraRig } from "../editorial/camera";
 import { theme } from "../theme";
 import { beatFrames, DrawIn, Halftone, Kicker, Shape } from "./elements";
 import { fitBlock, useLayout } from "./layout";
@@ -56,7 +57,20 @@ export const Collage: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   );
 
   return (
-    <AbsoluteFill style={{ fontFamily: vox.font }}>
+    <CameraRig
+      intent="settle"
+      dur={dur}
+      seed={beat.n}
+      style={{ fontFamily: vox.font }}
+      // The collage's subject is the hero clipping — the first, biggest one.
+      // The rig frames it; the headline sits below; the rest overlap.
+      target={{
+        x: width * slots[0].x,
+        y: height * slots[0].y,
+        w: width * slots[0].w,
+        h: height * slots[0].h,
+      }}
+    >
       {frames.map((src, i) => {
         const slot = slots[i];
         const s = spring({
@@ -168,6 +182,6 @@ export const Collage: React.FC<VoxSceneProps> = ({ dur, beat }) => {
           })}
         />
       ) : null}
-    </AbsoluteFill>
+    </CameraRig>
   );
 };

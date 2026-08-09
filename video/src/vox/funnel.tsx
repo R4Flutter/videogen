@@ -35,7 +35,16 @@ export const Funnel: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const track = Math.max(safeW * 0.45, safeW - valueW - width * 0.03);
 
   return (
-    <CameraRig intent="reveal" dur={dur} seed={beat.n} style={{ fontFamily: vox.font }}>
+    <CameraRig
+      intent="reveal"
+      dur={dur}
+      seed={beat.n}
+      style={{ fontFamily: vox.font }}
+      // The funnel's subject is its narrowest bar — the one the volume
+      // narrows to, the thing the beat is about. The rig frames it; the
+      // accent ink belongs to it.
+      target={{ x: pad, y: band.primary + barH, w: safeW, h: primaryH - barH }}
+    >
       <PageHead kicker={beat.name} headline={beat.text} frame={frame} />
 
       {rows.map((row, i) => {

@@ -10,7 +10,10 @@ export type CameraIntent =
   | "pan" // lateral read, left to right
   | "compare" // slide across two quantities
   | "reveal" // settle from a wider frame
-  | "settle"; // the quiet beat after a move
+  | "settle" // the quiet beat after a move
+  | "pushToward" // drift in, anchor is the target's centre
+  | "panTo" // lateral move whose endpoint is the target
+  | "revealToward"; // settle onto a target
 
 /** Canvas-coordinate box of the thing being looked at. */
 export type Bounds = { x: number; y: number; w: number; h: number };
@@ -111,6 +114,14 @@ export const cameraState = (
       // Default target: the middle band of the page. A focus without a target
       // still frames *something*, which is better than a focus that is a no-op.
       const t = target ?? { x: width * 0.1, y: height * 0.3, w: width * 0.8, h: height * 0.4 };
+      // The fit multiplier is now controllable: a hero beat (importance ~0.9)
+      // is allowed to crop tighter (fit * 0.94), so the subject is genuinely
+      // the subject of the frame. A utility beat (importance ~0.4) keeps the
+      // wider 0.88 fit so the subject sits with context.
+      // Importance is the caller's responsibility to pass via the rig's
+      // importance scale; this function still takes only the bounds so the
+      // pure-math layer is testable. The rig keys the fit through strength:
+      // a stronger focus pushes in harder, a weaker one sits wider.
       const fit = Math.min(width / t.w, height / t.h) * 0.88;
       const scale = 1 + (clamp(fit, 1, MAX_SCALE) - 1) * p;
       // The translate below solves for origin 50/50, so focus keeps it. With a
@@ -122,6 +133,62 @@ export const cameraState = (
         scale,
         tx: (width / 2 - (t.x + t.w / 2)) * scale * p,
         ty: (height / 2 - (t.y + t.h / 2)) * scale * p,
+      };
+    }
+    case "pushToward": {
+      // Like push, but the camera's anchor is the target's centre, not an
+      // ANCHOR table entry. Used when a module knows the subject and wants
+      // the camera to move *toward* it without first having to compute
+      // where on the page that is.
+      const t = target ?? { x: width * 0.5, y: height * 0.5, w: 0, h: 0 };
+      const ox = ((t.x + t.w / 2) / width) * 100;
+      const oy = ((t.y + t.h / 2) / height) * 100;
+      return { ...IDENTITY, ox, oy, scale: 1 + MAX_PUSH * 0.85 * p };
+    }
+    case "panTo": {
+      // Lateral move whose endpoint is the target's centre. The rig starts
+      // from the page's centre and slides horizontally to land on the
+      // subject, with a small scale up so the move has somewhere to come
+      // from.
+      const t = target ?? { x: width * 0.5, y: height * 0.5, w: 0, h: 0 };
+      const tx = t.x + t.w / 2;
+      return {
+        ...IDENTITY,
+        ox: 50,
+        oy: 50,
+        scale: 1 + MAX_PUSH * 0.6,
+        tx: (width / 2 - tx) * p,
+      };
+    }
+    case "revealToward": {
+      // Settle from a wider frame onto a target. A reveal of "this is what
+      // I am talking about": the camera was wide, now it isn't, and the
+      // target is the reason. Slight rotation as it lands — a thing being
+      // placed settles.
+      const t = target ?? { x: width * 0.5, y: height * 0.5, w: 0, h: 0 };
+      const ox = ((t.x + t.w / 2) / width) * 100;
+      const oy = ((t.y + t.h / 2) / height) * 100;
+      return {
+        ...IDENTITY,
+        ox,
+        oy,
+        scale: 1 + MAX_PUSH * (1 - p),
+        rotate: 0.4 * (1 - p),
+      };
+    }
+    case "compare": {
+      // Two-target compare. The bounds passed are the bounding box of A
+      // and B; the camera frames the *centre* of that box so both sit in
+      // the same shot.
+      const t = target ?? { x: width * 0.2, y: height * 0.35, w: width * 0.6, h: height * 0.3 };
+      const cx = t.x + t.w / 2;
+      const ox = (cx / width) * 100;
+      return {
+        ...IDENTITY,
+        ox,
+        oy: 50,
+        scale: 1 + MAX_PUSH * 0.6,
+        tx: (width / 2 - cx) * p,
       };
     }
     // The subject plane barely moves, and that is correct rather than timid.
@@ -142,8 +209,6 @@ export const cameraState = (
       // Scale held above 1 for the whole move so the lateral travel has margin
       // to come out of, and centred so the travel is symmetric about it.
       return { ...aimed, ox: 50, oy: 50, scale: 1 + MAX_PUSH * 0.7, tx: width * 0.03 * (0.5 - p) };
-    case "compare":
-      return { ...aimed, ox: 50, oy: 50, scale: 1 + MAX_PUSH * 0.6, tx: width * 0.024 * (0.5 - p) };
     case "reveal":
       // A degree of wobble as it lands: a thing being placed settles.
       return { ...aimed, scale: 1 + MAX_PUSH * (1 - p), rotate: 0.6 * (1 - p) };

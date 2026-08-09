@@ -21,7 +21,7 @@
 | **Question** | Why would anyone pay you two dollars to watch videos? |
 | **Emotion** | curiosity (0.8) |
 | **Sfx** | riser |
-| **Audio** | They pay you two dollars to watch videos. |
+| **Audio** | They pay you two dollars to watch videos. Two dollars a video, sent to your phone, from a company you have never heard of. |
 
 ### BEAT 2 — THE NUMBER (0:06–0:12)
 
@@ -33,7 +33,7 @@
 | **Data** | Per day: 30000000 |
 | **Purpose** | explain |
 | **Caption mode** | EMPHASIS |
-| **Audio** | The machine behind that job was pulling in thirty million dollars a day. |
+| **Audio** | The machine behind that job was pulling in thirty million dollars a day. Thirty million dollars, every single day, from people who started exactly where you are. |
 
 ### BEAT 3 — THE SAME ENGINE (0:12–0:21)
 
@@ -46,7 +46,7 @@
 | **Motion FX** | A phrase circled by hand. |
 | **Purpose** | orient |
 | **Sfx** | pop |
-| **Audio** | Same engine. Same script. Two dollars to watch, two hundred fifty to deposit. |
+| **Audio** | Same engine. Same script. Two dollars to watch, two hundred fifty to deposit. One script, printed once, handed to a thousand strangers at the same time. |
 
 ### BEAT 4 — THE BIGGEST PILE (0:21–0:32)
 
@@ -61,7 +61,7 @@
 | **Reveal** | In October 2025, US prosecutors seized the largest single pile in history: fifteen billion dollars in bitcoin. |
 | **Emotion** | surprise (0.7) |
 | **Caption mode** | EMPHASIS |
-| **Audio** | In October twenty twenty five, American prosecutors took the biggest single pile of it ever: fifteen billion dollars in bitcoin. |
+| **Audio** | In October twenty twenty five, American prosecutors took the biggest single pile of it ever: fifteen billion dollars in bitcoin. Fifteen billion dollars, in one seizure, from one machine. |
 
 ### BEAT 5 — THE PROMISE (0:32–0:42)
 
@@ -75,7 +75,7 @@
 | **Purpose** | orient |
 | **Question** | And who was paying you? |
 | **Emotion** | anticipation (0.8) |
-| **Audio** | Here's who was paying you. And how they got caught. |
+| **Audio** | Here's who was paying you. And how they got caught. It starts with a job offer you almost deleted. |
 
 ## ACT 1 — THE OFFER (0:42–2:10)
 
@@ -90,7 +90,7 @@
 | **Module** | kinetic |
 | **Purpose** | orient |
 | **Camera** | establish |
-| **Audio** | First, the offer. It arrives in your messages like every other side hustle. |
+| **Audio** | First, the offer. It arrives in your messages like every other side hustle. It is the one you actually answer. |
 
 ### BEAT 7 — THE TASK (0:48–0:58)
 
@@ -103,7 +103,7 @@
 | **Purpose** | orient |
 | **Question** | Why would anyone pay real money for this? |
 | **Emotion** | curiosity (0.6) |
-| **Audio** | Watch ten videos. Screenshot the proof. Send it in. Twenty dollars. |
+| **Audio** | Watch ten videos. Screenshot the proof. Send it in. Twenty dollars. That's the whole job, and the job is real. |
 
 ### BEAT 8 — THE RATE (0:58–1:03)
 
@@ -115,7 +115,7 @@
 | **Data** | Per video: 2 |
 | **Purpose** | explain |
 | **Caption mode** | EMPHASIS |
-| **Audio** | Two dollars a video. Less than minimum wage — and that is exactly the point. |
+| **Audio** | Two dollars a video. Less than minimum wage — and that is exactly the point. The pay is the bait, not the job. |
 
 ### BEAT 9 — THE CLEAR (1:03–1:15)
 
@@ -129,7 +129,7 @@
 | **Reveal** | The payment really clears — real money lands in your balance in eleven minutes. |
 | **Emotion** | clarity (0.7) |
 | **J-cut** | 0.5 |
-| **Audio** | See, the payment actually clears. Real money, into your balance, in eleven minutes. |
+| **Audio** | See, the payment actually clears. Real money, into your balance, in eleven minutes. Eleven minutes, start to finish, no questions asked. |
 
 ### BEAT 10 — THE CHECKLIST (1:15–1:24)
 
@@ -140,7 +140,7 @@
 | **Module** | icon |
 | **Icons** | badge-check: Real app, trending-up: Real payout, headset: Real support |
 | **Purpose** | explain |
-| **Audio** | Real app. Real payout. Support that answers in minutes. You tick every box. |
+| **Audio** | Real app. Real payout. Support that answers in minutes. You tick every box, and the app ticks every one of yours. |
 
 ### BEAT 11 — THE BALANCE (1:24–1:34)
 
@@ -151,7 +151,7 @@
 | **Module** | doodle |
 | **Footage** | close-up of a smartphone showing a digital wallet balance counting upward |
 | **Purpose** | escalate |
-| **Audio** | The balance climbs. Twenty. Forty. A hundred. It never goes down. |
+| **Audio** | The balance climbs. Twenty. Forty. A hundred. It never goes down. That is the first thing you believe without being told to. |
 
 ### BEAT 12 — THE TRAINING (1:34–1:42)
 
@@ -163,7 +163,7 @@
 | **Purpose** | reveal |
 | **Reveal** | The pay isn't for the work. The pay is the training. |
 | **Emotion** | confusion (0.6) |
-| **Audio** | Meaning the hook is the work. You aren't being paid to watch videos. You're being trained. |
+| **Audio** | Meaning the hook is the work. You aren't being paid to watch videos. You're being trained. The videos are the lesson plan. |
 
 ### BEAT 13 — THE SUPERVISOR (1:42–1:47)
 
@@ -175,7 +175,7 @@
 | **Data** | To a supervisor: 48 |
 | **Purpose** | explain |
 | **Caption mode** | EMPHASIS |
-| **Audio** | Within two days, a supervisor appears. A group. A commission ladder. |
+| **Audio** | Within two days, a supervisor appears. A group. A commission ladder. You are not a worker anymore. You are an account. |
 
 ### BEAT 14 — THE PROMOTION (1:47–1:56)
 
@@ -186,7 +186,7 @@
 | **Module** | quote |
 | **Source** | the app's own script — per the Two-Dollar Trap field notes |
 | **Purpose** | complicate |
-| **Audio** | "Congratulations — you've been promoted to VIP." That's the actual script. |
+| **Audio** | "Congratulations — you've been promoted to VIP." That's the actual script. The same message, sent the same way, to everyone. |
 
 ### BEAT 15 — THE LADDERS (1:56–2:10)
 
@@ -199,7 +199,7 @@
 | **Purpose** | consequence |
 | **Reveal** | Every rung of the ladder is a deposit you haven't made yet. |
 | **Emotion** | anticipation (0.7) |
-| **Audio** | Both ladders climb together: your earnings, and what you're asked to put up to reach the next rung. |
+| **Audio** | Both ladders climb together: your earnings, and what you're asked to put up to reach the next rung. The second ladder is the one that matters. |
 
 ## ACT 2 — THE FATTENING (2:10–4:05)
 
@@ -214,7 +214,7 @@
 | **Module** | kinetic |
 | **Purpose** | orient |
 | **Camera** | establish |
-| **Audio** | The money that arrives first is the mechanism. It deserves its own minute. |
+| **Audio** | The money that arrives first is the mechanism. It deserves its own minute, because everything that follows depends on it. |
 
 ### BEAT 17 — THE TRUST (2:17–2:27)
 
@@ -230,7 +230,7 @@
 | **Reveal** | The trust signals aren't a feature. They're the bait. |
 | **Emotion** | comfort (0.5) |
 | **Music** | drop |
-| **Audio** | Instant payouts. A balance that grows. Support that answers. None of it was an accident. |
+| **Audio** | Instant payouts. A balance that grows. Support that answers. None of it was an accident. All of it was a stage. |
 
 ### BEAT 18 — THE COUPON (2:27–2:36)
 
@@ -245,7 +245,7 @@
 | **Emotion** | surprise (0.8) |
 | **Caption mode** | EMPHASIS |
 | **Silence** | pre |
-| **Audio** | That first withdrawal isn't a payment. It's a coupon, and it costs them two dollars. |
+| **Audio** | That first withdrawal isn't a payment. It's a coupon, and it costs them two dollars. Two dollars, spent to buy your belief. |
 
 ### BEAT 19 — THE COST (2:36–2:41)
 
@@ -257,7 +257,7 @@
 | **Data** | They spend: 2 |
 | **Purpose** | explain |
 | **Caption mode** | EMPHASIS |
-| **Audio** | They spend two dollars to learn what you'll risk. You spend two dollars to believe they're real. |
+| **Audio** | They spend two dollars to learn what you'll risk. You spend two dollars to believe they're real. The second two dollars is the one that matters. |
 
 ### BEAT 20 — THE TRADE (2:41–2:50)
 
@@ -268,7 +268,7 @@
 | **Module** | compare |
 | **Data** | They learn: 1, You learn: 1 |
 | **Purpose** | explain |
-| **Audio** | See, trust isn't built by the app. It's built by you, watching your own money arrive. |
+| **Audio** | See, trust isn't built by the app. It's built by you, watching your own money arrive. They just supply the stage. |
 
 ### BEAT 21 — THE RECEIPT (2:50–3:03)
 
@@ -282,7 +282,7 @@
 | **Reveal** | You don't trust the app. You trust your own eyes watching money arrive. |
 | **Emotion** | clarity (0.7) |
 | **Caption mode** | EMPHASIS |
-| **Audio** | The deposit clears, and you watch it. That's the moment the belief gets built — by you. |
+| **Audio** | The deposit clears, and you watch it. That's the moment the belief gets built — by you, with their server doing the work. |
 
 ### BEAT 22 — THE SUPPORT (3:03–3:12)
 
@@ -294,7 +294,7 @@
 | **Footage** | smartphone showing an instant message conversation with a customer support avatar |
 | **Purpose** | explain |
 | **Rest** | true |
-| **Audio** | Every question answered. Every time. A hundred staff, one conversation each. |
+| **Audio** | Every question answered. Every time. A hundred staff, one conversation each. It feels like a company. It's a script with a headset. |
 
 ### BEAT 23 — THE WORD (3:12–3:22)
 
@@ -308,7 +308,7 @@
 | **Reveal** | They call it fattening: feed the account, build the belief. The kill comes later. |
 | **Emotion** | tension (0.7) |
 | **Music** | quiet |
-| **Audio** | In the trade, they call it fattening. Feed the account. Build the belief. The kill comes later. |
+| **Audio** | In the trade, they call it fattening. Feed the account. Build the belief. The kill comes later, and the kill is the business. |
 
 ### BEAT 24 — THE LADDER (3:22–3:30)
 
@@ -319,7 +319,7 @@
 | **Module** | icon |
 | **Icons** | list-checks: Tasks, arrow-up: Tiers, crown: VIP, dollar-sign: Commission |
 | **Purpose** | explain |
-| **Audio** | Each tier is a rung. Each rung is a deposit you haven't made yet. |
+| **Audio** | Each tier is a rung. Each rung is a deposit you haven't made yet. The ladder only goes up, and every step costs you first. |
 
 ### BEAT 25 — THE RUNG (3:30–3:35)
 
@@ -331,7 +331,7 @@
 | **Data** | Deposit: 250 |
 | **Purpose** | escalate |
 | **Caption mode** | EMPHASIS |
-| **Audio** | Then the rung that matters: two hundred fifty dollars, to unlock a faster payout tier. |
+| **Audio** | Then the rung that matters: two hundred fifty dollars, to unlock a faster payout tier. That's the first real deposit, and it lands. |
 
 ### BEAT 26 — THE REASON (3:35–3:44)
 
@@ -342,7 +342,7 @@
 | **Module** | doodle |
 | **Footage** | smartphone showing a bank deposit screen with a padlock icon |
 | **Purpose** | explain |
-| **Audio** | And it works. People pay it. Because the balance is real, and the balance is theirs. |
+| **Audio** | And it works. People pay it. Because the balance is real, and the balance is theirs. The catch is where that balance actually lives. |
 
 ### BEAT 27 — THE SERVER (3:44–3:57)
 
@@ -356,7 +356,7 @@
 | **Reveal** | The balance is a number on their server. The deposit is real money, moved. |
 | **Emotion** | anger (0.6) |
 | **Caption mode** | EMPHASIS |
-| **Audio** | Except the balance is a number on their server. The deposit is real money, moved. |
+| **Audio** | Except the balance is a number on their server. The deposit is real money, moved. Two different things, wearing the same name. |
 
 ### BEAT 28 — THE SEGUE (3:57–4:05)
 
@@ -367,7 +367,7 @@
 | **Module** | quote |
 | **Source** | DOJ press release, Oct 14 2025 |
 | **Purpose** | consequence |
-| **Audio** | Some of it gets paid out, to make the next person trust the same screen. The rest moves on. |
+| **Audio** | Some of it gets paid out, to make the next person trust the same screen. The rest moves on. The payout is the marketing budget. |
 
 ## ACT 3 — THE TURN (4:05–6:20)
 
@@ -382,7 +382,7 @@
 | **Module** | kinetic |
 | **Purpose** | orient |
 | **Camera** | establish |
-| **Audio** | The turn happens when the amounts stop being small. |
+| **Audio** | The turn happens when the amounts stop being small. That's when the script changes, and the ask gets serious. |
 
 ### BEAT 30 — THE FEES (4:11–4:16)
 
@@ -394,7 +394,7 @@
 | **Data** | Platform fee: 10000 |
 | **Purpose** | escalate |
 | **Caption mode** | EMPHASIS |
-| **Audio** | A platform fee of ten thousand. An unlock of twenty. A tax clearance of forty. |
+| **Audio** | A platform fee of ten thousand. An unlock of twenty. A tax clearance of forty. Each one unlocks money that's already yours. |
 
 ### BEAT 31 — THE VAULT (4:16–4:25)
 
@@ -406,7 +406,7 @@
 | **Footage** | a heavy bank vault door with a padlock, closed |
 | **Purpose** | explain |
 | **Sfx** | stamp |
-| **Audio** | Every reason to deposit has one thing in common: it unlocks money that's already yours. |
+| **Audio** | Every reason to deposit has one thing in common: it unlocks money that's already yours. Money that, on their server, never moves. |
 
 ### BEAT 32 — TWO MATHS (4:25–4:35)
 
@@ -418,7 +418,7 @@
 | **Data** | Their ask: 10000, Your real balance: 0 |
 | **Purpose** | complicate |
 | **Emotion** | confusion (0.7) |
-| **Audio** | Their math: deposit to unlock. Your math: it's already in there. Two maths, one answer. |
+| **Audio** | Their math: deposit to unlock. Your math: it's already in there. Two maths, one answer, and the answer is a transfer. |
 
 ### BEAT 33 — THE PSYCHOLOGY (4:35–4:45)
 
@@ -430,7 +430,7 @@
 | **Icons** | wallet: Sunk cost, lock: Escape cost, hourglass: Almost unlocked |
 | **Purpose** | reveal |
 | **Reveal** | The psychology is textbook: sunk cost, escape cost, almost-unlocked. |
-| **Audio** | The psychology is textbook. Sunk cost. Escape cost. The account is almost unlocked. |
+| **Audio** | The psychology is textbook. Sunk cost. Escape cost. The account is almost unlocked. Three hooks, and each one is a payment. |
 
 ### BEAT 34 — THE MOVE (4:45–4:58)
 
@@ -446,7 +446,7 @@
 | **Caption mode** | EMPHASIS |
 | **Silence** | pre |
 | **J-cut** | 0.4 |
-| **Audio** | But the balance is never unlocked. The rules change on the server, and the ask gets bigger. |
+| **Audio** | But the balance is never unlocked. The rules change on the server, and the ask gets bigger. The goalpost moves with your money. |
 
 ### BEAT 35 — THE SECOND LAYER (4:58–5:07)
 
@@ -457,7 +457,7 @@
 | **Module** | doodle |
 | **Footage** | smartphone showing a conversation with heart emojis and a message bubble |
 | **Purpose** | escalate |
-| **Audio** | And for the biggest accounts, they add a second layer: romance. |
+| **Audio** | And for the biggest accounts, they add a second layer: romance. Because a stranger asking for money is a scam. A partner asking is trust. |
 
 ### BEAT 36 — THE CAST (5:07–5:12)
 
@@ -467,7 +467,7 @@
 | **Visual** | Words fill the page as they're spoken. |
 | **Module** | kinetic |
 | **Purpose** | explain |
-| **Audio** | A friend with a tip. A partner with a plan. An expert who always answers. |
+| **Audio** | A friend with a tip. A partner with a plan. An expert who always answers. Three roles, and none of them are real. |
 
 ### BEAT 37 — THE SLOW KILL (5:12–5:18)
 
@@ -479,7 +479,7 @@
 | **Data** | Days of chat: 90 |
 | **Purpose** | escalate |
 | **Caption mode** | EMPHASIS |
-| **Audio** | The best accounts are fattened for months. The slaughter takes an hour. |
+| **Audio** | The best accounts are fattened for months. The slaughter takes an hour. Ninety days of care, spent in one afternoon. |
 
 ### BEAT 38 — THE LINE (5:18–5:28)
 
@@ -493,7 +493,7 @@
 | **Question** | What does a ninety-day script sound like when it's working? |
 | **Emotion** | anger (0.9) |
 | **Music** | quiet |
-| **Audio** | "I love you. Trust me. Just this once." It's a script. It has always been a script. |
+| **Audio** | "I love you. Trust me. Just this once." It's a script. It has always been a script, and it's written for one audience. |
 
 ### BEAT 39 — THE RECEIPT (5:28–5:40)
 
@@ -506,7 +506,7 @@
 | **Purpose** | reveal |
 | **Reveal** | The deposit doesn't go to the platform. It goes to a wallet — and wallets leave receipts. |
 | **Caption mode** | EMPHASIS |
-| **Audio** | The deposit doesn't go to the platform. It goes to a wallet — and wallets leave receipts. |
+| **Audio** | The deposit doesn't go to the platform. It goes to a wallet — and wallets leave receipts. That's the crack in the machine. |
 
 ### BEAT 40 — THE LAST FRAME (5:40–5:47)
 
@@ -521,7 +521,7 @@
 | **Rest** | true |
 | **Camera** | settle |
 | **Silence** | drop |
-| **Audio** | The last frame the mark sees: the balance, the chat, and silence. |
+| **Audio** | The last frame the mark sees: the balance, the chat, and silence. Everything they trusted, still on screen, answering nothing. |
 
 ### BEAT 41 — THE CLOSED ACCOUNT (5:47–5:54)
 
@@ -533,7 +533,7 @@
 | **Purpose** | reveal |
 | **Reveal** | On their ledger, the account closes. The person stays open. |
 | **Caption mode** | EMPHASIS |
-| **Audio** | On their ledger, the account closes. The person stays open. |
+| **Audio** | On their ledger, the account closes. The person stays open. The ledger has a row for your money, and no row for you. |
 
 ### BEAT 42 — THE BROOKLYN NETWORK (5:54–6:00)
 
@@ -546,7 +546,7 @@
 | **Source** | DOJ press release, Oct 14 2025 |
 | **Purpose** | consequence |
 | **Caption mode** | EMPHASIS |
-| **Audio** | In Brooklyn alone, one network moved millions for this machine — two hundred fifty victims across the country. |
+| **Audio** | In Brooklyn alone, one network moved millions for this machine — two hundred fifty victims across the country. Two hundred fifty people, and that's only the ones who came forward. |
 
 ### BEAT 43 — THE FUNNEL (6:00–6:20)
 
@@ -560,7 +560,7 @@
 | **Emotion** | shock (0.7) |
 | **Camera** | establish |
 | **Sfx** | tick |
-| **Audio** | A hundred thousand targets. A thousand responses. A hundred deposits. Five locked accounts. |
+| **Audio** | A hundred thousand targets. A thousand responses. A hundred deposits. Five locked accounts. The funnel narrows to a point, and the point is a person. |
 
 ## ACT 4 — THE MACHINE (6:20–8:10)
 
@@ -575,7 +575,7 @@
 | **Module** | kinetic |
 | **Purpose** | orient |
 | **Camera** | establish |
-| **Audio** | Time to meet the machine that runs the numbers. |
+| **Audio** | Time to meet the machine that runs the numbers. It runs them from behind a wall, with a chairman at the top. |
 
 ### BEAT 45 — THE PLACE (6:26–6:36)
 
@@ -586,7 +586,7 @@
 | **Module** | map |
 | **Places** | Phnom Penh @ 11.55,104.9; Golden Fortune, Cambodia @ 11.36,104.87 |
 | **Purpose** | orient |
-| **Audio** | The money doesn't land in a call center. It lands in Cambodia. |
+| **Audio** | The money doesn't land in a call center. It lands in Cambodia, at a compound with its own gate, its own walls, its own rules. |
 
 ### BEAT 46 — THE COMPOUND (6:36–6:47)
 
@@ -600,7 +600,7 @@
 | **Source** | DOJ press release, Oct 14 2025 |
 | **Purpose** | escalate |
 | **Emotion** | shock (0.8) |
-| **Audio** | Ten compounds. High walls. Barbed wire. Dormitories for hundreds of workers. |
+| **Audio** | Ten compounds. High walls. Barbed wire. Dormitories for hundreds of workers. It is a factory, and the product is persuasion. |
 
 ### BEAT 47 — THE PHONE FARM (6:47–6:56)
 
@@ -612,7 +612,7 @@
 | **Footage** | a wall of hundreds of identical smartphones charging in neat rows |
 | **Source** | DOJ press release, Oct 14 2025 |
 | **Purpose** | explain |
-| **Audio** | Phone farms: one facility alone held twelve hundred fifty phones. |
+| **Audio** | Phone farms: one facility alone held twelve hundred fifty phones. Twelve hundred fifty phones, each one running a conversation. |
 
 ### BEAT 48 — THE ACCOUNTS (6:56–7:02)
 
@@ -625,7 +625,7 @@
 | **Source** | DOJ press release, Oct 14 2025 |
 | **Purpose** | explain |
 | **Caption mode** | EMPHASIS |
-| **Audio** | Seventy six thousand accounts on one platform, out of two buildings. |
+| **Audio** | Seventy six thousand accounts on one platform, out of two buildings. Two buildings, seventy six thousand imagined people. |
 
 ### BEAT 49 — THE LEDGER (7:02–7:11)
 
@@ -637,7 +637,7 @@
 | **Icons** | dollar-sign: Room one, trending-up: Room two, wallet: Room three |
 | **Purpose** | explain |
 | **Rest** | true |
-| **Audio** | A ledger for every compound: which rooms run which scheme, and what each one profits. |
+| **Audio** | A ledger for every compound: which rooms run which scheme, and what each one profits. The machine kept its own books, and the books kept the machine. |
 
 ### BEAT 50 — THE LABOR (7:11–7:19)
 
@@ -650,7 +650,7 @@
 | **Purpose** | reveal |
 | **Reveal** | The labor was the product: workers trafficked in, kept under threat of violence. |
 | **Emotion** | anger (0.9) |
-| **Audio** | The labor was the product. Workers trafficked in, kept against their will, under threat of violence. |
+| **Audio** | The labor was the product. Workers trafficked in, kept against their will, under threat of violence. The phones were rented. The people were owned. |
 
 ### BEAT 51 — THE DATES (7:19–7:28)
 
@@ -662,7 +662,7 @@
 | **Footage** | a handwritten ledger page with rows and columns |
 | **Source** | Indictment, EDNY |
 | **Purpose** | explain |
-| **Audio** | In twenty nineteen, the Golden Fortune compound went up. In twenty twenty one, millions of phone numbers and passwords were bought in bulk. |
+| **Audio** | In twenty nineteen, the Golden Fortune compound went up. In twenty twenty one, millions of phone numbers and passwords were bought in bulk. The lists were the raw material. |
 
 ### BEAT 52 — THE QUOTE (7:28–7:36)
 
@@ -673,7 +673,7 @@
 | **Module** | quote |
 | **Source** | DOJ press release, Oct 14 2025 |
 | **Purpose** | escalate |
-| **Audio** | The founder of Prince Group, prosecutors say, bragged that the profit was considerable — because there is no cost. |
+| **Audio** | The founder of Prince Group, prosecutors say, bragged that the profit was considerable — because there is no cost. He said it out loud, and he wrote it down. |
 
 ### BEAT 53 — THE SPOILS (7:36–7:45)
 
@@ -685,7 +685,7 @@
 | **Footage** | a private jet and a luxury yacht moored side by side at a marina |
 | **Source** | AP News, Oct 14 2025 |
 | **Purpose** | consequence |
-| **Audio** | The proceeds bought the usual: yachts, a private jet, and a Picasso through a New York auction house. |
+| **Audio** | The proceeds bought the usual: yachts, a private jet, and a Picasso through a New York auction house. The spoils of a script. |
 
 ### BEAT 54 — THE DIAGRAM (7:45–7:58)
 
@@ -700,7 +700,7 @@
 | **Reveal** | The laundering ran on a diagram — every split public, every address a receipt. |
 | **Emotion** | tension (0.6) |
 | **Sfx** | tick |
-| **Audio** | The laundering ran on a diagram. Split the coins across a hundred addresses, recombine them into three. |
+| **Audio** | The laundering ran on a diagram. Split the coins across a hundred addresses, recombine them into three. A hundred addresses is not anonymity. It's a paper trail. |
 
 ### BEAT 55 — THE RECEIPTS (7:58–8:10)
 
@@ -711,7 +711,7 @@
 | **Module** | quote |
 | **Source** | the public ledger itself |
 | **Purpose** | consequence |
-| **Audio** | Every split is public. Every address is a receipt. The blockchain keeps the book. |
+| **Audio** | Every split is public. Every address is a receipt. The blockchain keeps the book, and the book never closes. |
 
 ## ACT 5 — THE SOLVE (8:10–9:20)
 
@@ -726,7 +726,7 @@
 | **Module** | kinetic |
 | **Purpose** | orient |
 | **Camera** | establish |
-| **Audio** | October, twenty twenty five. The indictment lands in Brooklyn. |
+| **Audio** | October, twenty twenty five. The indictment lands in Brooklyn. The machine's own ledgers are the evidence. |
 
 ### BEAT 57 — THE FILING (8:16–8:24)
 
@@ -738,7 +738,7 @@
 | **Footage** | a stack of legal documents with a red wax seal and a gavel |
 | **Source** | DOJ press release, Oct 14 2025 |
 | **Purpose** | escalate |
-| **Audio** | The chairman of Prince Group is charged with running the whole machine. |
+| **Audio** | The chairman of Prince Group is charged with running the whole machine. The charges read like a user manual for it. |
 
 ### BEAT 58 — THE VERDICT (8:24–8:32)
 
@@ -749,7 +749,7 @@
 | **Module** | quote |
 | **Source** | FBI Director Kash Patel, via DOJ, Oct 14 2025 |
 | **Purpose** | reveal |
-| **Audio** | FBI Director Patel called it one of the largest financial fraud takedowns in history. |
+| **Audio** | FBI Director Patel called it one of the largest financial fraud takedowns in history. That's not a press line. That's a scale. |
 
 ### BEAT 59 — THE SEIZURE (8:32–8:42)
 
@@ -766,7 +766,7 @@
 | **Caption mode** | EMPHASIS |
 | **Silence** | pre |
 | **L-cut** | 0.6 |
-| **Audio** | A hundred twenty seven thousand two hundred seventy one bitcoin. Fifteen billion dollars. The largest seizure in DOJ history. |
+| **Audio** | A hundred twenty seven thousand two hundred seventy one bitcoin. Fifteen billion dollars. The largest seizure in DOJ history, sitting in wallets that held still. |
 
 ### BEAT 60 — THE KEYS (8:42–8:53)
 
@@ -780,7 +780,7 @@
 | **Reveal** | The coins sat in wallets whose keys one person held. |
 | **Emotion** | relief (0.8) |
 | **Caption mode** | EMPHASIS |
-| **Audio** | How? The coins sat in wallets whose keys one person held. Take the keys, and the pile stops moving. |
+| **Audio** | How? The coins sat in wallets whose keys one person held. Take the keys, and the pile stops moving. Fifteen billion dollars, frozen by a passphrase. |
 
 ### BEAT 61 — THE TELL (8:53–9:02)
 
@@ -791,7 +791,7 @@
 | **Module** | icon |
 | **Icons** | lock: Needs a deposit to unlock, check-circle: Withdraws freely, alert-circle: Your money, their server |
 | **Purpose** | consequence |
-| **Audio** | And the tell that generalizes: an investment you can't withdraw from without depositing more is not an investment. |
+| **Audio** | And the tell that generalizes: an investment you can't withdraw from without depositing more is not an investment. It's a drain with a door. |
 
 ### BEAT 62 — THE RULE (9:02–9:10)
 
@@ -801,7 +801,7 @@
 | **Visual** | Words fill the page as they're spoken. |
 | **Module** | kinetic |
 | **Purpose** | explain |
-| **Audio** | Real money withdraws. Real platforms never unlock your own balance. |
+| **Audio** | Real money withdraws. Real platforms never unlock your own balance. The rule fits in one sentence, and it would have saved every one of them. |
 
 ### BEAT 63 — THE TEST (9:10–9:20)
 
@@ -816,7 +816,7 @@
 | **Emotion** | clarity (0.9) |
 | **Caption mode** | EMPHASIS |
 | **Silence** | pre |
-| **Audio** | Ask to withdraw before you deposit. The answer is a number, and it's not yours. |
+| **Audio** | Ask to withdraw before you deposit. The answer is a number, and it's not yours. Zero is a number too, and it answers everything. |
 
 ## CLOSE (9:20–10:00)
 
@@ -829,7 +829,7 @@
 | **Module** | kinetic |
 | **Purpose** | reflect |
 | **Callback** | PAID TO WATCH VIDEOS |
-| **Audio** | They pay you two dollars to watch videos. |
+| **Audio** | They pay you two dollars to watch videos. The same sentence, one hour later, with everything you know about it changed. |
 
 ### BEAT 65 — THE NUMBER (9:26–9:32)
 
@@ -841,7 +841,7 @@
 | **Data** | Per day: 30000000 |
 | **Purpose** | explain |
 | **Caption mode** | EMPHASIS |
-| **Audio** | This machine took in thirty million dollars a day. |
+| **Audio** | This machine took in thirty million dollars a day. And the two dollars a video is still what it looks like from the outside. |
 
 ### BEAT 66 — THE PRODUCT (9:32–9:41)
 
@@ -854,7 +854,7 @@
 | **Purpose** | reveal |
 | **Reveal** | The pay was never the product. You were. |
 | **Emotion** | empathy (0.6) |
-| **Audio** | The pay was never the product. You were. |
+| **Audio** | The pay was never the product. You were. The videos were the bait, and the balance was the hook. |
 
 ### BEAT 67 — THE LINE (9:41–9:49)
 
@@ -865,7 +865,7 @@
 | **Module** | quote |
 | **Source** | the app's own pitch, per the Two-Dollar Trap field notes |
 | **Purpose** | consequence |
-| **Audio** | The trap is the trust. That hasn't changed. |
+| **Audio** | The trap is the trust. That hasn't changed. It never needed to. |
 
 ### BEAT 68 — THE PAYOFF (9:49–10:00)
 
@@ -880,7 +880,7 @@
 | **Music** | swell |
 | **Silence** | post |
 | **Callback** | PAID TO WATCH VIDEOS |
-| **Audio** | Paid to watch videos — until the pay becomes the price. |
+| **Audio** | Paid to watch videos — until the pay becomes the price. Two dollars in. Fifteen billion out. The balance was never yours. |
 
 ---
 

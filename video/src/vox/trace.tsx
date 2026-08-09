@@ -53,11 +53,26 @@ export const Trace: React.FC<VoxSceneProps> = ({ dur, beat }) => {
     family: vox.font,
   });
 
+  // The trace's subject is the destination node — the point of the journey,
+  // not the journey itself. The camera frames this subject; the destination
+  // annotation follows it; the box at arrival is drawn around it. One
+  // semantic subject, three consumers.
+  const destIdx = n - 1;
+  const destFrac = at(destIdx);
+  const destX = wide ? x0 + destFrac * len : x0;
+  const destY = wide ? y0 : y0 + destFrac * len;
+  const subjectBounds = {
+    x: destX - dot * 1.6,
+    y: destY - dot * 1.6,
+    w: dot * 3.2,
+    h: dot * 3.2,
+  };
+
   return (
     <CameraRig
       intent="focus"
       dur={dur}
-      target={{ x: pad, y: band.primary, w: safeW, h: primaryH }}
+      target={subjectBounds}
       seed={beat.n}
       style={{ fontFamily: vox.font }}
     >

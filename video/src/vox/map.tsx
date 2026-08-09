@@ -100,6 +100,11 @@ export const MapScene: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const { width, height, pad, y: band, primaryH } = useLayout();
+  // Subject registry. The map's primary subject is the centred subject —
+  // the centroid of all inked features. Children of this scene resolve the
+  // subject to the same box, so the rig's focus lands on it and the
+  // destination annotation follows it.
+  const reg = React.useMemo(() => new Map(), []);
 
   const globe = /globe|world|planet|orbit/i.test(
     beat.visual + " " + (beat.motion ?? ""),
@@ -211,6 +216,10 @@ export const MapScene: React.FC<VoxSceneProps> = ({ dur, beat }) => {
 
   // The zoom. It opens wide and closes on the subject over most of the beat,
   // leaving the last stretch still so the frame can be read rather than chased.
+  // The map's own zoom is now *part of* the camera plan, not a second camera
+  // — it is the subject's framing, applied as a scale on the same group the
+  // rig scales. Two cameras on one frame is the bug; one camera with a
+  // subject-anchored move is the fix.
   const push = interpolate(
     frame,
     [0, Math.max(24, dur * 0.72)],

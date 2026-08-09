@@ -73,8 +73,15 @@ export const Trust: React.FC<VoxSceneProps> = ({ dur, beat, words }) => {
   );
 
   return (
-    <CameraRig intent="settle" dur={dur} seed={beat.n} style={{ fontFamily: vox.font }}>
-      <PageHead kicker={beat.name} headline={beat.text} frame={frame} />
+    <CameraRig
+      intent="settle"
+      dur={dur}
+      seed={beat.n}
+      style={{ fontFamily: vox.font }}
+      // The trust list's subject is its first signal — the thing the trust
+      // is being built *about*. The rig frames it; the headline names it.
+      target={{ x: pad, y: band.primary, w: safeW, h: Math.min(primaryH, width * 0.18) }}
+    >
 
       {rows.map((row, i) => {
         const enter = spring({

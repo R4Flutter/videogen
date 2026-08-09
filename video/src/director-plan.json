@@ -1319,7 +1319,7 @@
       ],
       "start": 522,
       "end": 533,
-      "openQuestion": "How? The coins sat in wallets whose keys one person held. Take the keys, and the pile stops moving.",
+      "openQuestion": "How? The coins sat in wallets whose keys one person held. Take the keys, and the pile stops moving. Fifteen billion dollars, frozen by a passphrase.",
       "answer": "The coins sat in wallets whose keys one person held.",
       "emotion": "relief (0.8)",
       "infoDensity": "medium",
@@ -1597,7 +1597,7 @@
         "tier": "VISUAL_IDEA"
       },
       "visual": {
-        "purpose": "EXPLAIN",
+        "purpose": "LOCATE",
         "module": "stat",
         "layers": [],
         "reveal": "COUNTER_REVEAL",
@@ -1626,7 +1626,14 @@
       "audio": {
         "musicLevel": 0.4,
         "musicMood": "hold",
-        "sfx": [],
+        "sfx": [
+          {
+            "at": 7.6,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          }
+        ],
         "silence": []
       },
       "memory": {
@@ -1890,7 +1897,7 @@
         "tier": "VISUAL_IDEA"
       },
       "visual": {
-        "purpose": "EXPLAIN",
+        "purpose": "REVEAL",
         "module": "kinetic",
         "layers": [],
         "reveal": "MASK",
@@ -1919,7 +1926,14 @@
       "audio": {
         "musicLevel": 0.4,
         "musicMood": "hold",
-        "sfx": [],
+        "sfx": [
+          {
+            "at": 43.6,
+            "files": [
+              "whoosh.wav"
+            ]
+          }
+        ],
         "silence": []
       },
       "memory": {
@@ -2302,7 +2316,7 @@
         "curiosity": 0.7,
         "tension": 0.35,
         "informationDensity": 0.4,
-        "emotionalIntensity": 0.35,
+        "emotionalIntensity": 0.6,
         "tier": "PROGRESSION"
       },
       "visual": {
@@ -2386,7 +2400,7 @@
         "tier": "VISUAL_IDEA"
       },
       "visual": {
-        "purpose": "EXPLAIN",
+        "purpose": "HUMANIZE",
         "module": "stat",
         "layers": [],
         "reveal": "COUNTER_REVEAL",
@@ -2403,9 +2417,9 @@
           "triggers": []
         },
         "transitionIn": {
-          "type": "cut",
-          "reason": "SPATIAL_CONTINUITY",
-          "frames": 0
+          "type": "crossfade",
+          "reason": "EMOTIONAL_RESET",
+          "frames": 9
         }
       },
       "typography": {
@@ -2467,9 +2481,9 @@
           ]
         },
         "transitionIn": {
-          "type": "crossfade",
-          "reason": "EMOTIONAL_RESET",
-          "frames": 9
+          "type": "cut",
+          "reason": "SPATIAL_CONTINUITY",
+          "frames": 0
         }
       },
       "typography": {
@@ -3369,7 +3383,7 @@
         "tier": "PROGRESSION"
       },
       "visual": {
-        "purpose": "EXPLAIN",
+        "purpose": "LOCATE",
         "module": "doodle",
         "layers": [],
         "reveal": "DRAW_ON",
@@ -3405,9 +3419,9 @@
         "musicMood": "quiet",
         "sfx": [
           {
-            "at": 222,
+            "at": 217.5,
             "files": [
-              "pop.wav"
+              "whoosh-up.wav"
             ]
           }
         ],
@@ -3685,7 +3699,14 @@
       "audio": {
         "musicLevel": 0.28,
         "musicMood": "quiet",
-        "sfx": [],
+        "sfx": [
+          {
+            "at": 252.6,
+            "files": [
+              "chime.wav"
+            ]
+          }
+        ],
         "silence": []
       },
       "memory": {
@@ -4063,7 +4084,7 @@
           {
             "at": 300.5,
             "files": [
-              "pop.wav"
+              "chime.wav"
             ]
           }
         ],
@@ -4490,6 +4511,12 @@
           {
             "at": 348.6,
             "files": [
+              "chime.wav"
+            ]
+          },
+          {
+            "at": 351.96,
+            "files": [
               "boom.wav"
             ]
           }
@@ -4558,7 +4585,14 @@
       "audio": {
         "musicLevel": 0.28,
         "musicMood": "quiet",
-        "sfx": [],
+        "sfx": [
+          {
+            "at": 355.6,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          }
+        ],
         "silence": []
       },
       "memory": {
@@ -4589,7 +4623,7 @@
         "tier": "ATTENTION_RESET"
       },
       "visual": {
-        "purpose": "EXPLAIN",
+        "purpose": "HUMANIZE",
         "module": "funnel",
         "layers": [],
         "reveal": "PROGRESSIVE",
@@ -5514,7 +5548,7 @@
         "tier": "VISUAL_IDEA"
       },
       "visual": {
-        "purpose": "EXPLAIN",
+        "purpose": "PROVE",
         "module": "kinetic",
         "layers": [],
         "reveal": "MASK",
@@ -5785,7 +5819,7 @@
       "jCut": 0.45,
       "narrative": {
         "purpose": "reveal",
-        "question": "How? The coins sat in wallets whose keys one person held. Take the keys, and the pile stops moving.",
+        "question": "How? The coins sat in wallets whose keys one person held. Take the keys, and the pile stops moving. Fifteen billion dollars, frozen by a passphrase.",
         "reveal": "The coins sat in wallets whose keys one person held."
       },
       "attention": {
@@ -5975,9 +6009,9 @@
           ]
         },
         "transitionIn": {
-          "type": "cut",
-          "reason": "SPATIAL_CONTINUITY",
-          "frames": 0
+          "type": "crossfade",
+          "reason": "EMOTIONAL_RESET",
+          "frames": 9
         }
       },
       "typography": {
@@ -6204,7 +6238,14 @@
       "audio": {
         "musicLevel": 0.3,
         "musicMood": "drop",
-        "sfx": [],
+        "sfx": [
+          {
+            "at": 567.6,
+            "files": [
+              "whoosh-up.wav"
+            ]
+          }
+        ],
         "silence": []
       },
       "memory": {
@@ -6476,16 +6517,16 @@
     },
     {
       "at": 7.6,
-      "type": "WORD_EMPHASIS",
+      "type": "QUESTION",
       "beat": 2,
-      "strength": 0.54,
+      "strength": 0.85,
       "label": "$30M / DAY"
     },
     {
-      "at": 11,
-      "type": "WORD_EMPHASIS",
+      "at": 10.35,
+      "type": "QUESTION",
       "beat": 2,
-      "strength": 0.79,
+      "strength": 0.85,
       "label": "$30M / DAY"
     },
     {
@@ -6525,14 +6566,14 @@
     },
     {
       "at": 43.6,
-      "type": "WORD_EMPHASIS",
+      "type": "CONTRADICTION",
       "beat": 6,
       "strength": 0.78,
       "label": "ACT ONE — THE OFFER"
     },
     {
       "at": 46.86,
-      "type": "WORD_EMPHASIS",
+      "type": "CONTRADICTION",
       "beat": 6,
       "strength": 0.71,
       "label": "ACT ONE — THE OFFER"
@@ -6553,7 +6594,7 @@
     },
     {
       "at": 59.6,
-      "type": "WORD_EMPHASIS",
+      "type": "NUMBER_REVEAL",
       "beat": 8,
       "strength": 0.54,
       "label": "$2 / VIDEO"
@@ -6756,30 +6797,30 @@
     },
     {
       "at": 209.04,
-      "type": "NUMBER_REVEAL",
+      "type": "DATA_CHANGE",
       "beat": 24,
       "strength": 0.74,
       "label": "ONE RUNG AT A TIME"
     },
     {
       "at": 211.6,
-      "type": "WORD_EMPHASIS",
+      "type": "NUMBER_REVEAL",
       "beat": 25,
       "strength": 0.52,
       "label": "$250"
     },
     {
       "at": 217.5,
-      "type": "NUMBER_REVEAL",
+      "type": "QUESTION",
       "beat": 26,
-      "strength": 0.56,
+      "strength": 0.85,
       "label": "IT'S ALREADY THEIRS"
     },
     {
-      "at": 222,
-      "type": "OBJECT_ENTRY",
+      "at": 221.87,
+      "type": "NUMBER_REVEAL",
       "beat": 26,
-      "strength": 0.69,
+      "strength": 0.57,
       "label": "IT'S ALREADY THEIRS"
     },
     {
@@ -6826,7 +6867,7 @@
     },
     {
       "at": 252.6,
-      "type": "WORD_EMPHASIS",
+      "type": "NUMBER_REVEAL",
       "beat": 30,
       "strength": 0.65,
       "label": "$10,000"
@@ -6889,7 +6930,7 @@
     },
     {
       "at": 300.5,
-      "type": "OBJECT_ENTRY",
+      "type": "NUMBER_REVEAL",
       "beat": 35,
       "strength": 0.63,
       "label": "ROMANCE"
@@ -6959,13 +7000,13 @@
     },
     {
       "at": 348.6,
-      "type": "REVEAL",
+      "type": "NUMBER_REVEAL",
       "beat": 41,
-      "strength": 0.85,
+      "strength": 0.78,
       "label": "THE ACCOUNT CLOSES"
     },
     {
-      "at": 352.38,
+      "at": 351.96,
       "type": "REVEAL",
       "beat": 41,
       "strength": 0.85,
@@ -6973,16 +7014,16 @@
     },
     {
       "at": 355.6,
-      "type": "MAP_REVEAL",
+      "type": "QUESTION",
       "beat": 42,
-      "strength": 0.69,
+      "strength": 0.85,
       "label": "250 VICTIMS"
     },
     {
-      "at": 359.19,
+      "at": 358.96,
       "type": "MAP_REVEAL",
       "beat": 42,
-      "strength": 0.59,
+      "strength": 0.74,
       "label": "250 VICTIMS"
     },
     {
@@ -7274,16 +7315,16 @@
     },
     {
       "at": 567.6,
-      "type": "WORD_EMPHASIS",
+      "type": "QUESTION",
       "beat": 65,
-      "strength": 0.51,
+      "strength": 0.85,
       "label": "$30M / DAY"
     },
     {
-      "at": 571.1,
-      "type": "WORD_EMPHASIS",
+      "at": 570.21,
+      "type": "QUESTION",
       "beat": 65,
-      "strength": 0.76,
+      "strength": 0.85,
       "label": "$30M / DAY"
     },
     {
@@ -7354,6 +7395,11 @@
       "value": 0.4
     },
     {
+      "at": 7.6,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
+    },
+    {
       "at": 12,
       "kind": "music_level",
       "value": 0.4
@@ -7422,6 +7468,11 @@
       "at": 42,
       "kind": "music_level",
       "value": 0.4
+    },
+    {
+      "at": 43.6,
+      "kind": "sfx",
+      "label": "whoosh.wav"
     },
     {
       "at": 48,
@@ -7809,9 +7860,9 @@
       "value": 0.28
     },
     {
-      "at": 222,
+      "at": 217.5,
       "kind": "sfx",
-      "label": "pop.wav"
+      "label": "whoosh-up.wav"
     },
     {
       "at": 224,
@@ -7877,6 +7928,11 @@
       "at": 251,
       "kind": "music_level",
       "value": 0.28
+    },
+    {
+      "at": 252.6,
+      "kind": "sfx",
+      "label": "chime.wav"
     },
     {
       "at": 256,
@@ -7976,7 +8032,7 @@
     {
       "at": 300.5,
       "kind": "sfx",
-      "label": "pop.wav"
+      "label": "chime.wav"
     },
     {
       "at": 307,
@@ -8081,12 +8137,17 @@
     {
       "at": 348.6,
       "kind": "sfx",
-      "label": "boom.wav"
+      "label": "chime.wav"
     },
     {
       "at": 351.2,
       "kind": "silence_start",
       "label": "PRE_REVEAL_SILENCE"
+    },
+    {
+      "at": 351.96,
+      "kind": "sfx",
+      "label": "boom.wav"
     },
     {
       "at": 352.6,
@@ -8102,6 +8163,11 @@
       "at": 354,
       "kind": "music_level",
       "value": 0.28
+    },
+    {
+      "at": 355.6,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
     },
     {
       "at": 360,
@@ -8494,6 +8560,11 @@
       "label": "POST_REVEAL_SILENCE"
     },
     {
+      "at": 567.6,
+      "kind": "sfx",
+      "label": "whoosh-up.wav"
+    },
+    {
       "at": 572,
       "kind": "music_level",
       "value": 0.3
@@ -8683,17 +8754,17 @@
       "fromBeat": 12,
       "toBeat": 13,
       "at": 102,
-      "type": "cut",
-      "reason": "SPATIAL_CONTINUITY",
-      "frames": 0
+      "type": "crossfade",
+      "reason": "EMOTIONAL_RESET",
+      "frames": 9
     },
     {
       "fromBeat": 13,
       "toBeat": 14,
       "at": 107,
-      "type": "crossfade",
-      "reason": "EMOTIONAL_RESET",
-      "frames": 9
+      "type": "cut",
+      "reason": "SPATIAL_CONTINUITY",
+      "frames": 0
     },
     {
       "fromBeat": 14,
@@ -9075,9 +9146,9 @@
       "fromBeat": 61,
       "toBeat": 62,
       "at": 542,
-      "type": "cut",
-      "reason": "SPATIAL_CONTINUITY",
-      "frames": 0
+      "type": "crossfade",
+      "reason": "EMOTIONAL_RESET",
+      "frames": 9
     },
     {
       "fromBeat": 62,
