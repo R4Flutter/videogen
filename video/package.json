@@ -32,7 +32,7 @@
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc",
-    "check": "node ../tools/check.mjs && node --experimental-strip-types --test ../tools/tests/camera.test.mjs && python ../tools/align.py --selftest",
+    "check": "node ../tools/check.mjs && node --experimental-strip-types --test ../tools/tests/camera.test.mjs && node --experimental-strip-types --test ../tools/tests/retention.test.mjs && python ../tools/align.py --selftest && python ../tools/voice_direction.py --selftest && python ../tools/mix.py --selftest",
     "test:camera": "node --experimental-strip-types --test ../tools/tests/camera.test.mjs",
     "story": "node ../tools/check.mjs && node ../tools/parse-story.mjs ../story.txt src/script.json",
     "voice": "..\\.venv-tts\\Scripts\\python.exe ../tools/voice.py",
@@ -67,7 +67,14 @@
     "vox:build": "npm run footage && npm run lint && npm run check && npm run audio && npm run render:vox",
     "episode:vox": "npm run vox:prep && npm run vox:build",
     "master": "python ../tools/master-audio.py",
-    "audio": "python ../tools/master-audio.py --check"
+    "audio": "python ../tools/master-audio.py --check",
+    "review": "node --experimental-strip-types ../tools/review.mjs",
+    "review:render": "node --experimental-strip-types ../tools/review.mjs --render",
+    "packaging": "node --experimental-strip-types ../tools/packaging.mjs",
+    "mix": "python ../tools/mix.py --tone --duck",
+    "mix:meter": "python ../tools/mix.py --meter out/vox-essay.mp4",
+    "direction": "python ../tools/voice_direction.py",
+    "test:retention": "node --experimental-strip-types --test ../tools/tests/retention.test.mjs"
   },
   "sideEffects": [
     "*.css"

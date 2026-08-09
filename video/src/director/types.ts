@@ -397,6 +397,19 @@ export type QcFinding = {
   fix?: string;
 };
 
+/** A gate is a hard fail: the render is blocked, no score is negotiated. The
+ *  QC scores are advisory and always were; these are not. Everything here is
+ *  either a rule a professional edit never breaks, or a spec (loudness,
+ *  contrast) with a number attached. */
+export type QcGate = {
+  id: string;
+  passed: boolean;
+  at: number; // seconds, or -1 for whole-video
+  beat?: number;
+  message: string;
+  fix?: string;
+};
+
 export type QcReport = {
   video: { title: string; duration: number; beats: number; mode: string };
   findings: QcFinding[];
@@ -409,4 +422,25 @@ export type QcReport = {
     emotion: number;
   };
   retention: number; // 0..10 heuristic, internal only
+  /** Hard gates. Any `passed: false` blocks the render. */
+  gates?: QcGate[];
+  /** Predicted per-second drop risk, and the worst windows. Not calibrated
+   *  against real retention — the shape is the product, not the values. */
+  risk?: {
+    curve: number[];
+    mean: number;
+    opening30: number;
+    windows: { from: number; to: number; at: number; peak: number; beat?: number; causes: string[] }[];
+  };
+  /** The loop stack's summary: what was opened, closed, decayed, unmatched. */
+  loops?: {
+    opened: number;
+    closed: number;
+    decayed: number;
+    open: number;
+    unmatched: { beat: number; at: number; reveal: string }[];
+    starved: { from: number; to: number }[];
+    crowded: { from: number; to: number }[];
+    debt: number[];
+  };
 };

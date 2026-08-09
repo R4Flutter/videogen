@@ -14,6 +14,7 @@ import { EssayScene } from "./Scene.tsx";
 import { EssayCaptions, ChapterKicker } from "./Captions.tsx";
 import { EssaySoundtrack } from "./EssaySoundtrack.tsx";
 import { ChapterCard } from "./ChapterCard.tsx";
+import { Film } from "./Film.tsx";
 import type { DirectorPlan } from "../director/types.ts";
 import script from "../script.json";
 
@@ -79,10 +80,15 @@ export const EssayDoc: React.FC<{ plan?: DirectorPlan }> = ({ plan }) => {
   const beats = plan.beats;
   const chapters = plan.chapters;
 
+  // The post layer wraps everything the viewer sees but nothing they hear:
+  // the soundtrack sits outside it, because a filter chain over an <Audio>
+  // is a wasted composite every frame.
   return (
     <AbsoluteFill style={{ backgroundColor: vox.paper }}>
-      <PaperBG />
-      <AbsoluteFill>
+      <Film>
+        <AbsoluteFill style={{ backgroundColor: vox.paper }}>
+          <PaperBG />
+          <AbsoluteFill>
         {beats.map((b, i) => {
           const next = beats[i + 1];
           const overlap = OVERLAP[next?.motion.transitionIn.type ?? "cut"] ?? 0;
@@ -108,8 +114,10 @@ export const EssayDoc: React.FC<{ plan?: DirectorPlan }> = ({ plan }) => {
             <ChapterKicker text={`chapter ${c.ordinal} — ${c.card.text}`} at={0} />
           </Sequence>
         ))}
-      </AbsoluteFill>
-      <EssayCaptions plan={plan} />
+          </AbsoluteFill>
+          <EssayCaptions plan={plan} />
+        </AbsoluteFill>
+      </Film>
       <EssaySoundtrack plan={plan} />
     </AbsoluteFill>
   );

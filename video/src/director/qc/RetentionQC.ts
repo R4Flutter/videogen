@@ -2,12 +2,47 @@
 // visual, continuity and audio checks, plus the emotion curve, and reports
 // findings and scores. The score is an internal heuristic — it exists to find
 // weak sections before rendering, not to predict YouTube retention.
-import type { DirectorPlan, QcFinding, QcReport } from "../types.ts";
+import type { DirectorPlan, QcFinding, QcReport, Script } from "../types.ts";
+import type { LoopState } from "../attention/LoopStack.ts";
 import { runAttentionQC } from "./AttentionQC.ts";
 import { runVisualQC } from "./VisualQC.ts";
 import { runContinuityQC } from "./ContinuityQC.ts";
 import { criticize } from "./CriticQC.ts";
+import { buildRiskCurve } from "./DropRisk.ts";
+import { runGates } from "./Gates.ts";
 import { clamp } from "../util.ts";
+
+/** The instrumentation pass. Optional so that every existing caller of
+ *  `runRetentionQC(plan)` keeps working unchanged — the gates and the risk
+ *  curve only attach when the script and the loop state are handed in. */
+export const attachInstruments = (
+  report: QcReport,
+  script: Script,
+  plan: DirectorPlan,
+  loops: LoopState,
+): QcReport => {
+  const risk = buildRiskCurve(plan, loops);
+  return {
+    ...report,
+    gates: runGates(script, plan, loops),
+    risk: {
+      curve: risk.risk,
+      mean: risk.mean,
+      opening30: risk.opening30,
+      windows: risk.windows.slice(0, 5),
+    },
+    loops: {
+      opened: loops.loops.length,
+      closed: loops.loops.filter((l) => l.outcome === "closed").length,
+      decayed: loops.loops.filter((l) => l.outcome === "decayed").length,
+      open: loops.loops.filter((l) => l.outcome === "open").length,
+      unmatched: loops.unmatched,
+      starved: loops.starved,
+      crowded: loops.crowded,
+      debt: loops.debt,
+    },
+  };
+};
 
 export const runRetentionQC = (plan: DirectorPlan): QcReport => {
   const attention = runAttentionQC(plan);

@@ -13,11 +13,17 @@ export const MODULES = new Set([
 ]);
 
 /** Runs of the same module — the raw material fatigue detection reads.
- *  Accepts either script beats or directed beats: it only needs n + module. */
-export const moduleRuns = (beats: { n: number; module?: string }[]) => {
+ *
+ *  Accepts either script beats (`module`) or directed beats (`visual.module`).
+ *  It only claimed to accept both: a `DirectedBeat` keeps its module under
+ *  `visual`, so every plan-side caller — AttentionQC included — was reading
+ *  `undefined`, collapsing the whole film into one run of "" and reporting a
+ *  68-beat module run on every episode. That finding was the only thing
+ *  holding the attention score below 10, which is how it survived so long. */
+export const moduleRuns = (beats: { n: number; module?: string; visual?: { module?: string } }[]) => {
   const runs: { module: string; beats: number[] }[] = [];
   for (const b of beats) {
-    const module = b.module ?? "";
+    const module = b.module ?? b.visual?.module ?? "";
     const last = runs[runs.length - 1];
     if (last && last.module === module) last.beats.push(b.n);
     else runs.push({ module, beats: [b.n] });

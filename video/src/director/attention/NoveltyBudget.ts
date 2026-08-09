@@ -54,6 +54,54 @@ export type BudgetDecision = {
   captionMode: CaptionMode;
   /** Whether the frame is over budget and something had to go. */
   trimmed: boolean;
+  /** Whether this beat was exempted as a hero moment. */
+  hero?: boolean;
+};
+
+/**
+ * Hero moments: the budget exists to be broken, a few times, on purpose.
+ *
+ * Everything above this point only ever *subtracts* — which produces a film
+ * with no frame louder than any other, and peak–end says a film with no peak
+ * is remembered as its average. So a small number of beats are exempted and
+ * allowed to spend everything at once: the module, the camera and the type all
+ * moving together, which is the frame someone screenshots.
+ *
+ * Scarcity is the whole mechanism. Four or five in a ten-minute film; more
+ * than that and the exemption stops meaning anything, which is precisely the
+ * "everything louder than everything else" failure MrBeast publicly walked
+ * back in 2024.
+ */
+export const HERO_PER_MINUTE = 0.5;
+export const HERO_CEILING = 1.55;
+
+/** Which beats get to be heroes.
+ *
+ *  Ranked by what the story says is important — the biggest reveals, then the
+ *  payoff — not by what looks good. A hero moment on a beat the story doesn't
+ *  care about is just noise with a bigger budget. Deterministic: same script,
+ *  same heroes. */
+export const pickHeroBeats = (
+  beats: ScriptBeat[],
+  score: (b: ScriptBeat, i: number) => number,
+  durationInSeconds: number,
+): Set<number> => {
+  const max = Math.max(1, Math.round((durationInSeconds / 60) * HERO_PER_MINUTE));
+  const ranked = beats
+    .map((b, i) => ({ n: b.n, i, s: score(b, i) }))
+    .filter((x) => x.s > 0)
+    .sort((a, z) => z.s - a.s || a.i - z.i);
+
+  // Heroes must not cluster: two adjacent peaks are one peak, and the second
+  // one is wasted. Minimum spacing is a twelfth of the runtime.
+  const minGap = Math.max(3, Math.floor(beats.length / 12));
+  const chosen: number[] = [];
+  for (const cand of ranked) {
+    if (chosen.length >= max) break;
+    if (chosen.some((i) => Math.abs(i - cand.i) < minGap)) continue;
+    chosen.push(cand.i);
+  }
+  return new Set(chosen.map((i) => beats[i].n));
 };
 
 export const budgetFor = (
@@ -61,6 +109,7 @@ export const budgetFor = (
   module: string,
   cameraIntent: string,
   captionMode: CaptionMode,
+  hero = false,
 ): BudgetDecision => {
   const m = MODULE_MOTION[module] ?? 0.5;
   const c = CAMERA_MOTION[cameraIntent] ?? 0.3;
@@ -84,12 +133,21 @@ export const budgetFor = (
     LOWER_THIRD: "NONE",
     NONE: "NONE",
   };
-  while (load > 1.15 && outCaption !== "NONE") {
+
+  // A hero beat is allowed to spend up to HERO_CEILING. Nothing is trimmed;
+  // the frame is *supposed* to be doing too much, because that is what makes
+  // it the frame the viewer remembers.
+  const ceiling = hero ? HERO_CEILING : 1.15;
+  if (hero && load <= ceiling) {
+    return { load: Number(load.toFixed(2)), camera: outCamera, captionMode: outCaption, trimmed: false, hero: true };
+  }
+
+  while (load > ceiling && outCaption !== "NONE") {
     outCaption = QUIETER[outCaption];
     load = m + c + CAPTION_MOTION[outCaption];
     trimmed = true;
   }
-  if (load > 1.15) {
+  if (load > ceiling) {
     if (CAMERA_MOTION[outCamera] > 0.2) {
       outCamera = "settle";
       load = m + CAMERA_MOTION.settle + CAPTION_MOTION[outCaption];
@@ -97,5 +155,5 @@ export const budgetFor = (
     }
   }
 
-  return { load: Number(load.toFixed(2)), camera: outCamera, captionMode: outCaption, trimmed };
+  return { load: Number(load.toFixed(2)), camera: outCamera, captionMode: outCaption, trimmed, hero };
 };

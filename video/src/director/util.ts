@@ -44,6 +44,37 @@ export const asNumber = (v: number | undefined, fallback: number) =>
 /** All dollar-and-number tokens in a line, e.g. "$2" "250" "100,000". */
 export const numberTokens = (s: string) => (s.match(/[$%]?\d[\d,]*(\.\d+)?%?/g) ?? []);
 
+/** Numbers written as words.
+ *
+ *  A narration script spells its numbers out — "thirty million dollars", not
+ *  "$30M" — because the TTS reads the page literally and a digit is a coin
+ *  flip between "fifteen" and "one five". Every check that asked "does this
+ *  carry a number?" with a digit regex was therefore answering no on a script
+ *  made almost entirely of numbers: the hook gate failed on "They pay you two
+ *  dollars", the causality detector saw no quantities anywhere, and the
+ *  information-void term thought a film about money contained no facts.
+ *
+ *  Ordinals and magnitudes are included because "the first rung" and "billions"
+ *  are quantities in the sense that matters here: they are specific, and
+ *  specificity is what a viewer takes away. */
+const NUMBER_WORDS =
+  /\b(zero|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred|thousand|million|millions|billion|billions|trillion|trillions|dozen|half|quarter|third|first|second|third|fourth|fifth|tenth|hundredth|percent|dollars?|cents?)\b/i;
+
+/** Whether a line carries a quantity at all — digits, currency, or a number
+ *  written out in words. This is the question every "is there a fact here"
+ *  check actually meant to ask. */
+export const hasQuantity = (s: string): boolean =>
+  numberTokens(s).length > 0 || NUMBER_WORDS.test(s);
+
+/** How many distinct quantity mentions a line carries. Used where the density
+ *  matters rather than mere presence — a beat with four numbers is doing
+ *  something different from a beat with one. */
+export const quantityCount = (s: string): number => {
+  const digits = numberTokens(s).length;
+  const words = (s.match(new RegExp(NUMBER_WORDS.source, "gi")) ?? []).length;
+  return digits + words;
+};
+
 /** The first sentence-like chunk of a beat's narration, for stamps. */
 export const firstWords = (s: string, n = 6) => {
   const words = s.trim().split(/\s+/).filter(Boolean);

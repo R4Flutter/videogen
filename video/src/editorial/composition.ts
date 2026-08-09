@@ -38,7 +38,7 @@ export type CompositionPlan = {
   id: Composition;
   /** Where the type sits on the page, as a band name. The module reads this
    *  and lays its kicker/headline into the matching band. */
-  typeBand: "left" | "right" | "top" | "bottom" | "centre" | "full";
+  typeBand: "left" | "right" | "top" | "bottom" | "centre" | "full" | "off";
   /** Where the visual sits. Compositions can have two visuals (a hero
    *  subject and a supporting plate) — the second slot is for those. */
   visualBand: "left" | "right" | "top" | "bottom" | "centre" | "full" | "off";
@@ -55,7 +55,7 @@ export type CompositionPlan = {
   typeStyle: "sidebar" | "full" | "overlay" | "none";
   /** Whether the camera moves at all on this composition. A HERO_CENTER
    *  composition holds; a FULL_BLEED pushes; a CLOSE_DETAIL reveal-pushes. */
-  cameraMode: "hold" | "push" | "pull" | "reveal" | "follow";
+  cameraMode: "hold" | "push" | "pull" | "reveal" | "follow" | "compare";
   /** The annotation slot for this composition. "off" means the beat is too
    *  busy for one; "auto" leaves the call to the module. */
   annotationSlot: "auto" | "left" | "right" | "top" | "bottom" | "off";

@@ -9,7 +9,7 @@ import { CameraRig } from "../editorial/camera";
 import { theme } from "../theme";
 import { DrawIn, LineIcon } from "./elements";
 import { fitBlock, useLayout } from "./layout";
-import { PageHead, VoxSceneProps } from "./scenes";
+import { VoxSceneProps } from "./scenes";
 
 /**
  * When the trust collapses, in seconds into the beat. Timed off voice.json like

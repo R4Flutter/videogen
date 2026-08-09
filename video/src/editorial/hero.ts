@@ -53,7 +53,7 @@ export const effectiveStrength = (importance: Importance, energy: VisualEnergy):
   // the calm opening. Importance is the floor: a hero beat is never quiet.
   const env = 0.6 + 0.6 * energy;
   return Math.max(0, Math.min(1, importance * env));
-});
+};
 
 /** A beat's recommended depth, weighted by importance. A hero beat widens
  *  the gap between subject and background; a utility beat keeps the page

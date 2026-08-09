@@ -6,10 +6,12 @@ import { analyzeStory } from "./story/StoryAnalyzer.ts";
 import { planChapters, chapterOfBeat } from "./story/ChapterPlanner.ts";
 import { planSequences } from "./story/SequencePlanner.ts";
 import { runCuriosity } from "./attention/CuriosityEngine.ts";
+import { runLoopStack } from "./attention/LoopStack.ts";
 import { rhythmFor, scheduleAllEvents } from "./attention/RhythmEngine.ts";
-import { buildEmotionalCurve } from "./attention/EmotionalCurve.ts";
+import { buildEmotionalArc } from "./attention/EmotionalArc.ts";
+import { applyHabituation } from "./attention/Habituation.ts";
 import { profileFor } from "./attention/AttentionDirector.ts";
-import { budgetFor } from "./attention/NoveltyBudget.ts";
+import { budgetFor, pickHeroBeats } from "./attention/NoveltyBudget.ts";
 import { directVisuals } from "./visual/VisualDirector.ts";
 import { cameraFor } from "./motion/CameraPlanner.ts";
 import { revealFor } from "./motion/RevealPlanner.ts";
@@ -23,13 +25,14 @@ import { buildMemory } from "./memory/StoryMemory.ts";
 import { planCallbacks } from "./memory/CallbackPlanner.ts";
 import { assembleTimeline } from "./timeline/TimelinePlanner.ts";
 import { validateTimeline } from "./timeline/TimelineValidator.ts";
-import { runRetentionQC } from "./qc/RetentionQC.ts";
+import { runRetentionQC, attachInstruments } from "./qc/RetentionQC.ts";
 
 export type DirectResult = {
   plan: DirectorPlan;
   warnings: string[];
   issues: ReturnType<typeof validateTimeline>;
   qc: ReturnType<typeof runRetentionQC>;
+  loops: ReturnType<typeof runLoopStack>;
 };
 
 /** Apply the overlay: hand-written notes win over every guess. */
@@ -101,11 +104,27 @@ export const buildDirectorPlan = (
     );
   }
 
+  // The loop stack supersedes the single-slot curiosity model above for every
+  // judgement the QC layer makes. `runCuriosity` stays because the sequence
+  // planner and the editorial prompt still read its per-beat open/answer map,
+  // and replacing both in one change would make this diff unreviewable.
+  const loops = runLoopStack(script, facts, chapters, sequences);
+  for (const u of loops.unmatched.slice(0, 4)) {
+    warnings.push(`beat ${u.beat}: reveal closes no open question — "${u.reveal}"`);
+  }
+
   // --- attention
-  const emotions = buildEmotionalCurve(script, facts);
+  const emotions = buildEmotionalArc(script, facts);
   const rhythms = beats.map((b) => rhythmFor(b));
   const profiles = beats.map((b, i) => profileFor(b, facts[i], emotions[i], rhythms[i]));
-  const attentionEvents = scheduleAllEvents(script, facts, emotions, rhythms);
+  // The rhythm engine decides *when* something should change. The habituation
+  // pass decides what that change is still worth after the viewer has seen the
+  // film do it four times, and re-languages the interrupt onto another channel
+  // when one has carried three in a row.
+  const attentionEvents = applyHabituation(
+    scheduleAllEvents(script, facts, emotions, rhythms),
+    script.durationInSeconds,
+  );
 
   // --- visual
   const { decisions: visuals, warnings: visualWarnings } = directVisuals(script, facts);
@@ -127,6 +146,37 @@ export const buildDirectorPlan = (
 
   // The novelty budget trims before the plan is fixed: if a beat wants a
   // loud module, a pushing camera and full captions at once, something goes.
+  // Heroes are chosen before the budget runs, because the budget's whole job
+  // changes for them: on a hero beat it steps aside instead of trimming.
+  // Ranked by what the story says matters — the strongest reveals, then the
+  // payoff — so the loudest frame in the film is also the most important one.
+  const heroes = pickHeroBeats(
+    beats,
+    (b, i) => {
+      const f = facts[i];
+      let s = 0;
+      if (f.reveal) s += 3;
+      if (f.purpose === "payoff") s += 2.5;
+      if (f.purpose === "reveal") s += 2;
+      if (f.consequence) s += 1;
+      s += profiles[i].emotionalIntensity;
+      // Never the first beat: the hook has to earn attention before it spends
+      // everything, and a film that opens at maximum has nowhere left to go.
+      if (i === 0) s = 0;
+      if (visuals[i].rest) s = 0;
+      return s;
+    },
+    script.durationInSeconds,
+  );
+  if (heroes.size) warnings.push(`hero beats: ${[...heroes].join(", ")} — budget exempt, these are the frames the film is remembered as`);
+
+  // A hero beat is not merely permitted to be loud, it is *planned* loud: the
+  // profile carries the raised novelty so the renderer, the QC peak gate and
+  // the risk curve all see the same intent.
+  for (let i = 0; i < beats.length; i++) {
+    if (heroes.has(beats[i].n)) profiles[i].novelty = 0.95;
+  }
+
   const budgeted = beats.map((b, i) => {
     const visual = visuals[i];
     if (visual.rest) return { camera: cameras[i], captionMode: visual.captionMode };
@@ -135,6 +185,7 @@ export const buildDirectorPlan = (
       visual.module,
       cameras[i],
       visual.captionMode,
+      heroes.has(b.n),
     );
     if (trimmed) warnings.push(`beat ${b.n}: novelty budget trimmed — ${cameras[i]}→${camera}, captions ${visual.captionMode}→${captionMode}`);
     return { camera: camera as typeof cameras[number], captionMode };
@@ -192,7 +243,7 @@ export const buildDirectorPlan = (
   const issues = validateTimeline(plan);
   for (const issue of issues) warnings.push(`timeline: ${issue.message}`);
 
-  const qc = runRetentionQC(plan);
+  const qc = attachInstruments(runRetentionQC(plan), script, plan, loops);
 
-  return { plan, warnings, issues, qc };
+  return { plan, warnings, issues, qc, loops };
 };

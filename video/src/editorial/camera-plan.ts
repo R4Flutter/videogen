@@ -92,8 +92,11 @@ export const motionPhase = (t: number, strength: number): MotionPhase => {
  *  the camera is running. The fields on this type are the ones every
  *  consumer in the engine should use. */
 export type ResolvedCamera = {
-  plan: Required<Omit<CameraPlan, "target" | "depth">> & {
+  plan: Required<Omit<CameraPlan, "target" | "depth" | "bounds">> & {
     target?: TargetRef;
+    /** Absent when the rig could not resolve a box — a module rendered
+     *  outside a rig, or a plan with no target and no hand-placed bounds. */
+    bounds?: Bounds;
     depth: ReturnType<typeof import("./depth.ts").resolveDepth>;
   };
   state: CameraState;

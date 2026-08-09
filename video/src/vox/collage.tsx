@@ -7,7 +7,7 @@
 // disk for this beat, in the order it found them. Nothing here knows what the
 // episode is about.
 import React from "react";
-import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { CameraRig } from "../editorial/camera";
 import { theme } from "../theme";
 import { beatFrames, DrawIn, Halftone, Kicker, Shape } from "./elements";

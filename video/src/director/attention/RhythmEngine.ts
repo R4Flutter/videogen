@@ -20,7 +20,7 @@ import type {
   ScriptBeat,
 } from "../types.ts";
 import type { BeatFacts } from "../story/StoryAnalyzer.ts";
-import { rng, type Rng } from "../util.ts";
+import { rng, quantityCount, type Rng } from "../util.ts";
 
 export type RhythmDecision = {
   tier: "MICRO_CHANGE" | "VISUAL_IDEA" | "PROGRESSION" | "ATTENTION_RESET" | "SEQUENCE_TRANSFORM";
@@ -36,6 +36,61 @@ const tierOf = (dur: number): RhythmDecision => {
   if (dur < 20) return { tier: "PROGRESSION", cadence: 5, reset: false };
   if (dur < 45) return { tier: "ATTENTION_RESET", cadence: 8, reset: true };
   return { tier: "SEQUENCE_TRANSFORM", cadence: 12, reset: true };
+};
+
+/** The tier a beat's *content* earns, and the duration that tier implies.
+ *
+ *  The header of this file has always said "a beat earns its length by what it
+ *  carries", and `tierOf` derives the tier from the length — the same sentence
+ *  with the causality inverted. It means the engine can never disagree with
+ *  the script: a beat that takes fourteen seconds to say one thing is simply
+ *  relabelled PROGRESSION and given a slower cadence, which is exactly how
+ *  padding survives to the render.
+ *
+ *  Density is counted in things a viewer has to *take in*: quantities, proper
+ *  nouns, contradictions, and the beat's own structured payload. That count,
+ *  against the read time, is what a tier actually describes. */
+export const contentTier = (
+  b: ScriptBeat,
+  facts: BeatFacts,
+): { tier: RhythmDecision["tier"]; ideas: number; target: [number, number] } => {
+  const text = `${b.vo} ${b.text ?? ""}`;
+  const ideas =
+    quantityCount(text) * 1.0 +
+    (text.match(/\b[A-Z][a-z]{2,}\b/g) ?? []).length * 0.5 +
+    (text.match(/\b(but|however|except|actually|turns out|instead)\b/gi) ?? []).length * 1.5 +
+    (facts.reveal ? 2 : 0) +
+    (facts.question ? 1 : 0) +
+    (b.data?.length ?? 0) * 0.7 +
+    (b.icons?.length ?? 0) * 0.5 +
+    (b.places?.length ?? 0) * 0.5;
+
+  if (ideas <= 1.5) return { tier: "MICRO_CHANGE", ideas, target: [1.5, 4] };
+  if (ideas <= 4) return { tier: "VISUAL_IDEA", ideas, target: [4, 10] };
+  if (ideas <= 8) return { tier: "PROGRESSION", ideas, target: [10, 30] };
+  if (ideas <= 14) return { tier: "ATTENTION_RESET", ideas, target: [30, 60] };
+  return { tier: "SEQUENCE_TRANSFORM", ideas, target: [45, 120] };
+};
+
+/** Where the read and the content disagree — the padding detector.
+ *
+ *  A beat whose narration runs 14s while its content earns a 4–10s frame is a
+ *  beat saying one thing slowly. That shows on a retention graph as the exact
+ *  second the viewer leaves, and it is invisible to every other check the
+ *  engine runs. The reverse — a dense beat read too fast — is rarer and more
+ *  forgivable, so it is reported separately rather than lumped in.
+ *
+ *  The 40% margin exists because the tiers are bands, not points, and an
+ *  author who lands just outside one is not making a mistake. */
+export const rhythmMismatch = (
+  b: ScriptBeat,
+  facts: BeatFacts,
+): { kind: "padded" | "rushed"; ideas: number; dur: number; target: [number, number] } | null => {
+  const dur = b.end - b.start;
+  const { ideas, target } = contentTier(b, facts);
+  if (dur > target[1] * 1.4) return { kind: "padded", ideas, dur, target };
+  if (dur < target[0] * 0.6) return { kind: "rushed", ideas, dur, target };
+  return null;
 };
 
 /** The event vocabulary a beat's content earns, in the order a viewer should

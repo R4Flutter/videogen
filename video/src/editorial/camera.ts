@@ -42,13 +42,11 @@ import {
   DEFAULT_DEPTH,
   type DepthPlan,
   type DepthRole,
-  depthFor,
-  depthPlanFor,
   planeDepth,
   resolveDepth,
 } from "./depth.ts";
 import { targetBounds, type SubjectRegistry } from "./target.ts";
-import { importanceDepthScale, effectiveStrength, type Importance } from "./hero.ts";
+import { importanceDepthScale, type Importance } from "./hero.ts";
 
 export type { Bounds, CameraIntent, CameraState };
 export type { CameraPlan, ResolvedCamera };
@@ -119,6 +117,10 @@ export const useRegisterSubject = (
     return () => {
       reg.delete(id);
     };
+    // `bounds` is deliberately not a dep: a moving subject gets a fresh
+    // object every render, which would churn delete/set every frame. Movers
+    // push new boxes through `setSubjectBounds` instead.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reg, id, type, importance, label]);
   return reg;
 };
@@ -349,7 +351,8 @@ export const CameraRig: React.FC<{
     1,
   );
   const p = SOFT(progress);
-  const reg = registry ?? useSubjectRegistry();
+  const inherited = useSubjectRegistry();
+  const reg = registry ?? inherited;
   const bounds = resolveTargetBounds(merged, reg, width, height);
   const { transform, transformOrigin, state } = useSemanticCamera(merged, dur, bounds, merged.seed ?? 0);
   const resolved = buildResolved(merged, p, frame, width, height, bounds);

@@ -100,12 +100,6 @@ export const MapScene: React.FC<VoxSceneProps> = ({ dur, beat }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const { width, height, pad, y: band, primaryH } = useLayout();
-  // Subject registry. The map's primary subject is the centred subject —
-  // the centroid of all inked features. Children of this scene resolve the
-  // subject to the same box, so the rig's focus lands on it and the
-  // destination annotation follows it.
-  const reg = React.useMemo(() => new Map(), []);
-
   const globe = /globe|world|planet|orbit/i.test(
     beat.visual + " " + (beat.motion ?? ""),
   );

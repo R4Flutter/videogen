@@ -48,6 +48,8 @@ const { buildEditorialPrompt, buildRevisionPrompt, SYSTEM_PROMPT } = await impor
 const { validateResponse, validateRevision } = await import(pathToFileURL(join(aiDir, "EditorialValidator.ts")).href);
 const { decisionsToOverlay, applyRevision, attachViewerStates } = await import(pathToFileURL(join(aiDir, "index.ts")).href);
 const { buildDirectorPlan } = await import(pathToFileURL(join(root, "video/src/director/plan.ts")).href);
+const { sparkline } = await import(pathToFileURL(join(root, "video/src/director/qc/DropRisk.ts")).href);
+const { analyzeCausality, causalityScore } = await import(pathToFileURL(join(root, "video/src/director/story/Causality.ts")).href);
 
 const fmt = (s) => {
   if (s === -1) return "  --";
@@ -221,12 +223,18 @@ if (!noAi) {
 
 // revision loop: plan → QC → targeted revision → plan
 for (let pass = 1; pass <= maxRevisions + 1; pass++) {
-  const { plan, warnings, issues, qc } = buildDirectorPlan(script, overlay, mode);
+  const { plan, warnings, issues, qc, loops } = buildDirectorPlan(script, overlay, mode);
   passes = pass;
   const high = qc.findings.filter((f) => f.severity === "HIGH").length;
   const med = qc.findings.filter((f) => f.severity === "MED").length;
-  process.stderr.write(`  pass ${pass}: ${qc.findings.length} findings (${high} HIGH, ${med} MED) · retention ${qc.retention}\n`);
-  if (pass > maxRevisions || noAi || !resp || high === 0) {
+  const failed = (qc.gates ?? []).filter((x) => !x.passed);
+  process.stderr.write(
+    `  pass ${pass}: ${qc.findings.length} findings (${high} HIGH, ${med} MED) · ${failed.length} gates failed · risk ${qc.risk?.mean ?? "—"}\n`,
+  );
+  // A failed gate is a revision target too: the brain gets one chance to fix
+  // structure before the run is called done. Scores were never enough to
+  // trigger a rewrite; a broken hook should be.
+  if (pass > maxRevisions || noAi || !resp || (high === 0 && failed.length === 0)) {
     // attach viewer state + provenance, then write
     if (resp) {
       const decisions = (resp.beats ?? []).map((d) => ({
@@ -261,6 +269,57 @@ for (let pass = 1; pass <= maxRevisions + 1; pass++) {
     console.log("QC SCORES");
     for (const [k, v] of Object.entries(qc.scores)) console.log(`  ${k.padEnd(14)} ${v.toFixed(1)}/10`);
     console.log(`  retention    ${qc.retention}/10 (internal heuristic)`);
+
+    // ---- drop risk ----
+    // The scores say whether the film is good. This says where it is weak,
+    // which is the only one of the two an editor can act on.
+    if (qc.risk) {
+      const dur = plan.project.durationInSeconds;
+      console.log("DROP RISK    (predicted, uncalibrated — the shape is the product)");
+      console.log(`  ${sparkline(qc.risk.curve, 60)}`);
+      console.log(`  ${fmt(0).padEnd(30)}${fmt(dur / 2).padEnd(24)}${fmt(dur)}`);
+      console.log(`  mean ${qc.risk.mean.toFixed(3)} · opening 30s ${qc.risk.opening30.toFixed(3)}${qc.risk.opening30 > qc.risk.mean * 1.3 ? "  ← the opening is the weakest part of the film" : ""}`);
+      for (const w of qc.risk.windows.slice(0, 3)) {
+        console.log(
+          `  ${fmt(w.at)} risk ${w.peak.toFixed(2)}${w.beat ? ` (beat ${w.beat})` : ""} — ${w.causes.join(", ") || "unattributed"}`,
+        );
+      }
+    }
+
+    // ---- loops ----
+    if (qc.loops) {
+      const l = qc.loops;
+      console.log(
+        `LOOPS        ${l.opened} opened · ${l.closed} closed · ${l.decayed} decayed · ${l.open} left open`,
+      );
+      const band = l.debt.map((n) => (n === 0 ? "·" : n > 3 ? "!" : String(n))).join("");
+      console.log(`  debt/s     ${band.length > 120 ? band.slice(0, 120) + "…" : band}`);
+      if (l.starved.length)
+        console.log(`  starved    ${l.starved.filter((w) => w.to - w.from > 20).map((w) => `${fmt(w.from)}–${fmt(w.to)}`).join(" ") || "(all brief)"}`);
+      for (const u of l.unmatched.slice(0, 3))
+        console.log(`  unmatched  beat ${u.beat} @ ${fmt(u.at)} — "${u.reveal}"`);
+    }
+
+    // ---- causality ----
+    const links = analyzeCausality(script);
+    const cs = causalityScore(links);
+    const andThen = links.filter((x) => x.connective === "AND_THEN");
+    console.log(
+      `CAUSALITY    ${(cs * 100).toFixed(0)}% of seams carry BUT or THEREFORE${andThen.length ? ` · ${andThen.length} weak seam(s)` : ""}`,
+    );
+    for (const a of andThen.slice(0, 3)) console.log(`  beat ${a.from}→${a.to}  ${a.evidence}`);
+
+    // ---- gates ----
+    const failedNow = (qc.gates ?? []).filter((x) => !x.passed);
+    if (qc.gates) {
+      console.log(`GATES        ${qc.gates.length - failedNow.length}/${qc.gates.length} passed`);
+      for (const gt of failedNow) {
+        console.log(`  FAIL ${fmt(gt.at)} ${gt.id}${gt.beat ? ` (beat ${gt.beat})` : ""}`);
+        console.log(`       ${gt.message}`);
+        if (gt.fix) console.log(`       fix: ${gt.fix}`);
+      }
+    }
+
     for (const f of qc.findings.filter((x) => x.severity === "HIGH")) {
       console.log(`HIGH ${fmt(f.at)} ${f.rule}${f.beat ? ` (beat ${f.beat})` : ""}`);
       console.log(`     ${f.message}`);
@@ -274,6 +333,13 @@ for (let pass = 1; pass <= maxRevisions + 1; pass++) {
       console.log(`DRY RUN  nothing written`);
     } else {
       console.log(`WROTE      ${outPath}`);
+    }
+    // A failed gate exits non-zero so a render script can refuse to run. The
+    // plan is still written: you want to look at what failed, and blocking
+    // the artifact would only make that harder.
+    if (failedNow.length && !hasFlag("--no-gate")) {
+      console.log(`BLOCKED    ${failedNow.length} gate(s) failed — fix them, or re-run with --no-gate`);
+      process.exit(2);
     }
     process.exit(0);
   }
