@@ -7,24 +7,24 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@remotion/cli": "4.0.506",
-    "@remotion/google-fonts": "^4.0.506",
-    "@remotion/tailwind-v4": "4.0.506",
+    "@remotion/cli": "^4.0.508",
+    "@remotion/google-fonts": "^4.0.508",
+    "@remotion/tailwind-v4": "^4.0.508",
     "d3-geo": "^3.1.1",
-    "lucide-react": "^1.28.0",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "remotion": "4.0.506",
+    "lucide-react": "^1.31.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "remotion": "^4.0.508",
     "roughjs": "^4.6.6",
     "tailwindcss": "4.0.0"
   },
   "devDependencies": {
-    "@remotion/eslint-config-flat": "4.0.506",
+    "@remotion/eslint-config-flat": "^4.0.508",
     "@types/d3-geo": "^3.1.1",
-    "@types/react": "19.2.7",
-    "@types/web": "0.0.166",
+    "@types/react": "^19.2.18",
+    "@types/web": "^0.0.354",
     "eslint": "9.19.0",
-    "prettier": "3.8.1",
+    "prettier": "^3.9.6",
     "typescript": "5.9.3"
   },
   "scripts": {
@@ -48,6 +48,9 @@
     "render:images": "remotion render ImageShort out/images.mp4",
     "render:vox": "remotion render VoxExplain out/vox.mp4",
     "render:vox:essay": "remotion render VoxEssay out/vox-essay.mp4",
+    "story:info": "node ../tools/parse-info.mjs ../info.txt src/script.json",
+    "render:info": "remotion render InfoDemo out/info.mp4",
+    "episode:info": "npm run story:info && npm run lint && npm run render:info",
     "direct": "node --experimental-strip-types ../tools/direct.mjs",
     "qc": "node --experimental-strip-types ../tools/qc.mjs",
     "direct-check": "node --experimental-strip-types ../tools/direct.mjs --check",
@@ -74,9 +77,17 @@
     "mix": "python ../tools/mix.py --tone --duck",
     "mix:meter": "python ../tools/mix.py --meter out/vox-essay.mp4",
     "direction": "python ../tools/voice_direction.py",
-    "test:retention": "node --experimental-strip-types --test ../tools/tests/retention.test.mjs"
+    "test:retention": "node --experimental-strip-types --test ../tools/tests/retention.test.mjs",
+    "start:mcd": "remotion studio",
+    "render:mcd": "node ../tools/render-business.mjs McdBusinessStory out/mcd-business-story.mp4",
+    "story:validate": "node --experimental-strip-types ../tools/render-business.mjs",
+    "story:render": "node --experimental-strip-types ../tools/render-business.mjs",
+    "still:mcd": "remotion still McdBusinessStory"
   },
   "sideEffects": [
     "*.css"
-  ]
+  ],
+  "allowScripts": {
+    "esbuild@0.28.1": true
+  }
 }

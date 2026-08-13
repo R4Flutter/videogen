@@ -1,0 +1,130 @@
+{
+  "id": "McdBusinessStory",
+  "title": "How McDonald's Makes Billions",
+  "brand": "McDonald's",
+  "hero": {
+    "src": "hero/burger.png",
+    "width": 640,
+    "height": 420,
+    "position": "left"
+  },
+  "theme": {
+    "accent": "#E0352B",
+    "accentSecondary": "#F5C518"
+  },
+  "hook": {
+    "kicker": "A BUSINESS STORY",
+    "lines": [
+      "HOW DOES MCDONALD'S",
+      [{ "text": "MAKE BILLIONS?" }]
+    ],
+    "accentLine": 1
+  },
+  "globalScale": {
+    "finalCount": 40400,
+    "headline": "LOCATIONS",
+    "kicker": "PART 01 · GLOBAL SCALE"
+  },
+  "map": {
+    "regionOrder": [
+      "northAmerica",
+      "southAmerica",
+      "europe",
+      "middleEast",
+      "asia",
+      "australia"
+    ],
+    "regionLabel": {
+      "northAmerica": "NORTH AMERICA",
+      "southAmerica": "SOUTH AMERICA",
+      "europe": "EUROPE",
+      "middleEast": "MIDDLE EAST",
+      "asia": "ASIA",
+      "australia": "AUSTRALIA"
+    },
+    "regionLabelCell": {
+      "northAmerica": [6, 3.2],
+      "southAmerica": [19, 31.2],
+      "europe": [30, 2.4],
+      "middleEast": [37, 21.4],
+      "asia": [40, 1.8],
+      "australia": [58, 31]
+    },
+    "hubOrigin": { "name": "CHICAGO · HQ", "cell": [16, 9.5] },
+    "hubs": [
+      { "region": "southAmerica", "name": "SÃO PAULO", "cell": [21, 21.5], "controls": [[13, 16], [17, 20]] },
+      { "region": "europe", "name": "LONDON", "cell": [29, 6], "controls": [[22, 4], [26, 5]] },
+      { "region": "middleEast", "name": "DUBAI", "cell": [38.5, 14.5], "controls": [[28, 7], [33, 12]] },
+      { "region": "asia", "name": "TOKYO", "cell": [61, 8], "controls": [[38, 1], [52, 1]] },
+      { "region": "australia", "name": "SYDNEY", "cell": [56, 24], "controls": [[34, 20], [48, 24]] }
+    ],
+    "title": {
+      "kicker": "PART 02 · GLOBAL FOOTPRINT",
+      "lines": ["ONE OF THE WORLD'S", "LARGEST RESTAURANT NETWORKS"]
+    }
+  },
+  "revenue": {
+    "kicker": "PART 03 · THE MONEY MACHINE",
+    "steps": [
+      { "value": 0, "frame": 0 },
+      { "value": 100000000, "frame": 24 },
+      { "value": 500000000, "frame": 48 },
+      { "value": 1000000000, "frame": 78 },
+      { "value": 5000000000, "frame": 110 },
+      { "value": 10000000000, "frame": 140 },
+      { "value": 20000000000, "frame": 168 },
+      { "value": 25000000000, "frame": 192 }
+    ],
+    "finalLabel": "25B+",
+    "overline": "ANNUAL COMPANY REVENUE",
+    "barLabel": "REVENUE RUN-RATE · ILLUSTRATIVE",
+    "barDelay": 64,
+    "barDuration": 150
+  },
+  "businessModel": {
+    "kicker": "PART 04 · THE BUSINESS MODEL",
+    "nodes": [
+      { "title": "CUSTOMER", "sub": "ORDERS & PAYS", "role": "customer" },
+      { "title": "RESTAURANT", "sub": "SERVES THE FOOD", "role": "store" },
+      { "title": "FRANCHISEE", "sub": "OPERATES & INVESTS", "role": "partner" },
+      { "title": "MCDONALD'S", "sub": "BRAND · FEES · ROYALTIES", "role": "brand" }
+    ],
+    "flowNotes": ["FOOD & SERVICE", "OPERATING FEES", "ROYALTIES & RENT"],
+    "payoffOverline": "ANNUAL REVENUE",
+    "payoffValue": "$25B+",
+    "payoffNote": "ILLUSTRATIVE FIGURE"
+  },
+  "chart": {
+    "kicker": "PART 05 · REVENUE, YEAR BY YEAR",
+    "valuePrefix": "",
+    "valueSuffix": "B",
+    "data": [
+      { "label": "2018", "value": 21.03 },
+      { "label": "2019", "value": 21.36 },
+      { "label": "2020", "value": 19.21 },
+      { "label": "2021", "value": 23.22 },
+      { "label": "2022", "value": 23.18 },
+      { "label": "2023", "value": 25.49 }
+    ],
+    "insightKicker": "FY2023",
+    "insight": "HIGHEST ON RECORD",
+    "annotationNote": "Bar 6 of 6 · Illustrative figures — source verified data in story.json",
+    "footnote": "ILLUSTRATIVE FIGURES · REPLACE WITH VERIFIED DATA IN src/mcd/data/businessStory.json"
+  },
+  "finale": {
+    "montage": {
+      "mapLabel": "GLOBAL NETWORK",
+      "revenueLabel": "REVENUE",
+      "businessLabel": "THE BUSINESS MODEL",
+      "networkLabel": "40,000+ LOCATIONS"
+    },
+    "line1": {
+      "kicker": "THE BIG PICTURE",
+      "lines": ["THE REAL BUSINESS", "ISN'T JUST BURGERS."]
+    },
+    "line2": {
+      "lines": [{ "text": "IT'S THE SYSTEM." }]
+    },
+    "footer": "A MOTION-GRAPHIC EXPLAINER · ILLUSTRATIVE FIGURES"
+  }
+}

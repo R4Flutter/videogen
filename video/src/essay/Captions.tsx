@@ -150,7 +150,10 @@ export const EssayCaptions: React.FC<{ plan: DirectorPlan }> = ({ plan }) => {
 
   if (mode === "LOWER_THIRD") {
     // The source, not the words: "FBI INVESTIGATION FILES, 2024".
-    const label = sBeat.source ?? sBeat.name.toUpperCase();
+    const label =
+    "source" in sBeat && typeof sBeat.source === "string"
+      ? sBeat.source
+      : sBeat.name.toUpperCase();
     return (
       <div
         style={{

@@ -1,0 +1,82 @@
+**Topic:** The 8:30 Meeting
+**Format:** InfoLong
+**Resolution:** 1920×1080
+**FPS:** 30
+**Target runtime:** 0:15
+**Title:** "The 8:30 Meeting"
+**Description:** "Five people. Five cities. One boss who wants them all at the table."
+
+---
+
+# 0:00–0:02 — THE CALL
+
+**MODULES:** title
+**AUDIO:** minimal
+**SFX:** transition_soft
+
+### NARRATION
+Five reports due before eight thirty.
+
+### VISUAL
+**THE 8:30 MEETING**
+**5 PEOPLE — 5 CITIES — 1 BOSS**
+
+# 0:02–0:04 — MAYA LEAVES NEW YORK
+
+**MODULES:** travel
+**AUDIO:** builds
+**SFX:** tick
+
+### NARRATION
+Maya leaves New York at dawn.
+
+### VISUAL
+**MAYA — NEW YORK**
+
+# 0:05–0:07 — LUCAS LEAVES LONDON
+
+**MODULES:** travel
+**AUDIO:** builds
+**SFX:** tick
+
+### NARRATION
+Lucas catches the red-eye from London.
+
+### VISUAL
+**LUCAS — LONDON**
+
+# 0:08–0:10 — RIN LEAVES TOKYO
+
+**MODULES:** travel
+**AUDIO:** builds
+**SFX:** tick
+
+### NARRATION
+Rin boards the last flight out of Tokyo.
+
+### VISUAL
+**RIN — TOKYO**
+
+# 0:11–0:13 — ARJUN LEAVES MUMBAI
+
+**MODULES:** travel
+**AUDIO:** builds
+**SFX:** tick
+
+### NARRATION
+Arjun rides the night train from Mumbai.
+
+### VISUAL
+**ARJUN — MUMBAI**
+
+# 0:13–0:16 — CHLOE LEAVES SYDNEY
+
+**MODULES:** travel
+**AUDIO:** impact
+**SFX:** whoosh
+
+### NARRATION
+And Chloe flies in from Sydney.
+
+### VISUAL
+**CHLOE — SYDNEY**

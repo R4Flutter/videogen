@@ -5,6 +5,10 @@ import { IMAGE_SHORT_SECONDS, ImageShort } from "./ImageShort";
 import { ScamDoc } from "./scam/ScamShort";
 import { VoxShort } from "./VoxShort";
 import { EssayDoc } from "./essay/EssayDoc";
+import { INFO_TRACKS, InfoDoc } from "./InfoDoc";
+import { McdVideo } from "./mcd/Video";
+import { STORY_LIST } from "./mcd/stories";
+import { TOTAL_FRAMES, VIDEO_CONFIG } from "./mcd/data/timeline";
 import script from "./script.json";
 import plan from "./director-plan.json";
 import type { DirectorPlan } from "./director/types.ts";
@@ -20,6 +24,7 @@ const frames = (seconds: number) => Math.max(1, Math.round(seconds * fps));
 export const RemotionRoot: React.FC = () => {
   const vox = script.engine === "vox";
   const scam = script.engine === "scam";
+  const info = script.engine === "info";
   return (
     <>
       {/* Not driven by the story at all — just the pictures sitting in
@@ -102,6 +107,43 @@ export const RemotionRoot: React.FC = () => {
           />
         </>
       ) : null}
+      {info ? (
+        <>
+          <Composition
+            id="InfoLong"
+            component={InfoDoc}
+            width={script.width}
+            height={script.height}
+            fps={fps}
+            durationInFrames={frames(INFO_TRACKS.runtime(INFO_TRACKS.long))}
+          />
+          {INFO_TRACKS.long.length >= 5 ? (
+            <Composition
+              id="InfoDemo"
+              component={InfoDoc}
+              width={1920}
+              height={1080}
+              fps={fps}
+              durationInFrames={frames(INFO_TRACKS.runtime(INFO_TRACKS.long))}
+            />
+          ) : null}
+        </>
+      ) : null}
+
+      {/* Self-contained business-documentary engine (src/mcd) — one
+          composition per registered story (stories/index.ts). */}
+      {STORY_LIST.map((story) => (
+        <Composition
+          key={story.id}
+          id={story.id}
+          component={McdVideo}
+          defaultProps={{ story }}
+          width={VIDEO_CONFIG.width}
+          height={VIDEO_CONFIG.height}
+          fps={VIDEO_CONFIG.fps}
+          durationInFrames={TOTAL_FRAMES}
+        />
+      ))}
     </>
   );
 };

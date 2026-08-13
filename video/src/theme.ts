@@ -55,4 +55,22 @@ export const theme = {
     verified: "#1B6FDB", // the *fake* verification checkmarks scammers fake
     font: `"Archivo", "Bahnschrift", "Segoe UI", system-ui, sans-serif`,
   },
+  // Info: the flat infographic page. Deep navy board, white ink, one electric
+  // accent for "look here", a second for the thing everything is pointing at.
+  // No texture, no gradients pretending to be light — the flatness is the
+  // style, the way it is on every chart card that goes viral.
+  info: {
+    board: "#0B1220", // the canvas
+    panel: "#13203A", // cards on the canvas
+    panelLine: "#223455", // panel edge
+    ink: "#F5F8FF", // headline ink
+    text: "#C7D2E8", // body ink
+    dim: "#64748B", // secondary
+    accent: "#FFC53D", // the look-here number / path / figure
+    boss: "#FF5A4E", // the red thing the story centers on
+    good: "#3DDC97", // arrived / done
+    rule: "#1E2D4B",
+    font: `"Archivo", "Bahnschrift", "Segoe UI", system-ui, sans-serif`,
+    mono: `"Consolas", "DejaVu Sans Mono", ui-monospace, monospace`,
+  },
 } as const;

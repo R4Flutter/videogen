@@ -1,0 +1,254 @@
+{
+  "total": 13.969,
+  "beats": [
+    {
+      "n": 1,
+      "file": "",
+      "start": 0,
+      "dur": 2.166,
+      "speech": 2.166,
+      "words": [
+        {
+          "w": "Five",
+          "start": 0,
+          "end": 0.361
+        },
+        {
+          "w": "reports",
+          "start": 0.361,
+          "end": 0.722
+        },
+        {
+          "w": "due",
+          "start": 0.722,
+          "end": 1.083
+        },
+        {
+          "w": "before",
+          "start": 1.083,
+          "end": 1.444
+        },
+        {
+          "w": "eight",
+          "start": 1.444,
+          "end": 1.805
+        },
+        {
+          "w": "thirty.",
+          "start": 1.805,
+          "end": 2.166
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "file": "",
+      "start": 2.166,
+      "dur": 2.166,
+      "speech": 2.166,
+      "words": [
+        {
+          "w": "Maya",
+          "start": 0,
+          "end": 0.361
+        },
+        {
+          "w": "leaves",
+          "start": 0.361,
+          "end": 0.722
+        },
+        {
+          "w": "New",
+          "start": 0.722,
+          "end": 1.083
+        },
+        {
+          "w": "York",
+          "start": 1.083,
+          "end": 1.444
+        },
+        {
+          "w": "at",
+          "start": 1.444,
+          "end": 1.805
+        },
+        {
+          "w": "dawn.",
+          "start": 1.805,
+          "end": 2.166
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "file": "",
+      "start": 4.332,
+      "dur": 2.166,
+      "speech": 2.166,
+      "words": [
+        {
+          "w": "Lucas",
+          "start": 0,
+          "end": 0.361
+        },
+        {
+          "w": "catches",
+          "start": 0.361,
+          "end": 0.722
+        },
+        {
+          "w": "the",
+          "start": 0.722,
+          "end": 1.083
+        },
+        {
+          "w": "red-eye",
+          "start": 1.083,
+          "end": 1.444
+        },
+        {
+          "w": "from",
+          "start": 1.444,
+          "end": 1.805
+        },
+        {
+          "w": "London.",
+          "start": 1.805,
+          "end": 2.166
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "file": "",
+      "start": 6.498,
+      "dur": 2.815,
+      "speech": 2.815,
+      "words": [
+        {
+          "w": "Rin",
+          "start": 0,
+          "end": 0.352
+        },
+        {
+          "w": "boards",
+          "start": 0.352,
+          "end": 0.704
+        },
+        {
+          "w": "the",
+          "start": 0.704,
+          "end": 1.056
+        },
+        {
+          "w": "last",
+          "start": 1.056,
+          "end": 1.408
+        },
+        {
+          "w": "flight",
+          "start": 1.408,
+          "end": 1.759
+        },
+        {
+          "w": "out",
+          "start": 1.759,
+          "end": 2.111
+        },
+        {
+          "w": "of",
+          "start": 2.111,
+          "end": 2.463
+        },
+        {
+          "w": "Tokyo.",
+          "start": 2.463,
+          "end": 2.815
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "file": "",
+      "start": 9.313,
+      "dur": 2.49,
+      "speech": 2.49,
+      "words": [
+        {
+          "w": "Arjun",
+          "start": 0,
+          "end": 0.356
+        },
+        {
+          "w": "rides",
+          "start": 0.356,
+          "end": 0.711
+        },
+        {
+          "w": "the",
+          "start": 0.711,
+          "end": 1.067
+        },
+        {
+          "w": "night",
+          "start": 1.067,
+          "end": 1.423
+        },
+        {
+          "w": "train",
+          "start": 1.423,
+          "end": 1.779
+        },
+        {
+          "w": "from",
+          "start": 1.779,
+          "end": 2.134
+        },
+        {
+          "w": "Mumbai.",
+          "start": 2.134,
+          "end": 2.49
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "file": "",
+      "start": 11.803,
+      "dur": 2.166,
+      "speech": 2.166,
+      "words": [
+        {
+          "w": "And",
+          "start": 0,
+          "end": 0.361
+        },
+        {
+          "w": "Chloe",
+          "start": 0.361,
+          "end": 0.722
+        },
+        {
+          "w": "flies",
+          "start": 0.722,
+          "end": 1.083
+        },
+        {
+          "w": "in",
+          "start": 1.083,
+          "end": 1.444
+        },
+        {
+          "w": "from",
+          "start": 1.444,
+          "end": 1.805
+        },
+        {
+          "w": "Sydney.",
+          "start": 1.805,
+          "end": 2.166
+        }
+      ]
+    }
+  ]
+}
