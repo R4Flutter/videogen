@@ -1,0 +1,233 @@
+[
+  {
+    "n": 1,
+    "name": "THE HOOK",
+    "spoken": "The truth about the 18-year-old who bought a Lamborghini from a 500 dollar trading account.",
+    "energy": 0.8,
+    "pace": 0.58,
+    "holdAfter": 0.5,
+    "seconds": 4.457,
+    "engine": "edge-tts",
+    "lines": [
+      {
+        "text": "The truth about the 18-year-old who bought a Lamborghini from a 500 dollar trading account.",
+        "direction": "land",
+        "energy": 0.85,
+        "pace": 0.5,
+        "hold": 0.0
+      }
+    ]
+  },
+  {
+    "n": 2,
+    "name": "VIRAL SCALE",
+    "spoken": "Twenty five million views. TikTok, Instagram, Reddit, the same video on every timeline on Earth, in days.",
+    "energy": 0.62,
+    "pace": 0.56,
+    "holdAfter": 0.4,
+    "seconds": 6.295,
+    "engine": "edge-tts",
+    "lines": [
+      {
+        "text": "Twenty five million views.",
+        "direction": "neutral",
+        "energy": 0.62,
+        "pace": 0.56,
+        "hold": 0.22
+      },
+      {
+        "text": "TikTok, Instagram, Reddit, the same video on every timeline on Earth, in days.",
+        "direction": "neutral",
+        "energy": 0.62,
+        "pace": 0.56,
+        "hold": 0.0
+      }
+    ]
+  },
+  {
+    "n": 3,
+    "name": "THE MEME SPREADS",
+    "spoken": "From Los Angeles to Tokyo, the story spread in days. But nobody can prove a single dollar is real, so how did a teen turn 500 dollars into five million?",
+    "energy": 0.72,
+    "pace": 0.58,
+    "holdAfter": 0.4,
+    "seconds": 8.132,
+    "engine": "edge-tts",
+    "lines": [
+      {
+        "text": "From Los Angeles to Tokyo, the story spread in days.",
+        "direction": "neutral",
+        "energy": 0.72,
+        "pace": 0.58,
+        "hold": 0.22
+      },
+      {
+        "text": "But nobody can prove a single dollar is real, so how did a teen turn 500 dollars into five million?",
+        "direction": "land",
+        "energy": 0.84,
+        "pace": 0.5,
+        "hold": 0.0
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "name": "THE MONEY MACHINE",
+    "spoken": "The claim: 500 dollars turned into five million dollars through trading. Five million. In a car. Allegedly.",
+    "energy": 0.5,
+    "pace": 0.54,
+    "holdAfter": 0.5,
+    "seconds": 6.747,
+    "engine": "edge-tts",
+    "lines": [
+      {
+        "text": "The claim: 500 dollars turned into five million dollars through trading.",
+        "direction": "flat",
+        "energy": 0.44,
+        "pace": 0.58,
+        "hold": 0.14
+      },
+      {
+        "text": "Five million.",
+        "direction": "neutral",
+        "energy": 0.5,
+        "pace": 0.54,
+        "hold": 0.22
+      },
+      {
+        "text": "In a car.",
+        "direction": "neutral",
+        "energy": 0.5,
+        "pace": 0.54,
+        "hold": 0.22
+      },
+      {
+        "text": "Allegedly.",
+        "direction": "neutral",
+        "energy": 0.5,
+        "pace": 0.54,
+        "hold": 0.0
+      }
+    ]
+  },
+  {
+    "n": 5,
+    "name": "THE BUSINESS MODEL",
+    "spoken": "Here's the machine. Followers give attention. Feeds spread the hype. Trading apps make it effortless. And the story becomes the brand, the kid with the supercar.",
+    "energy": 0.5,
+    "pace": 0.54,
+    "holdAfter": 0.4,
+    "seconds": 8.49,
+    "engine": "edge-tts",
+    "lines": [
+      {
+        "text": "Here's the machine.",
+        "direction": "neutral",
+        "energy": 0.5,
+        "pace": 0.54,
+        "hold": 0.22
+      },
+      {
+        "text": "Followers give attention.",
+        "direction": "neutral",
+        "energy": 0.5,
+        "pace": 0.54,
+        "hold": 0.22
+      },
+      {
+        "text": "Feeds spread the hype.",
+        "direction": "neutral",
+        "energy": 0.5,
+        "pace": 0.54,
+        "hold": 0.22
+      },
+      {
+        "text": "Trading apps make it effortless.",
+        "direction": "neutral",
+        "energy": 0.5,
+        "pace": 0.54,
+        "hold": 0.22
+      },
+      {
+        "text": "And the story becomes the brand, the kid with the supercar.",
+        "direction": "neutral",
+        "energy": 0.5,
+        "pace": 0.54,
+        "hold": 0.0
+      }
+    ]
+  },
+  {
+    "n": 6,
+    "name": "VIRAL GROWTH",
+    "spoken": "Attention grew like a chart, a few million views, then tens of millions. But hype is not proof. Faith paid the bills, not receipts.",
+    "energy": 0.55,
+    "pace": 0.52,
+    "holdAfter": 0.5,
+    "seconds": 7.243,
+    "engine": "edge-tts",
+    "lines": [
+      {
+        "text": "Attention grew like a chart, a few million views, then tens of millions.",
+        "direction": "neutral",
+        "energy": 0.55,
+        "pace": 0.52,
+        "hold": 0.22
+      },
+      {
+        "text": "But hype is not proof.",
+        "direction": "lean_in",
+        "energy": 0.61,
+        "pace": 0.48,
+        "hold": 0.3
+      },
+      {
+        "text": "Faith paid the bills, not receipts.",
+        "direction": "neutral",
+        "energy": 0.55,
+        "pace": 0.52,
+        "hold": 0.0
+      }
+    ]
+  },
+  {
+    "n": 7,
+    "name": "THE REAL LESSON",
+    "spoken": "So what's the real lesson? Hype is not a business. Verify before you trade. A Lamborghini is never a strategy.",
+    "energy": 0.62,
+    "pace": 0.55,
+    "holdAfter": 0.6,
+    "seconds": 6.547,
+    "engine": "edge-tts",
+    "lines": [
+      {
+        "text": "So what's the real lesson?",
+        "direction": "lean_in",
+        "energy": 0.68,
+        "pace": 0.51,
+        "hold": 0.3
+      },
+      {
+        "text": "Hype is not a business.",
+        "direction": "neutral",
+        "energy": 0.62,
+        "pace": 0.55,
+        "hold": 0.22
+      },
+      {
+        "text": "Verify before you trade.",
+        "direction": "lean_in",
+        "energy": 0.68,
+        "pace": 0.51,
+        "hold": 0.3
+      },
+      {
+        "text": "A Lamborghini is never a strategy.",
+        "direction": "land",
+        "energy": 0.74,
+        "pace": 0.47,
+        "hold": 0.0
+      }
+    ]
+  }
+]

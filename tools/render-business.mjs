@@ -20,7 +20,7 @@ const storyJsonPaths = () => {
   const storiesDir = join(videoDir, "src", "mcd", "stories");
   if (existsSync(storiesDir)) {
     for (const f of readdirSync(storiesDir)) {
-      if (f.endsWith(".json")) paths.push(join(storiesDir, f));
+      if (f.endsWith(".json") && !f.endsWith(".timeline.json")) paths.push(join(storiesDir, f));
     }
   }
   return paths;
@@ -39,13 +39,13 @@ const stories = () => {
   return out.sort((a, b) => a.id.localeCompare(b.id));
 };
 
-const validate = (): void => {
+const validate = () => {
   execSync("npx tsc --noEmit", { cwd: videoDir, stdio: "inherit" });
 };
 
-const deriveTimeline = (storyPath: string): void => {
+const deriveTimeline = (storyPath) => {
   execSync(
-    `node --experimental-strip-types --no-warnings tools/mcd-timeline.mjs ${storyPath}`,
+    `node --experimental-strip-types --no-warnings ../tools/mcd-timeline.mjs ${storyPath}`,
     { cwd: videoDir, stdio: "inherit" },
   );
 };

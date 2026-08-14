@@ -1,7 +1,7 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
 import { spring } from "remotion";
-import { COLORS } from "../theme";
+import { COLORS, withAlpha } from "../theme";
 
 type Props = {
   value: number; // 0..1 target
@@ -15,7 +15,9 @@ type Props = {
   style?: React.CSSProperties;
 };
 
-// A bar that grows to `value` with spring settle (subtle overshoot).
+// A bar that grows to `value` with spring settle (subtle overshoot), filled
+// with a vertical sheen + top highlight so the paper palette reads as printed
+// ink rather than flat UI.
 export const AnimatedBar: React.FC<Props> = ({
   value,
   delay = 0,
@@ -44,6 +46,7 @@ export const AnimatedBar: React.FC<Props> = ({
         borderRadius: radius,
         background: fillColor,
         overflow: "hidden",
+        boxShadow: `inset 0 0 0 1px ${withAlpha(COLORS.textPrimary, 0.08)}`,
         ...style,
       }}
     >
@@ -51,11 +54,24 @@ export const AnimatedBar: React.FC<Props> = ({
         style={{
           height: "100%",
           borderRadius: radius,
-          background: color,
+          background: `linear-gradient(180deg, ${withAlpha("#FFFFFF", 0.3)} 0%, ${withAlpha("#FFFFFF", 0.04)} 42%, ${color} 100%)`,
           transform: `scale${reverse ? "Y" : "X"}(${scale})`,
           transformOrigin: reverse ? "center bottom" : "left center",
+          position: "relative",
         }}
-      />
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: 2,
+            left: 4,
+            right: 4,
+            height: Math.max(2, height * 0.13),
+            borderRadius: radius,
+            background: withAlpha("#FFFFFF", 0.45),
+          }}
+        />
+      </div>
     </div>
   );
 };

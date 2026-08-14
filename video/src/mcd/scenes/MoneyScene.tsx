@@ -1,8 +1,9 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { AbsoluteFill, interpolateColors, useCurrentFrame, useVideoConfig } from "remotion";
 import { EASE_ARRIVE } from "../utils/easing";
 import { progressive, springProgress, useSceneInOut } from "../utils/animation";
-import { Camera2D, type CameraKeyframe } from "../components/Camera2D";
+import { Camera2D } from "../components/Camera2D";
+import { useDirector } from "../data/director";
 import { CountUp } from "../components/CountUp";
 import { AnimatedBar } from "../components/AnimatedBar";
 import { Backdrop } from "../components/Backdrop";
@@ -26,22 +27,7 @@ export const MoneyScene: React.FC = () => {
   const portrait = height > width;
   const { opacity, scale } = useSceneInOut(frame, durationInFrames);
 
-  const CAM = useMemo<CameraKeyframe[]>(() => {
-    const c = (f: number): CameraKeyframe => ({ frame: at(f), easing: EASE_ARRIVE });
-    return [
-      { ...c(0), camera: { x: 960, y: 540, scale: 1.06 } },
-      { ...c(0.138), camera: { x: 960, y: 540, scale: 1 } },
-      { frame: at(0.843), camera: { x: 960, y: 540, scale: 1 } },
-    ];
-  }, [at]);
-  const CAM_P = useMemo<CameraKeyframe[]>(() => {
-    const c = (f: number): CameraKeyframe => ({ frame: at(f), easing: EASE_ARRIVE });
-    return [
-      { ...c(0), camera: { x: 540, y: 960, scale: 1.06 } },
-      { ...c(0.138), camera: { x: 540, y: 960, scale: 1 } },
-      { frame: at(0.843), camera: { x: 540, y: 960, scale: 1 } },
-    ];
-  }, [at]);
+  const { keyframes: CAM, keyframesPortrait: CAM_P } = useDirector();
 
   const steps = REVENUE.steps.map((s) => ({ value: s.value, frame: at(s.at) }));
   const finalValue = REVENUE.steps[REVENUE.steps.length - 1].value;

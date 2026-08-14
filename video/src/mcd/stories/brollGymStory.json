@@ -1,0 +1,71 @@
+{
+  "id": "BrollGymStory",
+  "title": "The Company That Sells You Nothing — B-roll",
+  "brand": "Planet Fitness",
+  "wpm": 170,
+  "longForm": true,
+  "targetSec": 16,
+  "hero": {
+    "kind": "image",
+    "width": 1200,
+    "height": 400
+  },
+  "theme": {
+    "accent": "#16A34A",
+    "accentSecondary": "#F5C518"
+  },
+  "scenes": [
+    {
+      "id": "cold-open",
+      "type": "broll",
+      "narration": [
+        "Planet Fitness has eighteen point seven million members.",
+        "Roughly two thousand five hundred gyms, open around the clock.",
+        "Most nights, the machines sit empty.",
+        "The lonely ones show up anyway.",
+        "If ten percent showed up, the business would not survive the month."
+      ],
+      "energy": 0.85,
+      "pace": 0.62,
+      "edit": {
+        "maxSec": 14
+      },
+      "data": {
+        "kicker": "PLANET FITNESS · 4 AM",
+        "vertical": 0.52,
+        "lines": [
+          {
+            "text": "Planet Fitness has eighteen point seven million members.",
+            "asset": "subjects/machine-row",
+            "direction": "rtl",
+            "caption": "18.7 MILLION MEMBERS"
+          },
+          {
+            "text": "Roughly two thousand five hundred gyms, open around the clock.",
+            "asset": "subjects/treadmill",
+            "direction": "ltr"
+          },
+          {
+            "text": "Most nights, the machines sit empty.",
+            "asset": "subjects/machine-row",
+            "direction": "rtl",
+            "heightFrac": 0.34
+          },
+          {
+            "text": "The lonely ones show up anyway.",
+            "asset": "subjects/gym-person",
+            "direction": "ltr",
+            "heightFrac": 0.72,
+            "caption": "ONE RUNS AT 4 AM"
+          },
+          {
+            "text": "If ten percent showed up, the business would not survive the month.",
+            "asset": "subjects/treadmill",
+            "direction": "rtl",
+            "heightFrac": 0.46
+          }
+        ]
+      }
+    }
+  ]
+}

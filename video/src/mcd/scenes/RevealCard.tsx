@@ -2,7 +2,8 @@ import React from "react";
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { EASE_ARRIVE } from "../utils/easing";
 import { progressive, springProgress, useSceneInOut } from "../utils/animation";
-import { Camera2D, type CameraKeyframe } from "../components/Camera2D";
+import { Camera2D } from "../components/Camera2D";
+import { useDirector } from "../data/director";
 import { AnimatedText } from "../components/AnimatedText";
 import { Backdrop } from "../components/Backdrop";
 import { useScene } from "../StoryContext";
@@ -20,11 +21,7 @@ export const RevealCard: React.FC = () => {
     entranceScale: 1.03,
   });
 
-  const CAMERA: CameraKeyframe[] = [
-    { frame: 0, camera: { x: 960, y: 540, scale: 1.08 }, easing: EASE_ARRIVE },
-    { frame: at(0.4), camera: { x: 960, y: 540, scale: 1 }, easing: EASE_ARRIVE },
-    { frame: at(0.95), camera: { x: 960, y: 540, scale: 1 } },
-  ];
+  const CAMERA = useDirector().keyframes;
 
   const kickerP = progressive(frame, at(0.08), at(0.2) - at(0.08), EASE_ARRIVE);
   const valueP = springProgress(frame, fps, { delay: at(0.3), damping: 12, stiffness: 160 });

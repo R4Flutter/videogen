@@ -1,0 +1,125 @@
+{
+  "id": "GymPreviewStory",
+  "title": "The Company That Sells You Nothing",
+  "brand": "Planet Fitness",
+  "wpm": 170,
+  "targetSec": 10.5,
+  "hero": {
+    "kind": "image",
+    "width": 1200,
+    "height": 400
+  },
+  "theme": {
+    "accent": "#16A34A",
+    "accentSecondary": "#F5C518"
+  },
+  "scenes": [
+    {
+      "id": "the-gym",
+      "type": "hero",
+      "narration": [
+        "Planet Fitness has eighteen point seven million members. It has roughly two thousand five hundred gyms."
+      ],
+      "energy": 0.85,
+      "pace": 0.6,
+      "edit": {
+        "maxSec": 8
+      },
+      "data": {
+        "kicker": "PLANET FITNESS · 4 AM",
+        "beats": [
+          { "name": "gym", "at": 0.08, "importance": 0.7 },
+          { "name": "members", "at": 0.45, "importance": 1.0 },
+          { "name": "gyms", "at": 0.78, "importance": 0.6 }
+        ],
+        "subject": {
+          "asset": "subjects/treadmill",
+          "position": "center",
+          "width": 1500,
+          "kind": "object",
+          "entrance": {
+            "type": "slide_right",
+            "personality": "mechanical",
+            "overshoot": false,
+            "trigger": "beat:gym",
+            "durationFrames": 40
+          },
+          "exit": {
+            "type": "fade_out",
+            "personality": "soft",
+            "durationFrames": 12
+          },
+          "effects": ["subtle_shadow"]
+        },
+        "subjects": [
+          {
+            "asset": "subjects/gym-person",
+            "position": "subject",
+            "custom": { "x": 0.5, "y": 0.789 },
+            "anchor": { "x": 0.5, "y": 0.762 },
+            "relativeWidth": 0.165,
+            "entrance": {
+              "type": "pop_in",
+              "personality": "snappy",
+              "overshoot": true,
+              "trigger": "beat:members",
+              "delayFrames": 6
+            },
+            "exit": {
+              "type": "fade_out",
+              "personality": "soft",
+              "durationFrames": 10
+            }
+          }
+        ],
+        "texts": [
+          {
+            "text": "18.7 MILLION MEMBERS",
+            "position": "upper_center",
+            "role": "number",
+            "accent": true,
+            "anim": {
+              "type": "slam",
+              "personality": "aggressive",
+              "trigger": "beat:members"
+            }
+          },
+          {
+            "text": "2,500 GYMS · ROOM FOR A FEW HUNDRED",
+            "position": "lower_center",
+            "role": "sub",
+            "anim": {
+              "type": "fade_up",
+              "personality": "soft",
+              "trigger": "beat:gyms",
+              "durationFrames": 20
+            }
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "intensity": 0.12
+        }
+      }
+    },
+    {
+      "id": "the-math",
+      "type": "reveal",
+      "narration": [
+        "If ten percent showed up, the business would not survive the month."
+      ],
+      "energy": 0.9,
+      "pace": 0.62,
+      "edit": {
+        "camera": "punch",
+        "intensity": 0.9
+      },
+      "data": {
+        "kicker": "THE ARITHMETIC",
+        "value": "10%",
+        "lines": ["OF MEMBERS SHOW UP", "ONE NIGHT."],
+        "note": "THE FIRE MARSHAL CLOSES THE DOOR"
+      }
+    }
+  ]
+}

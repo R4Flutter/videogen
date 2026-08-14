@@ -1,0 +1,1284 @@
+{
+  "storyId": "CompanySellsNothingStory",
+  "fps": 30,
+  "wpm": 170,
+  "totalSeconds": 325.56666666666666,
+  "totalFrames": 9767,
+  "cutsPerMinute": 19.903757550936827,
+  "scenes": [
+    {
+      "id": "empty-gym",
+      "type": "hook",
+      "startFrame": 0,
+      "durationInFrames": 184,
+      "startSec": 0,
+      "durationSec": 6.147058823529411,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 0,
+          "sec": 0
+        }
+      ]
+    },
+    {
+      "id": "the-arithmetic",
+      "type": "money",
+      "startFrame": 187,
+      "durationInFrames": 206,
+      "startSec": 6.233333333333333,
+      "durationSec": 6.852941176470588,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 187,
+          "sec": 6.233333333333333
+        },
+        {
+          "cue": "tick",
+          "frame": 259,
+          "sec": 8.633333333333333
+        },
+        {
+          "cue": "tick",
+          "frame": 331,
+          "sec": 11.033333333333333
+        },
+        {
+          "cue": "impact",
+          "frame": 387,
+          "sec": 12.9
+        }
+      ]
+    },
+    {
+      "id": "the-gap-sits-there",
+      "type": "reveal",
+      "startFrame": 396,
+      "durationInFrames": 216,
+      "startSec": 13.2,
+      "durationSec": 7.205882352941177,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 396,
+          "sec": 13.2
+        },
+        {
+          "cue": "impact",
+          "frame": 493,
+          "sec": 16.433333333333334
+        }
+      ]
+    },
+    {
+      "id": "four-percent-ten-percent",
+      "type": "reveal",
+      "startFrame": 615,
+      "durationInFrames": 227,
+      "startSec": 20.5,
+      "durationSec": 7.5588235294117645,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 615,
+          "sec": 20.5
+        },
+        {
+          "cue": "impact",
+          "frame": 717,
+          "sec": 23.9
+        }
+      ]
+    },
+    {
+      "id": "its-the-product",
+      "type": "reveal",
+      "startFrame": 845,
+      "durationInFrames": 110,
+      "startSec": 28.166666666666668,
+      "durationSec": 3.676470588235294,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 845,
+          "sec": 28.166666666666668
+        },
+        {
+          "cue": "impact",
+          "frame": 895,
+          "sec": 29.833333333333332
+        }
+      ]
+    },
+    {
+      "id": "bank-statement",
+      "type": "reveal",
+      "startFrame": 958,
+      "durationInFrames": 163,
+      "startSec": 31.933333333333334,
+      "durationSec": 5.4411764705882355,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 958,
+          "sec": 31.933333333333334
+        },
+        {
+          "cue": "impact",
+          "frame": 1031,
+          "sec": 34.36666666666667
+        }
+      ]
+    },
+    {
+      "id": "guess-vs-actual",
+      "type": "money",
+      "startFrame": 1124,
+      "durationInFrames": 216,
+      "startSec": 37.46666666666667,
+      "durationSec": 7.205882352941177,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 1124,
+          "sec": 37.46666666666667
+        },
+        {
+          "cue": "tick",
+          "frame": 1210,
+          "sec": 40.333333333333336
+        },
+        {
+          "cue": "tick",
+          "frame": 1286,
+          "sec": 42.86666666666667
+        },
+        {
+          "cue": "impact",
+          "frame": 1334,
+          "sec": 44.46666666666667
+        }
+      ]
+    },
+    {
+      "id": "free-trial-checkout",
+      "type": "reveal",
+      "startFrame": 1343,
+      "durationInFrames": 153,
+      "startSec": 44.766666666666666,
+      "durationSec": 5.088235294117648,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 1343,
+          "sec": 44.766666666666666
+        },
+        {
+          "cue": "impact",
+          "frame": 1412,
+          "sec": 47.06666666666667
+        }
+      ]
+    },
+    {
+      "id": "cost-structure",
+      "type": "model",
+      "startFrame": 1499,
+      "durationInFrames": 216,
+      "startSec": 49.96666666666667,
+      "durationSec": 7.205882352941177,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 1499,
+          "sec": 49.96666666666667
+        },
+        {
+          "cue": "impact",
+          "frame": 1704,
+          "sec": 56.8
+        }
+      ]
+    },
+    {
+      "id": "cost-to-serve-spike",
+      "type": "chart",
+      "startFrame": 1718,
+      "durationInFrames": 195,
+      "startSec": 57.266666666666666,
+      "durationSec": 6.5,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 1718,
+          "sec": 57.266666666666666
+        },
+        {
+          "cue": "chart",
+          "frame": 1739,
+          "sec": 57.96666666666667
+        },
+        {
+          "cue": "chart",
+          "frame": 1747,
+          "sec": 58.233333333333334
+        },
+        {
+          "cue": "impact",
+          "frame": 1827,
+          "sec": 60.9
+        }
+      ]
+    },
+    {
+      "id": "ideal-customer",
+      "type": "reveal",
+      "startFrame": 1916,
+      "durationInFrames": 121,
+      "startSec": 63.86666666666667,
+      "durationSec": 4.029411764705882,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 1916,
+          "sec": 63.86666666666667
+        },
+        {
+          "cue": "impact",
+          "frame": 1970,
+          "sec": 65.66666666666667
+        }
+      ]
+    },
+    {
+      "id": "google-trends",
+      "type": "chart",
+      "startFrame": 2040,
+      "durationInFrames": 153,
+      "startSec": 68,
+      "durationSec": 5.088235294117648,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 2040,
+          "sec": 68
+        },
+        {
+          "cue": "chart",
+          "frame": 2057,
+          "sec": 68.56666666666666
+        },
+        {
+          "cue": "chart",
+          "frame": 2063,
+          "sec": 68.76666666666667
+        },
+        {
+          "cue": "chart",
+          "frame": 2068,
+          "sec": 68.93333333333334
+        },
+        {
+          "cue": "chart",
+          "frame": 2074,
+          "sec": 69.13333333333334
+        },
+        {
+          "cue": "chart",
+          "frame": 2080,
+          "sec": 69.33333333333333
+        },
+        {
+          "cue": "impact",
+          "frame": 2126,
+          "sec": 70.86666666666666
+        }
+      ]
+    },
+    {
+      "id": "breakage",
+      "type": "title",
+      "startFrame": 2196,
+      "durationInFrames": 153,
+      "startSec": 73.2,
+      "durationSec": 5.088235294117648,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 2196,
+          "sec": 73.2
+        }
+      ]
+    },
+    {
+      "id": "gift-card-to-subscription",
+      "type": "model",
+      "startFrame": 2352,
+      "durationInFrames": 184,
+      "startSec": 78.4,
+      "durationSec": 6.147058823529411,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 2352,
+          "sec": 78.4
+        },
+        {
+          "cue": "impact",
+          "frame": 2527,
+          "sec": 84.23333333333333
+        }
+      ]
+    },
+    {
+      "id": "calendar-of-charges",
+      "type": "reveal",
+      "startFrame": 2539,
+      "durationInFrames": 153,
+      "startSec": 84.63333333333334,
+      "durationSec": 5.088235294117648,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 2539,
+          "sec": 84.63333333333334
+        },
+        {
+          "cue": "impact",
+          "frame": 2608,
+          "sec": 86.93333333333334
+        }
+      ]
+    },
+    {
+      "id": "bally-contract",
+      "type": "reveal",
+      "startFrame": 2695,
+      "durationInFrames": 206,
+      "startSec": 89.83333333333333,
+      "durationSec": 6.852941176470588,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 2695,
+          "sec": 89.83333333333333
+        },
+        {
+          "cue": "impact",
+          "frame": 2788,
+          "sec": 92.93333333333334
+        }
+      ]
+    },
+    {
+      "id": "clippings-complaints",
+      "type": "reveal",
+      "startFrame": 2904,
+      "durationInFrames": 184,
+      "startSec": 96.8,
+      "durationSec": 6.147058823529411,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 2904,
+          "sec": 96.8
+        },
+        {
+          "cue": "impact",
+          "frame": 2987,
+          "sec": 99.56666666666666
+        }
+      ]
+    },
+    {
+      "id": "wrong-tool",
+      "type": "reveal",
+      "startFrame": 3091,
+      "durationInFrames": 121,
+      "startSec": 103.03333333333333,
+      "durationSec": 4.029411764705882,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 3091,
+          "sec": 103.03333333333333
+        },
+        {
+          "cue": "impact",
+          "frame": 3145,
+          "sec": 104.83333333333333
+        }
+      ]
+    },
+    {
+      "id": "storefront",
+      "type": "hook",
+      "startFrame": 3215,
+      "durationInFrames": 184,
+      "startSec": 107.16666666666667,
+      "durationSec": 6.147058823529411,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 3215,
+          "sec": 107.16666666666667
+        }
+      ]
+    },
+    {
+      "id": "ten-among-the-noise",
+      "type": "money",
+      "startFrame": 3402,
+      "durationInFrames": 121,
+      "startSec": 113.4,
+      "durationSec": 4.029411764705882,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 3402,
+          "sec": 113.4
+        },
+        {
+          "cue": "tick",
+          "frame": 3475,
+          "sec": 115.83333333333333
+        },
+        {
+          "cue": "impact",
+          "frame": 3519,
+          "sec": 117.3
+        }
+      ]
+    },
+    {
+      "id": "ten-vs-hundred-twenty",
+      "type": "money",
+      "startFrame": 3526,
+      "durationInFrames": 206,
+      "startSec": 117.53333333333333,
+      "durationSec": 6.852941176470588,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 3526,
+          "sec": 117.53333333333333
+        },
+        {
+          "cue": "tick",
+          "frame": 3598,
+          "sec": 119.93333333333334
+        },
+        {
+          "cue": "tick",
+          "frame": 3670,
+          "sec": 122.33333333333333
+        },
+        {
+          "cue": "impact",
+          "frame": 3726,
+          "sec": 124.2
+        }
+      ]
+    },
+    {
+      "id": "boxed-cs6",
+      "type": "reveal",
+      "startFrame": 3735,
+      "durationInFrames": 206,
+      "startSec": 124.5,
+      "durationSec": 6.852941176470588,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 3735,
+          "sec": 124.5
+        },
+        {
+          "cue": "impact",
+          "frame": 3828,
+          "sec": 127.6
+        }
+      ]
+    },
+    {
+      "id": "revenue-sawtooth",
+      "type": "chart",
+      "startFrame": 3944,
+      "durationInFrames": 206,
+      "startSec": 131.46666666666667,
+      "durationSec": 6.852941176470588,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 3944,
+          "sec": 131.46666666666667
+        },
+        {
+          "cue": "chart",
+          "frame": 3967,
+          "sec": 132.23333333333332
+        },
+        {
+          "cue": "chart",
+          "frame": 3974,
+          "sec": 132.46666666666667
+        },
+        {
+          "cue": "chart",
+          "frame": 3982,
+          "sec": 132.73333333333332
+        },
+        {
+          "cue": "chart",
+          "frame": 3990,
+          "sec": 133
+        },
+        {
+          "cue": "impact",
+          "frame": 4059,
+          "sec": 135.3
+        }
+      ]
+    },
+    {
+      "id": "adobe-max-2013",
+      "type": "reveal",
+      "startFrame": 4153,
+      "durationInFrames": 216,
+      "startSec": 138.43333333333334,
+      "durationSec": 7.205882352941177,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 4153,
+          "sec": 138.43333333333334
+        },
+        {
+          "cue": "impact",
+          "frame": 4250,
+          "sec": 141.66666666666666
+        }
+      ]
+    },
+    {
+      "id": "the-reaction",
+      "type": "reveal",
+      "startFrame": 4372,
+      "durationInFrames": 163,
+      "startSec": 145.73333333333332,
+      "durationSec": 5.4411764705882355,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 4372,
+          "sec": 145.73333333333332
+        },
+        {
+          "cue": "impact",
+          "frame": 4445,
+          "sec": 148.16666666666666
+        }
+      ]
+    },
+    {
+      "id": "beat-of-black",
+      "type": "reveal",
+      "startFrame": 4538,
+      "durationInFrames": 132,
+      "startSec": 151.26666666666668,
+      "durationSec": 4.411764705882353,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 4538,
+          "sec": 151.26666666666668
+        },
+        {
+          "cue": "impact",
+          "frame": 4597,
+          "sec": 153.23333333333332
+        },
+        {
+          "cue": "impact",
+          "frame": 4580,
+          "sec": 152.66666666666666
+        }
+      ]
+    },
+    {
+      "id": "sawtooth-to-exponential",
+      "type": "chart",
+      "startFrame": 4673,
+      "durationInFrames": 163,
+      "startSec": 155.76666666666668,
+      "durationSec": 5.4411764705882355,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 4673,
+          "sec": 155.76666666666668
+        },
+        {
+          "cue": "chart",
+          "frame": 4691,
+          "sec": 156.36666666666667
+        },
+        {
+          "cue": "chart",
+          "frame": 4697,
+          "sec": 156.56666666666666
+        },
+        {
+          "cue": "chart",
+          "frame": 4703,
+          "sec": 156.76666666666668
+        },
+        {
+          "cue": "chart",
+          "frame": 4710,
+          "sec": 157
+        },
+        {
+          "cue": "chart",
+          "frame": 4716,
+          "sec": 157.2
+        },
+        {
+          "cue": "impact",
+          "frame": 4764,
+          "sec": 158.8
+        }
+      ]
+    },
+    {
+      "id": "one-point-two-three-to-eighteen",
+      "type": "money",
+      "startFrame": 4839,
+      "durationInFrames": 174,
+      "startSec": 161.3,
+      "durationSec": 5.794117647058824,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 4839,
+          "sec": 161.3
+        },
+        {
+          "cue": "tick",
+          "frame": 4952,
+          "sec": 165.06666666666666
+        },
+        {
+          "cue": "impact",
+          "frame": 5008,
+          "sec": 166.93333333333334
+        }
+      ]
+    },
+    {
+      "id": "boardroom-chart",
+      "type": "chart",
+      "startFrame": 5016,
+      "durationInFrames": 206,
+      "startSec": 167.2,
+      "durationSec": 6.852941176470588,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 5016,
+          "sec": 167.2
+        },
+        {
+          "cue": "chart",
+          "frame": 5039,
+          "sec": 167.96666666666667
+        },
+        {
+          "cue": "chart",
+          "frame": 5046,
+          "sec": 168.2
+        },
+        {
+          "cue": "impact",
+          "frame": 5131,
+          "sec": 171.03333333333333
+        }
+      ]
+    },
+    {
+      "id": "cable-to-netflix",
+      "type": "chart",
+      "startFrame": 5225,
+      "durationInFrames": 184,
+      "startSec": 174.16666666666666,
+      "durationSec": 6.147058823529411,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 5225,
+          "sec": 174.16666666666666
+        },
+        {
+          "cue": "chart",
+          "frame": 5245,
+          "sec": 174.83333333333334
+        },
+        {
+          "cue": "chart",
+          "frame": 5252,
+          "sec": 175.06666666666666
+        },
+        {
+          "cue": "impact",
+          "frame": 5328,
+          "sec": 177.6
+        }
+      ]
+    },
+    {
+      "id": "streaming-launches",
+      "type": "model",
+      "startFrame": 5412,
+      "durationInFrames": 195,
+      "startSec": 180.4,
+      "durationSec": 6.5,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 5412,
+          "sec": 180.4
+        },
+        {
+          "cue": "impact",
+          "frame": 5597,
+          "sec": 186.56666666666666
+        }
+      ]
+    },
+    {
+      "id": "household-stack",
+      "type": "model",
+      "startFrame": 5610,
+      "durationInFrames": 227,
+      "startSec": 187,
+      "durationSec": 7.5588235294117645,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 5610,
+          "sec": 187
+        },
+        {
+          "cue": "impact",
+          "frame": 5826,
+          "sec": 194.2
+        }
+      ]
+    },
+    {
+      "id": "two-bills-one-total",
+      "type": "money",
+      "startFrame": 5840,
+      "durationInFrames": 216,
+      "startSec": 194.66666666666666,
+      "durationSec": 7.205882352941177,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 5840,
+          "sec": 194.66666666666666
+        },
+        {
+          "cue": "tick",
+          "frame": 5916,
+          "sec": 197.2
+        },
+        {
+          "cue": "tick",
+          "frame": 5991,
+          "sec": 199.7
+        },
+        {
+          "cue": "impact",
+          "frame": 6050,
+          "sec": 201.66666666666666
+        }
+      ]
+    },
+    {
+      "id": "streamflation",
+      "type": "chart",
+      "startFrame": 6059,
+      "durationInFrames": 195,
+      "startSec": 201.96666666666667,
+      "durationSec": 6.5,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 6059,
+          "sec": 201.96666666666667
+        },
+        {
+          "cue": "chart",
+          "frame": 6080,
+          "sec": 202.66666666666666
+        },
+        {
+          "cue": "chart",
+          "frame": 6088,
+          "sec": 202.93333333333334
+        },
+        {
+          "cue": "chart",
+          "frame": 6095,
+          "sec": 203.16666666666666
+        },
+        {
+          "cue": "chart",
+          "frame": 6103,
+          "sec": 203.43333333333334
+        },
+        {
+          "cue": "impact",
+          "frame": 6168,
+          "sec": 205.6
+        }
+      ]
+    },
+    {
+      "id": "per-month-everywhere",
+      "type": "model",
+      "startFrame": 6257,
+      "durationInFrames": 142,
+      "startSec": 208.56666666666666,
+      "durationSec": 4.735294117647059,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 6257,
+          "sec": 208.56666666666666
+        },
+        {
+          "cue": "impact",
+          "frame": 6392,
+          "sec": 213.06666666666666
+        }
+      ]
+    },
+    {
+      "id": "prime-signup",
+      "type": "reveal",
+      "startFrame": 6402,
+      "durationInFrames": 184,
+      "startSec": 213.4,
+      "durationSec": 6.147058823529411,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 6402,
+          "sec": 213.4
+        },
+        {
+          "cue": "impact",
+          "frame": 6485,
+          "sec": 216.16666666666666
+        }
+      ]
+    },
+    {
+      "id": "the-dark-pattern",
+      "type": "reveal",
+      "startFrame": 6589,
+      "durationInFrames": 153,
+      "startSec": 219.63333333333333,
+      "durationSec": 5.088235294117648,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 6589,
+          "sec": 219.63333333333333
+        },
+        {
+          "cue": "impact",
+          "frame": 6658,
+          "sec": 221.93333333333334
+        }
+      ]
+    },
+    {
+      "id": "iliad",
+      "type": "title",
+      "startFrame": 6745,
+      "durationInFrames": 184,
+      "startSec": 224.83333333333334,
+      "durationSec": 6.147058823529411,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 6745,
+          "sec": 224.83333333333334
+        }
+      ]
+    },
+    {
+      "id": "homer-worn-pages",
+      "type": "reveal",
+      "startFrame": 6932,
+      "durationInFrames": 131,
+      "startSec": 231.06666666666666,
+      "durationSec": 4.382352941176471,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 6932,
+          "sec": 231.06666666666666
+        },
+        {
+          "cue": "impact",
+          "frame": 6991,
+          "sec": 233.03333333333333
+        }
+      ]
+    },
+    {
+      "id": "ftc-release",
+      "type": "reveal",
+      "startFrame": 7066,
+      "durationInFrames": 163,
+      "startSec": 235.53333333333333,
+      "durationSec": 5.4411764705882355,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 7066,
+          "sec": 235.53333333333333
+        },
+        {
+          "cue": "impact",
+          "frame": 7139,
+          "sec": 237.96666666666667
+        }
+      ]
+    },
+    {
+      "id": "two-five-billion-split",
+      "type": "money",
+      "startFrame": 7232,
+      "durationInFrames": 142,
+      "startSec": 241.06666666666666,
+      "durationSec": 4.735294117647059,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 7232,
+          "sec": 241.06666666666666
+        },
+        {
+          "cue": "tick",
+          "frame": 7317,
+          "sec": 243.9
+        },
+        {
+          "cue": "impact",
+          "frame": 7370,
+          "sec": 245.66666666666666
+        }
+      ]
+    },
+    {
+      "id": "the-adobe-filing",
+      "type": "reveal",
+      "startFrame": 7377,
+      "durationInFrames": 216,
+      "startSec": 245.9,
+      "durationSec": 7.205882352941177,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 7377,
+          "sec": 245.9
+        },
+        {
+          "cue": "impact",
+          "frame": 7474,
+          "sec": 249.13333333333333
+        }
+      ]
+    },
+    {
+      "id": "the-fifty-percent-fee",
+      "type": "reveal",
+      "startFrame": 7596,
+      "durationInFrames": 227,
+      "startSec": 253.2,
+      "durationSec": 7.5588235294117645,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 7596,
+          "sec": 253.2
+        },
+        {
+          "cue": "impact",
+          "frame": 7698,
+          "sec": 256.6
+        }
+      ]
+    },
+    {
+      "id": "two-five-billion-vs-seventy-five",
+      "type": "money",
+      "startFrame": 7826,
+      "durationInFrames": 174,
+      "startSec": 260.8666666666667,
+      "durationSec": 5.794117647058824,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 7826,
+          "sec": 260.8666666666667
+        },
+        {
+          "cue": "tick",
+          "frame": 7930,
+          "sec": 264.3333333333333
+        },
+        {
+          "cue": "impact",
+          "frame": 7995,
+          "sec": 266.5
+        }
+      ]
+    },
+    {
+      "id": "courthouse",
+      "type": "reveal",
+      "startFrame": 8003,
+      "durationInFrames": 184,
+      "startSec": 266.76666666666665,
+      "durationSec": 6.147058823529411,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 8003,
+          "sec": 266.76666666666665
+        },
+        {
+          "cue": "impact",
+          "frame": 8086,
+          "sec": 269.53333333333336
+        }
+      ]
+    },
+    {
+      "id": "symmetry",
+      "type": "chart",
+      "startFrame": 8190,
+      "durationInFrames": 206,
+      "startSec": 273,
+      "durationSec": 6.852941176470588,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 8190,
+          "sec": 273
+        },
+        {
+          "cue": "chart",
+          "frame": 8213,
+          "sec": 273.76666666666665
+        },
+        {
+          "cue": "chart",
+          "frame": 8220,
+          "sec": 274
+        },
+        {
+          "cue": "impact",
+          "frame": 8305,
+          "sec": 276.8333333333333
+        }
+      ]
+    },
+    {
+      "id": "july-eight-2025",
+      "type": "reveal",
+      "startFrame": 8399,
+      "durationInFrames": 121,
+      "startSec": 279.96666666666664,
+      "durationSec": 4.029411764705882,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 8399,
+          "sec": 279.96666666666664
+        },
+        {
+          "cue": "impact",
+          "frame": 8453,
+          "sec": 281.76666666666665
+        }
+      ]
+    },
+    {
+      "id": "the-opinion",
+      "type": "reveal",
+      "startFrame": 8523,
+      "durationInFrames": 195,
+      "startSec": 284.1,
+      "durationSec": 6.5,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 8523,
+          "sec": 284.1
+        },
+        {
+          "cue": "impact",
+          "frame": 8611,
+          "sec": 287.03333333333336
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "type": "reveal",
+      "startFrame": 8721,
+      "durationInFrames": 153,
+      "startSec": 290.7,
+      "durationSec": 5.088235294117648,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 8721,
+          "sec": 290.7
+        },
+        {
+          "cue": "impact",
+          "frame": 8790,
+          "sec": 293
+        }
+      ]
+    },
+    {
+      "id": "twenty-twenty-six-no-rule",
+      "type": "title",
+      "startFrame": 8877,
+      "durationInFrames": 174,
+      "startSec": 295.9,
+      "durationSec": 5.794117647058824,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 8877,
+          "sec": 295.9
+        }
+      ]
+    },
+    {
+      "id": "back-to-the-gym",
+      "type": "hook",
+      "startFrame": 9054,
+      "durationInFrames": 153,
+      "startSec": 301.8,
+      "durationSec": 5.088235294117648,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 9054,
+          "sec": 301.8
+        }
+      ]
+    },
+    {
+      "id": "one-thirty-three-on-black",
+      "type": "money",
+      "startFrame": 9210,
+      "durationInFrames": 214,
+      "startSec": 307,
+      "durationSec": 7.147058823529411,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 9210,
+          "sec": 307
+        },
+        {
+          "cue": "tick",
+          "frame": 9274,
+          "sec": 309.1333333333333
+        },
+        {
+          "cue": "tick",
+          "frame": 9360,
+          "sec": 312
+        },
+        {
+          "cue": "impact",
+          "frame": 9418,
+          "sec": 313.93333333333334
+        },
+        {
+          "cue": "impact",
+          "frame": 9379,
+          "sec": 312.6333333333333
+        }
+      ]
+    },
+    {
+      "id": "scan-the-statement",
+      "type": "reveal",
+      "startFrame": 9427,
+      "durationInFrames": 163,
+      "startSec": 314.23333333333335,
+      "durationSec": 5.4411764705882355,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 9427,
+          "sec": 314.23333333333335
+        },
+        {
+          "cue": "impact",
+          "frame": 9500,
+          "sec": 316.6666666666667
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "type": "finale",
+      "startFrame": 9593,
+      "durationInFrames": 174,
+      "startSec": 319.76666666666665,
+      "durationSec": 5.794117647058824,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 9607,
+          "sec": 320.23333333333335
+        },
+        {
+          "cue": "transition",
+          "frame": 9698,
+          "sec": 323.26666666666665
+        },
+        {
+          "cue": "impact",
+          "frame": 9713,
+          "sec": 323.76666666666665
+        },
+        {
+          "cue": "impact",
+          "frame": 9743,
+          "sec": 324.76666666666665
+        }
+      ]
+    }
+  ],
+  "warnings": [],
+  "notices": [
+    "runtime 326s is 28% of the 1154s target — the script's runtime is unreachable without cutting an act"
+  ]
+}

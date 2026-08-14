@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { EASE_ARRIVE } from "../utils/easing";
 import {
@@ -6,7 +6,8 @@ import {
   springProgress,
   useSceneInOut,
 } from "../utils/animation";
-import { Camera2D, type CameraKeyframe } from "../components/Camera2D";
+import { Camera2D } from "../components/Camera2D";
+import { useDirector } from "../data/director";
 import { MoneyFlow, type MoneyStream } from "../components/MoneyFlow";
 import { FlowArrow } from "../components/FlowArrow";
 import { NodeIcon } from "../components/NodeIcon";
@@ -39,22 +40,7 @@ export const BusinessModel: React.FC = () => {
   const cardW = portrait ? CARD_W_P : CARD_W;
   const cardH = portrait ? CARD_H_P : CARD_H;
 
-  const CAMERA = useMemo<CameraKeyframe[]>(
-    () => [
-      { frame: 0, camera: { x: 960, y: 540, scale: 1.06 }, easing: EASE_ARRIVE },
-      { frame: at(0.138), camera: { x: 960, y: 540, scale: 1 }, easing: EASE_ARRIVE },
-      { frame: at(0.9), camera: { x: 960, y: 540, scale: 1 } },
-    ],
-    [at],
-  );
-  const CAMERA_P = useMemo<CameraKeyframe[]>(
-    () => [
-      { frame: 0, camera: { x: 540, y: 960, scale: 1.06 }, easing: EASE_ARRIVE },
-      { frame: at(0.138), camera: { x: 540, y: 960, scale: 1 }, easing: EASE_ARRIVE },
-      { frame: at(0.9), camera: { x: 540, y: 960, scale: 1 } },
-    ],
-    [at],
-  );
+  const { keyframes: CAMERA, keyframesPortrait: CAMERA_P } = useDirector();
 
   const kickerP = progressive(frame, at(0.033), at(0.095) - at(0.033), EASE_ARRIVE);
 
@@ -156,7 +142,8 @@ export const BusinessModel: React.FC = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  background: withAlpha(COLORS.textPrimary, 0.05),
+                  background: withAlpha(COLORS.textPrimary, 0.03),
+                  boxShadow: `inset 0 0 0 1px ${withAlpha(COLORS.textPrimary, 0.06)}`,
                 }}
               >
                 {<NodeIcon role={node.role} size={portrait ? 66 : 76} />}

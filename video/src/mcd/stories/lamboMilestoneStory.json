@@ -1,0 +1,86 @@
+{
+  "id": "LamboMilestoneStory",
+  "title": "The Lamborghini Mile",
+  "brand": "LAMBO",
+  "wpm": 170,
+  "targetSec": 8.0,
+  "hero": {
+    "kind": "vehicle",
+    "width": 900,
+    "height": 300
+  },
+  "theme": {
+    "accent": "#16A34A",
+    "accentSecondary": "#F5C518"
+  },
+  "scenes": [
+    {
+      "id": "the-run",
+      "type": "hero",
+      "narration": [
+        "A Lamborghini was traveling at 450 kilometers per hour through Banastarim."
+      ],
+      "energy": 0.9,
+      "pace": 0.62,
+      "edit": {
+        "maxSec": 10
+      },
+      "data": {
+        "kicker": "THE MILE",
+        "beats": [
+          { "name": "lambo", "at": 0.05, "importance": 0.8 },
+          { "name": "450", "at": 0.5, "importance": 1.0 },
+          { "name": "banastarim", "at": 0.82, "importance": 0.6 }
+        ],
+        "subject": {
+          "asset": "subjects/lambo",
+          "position": "center",
+          "width": 1100,
+          "kind": "vehicle",
+          "entrance": {
+            "type": "slide_left",
+            "intensity": 0.9,
+            "personality": "aggressive",
+            "overshoot": true,
+            "blur": 4,
+            "trigger": "beat:lambo"
+          },
+          "exit": {
+            "type": "slide_left",
+            "personality": "aggressive",
+            "durationFrames": 18
+          },
+          "effects": ["speed_lines", "subtle_shadow"]
+        },
+        "texts": [
+          {
+            "text": "450 KM/H",
+            "position": "upper_center",
+            "role": "number",
+            "accent": true,
+            "anim": {
+              "type": "slam",
+              "personality": "aggressive",
+              "trigger": "beat:450"
+            }
+          },
+          {
+            "text": "BANASTARIM",
+            "position": "lower_center",
+            "role": "sub",
+            "anim": {
+              "type": "fade_up",
+              "personality": "soft",
+              "trigger": "beat:banastarim",
+              "durationFrames": 20
+            }
+          }
+        ],
+        "camera": {
+          "move": "push_in",
+          "intensity": 0.15
+        }
+      }
+    }
+  ]
+}

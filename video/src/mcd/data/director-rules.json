@@ -1,0 +1,439 @@
+{
+  "source": "yt_scrapper reports (retention_coefficients.json, benchmarks.json, mcd_scenes.json)",
+  "fetchedAt": "2026-08-14T11:16:42.278Z",
+  "pacing": {
+    "maxStaticShotSec": 8,
+    "minStaticShotSec": 1.5,
+    "cutBand": [
+      10,
+      24
+    ],
+    "targetSec": {
+      "short": 895,
+      "long": 1682
+    }
+  },
+  "signals": {
+    "number_specific": 0.031,
+    "new_entity": 0.027,
+    "is_contrast": 0.0215,
+    "names_org": 0.0196,
+    "has_dollar": 0.0178,
+    "has_number": -0.0203,
+    "has_percent": -0.0132,
+    "wpm": -0.0782
+  },
+  "position": [
+    {
+      "bin": 0,
+      "peak": 1.162,
+      "intensity": 1
+    },
+    {
+      "bin": 0.02,
+      "peak": 0.0785,
+      "intensity": 0.7567837760639817
+    },
+    {
+      "bin": 0.04,
+      "peak": -0.0689,
+      "intensity": 0.6515281348186233
+    },
+    {
+      "bin": 0.06,
+      "peak": -0.1061,
+      "intensity": 0.6249642959154528
+    },
+    {
+      "bin": 0.08,
+      "peak": -0.1844,
+      "intensity": 0.5690516995144245
+    },
+    {
+      "bin": 0.1,
+      "peak": -0.1694,
+      "intensity": 0.5797629248786061
+    },
+    {
+      "bin": 0.12,
+      "peak": -0.0183,
+      "intensity": 0.6876606683804628
+    },
+    {
+      "bin": 0.14,
+      "peak": -0.0728,
+      "intensity": 0.648743216223936
+    },
+    {
+      "bin": 0.16,
+      "peak": -0.0194,
+      "intensity": 0.6868751785204228
+    },
+    {
+      "bin": 0.18,
+      "peak": -0.0894,
+      "intensity": 0.6368894601542416
+    },
+    {
+      "bin": 0.2,
+      "peak": -0.0398,
+      "intensity": 0.6723079120251357
+    },
+    {
+      "bin": 0.22,
+      "peak": -0.2107,
+      "intensity": 0.5502713510425593
+    },
+    {
+      "bin": 0.24,
+      "peak": -0.2482,
+      "intensity": 0.5234932876321051
+    },
+    {
+      "bin": 0.26,
+      "peak": 0.0967,
+      "intensity": 0.7697800628391888
+    },
+    {
+      "bin": 0.28,
+      "peak": 0.0226,
+      "intensity": 0.7168666095401315
+    },
+    {
+      "bin": 0.3,
+      "peak": -0.0558,
+      "intensity": 0.6608826049700086
+    },
+    {
+      "bin": 0.32,
+      "peak": -0.1004,
+      "intensity": 0.6290345615538417
+    },
+    {
+      "bin": 0.34,
+      "peak": -0.045,
+      "intensity": 0.6685946872322194
+    },
+    {
+      "bin": 0.36,
+      "peak": 0.4191,
+      "intensity": 1
+    },
+    {
+      "bin": 0.38,
+      "peak": 0.1463,
+      "intensity": 0.8051985147100829
+    },
+    {
+      "bin": 0.4,
+      "peak": 0.0725,
+      "intensity": 0.7524992859183091
+    },
+    {
+      "bin": 0.42,
+      "peak": 0.02,
+      "intensity": 0.7150099971436732
+    },
+    {
+      "bin": 0.44,
+      "peak": -0.1826,
+      "intensity": 0.5703370465581262
+    },
+    {
+      "bin": 0.46,
+      "peak": -0.0872,
+      "intensity": 0.6384604398743217
+    },
+    {
+      "bin": 0.48,
+      "peak": -0.1432,
+      "intensity": 0.5984718651813767
+    },
+    {
+      "bin": 0.5,
+      "peak": 0.0006,
+      "intensity": 0.7011568123393317
+    },
+    {
+      "bin": 0.52,
+      "peak": -0.0206,
+      "intensity": 0.6860182804912882
+    },
+    {
+      "bin": 0.54,
+      "peak": -0.0459,
+      "intensity": 0.6679520137103685
+    },
+    {
+      "bin": 0.56,
+      "peak": -0.0211,
+      "intensity": 0.6856612396458155
+    },
+    {
+      "bin": 0.58,
+      "peak": 0.3589,
+      "intensity": 0.9570122822050843
+    },
+    {
+      "bin": 0.6,
+      "peak": 0.1403,
+      "intensity": 0.8009140245644102
+    },
+    {
+      "bin": 0.62,
+      "peak": 0.0361,
+      "intensity": 0.7265067123678949
+    },
+    {
+      "bin": 0.64,
+      "peak": 0.0332,
+      "intensity": 0.7244358754641531
+    },
+    {
+      "bin": 0.66,
+      "peak": 0.1042,
+      "intensity": 0.7751356755212796
+    },
+    {
+      "bin": 0.68,
+      "peak": 0.1499,
+      "intensity": 0.8077692087974865
+    },
+    {
+      "bin": 0.7,
+      "peak": -0.1367,
+      "intensity": 0.6031133961725222
+    },
+    {
+      "bin": 0.72,
+      "peak": -0.0597,
+      "intensity": 0.6580976863753214
+    },
+    {
+      "bin": 0.74,
+      "peak": 0.063,
+      "intensity": 0.7457155098543274
+    },
+    {
+      "bin": 0.76,
+      "peak": -0.0639,
+      "intensity": 0.6550985432733505
+    },
+    {
+      "bin": 0.78,
+      "peak": 0.4103,
+      "intensity": 0.9937160811196801
+    },
+    {
+      "bin": 0.8,
+      "peak": 0.0238,
+      "intensity": 0.717723507569266
+    },
+    {
+      "bin": 0.82,
+      "peak": -0.0471,
+      "intensity": 0.6670951156812339
+    },
+    {
+      "bin": 0.84,
+      "peak": 0.0094,
+      "intensity": 0.7074407312196516
+    },
+    {
+      "bin": 0.86,
+      "peak": -0.1468,
+      "intensity": 0.5959011710939731
+    },
+    {
+      "bin": 0.88,
+      "peak": -0.0938,
+      "intensity": 0.6337475007140817
+    },
+    {
+      "bin": 0.9,
+      "peak": -0.1789,
+      "intensity": 0.5729791488146244
+    },
+    {
+      "bin": 0.92,
+      "peak": -0.4091,
+      "intensity": 0.40859754355898315
+    },
+    {
+      "bin": 0.94,
+      "peak": -0.5189,
+      "intensity": 0.3301913738931734
+    },
+    {
+      "bin": 0.96,
+      "peak": -0.6461,
+      "intensity": 0.23936018280491286
+    },
+    {
+      "bin": 0.98,
+      "peak": -0.9813,
+      "intensity": 0
+    }
+  ],
+  "arc": [
+    {
+      "label": "HOOK",
+      "start": 0,
+      "end": 5
+    },
+    {
+      "label": "GLOBAL SCALE",
+      "start": 5,
+      "end": 13
+    },
+    {
+      "label": "WORLD MAP",
+      "start": 13,
+      "end": 21.6
+    },
+    {
+      "label": "MONEY",
+      "start": 21.6,
+      "end": 30.6
+    },
+    {
+      "label": "BUSINESS MODEL",
+      "start": 30.6,
+      "end": 41.6
+    },
+    {
+      "label": "DATA STORY",
+      "start": 41.6,
+      "end": 53.2
+    },
+    {
+      "label": "FINALE",
+      "start": 53.2,
+      "end": 65.7
+    }
+  ],
+  "motion": {
+    "pushIn": {
+      "entry": 0.92,
+      "settle": 1,
+      "settleAt": 0.55
+    },
+    "pullOut": {
+      "entry": 1.06,
+      "settle": 0.94,
+      "settleAt": 0.65
+    },
+    "panLeft": {
+      "entry": 0.98,
+      "settle": 1.02,
+      "settleAt": 0.6,
+      "dx": -340
+    },
+    "panRight": {
+      "entry": 0.98,
+      "settle": 1.02,
+      "settleAt": 0.6,
+      "dx": 340
+    },
+    "panUp": {
+      "entry": 1,
+      "settle": 1.05,
+      "settleAt": 0.62,
+      "dy": -300
+    },
+    "panDown": {
+      "entry": 1.02,
+      "settle": 1.02,
+      "settleAt": 0.62,
+      "dy": 300
+    },
+    "drift": {
+      "entry": 1,
+      "settle": 1.02,
+      "settleAt": 0.7,
+      "dx": 80,
+      "dy": 40
+    },
+    "static": {
+      "entry": 1,
+      "settle": 1,
+      "settleAt": 0.5
+    },
+    "punch": {
+      "entry": 1.02,
+      "settle": 1.06,
+      "settleAt": 0.6
+    },
+    "orbit": {
+      "entry": 1,
+      "settle": 1,
+      "settleAt": 0.7,
+      "dx": 240,
+      "dy": -160
+    }
+  },
+  "typeBias": {
+    "hook": [
+      "pushIn",
+      "drift",
+      "panRight"
+    ],
+    "global": [
+      "drift",
+      "panUp",
+      "pushIn"
+    ],
+    "map": [
+      "orbit",
+      "panRight",
+      "drift"
+    ],
+    "money": [
+      "pullOut",
+      "punch",
+      "drift"
+    ],
+    "model": [
+      "orbit",
+      "panLeft",
+      "drift"
+    ],
+    "chart": [
+      "panRight",
+      "pushIn",
+      "drift"
+    ],
+    "finale": [
+      "pullOut",
+      "static",
+      "drift"
+    ],
+    "title": [
+      "static",
+      "pushIn",
+      "pullOut"
+    ],
+    "reveal": [
+      "punch",
+      "pushIn",
+      "static"
+    ]
+  },
+  "beatSignals": {
+    "hitWords": [
+      "but",
+      "however",
+      "yet",
+      "instead",
+      "no",
+      "never",
+      "actually",
+      "worse",
+      "only",
+      "even"
+    ],
+    "moneyRe": "(\\$|\\b\\d[\\d,]*\\b)",
+    "percentRe": "percent|%|\\d+\\s*%?",
+    "entityRe": "[A-Z][a-z]+"
+  }
+}

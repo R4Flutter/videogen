@@ -3,7 +3,7 @@
 // story.json fails the build loudly.
 
 import { buildTimeline, type StoryTimeline } from "./timeline.ts";
-import { SCENE_VALIDATORS } from "./validators.ts";
+import { SCENE_VALIDATORS, validateEdit } from "./validators.ts";
 import type { BusinessStory, SceneType } from "./storyTypes.ts";
 
 export type LoadedStory = BusinessStory & { timeline: StoryTimeline };
@@ -48,12 +48,14 @@ export const loadStory = (raw: unknown, src: string): LoadedStory => {
     }
     const problem = SCENE_VALIDATORS[type](scene.data as never);
     if (problem) throw new Error(`[story] ${src}: scene "${scene.id}" (${type}): ${problem}`);
+    const editProblem = validateEdit(scene.edit);
+    if (editProblem) throw new Error(`[story] ${src}: scene "${scene.id}" (${type}): ${editProblem}`);
   });
 
   const story = s as BusinessStory;
   return { ...story, timeline: buildTimeline(story) };
 };
 
-export { buildTimeline, FLASH_FRAMES, MAX_SCENE_SEC, DEFAULT_WPM } from "./timeline.ts";
+export { buildTimeline, FLASH_FRAMES, MAX_SCENE_SEC, LONG_FORM_MAX_SCENE_SEC, DEFAULT_WPM } from "./timeline.ts";
 export type { StoryTimeline } from "./timeline";
 export type { BusinessStory, StoryLine, RegionId, NodeRole, StoryScene, SceneType } from "./storyTypes";

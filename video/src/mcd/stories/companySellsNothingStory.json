@@ -1,0 +1,1041 @@
+{
+  "id": "CompanySellsNothingStory",
+  "title": "The Company That Sells You Nothing",
+  "brand": "Planet Fitness",
+  "wpm": 170,
+  "longForm": true,
+  "targetSec": 1154,
+  "hero": {
+    "kind": "monogram",
+    "width": 380,
+    "height": 560
+  },
+  "theme": {
+    "accent": "#16A34A",
+    "accentSecondary": "#F5C518"
+  },
+  "retention": [
+    { "device": "specific numbers — fire marshal beat", "at": 0.04 },
+    { "device": "contrast $10/mo vs $120/yr", "at": 0.3 },
+    { "device": "$1.23B → $18.28B", "at": 0.5 },
+    { "device": "$2.5B vs $75M", "at": 0.74 },
+    { "device": "$133 gap", "at": 0.93 }
+  ],
+  "scenes": [
+    {
+      "id": "empty-gym",
+      "type": "hook",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "Planet Fitness has eighteen point seven million members.",
+        "It has roughly two thousand five hundred gyms."
+      ],
+      "data": {
+        "kicker": "PLANET FITNESS · 4 AM",
+        "accentLine": 1,
+        "lines": [
+          "18.7 million members.",
+          "Roughly 2,500 gyms."
+        ]
+      }
+    },
+    {
+      "id": "the-arithmetic",
+      "type": "money",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "Forty-five dollars a month, twelve months a year.",
+        "Five hundred forty dollars, for a room you never enter."
+      ],
+      "data": {
+        "kicker": "THE ARITHMETIC",
+        "overline": "MEMBERSHIP · PER MONTH",
+        "steps": [
+          { "value": 0, "at": 0 },
+          { "value": 45, "at": 0.35 },
+          { "value": 540, "at": 0.7 }
+        ],
+        "finalLabel": "$540 / YEAR",
+        "barLabel": "PER MONTH → PER YEAR",
+        "barAt": 0.35,
+        "barDurationSec": 2
+      }
+    },
+    {
+      "id": "the-gap-sits-there",
+      "type": "reveal",
+      "edit": { "camera": "static" },
+      "narration": [
+        "The empty machines are the point.",
+        "The gap between what you pay and what you use is the product."
+      ],
+      "data": {
+        "kicker": "THE GAP",
+        "lines": [
+          "The empty machines",
+          "are the point."
+        ],
+        "note": "PAYING FOR A ROOM YOU NEVER ENTER"
+      }
+    },
+    {
+      "id": "four-percent-ten-percent",
+      "type": "reveal",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "Four percent on one night would get the gym shut down.",
+        "Ten percent would kill the business in a month."
+      ],
+      "data": {
+        "kicker": "IF THEY SHOWED UP",
+        "lines": [
+          "4% shows up → the",
+          "fire marshal closes it."
+        ],
+        "note": "10% WOULD KILL THE BUSINESS"
+      }
+    },
+    {
+      "id": "its-the-product",
+      "type": "reveal",
+      "edit": { "camera": "static" },
+      "narration": [
+        "The subscription is the product.",
+        "You are the inventory."
+      ],
+      "data": {
+        "kicker": "IT'S THE PRODUCT",
+        "lines": [
+          "The subscription",
+          "is the product."
+        ],
+        "note": "YOU ARE THE INVENTORY"
+      }
+    },
+    {
+      "id": "bank-statement",
+      "type": "reveal",
+      "edit": { "camera": "panRight" },
+      "narration": [
+        "Ten dollars here, sixteen there, every single month.",
+        "Recurring, on autopilot, and barely noticed."
+      ],
+      "data": {
+        "kicker": "THE STAKE",
+        "lines": [
+          "Recurring, on autopilot,",
+          "and barely noticed."
+        ],
+        "note": "ACME FITNESS $10 · STREAM $15.99 · CLOUD $2.99 · MUSIC $10.99"
+      }
+    },
+    {
+      "id": "guess-vs-actual",
+      "type": "money",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "Asked how much they spend, people guess eighty-six dollars.",
+        "Category by category, the real figure is two hundred nineteen."
+      ],
+      "data": {
+        "kicker": "GUESSED vs ACTUAL",
+        "overline": "SUBSCRIPTIONS · PER MONTH",
+        "steps": [
+          { "value": 0, "at": 0 },
+          { "value": 86, "at": 0.4 },
+          { "value": 219, "at": 0.75 }
+        ],
+        "finalLabel": "$219 ACTUAL",
+        "barLabel": "THE REAL FIGURE",
+        "barAt": 0.4,
+        "barDurationSec": 2.5
+      }
+    },
+    {
+      "id": "free-trial-checkout",
+      "type": "reveal",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "Somewhere in the checkout, the free trial became a subscription.",
+        "Cancel anytime. Almost."
+      ],
+      "data": {
+        "kicker": "THE CHECKOUT",
+        "lines": [
+          "The free trial became",
+          "a subscription."
+        ],
+        "note": "CANCEL ANYTIME · ALMOST"
+      }
+    },
+    {
+      "id": "cost-structure",
+      "type": "model",
+      "edit": { "camera": "drift" },
+      "narration": [
+        "A gym is a fixed-cost business.",
+        "Rent, staff, machines, lights — the bill arrives whether you do or not."
+      ],
+      "data": {
+        "kicker": "COST STRUCTURE",
+        "nodes": [
+          { "title": "RENT", "sub": "fixed monthly", "role": "store" },
+          { "title": "STAFF", "sub": "fixed monthly", "role": "people" },
+          { "title": "MACHINES", "sub": "fixed monthly", "role": "factory" },
+          { "title": "LIGHTS", "sub": "fixed monthly", "role": "device" }
+        ],
+        "flowNotes": ["same bill", "same bill", "same bill"],
+        "payoffOverline": "EVERY DOLLAR FIXED",
+        "payoffValue": "$0",
+        "payoffNote": "COST OF ONE MORE MEMBER"
+      }
+    },
+    {
+      "id": "cost-to-serve-spike",
+      "type": "chart",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "One more member costs the gym almost nothing.",
+        "The cost to serve a customer is nearly zero."
+      ],
+      "data": {
+        "kicker": "COST TO SERVE",
+        "data": [
+          { "label": "MEMBER #1", "value": 45 },
+          { "label": "MEMBER #10,000", "value": 0.1 }
+        ],
+        "insightKicker": "NEARLY ZERO",
+        "insight": "One more member costs almost nothing."
+      }
+    },
+    {
+      "id": "ideal-customer",
+      "type": "reveal",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "The ideal customer pays every month.",
+        "And never shows up."
+      ],
+      "data": {
+        "kicker": "THE IDEAL CUSTOMER",
+        "lines": [
+          "Pays every month.",
+          "Never shows up."
+        ],
+        "note": "THE LOST-REVENUE MODEL"
+      }
+    },
+    {
+      "id": "google-trends",
+      "type": "chart",
+      "edit": { "camera": "panRight" },
+      "narration": [
+        "Search interest in canceling gym memberships keeps climbing.",
+        "People are trying to leave."
+      ],
+      "data": {
+        "kicker": "GOOGLE TRENDS",
+        "data": [
+          { "label": "2016", "value": 20 },
+          { "label": "2018", "value": 35 },
+          { "label": "2020", "value": 55 },
+          { "label": "2022", "value": 75 },
+          { "label": "2024", "value": 100 }
+        ],
+        "insightKicker": "CANCEL GYM MEMBERSHIP",
+        "insight": "People are trying to leave."
+      }
+    },
+    {
+      "id": "breakage",
+      "type": "title",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "The industry has a word for that money: breakage.",
+        "Paid for, never used."
+      ],
+      "data": {
+        "kicker": "ACT I · THE MECHANISM",
+        "lines": [
+          "Breakage — paid for,",
+          "never used."
+        ]
+      }
+    },
+    {
+      "id": "gift-card-to-subscription",
+      "type": "model",
+      "edit": { "camera": "drift" },
+      "narration": [
+        "Gift cards expire. That was the old trick.",
+        "Subscriptions are the gift card that renews itself."
+      ],
+      "data": {
+        "kicker": "THE SHIFT",
+        "nodes": [
+          { "title": "GIFT CARD", "sub": "expires", "role": "cash" },
+          { "title": "SUBSCRIPTION", "sub": "renews itself", "role": "cloud" }
+        ],
+        "flowNotes": ["the same money"],
+        "payoffOverline": "SAME MONEY",
+        "payoffValue": "$0",
+        "payoffNote": "PAID FOREVER"
+      }
+    },
+    {
+      "id": "calendar-of-charges",
+      "type": "reveal",
+      "edit": { "camera": "panLeft" },
+      "narration": [
+        "Every month, the charges arrive on schedule.",
+        "The first. The fifteenth. Like clockwork."
+      ],
+      "data": {
+        "kicker": "CALENDAR OF CHARGES",
+        "lines": [
+          "The charges arrive",
+          "like clockwork."
+        ],
+        "note": "THE 1ST · THE 15TH · EVERY MONTH"
+      }
+    },
+    {
+      "id": "bally-contract",
+      "type": "reveal",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "The old contracts locked you in for twelve months.",
+        "Then signing up got easier, and leaving got harder."
+      ],
+      "data": {
+        "kicker": "THE BALLY CONTRACT",
+        "lines": [
+          "Easier to sign up.",
+          "Harder to leave."
+        ],
+        "note": "THE SUBSCRIPTION THAT NEVER ENDS"
+      }
+    },
+    {
+      "id": "clippings-complaints",
+      "type": "reveal",
+      "edit": { "camera": "drift" },
+      "narration": [
+        "The complaints pile up in the same pattern.",
+        "Cancellation lines, wait times, fees that never end."
+      ],
+      "data": {
+        "kicker": "THE COMPLAINTS",
+        "lines": [
+          "Cancellation lines,",
+          "fees that never end."
+        ],
+        "note": "BBB · FTC · REDDIT"
+      }
+    },
+    {
+      "id": "wrong-tool",
+      "type": "reveal",
+      "edit": { "camera": "static" },
+      "narration": [
+        "The contract was the wrong tool.",
+        "The subscription fixed that."
+      ],
+      "data": {
+        "kicker": "THE FIX",
+        "lines": [
+          "The contract was",
+          "the wrong tool."
+        ],
+        "note": "THE SUBSCRIPTION FIXED IT"
+      }
+    },
+    {
+      "id": "storefront",
+      "type": "hook",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "Planet Fitness sells the same membership for ten dollars a month.",
+        "The price of a sandwich."
+      ],
+      "data": {
+        "kicker": "PLANET FITNESS · STOREFRONT",
+        "accentLine": 1,
+        "lines": [
+          "$10 a month.",
+          "The price of a sandwich."
+        ]
+      }
+    },
+    {
+      "id": "ten-among-the-noise",
+      "type": "money",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "Ten dollars barely registers.",
+        "It hides inside the monthly noise."
+      ],
+      "data": {
+        "kicker": "THE PRICE",
+        "overline": "MEMBERSHIP · PER MONTH",
+        "steps": [
+          { "value": 0, "at": 0 },
+          { "value": 10, "at": 0.6 }
+        ],
+        "finalLabel": "$10 / MONTH",
+        "barLabel": "A SANDWICH",
+        "barAt": 0.35,
+        "barDurationSec": 1.5
+      }
+    },
+    {
+      "id": "ten-vs-hundred-twenty",
+      "type": "money",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "Ten dollars a month, or one hundred twenty a year.",
+        "The math is loud. The behavior is quiet."
+      ],
+      "data": {
+        "kicker": "THE CONTRAST",
+        "overline": "PER MONTH vs PER YEAR",
+        "steps": [
+          { "value": 0, "at": 0 },
+          { "value": 10, "at": 0.35 },
+          { "value": 120, "at": 0.7 }
+        ],
+        "finalLabel": "$120 / YEAR",
+        "barLabel": "ONE PAYMENT, DONE",
+        "barAt": 0.35,
+        "barDurationSec": 2
+      }
+    },
+    {
+      "id": "boxed-cs6",
+      "type": "reveal",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "Adobe used to sell Photoshop in a box.",
+        "Six hundred ninety nine dollars, and you owned it forever."
+      ],
+      "data": {
+        "kicker": "ADOBE CS6 · 2012",
+        "lines": [
+          "$699 once.",
+          "Yours forever."
+        ],
+        "note": "THE LAST BOXED COPY"
+      }
+    },
+    {
+      "id": "revenue-sawtooth",
+      "type": "chart",
+      "edit": { "camera": "drift" },
+      "narration": [
+        "Every boxed release was a spike, then a cliff.",
+        "They sold it once, to everyone who wanted it."
+      ],
+      "data": {
+        "kicker": "BOXED REVENUE",
+        "data": [
+          { "label": "CS3", "value": 60 },
+          { "label": "CS4", "value": 85 },
+          { "label": "CS5", "value": 70 },
+          { "label": "CS6", "value": 95 }
+        ],
+        "insightKicker": "THE SAWTOOTH",
+        "insight": "Sell once, then start over."
+      }
+    },
+    {
+      "id": "adobe-max-2013",
+      "type": "reveal",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "At Adobe MAX 2013 they announced the end of ownership.",
+        "You will not own it. You will rent it."
+      ],
+      "data": {
+        "kicker": "ADOBE MAX · 2013",
+        "lines": [
+          "You will not own it.",
+          "You will rent it."
+        ],
+        "note": "CREATIVE CLOUD LAUNCH"
+      }
+    },
+    {
+      "id": "the-reaction",
+      "type": "reveal",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "The backlash was instant.",
+        "We love our subscribers became the joke of the internet."
+      ],
+      "data": {
+        "kicker": "THE REACTION",
+        "lines": [
+          "'We love our",
+          "subscribers.'"
+        ],
+        "note": "THE INTERNET · 2013"
+      }
+    },
+    {
+      "id": "beat-of-black",
+      "type": "reveal",
+      "edit": { "camera": "static" },
+      "hold": 3,
+      "narration": [
+        "Ownership ended that day."
+      ],
+      "data": {
+        "kicker": "2013",
+        "lines": [
+          "Ownership",
+          "ended that day."
+        ],
+        "note": "GOLD · ONE BEAT"
+      }
+    },
+    {
+      "id": "sawtooth-to-exponential",
+      "type": "chart",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "The sawtooth flattened into an exponential curve.",
+        "Every user now pays every year, forever."
+      ],
+      "data": {
+        "kicker": "SAWTOOTH → EXPONENTIAL",
+        "data": [
+          { "label": "2013", "value": 10 },
+          { "label": "2015", "value": 25 },
+          { "label": "2017", "value": 50 },
+          { "label": "2019", "value": 80 },
+          { "label": "2021", "value": 100 }
+        ],
+        "insightKicker": "RECURRING",
+        "insight": "Every user pays every year, forever."
+      }
+    },
+    {
+      "id": "one-point-two-three-to-eighteen",
+      "type": "money",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "Subscription revenue: one point two three billion.",
+        "By twenty twenty-four: eighteen point two eight billion."
+      ],
+      "data": {
+        "kicker": "THE TRANSFORMATION",
+        "overline": "ADOBE SUBSCRIPTION REVENUE",
+        "steps": [
+          { "value": 1230000000, "at": 0 },
+          { "value": 18280000000, "at": 0.65 }
+        ],
+        "finalLabel": "$18.28B · 2024",
+        "barLabel": "2013 → 2024",
+        "barAt": 0.35,
+        "barDurationSec": 2.5
+      }
+    },
+    {
+      "id": "boardroom-chart",
+      "type": "chart",
+      "edit": { "camera": "panRight" },
+      "narration": [
+        "The chart they showed investors: one line going up.",
+        "And the price of software going up with it."
+      ],
+      "data": {
+        "kicker": "THE BOARDROOM CHART",
+        "data": [
+          { "label": "2013", "value": 1 },
+          { "label": "2024", "value": 18 }
+        ],
+        "insightKicker": "UP AND TO THE RIGHT",
+        "insight": "One line going up."
+      }
+    },
+    {
+      "id": "cable-to-netflix",
+      "type": "chart",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "First it happened to cable.",
+        "A hundred dollars a month, and we called it a deal."
+      ],
+      "data": {
+        "kicker": "CABLE → STREAMING",
+        "data": [
+          { "label": "CABLE", "value": 100 },
+          { "label": "NETFLIX", "value": 8 }
+        ],
+        "insightKicker": "THE SAME SHAPE",
+        "insight": "Then it happened to software."
+      }
+    },
+    {
+      "id": "streaming-launches",
+      "type": "model",
+      "edit": { "camera": "drift" },
+      "narration": [
+        "Then the streamers launched.",
+        "Netflix, Hulu, Prime, Disney Plus, HBO Max — each one a new bill."
+      ],
+      "data": {
+        "kicker": "STREAMING LAUNCHES",
+        "nodes": [
+          { "title": "NETFLIX", "sub": "$7.99", "role": "brand" },
+          { "title": "HULU", "sub": "$5.99", "role": "brand" },
+          { "title": "PRIME", "sub": "$8.99", "role": "brand" },
+          { "title": "DISNEY+", "sub": "$6.99", "role": "brand" },
+          { "title": "HBO MAX", "sub": "$14.99", "role": "brand" }
+        ],
+        "flowNotes": ["adds a bill", "adds a bill", "adds a bill", "adds a bill"],
+        "payoffOverline": "ALL TOGETHER",
+        "payoffValue": "$44.95",
+        "payoffNote": "PER MONTH · ONE HOUSEHOLD"
+      }
+    },
+    {
+      "id": "household-stack",
+      "type": "model",
+      "edit": { "camera": "drift" },
+      "narration": [
+        "Software, music, storage, fitness — the stack grows every year.",
+        "Each one small. All of them together, a second mortgage."
+      ],
+      "data": {
+        "kicker": "THE HOUSEHOLD STACK",
+        "nodes": [
+          { "title": "STREAMING", "sub": "$60", "role": "cloud" },
+          { "title": "MUSIC", "sub": "$11", "role": "device" },
+          { "title": "STORAGE", "sub": "$3", "role": "cloud" },
+          { "title": "FITNESS", "sub": "$10", "role": "people" }
+        ],
+        "flowNotes": ["monthly", "monthly", "monthly"],
+        "payoffOverline": "PER MONTH",
+        "payoffValue": "$84",
+        "payoffNote": "AND CLIMBING"
+      }
+    },
+    {
+      "id": "two-bills-one-total",
+      "type": "money",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "Old way: one big bill, once a year.",
+        "New way: small bills every month — the total is higher."
+      ],
+      "data": {
+        "kicker": "TWO BILLS, ONE TOTAL",
+        "overline": "ONE-TIME vs RECURRING",
+        "steps": [
+          { "value": 0, "at": 0 },
+          { "value": 120, "at": 0.35 },
+          { "value": 219, "at": 0.7 }
+        ],
+        "finalLabel": "$219 / MONTH",
+        "barLabel": "THE REAL TOTAL",
+        "barAt": 0.35,
+        "barDurationSec": 2
+      }
+    },
+    {
+      "id": "streamflation",
+      "type": "chart",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "Streaming prices climb every year.",
+        "Churn is down, prices are up — the math works for them."
+      ],
+      "data": {
+        "kicker": "STREAMFLATION",
+        "data": [
+          { "label": "2020", "value": 8 },
+          { "label": "2022", "value": 12 },
+          { "label": "2024", "value": 16 },
+          { "label": "2026", "value": 21 }
+        ],
+        "insightKicker": "EVERY YEAR",
+        "insight": "Prices go up. The bill never goes away."
+      }
+    },
+    {
+      "id": "per-month-everywhere",
+      "type": "model",
+      "edit": { "camera": "panRight" },
+      "narration": [
+        "Everything is a monthly fee now.",
+        "Razor blades, cars, software, your gym."
+      ],
+      "data": {
+        "kicker": "$/MO EVERYWHERE",
+        "nodes": [
+          { "title": "BLADES", "sub": "$/mo", "role": "device" },
+          { "title": "CARS", "sub": "$/mo", "role": "store" },
+          { "title": "SOFTWARE", "sub": "$/mo", "role": "cloud" },
+          { "title": "GYMS", "sub": "$/mo", "role": "people" }
+        ],
+        "flowNotes": ["$/mo", "$/mo", "$/mo"],
+        "payoffOverline": "THE ECONOMY",
+        "payoffValue": "$/MO",
+        "payoffNote": "EVERYTHING · EVERYWHERE"
+      }
+    },
+    {
+      "id": "prime-signup",
+      "type": "reveal",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "Prime has more subscribers than there are Americans.",
+        "And a cancel button buried four menus deep."
+      ],
+      "data": {
+        "kicker": "PRIME SIGNUP",
+        "lines": [
+          "More subscribers",
+          "than Americans."
+        ],
+        "note": "CANCEL · FOUR MENUS DEEP"
+      }
+    },
+    {
+      "id": "the-dark-pattern",
+      "type": "reveal",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "The dark pattern: signing up is one tap.",
+        "Leaving is a scavenger hunt."
+      ],
+      "data": {
+        "kicker": "THE DARK PATTERN",
+        "lines": [
+          "Signing up: one tap.",
+          "Leaving: a scavenger hunt."
+        ],
+        "note": "DESIGNED THAT WAY"
+      }
+    },
+    {
+      "id": "iliad",
+      "type": "title",
+      "edit": { "camera": "static" },
+      "narration": [
+        "The Iliad opens ten years into a war.",
+        "This one started with a box of Photoshop."
+      ],
+      "data": {
+        "kicker": "ACT III · THE ILIAD",
+        "lines": [
+          "Ten years into",
+          "a war."
+        ]
+      }
+    },
+    {
+      "id": "homer-worn-pages",
+      "type": "reveal",
+      "edit": { "camera": "drift" },
+      "narration": [
+        "Homer's pages are worn at the edges.",
+        "Everybody knows the ending."
+      ],
+      "data": {
+        "kicker": "HOMER · WORN PAGES",
+        "lines": [
+          "Everybody knows",
+          "the ending."
+        ],
+        "note": "THE WAR IS TEN YEARS OLD"
+      }
+    },
+    {
+      "id": "ftc-release",
+      "type": "reveal",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "In twenty twenty-five, the FTC filed its case.",
+        "Pages and pages of dark patterns."
+      ],
+      "data": {
+        "kicker": "THE FTC FILING",
+        "lines": [
+          "The FTC filed",
+          "its case."
+        ],
+        "note": "2025 · DARK PATTERNS"
+      }
+    },
+    {
+      "id": "two-five-billion-split",
+      "type": "money",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "Two point five billion dollars.",
+        "The case would split it in two."
+      ],
+      "data": {
+        "kicker": "THE AMAZON CASE",
+        "overline": "ALLEGED · FTC vs AMAZON",
+        "steps": [
+          { "value": 0, "at": 0 },
+          { "value": 2500000000, "at": 0.6 }
+        ],
+        "finalLabel": "$2.5B",
+        "barLabel": "SPLIT IN TWO",
+        "barAt": 0.35,
+        "barDurationSec": 2
+      }
+    },
+    {
+      "id": "the-adobe-filing",
+      "type": "reveal",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "And the new front: Adobe.",
+        "A hundred fifty million a year in cancellation fees, hidden in the fine print."
+      ],
+      "data": {
+        "kicker": "THE ADOBE FILING",
+        "lines": [
+          "$150M a year in",
+          "cancellation fees."
+        ],
+        "note": "HIDDEN IN THE FINE PRINT"
+      }
+    },
+    {
+      "id": "the-fifty-percent-fee",
+      "type": "reveal",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "Cancel by phone and they keep fifty percent of the remaining year.",
+        "Call it a fee. It is a fine."
+      ],
+      "data": {
+        "kicker": "THE 50% FEE",
+        "value": "50",
+        "suffix": "%",
+        "lines": [
+          "of the remaining year,",
+          "on the spot."
+        ],
+        "note": "A FEE. READ: A FINE."
+      }
+    },
+    {
+      "id": "two-five-billion-vs-seventy-five",
+      "type": "money",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "Two and a half billion versus seventy five million.",
+        "The penalty barely moves the math."
+      ],
+      "data": {
+        "kicker": "THE GAP",
+        "overline": "PENALTY vs REVENUE",
+        "steps": [
+          { "value": 75000000, "at": 0 },
+          { "value": 2500000000, "at": 0.6 }
+        ],
+        "finalLabel": "$2.5B",
+        "barLabel": "$75M → $2.5B",
+        "barAt": 0.35,
+        "barDurationSec": 2
+      }
+    },
+    {
+      "id": "courthouse",
+      "type": "reveal",
+      "edit": { "camera": "drift" },
+      "narration": [
+        "So the courts get the question: fee or fine?",
+        "Either way, the subscription is still charging."
+      ],
+      "data": {
+        "kicker": "THE COURTHOUSE",
+        "lines": [
+          "A fee, or",
+          "a fine?"
+        ],
+        "note": "THE SUBSCRIPTION KEEPS CHARGING"
+      }
+    },
+    {
+      "id": "symmetry",
+      "type": "chart",
+      "edit": { "camera": "drift" },
+      "narration": [
+        "The rule they wanted to ban had a quiet symmetry.",
+        "One click to buy. One click to cancel."
+      ],
+      "data": {
+        "kicker": "THE RULE",
+        "data": [
+          { "label": "SIGN UP", "value": 1 },
+          { "label": "CANCEL", "value": 8 }
+        ],
+        "insightKicker": "SYMMETRY",
+        "insight": "One click to buy. One click to cancel."
+      }
+    },
+    {
+      "id": "july-eight-2025",
+      "type": "reveal",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "July eighth, twenty twenty-five.",
+        "The FTC finalized the click-to-cancel rule."
+      ],
+      "data": {
+        "kicker": "JULY 8, 2025",
+        "lines": [
+          "Click to cancel.",
+          "The rule is final."
+        ],
+        "note": "FTC · FINAL RULE"
+      }
+    },
+    {
+      "id": "the-opinion",
+      "type": "reveal",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "The dissenting opinion called it a war on convenience.",
+        "One tap to subscribe. One tap to leave."
+      ],
+      "data": {
+        "kicker": "THE OPINION",
+        "lines": [
+          "A war on",
+          "convenience."
+        ],
+        "note": "THE DISSENT"
+      }
+    },
+    {
+      "id": "procedure",
+      "type": "reveal",
+      "edit": { "camera": "static" },
+      "narration": [
+        "Then the procedural vote.",
+        "Fifty-two to forty-eight — the rule survived the Senate."
+      ],
+      "data": {
+        "kicker": "PROCEDURE",
+        "lines": [
+          "52 to 48.",
+          "The rule survived."
+        ],
+        "note": "THE SENATE VOTE"
+      }
+    },
+    {
+      "id": "twenty-twenty-six-no-rule",
+      "type": "title",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "And by twenty twenty-six, the rule is gone.",
+        "Cancel buttons quietly moved one click deeper."
+      ],
+      "data": {
+        "kicker": "2026",
+        "lines": [
+          "The rule",
+          "is gone."
+        ]
+      }
+    },
+    {
+      "id": "back-to-the-gym",
+      "type": "hook",
+      "edit": { "camera": "pushIn" },
+      "narration": [
+        "Back to the empty gym.",
+        "The machines are polished. The members are imaginary."
+      ],
+      "data": {
+        "kicker": "PLANET FITNESS · 4 AM",
+        "accentLine": 1,
+        "lines": [
+          "18.7 million members.",
+          "The gym is empty."
+        ]
+      }
+    },
+    {
+      "id": "one-thirty-three-on-black",
+      "type": "money",
+      "edit": { "camera": "punch" },
+      "hold": 1.5,
+      "narration": [
+        "A hundred thirty three dollars a month.",
+        "Sixteen hundred a year, going somewhere you cannot name."
+      ],
+      "data": {
+        "kicker": "THE GAP",
+        "overline": "GUESSED vs ACTUAL · PER MONTH",
+        "steps": [
+          { "value": 0, "at": 0 },
+          { "value": 86, "at": 0.3 },
+          { "value": 133, "at": 0.7 }
+        ],
+        "finalLabel": "$133 / MONTH",
+        "barLabel": "GOING UNNAMED",
+        "barAt": 0.3,
+        "barDurationSec": 2
+      }
+    },
+    {
+      "id": "scan-the-statement",
+      "type": "reveal",
+      "edit": { "camera": "punch" },
+      "narration": [
+        "Scan your own statement.",
+        "Every recurring line — when did you last use it?"
+      ],
+      "data": {
+        "kicker": "SCAN THE STATEMENT",
+        "lines": [
+          "Every 'recurring' line:",
+          "when did you last use it?"
+        ],
+        "note": "ACME FITNESS · $10.00 · EVERY MONTH"
+      }
+    },
+    {
+      "id": "finale",
+      "type": "finale",
+      "edit": { "camera": "pullOut" },
+      "narration": [
+        "Eighteen point seven million members.",
+        "An economy rebuilt around money you forget to stop paying."
+      ],
+      "data": {
+        "montage": {
+          "mapLabel": "SUBSCRIBERS",
+          "revenueLabel": "MONTHLY RENEWALS",
+          "businessLabel": "THE MODEL",
+          "networkLabel": "EVERYWHERE"
+        },
+        "line1": {
+          "kicker": "REAL RETURN",
+          "lines": [
+            "An economy rebuilt around",
+            "the money you forget",
+            "to stop paying."
+          ]
+        },
+        "line2": {
+          "lines": [
+            "The company that sells you nothing."
+          ]
+        },
+        "footer": "THE COMPANY THAT SELLS YOU NOTHING"
+      }
+    }
+  ]
+}

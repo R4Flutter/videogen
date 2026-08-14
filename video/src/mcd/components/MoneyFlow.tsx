@@ -4,7 +4,7 @@ import { EASE_IN_OUT } from "../utils/easing";
 import { progressive } from "../utils/animation";
 import { cubicPoint, linePoint, type Pt } from "../utils/geometry";
 import { seededRandom } from "../utils/deterministicRandom";
-import { COLORS } from "../theme";
+import { COLORS, withAlpha } from "../theme";
 
 export type MoneyStream = {
   from: Pt;
@@ -30,7 +30,8 @@ type Props = {
 const E = EASE_IN_OUT;
 
 // Deterministic particle system that flows money along paths.
-// Each stream spawns `perStream` particles over its travel window.
+// Each stream spawns `perStream` particles over its travel window. Coins are
+// drawn as layered gold discs (rim + face + sheen) instead of flat dots.
 export const MoneyFlow: React.FC<Props> = ({
   streams,
   perStream = 7,
@@ -77,27 +78,29 @@ export const MoneyFlow: React.FC<Props> = ({
           ? cubicPoint({ from: s.from, c1: s.c1, c2: s.c2, to: s.to }, env)
           : linePoint(s.from, s.to, env);
         const fade = Math.sin(Math.PI * env);
+        const r = pt.r;
+        const sheen = 0.5 + 0.5 * Math.sin(env * Math.PI);
         return (
           <g key={i} opacity={fade * 0.95 + 0.05}>
+            {/* ground glow at spawn */}
             {env < 0.18 ? (
-              <circle
-                cx={pos.x}
-                cy={pos.y}
-                r={pt.r * 0.55}
-                fill={color}
-                opacity={0.35}
-              />
+              <circle cx={pos.x} cy={pos.y} r={r * 0.9} fill={color} opacity={0.28} />
             ) : null}
-            <circle cx={pos.x} cy={pos.y} r={pt.r} fill={color} />
+            {/* rim + face */}
+            <circle cx={pos.x} cy={pos.y} r={r} fill={withAlpha(COLORS.textPrimary, 0.55)} />
+            <circle cx={pos.x} cy={pos.y} r={r * 0.82} fill={color} />
+            {/* sheen */}
+            <circle cx={pos.x - r * 0.24} cy={pos.y - r * 0.3} r={r * 0.42} fill={withAlpha("#FFFFFF", 0.4 * sheen)} />
             {pt.marker ? (
               <text
                 x={pos.x}
                 y={pos.y}
                 textAnchor="middle"
                 dominantBaseline="central"
-                fontSize={pt.r * 2.4}
+                fontSize={r * 2.2}
                 fontWeight={900}
                 fill="#1A1A1A"
+                opacity={0.85}
               >
                 $
               </text>

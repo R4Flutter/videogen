@@ -9,7 +9,7 @@
 //
 // With no story path, runs every registered story and prints a QC report.
 import { readFileSync, writeFileSync } from "node:fs";
-import { join, dirname } from "node:path";
+import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildTimeline } from "../video/src/mcd/data/timeline.ts";
 import { sceneCues } from "../video/src/mcd/data/cues.ts";
@@ -22,6 +22,7 @@ const STORIES = [
   join(root, "video/src/mcd/data/businessStory.json"),
   join(storiesDir, "appleBusinessStory.json"),
   join(storiesDir, "forexLamboBusinessStory.json"),
+  join(storiesDir, "companySellsNothingStory.json"),
 ];
 
 const run = (storyPath) => {
@@ -31,7 +32,7 @@ const run = (storyPath) => {
     const scene = story.scenes[i];
     return {
       ...tl,
-      cues: sceneCues(scene).map((c) => ({
+      cues: sceneCues(scene, timeline.wpm).map((c) => ({
         cue: c.cue,
         frame: tl.startFrame + Math.round(c.rel * tl.durationInFrames),
         sec: (tl.startFrame + Math.round(c.rel * tl.durationInFrames)) / FPS,
@@ -47,6 +48,7 @@ const run = (storyPath) => {
     cutsPerMinute: timeline.cutsPerMinute,
     scenes,
     warnings: timeline.warnings,
+    notices: timeline.notices,
   };
   const dst = join(dirname(storyPath), `${story.id}.timeline.json`);
   writeFileSync(dst, JSON.stringify(out, null, 2) + "\n", "utf8");
@@ -61,13 +63,14 @@ const report = (result) => {
     line(`${s.id.padEnd(10)} ${s.type.padEnd(8)} ${s.durationSec.toFixed(2)}s  (${s.startSec.toFixed(2)}-${(s.startSec + s.durationSec).toFixed(2)})  cues: ${s.cues.map((c) => c.cue).join(", ")}`);
   }
   for (const w of out.warnings) line(`QC ${w}`);
+  for (const n of out.notices ?? []) line(`note ${n}`);
   if (!out.warnings.length) line("QC clean");
 };
 
 const main = () => {
   const arg = process.argv[2];
   if (arg) {
-    const p = join(process.cwd(), arg);
+    const p = resolve(process.cwd(), arg);
     const result = run(p);
     writeFileSync(join(process.cwd(), "mcd-timeline.json"), JSON.stringify(result.out, null, 2) + "\n", "utf8");
     console.log(`[mcd-timeline] ${result.out.storyId} -> ${join(process.cwd(), "mcd-timeline.json")}`);

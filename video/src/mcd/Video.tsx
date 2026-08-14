@@ -31,7 +31,7 @@ export const McdVideo: React.FC<{ story: LoadedStory }> = ({ story }) => {
     resetAudioCues();
     story.timeline.scenes.forEach((tl, i) => {
       const scene = story.scenes[i];
-      for (const c of sceneCues(scene)) {
+      for (const c of sceneCues(scene, story.wpm)) {
         cueAt(scene.id, c.cue, tl.startFrame + Math.round(c.rel * tl.durationInFrames));
       }
     });

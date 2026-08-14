@@ -1,0 +1,176 @@
+{
+  "id": "AssetSlideStory",
+  "title": "The Slide Show",
+  "brand": "Asset Showcase",
+  "wpm": 170,
+  "targetSec": 16,
+  "hero": {
+    "kind": "image",
+    "width": 1200,
+    "height": 400
+  },
+  "theme": {
+    "accent": "#16A34A",
+    "accentSecondary": "#F5C518"
+  },
+  "scenes": [
+    {
+      "id": "slide-treadmill",
+      "type": "slide",
+      "narration": [
+        "The machine never sleeps. It waits for anyone. Almost no one comes."
+      ],
+      "energy": 0.8,
+      "pace": 0.6,
+      "edit": {
+        "maxSec": 4
+      },
+      "data": {
+        "kicker": "THE MACHINE · 4 AM",
+        "subject": {
+          "asset": "subjects/treadmill",
+          "direction": "rtl",
+          "vertical": 0.54,
+          "heightFrac": 0.46
+        },
+        "beats": [
+          { "name": "title", "at": 0.42, "importance": 1.0 },
+          { "name": "sub", "at": 0.68, "importance": 0.5 }
+        ],
+        "texts": [
+          {
+            "text": "THE MACHINE NEVER SLEEPS",
+            "position": "upper_center",
+            "role": "headline",
+            "anim": { "type": "slam", "personality": "aggressive", "trigger": "beat:title" }
+          },
+          {
+            "text": "PLANET FITNESS · 2,500 LOCATIONS",
+            "position": "lower_center",
+            "role": "sub",
+            "anim": { "type": "fade_up", "personality": "soft", "trigger": "beat:sub", "durationFrames": 18 }
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide-person",
+      "type": "slide",
+      "narration": [
+        "Out of eighteen point seven million members, someone is always here. Alone."
+      ],
+      "energy": 0.85,
+      "pace": 0.62,
+      "edit": {
+        "maxSec": 4
+      },
+      "data": {
+        "kicker": "THE ONE WHO SHOWS UP",
+        "subject": {
+          "asset": "subjects/gym-person",
+          "direction": "ltr",
+          "vertical": 0.5,
+          "heightFrac": 0.72
+        },
+        "beats": [
+          { "name": "title", "at": 0.4, "importance": 1.0 },
+          { "name": "sub", "at": 0.68, "importance": 0.5 }
+        ],
+        "texts": [
+          {
+            "text": "18.7 MILLION MEMBERS",
+            "position": "upper_center",
+            "role": "number",
+            "accent": true,
+            "anim": { "type": "slam", "personality": "aggressive", "trigger": "beat:title" }
+          },
+          {
+            "text": "ONE RUNS AT 4 AM",
+            "position": "lower_center",
+            "role": "sub",
+            "anim": { "type": "fade_up", "personality": "soft", "trigger": "beat:sub", "durationFrames": 18 }
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide-rows",
+      "type": "slide",
+      "narration": [
+        "Row after row of machines, waiting for a crowd that never comes."
+      ],
+      "energy": 0.8,
+      "pace": 0.6,
+      "edit": {
+        "maxSec": 4
+      },
+      "data": {
+        "kicker": "ROWS OF SILENCE",
+        "subject": {
+          "asset": "subjects/machine-row",
+          "direction": "rtl",
+          "vertical": 0.54,
+          "heightFrac": 0.5
+        },
+        "beats": [
+          { "name": "title", "at": 0.42, "importance": 1.0 },
+          { "name": "sub", "at": 0.68, "importance": 0.5 }
+        ],
+        "texts": [
+          {
+            "text": "ROWS OF SILENCE",
+            "position": "upper_center",
+            "role": "headline",
+            "anim": { "type": "slam", "personality": "aggressive", "trigger": "beat:title" }
+          },
+          {
+            "text": "99.9% NEVER SHOW",
+            "position": "lower_center",
+            "role": "sub",
+            "anim": { "type": "fade_up", "personality": "soft", "trigger": "beat:sub", "durationFrames": 18 }
+          }
+        ]
+      }
+    },
+    {
+      "id": "slide-lambo",
+      "type": "slide",
+      "narration": [
+        "But this is not about gyms. This is about what people really buy."
+      ],
+      "energy": 0.9,
+      "pace": 0.62,
+      "edit": {
+        "maxSec": 4.5
+      },
+      "data": {
+        "kicker": "THE OTHER STORY",
+        "subject": {
+          "asset": "subjects/lambo",
+          "direction": "ltr",
+          "vertical": 0.52,
+          "heightFrac": 0.38
+        },
+        "beats": [
+          { "name": "title", "at": 0.4, "importance": 1.0 },
+          { "name": "sub", "at": 0.68, "importance": 0.5 }
+        ],
+        "texts": [
+          {
+            "text": "THE BANASTARIM RUN",
+            "position": "upper_center",
+            "role": "headline",
+            "accent": true,
+            "anim": { "type": "slam", "personality": "aggressive", "trigger": "beat:title" }
+          },
+          {
+            "text": "MILESTONE · NEXT RENDER",
+            "position": "lower_center",
+            "role": "sub",
+            "anim": { "type": "fade_up", "personality": "soft", "trigger": "beat:sub", "durationFrames": 18 }
+          }
+        ]
+      }
+    }
+  ]
+}

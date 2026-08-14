@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { AbsoluteFill, interpolateColors, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { EASE_ARRIVE } from "../utils/easing";
 import {
   progressive,
@@ -155,6 +155,18 @@ export const DataStory: React.FC = () => {
           viewBox={portrait ? "0 0 1080 1920" : "0 0 1920 1080"}
           style={{ position: "absolute", inset: 0 }}
         >
+          <defs>
+            <linearGradient id="barFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor={withAlpha("#FFFFFF", 0.32)} />
+              <stop offset="0.35" stopColor={withAlpha("#FFFFFF", 0.05)} />
+              <stop offset="1" stopColor="#8A857C" />
+            </linearGradient>
+            <linearGradient id="barFillLast" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor={withAlpha("#FFFFFF", 0.45)} />
+              <stop offset="0.3" stopColor={withAlpha(COLORS.gold, 0.55)} />
+              <stop offset="1" stopColor={COLORS.gold} />
+            </linearGradient>
+          </defs>
           {REVENUE_BY_YEAR.map((d, i) => {
             const isLast = i === LAST;
             const p = springProgress(frame, fps, {
@@ -167,9 +179,7 @@ export const DataStory: React.FC = () => {
             const x = xOf(i);
             const labelP = progressive(frame, at(0.11 + i * 0.038 + 0.214), at(0.071));
             const yearP = progressive(frame, at(0.11 + i * 0.038 + 0.029), at(0.057));
-            const color = isLast
-              ? interpolateColors(progressive(frame, at(0.5), at(0.581) - at(0.5)), [0, 1], [withAlpha(COLORS.gold, 0.35), COLORS.gold])
-              : "#8A857C";
+            const fill = isLast ? "url(#barFillLast)" : "url(#barFill)";
             return (
               <g key={d.label}>
                 <rect
@@ -178,9 +188,20 @@ export const DataStory: React.FC = () => {
                   width={barW}
                   height={h}
                   rx={14}
-                  fill={color}
+                  fill={fill}
                   opacity={isLast ? 1 : 0.85}
                 />
+                {/* top highlight seam */}
+                {h > 26 ? (
+                  <rect
+                    x={x + barW * 0.12}
+                    y={plot.baseline - h + 6}
+                    width={barW * 0.76}
+                    height={6}
+                    rx={3}
+                    fill={withAlpha("#FFFFFF", isLast ? 0.5 : 0.32)}
+                  />
+                ) : null}
                 {isLast ? (
                   <rect
                     x={x - 5}

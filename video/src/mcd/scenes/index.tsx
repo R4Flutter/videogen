@@ -14,6 +14,11 @@ import { DataStory } from "./DataStory";
 import { Finale } from "./Finale";
 import { TitleCard } from "./TitleCard";
 import { RevealCard } from "./RevealCard";
+import { DocumentScene } from "./DocumentScene";
+import { SvgScene } from "./SvgScene";
+import { HeroScene } from "./HeroScene";
+import { SlideScene } from "./SlideScene";
+import { BrollScene } from "./BrollScene";
 
 export const SCENE_COMPONENTS: Record<SceneType, ComponentType> = {
   hook: Hook,
@@ -25,6 +30,11 @@ export const SCENE_COMPONENTS: Record<SceneType, ComponentType> = {
   finale: Finale,
   title: TitleCard,
   reveal: RevealCard,
+  document: DocumentScene,
+  svg: SvgScene,
+  hero: HeroScene,
+  slide: SlideScene,
+  broll: BrollScene,
 };
 
 export const SCENE_TYPES = Object.keys(SCENE_COMPONENTS) as SceneType[];

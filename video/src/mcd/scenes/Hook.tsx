@@ -1,8 +1,9 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { AbsoluteFill, Img, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { EASE_ARRIVE } from "../utils/easing";
 import { progressive, springProgress, useSceneInOut } from "../utils/animation";
-import { Camera2D, type CameraKeyframe } from "../components/Camera2D";
+import { Camera2D } from "../components/Camera2D";
+import { useDirector } from "../data/director";
 import { AnimatedText } from "../components/AnimatedText";
 import { PhoneHero } from "../components/PhoneHero";
 import { Backdrop } from "../components/Backdrop";
@@ -22,22 +23,7 @@ export const Hook: React.FC = () => {
     entranceScale: 1.02,
   });
 
-  const CAMERA = useMemo<CameraKeyframe[]>(
-    () => [
-      { frame: 0, camera: { x: 900, y: 540, scale: 0.96 } },
-      { frame: at(0.6), camera: { x: 900, y: 540, scale: 0.96 }, easing: EASE_ARRIVE },
-      { frame: at(0.908), camera: { x: 900, y: 540, scale: 1.12 }, easing: EASE_ARRIVE },
-    ],
-    [at],
-  );
-  const CAMERA_P = useMemo<CameraKeyframe[]>(
-    () => [
-      { frame: 0, camera: { x: 540, y: 960, scale: 0.98 } },
-      { frame: at(0.6), camera: { x: 540, y: 960, scale: 0.98 }, easing: EASE_ARRIVE },
-      { frame: at(0.908), camera: { x: 540, y: 960, scale: 1.1 }, easing: EASE_ARRIVE },
-    ],
-    [at],
-  );
+  const { keyframes: CAMERA, keyframesPortrait: CAMERA_P } = useDirector();
 
   // Hero object: flies in from the left with a spring, slight rotation
   // cleanup, soft landing scale + shadow settles underneath.
@@ -185,7 +171,7 @@ export const Hook: React.FC = () => {
 };
 
 const HeroArt: React.FC<{
-  hero: { src?: string; kind?: "monogram" | "phone"; width: number; height: number };
+  hero: { src?: string; kind?: "monogram" | "phone" | "image"; width: number; height: number };
   brand: string;
 }> = ({ hero, brand }) => {
   if (hero.src) {
