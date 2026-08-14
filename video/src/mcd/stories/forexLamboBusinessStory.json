@@ -1,0 +1,206 @@
+{
+  "id": "ForexLamboBusinessStory",
+  "title": "The Forex Lamborghini Kid",
+  "brand": "FOREX LAMBO",
+  "wpm": 170,
+  "hero": {
+    "kind": "phone",
+    "width": 420,
+    "height": 640,
+    "position": "right"
+  },
+  "theme": {
+    "accent": "#16A34A",
+    "accentSecondary": "#F5C518"
+  },
+  "backdrops": {
+    "hook": "bg/hook_vec.png",
+    "map": "bg/map_vec.png",
+    "money": "bg/money_vec.png",
+    "model": "bg/model_vec.png",
+    "chart": "bg/chart_vec.png",
+    "finale": "bg/finale_vec.png"
+  },
+  "retention": [
+    { "device": "reversal", "at": 0.13 },
+    { "device": "new_entity", "at": 0.25 },
+    { "device": "reveal", "at": 0.41 }
+  ],
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "narration": [
+        "An 18-year-old bought a Lamborghini from a $500 trading account."
+      ],
+      "energy": 0.8,
+      "pace": 0.58,
+      "data": {
+        "kicker": "A VIRAL BUSINESS STORY",
+        "lines": [
+          "HE BOUGHT A",
+          [{ "text": "LAMBORGHINI AT 18" }],
+          [{ "text": "OR DID HE?" }]
+        ],
+        "accentLine": 1
+      }
+    },
+    {
+      "id": "global",
+      "type": "global",
+      "narration": [
+        "Twenty five million views — the same video on every timeline on Earth."
+      ],
+      "energy": 0.62,
+      "pace": 0.56,
+      "data": {
+        "finalCount": 25000000,
+        "headline": "VIEWS",
+        "kicker": "PART 01 · VIRAL SCALE"
+      }
+    },
+    {
+      "id": "map",
+      "type": "map",
+      "narration": [
+        "From Los Angeles to Tokyo, in days. Nobody can prove a single dollar is real."
+      ],
+      "energy": 0.72,
+      "pace": 0.58,
+      "data": {
+        "regionOrder": [
+          "northAmerica",
+          "southAmerica",
+          "europe",
+          "middleEast",
+          "asia",
+          "australia"
+        ],
+        "regionLabel": {
+          "northAmerica": "NORTH AMERICA",
+          "southAmerica": "SOUTH AMERICA",
+          "europe": "EUROPE",
+          "middleEast": "MIDDLE EAST",
+          "asia": "ASIA",
+          "australia": "AUSTRALIA"
+        },
+        "regionLabelCell": {
+          "northAmerica": [6, 3.2],
+          "southAmerica": [19, 31.2],
+          "europe": [30, 2.4],
+          "middleEast": [37, 21.4],
+          "asia": [40, 1.8],
+          "australia": [58, 31]
+        },
+        "hubOrigin": { "name": "LOS ANGELES · TIKTOK", "cell": [8, 10.5] },
+        "hubs": [
+          { "region": "northAmerica", "name": "NEW YORK", "cell": [18, 9.5], "controls": [[13, 8], [16, 9]] },
+          { "region": "southAmerica", "name": "SÃO PAULO", "cell": [21, 21.5], "controls": [[13, 16], [17, 20]] },
+          { "region": "europe", "name": "LONDON", "cell": [29, 6], "controls": [[22, 4], [26, 5]] },
+          { "region": "asia", "name": "TOKYO", "cell": [61, 8], "controls": [[38, 1], [52, 1]] },
+          { "region": "australia", "name": "SYDNEY", "cell": [56, 24], "controls": [[34, 20], [48, 24]] }
+        ],
+        "title": {
+          "kicker": "PART 02 · THE MEME SPREADS",
+          "lines": ["FROM ONE LAPTOP TO", "EVERY TIMELINE ON EARTH"]
+        }
+      }
+    },
+    {
+      "id": "money",
+      "type": "money",
+      "narration": [
+        "The claim: $500 turned into five million dollars through trading. In a car. Allegedly."
+      ],
+      "energy": 0.5,
+      "pace": 0.54,
+      "data": {
+        "kicker": "PART 03 · THE MONEY MACHINE",
+        "steps": [
+          { "value": 0, "at": 0 },
+          { "value": 500, "at": 0.114 },
+          { "value": 5000, "at": 0.229 },
+          { "value": 50000, "at": 0.371 },
+          { "value": 500000, "at": 0.524 },
+          { "value": 5000000, "at": 0.667 },
+          { "value": 5000000, "at": 0.914 }
+        ],
+        "finalLabel": "$5M+",
+        "overline": "ALLEGED ACCOUNT BALANCE",
+        "barLabel": "THE CLAIMED JOURNEY · ILLUSTRATIVE",
+        "barAt": 0.305,
+        "barDurationSec": 5
+      }
+    },
+    {
+      "id": "model",
+      "type": "model",
+      "narration": [
+        "Followers give attention. Feeds spread the hype. The story becomes the brand."
+      ],
+      "energy": 0.5,
+      "pace": 0.54,
+      "data": {
+        "kicker": "PART 04 · THE BUSINESS MODEL",
+        "nodes": [
+          { "title": "FOLLOWERS", "sub": "WATCH · SHARE · MEME", "role": "customer" },
+          { "title": "SOCIAL FEEDS", "sub": "TIKTOK · INSTAGRAM · REDDIT", "role": "platform" },
+          { "title": "TRADING APPS", "sub": "LOW-FEE ACCESS · 24/7", "role": "tech" },
+          { "title": "THE STORY", "sub": "CLIPS · CONFIDENCE · THE CAR", "role": "brand" }
+        ],
+        "flowNotes": ["VIEWS & ATTENTION", "HYPE & FOLLOWERS", "ATTENTION → REVENUE"],
+        "payoffOverline": "CLAIMED PROFIT",
+        "payoffValue": "$500 → $5M+",
+        "payoffNote": "ILLUSTRATIVE · UNVERIFIED"
+      }
+    },
+    {
+      "id": "chart",
+      "type": "chart",
+      "narration": [
+        "Attention grew like a chart — but hype is not proof. Faith paid the bills, not receipts."
+      ],
+      "energy": 0.55,
+      "pace": 0.52,
+      "data": {
+        "kicker": "PART 05 · VIRAL GROWTH, YEAR BY YEAR",
+        "valuePrefix": "",
+        "valueSuffix": "M",
+        "data": [
+          { "label": "2023", "value": 1.4 },
+          { "label": "2024", "value": 18.2 },
+          { "label": "2025", "value": 141.0 }
+        ],
+        "insightKicker": "2025",
+        "insight": "ATTENTION PEAKED — PROOF DIDN'T",
+        "annotationNote": "Bar 3 of 3 · Illustrative figures — source verified data in story.json",
+        "footnote": "ILLUSTRATIVE FIGURES · REPLACE WITH VERIFIED DATA IN src/mcd/stories/forexLamboBusinessStory.json"
+      }
+    },
+    {
+      "id": "finale",
+      "type": "finale",
+      "narration": [
+        "Hype is not a business. Verify before you trade. A Lamborghini is never a strategy."
+      ],
+      "energy": 0.62,
+      "pace": 0.55,
+      "data": {
+        "montage": {
+          "mapLabel": "VIRAL NETWORK",
+          "revenueLabel": "CLAIMED PROFIT",
+          "businessLabel": "THE MONEY FLOW",
+          "networkLabel": "25M+ VIEWS"
+        },
+        "line1": {
+          "kicker": "THE REAL LESSON",
+          "lines": ["HYPE ISN'T A", "BUSINESS."]
+        },
+        "line2": {
+          "lines": [{ "text": "VERIFY BEFORE YOU TRADE." }]
+        },
+        "footer": "A MOTION-GRAPHIC EXPLAINER · ILLUSTRATIVE FIGURES"
+      }
+    }
+  ]
+}

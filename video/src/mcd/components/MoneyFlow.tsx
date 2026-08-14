@@ -97,7 +97,7 @@ export const MoneyFlow: React.FC<Props> = ({
                 dominantBaseline="central"
                 fontSize={pt.r * 2.4}
                 fontWeight={900}
-                fill="#0B0C0F"
+                fill="#1A1A1A"
               >
                 $
               </text>

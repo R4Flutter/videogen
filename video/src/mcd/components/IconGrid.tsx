@@ -7,8 +7,10 @@ import { COLORS } from "../theme";
 const COLS = 64;
 const ROWS = 32;
 const CELL = 100; // world px per cell
-const W = 1920;
-const H = 1080;
+const W_L = 1920;
+const H_L = 1080;
+const W_P = 1080;
+const H_P = 1920;
 
 type Cell = { x: number; y: number; rot: number; jx: number; jy: number };
 
@@ -127,7 +129,7 @@ const drawGlyph = (
   ctx.stroke();
 
   // Door
-  ctx.fillStyle = "#0C0D10";
+  ctx.fillStyle = "#1A1A1A";
   roundRectPath(ctx, -gw * 0.1, gh * 0.3, gw * 0.2, gh * 0.38, gw * 0.05);
   ctx.fill();
 
@@ -138,14 +140,17 @@ type Props = {
   count: number; // how many restaurants "exist" (may exceed drawn glyphs)
   camera: CameraState;
   milestone?: number; // frame-driven glow pulse phase, 0..1
+  portrait?: boolean;
 };
 
 // A 2D field of restaurant glyphs drawn straight to a <canvas>. The camera
 // zooms out while `count` multiplies — thousands of restaurants read as a
 // large organized city without thousands of DOM nodes.
-export const IconGrid: React.FC<Props> = ({ count, camera, milestone = 0 }) => {
+export const IconGrid: React.FC<Props> = ({ count, camera, milestone = 0, portrait = false }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const frame = useCurrentFrame();
+  const W = portrait ? W_P : W_L;
+  const H = portrait ? H_P : H_L;
 
   const glyphCount = useMemo(() => Math.min(Math.floor(count), MAX_DRAW), [count]);
 
@@ -174,7 +179,7 @@ export const IconGrid: React.FC<Props> = ({ count, camera, milestone = 0 }) => {
     for (let i = 0; i < countNow; i++) {
       drawGlyph(ctx, CELLS[i], camera, i, alpha, pulse);
     }
-  }, [glyphCount, camera, frame, milestone]);
+  }, [glyphCount, camera, frame, milestone, portrait, W, H]);
 
   return (
     <canvas

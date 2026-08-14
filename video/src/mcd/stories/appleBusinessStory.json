@@ -2,6 +2,7 @@
   "id": "AppleBusinessStory",
   "title": "How Apple Makes Billions",
   "brand": "Apple",
+  "wpm": 170,
   "hero": {
     "kind": "phone",
     "width": 420,
@@ -12,119 +13,175 @@
     "accent": "#0A84FF",
     "accentSecondary": "#A8A8AD"
   },
-  "hook": {
-    "kicker": "A BUSINESS STORY",
-    "lines": [
-      "HOW DOES APPLE",
-      [{ "text": "MAKE BILLIONS?" }]
-    ],
-    "accentLine": 1
-  },
-  "globalScale": {
-    "finalCount": 200000,
-    "headline": "EMPLOYEES",
-    "kicker": "PART 01 · GLOBAL SCALE"
-  },
-  "map": {
-    "regionOrder": [
-      "northAmerica",
-      "southAmerica",
-      "europe",
-      "middleEast",
-      "asia",
-      "australia"
-    ],
-    "regionLabel": {
-      "northAmerica": "NORTH AMERICA",
-      "southAmerica": "SOUTH AMERICA",
-      "europe": "EUROPE",
-      "middleEast": "MIDDLE EAST",
-      "asia": "ASIA",
-      "australia": "AUSTRALIA"
+  "retention": [
+    { "device": "reversal", "at": 0.11 },
+    { "device": "new_entity", "at": 0.22 },
+    { "device": "reveal", "at": 0.37 }
+  ],
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "narration": [
+        "One company. One device. How does Apple make billions?"
+      ],
+      "data": {
+        "kicker": "A BUSINESS STORY",
+        "lines": [
+          "HOW DOES APPLE",
+          [{ "text": "MAKE BILLIONS?" }]
+        ],
+        "accentLine": 1
+      }
     },
-    "regionLabelCell": {
-      "northAmerica": [6, 3.2],
-      "southAmerica": [19, 31.2],
-      "europe": [30, 2.4],
-      "middleEast": [37, 21.4],
-      "asia": [40, 1.8],
-      "australia": [58, 31]
+    {
+      "id": "global",
+      "type": "global",
+      "narration": [
+        "Two hundred thousand employees. One design studio in California."
+      ],
+      "data": {
+        "finalCount": 200000,
+        "headline": "EMPLOYEES",
+        "kicker": "PART 01 · GLOBAL SCALE"
+      }
     },
-    "hubOrigin": { "name": "CUPERTINO · HQ", "cell": [8, 10.5] },
-    "hubs": [
-      { "region": "europe", "name": "CORK", "cell": [29, 5.5], "controls": [[18, 4], [24, 5]] },
-      { "region": "middleEast", "name": "TEL AVIV", "cell": [37, 13], "controls": [[28, 7], [33, 11]] },
-      { "region": "asia", "name": "SHANGHAI", "cell": [48, 9], "controls": [[33, 4], [42, 5]] },
-      { "region": "asia", "name": "TOKYO", "cell": [60, 8], "controls": [[42, 2], [52, 2]] },
-      { "region": "australia", "name": "SYDNEY", "cell": [56, 24], "controls": [[36, 22], [48, 24]] }
-    ],
-    "title": {
-      "kicker": "PART 02 · GLOBAL FOOTPRINT",
-      "lines": ["A PRODUCT NETWORK", "REACHING THE WHOLE PLANET"]
+    {
+      "id": "map",
+      "type": "map",
+      "narration": [
+        "From Cupertino to Cork, Shanghai and Tokyo — a product network on every continent."
+      ],
+      "data": {
+        "regionOrder": [
+          "northAmerica",
+          "southAmerica",
+          "europe",
+          "middleEast",
+          "asia",
+          "australia"
+        ],
+        "regionLabel": {
+          "northAmerica": "NORTH AMERICA",
+          "southAmerica": "SOUTH AMERICA",
+          "europe": "EUROPE",
+          "middleEast": "MIDDLE EAST",
+          "asia": "ASIA",
+          "australia": "AUSTRALIA"
+        },
+        "regionLabelCell": {
+          "northAmerica": [6, 3.2],
+          "southAmerica": [19, 31.2],
+          "europe": [30, 2.4],
+          "middleEast": [37, 21.4],
+          "asia": [40, 1.8],
+          "australia": [58, 31]
+        },
+        "hubOrigin": { "name": "CUPERTINO · HQ", "cell": [8, 10.5] },
+        "hubs": [
+          { "region": "europe", "name": "CORK", "cell": [29, 5.5], "controls": [[18, 4], [24, 5]] },
+          { "region": "middleEast", "name": "TEL AVIV", "cell": [37, 13], "controls": [[28, 7], [33, 11]] },
+          { "region": "asia", "name": "SHANGHAI", "cell": [48, 9], "controls": [[33, 4], [42, 5]] },
+          { "region": "asia", "name": "TOKYO", "cell": [60, 8], "controls": [[42, 2], [52, 2]] },
+          { "region": "australia", "name": "SYDNEY", "cell": [56, 24], "controls": [[36, 22], [48, 24]] }
+        ],
+        "title": {
+          "kicker": "PART 02 · GLOBAL FOOTPRINT",
+          "lines": ["A PRODUCT NETWORK", "REACHING THE WHOLE PLANET"]
+        }
+      }
+    },
+    {
+      "id": "money",
+      "type": "money",
+      "narration": [
+        "Three hundred ninety one billion dollars in annual revenue — devices, services and the walled garden."
+      ],
+      "data": {
+        "kicker": "PART 03 · THE MONEY MACHINE",
+        "steps": [
+          { "value": 0, "at": 0 },
+          { "value": 50000000000, "at": 0.114 },
+          { "value": 100000000000, "at": 0.229 },
+          { "value": 150000000000, "at": 0.371 },
+          { "value": 250000000000, "at": 0.524 },
+          { "value": 300000000000, "at": 0.667 },
+          { "value": 380000000000, "at": 0.8 },
+          { "value": 391000000000, "at": 0.914 }
+        ],
+        "finalLabel": "$391B",
+        "overline": "ANNUAL REVENUE · FY2023",
+        "barLabel": "REVENUE RUN-RATE · ILLUSTRATIVE",
+        "barAt": 0.305,
+        "barDurationSec": 5
+      }
+    },
+    {
+      "id": "model",
+      "type": "model",
+      "narration": [
+        "The customer buys the device. The App Store takes a cut. Apple collects a fee on every sale."
+      ],
+      "data": {
+        "kicker": "PART 04 · THE BUSINESS MODEL",
+        "nodes": [
+          { "title": "CUSTOMER", "sub": "BUYS THE DEVICE", "role": "customer" },
+          { "title": "APP STORE", "sub": "APPS · SERVICES · CLOUD", "role": "platform" },
+          { "title": "CARRIERS & RETAIL", "sub": "SELL & DISTRIBUTE", "role": "partner" },
+          { "title": "APPLE", "sub": "BRAND · DESIGN · WALLED GARDEN", "role": "brand" }
+        ],
+        "flowNotes": ["DEVICE & SERVICE", "REVENUE SHARE", "FEE ON EVERY SALE"],
+        "payoffOverline": "ANNUAL REVENUE",
+        "payoffValue": "$391B+",
+        "payoffNote": "ILLUSTRATIVE FIGURE"
+      }
+    },
+    {
+      "id": "chart",
+      "type": "chart",
+      "narration": [
+        "Revenue jumped past three hundred fifty billion, then toward four hundred."
+      ],
+      "data": {
+        "kicker": "PART 05 · REVENUE, YEAR BY YEAR",
+        "valuePrefix": "$",
+        "valueSuffix": "B",
+        "data": [
+          { "label": "2018", "value": 265.6 },
+          { "label": "2019", "value": 260.2 },
+          { "label": "2020", "value": 274.5 },
+          { "label": "2021", "value": 365.8 },
+          { "label": "2022", "value": 394.3 },
+          { "label": "2023", "value": 383.3 }
+        ],
+        "insightKicker": "FY2021",
+        "insight": "BIGGEST JUMP ON RECORD",
+        "annotationNote": "Bar 4 of 6 · Illustrative figures — source verified data in story.json",
+        "footnote": "ILLUSTRATIVE FIGURES · REPLACE WITH VERIFIED DATA IN src/mcd/stories/appleBusinessStory.json"
+      }
+    },
+    {
+      "id": "finale",
+      "type": "finale",
+      "narration": [
+        "The real business isn't just devices — it's the system. Design, ecosystem, the walled garden."
+      ],
+      "data": {
+        "montage": {
+          "mapLabel": "GLOBAL NETWORK",
+          "revenueLabel": "REVENUE",
+          "businessLabel": "THE BUSINESS MODEL",
+          "networkLabel": "200,000+ EMPLOYEES"
+        },
+        "line1": {
+          "kicker": "THE BIG PICTURE",
+          "lines": ["THE REAL BUSINESS", "ISN'T JUST DEVICES."]
+        },
+        "line2": {
+          "lines": [{ "text": "IT'S THE SYSTEM." }]
+        },
+        "footer": "A MOTION-GRAPHIC EXPLAINER · ILLUSTRATIVE FIGURES"
+      }
     }
-  },
-  "revenue": {
-    "kicker": "PART 03 · THE MONEY MACHINE",
-    "steps": [
-      { "value": 0, "frame": 0 },
-      { "value": 50000000000, "frame": 24 },
-      { "value": 100000000000, "frame": 48 },
-      { "value": 150000000000, "frame": 78 },
-      { "value": 250000000000, "frame": 110 },
-      { "value": 300000000000, "frame": 140 },
-      { "value": 380000000000, "frame": 168 },
-      { "value": 391000000000, "frame": 192 }
-    ],
-    "finalLabel": "$391B",
-    "overline": "ANNUAL REVENUE · FY2023",
-    "barLabel": "REVENUE RUN-RATE · ILLUSTRATIVE",
-    "barDelay": 64,
-    "barDuration": 150
-  },
-  "businessModel": {
-    "kicker": "PART 04 · THE BUSINESS MODEL",
-    "nodes": [
-      { "title": "CUSTOMER", "sub": "BUYS THE DEVICE", "role": "customer" },
-      { "title": "APP STORE", "sub": "APPS · SERVICES · CLOUD", "role": "platform" },
-      { "title": "CARRIERS & RETAIL", "sub": "SELL & DISTRIBUTE", "role": "partner" },
-      { "title": "APPLE", "sub": "BRAND · DESIGN · WALLED GARDEN", "role": "brand" }
-    ],
-    "flowNotes": ["DEVICE & SERVICE", "REVENUE SHARE", "FEE ON EVERY SALE"],
-    "payoffOverline": "ANNUAL REVENUE",
-    "payoffValue": "$391B+",
-    "payoffNote": "ILLUSTRATIVE FIGURE"
-  },
-  "chart": {
-    "kicker": "PART 05 · REVENUE, YEAR BY YEAR",
-    "valuePrefix": "$",
-    "valueSuffix": "B",
-    "data": [
-      { "label": "2018", "value": 265.6 },
-      { "label": "2019", "value": 260.2 },
-      { "label": "2020", "value": 274.5 },
-      { "label": "2021", "value": 365.8 },
-      { "label": "2022", "value": 394.3 },
-      { "label": "2023", "value": 383.3 }
-    ],
-    "insightKicker": "FY2021",
-    "insight": "BIGGEST JUMP ON RECORD",
-    "annotationNote": "Bar 4 of 6 · Illustrative figures — source verified data in story.json",
-    "footnote": "ILLUSTRATIVE FIGURES · REPLACE WITH VERIFIED DATA IN src/mcd/stories/appleBusinessStory.json"
-  },
-  "finale": {
-    "montage": {
-      "mapLabel": "GLOBAL NETWORK",
-      "revenueLabel": "REVENUE",
-      "businessLabel": "THE BUSINESS MODEL",
-      "networkLabel": "200,000+ EMPLOYEES"
-    },
-    "line1": {
-      "kicker": "THE BIG PICTURE",
-      "lines": ["THE REAL BUSINESS", "ISN'T JUST DEVICES."]
-    },
-    "line2": {
-      "lines": [{ "text": "IT'S THE SYSTEM." }]
-    },
-    "footer": "A MOTION-GRAPHIC EXPLAINER · ILLUSTRATIVE FIGURES"
-  }
+  ]
 }

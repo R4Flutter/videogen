@@ -36,23 +36,25 @@ export const WEIGHT = {
 };
 
 export const COLORS = {
-  bg: "#0B0C0F",
-  bgElevated: "#101216",
-  panel: "#14161B",
-  line: "rgba(255,255,255,0.08)",
-  lineStrong: "rgba(255,255,255,0.16)",
-  textPrimary: "#F5F6F8",
-  textSecondary: "#9AA1AD",
-  muted: "#5C636E",
-  // Brand accents — rewritten by applyTheme() from the story.
+  // Cream "paper" base — same family as the vox engine (paper #F4F1EA,
+  // paperDeep #E4DED1, ink #1A1A1A). The brand accents below are rewritten
+  // by applyTheme() from the story.
+  bg: "#F4F1EA",
+  bgElevated: "#ECE6D8",
+  panel: "#FBF9F4",
+  line: "rgba(26,26,26,0.09)",
+  lineStrong: "rgba(26,26,26,0.18)",
+  textPrimary: "#1A1A1A",
+  textSecondary: "#6B665C",
+  muted: "#8A857C",
   red: "#E0352B",
   redDim: "rgba(224,53,43,0.16)",
   gold: "#F5C518",
   goldDim: "rgba(245,197,24,0.14)",
   accentDark: "#8F2A23",
-  steel: "#545B68",
-  steelDim: "rgba(84,91,104,0.35)",
-  dot: "#454C57",
+  steel: "#8A857C",
+  steelDim: "rgba(138,133,124,0.35)",
+  dot: "#C9C2B4",
 };
 
 export type StoryTheme = {

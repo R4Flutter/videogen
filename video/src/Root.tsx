@@ -1,4 +1,5 @@
 import "./index.css";
+import { Fragment } from "react";
 import { Composition } from "remotion";
 import { CRIME_TRACKS, CrimeDoc } from "./CrimeDoc";
 import { IMAGE_SHORT_SECONDS, ImageShort } from "./ImageShort";
@@ -8,7 +9,7 @@ import { EssayDoc } from "./essay/EssayDoc";
 import { INFO_TRACKS, InfoDoc } from "./InfoDoc";
 import { McdVideo } from "./mcd/Video";
 import { STORY_LIST } from "./mcd/stories";
-import { TOTAL_FRAMES, VIDEO_CONFIG } from "./mcd/data/timeline";
+import { VIDEO_CONFIG, VIDEO_CONFIG_PORTRAIT } from "./mcd/data/timeline";
 import script from "./script.json";
 import plan from "./director-plan.json";
 import type { DirectorPlan } from "./director/types.ts";
@@ -131,18 +132,30 @@ export const RemotionRoot: React.FC = () => {
       ) : null}
 
       {/* Self-contained business-documentary engine (src/mcd) — one
-          composition per registered story (stories/index.ts). */}
+          composition per registered story (stories/index.ts), plus a
+          9:16 vertical cut of every story for Shorts. Each story's duration
+          comes from its own computed timeline (narration-driven). */}
       {STORY_LIST.map((story) => (
-        <Composition
-          key={story.id}
-          id={story.id}
-          component={McdVideo}
-          defaultProps={{ story }}
-          width={VIDEO_CONFIG.width}
-          height={VIDEO_CONFIG.height}
-          fps={VIDEO_CONFIG.fps}
-          durationInFrames={TOTAL_FRAMES}
-        />
+        <Fragment key={story.id}>
+          <Composition
+            id={story.id}
+            component={McdVideo}
+            defaultProps={{ story }}
+            width={VIDEO_CONFIG.width}
+            height={VIDEO_CONFIG.height}
+            fps={VIDEO_CONFIG.fps}
+            durationInFrames={story.timeline.totalFrames}
+          />
+          <Composition
+            id={`${story.id}Portrait`}
+            component={McdVideo}
+            defaultProps={{ story }}
+            width={VIDEO_CONFIG_PORTRAIT.width}
+            height={VIDEO_CONFIG_PORTRAIT.height}
+            fps={VIDEO_CONFIG_PORTRAIT.fps}
+            durationInFrames={story.timeline.totalFrames}
+          />
+        </Fragment>
       ))}
     </>
   );

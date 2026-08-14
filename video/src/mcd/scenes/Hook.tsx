@@ -1,53 +1,71 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { AbsoluteFill, Img, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { EASE_ARRIVE } from "../utils/easing";
 import { progressive, springProgress, useSceneInOut } from "../utils/animation";
 import { Camera2D, type CameraKeyframe } from "../components/Camera2D";
 import { AnimatedText } from "../components/AnimatedText";
 import { PhoneHero } from "../components/PhoneHero";
-import { SCENE_FRAMES } from "../data/story";
-import { useStory } from "../StoryContext";
+import { Backdrop } from "../components/Backdrop";
+import { useScene, useStory } from "../StoryContext";
 import { COLORS, FONT, WEIGHT } from "../theme";
 import type { StoryLine } from "../data/storyTypes";
 
-const CAMERA: CameraKeyframe[] = [
-  { frame: 0, camera: { x: 900, y: 540, scale: 0.96 } },
-  { frame: 90, camera: { x: 900, y: 540, scale: 0.96 }, easing: EASE_ARRIVE },
-  { frame: 136, camera: { x: 900, y: 540, scale: 1.12 }, easing: EASE_ARRIVE },
-];
-
 export const Hook: React.FC = () => {
   const story = useStory();
-  const HOOK = story.hook;
-  const hero = story.hero;
+  const { data, durationInFrames, at } = useScene("hook");
+  const hero = data.hero ?? story.hero;
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const { opacity, scale } = useSceneInOut(frame, SCENE_FRAMES.hook, {
+  const { fps, width, height } = useVideoConfig();
+  const portrait = height > width;
+  const { opacity, scale } = useSceneInOut(frame, durationInFrames, {
     fadeIn: 10,
     entranceScale: 1.02,
   });
 
+  const CAMERA = useMemo<CameraKeyframe[]>(
+    () => [
+      { frame: 0, camera: { x: 900, y: 540, scale: 0.96 } },
+      { frame: at(0.6), camera: { x: 900, y: 540, scale: 0.96 }, easing: EASE_ARRIVE },
+      { frame: at(0.908), camera: { x: 900, y: 540, scale: 1.12 }, easing: EASE_ARRIVE },
+    ],
+    [at],
+  );
+  const CAMERA_P = useMemo<CameraKeyframe[]>(
+    () => [
+      { frame: 0, camera: { x: 540, y: 960, scale: 0.98 } },
+      { frame: at(0.6), camera: { x: 540, y: 960, scale: 0.98 }, easing: EASE_ARRIVE },
+      { frame: at(0.908), camera: { x: 540, y: 960, scale: 1.1 }, easing: EASE_ARRIVE },
+    ],
+    [at],
+  );
+
   // Hero object: flies in from the left with a spring, slight rotation
   // cleanup, soft landing scale + shadow settles underneath.
-  const heroIn = springProgress(frame, fps, { delay: 2, damping: 11, stiffness: 95, mass: 1 });
+  const heroIn = springProgress(frame, fps, { delay: at(0.017), damping: 11, stiffness: 95, mass: 1 });
   const rotate = 22 * (1 - heroIn);
   const scaleUp = heroIn < 1 ? 0.92 + heroIn * 0.14 : 1;
-  const shadowP = springProgress(frame, fps, { delay: 8, damping: 13, stiffness: 120, mass: 0.8 });
+  const shadowP = springProgress(frame, fps, { delay: at(0.067), damping: 13, stiffness: 120, mass: 0.8 });
   const grounded = Math.min(1, Math.max(0, (heroIn - 0.45) / 0.55));
   const heroX = -1500 + heroIn * 1500;
   const heroY = heroIn < 1 ? 460 - heroIn * 440 : 20;
 
   const heroLeft = hero.position !== "right";
-  const heroStyle = { left: heroLeft ? 250 : 990, top: 380 } as const;
-  const headlineStyle = heroLeft
-    ? { left: 1180, top: 250, width: 640 }
-    : { left: 84, top: 250, width: 720 };
+  const heroStyle = portrait
+    ? { left: (1080 - hero.width) / 2, top: 1150 }
+    : heroLeft
+      ? { left: 250, top: 380 }
+      : { left: 990, top: 380 };
+  const headlineStyle = portrait
+    ? { left: 0, right: 0, top: 430, alignItems: "center" as const }
+    : heroLeft
+      ? { left: 1180, top: 250, width: 640 }
+      : { left: 84, top: 250, width: 720 };
 
   // Text: kicker first, then two lines with a kinetic mask reveal.
-  const t1 = progressive(frame, 34, 20, EASE_ARRIVE);
-  const t2 = springProgress(frame, fps, { delay: 44 });
+  const t1 = progressive(frame, at(0.225), at(0.358) - at(0.225), EASE_ARRIVE);
+  const t2 = springProgress(frame, fps, { delay: at(0.292) });
 
-  const lines: StoryLine[] = HOOK.lines.map((l) => {
+  const lines: StoryLine[] = data.lines.map((l) => {
     if (typeof l === "string") return l;
     return l.map((p) =>
       typeof p === "string" ? p : { text: p.text, accent: p.accent ?? true },
@@ -56,13 +74,14 @@ export const Hook: React.FC = () => {
 
   return (
     <AbsoluteFill style={{ opacity, transform: `scale(${scale})` }}>
-      <Camera2D keyframes={CAMERA}>
+      <Backdrop scene="hook" />
+      <Camera2D keyframes={portrait ? CAMERA_P : CAMERA}>
         {/* Ambient accent glow bleeding from under the stage */}
         <div
           style={{
             position: "absolute",
-            left: 330,
-            top: 620,
+            left: portrait ? (1080 - 900) / 2 : 330,
+            top: portrait ? 1290 : 620,
             width: 900,
             height: 260,
             background: `radial-gradient(closest-side, ${COLORS.redDim}, transparent)`,
@@ -95,7 +114,14 @@ export const Hook: React.FC = () => {
         </div>
 
         {/* Headline cluster */}
-        <div style={{ position: "absolute", ...headlineStyle }}>
+        <div
+          style={{
+            position: "absolute",
+            ...headlineStyle,
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           <div
             style={{
               display: "flex",
@@ -119,22 +145,27 @@ export const Hook: React.FC = () => {
               style={{
                 fontFamily: FONT.headline,
                 fontWeight: WEIGHT.bold,
-                fontSize: 24,
+                fontSize: portrait ? 26 : 24,
                 letterSpacing: "0.34em",
                 color: COLORS.textSecondary,
               }}
             >
-              {HOOK.kicker}
+              {data.kicker}
             </span>
           </div>
 
           <div style={{ marginTop: 26 }}>
             <AnimatedText
               lines={lines}
-              delay={46}
-              lineStagger={11}
+              delay={at(0.308)}
+              lineStagger={9}
               wordStagger={4}
-              style={{ fontSize: 92, lineHeight: 1.12, letterSpacing: "-0.01em" }}
+              align={portrait ? "center" : "left"}
+              style={{
+                fontSize: portrait ? 84 : 92,
+                lineHeight: portrait ? 1.12 : 1.12,
+                letterSpacing: "-0.01em",
+              }}
             />
           </div>
 
@@ -143,7 +174,7 @@ export const Hook: React.FC = () => {
             width="520"
             height="40"
             viewBox="0 0 520 40"
-            style={{ marginTop: 26, opacity: t2 >= 0.95 ? 1 : 0.6 * t2 }}
+            style={{ marginTop: 26, opacity: t2 >= 0.95 ? 1 : 0.6 * t2, alignSelf: portrait ? "center" : undefined }}
           >
             <AnimatedTextLine t={t2} />
           </svg>

@@ -1,0 +1,291 @@
+{
+  "storyId": "McdBusinessStory",
+  "fps": 30,
+  "wpm": 170,
+  "totalSeconds": 37.666666666666664,
+  "totalFrames": 1130,
+  "cutsPerMinute": 22.300884955752213,
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "durationInFrames": 121,
+      "startSec": 0,
+      "durationSec": 4.029411764705882,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 0,
+          "sec": 0
+        }
+      ]
+    },
+    {
+      "id": "global",
+      "type": "global",
+      "startFrame": 124,
+      "durationInFrames": 153,
+      "startSec": 4.133333333333334,
+      "durationSec": 5.088235294117648,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 124,
+          "sec": 4.133333333333334
+        },
+        {
+          "cue": "tick",
+          "frame": 131,
+          "sec": 4.366666666666666
+        },
+        {
+          "cue": "tick",
+          "frame": 140,
+          "sec": 4.666666666666667
+        },
+        {
+          "cue": "tick",
+          "frame": 154,
+          "sec": 5.133333333333334
+        },
+        {
+          "cue": "tick",
+          "frame": 171,
+          "sec": 5.7
+        },
+        {
+          "cue": "tick",
+          "frame": 191,
+          "sec": 6.366666666666666
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "type": "map",
+      "startFrame": 280,
+      "durationInFrames": 174,
+      "startSec": 9.333333333333334,
+      "durationSec": 5.794117647058824,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 280,
+          "sec": 9.333333333333334
+        },
+        {
+          "cue": "tick",
+          "frame": 292,
+          "sec": 9.733333333333333
+        },
+        {
+          "cue": "tick",
+          "frame": 315,
+          "sec": 10.5
+        },
+        {
+          "cue": "tick",
+          "frame": 339,
+          "sec": 11.3
+        },
+        {
+          "cue": "tick",
+          "frame": 363,
+          "sec": 12.1
+        },
+        {
+          "cue": "tick",
+          "frame": 387,
+          "sec": 12.9
+        },
+        {
+          "cue": "tick",
+          "frame": 411,
+          "sec": 13.7
+        },
+        {
+          "cue": "money",
+          "frame": 339,
+          "sec": 11.3
+        },
+        {
+          "cue": "money",
+          "frame": 362,
+          "sec": 12.066666666666666
+        },
+        {
+          "cue": "money",
+          "frame": 386,
+          "sec": 12.866666666666667
+        },
+        {
+          "cue": "money",
+          "frame": 410,
+          "sec": 13.666666666666666
+        },
+        {
+          "cue": "money",
+          "frame": 434,
+          "sec": 14.466666666666667
+        }
+      ]
+    },
+    {
+      "id": "money",
+      "type": "money",
+      "startFrame": 457,
+      "durationInFrames": 163,
+      "startSec": 15.233333333333333,
+      "durationSec": 5.4411764705882355,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 457,
+          "sec": 15.233333333333333
+        },
+        {
+          "cue": "tick",
+          "frame": 476,
+          "sec": 15.866666666666667
+        },
+        {
+          "cue": "tick",
+          "frame": 494,
+          "sec": 16.466666666666665
+        },
+        {
+          "cue": "tick",
+          "frame": 517,
+          "sec": 17.233333333333334
+        },
+        {
+          "cue": "tick",
+          "frame": 542,
+          "sec": 18.066666666666666
+        },
+        {
+          "cue": "tick",
+          "frame": 566,
+          "sec": 18.866666666666667
+        },
+        {
+          "cue": "tick",
+          "frame": 587,
+          "sec": 19.566666666666666
+        },
+        {
+          "cue": "tick",
+          "frame": 606,
+          "sec": 20.2
+        },
+        {
+          "cue": "impact",
+          "frame": 615,
+          "sec": 20.5
+        }
+      ]
+    },
+    {
+      "id": "model",
+      "type": "model",
+      "startFrame": 623,
+      "durationInFrames": 153,
+      "startSec": 20.766666666666666,
+      "durationSec": 5.088235294117648,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 623,
+          "sec": 20.766666666666666
+        },
+        {
+          "cue": "impact",
+          "frame": 768,
+          "sec": 25.6
+        }
+      ]
+    },
+    {
+      "id": "chart",
+      "type": "chart",
+      "startFrame": 779,
+      "durationInFrames": 153,
+      "startSec": 25.966666666666665,
+      "durationSec": 5.088235294117648,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 779,
+          "sec": 25.966666666666665
+        },
+        {
+          "cue": "chart",
+          "frame": 796,
+          "sec": 26.533333333333335
+        },
+        {
+          "cue": "chart",
+          "frame": 802,
+          "sec": 26.733333333333334
+        },
+        {
+          "cue": "chart",
+          "frame": 807,
+          "sec": 26.9
+        },
+        {
+          "cue": "chart",
+          "frame": 813,
+          "sec": 27.1
+        },
+        {
+          "cue": "chart",
+          "frame": 819,
+          "sec": 27.3
+        },
+        {
+          "cue": "chart",
+          "frame": 825,
+          "sec": 27.5
+        },
+        {
+          "cue": "impact",
+          "frame": 865,
+          "sec": 28.833333333333332
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "type": "finale",
+      "startFrame": 935,
+      "durationInFrames": 195,
+      "startSec": 31.166666666666668,
+      "durationSec": 6.5,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 951,
+          "sec": 31.7
+        },
+        {
+          "cue": "transition",
+          "frame": 1053,
+          "sec": 35.1
+        },
+        {
+          "cue": "impact",
+          "frame": 1070,
+          "sec": 35.666666666666664
+        },
+        {
+          "cue": "impact",
+          "frame": 1103,
+          "sec": 36.766666666666666
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useMemo } from "react";
-import { useCurrentFrame } from "remotion";
+import { useCurrentFrame, useVideoConfig } from "remotion";
 import { EASE_IN_OUT } from "../utils/easing";
 
 export type CameraState = {
@@ -62,8 +62,11 @@ export const Camera2D: React.FC<{
   style?: React.CSSProperties;
 }> = ({ keyframes, children, style }) => {
   const cam = useCamera2D(keyframes);
-  const tx = (960 - cam.x) * cam.scale;
-  const ty = (540 - cam.y) * cam.scale;
+  const { width, height } = useVideoConfig();
+  const cx = width / 2;
+  const cy = height / 2;
+  const tx = (cx - cam.x) * cam.scale;
+  const ty = (cy - cam.y) * cam.scale;
   return (
     <CameraContext.Provider value={cam}>
       <div
@@ -90,8 +93,9 @@ export const Parallax: React.FC<{
   children: React.ReactNode;
 }> = ({ factor, style, children }) => {
   const cam = useContext(CameraContext);
-  const dx = (cam.x - 960) * factor;
-  const dy = (cam.y - 540) * factor;
+  const { width, height } = useVideoConfig();
+  const dx = (cam.x - width / 2) * factor;
+  const dy = (cam.y - height / 2) * factor;
   return (
     <div
       style={{

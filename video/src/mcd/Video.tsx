@@ -1,33 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AbsoluteFill, Sequence, useVideoConfig } from "remotion";
-import { Hook } from "./scenes/Hook";
-import { GlobalScale } from "./scenes/GlobalScale";
-import { WorldMapScene } from "./scenes/WorldMapScene";
-import { MoneyScene } from "./scenes/MoneyScene";
-import { BusinessModel } from "./scenes/BusinessModel";
-import { DataStory } from "./scenes/DataStory";
-import { Finale } from "./scenes/Finale";
 import { Vignette } from "./components/Vignette";
-import { ABSOLUTE, OVERLAP, SCENE_FRAMES } from "./data/story";
-import type { SceneId } from "./data/storyTypes";
-import { StoryProvider } from "./StoryContext";
+import { SCENE_COMPONENTS } from "./scenes";
+import { sceneCues } from "./data/cues";
+import { FLASH_FRAMES } from "./data/timeline";
+import { SceneProvider, StoryProvider } from "./StoryContext";
+import { cueAt, resetAudioCues } from "./utils/audio";
 import { COLORS, FONT } from "./theme";
-import type { BusinessStory } from "./data/storyTypes";
+import type { LoadedStory } from "./data/story";
 
-const S: Record<SceneId, { from: number; duration: number }> = {
-  hook: { from: ABSOLUTE.hookStart, duration: SCENE_FRAMES.hook + OVERLAP },
-  global: { from: ABSOLUTE.globalStart, duration: SCENE_FRAMES.global + OVERLAP },
-  map: { from: ABSOLUTE.mapStart, duration: SCENE_FRAMES.map + OVERLAP },
-  money: { from: ABSOLUTE.moneyStart, duration: SCENE_FRAMES.money + OVERLAP },
-  model: { from: ABSOLUTE.modelStart, duration: SCENE_FRAMES.model + OVERLAP },
-  chart: { from: ABSOLUTE.chartStart, duration: SCENE_FRAMES.chart + OVERLAP },
-  finale: { from: ABSOLUTE.finaleStart, duration: SCENE_FRAMES.finale },
-};
+// 3-frame solid flash between scenes. Registers as two hard cuts for the
+// scene detector (scene → flash → next scene) and punches the transition.
+const FlashCut: React.FC = () => (
+  <AbsoluteFill
+    style={{
+      background: COLORS.gold,
+      opacity: 0.92,
+    }}
+  />
+);
 
-// One video, seven scenes, one engine — the story (data + hero + theme) is
-// supplied per composition via <StoryProvider>.
-export const McdVideo: React.FC<{ story: BusinessStory }> = ({ story }) => {
+// One engine, any story: every scene of the story's `scenes` array is staged
+// here, at the frame the timeline engine computed from its narration, wrapped
+// in a SceneProvider so the scene can read its own data + timing. Cues are
+// registered from data/cues.ts — the same list the post-render mux reads.
+export const McdVideo: React.FC<{ story: LoadedStory }> = ({ story }) => {
   const { width, height } = useVideoConfig();
+
+  useEffect(() => {
+    resetAudioCues();
+    story.timeline.scenes.forEach((tl, i) => {
+      const scene = story.scenes[i];
+      for (const c of sceneCues(scene)) {
+        cueAt(scene.id, c.cue, tl.startFrame + Math.round(c.rel * tl.durationInFrames));
+      }
+    });
+  }, [story]);
+
   return (
     <StoryProvider story={story}>
       <AbsoluteFill
@@ -40,27 +49,27 @@ export const McdVideo: React.FC<{ story: BusinessStory }> = ({ story }) => {
           overflow: "hidden",
         }}
       >
-        <Sequence from={S.hook.from} durationInFrames={S.hook.duration}>
-          <Hook />
-        </Sequence>
-        <Sequence from={S.global.from} durationInFrames={S.global.duration}>
-          <GlobalScale />
-        </Sequence>
-        <Sequence from={S.map.from} durationInFrames={S.map.duration}>
-          <WorldMapScene />
-        </Sequence>
-        <Sequence from={S.money.from} durationInFrames={S.money.duration}>
-          <MoneyScene />
-        </Sequence>
-        <Sequence from={S.model.from} durationInFrames={S.model.duration}>
-          <BusinessModel />
-        </Sequence>
-        <Sequence from={S.chart.from} durationInFrames={S.chart.duration}>
-          <DataStory />
-        </Sequence>
-        <Sequence from={S.finale.from} durationInFrames={S.finale.duration}>
-          <Finale />
-        </Sequence>
+        {story.timeline.scenes.map((tl, i) => {
+          const scene = story.scenes[i];
+          const Component = SCENE_COMPONENTS[scene.type as keyof typeof SCENE_COMPONENTS];
+          const at = (p: number) => Math.round(p * tl.durationInFrames);
+          return (
+            <Sequence key={scene.id} from={tl.startFrame} durationInFrames={tl.durationInFrames}>
+              <SceneProvider runtime={{ scene, data: scene.data, durationInFrames: tl.durationInFrames, at }}>
+                <Component />
+              </SceneProvider>
+            </Sequence>
+          );
+        })}
+        {story.timeline.scenes.slice(0, -1).map((tl) => (
+          <Sequence
+            key={`flash-${tl.id}`}
+            from={tl.startFrame + tl.durationInFrames}
+            durationInFrames={FLASH_FRAMES}
+          >
+            <FlashCut />
+          </Sequence>
+        ))}
         <Vignette />
       </AbsoluteFill>
     </StoryProvider>

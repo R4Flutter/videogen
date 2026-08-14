@@ -1,0 +1,291 @@
+{
+  "storyId": "AppleBusinessStory",
+  "fps": 30,
+  "wpm": 170,
+  "totalSeconds": 36.53333333333333,
+  "totalFrames": 1096,
+  "cutsPerMinute": 22.99270072992701,
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "durationInFrames": 110,
+      "startSec": 0,
+      "durationSec": 3.676470588235294,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 0,
+          "sec": 0
+        }
+      ]
+    },
+    {
+      "id": "global",
+      "type": "global",
+      "startFrame": 113,
+      "durationInFrames": 110,
+      "startSec": 3.7666666666666666,
+      "durationSec": 3.676470588235294,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 113,
+          "sec": 3.7666666666666666
+        },
+        {
+          "cue": "tick",
+          "frame": 118,
+          "sec": 3.933333333333333
+        },
+        {
+          "cue": "tick",
+          "frame": 125,
+          "sec": 4.166666666666667
+        },
+        {
+          "cue": "tick",
+          "frame": 134,
+          "sec": 4.466666666666667
+        },
+        {
+          "cue": "tick",
+          "frame": 147,
+          "sec": 4.9
+        },
+        {
+          "cue": "tick",
+          "frame": 161,
+          "sec": 5.366666666666666
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "type": "map",
+      "startFrame": 226,
+      "durationInFrames": 163,
+      "startSec": 7.533333333333333,
+      "durationSec": 5.4411764705882355,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 226,
+          "sec": 7.533333333333333
+        },
+        {
+          "cue": "tick",
+          "frame": 237,
+          "sec": 7.9
+        },
+        {
+          "cue": "tick",
+          "frame": 259,
+          "sec": 8.633333333333333
+        },
+        {
+          "cue": "tick",
+          "frame": 282,
+          "sec": 9.4
+        },
+        {
+          "cue": "tick",
+          "frame": 304,
+          "sec": 10.133333333333333
+        },
+        {
+          "cue": "tick",
+          "frame": 326,
+          "sec": 10.866666666666667
+        },
+        {
+          "cue": "tick",
+          "frame": 349,
+          "sec": 11.633333333333333
+        },
+        {
+          "cue": "money",
+          "frame": 303,
+          "sec": 10.1
+        },
+        {
+          "cue": "money",
+          "frame": 326,
+          "sec": 10.866666666666667
+        },
+        {
+          "cue": "money",
+          "frame": 348,
+          "sec": 11.6
+        },
+        {
+          "cue": "money",
+          "frame": 348,
+          "sec": 11.6
+        },
+        {
+          "cue": "money",
+          "frame": 370,
+          "sec": 12.333333333333334
+        }
+      ]
+    },
+    {
+      "id": "money",
+      "type": "money",
+      "startFrame": 392,
+      "durationInFrames": 184,
+      "startSec": 13.066666666666666,
+      "durationSec": 6.147058823529411,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 392,
+          "sec": 13.066666666666666
+        },
+        {
+          "cue": "tick",
+          "frame": 413,
+          "sec": 13.766666666666667
+        },
+        {
+          "cue": "tick",
+          "frame": 434,
+          "sec": 14.466666666666667
+        },
+        {
+          "cue": "tick",
+          "frame": 460,
+          "sec": 15.333333333333334
+        },
+        {
+          "cue": "tick",
+          "frame": 488,
+          "sec": 16.266666666666666
+        },
+        {
+          "cue": "tick",
+          "frame": 515,
+          "sec": 17.166666666666668
+        },
+        {
+          "cue": "tick",
+          "frame": 539,
+          "sec": 17.966666666666665
+        },
+        {
+          "cue": "tick",
+          "frame": 560,
+          "sec": 18.666666666666668
+        },
+        {
+          "cue": "impact",
+          "frame": 570,
+          "sec": 19
+        }
+      ]
+    },
+    {
+      "id": "model",
+      "type": "model",
+      "startFrame": 579,
+      "durationInFrames": 206,
+      "startSec": 19.3,
+      "durationSec": 6.852941176470588,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 579,
+          "sec": 19.3
+        },
+        {
+          "cue": "impact",
+          "frame": 775,
+          "sec": 25.833333333333332
+        }
+      ]
+    },
+    {
+      "id": "chart",
+      "type": "chart",
+      "startFrame": 788,
+      "durationInFrames": 131,
+      "startSec": 26.266666666666666,
+      "durationSec": 4.382352941176471,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 788,
+          "sec": 26.266666666666666
+        },
+        {
+          "cue": "chart",
+          "frame": 802,
+          "sec": 26.733333333333334
+        },
+        {
+          "cue": "chart",
+          "frame": 807,
+          "sec": 26.9
+        },
+        {
+          "cue": "chart",
+          "frame": 812,
+          "sec": 27.066666666666666
+        },
+        {
+          "cue": "chart",
+          "frame": 817,
+          "sec": 27.233333333333334
+        },
+        {
+          "cue": "chart",
+          "frame": 822,
+          "sec": 27.4
+        },
+        {
+          "cue": "chart",
+          "frame": 827,
+          "sec": 27.566666666666666
+        },
+        {
+          "cue": "impact",
+          "frame": 861,
+          "sec": 28.7
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "type": "finale",
+      "startFrame": 922,
+      "durationInFrames": 174,
+      "startSec": 30.733333333333334,
+      "durationSec": 5.794117647058824,
+      "cues": [
+        {
+          "cue": "whoosh",
+          "frame": 936,
+          "sec": 31.2
+        },
+        {
+          "cue": "transition",
+          "frame": 1027,
+          "sec": 34.233333333333334
+        },
+        {
+          "cue": "impact",
+          "frame": 1042,
+          "sec": 34.733333333333334
+        },
+        {
+          "cue": "impact",
+          "frame": 1072,
+          "sec": 35.733333333333334
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

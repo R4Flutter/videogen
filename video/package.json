@@ -79,7 +79,10 @@
     "direction": "python ../tools/voice_direction.py",
     "test:retention": "node --experimental-strip-types --test ../tools/tests/retention.test.mjs",
     "start:mcd": "remotion studio",
+    "mcd:timeline": "node --experimental-strip-types --no-warnings ../tools/mcd-timeline.mjs",
     "render:mcd": "node ../tools/render-business.mjs McdBusinessStory out/mcd-business-story.mp4",
+    "voice:mcd": "..\\.venv-tts\\Scripts\\python.exe ../tools/mcd-voice.py",
+    "mux:mcd": "python ../tools/mcd-mux.py",
     "story:validate": "node --experimental-strip-types ../tools/render-business.mjs",
     "story:render": "node --experimental-strip-types ../tools/render-business.mjs",
     "still:mcd": "remotion still McdBusinessStory"

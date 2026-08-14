@@ -4,8 +4,7 @@ import { seededRandom } from "../utils/deterministicRandom";
 import { springProgress } from "../utils/animation";
 import { AnimatedPath } from "./AnimatedPath";
 import { cubicPath, type CubicArc, type Pt } from "../utils/geometry";
-import type { RegionId } from "../data/storyTypes";
-import { useStory } from "../StoryContext";
+import type { HubLink, RegionId } from "../data/storyTypes";
 import { COLORS, FONT, WEIGHT, withAlpha } from "../theme";
 
 // Dot-matrix world map: continents are coarse polygons in grid-cell space;
@@ -133,10 +132,16 @@ const WORLD_CELLS = buildCells();
 type Props = {
   // 0..1 illumination progress per region (cumulative).
   regionProgress: Partial<Record<RegionId, number>>;
-  // 0..1 draw progress per hub arc, indexed like HUBS.
+  // 0..1 draw progress per hub arc, indexed like hubs.
   arcProgress: number[];
   showHubs?: boolean;
   title?: React.ReactNode;
+  // Map data is supplied by the caller (the map scene owns it now) so the
+  // component stays a pure drawer.
+  hubOrigin?: { name: string; cell: [number, number] };
+  hubs?: HubLink[];
+  regionLabel?: Record<RegionId, string>;
+  regionLabelCell?: Record<RegionId, [number, number]>;
 };
 
 export const WorldMap: React.FC<Props> = ({
@@ -144,22 +149,21 @@ export const WorldMap: React.FC<Props> = ({
   arcProgress,
   showHubs = true,
   title,
+  hubOrigin,
+  hubs = [],
+  regionLabel = {},
+  regionLabelCell = {},
 }) => {
-  const story = useStory();
-  const HUB_ORIGIN = story.map.hubOrigin;
-  const HUBS = story.map.hubs;
-  const REGION_LABEL = story.map.regionLabel;
-  const REGION_LABEL_CELL = story.map.regionLabelCell;
   const arcs = useMemo<CubicArc[]>(
     () =>
-      HUBS.map((h) => {
-        const from = cellToScreen(HUB_ORIGIN.cell);
+      hubs.map((h) => {
+        const from = hubOrigin ? cellToScreen(hubOrigin.cell) : { x: 960, y: 540 };
         const to = cellToScreen(h.cell);
         const c1 = cellToScreen(h.controls[0]);
         const c2 = cellToScreen(h.controls[1]);
         return { from, c1, c2, to };
       }),
-    [HUB_ORIGIN, HUBS],
+    [hubOrigin, hubs],
   );
 
   const litColor = COLORS.gold;
@@ -176,7 +180,7 @@ export const WorldMap: React.FC<Props> = ({
             y1={y}
             x2="1910"
             y2={y}
-            stroke="rgba(255,255,255,0.07)"
+            stroke={withAlpha(COLORS.textPrimary, 0.07)}
             strokeWidth="1.4"
             strokeDasharray="5 9"
           />
@@ -185,13 +189,13 @@ export const WorldMap: React.FC<Props> = ({
 
       {WORLD_CELLS.map((cell, i) => {
         const region = cell.region;
-        let fill = cell.africa ? "#3B414C" : "#3B414C";
+        let fill = "#8A857C";
         let r = 4.8;
         if (region && regionProgress[region]) {
           const progress = regionProgress[region] as number;
           const stagger = (cell.jx + cell.jy) * 0.02 + i * 0.0008;
           const p = Math.max(0, Math.min(1, (progress - stagger / 10) * 3));
-          const color = interpolateColors(p, [0, 1], ["#3B414C", litColor]);
+          const color = interpolateColors(p, [0, 1], ["#8A857C", litColor]);
           fill = color;
           r = 4.8 + p * 1.6;
         }
@@ -222,10 +226,10 @@ export const WorldMap: React.FC<Props> = ({
       ))}
 
       {/* Hub dots */}
-      {showHubs ? (
+      {showHubs && hubOrigin ? (
         <>
-          <HubDot pos={cellToScreen(HUB_ORIGIN.cell)} label={HUB_ORIGIN.name} delay={0} active={arcProgress.some((p) => p > 0)} />
-          {HUBS.map((h, i) => (
+          <HubDot pos={cellToScreen(hubOrigin.cell)} label={hubOrigin.name} delay={0} active={arcProgress.some((p) => p > 0)} />
+          {hubs.map((h, i) => (
             <HubDot
               key={h.region}
               pos={cellToScreen(h.cell)}
@@ -238,11 +242,11 @@ export const WorldMap: React.FC<Props> = ({
       ) : null}
 
       {/* Region label chips */}
-      {(Object.keys(REGION_LABEL) as RegionId[]).map((region) => {
+      {(Object.keys(regionLabel) as RegionId[]).map((region) => {
         const p = regionProgress[region] ?? 0;
         const appear = Math.max(0, Math.min(1, (p - 0.55) * 4));
         if (appear <= 0) return null;
-        const pos = cellToScreen(REGION_LABEL_CELL[region]);
+        const pos = cellToScreen(regionLabelCell[region]);
         return (
           <g key={region} opacity={appear} transform={`translate(0 ${(1 - appear) * 10})`}>
             <circle cx={pos.x - 20} cy={pos.y} r={5} fill={litColor} />
@@ -257,7 +261,7 @@ export const WorldMap: React.FC<Props> = ({
               letterSpacing="0.18em"
               fill={COLORS.textSecondary}
             >
-              {REGION_LABEL[region]}
+              {regionLabel[region]}
             </text>
           </g>
         );
@@ -281,13 +285,13 @@ const HubDot: React.FC<{ pos: Pt; label: string; delay: number; active: boolean 
   if (p <= 0) return null;
   return (
     <g opacity={Math.min(1, p * 2)}>
-      <circle cx={pos.x} cy={pos.y} r={7.5} fill="#F5F6F8" />
+      <circle cx={pos.x} cy={pos.y} r={7.5} fill={COLORS.bg} />
       <circle
         cx={pos.x}
         cy={pos.y}
         r={7.5 + ring * 9}
         fill="none"
-        stroke="#F5F6F8"
+        stroke={COLORS.textPrimary}
         strokeWidth={1.6}
         opacity={0.45 * (0.4 + ring * 0.6)}
       />
